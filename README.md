@@ -1,6 +1,6 @@
-# react-jwt-template
+# Project Colab: Heuristics
 
-This is a template for a full-stack MERN application with built in user authentication utilizing JWT.
+A full-stack MERN application with built in user authentication utilizing JWT.
 
 ## Built By: ##
 
