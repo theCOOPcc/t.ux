@@ -1,4 +1,4 @@
-const Admin = require('../models/admin');
+const Manager = require('../models/manager');
 const jwt = require("jsonwebtoken");
 
 module.exports = {
@@ -7,11 +7,11 @@ module.exports = {
 };
 
 async function signup(req, res) {
-  const admin = new Admin(req.body);
+  const manager = new Manager(req.body);
   try {
-    await admin.save();
+    await manager.save();
     // Be sure to first delete data that should not be in the token
-    const token = createJWT(admin);
+    const token = createJWT(manager);
     res.json({ token });
   } catch (err) {
     res.status(400).send({'err': err.errmsg});
@@ -20,11 +20,11 @@ async function signup(req, res) {
 
 async function login(req, res) {
   try {
-    const admin = await Admin.findOne({ email: req.body.email });
-    if (!admin) return res.status(401).json({ err: "bad credentials" });
-    admin.comparePassword(req.body.pw, (err, isMatch) => {
+    const manager = await Manager.findOne({ email: req.body.email });
+    if (!manager) return res.status(401).json({ err: "bad credentials" });
+    manager.comparePassword(req.body.pw, (err, isMatch) => {
       if (isMatch) {
-        const token = createJWT(admin);
+        const token = createJWT(manager);
         res.json({ token });
       } else {
         return res.status(401).json({ err: "bad credentials" });
@@ -37,9 +37,9 @@ async function login(req, res) {
 
 /*----- Helper Functions -----*/
 
-function createJWT(admin) {
+function createJWT(manager) {
   return jwt.sign(
-    { admin }, // data payload
+    { manager }, // data payload
     process.env.SECRET,
     { expiresIn: "24h" }
   );
