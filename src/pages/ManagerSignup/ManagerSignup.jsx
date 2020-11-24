@@ -1,10 +1,24 @@
 import React, { Component } from 'react';
+import SignupForm from '../../components/SignupForm/SignupForm';
+import './ManagerSignup.css';
 
-class ManagerSignup extends Component {
-  state = {};
+class Signup extends Component {
+  state = {
+    message: ''
+  }
+
+  updateMessage = (msg) => {
+    this.setState({message: msg});
+  }
+
   render() {
-    return <h1> Manager Signup Page</h1>;
+    return (
+      <main>
+        <SignupForm {...this.props} updateMessage={this.updateMessage} />
+        <p>{this.state.message}</p>
+      </main>
+    );
   }
 }
 
-export default ManagerSignup;
+export default Signup;

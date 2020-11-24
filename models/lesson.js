@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const answerSchema = newSchema({
+const answerSchema = new Schema({
   answerText: String,
   isCorrect: Boolean,
 });
 
-const questionSchema = newSchema({
+const questionSchema = new Schema({
   problemStatement: { type: String, required: true },
   suggestion: String,
   answers: [answerSchema],
