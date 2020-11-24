@@ -9,9 +9,12 @@ require('./config/database');
 
 const userRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
+const adminAuthRouter = require('./routes/adminAuth');
+const managerAuthRouter = require('./routes/managerAuth');
+const lessonRouter = require('./routes/lessons');
+const groupRouter = require('./routes/groups');
 
-const cors = require('cors')
-
+const cors = require('cors');
 
 app.use(cors());
 app.use(logger('dev'));
@@ -21,14 +24,18 @@ app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/api/auth', authRouter);
+app.use('/api/managerAuth', managerAuthRouter);
+app.use('/api/adminAuth', adminAuthRouter);
 app.use('/api/users', userRouter);
+app.use('/api/lessons', lessonRouter);
+app.use('/api/groups', groupRouter);
 
-app.get('/*', function(req, res) {
+app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 const port = process.env.PORT || 3001;
 
-app.listen(port, ()=> {
-  console.log(`Express is listening on port ${port}.`)
+app.listen(port, () => {
+  console.log(`Express is listening on port ${port}.`);
 });
