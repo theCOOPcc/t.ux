@@ -16,7 +16,7 @@ function index(req, res) {
 }
 
 function create(req, res) {
-    req.body.createdBy === req.user._id
+    // req.body.createdBy === req.user._id
     Lesson.create(req.body)
         .then(lesson => { res.json(lesson) })
         .catch(err => { res.json(err) })

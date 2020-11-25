@@ -9,6 +9,10 @@ const managerSchema = new Schema(
     name: { type: String, required: true },
     email: { type: String, required: true },
     password: String,
+    // permissions:
+    currentStudents: [{ type: Schema.Types.ObjectId, ref: 'Student' }],
+    previousStudents: [{ type: Schema.Types.ObjectId, ref: 'Student' }],
+    // invitedStudents: []
     groups: [{ type: Schema.Types.ObjectId, ref: 'Group' }],
   },
   {
