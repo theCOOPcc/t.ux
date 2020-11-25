@@ -1,4 +1,4 @@
-import tokenService from "./tokenService";
+import managerTokenService from './managerTokenService'
 
 const BASE_URL = '/api/managerAuth/';
 
@@ -18,16 +18,17 @@ function signup(manager) {
     throw new Error(`${json.err}`)
   })
   .then(({ token }) => {
-    tokenService.setToken(token);
+    managerTokenService.setToken(token);
   })
 }
 
 function getManager() {
-  return tokenService.getUserFromToken();
+  console.log('getting manager')
+  return managerTokenService.getUserFromToken();
 }
 
 function logout() {
-  tokenService.removeToken();
+  managerTokenService.removeToken();
 }
 
 function login(creds) {
@@ -42,7 +43,7 @@ function login(creds) {
     if (res.ok) return res.json();
     throw new Error("Bad Credentials!");
   })
-  .then(({ token }) => tokenService.setToken(token));
+  .then(({ token }) => managerTokenService.setToken(token));
 }
 
 export default {

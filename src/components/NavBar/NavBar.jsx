@@ -29,7 +29,7 @@ const NavBar = ({ user, handleLogout, type, handleSignupOrLogin }) => {
                 <Link
                   to={{
                     pathname: '/login',
-                    state: { user, type, handleSignupOrLogin },
+                    state: { user, type },
                   }}
                 >
                   Log In

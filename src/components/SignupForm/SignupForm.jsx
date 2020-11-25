@@ -25,7 +25,7 @@ class SignupForm extends Component {
     if (type === 'admin') {
       try {
         await adminAuthService.signup(this.state);
-        handleSignupOrLogin();
+        // handleSignupOrLogin();
         // history.push('/');
       } catch (err) {
         updateMessage(err.message);
@@ -33,7 +33,7 @@ class SignupForm extends Component {
     } else if (type === 'manager') {
       try {
         await managerAuthService.signup(this.state);
-        handleSignupOrLogin();
+        // handleSignupOrLogin();
         // history.push('/');
       } catch (err) {
         updateMessage(err.message);
@@ -41,7 +41,7 @@ class SignupForm extends Component {
     } else {
       try {
         await authService.signup(this.state);
-        handleSignupOrLogin();
+        // handleSignupOrLogin();
         history.push('/');
       } catch (err) {
         updateMessage(err.message);
