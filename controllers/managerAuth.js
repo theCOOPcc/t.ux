@@ -7,9 +7,7 @@ module.exports = {
 };
 
 async function signup(req, res) {
-  console.log('manager signup hit')
   const manager = new Manager(req.body);
-  console.log('manager object', manager)
   try {
     await manager.save();
     // Be sure to first delete data that should not be in the token

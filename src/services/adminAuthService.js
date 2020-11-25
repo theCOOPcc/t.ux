@@ -1,4 +1,4 @@
-import tokenService from "./tokenService";
+import adminTokenService from './adminTokenService'
 
 const BASE_URL = '/api/adminAuth/';
 
@@ -18,16 +18,16 @@ function signup(admin) {
     throw new Error(`${json.err}`)
   })
   .then(({ token }) => {
-    tokenService.setToken(token);
+    adminTokenService.setToken(token);
   })
 }
 
 function getAdmin() {
-  return tokenService.getUserFromToken();
+  return adminTokenService.getUserFromToken();
 }
 
 function logout() {
-  tokenService.removeToken();
+  adminTokenService.removeToken();
 }
 
 function login(creds) {
@@ -41,7 +41,7 @@ function login(creds) {
     if (res.ok) return res.json();
     throw new Error("Bad Credentials!");
   })
-  .then(({ token }) => tokenService.setToken(token));
+  .then(({ token }) => adminTokenService.setToken(token));
 }
 
 export default {

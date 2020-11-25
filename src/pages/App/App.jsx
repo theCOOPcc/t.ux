@@ -34,7 +34,6 @@ class App extends Component {
               type="user"
               location={location}
               history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
             />
           )}
         />
@@ -45,7 +44,6 @@ class App extends Component {
             <Login
               history={history}
               location={location}
-              handleSignupOrLogin={this.handleSignupOrLogin}
             />
           )}
         />

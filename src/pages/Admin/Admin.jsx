@@ -3,9 +3,10 @@ import { Route, Redirect } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import adminAuthService from '../../services/adminAuthService';
 import Signup from '../Signup/Signup';
-
+ 
 class Admin extends Component {
   state = { admin: adminAuthService.getAdmin(), type: 'admin' };
+  
 
   handleLogout = () => {
     adminAuthService.logout();
@@ -16,7 +17,12 @@ class Admin extends Component {
     this.setState({ admin: adminAuthService.getUser() });
   };
 
+  componentDidMount() {
+    this.setState({ manager: adminAuthService.getManager() });
+  }
+
   render() {
+    console.log(adminAuthService.getAdmin())
     const { admin } = this.state;
     return (
       <>

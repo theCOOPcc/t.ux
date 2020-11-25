@@ -17,6 +17,7 @@ class User extends Component {
     this.setState({ user: authService.getUser() });
   };
 
+  
   render() {
     const { user } = this.state;
     return (

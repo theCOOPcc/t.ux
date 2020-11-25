@@ -19,14 +19,14 @@ class Login extends Component {
 
   handleSubmit = async (e) => {
     const { history } = this.props;
-    const { user, type } = this.props.location.state;
+    const { user, type, handleSignupOrLogin } = this.props.location.state;
     e.preventDefault();
     if (type === 'manager') {
       console.log('attempting to login as manager');
       try {
         await managerAuthService.login(this.state);
         // handleSignupOrLogin();
-        history.push('/');
+        // history.push('/');
       } catch (err) {
         // Use a modal or toast in your apps instead of alert
         alert('Invalid Credentials!');
@@ -37,7 +37,7 @@ class Login extends Component {
         await adminAuthSerivce.login(this.state);
         // Let <App> know a user has signed up!
         // handleSignupOrLogin();
-        history.push('/admin');
+        // history.push('/admin');
       } catch (err) {
         // Use a modal or toast in your apps instead of alert
         alert('Invalid Credentials!');
