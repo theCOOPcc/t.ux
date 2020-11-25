@@ -23,7 +23,8 @@ const lessonSchema = new Schema(
     questions: [questionSchema],
     // recap:
     isDraft: Boolean,
-    archived: Boolean
+    archived: Boolean,
+    createdBy: String
   },
   { timestamps: true }
 );
