@@ -1,33 +1,53 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import authService from "../../services/authService";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import authService from '../../services/authService';
+import adminAuthService from '../../services/adminAuthService';
+import managerAuthService from '../../services/managerAuthService';
 
 class SignupForm extends Component {
   state = {
-    name: "",
-    email: "",
-    password: "",
-    passwordConf: "",
+    name: '',
+    email: '',
+    password: '',
+    passwordConf: '',
   };
 
   handleChange = (e) => {
-    this.props.updateMessage("");
+    this.props.updateMessage('');
     this.setState({
       [e.target.name]: e.target.value,
     });
   };
 
   handleSubmit = async (e) => {
-    const { history, updateMessage, handleSignupOrLogin } = this.props;
+    const { history, updateMessage, handleSignupOrLogin, type } = this.props;
     e.preventDefault();
-    try {
-      await authService.signup(this.state);
-      // Let <App> know a user has signed up!
-      handleSignupOrLogin();
-      history.push("/");
-    } catch (err) {
-      updateMessage(err.message);
+    if (type === 'admin') {
+      try {
+        await adminAuthService.signup(this.state);
+        handleSignupOrLogin();
+        // history.push('/');
+      } catch (err) {
+        updateMessage(err.message);
+      }
+    } else if (type === 'manager') {
+      try {
+        await managerAuthService.signup(this.state);
+        handleSignupOrLogin();
+        // history.push('/');
+      } catch (err) {
+        updateMessage(err.message);
+      }
+    } else {
+      try {
+        await authService.signup(this.state);
+        handleSignupOrLogin();
+        history.push('/');
+      } catch (err) {
+        updateMessage(err.message);
+      }
     }
+
   };
 
   isFormInvalid() {

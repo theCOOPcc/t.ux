@@ -1,12 +1,12 @@
 import tokenService from "./tokenService";
 
-const BASE_URL = '/api/auth/';
+const BASE_URL = '/api/managerAuth/';
 
-function signup(user) {
+function signup(manager) {
   return fetch(BASE_URL + 'signup', {
     method: 'POST',
     headers: new Headers({'Content-Type': 'application/json'}),
-    body: JSON.stringify(user)
+    body: JSON.stringify(manager)
   })
   .then(res => {
     console.log(res, '<-- response object')
@@ -22,16 +22,16 @@ function signup(user) {
   })
 }
 
-function getUser() {
+function getManager() {
   return tokenService.getUserFromToken();
 }
 
 function logout() {
   tokenService.removeToken();
 }
- 
+
 function login(creds) {
-  console.log('auth service login function -- creds', creds)
+  console.log('credentials', creds)
   return fetch(BASE_URL + "login", {
     method: "POST",
     headers: new Headers({ "Content-Type": "application/json" }),
@@ -42,14 +42,12 @@ function login(creds) {
     if (res.ok) return res.json();
     throw new Error("Bad Credentials!");
   })
-  .then(({ token }) => 
-  tokenService.setToken(token)
-  );
+  .then(({ token }) => tokenService.setToken(token));
 }
 
 export default {
   signup,
-  getUser,
+  getManager,
   logout,
   login,
 };

@@ -6,9 +6,9 @@ const SALT_ROUNDS = 6;
 
 const adminSchema = new Schema(
   {
-    nameFirst: { type: String, required: true },
-    nameLast: { type: String, required: true },
+    name: { type: String, required: true },
     email: { type: String, required: true },
+    password: String,
     // permissions:
     currentStudents: [{ type: Schema.Types.ObjectId, ref: 'Student' }],
     previousStudents: [{ type: Schema.Types.ObjectId, ref: 'Student' }],

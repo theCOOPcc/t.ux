@@ -6,9 +6,9 @@ const SALT_ROUNDS = 6;
 
 const managerSchema = new Schema(
   {
-    nameFirst: { type: String, required: true },
-    nameLast: { type: String, required: true },
+    name: { type: String, required: true },
     email: { type: String, required: true },
+    password: String,
     groups: [{ type: Schema.Types.ObjectId, ref: 'Group' }],
   },
   {
