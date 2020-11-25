@@ -8,8 +8,8 @@ const groupSchema = new Schema(
     name: { type: String, required: true },
     dateStarted: Date,
     endingDate: Date,
-    students: [{type: Schema.Types.ObjectId, ref: 'Student'}],
-    instructor: {type: Schema.Types.ObjectId, ref: 'Admin'}
+    users: [{type: Schema.Types.ObjectId, ref: 'Student'}],
+    manager: {type: Schema.Types.ObjectId, ref: 'Admin'}
   },
   { timestamps: true }
 );

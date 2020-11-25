@@ -72,6 +72,7 @@ class CreateLesson extends Component {
               disabled={this.state.invalidForm}
             >Submit Lesson
             </button>
+            <input type='reset'/>
           </form>
         </div>
       </React.Fragment>
