@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 
 class Lesson extends Component {
-  state = {  }
+  state = { 
+      lessons: []
+   }
+  
   render() { 
     return ( 
       <React.Fragment>
-        <h1>Lesson Page</h1>
+        <h1>Lesson Index</h1>
       </React.Fragment>
     )}
 }
