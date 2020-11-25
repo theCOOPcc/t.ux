@@ -44,7 +44,7 @@ class CreateLesson extends Component {
 
   render() { 
     return ( 
-      <React.Fragment>
+      <React.Fragment> 
         <h1>Create a Lesson</h1> 
         <div className='AddLesson-form'>
           <form ref={this.formRef} onSubmit={this.handleSubmit}>
