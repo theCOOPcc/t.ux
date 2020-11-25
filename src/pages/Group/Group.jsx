@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
+import group from '../../../models/group';
 import groupService from '../../services/groupService'
 
 class GroupPage extends Component {
@@ -19,6 +20,27 @@ class GroupPage extends Component {
             groups: [...state.groups, newGroup]
         }), () => this.props.history.push('/groups'))
     }
+
+    handleDeleteGroup = async id => {
+        if (authService.getUser()) {
+          await groupService.deleteOne(id);
+          this.setState(state => ({
+            groups: state.groups.filter(g => g._id !== id)
+          }), () => this.props.history.push('/groups'));
+        } else {
+          this.props.history.push('/')
+        }
+      }
+    
+    handleUpdateLesson = async updatedGroupData => {
+        const updatedGroup = await groupService.update(updatedGroupData);
+        const newGroupsArray = this.state.groups.map(g =>
+          g._id === updatedGroup._id? updatedGroup : g);
+        this.setState(
+          { groups: newGroupsArray },
+          () => this.props.history.push('/groups')
+        );
+      }
     
     render() { 
         return ( 
