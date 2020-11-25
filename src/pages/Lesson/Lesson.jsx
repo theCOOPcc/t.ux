@@ -19,6 +19,8 @@ class Lesson extends Component {
       lessons: [...state.lessons, newLesson]
     }), () => this.props.history.push('/lessons'));
   }
+
+  
   
   render() { 
     return ( 
