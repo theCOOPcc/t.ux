@@ -14,6 +14,7 @@ class Manager extends Component {
     managerAuthService.logout();
     this.setState({ manager: null });
   };
+  
 
   handleSignupOrLogin = () => {
     this.setState({ manager: managerAuthService.getManager() });

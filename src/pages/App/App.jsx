@@ -18,7 +18,6 @@ class App extends Component {
       <>
         {/* App.js / route will default to the Manager page as per request from Aaron. */}
         <Route exact path="/" render={() => <Manager />} />
-
         {/* // Routes to other User Types */}
         <Route exact path="/user" render={() => <User />} />
         {/* <Route exact path="/manager" render={() => <Manager />} /> */}
