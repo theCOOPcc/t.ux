@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import managerAuthService from '../../services/managerAuthService';
-import PreviewLesson from '../PreviewLesson/PreviewLesson';
-import CreateLesson from '../CreateLesson/CreateLesson';
-import Lesson from '../Lesson/Lesson';
+// import PreviewLesson from '../PreviewLesson/PreviewLesson';
+// import CreateLesson from '../CreateLesson/CreateLesson';
+import Lesson from '../Lesson/Lesson'
 import Signup from '../Signup/Signup';
 import ManagerProfile from '../../components/ManagerProfile/ManagerProfile';
 
@@ -46,8 +46,9 @@ class Manager extends Component {
 
         {/* <Route 
           exact path='/lessons'
-          render={() =>
-          <Lesson />
+          render={({location}) =>
+          <Lesson 
+            location={location}/>
           }
         /> */}
       </>

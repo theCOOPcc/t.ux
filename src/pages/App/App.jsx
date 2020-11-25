@@ -7,6 +7,8 @@ import About from '../About/About';
 import User from '../User/User';
 import Manager from '../Manager/Manager';
 import Admin from '../Admin/Admin';
+import Lesson from '../Lesson/Lesson'
+import CreateLesson from '../CreateLesson/CreateLesson'
 
 import './App.css';
 
@@ -49,6 +51,8 @@ class App extends Component {
         {/* // General Routes */}
         <Route exact path="/about" render={() => <About />} />
         <Route exact path="/blog" render={() => <Blog />} />
+        <Route exact path="/lessons" render={() => <Lesson />} />
+        <Route exact path="/lessons/create" render={() => <CreateLesson />} />
       </>
     );
   }
