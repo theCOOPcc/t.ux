@@ -4,7 +4,8 @@ import './Signup.css';
 
 class Signup extends Component {
   state = {
-    message: ''
+    message: '',
+    type: this.props.type
   }
 
   updateMessage = (msg) => {
@@ -12,9 +13,10 @@ class Signup extends Component {
   }
 
   render() {
+
     return (
       <main>
-        <SignupForm {...this.props} updateMessage={this.updateMessage} />
+        <SignupForm {...this.props} type={this.state.type} updateMessage={this.updateMessage} />
         <p>{this.state.message}</p>
       </main>
     );

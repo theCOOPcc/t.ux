@@ -19,8 +19,10 @@ async function signup(req, res) {
 }
 
 async function login(req, res) {
+  console.log('loggin in as user service, request data', req.body)
   try {
     const user = await User.findOne({ email: req.body.email });
+    console.log('request user', user)
     if (!user) return res.status(401).json({ err: "bad credentials" });
     user.comparePassword(req.body.pw, (err, isMatch) => {
       if (isMatch) {

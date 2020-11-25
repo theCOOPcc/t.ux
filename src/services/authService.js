@@ -29,8 +29,9 @@ function getUser() {
 function logout() {
   tokenService.removeToken();
 }
-
+ 
 function login(creds) {
+  console.log('auth service login function -- creds', creds)
   return fetch(BASE_URL + "login", {
     method: "POST",
     headers: new Headers({ "Content-Type": "application/json" }),
@@ -41,7 +42,9 @@ function login(creds) {
     if (res.ok) return res.json();
     throw new Error("Bad Credentials!");
   })
-  .then(({ token }) => tokenService.setToken(token));
+  .then(({ token }) => 
+  tokenService.setToken(token)
+  );
 }
 
 export default {
