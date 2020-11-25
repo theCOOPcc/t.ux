@@ -3,8 +3,11 @@ import React, { Component } from 'react';
 class Lesson extends Component {
   state = {  }
   render() { 
-    return ( <h1> Lesson Page</h1> );
-  }
+    return ( 
+      <React.Fragment>
+        <h1>Lesson Page</h1>
+      </React.Fragment>
+    )}
 }
  
 export default Lesson;

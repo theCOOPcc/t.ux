@@ -28,6 +28,15 @@ class Manager extends Component {
           handleLogout={this.handleLogout}
         />
         {manager ? <h1>Manager Landing Page</h1> : <Signup type={this.state.type} />}
+        <a href='/lessons/create'>
+          <p>Create a lesson</p>
+        </a>
+        <Route 
+          exact path='/lessons/create'
+          render={() =>
+          <CreateLesson />
+          }
+        />
       </>
     );
   }
