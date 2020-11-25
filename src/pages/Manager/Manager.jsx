@@ -4,6 +4,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import managerAuthService from '../../services/managerAuthService';
 import PreviewLesson from '../PreviewLesson/PreviewLesson';
 import CreateLesson from '../CreateLesson/CreateLesson';
+import Lesson from '../Lesson/Lesson'
 import Signup from '../Signup/Signup';
 
 class Manager extends Component {
@@ -28,13 +29,13 @@ class Manager extends Component {
           handleLogout={this.handleLogout}
         />
         {manager ? <h1>Manager Landing Page</h1> : <Signup type={this.state.type} />}
-        <a href='/lessons/create'>
-          <p>Create a lesson</p>
+        <a href='/lessons'>
+          <p>See lessons</p>
         </a>
         <Route 
-          exact path='/lessons/create'
+          exact path='/lessons'
           render={() =>
-          <CreateLesson />
+          <Lesson />
           }
         />
       </>

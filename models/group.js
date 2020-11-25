@@ -9,7 +9,8 @@ const groupSchema = new Schema(
     dateStarted: Date,
     endingDate: Date,
     users: [{type: Schema.Types.ObjectId, ref: 'Student'}],
-    manager: {type: Schema.Types.ObjectId, ref: 'Admin'}
+    manager: {type: Schema.Types.ObjectId, ref: 'Admin'},
+    createdBy: String
   },
   { timestamps: true }
 );
