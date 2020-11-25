@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
-import lesson from '../../../models/lesson';
 import authService from '../../services/authService';
 import lessonService from '../../services/lessonService'
 

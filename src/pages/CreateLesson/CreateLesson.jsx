@@ -44,7 +44,7 @@ class CreateLesson extends Component {
 
   render() { 
     return ( 
-      <React.Fragment>
+      <React.Fragment> 
         <h1>Create a Lesson</h1> 
         <div className='AddLesson-form'>
           <form ref={this.formRef} onSubmit={this.handleSubmit}>
@@ -63,9 +63,9 @@ class CreateLesson extends Component {
             <label htmlFor='questions'>Input Questions:</label>
               <input name='questions' type='text' value={this.state.formData.name} onChange={this.handleChange} required />
             <label htmlFor='isDraft'>Store as draft?</label>
-              <input name='type' type='checkbox' value={this.state.formData.name} onChange={this.handleChange} required />
+              <input name='isDraft' type='checkbox' value={this.state.formData.name} onChange={this.handleChange} required />
             <label htmlFor='archived'>Archive?</label>
-              <input name='type' type='checkbox' value={this.state.formData.name} onChange={this.handleChange} required />
+              <input name='archived' type='checkbox' value={this.state.formData.name} onChange={this.handleChange} required />
             <button
               type='submit'
               className='btn'
