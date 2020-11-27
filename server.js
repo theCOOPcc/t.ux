@@ -9,8 +9,6 @@ require('./config/database');
 
 const userRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
-const adminAuthRouter = require('./routes/adminAuth');
-const managerAuthRouter = require('./routes/managerAuth');
 const lessonRouter = require('./routes/lessons');
 const groupRouter = require('./routes/groups');
 
@@ -24,8 +22,6 @@ app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/api/auth', authRouter);
-app.use('/api/managerAuth', managerAuthRouter);
-app.use('/api/adminAuth', adminAuthRouter);
 app.use('/api/users', userRouter);
 app.use('/api/lessons', lessonRouter);
 app.use('/api/groups', groupRouter);

@@ -9,14 +9,18 @@ module.exports = {
 }
 
 function index(req, res) {
-    Lesson.find({})
-    //.populate('createdBy')
-    .then(lessons => { res.json(lessons) })
-    .catch(err => { res.json(err) })
+    console.log('index lessons hit')
+    console.log('user', req.user)
+    // Lesson.find
+    //     createdBy: req.user._id
+    // })
+    // .then(lessons => { res.json(lessons) })
+    // .catch(err => { res.json(err) })
 }
 
+// Confirmed: create controller is working
 function create(req, res) {
-    // req.body.createdBy === req.user._id
+    console.log(req.user)
     Lesson.create(req.body)
         .then(lesson => { res.json(lesson) })
         .catch(err => { res.json(err) })

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import authService from '../../services/authService';
-import adminAuthService from '../../services/adminAuthService';
-import managerAuthService from '../../services/managerAuthService';
 
 class SignupForm extends Component {
   state = {
@@ -20,34 +18,15 @@ class SignupForm extends Component {
   };
 
   handleSubmit = async (e) => {
-    const { history, updateMessage, handleSignupOrLogin, type } = this.props;
+    const { history, updateMessage, handleSignupOrLogin } = this.props;
     e.preventDefault();
-    if (type === 'admin') {
-      try {
-        await adminAuthService.signup(this.state);
-        // handleSignupOrLogin();
-        // history.push('/');
-      } catch (err) {
-        updateMessage(err.message);
-      }
-    } else if (type === 'manager') {
-      try {
-        await managerAuthService.signup(this.state);
-        // handleSignupOrLogin();
-        // history.push('/');
-      } catch (err) {
-        updateMessage(err.message);
-      }
-    } else {
-      try {
-        await authService.signup(this.state);
-        // handleSignupOrLogin();
-        history.push('/');
-      } catch (err) {
-        updateMessage(err.message);
-      }
+    try {
+      await authService.signup(this.state);
+      // handleSignupOrLogin();
+      history.push('/');
+    } catch (err) {
+      updateMessage(err.message);
     }
-
   };
 
   isFormInvalid() {
