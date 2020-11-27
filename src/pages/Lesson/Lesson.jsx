@@ -10,7 +10,8 @@ class Lesson extends Component {
   
   async componentDidMount() {
     const lessons = await lessonService.getAll();
-    this.setState ({ lessons: lessons.reverse() })
+    // this.setState ({ lessons: lessons.reverse() })
+    this.setState ({ lessons: lessons })
   }
 
   handleAddLesson = async newLessonData => {

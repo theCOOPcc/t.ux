@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import authService from '../../services/authService';
-import Profile from '../../pages/Profile/Profile';
 import Signup from '../../pages/Signup/Signup';
 
 class User extends Component {
-  state = { user: authService.getUser(), type: 'user' };
+  state = { user: authService.getUser()};
 
   handleLogout = () => {
     authService.logout();
@@ -24,11 +23,13 @@ class User extends Component {
       <>
         <NavBar
           user={user}
-          type={this.state.type}
           // handleSignupOrLogin={this.handleSignupOrLogin}
           handleLogout={this.handleLogout}
         />
-        {user ? <h1>User Landing PAge</h1> : <Signup type={this.state.type} />}
+        {user ? <h1>User Landing PAge</h1> : <Signup  />}
+        <a href="/lessons">
+          <p>See lessons</p>
+        </a>
       </>
     );
   }
