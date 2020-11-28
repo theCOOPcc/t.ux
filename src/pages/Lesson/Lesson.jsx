@@ -6,7 +6,7 @@ import lessonService from '../../services/lessonService'
 class Lesson extends Component {
   state = { 
       lessons: []
-   }
+   } 
   
   async componentDidMount() {
     const lessons = await lessonService.getAll();
