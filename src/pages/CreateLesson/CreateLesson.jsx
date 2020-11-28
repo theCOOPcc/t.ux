@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import lessonService from '../../services/lessonService'
+import lessonService from '../../services/lessonService';
 
 class CreateLesson extends Component {
   state = {
     invalidForm: true,
     formData: {
-      name: 'Lesson #8',
+      name: 'Lesson #9',
       duration: 5,
       numberOfQuestions: 10,
       topics: ['Heuristics'],
@@ -37,7 +37,6 @@ class CreateLesson extends Component {
       ],
       isDraft: false,
       archived: false,
-      // createdBy : this.
     },
   };
 
@@ -46,7 +45,7 @@ class CreateLesson extends Component {
   handleSubmit = (e) => {
     // e.preventDefault();
     // this.props.handleAddLesson(this.state.formData);
-    lessonService.create(this.state.formData)
+    lessonService.create(this.state.formData);
   };
 
   handleChange = (e) => {
@@ -64,8 +63,8 @@ class CreateLesson extends Component {
     return (
       <React.Fragment>
         <h1>Create a Lesson</h1>
-        <button onClick={this.handleSubmit}>Test Submission</button>
-        <div className="AddLesson-form">
+        <div>
+          <button onClick={this.handleSubmit}>Test Submission</button>
           <form ref={this.formRef} onSubmit={this.handleSubmit}>
             <label htmlFor="name">Lesson Name:</label>
             <input
@@ -142,7 +141,7 @@ class CreateLesson extends Component {
             >
               Submit Lesson
             </button>
-            
+
             <input type="reset" />
           </form>
         </div>

@@ -5,39 +5,65 @@ import Login from '../Login/Login';
 import Blog from '../Blog/Blog';
 import About from '../About/About';
 import User from '../User/User';
+import NavBar from '../../components/NavBar/NavBar';
 import Lesson from '../Lesson/Lesson';
 import CreateLesson from '../CreateLesson/CreateLesson';
+import IndexLessons from '../IndexLessons/IndexLessons';
+import authService from '../../services/authService';
+import Landing from '../Landing/Landing';
 
 import './App.css';
 
 class App extends Component {
-  // state={}
+  state = { user: authService.getUser() };
+
+  handleLogout = () => {
+    authService.logout();
+    this.setState({ user: null });
+  };
+
+  handleSignupOrLogin = () => {
+    this.setState({ user: authService.getUser() });
+  };
 
   render() {
+    const { user } = this.state;
     return (
       <>
-        <Route exact path="/" render={() => <User />} />
+        <NavBar user={user} handleLogout={this.handleLogout} />
+
+        <Route
+          exact
+          path="/"
+          render={() => (user ? <User user={user} /> : <Landing />)}
+        />
 
         {/* // Signup & Login Routes */}
         <Route
           exact
           path="/signup"
-          render={({ history, location }) => (
-            <Signup location={location} history={history} />
+          render={({ history }) => (
+            <Signup
+              history={history}
+              handleSignupOrLogin={this.handleSignupOrLogin}
+            />
           )}
         />
         <Route
           exact
           path="/login"
-          render={({ history, location }) => (
-            <Login history={history} location={location} />
+          render={({ history }) => (
+            <Login
+              history={history}
+              handleSignupOrLogin={this.handleSignupOrLogin}
+            />
           )}
         />
 
         {/* // General Routes */}
         <Route exact path="/about" render={() => <About />} />
         <Route exact path="/blog" render={() => <Blog />} />
-        <Route exact path="/lessons" render={() => <Lesson />} />
+        <Route exact path="/lessons" render={() => <IndexLessons />} />
         <Route exact path="/lessons/create" render={() => <CreateLesson />} />
       </>
     );

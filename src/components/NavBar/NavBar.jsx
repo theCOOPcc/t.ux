@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const NavBar = ({ user, handleLogout, type, handleSignupOrLogin }) => {
+const NavBar = ({ user, handleLogout }) => {
   return (
     <>
       {user ? (
@@ -18,6 +17,16 @@ const NavBar = ({ user, handleLogout, type, handleSignupOrLogin }) => {
                   Log Out
                 </a>
               </li>
+              <li>
+                <a href="/lessons/create " className="nav-link">
+                  Create Lesson
+                </a>
+              </li>
+              <li>
+                <a href="/lessons" className="nav-link">
+                  View Lessons
+                </a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -26,23 +35,14 @@ const NavBar = ({ user, handleLogout, type, handleSignupOrLogin }) => {
           <div className="nav-wrapper">
             <ul id="nav-mobile" className="right">
               <li>
-                <Link
-                  to={{
-                    pathname: '/login',
-                  }}
-                >
+                <a href="/login" className="nav-link">
                   Log In
-                </Link>
+                </a>
               </li>
               <li>
-                <Link
-                  to={{
-                    pathname: '/signup',
-                    state: { user },
-                  }}
-                >
+                <a href="/signup" className="nav-link">
                   Sign Up
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

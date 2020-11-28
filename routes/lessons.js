@@ -6,7 +6,7 @@ const lessonsCtrl = require('../controllers/lessons');
 
 /*---------- Protected Routes ----------*/
 router.use(require("../config/auth"));
-router.get('/', checkAuth, lessonsCtrl.index)
+router.get('/', lessonsCtrl.index)
 router.post('/',  lessonsCtrl.create);
 router.get('/:id',checkAuth, lessonsCtrl.show);
 router.put('/:id', checkAuth, lessonsCtrl.update);

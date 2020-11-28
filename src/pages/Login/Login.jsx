@@ -16,15 +16,15 @@ class Login extends Component {
   };
 
   handleSubmit = async (e) => {
+    const { history, handleSignupOrLogin } = this.props;
     e.preventDefault();
     try {
-      console.log('loggin in as user');
       await authService.login(this.state);
       // Let <App> know a user has signed up!
-      // handleSignupOrLogin();
-      // console.log(handleSignupOrLogin)
-      // history.push('/user');
+      handleSignupOrLogin();
+      history.push('/');
     } catch (err) {
+      // Use a modal or toast in your apps instead of alert
       alert('Invalid Credentials!');
     }
   };
