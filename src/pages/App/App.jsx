@@ -11,8 +11,17 @@ import CreateLesson from '../CreateLesson/CreateLesson';
 import IndexLessons from '../IndexLessons/IndexLessons';
 import authService from '../../services/authService';
 import Landing from '../Landing/Landing';
-
 import './App.css';
+
+
+import ReactGA from 'react-ga'
+
+// const trackingId = "" // Google analytics tracking id
+// ReactGA.initialize(trackingId)
+// ReactGA.set({
+//   userId: this.state.user.id
+// })
+
 
 class App extends Component {
   state = { user: authService.getUser() };

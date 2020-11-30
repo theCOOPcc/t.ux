@@ -58,16 +58,16 @@ function getOne(lesson) {
   );
 }
 
-function update(lesson) {
+function update(formData, lessonId) {
   return fetch(
-    `${BASE_URL}${lesson._id}`,
+    `${BASE_URL}${lessonId}`,
     {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
         Authorization: 'Bearer ' + tokenService.getToken(),
       },
-      body: JSON.stringify(lesson),
+      body: JSON.stringify(formData),
     },
     { mode: 'cors' }
   ).then((res) => res.json());
