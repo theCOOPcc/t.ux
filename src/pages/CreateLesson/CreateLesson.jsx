@@ -38,6 +38,7 @@ class CreateLesson extends Component {
       isDraft: false,
       archived: false,
     },
+    lessonId: "5fc17b77171f00437b74f828"
   };
 
   formRef = React.createRef();
@@ -45,7 +46,10 @@ class CreateLesson extends Component {
   handleSubmit = (e) => {
     // e.preventDefault();
     // this.props.handleAddLesson(this.state.formData);
-    lessonService.create(this.state.formData);
+    lessonService.create(this.state.formData, this.state.lessonId);
+    // lessonService.update(this.state.formData, this.state.lessonId);
+
+
   };
 
   handleChange = (e) => {
