@@ -48,8 +48,6 @@ class CreateLesson extends Component {
     // this.props.handleAddLesson(this.state.formData);
     lessonService.create(this.state.formData, this.state.lessonId);
     // lessonService.update(this.state.formData, this.state.lessonId);
-
-
   };
 
   handleChange = (e) => {
