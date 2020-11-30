@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 import lessonService from '../../services/lessonService';
 import styled from 'styled-components';
 
@@ -13,14 +14,18 @@ const LessonCard = styled.div`
   justify-content: space-around;
 `;
 
+const Button = styled.div`
+  background-color: blue;
+`
+
 const Container = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 2fr 10fr;
 `;
 
 const SideBar = styled.div`
   background-color: black;
-  width: 300px;
+  ${'' /* width: 300px; */}
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -113,6 +118,8 @@ class IndexLessons extends Component {
                 {/* // TODO: Insert Image */}
                 <span>{lesson.name}</span>
                 <button>Assign</button>
+                <Link  to={{pathname: '/preview-lesson', state:{lesson}}}>Take Lesson</Link>
+
               </LessonCard>
             ))
           ) : (
