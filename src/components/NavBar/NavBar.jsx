@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
+
 import styled from 'styled-components';
 
 const Nav = styled.div`
@@ -23,6 +26,7 @@ position: absolute; right: 0;
 const A = styled.a`
 color: white;
 `
+
 
 const NavBar = ({ user, handleLogout }) => {
   return (

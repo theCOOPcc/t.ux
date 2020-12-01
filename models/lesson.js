@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const answerSchema = new Schema({
-  answerText: String,
+  label: String,
   isCorrect: Boolean,
 });
 
