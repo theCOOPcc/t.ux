@@ -6,9 +6,9 @@ import Blog from '../Blog/Blog';
 import About from '../About/About';
 import User from '../User/User';
 import NavBar from '../../components/NavBar/NavBar';
-import Lesson from '../Lesson/Lesson';
+import Lesson from '../Lessons/Lessons';
 import CreateLesson from '../CreateLesson/CreateLesson';
-import IndexLessons from '../IndexLessons/IndexLessons';
+import Lessons from '../Lessons/Lessons';
 import authService from '../../services/authService';
 import Landing from '../Landing/Landing';
 import PreviewLesson from '../PreviewLesson/PreviewLesson';
@@ -71,7 +71,7 @@ class App extends Component {
         {/* // General Routes */}
         <Route exact path="/about" render={() => <About />} />
         <Route exact path="/blog" render={() => <Blog />} />
-        <Route exact path="/lessons" render={() => <IndexLessons />} />
+        <Route exact path="/lessons" render={() => <Lessons />} />
         <Route exact path="/lessons/create" render={() => <CreateLesson />} />
         <Route
           exact

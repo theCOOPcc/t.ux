@@ -8,6 +8,7 @@ module.exports = {
   show,
 };
 
+// tested and this works cory
 function index(req, res) {
   Lesson.find({})
     .then((lessons) => {
@@ -30,8 +31,9 @@ function create(req, res) {
     });
 }
 
+// tested and this works cory
 function deleteOne(req, res) {
-  Lesson.findByIdAndDelete(req.params._id)
+  Lesson.findByIdAndDelete(req.params.id)
     .then((lesson) => {
       res.json(lesson);
     })
@@ -40,8 +42,9 @@ function deleteOne(req, res) {
     });
 }
 
+// tested and this works cory
 function update(req, res) {
-  Lesson.findByIdAndUpdate(req.user._id, req.body, { new: true })
+  Lesson.findByIdAndUpdate(req.params.id, req.body, { new: true })
     .then((lesson) => {
       res.json(lesson);
     })
@@ -50,8 +53,9 @@ function update(req, res) {
     });
 }
 
+// tested and this works cory
 function show(req, res) {
-  Lesson.findById(req.user._id)
+  Lesson.findById(req.params.id)
     .then((lesson) => {
       res.json(lesson);
     })

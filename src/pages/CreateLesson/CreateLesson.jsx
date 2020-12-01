@@ -21,8 +21,10 @@ class CreateLesson extends Component {
       type: [],
       media: '',
       questions: [],
+
       isDraft: false,
       archived: false,
+      _id: '5fc17b77171f00437b74f828'
     },
     // lessonId: '5fc17b77171f00437b74f828',
     timeLimit: false,
@@ -46,6 +48,7 @@ class CreateLesson extends Component {
     const formData = this.state.formData;
     formData.numberofQuestions = parseInt(numberOfQuestions);
     this.setState({ formData: formData });
+
   };
 
   handleChange = (e) => {

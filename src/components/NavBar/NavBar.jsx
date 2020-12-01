@@ -1,53 +1,68 @@
 import React from 'react';
+
 import { Link } from 'react-router-dom';
+
+import styled from 'styled-components';
+
+const Nav = styled.div`
+display: flex;
+padding: 10px;
+background-color: black;
+height: 40px;
+position: relative;
+width: 100%;
+`
+const Tag = styled.div`
+line-height: 40px;
+padding-left: 20px;
+`
+
+const RightTag = styled.div`
+line-height: 40px;
+padding-left: 20px;
+padding-right: 40px;
+position: absolute; right: 0;
+`
+const A = styled.a`
+color: white;
+`
+
 
 const NavBar = ({ user, handleLogout }) => {
   return (
     <>
       {user ? (
-        <nav>
-          <div className="nav-wrapper">
-            <ul id="nav-mobile" className="right">
-              <li>
-                <a href=" " className="nav-link">
+        <Nav>
+                <Tag>
+                  <A href=" " className="nav-link">
                   Welcome, {user.name}
-                </a>
-              </li>
-              <li>
-                <a href=" " className="nav-link" onClick={handleLogout}>
-                  Log Out
-                </a>
-              </li>
-              <li>
-                <a href="/lessons/create " className="nav-link">
+                </A></Tag>
+                <Tag>
+                  <A href="/lessons/create " className="nav-link">
                   Create Lesson
-                </a>
-              </li>
-              <li>
-                <a href="/lessons" className="nav-link">
+                </A>
+                </Tag>
+                <Tag>
+                  <A href="/lessons" className="nav-link">
                   View Lessons
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+                </A></Tag>
+                <RightTag>
+                  <A href=" " className="nav-link" onClick={handleLogout}>
+                  Log Out
+                </A>
+                </RightTag>
+        </Nav>
       ) : (
-        <nav>
-          <div className="nav-wrapper">
-            <ul id="nav-mobile" className="right">
-              <li>
-                <a href="/login" className="nav-link">
+        <Nav>
+                <RightTag><A href="/login" className="nav-link">
                   Log In
-                </a>
-              </li>
-              <li>
-                <a href="/signup" className="nav-link">
+                </A>
+                <A href="/signup" className="nav-link">
                   Sign Up
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
+                </A>
+                </RightTag>
+
+          </Nav>
       )}
     </>
   );
