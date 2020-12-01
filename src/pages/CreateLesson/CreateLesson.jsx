@@ -1,53 +1,51 @@
 import React, { Component } from 'react';
 import lessonService from '../../services/lessonService';
+import styled from 'styled-components';
+import PreQuestionForm from '../../components/PreQuestionForm/PreQuestionForm';
+import CreateQuestionForm from '../../components/CreateQuestionForm/CreateQuestionForm';
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+`;
 
 class CreateLesson extends Component {
   state = {
-    invalidForm: true,
     formData: {
-      name: 'Lesson #9',
-      duration: 5,
-      numberOfQuestions: 10,
-      topics: ['Heuristics'],
-      type: ['Multiple Choice'],
-      media: 'https://picsum.photos/id/1/200/300',
-      questions: [
-        {
-          problemStatement: 'This is the problem statement',
-          suggestion: 'Here is a suggestion if you are having trouble',
-          answers: [
-            {
-              label: 'answer #1',
-              isCorrect: false,
-            },
-            {
-              label: 'answer #2',
-              isCorrect: true,
-            },
-            {
-              label: 'answer #3',
-              isCorrect: true,
-            },
-            {
-              label: 'answer #4',
-              isCorrect: false,
-            },
-          ],
-        },
-      ],
+      name: '',
+      duration: null,
+      numberOfQuestions: null,
+      topics: [],
+      type: [],
+      media: '',
+      questions: [],
       isDraft: false,
       archived: false,
     },
-    lessonId: "5fc17b77171f00437b74f828"
+    // lessonId: '5fc17b77171f00437b74f828',
+    timeLimit: false,
+    template: 'Multiple Choice',
+    question: {
+      problemStatement: '',
+      suggestion: '',
+      answers: [],
+    },
+    numberOfAnswers: 0,
+    numberOfQuestions: 1,
   };
 
-  formRef = React.createRef();
-
   handleSubmit = (e) => {
-    // e.preventDefault();
-    // this.props.handleAddLesson(this.state.formData);
-    lessonService.create(this.state.formData, this.state.lessonId);
-    // lessonService.update(this.state.formData, this.state.lessonId);
+    lessonService.create(this.state.formData);
+  };
+
+  handleNumberOfQuestions = (e) => {
+    e.preventDefault();
+    const numberOfQuestions = e.target.value;
+    const formData = this.state.formData;
+    formData.numberofQuestions = parseInt(numberOfQuestions);
+    this.setState({ formData: formData });
   };
 
   handleChange = (e) => {
@@ -57,97 +55,103 @@ class CreateLesson extends Component {
     };
     this.setState({
       formData,
-      invalidForm: !this.formRef.current.checkValidity(),
     });
   };
 
+  handleAddQuestion = (e) => {
+    console.log('adding question');
+    e.preventDefault();
+    const question = this.state.question;
+    const formData = this.state.formData;
+    formData.questions.push(question);
+    this.setState({ formData: formData });
+  };
+
+  handleChangeQuestionDetails = (e) => {
+    const question = {
+      ...this.state.question,
+      [e.target.name]: e.target.value,
+    };
+    this.setState({
+      question,
+    });
+  };
+
+  handleChangeAnswerValue = (e) => {
+    const index = e.target.name;
+    const question = this.state.question;
+    question.answers[index].label = e.target.value;
+    this.setState({ question: question });
+  };
+
+  handleCreateAnswerField = (e) => {
+    e.preventDefault();
+    let numberOfAnswers = this.state.numberOfAnswers;
+    numberOfAnswers++;
+    this.setState({ numberOfAnswers: numberOfAnswers });
+    let question = this.state.question;
+    question.answers.push({ label: '', isCorrect: false });
+    this.setState({ question: question });
+    console.log(numberOfAnswers);
+  };
+
+  handleToggleTimeLimit = () => {
+    let timeLimit = this.state.timeLimit;
+    timeLimit = !timeLimit;
+    this.setState({ timeLimit: timeLimit });
+  };
+
+  handleToggleAnswerCorrect = (e) => {
+    const index = e.target.name;
+    const question = this.state.question;
+    question.answers[index].isCorrect = !question.answers[index].isCorrect;
+    this.setState({ question: question });
+  };
+
   render() {
+    const { timeLimit, template, suggestion, problemStatement } = this.state;
+    const {
+      name,
+      duration,
+      numberOfQuestions,
+      topics,
+      type,
+    } = this.state.formData;
+
     return (
-      <React.Fragment>
+      <Container>
         <h1>Create a Lesson</h1>
         <div>
-          <button onClick={this.handleSubmit}>Test Submission</button>
-          <form ref={this.formRef} onSubmit={this.handleSubmit}>
-            <label htmlFor="name">Lesson Name:</label>
-            <input
-              name="name"
-              type="text"
-              value={this.state.formData.name}
-              onChange={this.handleChange}
-              required
-            />
-            <label htmlFor="duration">Lesson Time:</label>
-            <input
-              name="duration"
-              type="number"
-              min="0"
-              value={this.state.formData.name}
-              onChange={this.handleChange}
-              required
-            />
-            <label htmlFor="numberOfQuestions">Number of Questions:</label>
-            <input
-              name="numberOfQuestions"
-              type="number"
-              min="0"
-              value={this.state.formData.name}
-              onChange={this.handleChange}
-              required
-            />
-            <label htmlFor="topics">Lesson Topic(s):</label>
-            <input
-              name="topics"
-              type="text"
-              value={this.state.formData.name}
-              onChange={this.handleChange}
-              required
-            />
-            <label htmlFor="type">Lesson Type:</label>
-            <input
-              name="type"
-              type="text"
-              value={this.state.formData.name}
-              onChange={this.handleChange}
-              required
-            />
-            {/* <label htmlFor='media'>Upload Media:</label>
-              <input name='media' type='text' value={this.state.formData.name} onChange={this.handleChange} required /> */}
-            <label htmlFor="questions">Input Questions:</label>
-            <input
-              name="questions"
-              type="text"
-              value={this.state.formData.name}
-              onChange={this.handleChange}
-              required
-            />
-            <label htmlFor="isDraft">Store as draft?</label>
-            <input
-              name="isDraft"
-              type="checkbox"
-              value={this.state.formData.name}
-              onChange={this.handleChange}
-              required
-            />
-            <label htmlFor="archived">Archive?</label>
-            <input
-              name="archived"
-              type="checkbox"
-              value={this.state.formData.name}
-              onChange={this.handleChange}
-              required
-            />
-            <button
-              type="submit"
-              className="btn"
-              disabled={this.state.invalidForm}
-            >
-              Submit Lesson
-            </button>
+          <PreQuestionForm
+            type={type}
+            name={name}
+            handleChange={this.handleChange}
+            handleSubmit={this.handleSubmit}
+            topics={topics}
+            handleToggleTimeLimit={this.handleToggleTimeLimit}
+            timeLimit={timeLimit}
+            duration={duration}
+            numberOfQuestions={numberOfQuestions}
+            handleNumberOfQuestions={this.handleNumberOfQuestions}
+          />
 
-            <input type="reset" />
-          </form>
+          {/* {Array.from(Array(this.state.formData.numberOfQuestions)).map((x, index) => <Question key={index} />)} */}
+          {template ? (
+            <CreateQuestionForm
+              problemStatement={problemStatement}
+              handleChangeQuestionDetails={this.handleChangeQuestionDetails}
+              suggestion={suggestion}
+              answers={this.state.question.answers}
+              handleChangeAnswerValue={this.handleChangeAnswerValue}
+              handleToggleAnswerCorrect={this.handleToggleAnswerCorrect}
+              handleCreateAnswerField={this.handleCreateAnswerField}
+              handleAddQuestion={this.handleAddQuestion}
+            />
+          ) : (
+            <h1>This is not a multiple choice template</h1>
+          )}
         </div>
-      </React.Fragment>
+      </Container>
     );
   }
 }

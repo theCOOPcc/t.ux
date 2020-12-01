@@ -14,9 +14,6 @@ const LessonCard = styled.div`
   justify-content: space-around;
 `;
 
-const Button = styled.div`
-  background-color: blue;
-`
 
 const Container = styled.div`
   display: grid;
@@ -25,7 +22,6 @@ const Container = styled.div`
 
 const SideBar = styled.div`
   background-color: black;
-  ${'' /* width: 300px; */}
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -39,7 +35,14 @@ const SideBarItem = styled.div`
   display: flex;
   align-items: center;
   margin: 0px auto;
+  background-color: black;
 `;
+
+const SideBarLink = styled.a`
+  ${SideBarItem}:hover {
+    fill: red;
+  }
+`
 
 const LessonsContainer = styled.div`
   padding: 20px 40px;
@@ -88,7 +91,8 @@ class IndexLessons extends Component {
       <Container>
         <SideBar>
           <SideBarItem>
-            <span>Activity</span>
+            {/* <span>Activity</span> */}
+            <SideBarLink href="#">Activity</SideBarLink>
           </SideBarItem>
           <SideBarItem>
             <span>Lessons</span>
