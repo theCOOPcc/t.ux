@@ -21,7 +21,7 @@ class Lesson extends Component {
   state = { 
       lessons: lessonService.getAll(),
       formData: {
-        name: 'Lesson #9001',
+        name: 'Lesson #9002',
         duration: 5,
         numberOfQuestions: 10,
         topics: ['Heuristics'],
@@ -53,12 +53,13 @@ class Lesson extends Component {
         ],
         isDraft: false,
         archived: false,
-        _id: '5fc17b77171f00437b74f828'
+        _id: '5fc17b77171f00437b74f829'
       },
    } 
   
   async componentDidMount() {
     // lessonService.update(this.state.formData)
+    // lessonService.create(this.state.formData)
     const lessons = await lessonService.getAll();
     // this.setState ({ lessons: lessons.reverse() })
     this.setState ({ lessons: lessons })
@@ -111,6 +112,7 @@ class Lesson extends Component {
               <button onClick={()=>lessonService.deleteOne(lesson._id)}>
                         Delete
                     </button>
+              <button onClick={()=>lessonService.getOne(lesson._id)}>Details</button>
             </LessonCard>
           ))
         ) : (
