@@ -92,3 +92,4 @@ function update(lesson) {
 //     { mode: 'cors' }
 //   ).then((res) => res.json());
 // }
+

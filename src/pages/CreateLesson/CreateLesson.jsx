@@ -39,6 +39,7 @@ class CreateLesson extends Component {
       archived: false,
       _id: '5fc17b77171f00437b74f828'
     },
+    lessonId: "5fc17b77171f00437b74f828"
   };
 
   formRef = React.createRef();
