@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import lessonService from '../../services/lessonService';
 import styled from 'styled-components';
+import Lesson from '../Lessons/Lessons';
 
 const LessonCard = styled.div`
   border: solid 2px black;

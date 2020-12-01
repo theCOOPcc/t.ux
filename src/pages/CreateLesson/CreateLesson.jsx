@@ -5,7 +5,7 @@ class CreateLesson extends Component {
   state = {
     invalidForm: true,
     formData: {
-      name: 'Lesson #9',
+      name: 'Lesson #9000',
       duration: 5,
       numberOfQuestions: 10,
       topics: ['Heuristics'],
@@ -13,8 +13,8 @@ class CreateLesson extends Component {
       media: 'https://picsum.photos/id/1/200/300',
       questions: [
         {
-          problemStatement: 'This is the problem statement',
-          suggestion: 'Here is a suggestion if you are having trouble',
+          problemStatement: 'This is the problem statement that I am updating',
+          suggestion: 'Here is a suggestion if you are having trouble that I am updating',
           answers: [
             {
               label: 'answer #1',
@@ -37,6 +37,7 @@ class CreateLesson extends Component {
       ],
       isDraft: false,
       archived: false,
+      _id: '5fc17b77171f00437b74f828'
     },
     lessonId: "5fc17b77171f00437b74f828"
   };
@@ -46,8 +47,11 @@ class CreateLesson extends Component {
   handleSubmit = (e) => {
     // e.preventDefault();
     // this.props.handleAddLesson(this.state.formData);
-    lessonService.create(this.state.formData, this.state.lessonId);
-    // lessonService.update(this.state.formData, this.state.lessonId);
+
+    // lessonService.create(this.state.formData);
+
+    //try backend update function
+    lessonService.update(this.state.formData)
   };
 
   handleChange = (e) => {
