@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import lessonService from '../../services/lessonService';
 import styled from 'styled-components';
-import Lesson from '../Lesson/Lesson';
+import Lesson from '../Lessons/Lessons';
 
 const LessonCard = styled.div`
   border: solid 2px black;
@@ -35,7 +35,12 @@ class IndexLessons extends Component {
         {lessons.length > 0 ? (
           lessons.map((lesson) => (
             <LessonCard>
-              <span>{lesson.name}</span>
+              <a href='http://www.google.com'>
+                <p>{lesson.name}</p>
+              </a>
+                  {/* <button type="submit" onClick={() => this.props.handleDeleteMessage(props.location.state._id)}>
+                            Delete
+                          </button> */}
             </LessonCard>
           ))
         ) : (

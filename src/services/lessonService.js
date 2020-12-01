@@ -9,6 +9,7 @@ export default {
   update,
 };
 
+// this works cory
 export function create(lesson) {
   return fetch(
     BASE_URL,
@@ -26,6 +27,7 @@ export function create(lesson) {
   ).then((res) => res.json());
 }
 
+// this works cory
 function getAll() {
     console.log('hit lesson index service function')
   return fetch(
@@ -41,6 +43,7 @@ function getAll() {
   ).then((res) => res.json());
 }
 
+// this works cory
 function deleteOne(id) {
   return fetch(
     `${BASE_URL}${id}`,
@@ -53,22 +56,39 @@ function deleteOne(id) {
 }
 
 function getOne(lesson) {
+    console.log(lesson)
   return fetch(`${BASE_URL}${lesson._id}`, { mode: 'cors' }).then((res) =>
     res.json()
   );
 }
 
+// this works cory
 function update(lesson) {
-  return fetch(
-    `${BASE_URL}${lesson._id}`,
-    {
-      method: 'PUT',
-      headers: {
-        'content-type': 'application/json',
-        Authorization: 'Bearer ' + tokenService.getToken(),
+    return fetch(
+      `${BASE_URL}${lesson._id}`,
+      {
+        method: 'PUT',
+        headers: {
+          'content-type': 'application/json',
+          Authorization: 'Bearer ' + tokenService.getToken(),
+        },
+        body: JSON.stringify(lesson),
       },
-      body: JSON.stringify(lesson),
-    },
-    { mode: 'cors' }
-  ).then((res) => res.json());
-}
+      { mode: 'cors' }
+    ).then((res) => res.json());
+  }
+
+// function update(lesson) {
+//   return fetch(
+//     `${BASE_URL}${lesson._id}`,
+//     {
+//       method: 'PUT',
+//       headers: {
+//         'content-type': 'application/json',
+//         Authorization: 'Bearer ' + tokenService.getToken(),
+//       },
+//       body: JSON.stringify(lesson),
+//     },
+//     { mode: 'cors' }
+//   ).then((res) => res.json());
+// }

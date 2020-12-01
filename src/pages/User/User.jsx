@@ -10,7 +10,7 @@ class User extends Component {
     const { user } = this.props;
     return (
       <>
-        <h1>User Landing PAge</h1>
+        <h1>User Landing Page</h1>
       </>
     );
   }
