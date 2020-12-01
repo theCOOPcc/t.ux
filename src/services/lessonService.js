@@ -11,13 +11,14 @@ export default {
 
 // this works cory
 export function create(lesson) {
+    console.log('create a lesson')
   return fetch(
     BASE_URL,
     {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        //  'Authorization': 'Bearer' + tokenService.getToken()
+        // 'Authorization': 'Bearer' + tokenService.getToken()
       },
       body: JSON.stringify(lesson),
     },
@@ -29,7 +30,7 @@ export function create(lesson) {
 
 // this works cory
 function getAll() {
-    console.log('hit lesson index service function')
+    console.log('get all lessons')
   return fetch(
     BASE_URL,
     {
@@ -45,6 +46,7 @@ function getAll() {
 
 // this works cory
 function deleteOne(id) {
+    console.log('delete lesson')
   return fetch(
     `${BASE_URL}${id}`,
     {
@@ -55,11 +57,20 @@ function deleteOne(id) {
   ).then((res) => res.json());
 }
 
-function getOne(lesson) {
-    console.log(lesson)
-  return fetch(`${BASE_URL}${lesson._id}`, { mode: 'cors' }).then((res) =>
-    res.json()
-  );
+// this works cory
+function getOne(lessonId) {
+    console.log('one lesson')
+  return fetch(
+      `${BASE_URL}${lessonId}`, 
+      {
+        method: 'GET',
+        headers: {
+          'content-type': 'application/json',
+            'Authorization': 'Bearer' + tokenService.getToken()
+        },
+      },
+      {  mode: 'cors' }
+    ).then((res) => res.json());
 }
 
 // this works cory
@@ -70,26 +81,10 @@ function update(lesson) {
         method: 'PUT',
         headers: {
           'content-type': 'application/json',
-          Authorization: 'Bearer ' + tokenService.getToken(),
+        //   Authorization: 'Bearer ' + tokenService.getToken(),
         },
         body: JSON.stringify(lesson),
       },
       { mode: 'cors' }
     ).then((res) => res.json());
   }
-
-// function update(lesson) {
-//   return fetch(
-//     `${BASE_URL}${lesson._id}`,
-//     {
-//       method: 'PUT',
-//       headers: {
-//         'content-type': 'application/json',
-//         Authorization: 'Bearer ' + tokenService.getToken(),
-//       },
-//       body: JSON.stringify(lesson),
-//     },
-//     { mode: 'cors' }
-//   ).then((res) => res.json());
-// }
-

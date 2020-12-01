@@ -8,6 +8,7 @@ module.exports = {
   show,
 };
 
+// tested and this works cory
 function index(req, res) {
   Lesson.find({})
     .then((lessons) => {
@@ -52,8 +53,9 @@ function update(req, res) {
     });
 }
 
+// tested and this works cory
 function show(req, res) {
-  Lesson.findById(req.user._id)
+  Lesson.findById(req.params.id)
     .then((lesson) => {
       res.json(lesson);
     })
