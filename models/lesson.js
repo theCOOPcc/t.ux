@@ -17,9 +17,9 @@ const lessonSchema = new Schema(
     name: { type: String, required: true },
     duration: Number,
     numberOfQuestions: Number,
-    topics: [String],
-    type: [String],
-    media: { type: String },
+    topics: String,
+    type: String,
+    media: String,
     questions: [questionSchema],
     // recap:
     isDraft: Boolean,

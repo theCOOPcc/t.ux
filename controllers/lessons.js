@@ -21,10 +21,11 @@ function index(req, res) {
 
 // Confirmed: create controller is working
 function create(req, res) {
-  console.log(req.user);
+  console.log('request body', req.body)
   Lesson.create(req.body)
     .then((lesson) => {
-      res.json(lesson);
+      console.log('lesson',lesson)
+      res.status(200).json(lesson);
     })
     .catch((err) => {
       res.json(err);
