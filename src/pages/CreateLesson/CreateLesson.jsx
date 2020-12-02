@@ -15,18 +15,15 @@ class CreateLesson extends Component {
   state = {
     formData: {
       name: '',
-      duration: null,
-      numberOfQuestions: null,
-      topics: [],
-      type: [],
+      duration: 0,
+      numberOfQuestions: 0,
+      topics: '',
+      type: 'multiple choice',
       media: '',
       questions: [],
-
       isDraft: false,
       archived: false,
-      _id: '5fc17b77171f00437b74f828'
     },
-    // lessonId: '5fc17b77171f00437b74f828',
     timeLimit: false,
     template: 'Multiple Choice',
     question: {
@@ -35,7 +32,6 @@ class CreateLesson extends Component {
       answers: [],
     },
     numberOfAnswers: 0,
-    numberOfQuestions: 1,
   };
 
   handleSubmit = (e) => {
@@ -46,9 +42,16 @@ class CreateLesson extends Component {
     e.preventDefault();
     const numberOfQuestions = e.target.value;
     const formData = this.state.formData;
-    formData.numberofQuestions = parseInt(numberOfQuestions);
+    formData.numberOfQuestions = parseInt(numberOfQuestions);
     this.setState({ formData: formData });
+  };
 
+  handleDuration = (e) => {
+    e.preventDefault();
+    const duration = e.target.value;
+    const formData = this.state.formData;
+    formData.duration = parseInt(duration);
+    this.setState({ formData: formData });
   };
 
   handleChange = (e) => {
@@ -136,23 +139,30 @@ class CreateLesson extends Component {
             duration={duration}
             numberOfQuestions={numberOfQuestions}
             handleNumberOfQuestions={this.handleNumberOfQuestions}
+            handleChangeTopic={this.handleChangeTopic}
+            handleDuration={this.handleDuration}
           />
-
-          {/* {Array.from(Array(this.state.formData.numberOfQuestions)).map((x, index) => <Question key={index} />)} */}
           {template ? (
-            <CreateQuestionForm
-              problemStatement={problemStatement}
-              handleChangeQuestionDetails={this.handleChangeQuestionDetails}
-              suggestion={suggestion}
-              answers={this.state.question.answers}
-              handleChangeAnswerValue={this.handleChangeAnswerValue}
-              handleToggleAnswerCorrect={this.handleToggleAnswerCorrect}
-              handleCreateAnswerField={this.handleCreateAnswerField}
-              handleAddQuestion={this.handleAddQuestion}
-            />
+            Array.from(Array(numberOfQuestions)).map((x, index) => (
+              <>
+                <h2>Question #{index + 1}</h2>
+                <CreateQuestionForm
+                  key={index}
+                  problemStatement={problemStatement}
+                  handleChangeQuestionDetails={this.handleChangeQuestionDetails}
+                  suggestion={suggestion}
+                  answers={this.state.question.answers}
+                  handleChangeAnswerValue={this.handleChangeAnswerValue}
+                  handleToggleAnswerCorrect={this.handleToggleAnswerCorrect}
+                  handleCreateAnswerField={this.handleCreateAnswerField}
+                  handleAddQuestion={this.handleAddQuestion}
+                />
+              </>
+            ))
           ) : (
             <h1>This is not a multiple choice template</h1>
           )}
+          <button onClick={this.handleSubmit}>Submit Lesson</button>
         </div>
       </Container>
     );

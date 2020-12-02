@@ -1,61 +1,63 @@
 import React, { Component } from 'react';
+import {Input, Form, InputGroup, Label, TextArea,Button} from '../../components/StyledComponents/FormComponents'
 
 class CreateQuestionForm extends Component {
   state = {};
   render() {
     const {problemStatement, handleChangeQuestionDetails, suggestion, answers, handleChangeAnswerValue, handleToggleAnswerCorrect, handleCreateAnswerField, handleAddQuestion} = this.props;
     return (
-      <form>
-              <div>
-                <label>Question:</label>
-                <textarea
+      <Form>
+      
+              <InputGroup>
+                <Label>Question:</Label>
+                <TextArea
                   name="problemStatement"
                   type="textarea"
                   value={problemStatement}
                   onChange={handleChangeQuestionDetails}
-                ></textarea>
-              </div>
-              <div>
-                <label>Suggestion:</label>
-                <textarea
+                ></TextArea>
+              </InputGroup>
+              <InputGroup>
+                <Label>Suggestion:</Label>
+                <TextArea
                   name="suggestion"
                   type="textarea"
                   value={suggestion}
                   onChange={handleChangeQuestionDetails}
-                ></textarea>
-              </div>
-              <div>
-                <label htmlFor="media">Upload Media:</label>
-                <input
+                ></TextArea>
+              </InputGroup>
+              <InputGroup>
+                <Label htmlFor="media">Upload Media:</Label>
+                <Input
                   name="media"
                   type="file"
                   value=""
                 />
-              </div>
+              </InputGroup>
               {answers.map((answer, index) => (
-                <div key={index}>
-                  <label>Answer {index + 1}:</label>
-                  <input
+                <InputGroup key={index}>
+                  <Label>Answer {index + 1}:</Label>
+                  <Input
                     name={index}
                     type="text"
-                    value={answer.label}
+                    value={answer.Label}
                     index={index}
                     onChange={handleChangeAnswerValue}
                   />
-                  <input
+                  <Input
                     name={index}
                     type="checkbox"
                     onChange={handleToggleAnswerCorrect}
                   />
-                </div>
+                </InputGroup>
               ))}
 
-              <button onClick={handleCreateAnswerField}>
+              <Button onClick={handleCreateAnswerField}>
                 Create Answer
-              </button>
+              </Button>
 
-              <button onClick={handleAddQuestion}>Add Question</button>
-            </form>
+              <Button onClick={handleAddQuestion}>Add Question</Button>
+            </Form>
     );
   }
 }
