@@ -12,9 +12,10 @@ import Lessons from '../Lessons/Lessons';
 import authService from '../../services/authService';
 import Landing from '../Landing/Landing';
 import PreviewLesson from '../PreviewLesson/PreviewLesson';
+import IndexLessons from '../IndexLessons/IndexLessons'
 import './App.css';
 
-import ReactGA from 'react-ga';
+// import ReactGA from 'react-ga';
 
 // const trackingId = "" // Google analytics tracking id
 // ReactGA.initialize(trackingId)
@@ -71,7 +72,7 @@ class App extends Component {
         {/* // General Routes */}
         <Route exact path="/about" render={() => <About />} />
         <Route exact path="/blog" render={() => <Blog />} />
-        <Route exact path="/lessons" render={() => <Lessons />} />
+        <Route exact path="/lessons" render={() => <IndexLessons />} />
         <Route exact path="/lessons/create" render={() => <CreateLesson />} />
         <Route
           exact
