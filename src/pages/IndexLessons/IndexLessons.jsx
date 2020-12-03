@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import lessonService from '../../services/lessonService';
 import styled from 'styled-components';
+
 import {LessonCard, SideBar, SideBarItem, SideBarLink, LessonsContainer, Header, Container} from '../../components/StyledComponents/LessonComponents'
+
 
 
 // const ToggleButtons = styled.div`
@@ -54,8 +56,9 @@ class IndexLessons extends Component {
                 {/* // TODO: Insert Image */}
                 <span>{lesson.name}</span>
                 <button>Assign</button>
-                <Link  to={{pathname: '/preview-lesson', state:{lesson}}}>Take Lesson</Link>
-
+                <Link to={{ pathname: '/preview-lesson', state: { lesson } }}>
+                  Take Lesson
+                </Link>
               </LessonCard>
             ))
           ) : (

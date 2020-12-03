@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom'
-import authService from '../../services/authService';
 import lessonService from '../../services/lessonService';
 import styled from 'styled-components'
 

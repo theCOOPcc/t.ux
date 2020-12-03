@@ -13,7 +13,6 @@ class PreQuestionForm extends Component {
       duration,
       numberOfQuestions,
       handleNumberOfQuestions,
-      handleSubmit,
       handleChange,
       handleDuration,
       type,

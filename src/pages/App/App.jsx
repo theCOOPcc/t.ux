@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import Blog from '../Blog/Blog';
 import About from '../About/About';
 import User from '../User/User';
 import NavBar from '../../components/NavBar/NavBar';
-import Lesson from '../Lessons/Lessons';
 import CreateLesson from '../CreateLesson/CreateLesson';
-import Lessons from '../Lessons/Lessons';
 import authService from '../../services/authService';
 import Landing from '../Landing/Landing';
 import PreviewLesson from '../PreviewLesson/PreviewLesson';
