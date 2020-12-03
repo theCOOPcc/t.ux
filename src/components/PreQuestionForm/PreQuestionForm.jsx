@@ -19,7 +19,7 @@ class PreQuestionForm extends Component {
     } = this.props;
     return (
       <Form>
-        <InputGroup>
+        <InputGroup> 
           <Label>Activity Name:</Label>
           <Input name="name" type="text" value={name} onChange={handleChange} />
         </InputGroup>
