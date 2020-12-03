@@ -18,7 +18,9 @@ class SignupForm extends Component {
   };
 
   handleSubmit = async (e) => {
-    const { history, updateMessage, handleSignupOrLogin } = this.props;
+    const { history, updateMessage, 
+      // handleSignupOrLogin 
+    } = this.props;
     e.preventDefault();
     try {
       await authService.signup(this.state);

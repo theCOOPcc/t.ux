@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import lessonService from '../../services/lessonService';
 import styled from 'styled-components';
-import Lesson from '../Lessons/Lessons';
 
 const LessonCard = styled.div`
   border: solid 2px black;
@@ -14,7 +13,6 @@ const LessonCard = styled.div`
   display: flex;
   justify-content: space-around;
 `;
-
 
 const Container = styled.div`
   display: grid;
@@ -43,7 +41,7 @@ const SideBarLink = styled.a`
   ${SideBarItem}:hover {
     fill: red;
   }
-`
+`;
 
 const LessonsContainer = styled.div`
   padding: 20px 40px;
@@ -123,8 +121,9 @@ class IndexLessons extends Component {
                 {/* // TODO: Insert Image */}
                 <span>{lesson.name}</span>
                 <button>Assign</button>
-                <Link  to={{pathname: '/preview-lesson', state:{lesson}}}>Take Lesson</Link>
-
+                <Link to={{ pathname: '/preview-lesson', state: { lesson } }}>
+                  Take Lesson
+                </Link>
               </LessonCard>
             ))
           ) : (
