@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom'
 import lessonService from '../../services/lessonService';
 import styled from 'styled-components'
+// import lesson from '../../../models/lesson';
 
 const LessonCard = styled.div`
 border: solid 2px black;
@@ -75,16 +76,18 @@ class Lesson extends Component {
 
   // this can be reconnected when we link up the front end
 
-  // handleDeleteLesson = async () => {
-  //   if (authService.getUser()) {
-  //     await lessonService.deleteOne(lesson._id);
-  //     this.setState(state => ({
-  //       lessons: state.lessons.filter(l => l._id !== id)
-  //     }), () => this.props.history.push('/lessons'));
-  //   } else {
-  //     this.props.history.push('/')
-  //   }
-  // }
+  handleDeleteLesson = async lessonId => {
+    if (authService.getUser()) {
+      await lessonService.deleteOne(lessonId);
+      this.setState(state => ({
+        lessons: state.lessons.filter(l => l._id !== lessonId)
+      }), () => 
+      // this.props.history.push('/lessons')
+      window.location.reload)
+    } else {
+      this.props.history.push('/')
+    }
+  }
 
   handleUpdateLesson = async updatedLessonData => {
     const updatedLesson = await lessonService.update(updatedLessonData);
@@ -108,10 +111,13 @@ class Lesson extends Component {
                 pathname: `/lesson/${lesson._id}`}}>
                 <span>{lesson.name}</span>
               </Link>
-              <button onClick={()=>lessonService.deleteOne(lesson._id)}>
-                        Delete
+              <button onClick={
+                ()=> this.handleDeleteLesson(lesson._id)
+                // () => lessonService.deleteOne(lesson._id)
+              }>Delete
                     </button>
-              <button onClick={()=>lessonService.getOne(lesson._id)}>Details</button>
+              <button onClick={
+                ()=>lessonService.getOne(lesson._id)}>Details</button>
             </LessonCard>
           ))
         ) : (
