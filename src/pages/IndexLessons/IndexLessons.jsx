@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import lessonService from '../../services/lessonService';
 import styled from 'styled-components';
+import authService from '../../services/authService'
 
 import {LessonCard, SideBar, SideBarItem, SideBarLink, LessonsContainer, Header, Container} from '../../components/StyledComponents/LessonComponents'
 
@@ -17,6 +18,19 @@ class IndexLessons extends Component {
     lessons: lessonService.getAll(),
     // listView: true,
   };
+
+  handleDeleteLesson = async lessonId => {
+    if (authService.getUser()) {
+      await lessonService.deleteOne(lessonId);
+      this.setState(state => ({
+        lessons: state.lessons.filter(l => l._id !== lessonId)
+      }), () => 
+      // this.props.history.push('/lessons')
+      window.location.reload)
+    } else {
+      this.props.history.push('/')
+    }
+  }
 
   async componentDidMount() {
     const lessons = await lessonService.getAll();
@@ -56,6 +70,7 @@ class IndexLessons extends Component {
                 {/* // TODO: Insert Image */}
                 <span>{lesson.name}</span>
                 <button>Assign</button>
+                <button onClick={()=>this.handleDeleteLesson(lesson._id)}>Delete</button>
                 <Link to={{ pathname: '/preview-lesson', state: { lesson } }}>
                   Take Lesson
                 </Link>
