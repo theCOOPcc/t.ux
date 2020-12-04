@@ -82,7 +82,9 @@ class Lesson extends Component {
       await lessonService.deleteOne(lessonId);
       this.setState(state => ({
         lessons: state.lessons.filter(l => l._id !== lessonId)
-      }), () => this.props.history.push('/lessons'));
+      }), () => 
+      // this.props.history.push('/lessons')
+      window.location.reload)
     } else {
       this.props.history.push('/')
     }
@@ -111,8 +113,8 @@ class Lesson extends Component {
                 <span>{lesson.name}</span>
               </Link>
               <button onClick={
-                // ()=> this.handleDeleteLesson(lesson._id)
-                () => lessonService.deleteOne(lesson._id)
+                ()=> this.handleDeleteLesson(lesson._id)
+                // () => lessonService.deleteOne(lesson._id)
               }>Delete
                     </button>
               <button onClick={
