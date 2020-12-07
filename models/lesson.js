@@ -12,7 +12,7 @@ const questionSchema = new Schema({
   answers: [answerSchema],
 });
 
-const lessonSchema = new Schema(
+const activitySchema = new Schema(
   {
     name: { type: String, required: true },
     duration: Number,
@@ -29,4 +29,4 @@ const lessonSchema = new Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model('Lesson', lessonSchema);
+module.exports = mongoose.model('Activity', activitySchema);

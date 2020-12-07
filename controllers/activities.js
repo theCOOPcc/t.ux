@@ -1,4 +1,5 @@
-const Lesson = require('../models/lesson');
+const { act } = require('react-dom/test-utils');
+const Activity = require('../models/Activity');
 
 module.exports = {
   create,
@@ -11,8 +12,8 @@ module.exports = {
 // tested and this works cory
 function index(req, res) {
   Lesson.find({})
-    .then((lessons) => {
-      res.json(lessons);
+    .then((activities) => {
+      res.json(activities);
     })
     .catch((err) => {
       res.json(err);
@@ -23,9 +24,9 @@ function index(req, res) {
 function create(req, res) {
   console.log('request body', req.body)
   Lesson.create(req.body)
-    .then((lesson) => {
-      console.log('lesson',lesson)
-      res.status(200).json(lesson);
+    .then((activity) => {
+      console.log('activitiy', activity)
+      res.status(200).json(activity);
     })
     .catch((err) => {
       res.json(err);
@@ -35,8 +36,8 @@ function create(req, res) {
 // tested and this works cory
 function deleteOne(req, res) {
   Lesson.findByIdAndDelete(req.params.id)
-    .then((lesson) => {
-      res.json(lesson);
+    .then((activity) => {
+      res.json(activity);
     })
     .catch((err) => {
       res.json(err);
@@ -45,9 +46,9 @@ function deleteOne(req, res) {
 
 // tested and this works cory
 function update(req, res) {
-  Lesson.findByIdAndUpdate(req.params.id, req.body, { new: true })
-    .then((lesson) => {
-      res.json(lesson);
+  Activity.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    .then((activity) => {
+      res.json(activity);
     })
     .catch((err) => {
       res.json(err);
@@ -56,9 +57,9 @@ function update(req, res) {
 
 // tested and this works cory
 function show(req, res) {
-  Lesson.findById(req.params.id)
-    .then((lesson) => {
-      res.json(lesson);
+  Activity.findById(req.params.id)
+    .then((activity) => {
+      res.json(activity);
     })
     .catch((err) => res.json(err));
 }
