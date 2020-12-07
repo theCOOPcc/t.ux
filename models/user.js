@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 const SALT_ROUNDS = 6;
 
 const assignmentSchema = new Schema({
-  lessonId: { type: Schema.Types.ObjectId, ref: 'Lesson' },
+  activityId: { type: Schema.Types.ObjectId, ref: 'activity' },
   dateStarted: Date,
   score: Number,
   isComplete: Boolean,
@@ -19,7 +19,6 @@ const userSchema = new Schema(
     email: { type: String, required: true, lowercase: true, unique: true },
     password: String,
     assignments: [assignmentSchema],
-    
   },
   {
     timestamps: true,

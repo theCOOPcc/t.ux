@@ -1,5 +1,5 @@
 import tokenService from '../services/tokenService';
-const BASE_URL = '/api/lessons/';
+const BASE_URL = '/api/activities/';
 
 export default {
   create,
@@ -10,8 +10,8 @@ export default {
 };
 
 // this works cory
-export function create(lesson) {
-    console.log('create a lesson')
+export function create(activity) {
+    console.log('create an activity')
   return fetch(
     BASE_URL,
     {
@@ -20,7 +20,7 @@ export function create(lesson) {
         'content-type': 'application/json',
         // 'Authorization': 'Bearer' + tokenService.getToken()
       },
-      body: JSON.stringify(lesson),
+      body: JSON.stringify(activity),
     },
     {
       mode: 'cors',
@@ -30,7 +30,7 @@ export function create(lesson) {
 
 // this works cory
 function getAll() {
-    console.log('get all lessons')
+    console.log('get all activities')
   return fetch(
     BASE_URL,
     {
@@ -46,7 +46,7 @@ function getAll() {
 
 // this works cory
 function deleteOne(id) {
-    console.log('delete lesson')
+    console.log('delete activity')
   return fetch(
     `${BASE_URL}${id}`,
     {
@@ -58,10 +58,10 @@ function deleteOne(id) {
 }
 
 // this works cory
-function getOne(lessonId) {
-    console.log('one lesson')
+function getOne(activityId) {
+    console.log('one activity')
   return fetch(
-      `${BASE_URL}${lessonId}`, 
+      `${BASE_URL}${activityId}`, 
       {
         method: 'GET',
         headers: {
@@ -74,16 +74,16 @@ function getOne(lessonId) {
 }
 
 // this works cory
-function update(lesson) {
+function update(activity) {
     return fetch(
-      `${BASE_URL}${lesson._id}`,
+      `${BASE_URL}${activity._id}`,
       {
         method: 'PUT',
         headers: {
           'content-type': 'application/json',
         //   Authorization: 'Bearer ' + tokenService.getToken(),
         },
-        body: JSON.stringify(lesson),
+        body: JSON.stringify(activity),
       },
       { mode: 'cors' }
     ).then((res) => res.json());
