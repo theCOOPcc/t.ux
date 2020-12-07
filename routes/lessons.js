@@ -1,16 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const lessonsCtrl = require('../controllers/lessons');
+const activitiesCtrl = require('../controllers/activities');
 
 /*---------- Public Routes ----------*/
 
 /*---------- Protected Routes ----------*/
 router.use(require("../config/auth"));
-router.get('/', lessonsCtrl.index)
-router.post('/',  lessonsCtrl.create);
-router.get('/:id',checkAuth, lessonsCtrl.show);
-router.put('/:id', checkAuth, lessonsCtrl.update);
-router.delete('/:id', checkAuth, lessonsCtrl.delete);
+router.get('/', activitiesCtrl.index)
+router.post('/',  activitiesCtrl.create);
+router.get('/:id',checkAuth, activitiesCtrl.show);
+router.put('/:id', checkAuth, activitiesCtrl.update);
+router.delete('/:id', checkAuth, activitiesCtrl.delete);
 
 /*---------- Auth Checker ----------*/
 function checkAuth(req, res, next) {

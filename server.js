@@ -9,7 +9,7 @@ require('./config/database');
 
 const userRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
-const lessonRouter = require('./routes/lessons');
+const activityRouter = require('./routes/activities');
 const groupRouter = require('./routes/groups');
 
 const cors = require('cors');
@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/api/auth', authRouter);
 app.use('/api/users', userRouter);
-app.use('/api/lessons', lessonRouter);
+app.use('/api/activities', activityRouter);
 app.use('/api/groups', groupRouter);
 
 app.get('/*', function (req, res) {

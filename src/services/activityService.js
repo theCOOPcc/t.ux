@@ -1,5 +1,5 @@
 import tokenService from '../services/tokenService';
-const BASE_URL = '/api/lessons/';
+const BASE_URL = '/api/activities/';
 
 export default {
   create,

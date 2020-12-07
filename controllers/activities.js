@@ -11,7 +11,7 @@ module.exports = {
 
 // tested and this works cory
 function index(req, res) {
-  Lesson.find({})
+  Activity.find({})
     .then((activities) => {
       res.json(activities);
     })
@@ -23,7 +23,7 @@ function index(req, res) {
 // Confirmed: create controller is working
 function create(req, res) {
   console.log('request body', req.body)
-  Lesson.create(req.body)
+  Activity.create(req.body)
     .then((activity) => {
       console.log('activitiy', activity)
       res.status(200).json(activity);
@@ -35,7 +35,7 @@ function create(req, res) {
 
 // tested and this works cory
 function deleteOne(req, res) {
-  Lesson.findByIdAndDelete(req.params.id)
+  Activity.findByIdAndDelete(req.params.id)
     .then((activity) => {
       res.json(activity);
     })

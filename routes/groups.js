@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const groupsCtrl = require('../controllers/lessons');
+const groupsCtrl = require('../controllers/activities');
 
 /*---------- Public Routes ----------*/
 router.get('/', groupsCtrl.index)
