@@ -1,4 +1,3 @@
-const { act } = require('react-dom/test-utils');
 const Activity = require('../models/Activity');
 
 module.exports = {
