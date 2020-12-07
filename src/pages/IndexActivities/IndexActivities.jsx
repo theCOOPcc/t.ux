@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import lessonService from '../../services/lessonService';
+import activityService from '../../services/activityService';
 import styled from 'styled-components';
 import authService from '../../services/authService'
 
-import {LessonCard, SideBar, SideBarItem, SideBarLink, LessonsContainer, Header, Container} from '../../components/StyledComponents/LessonComponents'
+import {ActivityCard, SideBar, SideBarItem, SideBarLink, ActivitiesContainer, Header, Container} from '../../components/StyledComponents/ActivitiesComponents'
 
 
 
@@ -13,19 +13,19 @@ import {LessonCard, SideBar, SideBarItem, SideBarLink, LessonsContainer, Header,
 //   justify-content: flex-end;
 // `;
 
-class IndexLessons extends Component {
+class IndexActivities extends Component {
   state = {
-    lessons: lessonService.getAll(),
+    activities: activityService.getAll(),
     // listView: true,
   };
 
-  handleDeleteLesson = async lessonId => {
+  handleDeleteActivity = async activityId => {
     if (authService.getUser()) {
-      await lessonService.deleteOne(lessonId);
+      await activityService.deleteOne(activityId);
       this.setState(state => ({
-        lessons: state.lessons.filter(l => l._id !== lessonId)
+        activities: state.activities.filter(l => l._id !== activityId)
       }), () => 
-      // this.props.history.push('/lessons')
+      // this.props.history.push('/activities')
       window.location.reload)
     } else {
       this.props.history.push('/')
@@ -33,12 +33,12 @@ class IndexLessons extends Component {
   }
 
   async componentDidMount() {
-    const lessons = await lessonService.getAll();
-    this.setState({ lessons: lessons });
+    const activities = await activityService.getAll();
+    this.setState({ activities: activities });
   }
 
   render() {
-    const { lessons } = this.state;
+    const { activities } = this.state;
     return (
       <Container>
         <SideBar>
@@ -46,7 +46,7 @@ class IndexLessons extends Component {
             <SideBarLink href="#">Activity</SideBarLink>
           </SideBarItem>
           <SideBarItem>
-            <span>Lessons</span>
+            <span>Activities</span>
           </SideBarItem>
           <SideBarItem>
             <span>Results</span>
@@ -55,34 +55,34 @@ class IndexLessons extends Component {
             <span>Feedback</span>
           </SideBarItem>
         </SideBar>
-        <LessonsContainer>
+        <ActivitiesContainer>
           <Header>
-            <h1> Lessons </h1>
+            <h1> Activities </h1>
           </Header>
           {/* <ToggleButtons>
             <button onClick={this.handleToggleView}>List View</button>
             <button onClick={this.handleToggleView}>Grid View</button>
           </ToggleButtons> */}
 
-          {lessons.length > 0 ? (
-            lessons.map((lesson) => (
-              <LessonCard>
+          {activities.length > 0 ? (
+            activities.map((activity) => (
+              <ActivityCard>
                 {/* // TODO: Insert Image */}
-                <span>{lesson.name}</span>
+                <span>{activity.name}</span>
                 <button>Assign</button>
-                <button onClick={()=>this.handleDeleteLesson(lesson._id)}>Delete</button>
-                <Link to={{ pathname: '/preview-lesson', state: { lesson } }}>
-                  Take Lesson
+                <button onClick={()=>this.handleDeleteActivity(activity._id)}>Delete</button>
+                <Link to={{ pathname: '/preview-activity', state: { activity } }}>
+                  Take Activity
                 </Link>
-              </LessonCard>
+              </ActivityCard>
             ))
           ) : (
-            <h1>No Lessons</h1>
+            <h1>No Activities</h1>
           )}
-        </LessonsContainer>
+        </ActivitiesContainer>
       </Container>
     );
   }
 }
 
-export default IndexLessons;
+export default IndexActivities;
