@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom'
-import lessonService from '../../services/lessonService';
+import activityService from '../../services/activityService';
 import styled from 'styled-components'
-// import lesson from '../../../models/lesson';
+// import activity from '../../../models/activity';
 
-const LessonCard = styled.div`
+const ActivityCard = styled.div`
 border: solid 2px black;
 background-color: white;
 align-items: center;
@@ -17,11 +17,11 @@ align-items: center;
 text-align: center;
 `
 
-class Lesson extends Component {
+class Activity extends Component {
   state = { 
-      lessons: lessonService.getAll(),
+      activitys: activityService.getAll(),
       formData: {
-        name: 'Lesson #9002',
+        name: 'activity #9002',
         duration: 5,
         numberOfQuestions: 10,
         topics: ['Heuristics'],
@@ -58,77 +58,77 @@ class Lesson extends Component {
    } 
   
   async componentDidMount() {
-    // lessonService.update(this.state.formData)
-    // lessonService.create(this.state.formData)
-    const lessons = await lessonService.getAll();
-    // this.setState ({ lessons: lessons.reverse() })
-    this.setState ({ lessons: lessons })
+    // activityService.update(this.state.formData)
+    // activityService.create(this.state.formData)
+    const activitys = await activityService.getAll();
+    // this.setState ({ activitys: activitys.reverse() })
+    this.setState ({ activitys: activitys })
   }
 
-  handleAddLesson = async newLessonData => {
-    const newLesson = await lessonService.create(newLessonData);
-    newLesson.createdBy = { name: this.props.user.name, _id: this.props.user._id}
+  handleAddactivity = async newactivityData => {
+    const newactivity = await activityService.create(newactivityData);
+    newactivity.createdBy = { name: this.props.user.name, _id: this.props.user._id}
     this.setState(state => ({
-      lessons: [...state.lessons, newLesson]
-    }), () => this.props.history.push('/lessons'));
+      activitys: [...state.activitys, newactivity]
+    }), () => this.props.history.push('/activitys'));
   }
 
 
   // this can be reconnected when we link up the front end
 
-  handleDeleteLesson = async lessonId => {
+  handleDeleteactivity = async activityId => {
     if (authService.getUser()) {
-      await lessonService.deleteOne(lessonId);
+      await activityService.deleteOne(activityId);
       this.setState(state => ({
-        lessons: state.lessons.filter(l => l._id !== lessonId)
+        activitys: state.activitys.filter(l => l._id !== activityId)
       }), () => 
-      // this.props.history.push('/lessons')
+      // this.props.history.push('/activitys')
       window.location.reload)
     } else {
       this.props.history.push('/')
     }
   }
 
-  handleUpdateLesson = async updatedLessonData => {
-    const updatedLesson = await lessonService.update(updatedLessonData);
-    const newLessonsArray = this.state.lessons.map(l =>
-      l._id === updatedLesson._id? updatedLesson : l);
+  handleUpdateactivity = async updatedactivityData => {
+    const updatedactivity = await activityService.update(updatedactivityData);
+    const newactivitysArray = this.state.activitys.map(l =>
+      l._id === updatedactivity._id? updatedactivity : l);
     this.setState(
-      { lessons: newLessonsArray },
-      () => this.props.history.push('/lessons')
+      { activitys: newactivitysArray },
+      () => this.props.history.push('/activitys')
     );
   }
   
   render() { 
     return ( 
       <Container>
-        <h1> Lessons </h1>
-        {this.state.lessons.length > 0 ? (
-          this.state.lessons.map((lesson) => (
-            <LessonCard key={lesson._id}>
+        <h1> activitys </h1>
+        {this.state.activitys.length > 0 ? (
+          this.state.activitys.map((activity) => (
+            <ActivityCard key={activity._id}>
               <Link 
               to={{
-                pathname: `/lesson/${lesson._id}`}}>
-                <span>{lesson.name}</span>
+                pathname: `/activity/${activity._id}`}}>
+                <span>{activity.name}</span>
               </Link>
               <button onClick={
-                ()=> this.handleDeleteLesson(lesson._id)
-                // () => lessonService.deleteOne(lesson._id)
+                ()=> this.handleDeleteactivity(activity._id)
+                // () => activityService.deleteOne(activity._id)
               }>Delete
                     </button>
               <button onClick={
-                ()=>lessonService.getOne(lesson._id)}>Details</button>
-            </LessonCard>
+                ()=>activityService.getOne(activity._id)}>Details</button>
+            </ActivityCard>
           ))
         ) : (
-          <h1>No Lessons</h1>
+          <h1>No activitys</h1>
         )}
         <Route 
-          exact path='/lessons/create'
-          handleAddLesson = {this.handleAddLesson}
+          exact path='/activitys/create'
+          handleAddactivity = {this.handleAddactivity}
         />
       </Container>
     )}
 }
  
-export default Lesson;
+export default Activity;

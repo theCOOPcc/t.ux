@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const LessonCard = styled.div`
+export const ActivityCard = styled.div`
 border: solid 2px black;
 background-color: white;
 align-items: center;
@@ -35,7 +35,7 @@ export const SideBarLink = styled.a`
   }
 `
 
-export const LessonsContainer = styled.div`
+export const ActivitiesContainer = styled.div`
   padding: 20px 40px;
   display: flex;
   flex-direction: column;

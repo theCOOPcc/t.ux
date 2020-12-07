@@ -6,11 +6,11 @@ import Blog from '../Blog/Blog';
 import About from '../About/About';
 import User from '../User/User';
 import NavBar from '../../components/NavBar/NavBar';
-import CreateLesson from '../CreateLesson/CreateLesson';
+import CreateActivity from '../CreateActivity/CreateActivity';
 import authService from '../../services/authService';
 import Landing from '../Landing/Landing';
-import PreviewLesson from '../PreviewLesson/PreviewLesson';
-import IndexLessons from '../IndexLessons/IndexLessons'
+import PreviewActivity from '../PreviewActivity/PreviewActivity';
+import IndexActivities from '../IndexActivities/IndexActivities'
 import './App.css';
 
 // import ReactGA from 'react-ga';
@@ -70,12 +70,12 @@ class App extends Component {
         {/* // General Routes */}
         <Route exact path="/about" render={() => <About />} />
         <Route exact path="/blog" render={() => <Blog />} />
-        <Route exact path="/lessons" render={() => <IndexLessons />} />
-        <Route exact path="/lessons/create" render={() => <CreateLesson />} />
+        <Route exact path="/activities" render={() => <IndexActivities />} />
+        <Route exact path="/activities/create" render={() => <CreateActivity />} />
         <Route
           exact
-          path="/preview-lesson"
-          render={({ location }) => <PreviewLesson location={location} />}
+          path="/preview-activity"
+          render={({ location }) => <PreviewActivity location={location} />}
         />
       </>
     );
