@@ -11,7 +11,7 @@ import authService from '../../services/authService';
 import Landing from '../Landing/Landing';
 import PreviewActivity from '../PreviewActivity/PreviewActivity';
 import IndexActivities from '../IndexActivities/IndexActivities';
-import TestingGround from '../../pages/TestingGround/TestingGround';
+import CoryTestingGround from '../../pages/CoryTestingGround/CoryTestingGround';
 import './App.css';
 
 // import ReactGA from 'react-ga';
@@ -78,8 +78,8 @@ class App extends Component {
           path="/preview-activity"
           render={({ location }) => <PreviewActivity location={location} />} />
         <Route 
-          exact path="/testingground" 
-          render={() => <TestingGround />} />
+          exact path="/corytestingground" 
+          render={() => <CoryTestingGround />} />
       </>
     );
   }

@@ -90,13 +90,13 @@ class TestingGround extends Component {
     }
   }
 
-  handleUpdateactivity = async updatedactivityData => {
-    const updatedactivity = await activityService.update(updatedactivityData);
-    const newactivitysArray = this.state.activitys.map(l =>
+  handleUpdateActivity = async updatedActivityData => {
+    const updatedactivity = await activityService.update(updatedActivityData);
+    const newactivitiesArray = this.state.activities.map(l =>
       l._id === updatedactivity._id? updatedactivity : l);
     this.setState(
-      { activitys: newactivitysArray },
-      () => this.props.history.push('/activitys')
+      { activities: newactivitiesArray },
+      () => this.props.history.push('/activities')
     );
   }
   
