@@ -24,13 +24,13 @@ const NavBar = ({ user, handleLogout }) => {
             </A>
           </NavItem>
           <NavItem>
-            <A href="/lessons/create " className="nav-link">
-              Create Lesson
+            <A href="/activities/create " className="nav-link">
+              Create Activity
             </A>
           </NavItem>
           <NavItem>
-            <A href="/lessons" className="nav-link">
-              View Lessons
+            <A href="/activities" className="nav-link">
+              View Activities
             </A>
           </NavItem>
           <RightTag>

@@ -51,9 +51,9 @@ const Button = styled.button`
   color: black;
 `;
 
-class PreviewLesson extends Component {
+class PreviewActivity extends Component {
   state = {
-    lesson: this.props.location.state.lesson,
+    activity: this.props.location.state.activity,
     currentQuestionIndex: 0,
     // Todo: was an answer selected?
     // Todo: which answer was selected?
@@ -75,8 +75,8 @@ class PreviewLesson extends Component {
   };
 
   render() {
-    const { currentQuestionIndex, lesson, selectedAnswer } = this.state;
-    const { questions } = this.state.lesson;
+    const { currentQuestionIndex, activity, selectedAnswer } = this.state;
+    const { questions } = this.state.activity;
     const question = questions[currentQuestionIndex];
 
     return (
@@ -85,7 +85,7 @@ class PreviewLesson extends Component {
           <span>
             {currentQuestionIndex + 1} Of {questions.length}{' '}
           </span>
-          <h1>{lesson.name}</h1>
+          <h1>{activity.name}</h1>
           <h2>{question.problemStatement}</h2>
           <img src="https://picsum.photos/300/200" alt="" />
           <FollowUp>Follow up text.</FollowUp>
@@ -114,4 +114,4 @@ class PreviewLesson extends Component {
   }
 }
 
-export default PreviewLesson;
+export default PreviewActivity;

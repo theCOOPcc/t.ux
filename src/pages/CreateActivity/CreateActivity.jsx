@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import lessonService from '../../services/lessonService';
+import activityService from '../../services/activityService';
 import styled from 'styled-components';
 import PreQuestionForm from '../../components/PreQuestionForm/PreQuestionForm';
 import CreateQuestionForm from '../../components/CreateQuestionForm/CreateQuestionForm';
@@ -9,9 +9,10 @@ const Container = styled.div`
   flex-direction: column;
   padding: 20px;
   align-items: center;
+  width: 100%
 `;
 
-class CreateLesson extends Component {
+class CreateActivity extends Component {
   state = {
     formData: {
       name: '',
@@ -35,7 +36,7 @@ class CreateLesson extends Component {
   };
 
   handleSubmit = (e) => {
-    lessonService.create(this.state.formData);
+    activityService.create(this.state.formData);
   };
 
   handleNumberOfQuestions = (e) => {
@@ -126,7 +127,7 @@ class CreateLesson extends Component {
 
     return (
       <Container>
-        <h1>Create a Lesson</h1>
+        <h1>Create an Activity</h1>
         <div> 
           <PreQuestionForm
             type={type}
@@ -162,11 +163,11 @@ class CreateLesson extends Component {
           ) : (
             <h1>This is not a multiple choice template</h1>
           )}
-          <button onClick={this.handleSubmit}>Submit Lesson</button>
+          <button onClick={this.handleSubmit}>Submit Activity</button>
         </div>
       </Container>
     );
   }
 }
 
-export default CreateLesson;
+export default CreateActivity;
