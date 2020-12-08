@@ -9,7 +9,7 @@ class User extends Component {
         <h1>User Landing Page</h1>
         <Link
           to="/corytestingground"
-          >Testing Ground
+          >Testing Ground 
         </Link>
       </>
     );
