@@ -24,7 +24,7 @@ function create(req, res) {
   console.log('request body', req.body)
   Activity.create(req.body)
     .then((activity) => {
-      console.log('activitiy', activity)
+      console.log('activity', activity)
       res.status(200).json(activity);
     })
     .catch((err) => {

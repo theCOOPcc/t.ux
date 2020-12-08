@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 
 class User extends Component {
   render() {
@@ -6,6 +7,10 @@ class User extends Component {
     return (
       <>
         <h1>User Landing Page</h1>
+        <Link
+          to="/testingground"
+          >Testing Ground
+        </Link>
       </>
     );
   }

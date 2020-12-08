@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom'
 import activityService from '../../services/activityService';
 import styled from 'styled-components'
+import authService from '../../services/authService'
 // import activity from '../../../models/activity';
 
 const ActivityCard = styled.div`
@@ -17,7 +18,7 @@ align-items: center;
 text-align: center;
 `
 
-class Activity extends Component {
+class TestingGround extends Component {
   state = { 
       activitys: activityService.getAll(),
       formData: {
@@ -131,4 +132,4 @@ class Activity extends Component {
     )}
 }
  
-export default Activity;
+export default TestingGround;
