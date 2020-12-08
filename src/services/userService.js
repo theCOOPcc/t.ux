@@ -1,7 +1,8 @@
 import tokenService from "../services/tokenService";
 const BASE_URL = "/api/users/";
 
-export function getAllUsers() {
+// this one works cory
+function getAllUsers() {
   return fetch(
     BASE_URL,
     {
@@ -11,7 +12,8 @@ export function getAllUsers() {
   ).then((res) => res.json());
 }
 
-export function deleteUser(id) {
+// this one works cory
+function deleteUser(id) {
   return fetch(`${BASE_URL}${id}`, {
     method: 'DELETE',
     headers: {'Authorization': 'Bearer ' + tokenService.getToken()}
@@ -20,16 +22,28 @@ export function deleteUser(id) {
   .then(res => res.json());
 }
 
-export function getUser(user) {
+// this one works cory
+function getUser(user) {
   return fetch(`${BASE_URL}${user._id}`, {mode: "cors"})
   .then(res => res.json())
 }
 
-export function updateUser(user) {
+// this one works cory
+function updateUser(user) {
+  console.log(user)
   return fetch(`${BASE_URL}${user._id}`, {
       method: "PUT",
-      headers: {'content-type': 'application/json', 'Authorization': 'Bearer ' + tokenService.getToken()},
+      headers: {
+        'content-type': 'application/json', 
+        'Authorization': 'Bearer ' + tokenService.getToken()},
       body: JSON.stringify(user)
   }, {mode: "cors"})
   .then(res => res.json());
+}
+
+export default {
+  getAllUsers,
+  deleteUser,
+  getUser,
+  updateUser
 }
