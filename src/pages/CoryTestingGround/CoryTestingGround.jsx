@@ -3,6 +3,7 @@ import { Route, Link } from 'react-router-dom'
 import activityService from '../../services/activityService';
 import styled from 'styled-components'
 import authService from '../../services/authService'
+import userService from '../../services/userService'
 // import activity from '../../../models/activity';
 
 const ActivityCard = styled.div`
@@ -20,7 +21,15 @@ text-align: center;
 
 class TestingGround extends Component {
   state = { 
-      activitys: activityService.getAll(),
+      activities: activityService.getAll(),
+      users: userService.getAllUsers(),
+      user: {
+        name: "Cory Test",
+        email: "jt@dog.com",
+        password: "abc123",
+        assignments: [],
+        _id: "5fc5428eed9ce66e6246e158"
+      },
       formData: {
         name: 'activity #9002',
         duration: 5,
@@ -57,77 +66,90 @@ class TestingGround extends Component {
         _id: '5fc17b77171f00437b74f829'
       },
    } 
-  
-  async componentDidMount() {
-    // activityService.update(this.state.formData)
-    // activityService.create(this.state.formData)
-    const activitys = await activityService.getAll();
-    // this.setState ({ activitys: activitys.reverse() })
-    this.setState ({ activitys: activitys })
-  }
 
-  handleAddactivity = async newactivityData => {
-    const newactivity = await activityService.create(newactivityData);
-    newactivity.createdBy = { name: this.props.user.name, _id: this.props.user._id}
-    this.setState(state => ({
-      activitys: [...state.activitys, newactivity]
-    }), () => this.props.history.push('/activitys'));
-  }
-
-
-  // this can be reconnected when we link up the front end
-
-  handleDeleteactivity = async activityId => {
-    if (authService.getUser()) {
-      await activityService.deleteOne(activityId);
-      this.setState(state => ({
-        activitys: state.activitys.filter(l => l._id !== activityId)
-      }), () => 
-      // this.props.history.push('/activitys')
-      window.location.reload)
-    } else {
-      this.props.history.push('/')
+  handleTest = async () => {
+    const user = {
+      name: "Cory Test 2",
+      email: "jt@dog.com",
+      password: "abc123",
+      assignments: [],
+      _id: "5fc5428eed9ce66e6246e158"
     }
+    const banana = await userService.updateUser(user)
+    console.log(banana)
+    const taco = await userService.getAllUsers()
+    console.log(taco)
   }
 
-  handleUpdateActivity = async updatedActivityData => {
-    const updatedactivity = await activityService.update(updatedActivityData);
-    const newactivitiesArray = this.state.activities.map(l =>
-      l._id === updatedactivity._id? updatedactivity : l);
-    this.setState(
-      { activities: newactivitiesArray },
-      () => this.props.history.push('/activities')
-    );
-  }
+
+  
+  // async componentDidMount() {
+
+  //   console.log(this.state.user)
+  //   console.log(this.state.users)
+    
+  //   const banana = {
+  //     name: "Cory Test",
+  //     email: "jt@dog.com",
+  //     password: "abc123",
+  //     assignments: [],
+  //     _id: "5fc5428eed9ce66e6246e158"
+  //   }
+  
+  //   const updatedUser = await userService.updateUser(banana)
+  //   console.log(updatedUser)
+  
+  // }
+
+  // handleUpdateUser = async updatedUserData => {
+  //   const updatedUser = await userService.updateUser(updatedUserData);
+  //   const newUsersArray = this.state.users.map(u =>
+  //     u._id === updatedUser._id? updatedUser : u);
+  //   this.setState(
+  //     { users: newUsersArray },
+  //     window.location.reload
+  //     // () => this.props.history.push('/users')
+  //   );
+  // }
+
+  // handleAddActivity = async newActivityData => {
+  //   const newactivity = await activityService.create(newActivityData);
+  //   newactivity.createdBy = { name: this.props.user.name, _id: this.props.user._id}
+  //   this.setState(state => ({
+  //     activitys: [...state.activitys, newactivity]
+  //   }), () => this.props.history.push('/activitys'));
+  // }
+
+
+  // // this can be reconnected when we link up the front end
+
+  // handleDeleteactivity = async activityId => {
+  //   if (authService.getUser()) {
+  //     await activityService.deleteOne(activityId);
+  //     this.setState(state => ({
+  //       activitys: state.activitys.filter(l => l._id !== activityId)
+  //     }), () => 
+  //     // this.props.history.push('/activitys')
+  //     window.location.reload)
+  //   } else {
+  //     this.props.history.push('/')
+  //   }
+  // }
+
+  // handleUpdateActivity = async updatedActivityData => {
+  //   const updatedactivity = await activityService.update(updatedActivityData);
+  //   const newactivitiesArray = this.state.activities.map(l =>
+  //     l._id === updatedactivity._id? updatedactivity : l);
+  //   this.setState(
+  //     { activities: newactivitiesArray },
+  //     () => this.props.history.push('/activities')
+  //   );
+  // }
   
   render() { 
     return ( 
       <Container>
-        <h1> activitys </h1>
-        {this.state.activitys.length > 0 ? (
-          this.state.activitys.map((activity) => (
-            <ActivityCard key={activity._id}>
-              <Link 
-              to={{
-                pathname: `/activity/${activity._id}`}}>
-                <span>{activity.name}</span>
-              </Link>
-              <button onClick={
-                ()=> this.handleDeleteactivity(activity._id)
-                // () => activityService.deleteOne(activity._id)
-              }>Delete
-                    </button>
-              <button onClick={
-                ()=>activityService.getOne(activity._id)}>Details</button>
-            </ActivityCard>
-          ))
-        ) : (
-          <h1>No activitys</h1>
-        )}
-        <Route 
-          exact path='/activitys/create'
-          handleAddactivity = {this.handleAddactivity}
-        />
+        <button onClick={this.handleTest}>handle test</button>
       </Container>
     )}
 }

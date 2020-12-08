@@ -18,8 +18,9 @@ function showProfile(req, res) {
 }
 
 function update(req, res) {
-  User.findByIdAndUpdate(req.user._id, req.body, { new: true })
-  .then(res => res.json())
+  User.findByIdAndUpdate(req.params.id, req.body, { new: true })
+  .then(res => res)
+    // res.json()
 }
 
 function deleteProfile(req, res) {
