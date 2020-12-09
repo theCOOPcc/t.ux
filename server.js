@@ -11,6 +11,7 @@ const userRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
 const activityRouter = require('./routes/activities');
 const groupRouter = require('./routes/groups');
+const managerRouter = require('./routes/managers');
 
 const cors = require('cors');
 
@@ -25,6 +26,7 @@ app.use('/api/auth', authRouter);
 app.use('/api/users', userRouter);
 app.use('/api/activities', activityRouter);
 app.use('/api/groups', groupRouter);
+app.use('/api/managers', managerRouter)
 
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
