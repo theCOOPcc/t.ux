@@ -40,6 +40,9 @@ class App extends Component {
       <>
         <NavBar user={user} handleLogout={this.handleLogout} />
 
+
+        {/* write conditional routing to proper homepage depending on user type */}
+        {/* only get access to certain pages depending on user type */}
         <Route
           exact
           path="/"

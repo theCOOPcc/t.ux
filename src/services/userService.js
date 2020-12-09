@@ -1,6 +1,8 @@
 import tokenService from "../services/tokenService";
 const BASE_URL = "/api/users/";
 
+// restrict access to functions on the front end
+
 // this one works cory
 function getAllUsers() {
   return fetch(
