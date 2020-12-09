@@ -1,10 +1,9 @@
 import tokenService from "../services/tokenService";
-const BASE_URL = "/api/users/";
+const BASE_URL = "/api/managers/";
 
 // restrict access to functions on the front end
 
-// this one works cory
-function getAllUsers() {
+function getAllManagers() {
   return fetch(
     BASE_URL,
     {
@@ -14,8 +13,7 @@ function getAllUsers() {
   ).then((res) => res.json());
 }
 
-// this one works cory
-function deleteUser(id) {
+function deleteManager(id) {
   return fetch(`${BASE_URL}${id}`, {
     method: 'DELETE',
     headers: {'Authorization': 'Bearer ' + tokenService.getToken()}
@@ -24,14 +22,12 @@ function deleteUser(id) {
   .then(res => res.json());
 }
 
-// this one works cory
-function getUser(user) {
+function getManager(user) {
   return fetch(`${BASE_URL}${user._id}`, {mode: "cors"})
   .then(res => res.json())
 }
 
-// this one works cory
-function updateUser(user) {
+function updateManager(user) {
   console.log(user)
   return fetch(`${BASE_URL}${user._id}`, {
       method: "PUT",
@@ -44,8 +40,8 @@ function updateUser(user) {
 }
 
 export default {
-  getAllUsers,
-  deleteUser,
-  getUser,
-  updateUser
+  getAllManagers,
+  deleteManager,
+  getManager,
+  updateManager
 }

@@ -7,6 +7,7 @@ import About from '../About/About';
 import User from '../User/User';
 import NavBar from '../../components/NavBar/NavBar';
 import CreateActivity from '../CreateActivity/CreateActivity';
+import CreateActivityRefactor from '../CreateActivity/CreateActivityRefactor'
 import authService from '../../services/authService';
 import Landing from '../Landing/Landing';
 import PreviewActivity from '../PreviewActivity/PreviewActivity';
@@ -40,6 +41,9 @@ class App extends Component {
       <>
         <NavBar user={user} handleLogout={this.handleLogout} />
 
+
+        {/* write conditional routing to proper homepage depending on user type */}
+        {/* only get access to certain pages depending on user type */}
         <Route
           exact
           path="/"
@@ -72,7 +76,7 @@ class App extends Component {
         <Route exact path="/about" render={() => <About />} />
         <Route exact path="/blog" render={() => <Blog />} />
         <Route exact path="/activities" render={() => <IndexActivities />} />
-        <Route exact path="/activities/create" render={() => <CreateActivity />} />
+        <Route exact path="/activities/create" render={() => <CreateActivityRefactor />} />
         <Route
           exact
           path="/preview-activity"

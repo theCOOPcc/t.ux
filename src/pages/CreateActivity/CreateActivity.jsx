@@ -4,6 +4,15 @@ import styled from 'styled-components';
 import PreQuestionForm from '../../components/PreQuestionForm/PreQuestionForm';
 import CreateQuestionForm from '../../components/CreateQuestionForm/CreateQuestionForm';
 
+// Creates questions, answers, 
+
+// Create Activity is a form that allows the Manager/Admin to populate the database with copy/content on an activity. That activity will then be rended to the screen in another page or component.
+
+// The form state should stay local to this page and it should be considered ephemeral and temporary to be pushed to the database and then not used for anything else.
+
+// The Manager/Admin should be able to hit submit and push the formdata, hence making a call to a service function and passing that data.
+
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -12,6 +21,7 @@ const Container = styled.div`
   width: 100%
 `;
 
+// TODO: Rename to CreateActivityForm for more descriptive naming.
 class CreateActivity extends Component {
   state = {
     formData: {
