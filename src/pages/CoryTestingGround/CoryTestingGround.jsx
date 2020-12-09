@@ -28,7 +28,8 @@ class TestingGround extends Component {
         email: "jt@dog.com",
         password: "abc123",
         assignments: [],
-        _id: "5fc5428eed9ce66e6246e158"
+        _id: "5fc5428eed9ce66e6246e158",
+        userPermissions: 100
       },
       formData: {
         name: 'activity #9002',
@@ -73,7 +74,8 @@ class TestingGround extends Component {
       email: "jt@dog.com",
       password: "abc123",
       assignments: [],
-      _id: "5fc5428eed9ce66e6246e158"
+      _id: "5fc5428eed9ce66e6246e158",
+      userPermissions: 100
     }
     const banana = await userService.updateUser(user)
     console.log(banana)
@@ -149,7 +151,7 @@ class TestingGround extends Component {
   render() { 
     return ( 
       <Container>
-        <button onClick={this.handleTest}>handle test</button>
+        <button onClick={this.handleTest}>update test user</button>
       </Container>
     )}
 }

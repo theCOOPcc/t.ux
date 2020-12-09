@@ -7,8 +7,8 @@ const managersCtrl = require('../controllers/managers');
 
 /*---------- Protected Routes ----------*/
 router.use(require("../config/auth"));
-router.get("/", checkAuth, managersCtrl.index);
-router.put('/:id', checkAuth, managersCtrl.update);
+router.get("/", checkAuth, managersCtrl.indexManagers);
+router.put('/:id', checkAuth, managersCtrl.updateManager);
 
 
 
