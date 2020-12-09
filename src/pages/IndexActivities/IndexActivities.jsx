@@ -6,6 +6,12 @@ import authService from '../../services/authService'
 
 import {ActivityCard, SideBar, SideBarItem, SideBarLink, ActivitiesContainer, Header, Container} from '../../components/StyledComponents/ActivitiesComponents'
 
+// Index activities will be a home for all of the activities for the manager to review.
+// Filter the activities.
+// Browse the activities.
+// Assign the activity to a student.
+// Delete the activity.
+
 
 
 // const ToggleButtons = styled.div`
@@ -59,6 +65,8 @@ class IndexActivities extends Component {
           <Header>
             <h1> Activities </h1>
           </Header>
+
+          {/* // TODO: Toggle view to list view or grid view. */}
           {/* <ToggleButtons>
             <button onClick={this.handleToggleView}>List View</button>
             <button onClick={this.handleToggleView}>Grid View</button>
@@ -72,7 +80,7 @@ class IndexActivities extends Component {
                 <button>Assign</button>
                 <button onClick={()=>this.handleDeleteActivity(activity._id)}>Delete</button>
                 <Link to={{ pathname: '/preview-activity', state: { activity } }}>
-                  Take Activity
+                  Preview Activity
                 </Link>
               </ActivityCard>
             ))

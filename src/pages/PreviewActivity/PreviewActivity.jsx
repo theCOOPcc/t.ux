@@ -77,6 +77,7 @@ class PreviewActivity extends Component {
   render() {
     const { currentQuestionIndex, activity, selectedAnswer } = this.state;
     const { questions } = this.state.activity;
+
     const question = questions[currentQuestionIndex];
 
     return (
@@ -103,6 +104,7 @@ class PreviewActivity extends Component {
             </AnswerButton>
           ))}
         </AnswerContainer>
+        {/* // TODO: Add a feedback container than conditionally renders the feedback text based off of whether or not the question is correct or incorrect. */}
         <Button
           onClick={this.handleIncrementCurrentQuestion}
           disabled={selectedAnswer ? false : true}

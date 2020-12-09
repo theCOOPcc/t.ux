@@ -67,7 +67,6 @@ class PreQuestionForm extends Component {
         ) : (
           ''
         )}
-
         <InputGroup>
           <Label>Number of Items:</Label>
           <Input
