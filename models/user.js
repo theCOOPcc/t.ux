@@ -23,10 +23,8 @@ const userSchema = new Schema(
     // user data: 0
     userPermissions: Number
     // hold different information that the user could have
-    
 
     // manager data: 100
-
 
     // admin data: 200
   },
