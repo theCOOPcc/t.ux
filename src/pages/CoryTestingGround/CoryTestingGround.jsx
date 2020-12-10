@@ -70,17 +70,22 @@ class TestingGround extends Component {
 
   handleTest = async () => {
     const user = {
-      name: "Cory Test 2",
-      email: "jt@dog.com",
-      password: "abc123",
+      name: "Cory Manager",
+      email: "cory@dog.com",
+      password: "1234",
       assignments: [],
-      _id: "5fc5428eed9ce66e6246e158",
+      _id: "5fd251958315701726addd79",
       userPermissions: 100
     }
     const banana = await userService.updateUser(user)
     console.log(banana)
     const taco = await userService.getAllUsers()
     console.log(taco)
+  }
+
+  handleGetAllUsers = async () => {
+    const allUsers = await userService.getAllUsers();
+    console.log(allUsers)
   }
 
 
@@ -151,7 +156,8 @@ class TestingGround extends Component {
   render() { 
     return ( 
       <Container>
-        <button onClick={this.handleTest}>update test user</button>
+        <button onClick={this.handleGetAllUsers}>get users</button>
+        <button onClick={this.handleTest}>upgrade user permissions</button>
       </Container>
     )}
 }
