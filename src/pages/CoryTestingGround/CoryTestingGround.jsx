@@ -88,16 +88,25 @@ class TestingGround extends Component {
     console.log('user', promotion)
     promotion.userPermissions = 100
     console.log('now 100', promotion)
-    this.helpHandlePromotion(promotion)
+    this.handlePermissionChange(promotion)
     const newUser = authService.getUser()
     console.log('ding', newUser)
   }
-  helpHandlePromotion = async (promotion) => {
+
+  handleDemotion = async () => {
+    let promotion = await authService.getUser()
+    console.log('user', promotion)
+    promotion.userPermissions = 0
+    console.log('now 100', promotion)
+    this.handlePermissionChange(promotion)
+    const newUser = authService.getUser()
+    console.log('ding', newUser)
+  }
+
+  handlePermissionChange = async (promotion) => {
     console.log('callback')
     let promotedUser = await userService.updateUser(promotion)
     console.log('promoted', promotedUser)
-    // const newlyPromotedUser = await authService.getUser()
-    // console.log('in the database', newlyPromotedUser)
   }
 
   handleGetAllUsers = async () => {
@@ -175,7 +184,8 @@ class TestingGround extends Component {
       <Container>
         <button onClick={this.handleGetAllUsers}>get users</button>
         <button onClick={this.handlePromotion}>Promote Me</button>
-        <button onClick={this.handleTest}>upgrade user permissions</button>
+        <button onClick={this.handleDemotion}>Demote Me</button>
+        <button onClick={this.handleTest}>upgrade user permissions in state</button>
       </Container>
     )}
 }
