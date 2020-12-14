@@ -2,18 +2,17 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
-import Blog from '../Blog/Blog';
-import About from '../About/About';
 import User from '../User/User';
 import NavBar from '../../components/NavBar/NavBar';
 import CreateActivity from '../CreateActivity/CreateActivity';
-import CreateActivityRefactor from '../CreateActivity/CreateActivityRefactor'
+// import CreateActivityRefactor from '../CreateActivity/CreateActivityRefactor'
 import authService from '../../services/authService';
 import Landing from '../Landing/Landing';
 import PreviewActivity from '../PreviewActivity/PreviewActivity';
 import IndexActivities from '../IndexActivities/IndexActivities';
 import CoryTestingGround from '../../pages/CoryTestingGround/CoryTestingGround';
 import './App.css';
+import PasswordResetRequest from '../PasswordResetRequest/PasswordResetRequest';
 
 // import ReactGA from 'react-ga';
 
@@ -73,10 +72,10 @@ class App extends Component {
         />
 
         {/* // General Routes */}
-        <Route exact path="/about" render={() => <About />} />
-        <Route exact path="/blog" render={() => <Blog />} />
+        {/* <Route exact path="/about" render={() => <About />} />
+        <Route exact path="/blog" render={() => <Blog />} /> */}
         <Route exact path="/activities" render={() => <IndexActivities />} />
-        <Route exact path="/activities/create" render={() => <CreateActivityRefactor />} />
+        {/* <Route exact path="/activities/create" render={() => <CreateActivityRefactor />} /> */}
         <Route
           exact
           path="/preview-activity"
@@ -84,6 +83,9 @@ class App extends Component {
         <Route 
           exact path="/corytestingground" 
           render={() => <CoryTestingGround />} />
+        <Route
+          exact path="/passwordresetrequest"
+          render={() => <PasswordResetRequest />} />
       </>
     );
   }
