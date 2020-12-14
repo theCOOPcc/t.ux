@@ -1,14 +1,24 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
+
+export const NavLink = styled.a`
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px;
+
+  ${props => props.floatRight && css`
+    margin-left: auto;
+  `}
+
+  ${props => props.floatLeft && css`
+    margin-right: auto;
+  `}
+`;
 
 export const Nav = styled.div`
-display: flex;
-padding: 10px;
-background-color: black;
-height: 40px;
-position: relative;
-width: 100%;
-`
-export const NavItem = styled.div`
-line-height: 40px;
-padding-left: 20px;
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height: 80px;
+  background-color: var(--nav-background);
 `;
