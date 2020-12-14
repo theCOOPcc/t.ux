@@ -36,3 +36,4 @@ const NavBar = ({ user, handleLogout, floatRight }) => {
 
 export default NavBar;
 
+// ught
