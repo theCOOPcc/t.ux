@@ -24,11 +24,11 @@ class TestingGround extends Component {
       activities: activityService.getAll(),
       users: userService.getAllUsers(),
       user: {
-        name: "Cory Test",
-        email: "jt@dog.com",
-        password: "abc123",
+        name: "Cory Test 4",
+        email: "cory4@test.com",
+        password: "1234",
         assignments: [],
-        _id: "5fc5428eed9ce66e6246e158",
+        _id: "5fd27c3eaf7963259da9d55e",
         userPermissions: 100
       },
       formData: {
@@ -81,6 +81,32 @@ class TestingGround extends Component {
     console.log(banana)
     const taco = await userService.getAllUsers()
     console.log(taco)
+  }
+
+  handlePromotion = async () => {
+    let promotion = await authService.getUser()
+    console.log('user', promotion)
+    promotion.userPermissions = 100
+    console.log('now 100', promotion)
+    this.handlePermissionChange(promotion)
+    const newUser = authService.getUser()
+    console.log('ding', newUser)
+  }
+
+  handleDemotion = async () => {
+    let promotion = await authService.getUser()
+    console.log('user', promotion)
+    promotion.userPermissions = 0
+    console.log('now 100', promotion)
+    this.handlePermissionChange(promotion)
+    const newUser = authService.getUser()
+    console.log('ding', newUser)
+  }
+
+  handlePermissionChange = async (promotion) => {
+    console.log('callback')
+    let promotedUser = await userService.updateUser(promotion)
+    console.log('promoted', promotedUser)
   }
 
   handleGetAllUsers = async () => {
@@ -157,7 +183,9 @@ class TestingGround extends Component {
     return ( 
       <Container>
         <button onClick={this.handleGetAllUsers}>get users</button>
-        <button onClick={this.handleTest}>upgrade user permissions</button>
+        <button onClick={this.handlePromotion}>Promote Me</button>
+        <button onClick={this.handleDemotion}>Demote Me</button>
+        <button onClick={this.handleTest}>upgrade user permissions in state</button>
       </Container>
     )}
 }

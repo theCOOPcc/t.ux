@@ -6,7 +6,7 @@ const activitiesCtrl = require('../controllers/activities');
 
 /*---------- Protected Routes ----------*/
 router.use(require("../config/auth"));
-router.get('/', activitiesCtrl.index)
+router.get('/', activitiesCtrl.index);
 router.post('/', checkAuth, activitiesCtrl.create);
 router.get('/:id',checkAuth, activitiesCtrl.show);
 router.put('/:id', checkAuth, activitiesCtrl.update);
@@ -14,7 +14,8 @@ router.delete('/:id', checkAuth, activitiesCtrl.delete);
 
 /*---------- Auth Checker ----------*/
 function checkAuth(req, res, next) {
-    if (req.user) return next();
+    console.log(req.user)
+    if (req.user.userPermissions === 100) return next();
     return res.status(401).json({msg: 'Not Authorized'});
 }
 
