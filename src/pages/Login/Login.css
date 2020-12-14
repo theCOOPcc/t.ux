@@ -5,3 +5,22 @@
   align-items: center;
   margin-bottom: 50px;
 }
+
+.slacklogin {
+  border-color: grey;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+button {
+  width: flex
+}
+
+main {
+  margin: 0 auto;
+  margin-top: 50px;
+  justify-self: center;
+}
