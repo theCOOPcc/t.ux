@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
-import Blog from '../Blog/Blog';
-import About from '../About/About';
 import User from '../User/User';
 import NavBar from '../../components/NavBar/NavBar';
 import CreateActivity from '../CreateActivity/CreateActivity';
@@ -73,8 +71,6 @@ class App extends Component {
         />
 
         {/* // General Routes */}
-        <Route exact path="/about" render={() => <About />} />
-        <Route exact path="/blog" render={() => <Blog />} />
         <Route exact path="/activities" render={() => <IndexActivities />} />
         <Route exact path="/activities/create" render={() => <CreateActivityRefactor />} />
         <Route

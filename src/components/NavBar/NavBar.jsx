@@ -1,58 +1,39 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Nav, NavItem } from '../../components/StyledComponents/NavComponents';
-
-const RightTag = styled.div`
-  line-height: 40px;
-  padding-left: 20px;
-  padding-right: 40px;
-  position: absolute;
-  right: 0;
-`;
-const A = styled.a`
-  color: white;
-`;
-
-const NavBar = ({ user, handleLogout }) => {
+// import styled from 'styled-components';
+import * as S from '../StyledComponents/NavComponents';
+ 
+const NavBar = ({ user, handleLogout, floatRight }) => {
   return (
     <>
       {user ? (
-        <Nav>
-          <NavItem>
-            <A href=" " className="nav-link">
-              Welcome, {user.name}
-            </A>
-          </NavItem>
-          <NavItem>
-            <A href="/activities/create " className="nav-link">
-              Create Activity
-            </A>
-          </NavItem>
-          <NavItem>
-            <A href="/activities" className="nav-link">
-              View Activities
-            </A>
-          </NavItem>
-          <RightTag>
-            <A href=" " className="nav-link" onClick={handleLogout}>
-              Log Out
-            </A>
-          </RightTag>
-        </Nav>
+        <S.Nav>
+          <S.NavLink href=" ">
+            Welcome, {user.name}
+          </S.NavLink>
+          <S.NavLink href="/activities/create ">
+            Create Activity
+          </S.NavLink>
+          <S.NavLink href="/activities">
+            View Activities
+          </S.NavLink>
+          <S.NavLink href=" " onClick={handleLogout}>
+            Log Out
+          </S.NavLink>
+        </S.Nav>
       ) : (
-        <Nav>
-          <RightTag>
-            <A href="/login" className="nav-link">
-              Log In
-            </A>
-            <A href="/signup" className="nav-link">
-              Sign Up
-            </A>
-          </RightTag>
-        </Nav>
+        <S.Nav>
+          <S.NavLink floatRight href="/login">
+            Log In
+          </S.NavLink>
+          <S.NavLink href="/signup">
+            Sign Up
+          </S.NavLink>
+        </S.Nav>
       )}
     </>
   );
 };
 
 export default NavBar;
+
+// ught
