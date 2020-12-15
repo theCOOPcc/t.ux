@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom'
+// import { Route, Link } from 'react-router-dom'
 import activityService from '../../services/activityService';
 import styled from 'styled-components'
 import authService from '../../services/authService'
 import userService from '../../services/userService'
 // import activity from '../../../models/activity';
 
-const ActivityCard = styled.div`
-border: solid 2px black;
-background-color: white;
-align-items: center;
-width: 300px;
-margin: 10px auto;
-`;
+// const ActivityCard = styled.div`
+// border: solid 2px black;
+// background-color: white;
+// align-items: center;
+// width: 300px;
+// margin: 10px auto;
+// `;
 
 const Container = styled.div`
 align-items: center;
