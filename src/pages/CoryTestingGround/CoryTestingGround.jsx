@@ -4,6 +4,7 @@ import activityService from '../../services/activityService';
 import styled from 'styled-components'
 import authService from '../../services/authService'
 import userService from '../../services/userService'
+import { user } from '../../SampleData/SampleData'
 // import activity from '../../../models/activity';
 
 const ActivityCard = styled.div`
