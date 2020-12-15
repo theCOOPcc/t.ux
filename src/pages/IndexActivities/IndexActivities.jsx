@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import activityService from '../../services/activityService';
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import authService from '../../services/authService'
 
 import {ActivityCard, SideBar, SideBarItem, SideBarLink, ActivitiesContainer, Header, Container} from '../../components/StyledComponents/ActivitiesComponents'
