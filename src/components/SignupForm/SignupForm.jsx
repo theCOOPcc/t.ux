@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import authService from '../../services/authService';
-import * as S from '../StyledComponents/SignupComponents'
+import * as S from '../TuxComponents/SignupComponents'
 
 class SignupForm extends Component {
   state = {

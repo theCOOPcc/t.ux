@@ -4,7 +4,7 @@ import activityService from '../../services/activityService';
 // import styled from 'styled-components';
 import authService from '../../services/authService'
 
-import {ActivityCard, SideBar, SideBarItem, SideBarLink, ActivitiesContainer, Header, Container} from '../../components/StyledComponents/ActivitiesComponents'
+import {ActivityCard, SideBar, SideBarItem, SideBarLink, ActivitiesContainer, Header, Container} from '../../components/TuxComponents/ActivitiesComponents'
 
 // Index activities will be a home for all of the activities for the manager to review.
 // Filter the activities.
