@@ -18,9 +18,11 @@ function showProfile(req, res) {
 }
 
 function update(req, res) {
+  console.log('shahzad')
   User.findByIdAndUpdate(req.params.id, req.body, { new: true })
-  .then(res => res)
-    // res.json()
+  // .then(res => res.json())
+  .then(res.redirect('/testingground'))
+  .catch(err => console.log(err))
 }
 
 function deleteProfile(req, res) {

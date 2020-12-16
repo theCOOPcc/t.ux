@@ -8,7 +8,7 @@ function getAllUsers() {
   return fetch(
     BASE_URL,
     {
-      // headers: { Authorization: "Bearer " + tokenService.getToken() },
+      headers: { Authorization: "Bearer " + tokenService.getToken() },
     },
     { mode: "cors" }
   ).then((res) => res.json());
@@ -19,7 +19,7 @@ function deleteUser(id) {
   return fetch(`${BASE_URL}${id}`, {
     method: 'DELETE',
     headers: {
-      // 'Authorization': 'Bearer ' + tokenService.getToken()
+      'Authorization': 'Bearer ' + tokenService.getToken()
     }
     }, 
     {mode: "cors"})
@@ -39,7 +39,7 @@ function updateUser(user) {
       method: "PUT",
       headers: {
         'content-type': 'application/json', 
-        // 'Authorization': 'Bearer ' + tokenService.getToken()
+        'Authorization': 'Bearer ' + tokenService.getToken()
       },
       body: JSON.stringify(user)
   }, {mode: "cors"})
