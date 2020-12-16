@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components'
 
 export const NavLink = styled.a`
-  color: var(--text-color);
+  color: var(--nav-link-color);
   text-decoration: none;
   padding: 10px;
 
@@ -22,5 +22,3 @@ export const Nav = styled.div`
   height: 80px;
   background-color: var(--nav-background);
 `;
-
-// blah
