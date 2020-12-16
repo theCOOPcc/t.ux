@@ -1,15 +1,24 @@
-import { updateUser } from '../../services/userService'
+import tokenService from '../services/tokenService';
+import { activityData } from '../../SampleData/SampleData'
+const BASE_URL = '/api/activities/';
 
-handleTest = async () => {
-  const user = {
-    name: "Cory Test 2",
-    email: "jt@dog.com",
-    password: "abc123",
-    assignments: [],
-    _id: "5fc5428eed9ce66e6246e158"
-  }
-  const banana = await userService.updateUser(user)
-  console.log(banana)
-  const taco = await userService.getAllUsers()
-  console.log(taco)
+// this works cory
+export function create(activity) {
+    console.log('create an activity')
+  return fetch(
+    BASE_URL,
+    {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'Authorization': 'Bearer' + tokenService.getToken()
+      },
+      body: JSON.stringify(activity),
+    },
+    {
+      mode: 'cors',
+    }
+  ).then((res) => res.json());
 }
+
+create(activityData)

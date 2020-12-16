@@ -1,5 +1,4 @@
 import tokenService from "./tokenService";
-
 const BASE_URL = '/api/auth/';
 
 function signup(user) {
