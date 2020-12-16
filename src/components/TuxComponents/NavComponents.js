@@ -15,10 +15,14 @@ export const NavLink = styled.a`
 `;
 
 export const Nav = styled.div`
-  width: 100%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  height: 80px;
   background-color: var(--nav-background);
+  width: 100%;
+  height: 80px;
+  display: grid;
+  grid-template-columns: 12fr;
+  grid-template-rows: 5px 1fr;
+  /* display:flex;
+  justify-content:center;
+  align-items:center; */
 `;
+
