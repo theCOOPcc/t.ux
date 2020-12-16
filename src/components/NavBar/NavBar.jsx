@@ -1,34 +1,41 @@
 import React from 'react';
 // import styled from 'styled-components';
-import * as S from '../StyledComponents/NavComponents';
+import * as N from '../TuxComponents/NavComponents';
+import * as U from '../TuxComponents/UniversalComponents';
  
-const NavBar = ({ user, handleLogout, floatRight }) => {
+const NavBar = ({ user, handleLogout, floatRight, tuxBlue }) => {
   return (
     <>
       {user ? (
-        <S.Nav>
-          <S.NavLink href=" ">
+        <N.Nav>
+          <N.NavLink href=" ">
             Welcome, {user.name}
-          </S.NavLink>
-          <S.NavLink href="/activities/create ">
+          </N.NavLink>
+          <N.NavLink href="/activities/create ">
             Create Activity
-          </S.NavLink>
-          <S.NavLink href="/activities">
+          </N.NavLink>
+          <N.NavLink href="/activities">
             View Activities
-          </S.NavLink>
-          <S.NavLink href=" " onClick={handleLogout}>
+          </N.NavLink>
+          <N.NavLink href=" " onClick={handleLogout}>
             Log Out
-          </S.NavLink>
-        </S.Nav>
+          </N.NavLink>
+        </N.Nav>
       ) : (
-        <S.Nav>
-          <S.NavLink floatRight href="/login">
+        <N.Nav>
+          <U.ColorBlock tuxBlue></U.ColorBlock>
+          <U.ColorBlock tuxYellow></U.ColorBlock>
+          <U.ColorBlock tuxWhite></U.ColorBlock>
+          <U.ColorBlock tuxGrey></U.ColorBlock>
+          <U.ColorBlock tuxBlack></U.ColorBlock>
+          <U.ColorBlock tuxRed></U.ColorBlock>
+          <N.NavLink floatRight href="/login">
             Log In
-          </S.NavLink>
-          <S.NavLink href="/signup">
+          </N.NavLink>
+          <N.NavLink href="/signup">
             Sign Up
-          </S.NavLink>
-        </S.Nav>
+          </N.NavLink>
+        </N.Nav>
       )}
     </>
   );

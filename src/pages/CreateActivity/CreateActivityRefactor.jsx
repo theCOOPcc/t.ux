@@ -10,7 +10,7 @@ import {
   Select,
   TextArea,
   Button,
-} from '../../components/StyledComponents/FormComponents';
+} from '../../components/TuxComponents/FormComponents';
 
 import {createActivityData} from '../../sampleData'
 

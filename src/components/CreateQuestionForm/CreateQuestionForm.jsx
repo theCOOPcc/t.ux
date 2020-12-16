@@ -6,7 +6,7 @@ import {
   Label,
   TextArea,
   Button,
-} from '../../components/StyledComponents/FormComponents';
+} from '../../components/TuxComponents/FormComponents';
 
 class CreateQuestionForm extends Component {
   state = {};
