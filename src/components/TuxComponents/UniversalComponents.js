@@ -11,7 +11,7 @@ export const Main = styled.main`
 	padding: 20px 39px 15px;
 `;
 
-export const InfoGrid = styled.div`
+export const InfoBar = styled.div`
 	grid-column: 1/span 2;
 	grid-row: 1/span 1;
 	justify-self: stretch;
