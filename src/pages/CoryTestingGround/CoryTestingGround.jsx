@@ -4,7 +4,7 @@ import activityService from '../../services/activityService';
 import styled from 'styled-components'
 import authService from '../../services/authService'
 import userService from '../../services/userService'
-// import activity from '../../../models/activity';
+import { user, activityData } from '../../SampleData/SampleData'
 
 // const ActivityCard = styled.div`
 // border: solid 2px black;
@@ -68,21 +68,6 @@ class TestingGround extends Component {
       },
    } 
 
-  handleTest = async () => {
-    const user = {
-      name: "Cory Manager",
-      email: "cory@dog.com",
-      password: "1234",
-      assignments: [],
-      _id: "5fd251958315701726addd79",
-      userPermissions: 100
-    }
-    const banana = await userService.updateUser(user)
-    console.log(banana)
-    const taco = await userService.getAllUsers()
-    console.log(taco)
-  }
-
   handlePromotion = async () => {
     let promotion = await authService.getUser()
     console.log('user', promotion)
@@ -114,7 +99,11 @@ class TestingGround extends Component {
     console.log(allUsers)
   }
 
-
+  handleAddActivity = async () => {
+    console.log(activityData)
+    const newActivity = await activityService.create(activityData)
+    console.log(newActivity)
+  }
   
   // async componentDidMount() {
 
@@ -185,7 +174,7 @@ class TestingGround extends Component {
         <button onClick={this.handleGetAllUsers}>get users</button>
         <button onClick={this.handlePromotion}>Promote Me</button>
         <button onClick={this.handleDemotion}>Demote Me</button>
-        <button onClick={this.handleTest}>upgrade user permissions in state</button>
+        <button onClick={this.handleAddActivity}>add activity</button>
       </Container>
     )}
 }

@@ -72,8 +72,7 @@ class App extends Component {
         />
 
         {/* // General Routes */}
-        {/* <Route exact path="/about" render={() => <About />} />
-        <Route exact path="/blog" render={() => <Blog />} /> */}
+
         <Route exact path="/activities" render={() => <IndexActivities />} />
         {/* <Route exact path="/activities/create" render={() => <CreateActivityRefactor />} /> */}
         <Route
