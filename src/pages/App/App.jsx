@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import User from '../User/User';
+import * as U from '../../components/TuxComponents/UniversalComponents'
 import NavBar from '../../components/NavBar/NavBar';
 import CreateActivity from '../CreateActivity/CreateActivity';
 // import CreateActivityRefactor from '../CreateActivity/CreateActivityRefactor'
@@ -39,6 +40,7 @@ class App extends Component {
     return (
       <>
         <NavBar user={user} handleLogout={this.handleLogout} />
+        <U.Main>
 
 
         {/* write conditional routing to proper homepage depending on user type */}
@@ -47,7 +49,7 @@ class App extends Component {
           exact
           path="/"
           render={() => (user ? <User user={user} /> : <Landing />)}
-        />
+          />
 
         {/* // Signup & Login Routes */}
         <Route
@@ -55,21 +57,21 @@ class App extends Component {
           path="/signup"
           render={({ history }) => (
             <Signup
-              history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
+            history={history}
+            handleSignupOrLogin={this.handleSignupOrLogin}
             />
-          )}
-        />
+            )}
+            />
         <Route
           exact
           path="/login"
           render={({ history }) => (
             <Login
-              history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
+            history={history}
+            handleSignupOrLogin={this.handleSignupOrLogin}
             />
-          )}
-        />
+            )}
+            />
 
         {/* // General Routes */}
 
@@ -85,6 +87,7 @@ class App extends Component {
         <Route
           exact path="/passwordresetrequest"
           render={() => <PasswordResetRequest />} />
+        </U.Main>
       </>
     );
   }

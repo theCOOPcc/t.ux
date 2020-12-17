@@ -1,13 +1,16 @@
 import styled, { css } from 'styled-components'
 
 export const Main = styled.main`
+	margin: 0;
 	height: 100vh;
 	display: grid;
 	grid-template-columns: 6fr 300px;
 	grid-template-rows: 60px 1fr;
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
-	background-color: slateblue;
+	background: linear-gradient(210.65deg, #FFEE99 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, #EA4A46 -33.26%, rgba(234, 74, 70, 0) 67.74%);
+	background-blend-mode: normal, multiply;
+	opacity: 0.3;
 	padding: 20px 39px 15px;
 `;
 
@@ -60,42 +63,42 @@ export const ProgressBar = styled.progress`
 
 // Color Blocks
 export const ColorBlock = styled.div`
-  grid-column: span 2;
+  grid-column: span 1;
   height: 5px;
   
   ${props => props.tuxBlue && css`
     grid-row: 1/span 1;
-    grid-column: 1/span 2;
+    grid-column: 1/span 1;
     background-color: var(--tux-blue);
   `}
   
   ${props => props.tuxYellow && css`
   	grid-row: 1/span 1;
-    grid-column: 3/span 2;
+    grid-column: 2/span 1;
     background-color: var(--tux-yellow);
 	`}
 	
 	${props => props.tuxWhite && css`
     grid-row: 1/span 1;
-    grid-column: 5/span 2;
+    grid-column: 3/span 1;
     background-color: var(--tux-white);
 	`}
 	
 	${props => props.tuxGrey && css`
     grid-row: 1/span 1;
-    grid-column: 7/span 2;
+    grid-column: 4/span 1;
     background-color: var(--tux-grey);
 	`}
 	
 	${props => props.tuxBlack && css`
     grid-row: 1/span 1;
-    grid-column: 9/span 2;
+    grid-column: 5/span 1;
     background-color: var(--tux-black);
 	`}
 	
 	${props => props.tuxRed && css`
     grid-row: 1/span 1;
-    grid-column: 11/span 2;
+    grid-column: 6/span 1;
   	background-color: var(--tux-red);
   `}
 `;
