@@ -2,8 +2,10 @@ import React from 'react';
 // import styled from 'styled-components';
 import * as N from '../TuxComponents/NavComponents';
 import * as U from '../TuxComponents/UniversalComponents';
+import ProgressBar from '../ProgressBar/ProgressBar';
+
  
-const NavBar = ({ user, handleLogout, floatRight, tuxBlue }) => {
+const NavBar = ({ user, handleLogout }) => {
   return (
     <>
       {user ? (
@@ -29,6 +31,9 @@ const NavBar = ({ user, handleLogout, floatRight, tuxBlue }) => {
           <U.ColorBlock tuxGrey></U.ColorBlock>
           <U.ColorBlock tuxBlack></U.ColorBlock>
           <U.ColorBlock tuxRed></U.ColorBlock>
+
+          <ProgressBar/>
+
           <N.NavLink floatRight href="/login">
             Log In
           </N.NavLink>
