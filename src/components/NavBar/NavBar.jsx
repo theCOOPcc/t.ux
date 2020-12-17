@@ -32,7 +32,7 @@ const NavBar = ({ user, handleLogout }) => {
           <U.ColorBlock tuxBlack></U.ColorBlock>
           <U.ColorBlock tuxRed></U.ColorBlock>
 
-          <ProgressBar/>
+          {/* <ProgressBar/> */}
 
           <N.NavLink floatRight href="/login">
             Log In

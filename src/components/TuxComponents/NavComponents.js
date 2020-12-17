@@ -5,6 +5,7 @@ export const NavLink = styled.a`
   text-decoration: none;
   padding: 10px;
 
+
   ${props => props.floatRight && css`
     margin-left: auto;
   `}
@@ -19,10 +20,10 @@ export const Nav = styled.div`
   width: 100%;
   height: 80px;
   display: grid;
-  grid-template-columns: 12fr;
+  grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 5px 1fr;
-  /* display:flex;
-  justify-content:center;
-  align-items:center; */
+ 
 `;
+
+
 
