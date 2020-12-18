@@ -1,55 +1,98 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Nav, NavItem } from '../../components/StyledComponents/NavComponents';
+// import styled from 'styled-components';
+import * as N from '../TuxComponents/NavComponents';
+import * as U from '../TuxComponents/UniversalComponents';
+import ProgressBar from '../ProgressBar/ProgressBar';
 
-const RightTag = styled.div`
-  line-height: 40px;
-  padding-left: 20px;
-  padding-right: 40px;
-  position: absolute;
-  right: 0;
-`;
-const A = styled.a`
-  color: white;
-`;
-
+ 
 const NavBar = ({ user, handleLogout }) => {
   return (
     <>
-      {user ? (
-        <Nav>
-          <NavItem>
-            <A href=" " className="nav-link">
-              Welcome, {user.name}
-            </A>
-          </NavItem>
-          <NavItem>
-            <A href="/activities/create " className="nav-link">
-              Create Activity
-            </A>
-          </NavItem>
-          <NavItem>
-            <A href="/activities" className="nav-link">
-              View Activities
-            </A>
-          </NavItem>
-          <RightTag>
-            <A href=" " className="nav-link" onClick={handleLogout}>
-              Log Out
-            </A>
-          </RightTag>
-        </Nav>
-      ) : (
-        <Nav>
-          <RightTag>
-            <A href="/login" className="nav-link">
-              Log In
-            </A>
-            <A href="/signup" className="nav-link">
-              Sign Up
-            </A>
-          </RightTag>
-        </Nav>
+      {!user ? (
+        <N.Nav>
+        {/* View Not Logged In */}
+
+          {/* Color Bar */}
+          <U.ColorBlock tuxBlue></U.ColorBlock>
+          <U.ColorBlock tuxYellow></U.ColorBlock>
+          <U.ColorBlock tuxWhite></U.ColorBlock>
+          <U.ColorBlock tuxGrey></U.ColorBlock>
+          <U.ColorBlock tuxBlack></U.ColorBlock>
+          <U.ColorBlock tuxRed></U.ColorBlock>
+
+          <N.NavRow2>
+          {/* Logo */}
+          <N.NavLink>
+
+          <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
+          </N.NavLink>
+          <N.NavLink right href="/login">
+            Log In
+          </N.NavLink>
+          <N.NavLink  href="/signup">
+            Sign Up
+          </N.NavLink>
+        </N.NavRow2>
+        </N.Nav>
+        
+      ) : user.userPermissions === 0 ?
+        <N.Nav>
+          {/* Color Bar */}
+          <U.ColorBlock tuxBlue></U.ColorBlock>
+          <U.ColorBlock tuxYellow></U.ColorBlock>
+          <U.ColorBlock tuxWhite></U.ColorBlock>
+          <U.ColorBlock tuxGrey></U.ColorBlock>
+          <U.ColorBlock tuxBlack></U.ColorBlock>
+          <U.ColorBlock tuxRed></U.ColorBlock>
+
+        <N.NavRow2>
+        {/* Logo */}
+        <N.NavLink href="/">
+
+        <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
+        </N.NavLink>
+
+          <N.NavLink  href="/activities">
+            Activities
+          </N.NavLink>
+          <N.NavLink right href=" ">
+            {user.name}
+          </N.NavLink>
+          <N.NavLink  href=" " onClick={handleLogout}>
+            LogOut
+          </N.NavLink>
+
+        </N.NavRow2>
+        </N.Nav>
+      : user.userPermissions === 100 (
+        <N.Nav>
+          {/* Color Bar */}
+          <U.ColorBlock tuxBlue></U.ColorBlock>
+          <U.ColorBlock tuxYellow></U.ColorBlock>
+          <U.ColorBlock tuxWhite></U.ColorBlock>
+          <U.ColorBlock tuxGrey></U.ColorBlock>
+          <U.ColorBlock tuxBlack></U.ColorBlock>
+          <U.ColorBlock tuxRed></U.ColorBlock>
+
+        <N.NavRow2>
+        {/* Logo */}
+        <N.NavLink>
+        <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
+        </N.NavLink>
+          <N.NavLink right href=" ">
+            {user.name}
+          </N.NavLink>
+          <N.NavLink left href="/activities/create ">
+            Create Activity
+          </N.NavLink>
+          <N.NavLink href="/activities">
+            Activities
+          </N.NavLink>
+          <N.NavLink farRight href=" " onClick={handleLogout}>
+            Log Out
+          </N.NavLink>
+        </N.NavRow2>
+        </N.Nav>
       )}
     </>
   );

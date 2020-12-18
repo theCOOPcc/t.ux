@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+// This page/component will be used to create/ maybe manage groups?
+
 class CreateGroup extends Component {
     state = { 
         formData: {

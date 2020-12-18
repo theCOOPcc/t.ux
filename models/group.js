@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
+// Data model for what a group of students looks like.
 
 const groupSchema = new Schema(
   {

@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+
+// Going to be the TUX landing page.
+// On hold for now.
+
 class Landing extends Component {
   state = {};
   render() {
@@ -8,3 +12,4 @@ class Landing extends Component {
 }
 
 export default Landing;
+ 

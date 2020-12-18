@@ -1,10 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* Variables */
+html {
+  /* Fonts */
+  --pop-reg: 400 17px 'Poppins', sans-serif;
+  --pop-ital: italic 400 17px 'Poppins', sans-serif;
+  --pop-semi-bold: 600 17px 'Poppins', sans-serif;
+  --pop-bold: 800 17px 'Poppins', sans-serif;
+
+  /* Colors */
+  --tux-blue: #78D6DA;
+  --tux-yellow: #f0eb7e;
+  --tux-red: #EA4A46;
+  --tux-grey: #323239;
+  --tux-white: #f1f2eb;
+  --tux-black: #17171e;
+  --nav-background: #ffffff;
+
+  /* Buttons */
+  --btn-border-radius: 5px;
+  --primary-btn-padding: 14px 46px;
+  --primary-def-btn-color: #333333;
+  --primary-hov-btn-color: rgba(51,51,51,.75);
+  --primary-disabled-btn-color: #cccccc;
+  --disabled-btn-text-color: #999999;
+  --second-def-btn-color: rgba(136,136,136,.75);
+  --second-hov-btn-color: #a6a6a6;
+  --second-disabled-btn-color: #a6a6a6;
+
+  /* Borders */
+  --solid-border: 1px solid black;
+  --input-border: 2px solid#666666;
+
+  /* Alerts/Notifications/Feedback */
+  --notification-color: #36C5F0;
+  --warning-color: #ecb22e;
+  --alert-color: #ff0000;
+
+  /* Inputs */
+  --background-input: #eeeeee;
+
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
 code {

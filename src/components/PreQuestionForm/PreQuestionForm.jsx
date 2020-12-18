@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Input, Form, InputGroup, Label, Select} from '../../components/StyledComponents/FormComponents'
+import {Input, Form, InputGroup, Label, Select} from '../../components/TuxComponents/FormComponents'
 
 
 class PreQuestionForm extends Component {
@@ -67,7 +67,6 @@ class PreQuestionForm extends Component {
         ) : (
           ''
         )}
-
         <InputGroup>
           <Label>Number of Items:</Label>
           <Input

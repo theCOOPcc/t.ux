@@ -15,10 +15,18 @@ const assignmentSchema = new Schema({
 
 const userSchema = new Schema(
   {
+    // user model data:
     name: { type: String, required: true },
     email: { type: String, required: true, lowercase: true, unique: true },
     password: String,
     assignments: [assignmentSchema],
+    // user data: 0
+    userPermissions: Number
+    // hold different information that the user could have
+
+    // manager data: 100
+
+    // admin data: 200
   },
   {
     timestamps: true,

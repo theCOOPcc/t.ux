@@ -18,7 +18,7 @@ export function create(activity) {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
-        // 'Authorization': 'Bearer' + tokenService.getToken()
+        'Authorization': 'Bearer' + tokenService.getToken()
       },
       body: JSON.stringify(activity),
     },
@@ -37,7 +37,7 @@ function getAll() {
       method: 'GET',
       headers: {
         'content-type': 'application/json',
-        //  'Authorization': 'Bearer' + tokenService.getToken()
+         'Authorization': 'Bearer' + tokenService.getToken()
       },
     },
     { mode: 'cors' }

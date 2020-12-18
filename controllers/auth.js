@@ -8,6 +8,7 @@ module.exports = {
 
 async function signup(req, res) {
   const user = new User(req.body);
+  user.userPermissions = 0
   try {
     await user.save();
     // Be sure to first delete data that should not be in the token
@@ -19,7 +20,7 @@ async function signup(req, res) {
 }
 
 async function login(req, res) {
-  console.log('loggin in as user service, request data', req.body)
+  console.log('login in as user service, request data', req.body)
   try {
     const user = await User.findOne({ email: req.body.email });
     console.log('request user', user)

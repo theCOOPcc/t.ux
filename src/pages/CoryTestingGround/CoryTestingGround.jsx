@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom'
+// import { Route, Link } from 'react-router-dom'
 import activityService from '../../services/activityService';
 import styled from 'styled-components'
 import authService from '../../services/authService'
 import userService from '../../services/userService'
-// import activity from '../../../models/activity';
+import { user, activityData } from '../../SampleData/SampleData'
 
-const ActivityCard = styled.div`
-border: solid 2px black;
-background-color: white;
-align-items: center;
-width: 300px;
-margin: 10px auto;
-`;
+// const ActivityCard = styled.div`
+// border: solid 2px black;
+// background-color: white;
+// align-items: center;
+// width: 300px;
+// margin: 10px auto;
+// `;
 
 const Container = styled.div`
 align-items: center;
@@ -24,11 +24,12 @@ class TestingGround extends Component {
       activities: activityService.getAll(),
       users: userService.getAllUsers(),
       user: {
-        name: "Cory Test",
-        email: "jt@dog.com",
-        password: "abc123",
+        name: "Cory Test 4",
+        email: "cory4@test.com",
+        password: "1234",
         assignments: [],
-        _id: "5fc5428eed9ce66e6246e158"
+        _id: "5fd27c3eaf7963259da9d55e",
+        userPermissions: 100
       },
       formData: {
         name: 'activity #9002',
@@ -67,21 +68,42 @@ class TestingGround extends Component {
       },
    } 
 
-  handleTest = async () => {
-    const user = {
-      name: "Cory Test 2",
-      email: "jt@dog.com",
-      password: "abc123",
-      assignments: [],
-      _id: "5fc5428eed9ce66e6246e158"
-    }
-    const banana = await userService.updateUser(user)
-    console.log(banana)
-    const taco = await userService.getAllUsers()
-    console.log(taco)
+  handlePromotion = async () => {
+    let promotion = await authService.getUser()
+    console.log('user', promotion)
+    promotion.userPermissions = 100
+    console.log('now 100', promotion)
+    this.handlePermissionChange(promotion)
+    const newUser = authService.getUser()
+    console.log('ding', newUser)
   }
 
+  handleDemotion = async () => {
+    let promotion = await authService.getUser()
+    console.log('user', promotion)
+    promotion.userPermissions = 0
+    console.log('now 100', promotion)
+    this.handlePermissionChange(promotion)
+    const newUser = authService.getUser()
+    console.log('ding', newUser)
+  }
 
+  handlePermissionChange = async (promotion) => {
+    console.log('callback')
+    let promotedUser = await userService.updateUser(promotion)
+    console.log('promoted', promotedUser)
+  }
+
+  handleGetAllUsers = async () => {
+    const allUsers = await userService.getAllUsers();
+    console.log(allUsers)
+  }
+
+  handleAddActivity = async () => {
+    console.log(activityData)
+    const newActivity = await activityService.create(activityData)
+    console.log(newActivity)
+  }
   
   // async componentDidMount() {
 
@@ -149,7 +171,10 @@ class TestingGround extends Component {
   render() { 
     return ( 
       <Container>
-        <button onClick={this.handleTest}>handle test</button>
+        <button onClick={this.handleGetAllUsers}>get users</button>
+        <button onClick={this.handlePromotion}>Promote Me</button>
+        <button onClick={this.handleDemotion}>Demote Me</button>
+        <button onClick={this.handleAddActivity}>add activity</button>
       </Container>
     )}
 }
