@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import {Link} from 'react-router-dom'
 
 export const TuxFlower = styled.img`
 	width: 140px;
@@ -27,7 +28,7 @@ export const GoogleG = styled.img`
     margin: 20px;
     `;
 
-export const GoogleBox = styled.div`
+export const GoogleBox = styled(Link)`
     width: 343px;
     height: 80px;
     border-radius: 5px;
@@ -37,12 +38,14 @@ export const GoogleBox = styled.div`
     align-content: center;
     margin: 50px 0 0 0;
     box-shadow: var(--common-shadow);
+    text-decoration: none;
 `;
 
 export const SignIn = styled.p`
     font: 700 20px 'Roboto', sans-serif;
     /* line-height: 23.44px; */
     color: rgba(0,0,0,.54);
+    
 `;
 
 export const Normal = styled.p`
