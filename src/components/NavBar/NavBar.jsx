@@ -63,7 +63,7 @@ const NavBar = ({ user, handleLogout }) => {
 
         </N.NavRow2>
         </N.Nav>
-      : user.userPermissions === 100 (
+      : user.userPermissions === 100 ? (
         <N.Nav>
           {/* Color Bar */}
           <U.ColorBlock tuxBlue></U.ColorBlock>
@@ -92,7 +92,9 @@ const NavBar = ({ user, handleLogout }) => {
           </N.NavLink>
         </N.NavRow2>
         </N.Nav>
-      )}
+      )
+      :
+      <p>You need a navbar</p>}
     </>
   );
 };

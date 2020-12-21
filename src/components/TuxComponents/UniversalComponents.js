@@ -83,7 +83,7 @@ export const WideBtn = styled.button`
 	font: var(--pop-bold);
 	line-height: 27px;
 
-	${props => props.disabled && css`
+	${props => props.greyed && css`
 		background-color: var(--primary-disabled-btn-color);
 		color: var(--text-white);
 		border: var(--input-border);
