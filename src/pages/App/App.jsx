@@ -14,6 +14,7 @@ import IndexActivities from '../IndexActivities/IndexActivities';
 import CoryTestingGround from '../../pages/CoryTestingGround/CoryTestingGround';
 import './App.css';
 import PasswordResetRequest from '../PasswordResetRequest/PasswordResetRequest';
+import HeuristicsActivity from '../HeuristicsActivity/HeuristicsActivity'
 
 // import ReactGA from 'react-ga';
 
@@ -87,7 +88,14 @@ class App extends Component {
         <Route
           exact path="/passwordresetrequest"
           render={() => <PasswordResetRequest />} />
+        {/* // Heuristics Route */}
+        <Route
+          exact path="/activity/heuristics"
+          render={({history, location}) => <HeuristicsActivity />} />
         </U.Main>
+        {/* // 10 Heuristics sub-routes for sidebar */}
+
+        
       </>
     );
   }
