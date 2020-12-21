@@ -35,11 +35,14 @@ class Login extends Component {
     const { email, pw } = this.state;
 
     return (
-      <U.FlexBox>
+    <U.FlexBox>
       <U.FlexBox>
         <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
         <L.LoginBox>
-          <L.GoogleBox>
+          <L.GoogleBox
+          // this is the "href" go to google
+            to=""
+          >
             <L.GoogleG src="/images/googleG.png"></L.GoogleG>
             <L.SignIn>Sign in with Google</L.SignIn>
           </L.GoogleBox>
@@ -77,13 +80,13 @@ class Login extends Component {
         </form>
         </L.LoginBox>
       </U.FlexBox>
-        <U.FlexBox signUp>
-          <L.Normal>Need an Account?</L.Normal>
-          <U.LinkTo
-            to="/signup"
-          >Sign Up</U.LinkTo>
-        </U.FlexBox>
+      <U.FlexBox signUp>
+        <L.Normal>Need an Account?</L.Normal>
+        <U.LinkTo
+          to="/signup"
+        >Sign Up</U.LinkTo>
       </U.FlexBox>
+    </U.FlexBox>
       // <main className="Login">
       //   {/* this will be a route to our slack oauth link */}
       //   <div className='slacklogin'>
