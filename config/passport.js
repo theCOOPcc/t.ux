@@ -18,10 +18,12 @@ passport.use(
                   // we have a new user via OAuth!
                   console.log(profile)
                   let newUser = new User({
-                    name: profile.displayName,
+                    firstName: profile.name.givenName,
+                    lastName: profile.name.familyName,
                     email: profile.emails[0].value,
                     googleId: profile.id,
                     assignments: [],
+                    avatar: profile._json.picture,
                     userPermissions: 0,
                   });
                   newUser.save(function (err) {
