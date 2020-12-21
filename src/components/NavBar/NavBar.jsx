@@ -22,9 +22,8 @@ const NavBar = ({ user, handleLogout }) => {
 
           <N.NavRow2>
           {/* Logo */}
-          <N.NavLink>
-
-          <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
+          <N.NavLink href="/">
+            <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
           </N.NavLink>
           <N.NavLink right href="/login">
             Log In
@@ -76,8 +75,8 @@ const NavBar = ({ user, handleLogout }) => {
 
         <N.NavRow2>
         {/* Logo */}
-        <N.NavLink>
-        <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
+        <N.NavLink href="/">
+          <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
         </N.NavLink>
           <N.NavLink right href=" ">
             {user.name}
