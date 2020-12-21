@@ -41,7 +41,7 @@ class Login extends Component {
         <L.LoginBox>
           <L.GoogleBox
           // this is the "href" go to google
-            to=""
+            to="/auth/google"
           >
             <L.GoogleG src="/images/googleG.png"></L.GoogleG>
             <L.SignIn>Sign in with Google</L.SignIn>
