@@ -3,9 +3,27 @@ const app = express();
 const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
+const session = require('express-session');
+const passport = require('passport');
 
 require('dotenv').config();
 require('./config/database');
+require('./config/passport');
+
+const cors = require('cors');
+
+app.use(cors());
+app.use(logger('dev'));
+app.use(express.json());
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true
+  })
+)
+app.use(passport.initialize());
+app.use(passport.session());
 
 const userRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
@@ -13,11 +31,6 @@ const activityRouter = require('./routes/activities');
 const groupRouter = require('./routes/groups');
 const managerRouter = require('./routes/managers');
 
-const cors = require('cors');
-
-app.use(cors());
-app.use(logger('dev'));
-app.use(express.json());
 
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
