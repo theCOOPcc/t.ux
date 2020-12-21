@@ -73,7 +73,7 @@ class Login extends Component {
               to="/forgotpassword"
             >Forgot Password?</U.LinkTo>
           </U.FlexBox>
-          <U.WideBtn disabled>Log In</U.WideBtn>
+          <U.WideBtn greyed>Log In</U.WideBtn>
         </form>
         </L.LoginBox>
       </U.FlexBox>
