@@ -20,6 +20,10 @@ export const LoginBox = styled.div`
     border-radius: 10px;
     position: absolute;
     top: 200px;
+
+    ${props => props.flexStart && css`
+      justify-content: flex-start;
+    `}
 `;
 
 export const GoogleG = styled.img`
@@ -58,8 +62,14 @@ export const Normal = styled.p`
 
   ${props => props.five00 && css`
     font-weight: 500;
-    text-align: left;
+    /* text-align: left; */
     margin: 0;
+  `}
+
+  ${props => props.forgot && css`
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 50px;
   `}
 `;
 
