@@ -88,3 +88,11 @@ export const activityData = {
     ],
   
   };
+
+  export const groupData = {
+    name: "Test Group",
+    dateStarted: "2020-12-21",
+    endingDate: "2020-12-21",
+    users: [],
+    createdBy: "Cory Test"
+  }

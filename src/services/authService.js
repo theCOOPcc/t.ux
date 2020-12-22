@@ -43,6 +43,9 @@ function login(creds) {
   })
   .then(({ token }) => 
   tokenService.setToken(token)
+  )
+  .then(({ token }) => 
+  console.log(token)
   );
 }
 

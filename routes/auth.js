@@ -14,8 +14,8 @@ router.get(
     "/google/oauth2callback",
     passport.authenticate("google", {
         // we need to dial in our redirect URLs once users have been authenticated: what page do they land on?
-        successRedirect: "/corytestingground",
-        failureRedirect: "/",
+        successRedirect: "http://localhost:3000/corytestingground/",
+        failureRedirect: "/login",
     })
 );
 router.get("/logout", function(req, res) {
