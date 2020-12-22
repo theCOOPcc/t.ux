@@ -1,4 +1,3 @@
-const { json } = require('express')
 const Group = require('../models/group')
 
 module.exports = {
@@ -37,7 +36,6 @@ function show(req, res) {
 
 function index(req, res) {
     Group.findById({})
-        // .populate('createdBy')
         .then(groups => { res.json(groups) })
         .catch(err => { res.json(err) })
 }

@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import authService from '../../services/authService'
 import userService from '../../services/userService'
 import { user, activityData } from '../../SampleData/SampleData'
+import groupService from '../../services/groupService';
 
 // const ActivityCard = styled.div`
 // border: solid 2px black;
@@ -21,51 +22,6 @@ text-align: center;
 
 class TestingGround extends Component {
   state = { 
-      activities: activityService.getAll(),
-      users: userService.getAllUsers(),
-      user: {
-        name: "Cory Test 4",
-        email: "cory4@test.com",
-        password: "1234",
-        assignments: [],
-        _id: "5fd27c3eaf7963259da9d55e",
-        userPermissions: 100
-      },
-      formData: {
-        name: 'activity #9002',
-        duration: 5,
-        numberOfQuestions: 10,
-        topics: ['Heuristics'],
-        type: ['Multiple Choice'],
-        media: 'https://picsum.photos/id/1/200/300',
-        questions: [
-          {
-            problemStatement: 'This is the problem statement that I am updating',
-            suggestion: 'Here is a suggestion if you are having trouble that I am updating',
-            answers: [
-              {
-                label: 'answer #1',
-                isCorrect: false,
-              },
-              {
-                label: 'answer #2',
-                isCorrect: true,
-              },
-              {
-                label: 'answer #3',
-                isCorrect: true,
-              },
-              {
-                label: 'answer #4',
-                isCorrect: false,
-              },
-            ],
-          },
-        ],
-        isDraft: false,
-        archived: false,
-        _id: '5fc17b77171f00437b74f829'
-      },
    } 
 
   handlePromotion = async () => {
@@ -99,11 +55,23 @@ class TestingGround extends Component {
     console.log(allUsers)
   }
 
-  handleAddActivity = async () => {
-    console.log(activityData)
-    const newActivity = await activityService.create(activityData)
-    console.log(newActivity)
+  // handleAddActivity = async () => {
+  //   console.log(activityData)
+  //   const newActivity = await activityService.create(activityData)
+  //   console.log(newActivity)
+  // }
+  
+  handleAddGroup = async () => {
+  const groupData = {
+    name: "Test Group",
+    dateStarted: 2020-12-21,
+    endingDate: 2020-12-22,
+    users: [],
+    createdBy: "Cory Test"
   }
+  const newGroup = await groupService.create(groupData)
+  console.log(newGroup)
+}
   
   // async componentDidMount() {
 
@@ -174,7 +142,7 @@ class TestingGround extends Component {
         <button onClick={this.handleGetAllUsers}>get users</button>
         <button onClick={this.handlePromotion}>Promote Me</button>
         <button onClick={this.handleDemotion}>Demote Me</button>
-        <button onClick={this.handleAddActivity}>add activity</button>
+        <button onClick={this.handleAddGroup}>add group</button>
       </Container>
     )}
 }
