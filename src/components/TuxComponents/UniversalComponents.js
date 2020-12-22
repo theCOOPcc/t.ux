@@ -62,6 +62,14 @@ export const FlexBox = styled.div`
 		justify-content: space-between;
 	`}
 
+	${props => props.column && css`
+		flex-direction: column;
+	`}
+
+	${props => props.flexMargin && css`
+		margin: 40px;
+	`}
+
 	${props => props.negMargin && css`
 		margin-top: -8px;
 	`}
@@ -69,6 +77,12 @@ export const FlexBox = styled.div`
 	${props => props.signUp && css`
 		position: absolute;
 		top: 700px;
+		/* left: 420px; */
+	`}
+
+	${props => props.login && css`
+		position: absolute;
+		top: 820px;
 		/* left: 420px; */
 	`}
 `;
@@ -86,16 +100,16 @@ export const WideBtn = styled.button`
 		width: 350px;
 		//this margin is for reset password
 		margin-top: 104px;
+		background-color: var(--enable-btn);
 	`}
 
-	${props => props.greyed && css`
+	${props => props.disabled && css`
 		background-color: var(--primary-disabled-btn-color);
 		color: var(--text-white);
 		border: var(--input-border);
 	`}
 
 	${props => props.enable && css`
-		background-color: var(--enable-btn);
 	`}
 
 `;
@@ -121,8 +135,14 @@ export const Normal = styled.p`
   font: var(--pop-reg);
   /* line-height: 20px; */
 
-  ${props => props.or && css`
-    font-size: 20px;
+  ${props => props.eighteen && css`
+	font-size: 18px;
+	line-height: 27px;
+  `}
+
+  ${props => props.twenty && css`
+	font-size: 20px;
+	line-height: 24px;
   `}
 
   ${props => props.semiBold && css`
@@ -130,10 +150,18 @@ export const Normal = styled.p`
     margin: 0;
   `}
 
-  ${props => props.forgot && css`
+  ${props => props.twenty4 && css`
     font-size: 24px;
     line-height: 36px;
+  `}
+	
+  ${props => props.margin50 && css`
     margin-top: 50px;
+  `}
+
+  ${props => props.large && css`
+	font-size: 36px;
+	line-height: 54px;
   `}
 `;
 
@@ -161,12 +189,16 @@ export const Checkbox = styled.div`
 
 /*---------- Inputs ----------*/
 export const SmallInput = styled.input`
-	margin: 0;
+	margin: 0 10px;
 	width: 343px;
 	height: 50px;
 	border: var(--input-border);
 	border-radius: 5px;
 	font-size: 24px;
+
+	${props => props.marginTop && css`
+		margin: 98px 10px 88px 0;
+	`}
 `;
 
 
