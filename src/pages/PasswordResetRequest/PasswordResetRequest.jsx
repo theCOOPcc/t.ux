@@ -22,15 +22,15 @@ class PasswordResetRequest extends Component {
                     <L.Normal semiBold forgot>Forgot your password?</L.Normal>
                     <U.Poppins>No problem, we'll send you an email<br/> with a link to reset your password.</U.Poppins>
                     <form>
-                        <U.Poppins>Email or username</U.Poppins>
+                        <U.Poppins>Username or email</U.Poppins>
                         <U.SmallInput onChange={this.handleChange} type='text'></U.SmallInput>
                         <br></br>
                         <br></br>
-                        <U.WideBtn greyed 
+                        <U.WideBtn greyed extraWide
                             // onSubmit={this.handleSubmit}
                             >Reset Password</U.WideBtn>
                     </form>
-                    {/* We need a link and a route set up down the road for a password reset link that emails 
+                    {/* TODO: We need a link and a route set up down the road for a password reset link that emails 
                     a user the reset link upon form submission */}
                     
                 </L.LoginBox>
