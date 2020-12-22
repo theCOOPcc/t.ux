@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import * as U from '../../components/TuxComponents/UniversalComponents'
+import * as L from '../../components/TuxComponents/LoginComponents'
 
 class PasswordResetRequest extends Component {
     state = { 
@@ -13,24 +15,34 @@ class PasswordResetRequest extends Component {
 
     render() { 
         return ( 
-            <React.Fragment>
-                <h1>TUX</h1>
-                <h3>Forgot Password?</h3>
-                <h5>Don't worry we'll send you an email with a link to reset your password</h5>
-                <form>
-                    <label>Your email or username</label>
-                    <br></br>
-                    <input onChange={this.handleChange} type='text'></input>
-                    <br></br>
-                    <br></br>
-                    <button 
-                        // onSubmit={this.handleSubmit}
-                        >Reset Password</button>
-                </form>
-                <h5>Need an Account? <span><a href='/signup'>Sign Up</a></span></h5>
-                {/* We need a link and a route set up down the road for a password reset link that emails 
-                a user the reset link upon form submission */}
-            </React.Fragment>
+            <U.FlexBox>
+            <U.FlexBox>
+                <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
+                <L.LoginBox flexStart>
+                    <L.Normal semiBold forgot>Forgot your password?</L.Normal>
+                    <U.Poppins>No problem, we'll send you an email<br/> with a link to reset your password.</U.Poppins>
+                    <form>
+                        <U.Poppins>Email or username</U.Poppins>
+                        <U.SmallInput onChange={this.handleChange} type='text'></U.SmallInput>
+                        <br></br>
+                        <br></br>
+                        <U.WideBtn greyed 
+                            // onSubmit={this.handleSubmit}
+                            >Reset Password</U.WideBtn>
+                    </form>
+                    {/* We need a link and a route set up down the road for a password reset link that emails 
+                    a user the reset link upon form submission */}
+                    
+                </L.LoginBox>
+                <U.FlexBox signUp>
+                    <L.Normal>Need an Account?</L.Normal>
+                    <U.LinkTo
+                      to="/signup"
+                    >Sign Up</U.LinkTo>
+                </U.FlexBox>
+            </U.FlexBox>
+        </U.FlexBox>
+
          );
     }
 }
