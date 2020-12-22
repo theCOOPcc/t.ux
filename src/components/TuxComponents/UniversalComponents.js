@@ -76,18 +76,28 @@ export const FlexBox = styled.div`
 /*---------- Buttons ----------*/
 export const WideBtn = styled.button`
 	width: 280px;
-	max-height: 50px;
-	padding: 15px 0;
+	padding: 12px 0;
 	margin: 17px 8px;
-	border-radius: 15px;
+	border-radius: 5px;
 	font: var(--pop-bold);
 	line-height: 27px;
+
+	${props => props.extraWide && css`
+		width: 350px;
+		//this margin is for reset password
+		margin-top: 104px;
+	`}
 
 	${props => props.greyed && css`
 		background-color: var(--primary-disabled-btn-color);
 		color: var(--text-white);
 		border: var(--input-border);
 	`}
+
+	${props => props.enable && css`
+		background-color: var(--enable-btn);
+	`}
+
 `;
 
 /*---------- Progress Bar ----------*/
@@ -110,10 +120,13 @@ export const LinkTo = styled(Link)`
 export const Poppins = styled.p`
 // Poppins font, 18px, normal weight
   font: var(--pop-reg);
+  margin-bottom: 0;
 
   ${props => props.semiBold && css`
 	font-weight: 500;
   `}
+
+  
 `;
 
 /*--------------- FORMS ---------------*/
