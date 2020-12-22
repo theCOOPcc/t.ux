@@ -32,7 +32,7 @@ export const GoogleG = styled.img`
     margin: 20px;
     `;
 
-export const GoogleBox = styled(Link)`
+export const GoogleBox = styled.a`
     width: 343px;
     height: 80px;
     border-radius: 5px;
