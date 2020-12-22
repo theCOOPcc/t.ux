@@ -60,9 +60,8 @@ export const Normal = styled.p`
     font-size: 20px;
   `}
 
-  ${props => props.five00 && css`
+  ${props => props.semiBold && css`
     font-weight: 500;
-    /* text-align: left; */
     margin: 0;
   `}
 
@@ -72,4 +71,5 @@ export const Normal = styled.p`
     margin-top: 50px;
   `}
 `;
+
 

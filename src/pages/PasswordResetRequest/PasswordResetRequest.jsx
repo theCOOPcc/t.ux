@@ -19,17 +19,16 @@ class PasswordResetRequest extends Component {
             <U.FlexBox>
                 <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
                 <L.LoginBox flexStart>
-                    <L.Normal five00 forgot>Forgot your password?</L.Normal>
-                    <h5>No problem, we'll send you an email<br/> with a link to reset your password.</h5>
+                    <L.Normal semiBold forgot>Forgot your password?</L.Normal>
+                    <U.Poppins>No problem, we'll send you an email<br/> with a link to reset your password.</U.Poppins>
                     <form>
-                        <label>Your email or username</label>
+                        <U.Poppins>Email or username</U.Poppins>
+                        <U.SmallInput onChange={this.handleChange} type='text'></U.SmallInput>
                         <br></br>
-                        <input onChange={this.handleChange} type='text'></input>
                         <br></br>
-                        <br></br>
-                        <button 
+                        <U.WideBtn greyed 
                             // onSubmit={this.handleSubmit}
-                            >Reset Password</button>
+                            >Reset Password</U.WideBtn>
                     </form>
                     {/* We need a link and a route set up down the road for a password reset link that emails 
                     a user the reset link upon form submission */}

@@ -106,8 +106,17 @@ export const LinkTo = styled(Link)`
 	color: var(--link-text);
 `;
 
+/*---------- Text ----------*/
+export const Poppins = styled.p`
+// Poppins font, 18px, normal weight
+  font: var(--pop-reg);
 
-/*---------- Forms ----------*/
+  ${props => props.semiBold && css`
+	font-weight: 500;
+  `}
+`;
+
+/*--------------- FORMS ---------------*/
 
 /*---------- Checkbox ----------*/
 export const checkedBox = css`
