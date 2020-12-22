@@ -117,16 +117,24 @@ export const LinkTo = styled(Link)`
 `;
 
 /*---------- Text ----------*/
-export const Poppins = styled.p`
-// Poppins font, 18px, normal weight
+export const Normal = styled.p`
   font: var(--pop-reg);
-  margin-bottom: 0;
+  /* line-height: 20px; */
 
-  ${props => props.semiBold && css`
-	font-weight: 500;
+  ${props => props.or && css`
+    font-size: 20px;
   `}
 
-  
+  ${props => props.semiBold && css`
+    font-weight: 500;
+    margin: 0;
+  `}
+
+  ${props => props.forgot && css`
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 50px;
+  `}
 `;
 
 /*--------------- FORMS ---------------*/

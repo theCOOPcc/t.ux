@@ -47,8 +47,8 @@ class Login extends Component {
             <L.SignIn>Sign in with Google</L.SignIn>
           </L.GoogleBox>
         <form autoComplete="off" onSubmit={this.handleSubmit}>
-          <L.Normal or>or:</L.Normal>
-          <L.Normal semiBold>Username or Email</L.Normal>
+          <U.Normal or>or:</U.Normal>
+          <U.Normal semiBold>Username or Email</U.Normal>
             <U.SmallInput
               type="text"
               autoComplete="off"
@@ -58,7 +58,7 @@ class Login extends Component {
               onChange={this.handleChange}
             ></U.SmallInput>
             <br/><br/>
-          <L.Normal semiBold>Password</L.Normal>
+          <U.Normal semiBold>Password</U.Normal>
           <U.SmallInput
             type="password"
             autoComplete="off"
@@ -70,7 +70,7 @@ class Login extends Component {
           <U.FlexBox spaceBetween>
             <U.FlexBox negMargin>
               <U.Checkbox></U.Checkbox>
-              <L.Normal>Stay signed in</L.Normal>
+              <U.Normal>Stay signed in</U.Normal>
             </U.FlexBox>
             <U.LinkTo
               to="/passwordresetrequest"
@@ -81,7 +81,7 @@ class Login extends Component {
         </L.LoginBox>
       </U.FlexBox>
       <U.FlexBox signUp>
-        <L.Normal>Need an Account?</L.Normal>
+        <U.Normal>Need an Account?</U.Normal>
         <U.LinkTo
           to="/signup"
         >Sign Up</U.LinkTo>

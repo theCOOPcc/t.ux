@@ -19,10 +19,10 @@ class PasswordResetRequest extends Component {
             <U.FlexBox>
                 <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
                 <L.LoginBox flexStart>
-                    <L.Normal semiBold forgot>Forgot your password?</L.Normal>
-                    <U.Poppins>No problem, we'll send you an email<br/> with a link to reset your password.</U.Poppins>
+                    <U.Normal semiBold forgot>Forgot your password?</U.Normal>
+                    <U.Normal>No problem, we'll send you an email<br/> with a link to reset your password.</U.Normal>
                     <form>
-                        <U.Poppins>Username or email</U.Poppins>
+                        <U.Normal>Username or email</U.Normal>
                         <U.SmallInput onChange={this.handleChange} type='text'></U.SmallInput>
                         <br></br>
                         <br></br>
@@ -35,7 +35,7 @@ class PasswordResetRequest extends Component {
                     
                 </L.LoginBox>
                 <U.FlexBox signUp>
-                    <L.Normal>Need an Account?</L.Normal>
+                    <U.Normal>Need an Account?</U.Normal>
                     <U.LinkTo
                       to="/signup"
                     >Sign Up</U.LinkTo>
