@@ -14,10 +14,16 @@ router.delete("/:id", checkAuth, usersCtrl.deleteProfile)
 
 /*---------- Auth Checker ----------*/
 function checkAuth(req, res, next) {
-  console.log('user router', req.user)
-  if (req.user.userPermissions == 0) return next();
+  // console.log('user router', req.user)
   // if (req.user) return next();
+  if (req.user.userPermissions === 0) return next();
+  if (req.isAuthenticated()) return next();
   return res.status(401).json({msg: 'Not Authorized'});
 }
+
+// function isLoggedIn(req, res, next) {
+//   if (req.isAuthenticated()) return next();
+//   res.redirect("/auth/google");
+// }
 
 module.exports = router;

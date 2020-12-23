@@ -1,4 +1,15 @@
-.LoginPage {
+
+
+
+
+
+
+
+
+
+
+/* No longer in use below */
+/* .LoginPage {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -23,4 +34,4 @@ main {
   margin: 0 auto;
   margin-top: 50px;
   justify-self: center;
-}
+} */

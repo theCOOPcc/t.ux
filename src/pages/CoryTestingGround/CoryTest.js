@@ -1,24 +1,5 @@
-import tokenService from '../services/tokenService';
-import { activityData } from '../../SampleData/SampleData'
-const BASE_URL = '/api/activities/';
+// import tokenService from '../services/tokenService';
+import { groupData } from '../../SampleData/SampleData'
+import * as groupService from '../../services/groupService'
 
-// this works cory
-export function create(activity) {
-    console.log('create an activity')
-  return fetch(
-    BASE_URL,
-    {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-        'Authorization': 'Bearer' + tokenService.getToken()
-      },
-      body: JSON.stringify(activity),
-    },
-    {
-      mode: 'cors',
-    }
-  ).then((res) => res.json());
-}
-
-create(activityData)
+groupService.create(groupData)

@@ -1,5 +1,8 @@
 import styled, { css } from 'styled-components'
+import { Link } from 'react-router-dom'
 
+
+/*---------- Main Grid ----------*/
 export const Main = styled.main`
 	margin: 0;
 	height: 100vh;
@@ -8,12 +11,16 @@ export const Main = styled.main`
 	grid-template-rows: 60px 1fr;
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
-	background: linear-gradient(210.65deg, #FFEE99 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, #EA4A46 -33.26%, rgba(234, 74, 70, 0) 67.74%);
+	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
 	background-blend-mode: normal, multiply;
-	opacity: 0.3;
+	/* opacity: 0.3; */
 	padding: 20px 39px 15px;
+	position: relative;
+	
 `;
 
+
+/*---------- Top Info Bar Grid ----------*/
 export const InfoBar = styled.div`
 	grid-column: 1/span 2;
 	grid-row: 1/span 1;
@@ -21,6 +28,7 @@ export const InfoBar = styled.div`
 	background-color: red;
 `;
 
+/*---------- 6 Col SubGrid for Activities ----------*/
 export const Sub6ColGrid = styled.div`
 	grid-column: 1/ span 1;
 	grid-row: 2/ span 1;
@@ -28,6 +36,7 @@ export const Sub6ColGrid = styled.div`
 	background-color: turquoise;
 `;
 
+/*---------- 300px Sidebar Parent Grid ----------*/
 export const SideBarParent = styled.div`
 	height: 90vh;
 	display: grid;
@@ -35,22 +44,63 @@ export const SideBarParent = styled.div`
 	grid-template-rows: 1fr 100px;
 `;
 
+/*---------- The SideBar Itself ----------*/
 export const SideBar = styled.div`
 	grid-row: 1/span 1;
 	background-color: yellow;
 	height: calc(100vh - 159px);
 `;
 
-// Buttons
-export const WideBtn = styled.button`
-	width: 280px;
-	max-height: 50px;
-	padding: 15px 0;
-	margin: 17px 8px;
-	border-radius: 15px;
+/*---------- FlexBox Components Generic ----------*/
+export const FlexBox = styled.div`
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	${props => props.spaceBetween && css`
+		justify-content: space-between;
+	`}
+
+	${props => props.negMargin && css`
+		margin-top: -8px;
+	`}
+
+	${props => props.signUp && css`
+		position: absolute;
+		top: 700px;
+		/* left: 420px; */
+	`}
 `;
 
-// Progress Bar
+/*---------- Buttons ----------*/
+export const WideBtn = styled.button`
+	width: 280px;
+	padding: 12px 0;
+	margin: 17px 8px;
+	border-radius: 5px;
+	font: var(--pop-bold);
+	line-height: 27px;
+
+	${props => props.extraWide && css`
+		width: 350px;
+		//this margin is for reset password
+		margin-top: 104px;
+	`}
+
+	${props => props.greyed && css`
+		background-color: var(--primary-disabled-btn-color);
+		color: var(--text-white);
+		border: var(--input-border);
+	`}
+
+	${props => props.enable && css`
+		background-color: var(--enable-btn);
+	`}
+
+`;
+
+/*---------- Progress Bar ----------*/
 export const ProgressBarCont = styled.div`
 	grid-column: span 2;
 	color: var(--tux-black);
@@ -59,6 +109,71 @@ export const ProgressBarCont = styled.div`
 export const ProgressBar = styled.progress`
 	background-color: rebeccapurple;
 `;
+
+
+/*---------- Links ----------*/
+export const LinkTo = styled(Link)`
+	color: var(--link-text);
+`;
+
+/*---------- Text ----------*/
+export const Normal = styled.p`
+  font: var(--pop-reg);
+  /* line-height: 20px; */
+
+  ${props => props.or && css`
+    font-size: 20px;
+  `}
+
+  ${props => props.semiBold && css`
+    font-weight: 500;
+    margin: 0;
+  `}
+
+  ${props => props.forgot && css`
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 50px;
+  `}
+`;
+
+/*--------------- FORMS ---------------*/
+
+/*---------- Checkbox ----------*/
+export const checkedBox = css`
+
+`;
+
+export const uncheckedBox = css`
+
+`;
+
+export const Checkbox = styled.div`
+	border: var(--input-border);
+	width: 20px;
+	height: 20px;
+	border-radius: 5px;
+	margin-right: 5px;
+
+	${ props => props.checked ? checkedBox : uncheckedBox };
+
+`;
+
+/*---------- Inputs ----------*/
+export const SmallInput = styled.input`
+	margin: 0;
+	width: 343px;
+	height: 50px;
+	border: var(--input-border);
+	border-radius: 5px;
+	font-size: 24px;
+`;
+
+
+
+
+
+
 
 
 // Color Blocks

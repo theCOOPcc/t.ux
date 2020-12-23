@@ -22,9 +22,8 @@ const NavBar = ({ user, handleLogout }) => {
 
           <N.NavRow2>
           {/* Logo */}
-          <N.NavLink>
-
-          <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
+          <N.NavLink href="/">
+            <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
           </N.NavLink>
           <N.NavLink right href="/login">
             Log In
@@ -64,7 +63,7 @@ const NavBar = ({ user, handleLogout }) => {
 
         </N.NavRow2>
         </N.Nav>
-      : user.userPermissions === 100 (
+      : user.userPermissions === 100 ? (
         <N.Nav>
           {/* Color Bar */}
           <U.ColorBlock tuxBlue></U.ColorBlock>
@@ -76,8 +75,8 @@ const NavBar = ({ user, handleLogout }) => {
 
         <N.NavRow2>
         {/* Logo */}
-        <N.NavLink>
-        <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
+        <N.NavLink href="/">
+          <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
         </N.NavLink>
           <N.NavLink right href=" ">
             {user.name}
@@ -93,7 +92,9 @@ const NavBar = ({ user, handleLogout }) => {
           </N.NavLink>
         </N.NavRow2>
         </N.Nav>
-      )}
+      )
+      :
+      <p>You need a navbar</p>}
     </>
   );
 };
