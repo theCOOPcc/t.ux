@@ -8,7 +8,7 @@ const ProgressBar = ({completed}) => {
         <>
         <U.ProgressContainer>
             <U.ProgressFiller style={{width: `${completed}%`}}></U.ProgressFiller>
-            <U.ProgressLabel>{`${completed}%`}</U.ProgressLabel>
+            <U.ProgressLabel>{(completed === '-10') ? 'Not Started' : (completed === 0) ? 'Starting...' : `${completed}%`}</U.ProgressLabel>
         </U.ProgressContainer>
         </>
      );
