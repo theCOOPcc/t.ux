@@ -163,6 +163,16 @@ export const Normal = styled.p`
 	font-size: 36px;
 	line-height: 54px;
   `}
+
+  ${props => props.alignLeft && css`
+	align-self: start;
+	margin-left: 13px;
+  `}
+
+  ${props => props.alignRight && css`
+	align-self: end;
+	/* margin-left: 13px; */
+  `}
 `;
 
 /*--------------- FORMS ---------------*/

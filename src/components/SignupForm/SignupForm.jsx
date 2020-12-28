@@ -44,11 +44,11 @@ class SignupForm extends Component {
     const { firstName, lastName, email, password, passwordConf } = this.state;
     return (
       <>
-    {/* <U.FlexBox>
+    <U.FlexBox>
       <U.FlexBox>
         <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
         <L.LoginBox flexStart>
-            TODO: change this onSubmit to account for only getting part of the form at each step  
+            {/* TODO: change this onSubmit to account for only getting part of the form at each step   */}
           <form autoComplete="off" onSubmit={this.handleSubmit}>
           <U.Normal semiBold large margin50>Enter an Email</U.Normal>
           <U.Normal eighteen>We'll use this email to set up your account.</U.Normal>
@@ -76,8 +76,9 @@ class SignupForm extends Component {
           to="/signup"
         >Sign Up</U.LinkTo>
       </U.FlexBox>
-    </U.FlexBox> */}
-
+    </U.FlexBox>
+      {/* TODO: Delete this strict equality and replace with Formik Validation */}
+      {email === "karen@23carnies.com" && 
     <U.FlexBox>
       <U.FlexBox>
         <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
@@ -87,7 +88,7 @@ class SignupForm extends Component {
           
           <U.FlexBox flexMargin>
             <U.FlexBox column>
-              <U.Normal semiBold>First Name</U.Normal>
+              <U.Normal semiBold alignLeft>First Name</U.Normal>
               <U.SmallInput
                 type="text"
                 autoComplete="off"
@@ -98,7 +99,7 @@ class SignupForm extends Component {
               ></U.SmallInput>
             </U.FlexBox>
             <U.FlexBox column>
-              <U.Normal semiBold>Last Name</U.Normal>
+              <U.Normal semiBold alignLeft>Last Name</U.Normal>
               <U.SmallInput
                 type="text"
                 autoComplete="off"
@@ -112,7 +113,7 @@ class SignupForm extends Component {
           
           <U.FlexBox marginTop>
           <U.FlexBox column>
-              <U.Normal semiBold>Password</U.Normal>
+              <U.Normal semiBold alignLeft>Password</U.Normal>
               <U.SmallInput
                 type="text"
                 autoComplete="off"
@@ -123,9 +124,9 @@ class SignupForm extends Component {
               ></U.SmallInput>
             </U.FlexBox>
             <U.FlexBox column>
-              <U.Normal semiBold>Confirm Password</U.Normal>
+              <U.Normal semiBold alignLeft>Confirm Password</U.Normal>
               <U.SmallInput
-                type="text"
+                type="password"
                 autoComplete="off"
                 id="passwordConf"
                 value={passwordConf}
@@ -138,12 +139,14 @@ class SignupForm extends Component {
         </L.LoginBox>
       </U.FlexBox>
       <U.FlexBox login>
-        <U.Normal>Have an Account?&nbsp;</U.Normal>
+        <U.Normal alignRight>Have an Account?&nbsp;</U.Normal>
         <U.LinkTo
           to="/login"
         >Log In</U.LinkTo>
       </U.FlexBox>
     </U.FlexBox>
+      
+      }
       </>
 
 
