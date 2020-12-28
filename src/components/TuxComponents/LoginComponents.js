@@ -21,6 +21,11 @@ export const LoginBox = styled.div`
     position: absolute;
     top: 200px;
 
+    ${props => props.wide && css`
+      width: 785px;
+      height: 625px;
+    `}
+
     ${props => props.flexStart && css`
       justify-content: flex-start;
     `}
