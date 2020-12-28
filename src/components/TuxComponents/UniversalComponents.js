@@ -76,18 +76,28 @@ export const FlexBox = styled.div`
 /*---------- Buttons ----------*/
 export const WideBtn = styled.button`
 	width: 280px;
-	max-height: 50px;
-	padding: 15px 0;
+	padding: 12px 0;
 	margin: 17px 8px;
-	border-radius: 15px;
+	border-radius: 5px;
 	font: var(--pop-bold);
 	line-height: 27px;
+
+	${props => props.extraWide && css`
+		width: 350px;
+		//this margin is for reset password
+		margin-top: 104px;
+	`}
 
 	${props => props.greyed && css`
 		background-color: var(--primary-disabled-btn-color);
 		color: var(--text-white);
 		border: var(--input-border);
 	`}
+
+	${props => props.enable && css`
+		background-color: var(--enable-btn);
+	`}
+
 `;
 
 /*---------- Progress Bar ----------*/
@@ -106,8 +116,28 @@ export const LinkTo = styled(Link)`
 	color: var(--link-text);
 `;
 
+/*---------- Text ----------*/
+export const Normal = styled.p`
+  font: var(--pop-reg);
+  /* line-height: 20px; */
 
-/*---------- Forms ----------*/
+  ${props => props.or && css`
+    font-size: 20px;
+  `}
+
+  ${props => props.semiBold && css`
+    font-weight: 500;
+    margin: 0;
+  `}
+
+  ${props => props.forgot && css`
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 50px;
+  `}
+`;
+
+/*--------------- FORMS ---------------*/
 
 /*---------- Checkbox ----------*/
 export const checkedBox = css`

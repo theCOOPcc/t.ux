@@ -4,7 +4,7 @@ export const NavLink = styled.a`
   color: var(--tux-grey);
   font: var(--pop-semi-bold);
   text-decoration: none;
-  padding: 10px;
+  padding: 15px;
 
   ${props => props.right && css`
     margin-left: auto;
