@@ -15,6 +15,7 @@ import Test1 from './Test2';
 import Test2 from './Test2';
 import Test3 from './Test3';
 import * as U from '../../components/TuxComponents/UniversalComponents';
+import ProgressBar from '../../components/ProgressBar/ProgressBar'
 
 // TODO:This will be a major route to /activity/heuristics. Which will live in the App.js router.
 //[x]This page will display the introduction information.
@@ -38,70 +39,82 @@ class HeuristicsActivity extends Component {
         // route: 'introduction',
         component: <HeuristicsIntro />,
         questions: [],
+        completed: 0,
       },
       {
         name: 'Visibility of System Status',
         // route: 'system-status',
         component: <VisibilityOfSystemStatus />,
         questions: [<Test2 />, <Test3 />],
+        completed: 10,
       },
       {
         name: 'System / World Match',
         // route: 'system-world-match',
         component: <SystemWorldMatch />,
         questions: [<Test1 />],
+        completed: 20,
       },
       {
         name: 'User Control',
         // route: 'user-control',
         component: <UserControlFreedom />,
         questions: [],
+        completed: 30,
       },
       {
         name: 'Consistency + Standards',
         // route: 'consistency-standards',
         component: <ConsistencyStandards />,
         questions: [<Test2 />, <Test3 />],
+        completed: 40,
       },
       {
         name: 'Error Prevention',
         // route: 'error-prevention',
         component: <ErrorPrevention />,
         questions: [],
+        completed: 50,
       },
       {
         name: 'Recognition over Recall',
         // route: 'recognition-over-recall',
         component: <RecognitionOverRecall />,
         questions: [],
+        completed: 60,
       },
       {
         name: 'Flexibility + Efficiency',
         // route: 'flexibility-efficiency',
         component: <FlexibilityEfficiency />,
         questions: [],
+        completed: 70,
       },
       {
         name: 'Aesthetic + Minimilism',
         // route: 'aesthetic-minimilism',
         component: <AestheticMinimalism />,
         questions: [],
+        completed: 80,
       },
       {
         name: 'Error Recovery',
         // route: 'error-recovery',
         component: <ErrorRecovery />,
         questions: [],
+        completed: 90,
       },
       {
         name: 'Help + Documentation',
         // route: 'help-documentation',
         component: <HelpDocumentation />,
         questions: [],
+        completed: 100,
       },
     ],
     currentSectionIndex: 0,
     currentQuestionIndex: null,
+    completed: 0,
   };
 
   handleCurrentSection = () => {
@@ -115,7 +128,9 @@ class HeuristicsActivity extends Component {
 
   handleJumpToSection = (newIndex) => {
     const currentSectionIndex = newIndex;
-    this.setState({ currentSectionIndex });
+    const index = (newIndex === 0) ? 0 : newIndex -1;
+    const completed = (index === 0) ? 0 : `${index}0`;
+    this.setState({ currentSectionIndex, completed });
   };
 
   handleCurrentQuestion = (currentSection) => {
@@ -131,12 +146,17 @@ class HeuristicsActivity extends Component {
   render() {
     const { currentSectionIndex, sections, currentQuestionIndex } = this.state;
     const currentSection = sections[currentSectionIndex];
+    const {completed} = this.state;
     return (
       <>
         <U.InfoBar>
           <U.Heading1 bolder>Heuristics</U.Heading1>
-          <U.Heading3>&nbsp;-&nbsp;{currentSection.name}</U.Heading3>
-          <span>Progress Bar</span>
+          <U.Heading3 greyed>&nbsp;-&nbsp;{currentSection.name}</U.Heading3>
+          {/* <span>Progress Bar</span> */}
+          <U.Heading3 floatRight>Progress&nbsp;&nbsp;</U.Heading3>
+          <ProgressBar 
+            completed={completed}
+          />
         </U.InfoBar>
         <U.Sub6ColGrid>
           <U.ColorBlock SubGridBlue></U.ColorBlock>
