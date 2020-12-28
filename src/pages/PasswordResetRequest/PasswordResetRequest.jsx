@@ -19,7 +19,7 @@ class PasswordResetRequest extends Component {
             <U.FlexBox>
                 <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
                 <L.LoginBox flexStart>
-                    <U.Normal semiBold forgot>Forgot your password?</U.Normal>
+                    <U.Normal semiBold twenty4 margin50>Forgot your password?</U.Normal>
                     <U.Normal>No problem, we'll send you an email<br/> with a link to reset your password.</U.Normal>
                     <form>
                         <U.Normal>Username or email</U.Normal>

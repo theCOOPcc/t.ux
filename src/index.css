@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,800;1,400&family=Roboto:wght@1,700&display=swap');
+
 /* Variables */
 html {
   /* Fonts */
-  --pop-reg: 400 17px 'Poppins', sans-serif;
-  --pop-ital: italic 400 17px 'Poppins', sans-serif;
+  --pop-reg: 400 16px 'Poppins', sans-serif;
+  --pop-ital: italic 400 18px 'Poppins', sans-serif;
   --pop-semi-bold: 600 17px 'Poppins', sans-serif;
   --pop-bold: 800 18px 'Poppins', sans-serif;
+  --roboto-bold: 700 20px 'Roboto', sans-serif;
   
 
   /* Colors */
@@ -17,6 +19,7 @@ html {
   --tux-black: #17171e;
   --text-white: #ffffff;
   --link-text: #538284;
+  --enable-btn: #76bfc2;
 
   /* Buttons */
   --primary-btn-padding: 14px 46px;
@@ -51,10 +54,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
 }
 
 code {
