@@ -16,11 +16,17 @@ const SideBarNav = ({
         <U.ColorBlock SideBarYellow></U.ColorBlock>
         {/* [x] Map through side bar nav links. */}
         {/* [x] A nav item will also have to update the current section of the parent component */}
-        {/* [ ] TODO: The nav items need to be in a column with a spacing between and a styled line break.  */}
-        {/* [ ] TODO: The buttons below need to change to another componet type, they need to be able to have an onclick property and look like an anchor tag but we dont need the href functionality of an anchor tag. They also will need to be able to change color based off of whether or not their index matches the currentSectionIndex property which is destructured above.*/}
+        {/* [x] The nav items need to be in a column with a spacing between and a styled line break.  */}
+        {/* [x] The buttons below need to change to another componet type, they need to be able to have an onclick property and look like an anchor tag but we dont need the href functionality of an anchor tag. They also will need to be able to change color based off of whether or not their index matches the currentSectionIndex property which is destructured above.*/}
+        {/* [x] Need conditional so Introduction (index 0) is not numbered. Numbering begins with first item after intro*/}
         {sections.map((section, index) => (
+          (index === 0) ?
+            <U.SideBarText key={index} onClick={() => handleJumpToSection(index)}>
+            {section.name}
+          </U.SideBarText>
+          :
           <U.SideBarText key={index} onClick={() => handleJumpToSection(index)}>
-            {index + 1}. {section.name}
+            {index}. {section.name}
           </U.SideBarText>
         ))}
       </U.SideBar>

@@ -157,13 +157,54 @@ export const WideBtn = styled.button`
 
 
 /*---------- Progress Bar ----------*/
-export const ProgressBarCont = styled.div`
-	grid-column: span 2;
-	color: var(--tux-black);
-`;
+// export const ProgressBarCont = styled.div`
+// 	grid-column: span 2;
+// 	color: var(--tux-black);
+// `;
 
-export const ProgressBar = styled.progress`
-	background-color: rebeccapurple;
+// export const ProgressBar = styled.progress`
+// 	background-color: rebeccapurple;
+// `;
+
+// New Progress Bar
+export const ProgressContainer = styled.div`
+	height: 22px;
+	width: 268px;
+	background-color: #666666;
+	background-image: linear-gradient(45deg, 
+	transparent 10%, 
+	rgba(255, 255, 255, .2) 10%,
+	transparent 20%, 
+	rgba(255, 255, 255, .2) 20%,
+	transparent 30%, 
+	rgba(255, 255, 255, .2) 30%, 
+	transparent 40%, 
+	rgba(255, 255, 255, .2) 40%, 
+	transparent 50%, 
+	rgba(255, 255, 255, .2) 50%, 
+	transparent 60%, 
+	rgba(255, 255, 255, .2) 60%, 
+	transparent 70%, 
+	rgba(255, 255, 255, .2) 70%, 
+	transparent 80%, 
+	rgba(255, 255, 255, .2) 80%, 
+	transparent 90%, 
+	rgba(255, 255, 255, .2) 90%, 
+	transparent);
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+`;
+export const ProgressFiller = styled.div`
+	z-index: 1;
+	height: 100%;
+	border-radius: 5px 0 0 5px;
+	background-color: var(--tux-blue);
+`;
+export const ProgressLabel = styled.p`
+	padding: 2px;
+	font: 400 12px 'Poppins', sans-serif;
+	color: #a9aaa5;
 `;
 
 
@@ -234,7 +275,13 @@ export const Heading1 = styled.h1`
 export const Heading3 = styled.h3`
 	font: 500 24px 'Poppins', sans-serif;
 	line-height: 36px;
-	color: var(--future);
+
+	${props => props.greyed && css`
+		color: var(--future);
+	`}
+	${props => props.floatRight && css`
+		margin-left: auto;
+	`}
 `;
 
 /*--------------- FORMS ---------------*/
