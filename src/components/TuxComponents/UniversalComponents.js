@@ -33,7 +33,9 @@ export const Sub6ColGrid = styled.div`
 	grid-column: 1/ span 1;
 	grid-row: 2/ span 1;
 	display: grid;
-	background-color: turquoise;
+	background-color: var(--true-white);
+	border: var(--solid-border);
+	/* padding: 0 5%; */
 `;
 
 /*---------- 300px Sidebar Parent Grid ----------*/
@@ -47,8 +49,39 @@ export const SideBarParent = styled.div`
 /*---------- The SideBar Itself ----------*/
 export const SideBar = styled.div`
 	grid-row: 1/span 1;
-	background-color: yellow;
+	background-color: var(--true-white);
 	height: calc(100vh - 159px);
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+	border: var(--solid-border);
+`;
+
+export const SideBarText = styled.button`
+	border: none;
+	border-bottom: var(--solid-border);
+	width: 238px;
+	height: 50px;
+	background-color: var(--text-white);
+	font-size: 16px;
+	line-height: 24px;
+	font-family: Poppins;
+
+	${props => props.past && css`
+		color: var(--true-black);
+		font-weight: 600;
+	`}
+
+	${props => props.present && css`
+		color: var(--present);
+		font-weight: 700;
+	`}
+
+	${props => props.future && css`
+		color: var(--future);
+		font-weight: 500;
+	`}
 `;
 
 /*---------- FlexBox Components Generic ----------*/
@@ -88,6 +121,8 @@ export const FlexBox = styled.div`
 `;
 
 /*---------- Buttons ----------*/
+// [ ] TODO: find out about button active/hover states
+
 export const WideBtn = styled.button`
 	width: 280px;
 	padding: 12px 0;
@@ -95,6 +130,7 @@ export const WideBtn = styled.button`
 	border-radius: 5px;
 	font: var(--pop-bold);
 	line-height: 27px;
+	color: var(--true-white);
 
 	${props => props.extraWide && css`
 		width: 350px;
@@ -110,9 +146,11 @@ export const WideBtn = styled.button`
 	`}
 
 	${props => props.enable && css`
+		background-color: var(--enable-btn);
 	`}
-
 `;
+
+
 
 /*---------- Progress Bar ----------*/
 export const ProgressBarCont = styled.div`
@@ -220,42 +258,55 @@ export const SmallInput = styled.input`
 
 // Color Blocks
 export const ColorBlock = styled.div`
-  grid-column: span 1;
+  /* grid-column: span 1; */
   height: 5px;
   
   ${props => props.tuxBlue && css`
-    grid-row: 1/span 1;
-    grid-column: 1/span 1;
-    background-color: var(--tux-blue);
+    	grid-row: 1/span 1;
+    	grid-column: 1/span 1;
+    	background-color: var(--tux-blue);
   `}
   
-  ${props => props.tuxYellow && css`
-  	grid-row: 1/span 1;
-    grid-column: 2/span 1;
-    background-color: var(--tux-yellow);
+  	${props => props.tuxYellow && css`
+  		grid-row: 1/span 1;
+    	grid-column: 2/span 1;
+    	background-color: var(--tux-yellow);
 	`}
 	
 	${props => props.tuxWhite && css`
-    grid-row: 1/span 1;
-    grid-column: 3/span 1;
-    background-color: var(--tux-white);
+    	grid-row: 1/span 1;
+    	grid-column: 3/span 1;
+    	background-color: var(--tux-white);
 	`}
 	
 	${props => props.tuxGrey && css`
-    grid-row: 1/span 1;
-    grid-column: 4/span 1;
-    background-color: var(--tux-grey);
+    	grid-row: 1/span 1;
+    	grid-column: 4/span 1;
+    	background-color: var(--tux-grey);
 	`}
 	
 	${props => props.tuxBlack && css`
-    grid-row: 1/span 1;
-    grid-column: 5/span 1;
-    background-color: var(--tux-black);
+    	grid-row: 1/span 1;
+    	grid-column: 5/span 1;
+    	background-color: var(--tux-black);
 	`}
 	
 	${props => props.tuxRed && css`
-    grid-row: 1/span 1;
-    grid-column: 6/span 1;
-  	background-color: var(--tux-red);
-  `}
-`;
+    	grid-row: 1/span 1;
+    	grid-column: 6/span 1;
+  		background-color: var(--tux-red);
+	`}
+
+	${props => props.SideBarYellow && css`
+		background-color: var(--tux-yellow);
+		height: 10px;
+		width: 100%;
+	`}
+
+	${props => props.SubGridBlue && css`
+		background-color: var(--tux-blue);
+		height: 10px;
+		width: 100%;
+	`}
+`;	
+
