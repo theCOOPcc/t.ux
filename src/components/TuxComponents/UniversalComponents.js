@@ -25,7 +25,11 @@ export const InfoBar = styled.div`
 	grid-column: 1/span 2;
 	grid-row: 1/span 1;
 	justify-self: stretch;
-	background-color: red;
+	background-color: var(--true-white);
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	padding-left: 50px;
 `;
 
 /*---------- 6 Col SubGrid for Activities ----------*/
@@ -193,24 +197,44 @@ export const Normal = styled.p`
     line-height: 36px;
   `}
 	
-  ${props => props.margin50 && css`
-    margin-top: 50px;
+  
+  ${props => props.greyed && css`
+    color: var(--future);
   `}
 
-  ${props => props.large && css`
-	font-size: 36px;
-	line-height: 54px;
+  ${props => props.boldColor && css`
+    color: var(--extraLg-text);
   `}
 
   ${props => props.alignLeft && css`
-	align-self: start;
-	margin-left: 13px;
+  align-self: start;
+  margin-left: 13px;
   `}
-
+  
   ${props => props.alignRight && css`
-	align-self: end;
-	/* margin-left: 13px; */
+  align-self: end;
+  /* margin-left: 13px; */
   `}
+`;
+
+export const Heading1 = styled.h1`
+	font-size: 36px;
+	line-height: 54px;
+	font-weight: 500;
+
+	${props => props.margin50 && css`
+    	margin-top: 50px;
+	  `}
+
+	${props => props.bolder && css`
+    	font-weight: 600;
+	`}
+`;
+
+export const Heading3 = styled.h3`
+	font: 500 24px 'Poppins', sans-serif;
+	line-height: 36px;
+	color: var(--future);
 `;
 
 /*--------------- FORMS ---------------*/

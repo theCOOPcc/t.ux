@@ -134,7 +134,8 @@ class HeuristicsActivity extends Component {
     return (
       <>
         <U.InfoBar>
-          <span>Heuristics- {currentSection.name}</span>
+          <U.Heading1 bolder>Heuristics</U.Heading1>
+          <U.Heading3>&nbsp;-&nbsp;{currentSection.name}</U.Heading3>
           <span>Progress Bar</span>
         </U.InfoBar>
         <U.Sub6ColGrid>
