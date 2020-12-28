@@ -50,7 +50,7 @@ class SignupForm extends Component {
         <L.LoginBox flexStart>
             {/* TODO: change this onSubmit to account for only getting part of the form at each step   */}
           <form autoComplete="off" onSubmit={this.handleSubmit}>
-          <U.Normal semiBold large margin50>Enter an Email</U.Normal>
+          <U.Heading1 margin50>Enter an Email</U.Heading1>
           <U.Normal eighteen>We'll use this email to set up your account.</U.Normal>
           <U.Normal semiBold>Email Address</U.Normal>
           <U.SmallInput
