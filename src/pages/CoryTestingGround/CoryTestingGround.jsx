@@ -143,6 +143,8 @@ class TestingGround extends Component {
         <button onClick={this.handlePromotion}>Promote Me</button>
         <button onClick={this.handleDemotion}>Demote Me</button>
         <button onClick={this.handleAddGroup}>add group</button>
+        <a href='http://localhostlogout'>Log Out</a>
+        
       </Container>
     )}
 }
