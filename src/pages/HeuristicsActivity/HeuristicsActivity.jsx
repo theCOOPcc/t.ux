@@ -138,6 +138,7 @@ class HeuristicsActivity extends Component {
           <span>Progress Bar</span>
         </U.InfoBar>
         <U.Sub6ColGrid>
+          <U.ColorBlock SubGridBlue></U.ColorBlock>
           {/* // Are there any questions in the currentSection.questions, and is currentQuestionIndex set to anything? */}
           {currentSection.questions.length > 0 && currentQuestionIndex >= 0
             ? // Render the current Question
