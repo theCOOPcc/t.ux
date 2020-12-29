@@ -8,6 +8,7 @@ module.exports = {
 };
 
 function index(req, res) {
+  console.log('get all users')
   User.find({}).then((users) => res.json(users));
 }
 
