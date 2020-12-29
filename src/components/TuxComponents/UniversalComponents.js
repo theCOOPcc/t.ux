@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 
 /*---------- Main Grid ----------*/
 export const Main = styled.main`
-	margin: 0;
-	height: 100vh;
+	/* margin: 0; */
+	/* height: 100vh; */
 	display: grid;
 	grid-template-columns: 6fr 300px;
 	grid-template-rows: 60px 1fr;
@@ -13,11 +13,11 @@ export const Main = styled.main`
 	grid-row-gap: 20px;
 	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
 	background-blend-mode: normal, multiply;
-	/* opacity: 0.3; */
 	padding: 20px 39px 15px;
 	position: relative;
 	
 `;
+
 
 
 /*---------- Top Info Bar Grid ----------*/
@@ -39,8 +39,16 @@ export const Sub6ColGrid = styled.div`
 	display: grid;
 	background-color: var(--true-white);
 	border: var(--solid-border);
-	/* padding: 0 5%; */
+	/* max-width: 1050px; */
 `;
+
+/* ----------- SubGrid Section ----------- */
+export const Section = styled.section`
+	/* padding: 0 60px; */
+	margin-left: 50px;
+	text-align: left;
+`;
+
 
 /*---------- 300px Sidebar Parent Grid ----------*/
 export const SideBarParent = styled.div`
@@ -157,16 +165,6 @@ export const WideBtn = styled.button`
 
 
 /*---------- Progress Bar ----------*/
-// export const ProgressBarCont = styled.div`
-// 	grid-column: span 2;
-// 	color: var(--tux-black);
-// `;
-
-// export const ProgressBar = styled.progress`
-// 	background-color: rebeccapurple;
-// `;
-
-// New Progress Bar
 export const ProgressContainer = styled.div`
 	height: 22px;
 	width: 268px;
@@ -216,7 +214,7 @@ export const LinkTo = styled(Link)`
 /*---------- Text ----------*/
 export const Normal = styled.p`
   font: var(--pop-reg);
-  /* line-height: 20px; */
+  line-height: 20px;
 
   ${props => props.eighteen && css`
 	font-size: 18px;
@@ -254,7 +252,7 @@ export const Normal = styled.p`
   
   ${props => props.alignRight && css`
   align-self: end;
-  /* margin-left: 13px; */
+
   `}
 `;
 
@@ -265,10 +263,20 @@ export const Heading1 = styled.h1`
 
 	${props => props.margin50 && css`
     	margin-top: 50px;
-	  `}
+	`}
 
 	${props => props.bolder && css`
     	font-weight: 600;
+	`}
+
+	${props => props.intro && css`
+		font-size: 80px;
+		font-weight: 700;
+		/* line-height: 24; */
+		color: #366062;
+		text-align: left;
+		margin: 0;
+		padding: 0;
 	`}
 `;
 
