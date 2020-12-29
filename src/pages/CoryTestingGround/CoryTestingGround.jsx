@@ -71,16 +71,15 @@ class TestingGround extends Component {
   
   handleAddGroup = async () => {
   const groupData = {
-    name: "Test Group 2",
+    name: "Test Group 3",
     dateStarted: 2020-12-21,
     endingDate: 2020-12-22,
     users: [],
-    createdBy: "Cory Test",
+    createdBy: "",
     _id: "5fea2ca6a811e87aa485d53f"
   }
-  const updateGroup = await groupService.update(groupData)
-  // const newGroup = await groupService.create(groupData)
-  console.log('update group', updateGroup)
+  const createGroup = await groupService.create(groupData)
+  console.log('create group', createGroup)
 }
   
   // async componentDidMount() {

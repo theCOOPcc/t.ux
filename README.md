@@ -1,6 +1,6 @@
 # Tux: Heuristics
 
-A full-stack MERN application with built in user authentication utilizing JWT.
+A full-stack MERN application with built in user authentication utilizing JWT allowing users to sign up, create and assign activities, and evaluate other users' results.
 
 ## Built By: ##
 
@@ -11,9 +11,12 @@ A full-stack MERN application with built in user authentication utilizing JWT.
 ## Techonologies: ##
 
 - JavaScript, HTML, CSS
-- React - Frontend View
-- Node, Express, Mongo - Backend Models and Controllers
+- React.js
+- Node.js, Express, MongoDB
 - Formik - Forms
 - Styled Components - Styling
 - JEST, React Testing Library - Testing
-- AWS
+- AWS Amplify - CI/CD and Deployment
+
+## Credits: ##
+- David S.'s MERN JWT Template
