@@ -20,7 +20,7 @@ async function signup(req, res) {
 }
 
 async function login(req, res) {
-  console.log('login in as user service, request data', req.body)
+  // console.log('login in as user service, request data', req.body)
   try {
     const user = await User.findOne({ email: req.body.email });
     console.log('request user', user)

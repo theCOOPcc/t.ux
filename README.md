@@ -4,15 +4,15 @@ A full-stack MERN application with built in user authentication utilizing JWT al
 
 ## Built By: ##
 
-- Dan B
+- Dan B.
 - Karen L.P.
-- Cory S
+- Cory S.
 
-## Techonologies: ##
+## Technologies: ##
 
-- JavaScript, HTML, CSS
+- Javascript, HTML, CSS
 - React.js
-- Node.js, Express, MongoDB
+- Node.js, Express.js, MongoDB
 - Formik - Forms
 - Styled Components - Styling
 - JEST, React Testing Library - Testing

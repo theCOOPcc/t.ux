@@ -14,9 +14,9 @@ router.delete("/:id", checkAuth, usersCtrl.deleteProfile)
 
 /*---------- Auth Checker ----------*/
 function checkAuth(req, res, next) {
-  console.log('user router', req)
-  if (req.isAuthenticated()) return next();
-  if (req) return next();
+  // console.log('user router', req)
+  // if (req.isAuthenticated()) return next();
+  if (req.user.userPermissions == 100) return next();
   return res.status(401).json({msg: 'Not Authorized'});
 }
 
