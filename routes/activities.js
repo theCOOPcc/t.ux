@@ -5,7 +5,7 @@ const activitiesCtrl = require('../controllers/activities');
 /*---------- Public Routes ----------*/
 
 /*---------- Protected Routes ----------*/
-router.use(require('../config/auth'));
+// router.use(require('../config/auth'));
 router.get('/', activitiesCtrl.index);
 
 router.post('/', checkAuth, activitiesCtrl.create);

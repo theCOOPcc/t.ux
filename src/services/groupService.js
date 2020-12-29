@@ -26,7 +26,7 @@ function deleteOne(id) {
 }
 
 function getOne(group) {
-    return fetch(`${BASE_URL}${group._id}`, {mode: "cors"})
+    return fetch(`${BASE_URL}${group}`, {mode: "cors"})
     .then(res => res.json())
 }
 
