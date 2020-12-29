@@ -4,6 +4,7 @@ import activityService from '../../services/activityService';
 import styled from 'styled-components'
 import authService from '../../services/authService'
 import userService from '../../services/userService'
+import tokenService from '../../services/tokenService'
 import { user, activityData } from '../../SampleData/SampleData'
 import groupService from '../../services/groupService';
 
@@ -51,6 +52,8 @@ class TestingGround extends Component {
   }
 
   handleGetAllUsers = async () => {
+    const myToken = await tokenService.getToken()
+    console.log('my token', myToken)
     const allUsers = await userService.getAllUsers();
     console.log(allUsers)
   }
@@ -62,21 +65,14 @@ class TestingGround extends Component {
     await userService.updateUser(activityUser)
     console.log('activity assigned', activityUser)
   }
-
-  // handleAddActivity = async () => {
-  //   console.log(activityData)
-  //   const newActivity = await activityService.create(activityData)
-  //   console.log(newActivity)
-  // }
   
   handleAddGroup = async () => {
   const groupData = {
-    name: "Test Group 3",
+    name: "Test Group 4",
     dateStarted: 2020-12-21,
     endingDate: 2020-12-22,
     users: [],
-    createdBy: "",
-    _id: "5fea2ca6a811e87aa485d53f"
+    createdBy: ""
   }
   const createGroup = await groupService.create(groupData)
   console.log('create group', createGroup)

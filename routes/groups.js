@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const groupsCtrl = require('../controllers/activities');
+const groupsCtrl = require('../controllers/groups');
 
 /*---------- Public Routes ----------*/
 
 /*---------- Protected Routes ----------*/
 router.use(require("../config/auth"));
-router.get('/', groupsCtrl.index)
+router.get('/', checkAuth, groupsCtrl.index);
 router.post('/', checkAuth, groupsCtrl.create);
 router.get('/:id',checkAuth, groupsCtrl.show);
 router.put('/:id', checkAuth, groupsCtrl.update);

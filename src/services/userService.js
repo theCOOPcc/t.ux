@@ -8,7 +8,7 @@ function getAllUsers() {
   return fetch(
     BASE_URL,
     {
-      headers: { Authorization: "Bearer " + tokenService.getToken() },
+      headers: { 'Authorization': "Bearer " + tokenService.getToken() },
     },
     { mode: "cors" }
   ).then((res) => res.json());

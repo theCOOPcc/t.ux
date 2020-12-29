@@ -1,14 +1,16 @@
-import tokenService from '../services/tokenService';
-const BASE_URL = '/api/groups/';
+import tokenService from "../services/tokenService";
+const BASE_URL = "/api/groups/";
 
 function create(group) {
+    const myToken = tokenService.getToken()
+    console.log(myToken)
     return fetch(BASE_URL, {
         method: 'POST',
         headers: { 
-            // 'Content-type': 'application/json', 
+            'content-type': 'application/json', 
             'Authorization': 'Bearer' + tokenService.getToken() },
-        body: JSON.stringify(group) }, {
-            mode: 'cors' })
+        body: JSON.stringify(group) 
+        }, { mode: 'cors' })
         .then(res => res.json());
 }
 

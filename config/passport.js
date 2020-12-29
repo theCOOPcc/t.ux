@@ -16,7 +16,7 @@ passport.use(
                   return done(null, user);
                 } else {
                   // we have a new user via OAuth!
-                  console.log(profile)
+                  // console.log(profile)
                   let newUser = new User({
                     firstName: profile.name.givenName,
                     lastName: profile.name.familyName,
