@@ -138,7 +138,7 @@ class HeuristicsActivity extends Component {
     const currentSection = sections[currentSectionIndex];
     const {completed} = this.state;
     return (
-      <>
+      <U.Main>
         <U.InfoBar>
           <U.Heading1 bolder>Heuristics</U.Heading1>
           <U.Heading3 greyed>&nbsp;-&nbsp;{currentSection.name}</U.Heading3>
@@ -164,7 +164,7 @@ class HeuristicsActivity extends Component {
           handleCurrentQuestion={this.handleCurrentQuestion}
           handleJumpToSection={this.handleJumpToSection}
         />
-      </>
+      </U.Main>
     );
   }
 }
