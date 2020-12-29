@@ -12,7 +12,7 @@ function index(req, res) {
 }
 
 function showProfile(req, res) {
-  User.find(req.user._id)
+  User.find(req.user.id)
   .then((user) => res.json(user))
 }
 

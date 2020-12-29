@@ -55,6 +55,14 @@ class TestingGround extends Component {
     console.log(allUsers)
   }
 
+  handleAssignActivity = async () => {
+    const activity = await activityService.getOne('5fce85093399a6d182c2bf7e')
+    const activityUser = await userService.getUser('5fd790083bf7c9788417821c')
+    activityUser.assignments.push(activity)
+    await userService.updateUser(activityUser)
+    console.log('activity assigned', activityUser)
+  }
+
   // handleAddActivity = async () => {
   //   console.log(activityData)
   //   const newActivity = await activityService.create(activityData)
@@ -63,14 +71,16 @@ class TestingGround extends Component {
   
   handleAddGroup = async () => {
   const groupData = {
-    name: "Test Group",
+    name: "Test Group 2",
     dateStarted: 2020-12-21,
     endingDate: 2020-12-22,
     users: [],
-    createdBy: "Cory Test"
+    createdBy: "Cory Test",
+    _id: "5fea2ca6a811e87aa485d53f"
   }
-  const newGroup = await groupService.create(groupData)
-  console.log(newGroup)
+  const updateGroup = await groupService.update(groupData)
+  // const newGroup = await groupService.create(groupData)
+  console.log('update group', updateGroup)
 }
   
   // async componentDidMount() {
@@ -143,7 +153,8 @@ class TestingGround extends Component {
         <button onClick={this.handlePromotion}>Promote Me</button>
         <button onClick={this.handleDemotion}>Demote Me</button>
         <button onClick={this.handleAddGroup}>add group</button>
-        <a href='http://localhostlogout'>Log Out</a>
+        <button onClick={this.handleAssignActivity}>assign JT</button>
+        <a href='http://localhost:3000/logout'>Log Out</a>
         
       </Container>
     )}
