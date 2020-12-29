@@ -143,6 +143,7 @@ class HeuristicsActivity extends Component {
           <U.Heading1 bolder>Heuristics</U.Heading1>
           <U.Heading3 greyed>&nbsp;-&nbsp;{currentSection.name}</U.Heading3>
           <U.Heading3 floatRight>Progress&nbsp;&nbsp;</U.Heading3>
+          {/* TODO: Fix bug that once progress bar has gone up in value, when returning to prev section, bar shows different number than color */}
           <ProgressBar 
             completed={completed}
           />
