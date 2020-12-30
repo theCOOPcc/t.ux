@@ -4,6 +4,7 @@ import activityService from '../../services/activityService';
 import styled from 'styled-components'
 import authService from '../../services/authService'
 import userService from '../../services/userService'
+import tokenService from '../../services/tokenService'
 import { user, activityData } from '../../SampleData/SampleData'
 import groupService from '../../services/groupService';
 
@@ -51,26 +52,30 @@ class TestingGround extends Component {
   }
 
   handleGetAllUsers = async () => {
+    const myToken = await tokenService.getToken()
+    console.log('my token', myToken)
     const allUsers = await userService.getAllUsers();
     console.log(allUsers)
   }
 
-  // handleAddActivity = async () => {
-  //   console.log(activityData)
-  //   const newActivity = await activityService.create(activityData)
-  //   console.log(newActivity)
-  // }
+  handleAssignActivity = async () => {
+    const activity = await activityService.getOne('5fce85093399a6d182c2bf7e')
+    const activityUser = await userService.getUser('5fd790083bf7c9788417821c')
+    activityUser.assignments.push(activity)
+    await userService.updateUser(activityUser)
+    console.log('activity assigned', activityUser)
+  }
   
   handleAddGroup = async () => {
   const groupData = {
-    name: "Test Group",
+    name: "Test Group 4",
     dateStarted: 2020-12-21,
     endingDate: 2020-12-22,
     users: [],
-    createdBy: "Cory Test"
+    createdBy: ""
   }
-  const newGroup = await groupService.create(groupData)
-  console.log(newGroup)
+  const createGroup = await groupService.create(groupData)
+  console.log('create group', createGroup)
 }
   
   // async componentDidMount() {
@@ -143,6 +148,9 @@ class TestingGround extends Component {
         <button onClick={this.handlePromotion}>Promote Me</button>
         <button onClick={this.handleDemotion}>Demote Me</button>
         <button onClick={this.handleAddGroup}>add group</button>
+        <button onClick={this.handleAssignActivity}>assign JT</button>
+        <a href='http://localhost:3000/logout'>Log Out</a>
+        
       </Container>
     )}
 }

@@ -15,6 +15,7 @@ import Test1 from './Test2';
 import Test2 from './Test2';
 import Test3 from './Test3';
 import * as U from '../../components/TuxComponents/UniversalComponents';
+import ProgressBar from '../../components/ProgressBar/ProgressBar'
 
 // TODO:This will be a major route to /activity/heuristics. Which will live in the App.js router.
 //[x]This page will display the introduction information.
@@ -102,6 +103,7 @@ class HeuristicsActivity extends Component {
     ],
     currentSectionIndex: 0,
     currentQuestionIndex: null,
+    completed: '-10',
   };
 
   handleCurrentSection = () => {
@@ -114,8 +116,11 @@ class HeuristicsActivity extends Component {
   };
 
   handleJumpToSection = (newIndex) => {
+    // Adjusted for progress bar
     const currentSectionIndex = newIndex;
-    this.setState({ currentSectionIndex });
+    const index =  newIndex -1;
+    const completed = (index === 0) ? 0 : `${index}0`;
+    this.setState({ currentSectionIndex, completed });
   };
 
   handleCurrentQuestion = (currentSection) => {
@@ -131,13 +136,20 @@ class HeuristicsActivity extends Component {
   render() {
     const { currentSectionIndex, sections, currentQuestionIndex } = this.state;
     const currentSection = sections[currentSectionIndex];
+    const {completed} = this.state;
     return (
-      <>
+      <U.Main>
         <U.InfoBar>
-          <span>Heuristics- {currentSection.name}</span>
-          <span>Progress Bar</span>
+          <U.Heading1 bolder>Heuristics</U.Heading1>
+          <U.Heading3 greyed>&nbsp;-&nbsp;{currentSection.name}</U.Heading3>
+          <U.Heading3 floatRight>Progress&nbsp;&nbsp;</U.Heading3>
+          {/* TODO: Fix bug that once progress bar has gone up in value, when returning to prev section, bar shows different number than color */}
+          <ProgressBar 
+            completed={completed}
+          />
         </U.InfoBar>
         <U.Sub6ColGrid>
+          <U.ColorBlock SubGridBlue></U.ColorBlock>
           {/* // Are there any questions in the currentSection.questions, and is currentQuestionIndex set to anything? */}
           {currentSection.questions.length > 0 && currentQuestionIndex >= 0
             ? // Render the current Question
@@ -153,7 +165,7 @@ class HeuristicsActivity extends Component {
           handleCurrentQuestion={this.handleCurrentQuestion}
           handleJumpToSection={this.handleJumpToSection}
         />
-      </>
+      </U.Main>
     );
   }
 }

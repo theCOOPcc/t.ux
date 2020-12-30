@@ -35,6 +35,7 @@ class Login extends Component {
     const { email, pw } = this.state;
 
     return (
+      <main>
     <U.FlexBox>
       <U.FlexBox>
         <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
@@ -47,7 +48,7 @@ class Login extends Component {
             <L.SignIn>Sign in with Google</L.SignIn>
           </L.GoogleBox>
         <form autoComplete="off" onSubmit={this.handleSubmit}>
-          <U.Normal or>or:</U.Normal>
+          <U.Normal twenty>or:</U.Normal>
           <U.Normal semiBold>Username or Email</U.Normal>
             <U.SmallInput
               type="text"
@@ -81,12 +82,13 @@ class Login extends Component {
         </L.LoginBox>
       </U.FlexBox>
       <U.FlexBox signUp>
-        <U.Normal>Need an Account?</U.Normal>
+        <U.Normal>Need an Account?&nbsp;</U.Normal>
         <U.LinkTo
           to="/signup"
         >Sign Up</U.LinkTo>
       </U.FlexBox>
     </U.FlexBox>
+    </main>
       // <main className="Login">
       //   {/* this will be a route to our slack oauth link */}
       //   <div className='slacklogin'>

@@ -8,11 +8,12 @@ module.exports = {
 };
 
 function index(req, res) {
+  console.log('get all users')
   User.find({}).then((users) => res.json(users));
 }
 
 function showProfile(req, res) {
-  User.find(req.user._id)
+  User.find(req.user.id)
   .then((user) => res.json(user))
 }
 

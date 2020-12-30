@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 
 /*---------- Main Grid ----------*/
 export const Main = styled.main`
-	margin: 0;
-	height: 100vh;
+	/* margin: 0; */
+	/* height: 100vh; */
 	display: grid;
 	grid-template-columns: 6fr 300px;
 	grid-template-rows: 60px 1fr;
@@ -13,11 +13,11 @@ export const Main = styled.main`
 	grid-row-gap: 20px;
 	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
 	background-blend-mode: normal, multiply;
-	/* opacity: 0.3; */
 	padding: 20px 39px 15px;
 	position: relative;
 	
 `;
+
 
 
 /*---------- Top Info Bar Grid ----------*/
@@ -25,7 +25,11 @@ export const InfoBar = styled.div`
 	grid-column: 1/span 2;
 	grid-row: 1/span 1;
 	justify-self: stretch;
-	background-color: red;
+	background-color: var(--true-white);
+	display: flex;
+	/* justify-content: center; */
+	align-items: center;
+	padding-left: 50px;
 `;
 
 /*---------- 6 Col SubGrid for Activities ----------*/
@@ -33,8 +37,18 @@ export const Sub6ColGrid = styled.div`
 	grid-column: 1/ span 1;
 	grid-row: 2/ span 1;
 	display: grid;
-	background-color: turquoise;
+	background-color: var(--true-white);
+	border: var(--solid-border);
+	/* max-width: 1050px; */
 `;
+
+/* ----------- SubGrid Section ----------- */
+export const Section = styled.section`
+	/* padding: 0 60px; */
+	margin-left: 50px;
+	text-align: left;
+`;
+
 
 /*---------- 300px Sidebar Parent Grid ----------*/
 export const SideBarParent = styled.div`
@@ -47,8 +61,39 @@ export const SideBarParent = styled.div`
 /*---------- The SideBar Itself ----------*/
 export const SideBar = styled.div`
 	grid-row: 1/span 1;
-	background-color: yellow;
+	background-color: var(--true-white);
 	height: calc(100vh - 159px);
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+	border: var(--solid-border);
+`;
+
+export const SideBarText = styled.button`
+	border: none;
+	border-bottom: var(--solid-border);
+	width: 238px;
+	height: 50px;
+	background-color: var(--text-white);
+	font-size: 16px;
+	line-height: 24px;
+	font-family: Poppins;
+
+	${props => props.past && css`
+		color: var(--true-black);
+		font-weight: 600;
+	`}
+
+	${props => props.present && css`
+		color: var(--present);
+		font-weight: 700;
+	`}
+
+	${props => props.future && css`
+		color: var(--future);
+		font-weight: 500;
+	`}
 `;
 
 /*---------- FlexBox Components Generic ----------*/
@@ -62,6 +107,14 @@ export const FlexBox = styled.div`
 		justify-content: space-between;
 	`}
 
+	${props => props.column && css`
+		flex-direction: column;
+	`}
+
+	${props => props.flexMargin && css`
+		margin: 40px;
+	`}
+
 	${props => props.negMargin && css`
 		margin-top: -8px;
 	`}
@@ -71,9 +124,17 @@ export const FlexBox = styled.div`
 		top: 700px;
 		/* left: 420px; */
 	`}
+
+	${props => props.login && css`
+		position: absolute;
+		top: 820px;
+		/* left: 420px; */
+	`}
 `;
 
 /*---------- Buttons ----------*/
+// [ ] TODO: find out about button active/hover states
+
 export const WideBtn = styled.button`
 	width: 280px;
 	padding: 12px 0;
@@ -81,14 +142,16 @@ export const WideBtn = styled.button`
 	border-radius: 5px;
 	font: var(--pop-bold);
 	line-height: 27px;
+	color: var(--true-white);
 
 	${props => props.extraWide && css`
 		width: 350px;
 		//this margin is for reset password
 		margin-top: 104px;
+		background-color: var(--enable-btn);
 	`}
 
-	${props => props.greyed && css`
+	${props => props.disabled && css`
 		background-color: var(--primary-disabled-btn-color);
 		color: var(--text-white);
 		border: var(--input-border);
@@ -97,17 +160,49 @@ export const WideBtn = styled.button`
 	${props => props.enable && css`
 		background-color: var(--enable-btn);
 	`}
-
 `;
+
+
 
 /*---------- Progress Bar ----------*/
-export const ProgressBarCont = styled.div`
-	grid-column: span 2;
-	color: var(--tux-black);
+export const ProgressContainer = styled.div`
+	height: 22px;
+	width: 268px;
+	background-color: #666666;
+	background-image: linear-gradient(45deg, 
+	transparent 10%, 
+	rgba(255, 255, 255, .2) 10%,
+	transparent 20%, 
+	rgba(255, 255, 255, .2) 20%,
+	transparent 30%, 
+	rgba(255, 255, 255, .2) 30%, 
+	transparent 40%, 
+	rgba(255, 255, 255, .2) 40%, 
+	transparent 50%, 
+	rgba(255, 255, 255, .2) 50%, 
+	transparent 60%, 
+	rgba(255, 255, 255, .2) 60%, 
+	transparent 70%, 
+	rgba(255, 255, 255, .2) 70%, 
+	transparent 80%, 
+	rgba(255, 255, 255, .2) 80%, 
+	transparent 90%, 
+	rgba(255, 255, 255, .2) 90%, 
+	transparent);
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
 `;
-
-export const ProgressBar = styled.progress`
-	background-color: rebeccapurple;
+export const ProgressFiller = styled.div`
+	z-index: 1;
+	height: 100%;
+	border-radius: 5px 0 0 5px;
+	background-color: var(--tux-blue);
+`;
+export const ProgressLabel = styled.p`
+	padding: 2px;
+	font: 400 12px 'Poppins', sans-serif;
+	color: #a9aaa5;
 `;
 
 
@@ -119,10 +214,16 @@ export const LinkTo = styled(Link)`
 /*---------- Text ----------*/
 export const Normal = styled.p`
   font: var(--pop-reg);
-  /* line-height: 20px; */
+  line-height: 20px;
 
-  ${props => props.or && css`
-    font-size: 20px;
+  ${props => props.eighteen && css`
+	font-size: 18px;
+	line-height: 27px;
+  `}
+
+  ${props => props.twenty && css`
+	font-size: 20px;
+	line-height: 24px;
   `}
 
   ${props => props.semiBold && css`
@@ -130,11 +231,65 @@ export const Normal = styled.p`
     margin: 0;
   `}
 
-  ${props => props.forgot && css`
+  ${props => props.twenty4 && css`
     font-size: 24px;
     line-height: 36px;
-    margin-top: 50px;
   `}
+	
+  
+  ${props => props.greyed && css`
+    color: var(--future);
+  `}
+
+  ${props => props.boldColor && css`
+    color: var(--extraLg-text);
+  `}
+
+  ${props => props.alignLeft && css`
+  align-self: start;
+  margin-left: 13px;
+  `}
+  
+  ${props => props.alignRight && css`
+  align-self: end;
+
+  `}
+`;
+
+export const Heading1 = styled.h1`
+	font-size: 36px;
+	line-height: 54px;
+	font-weight: 500;
+
+	${props => props.margin50 && css`
+    	margin-top: 50px;
+	`}
+
+	${props => props.bolder && css`
+    	font-weight: 600;
+	`}
+
+	${props => props.intro && css`
+		font-size: 80px;
+		font-weight: 700;
+		/* line-height: 24; */
+		color: #366062;
+		text-align: left;
+		margin: 0;
+		padding: 0;
+	`}
+`;
+
+export const Heading3 = styled.h3`
+	font: 500 24px 'Poppins', sans-serif;
+	line-height: 36px;
+
+	${props => props.greyed && css`
+		color: var(--future);
+	`}
+	${props => props.floatRight && css`
+		margin-left: auto;
+	`}
 `;
 
 /*--------------- FORMS ---------------*/
@@ -161,12 +316,16 @@ export const Checkbox = styled.div`
 
 /*---------- Inputs ----------*/
 export const SmallInput = styled.input`
-	margin: 0;
+	margin: 0 10px;
 	width: 343px;
 	height: 50px;
 	border: var(--input-border);
 	border-radius: 5px;
 	font-size: 24px;
+
+	${props => props.marginTop && css`
+		margin: 98px 10px 88px 0;
+	`}
 `;
 
 
@@ -178,42 +337,55 @@ export const SmallInput = styled.input`
 
 // Color Blocks
 export const ColorBlock = styled.div`
-  grid-column: span 1;
+  /* grid-column: span 1; */
   height: 5px;
   
   ${props => props.tuxBlue && css`
-    grid-row: 1/span 1;
-    grid-column: 1/span 1;
-    background-color: var(--tux-blue);
+    	grid-row: 1/span 1;
+    	grid-column: 1/span 1;
+    	background-color: var(--tux-blue);
   `}
   
-  ${props => props.tuxYellow && css`
-  	grid-row: 1/span 1;
-    grid-column: 2/span 1;
-    background-color: var(--tux-yellow);
+  	${props => props.tuxYellow && css`
+  		grid-row: 1/span 1;
+    	grid-column: 2/span 1;
+    	background-color: var(--tux-yellow);
 	`}
 	
 	${props => props.tuxWhite && css`
-    grid-row: 1/span 1;
-    grid-column: 3/span 1;
-    background-color: var(--tux-white);
+    	grid-row: 1/span 1;
+    	grid-column: 3/span 1;
+    	background-color: var(--tux-white);
 	`}
 	
 	${props => props.tuxGrey && css`
-    grid-row: 1/span 1;
-    grid-column: 4/span 1;
-    background-color: var(--tux-grey);
+    	grid-row: 1/span 1;
+    	grid-column: 4/span 1;
+    	background-color: var(--tux-grey);
 	`}
 	
 	${props => props.tuxBlack && css`
-    grid-row: 1/span 1;
-    grid-column: 5/span 1;
-    background-color: var(--tux-black);
+    	grid-row: 1/span 1;
+    	grid-column: 5/span 1;
+    	background-color: var(--tux-black);
 	`}
 	
 	${props => props.tuxRed && css`
-    grid-row: 1/span 1;
-    grid-column: 6/span 1;
-  	background-color: var(--tux-red);
-  `}
-`;
+    	grid-row: 1/span 1;
+    	grid-column: 6/span 1;
+  		background-color: var(--tux-red);
+	`}
+
+	${props => props.SideBarYellow && css`
+		background-color: var(--tux-yellow);
+		height: 10px;
+		width: 100%;
+	`}
+
+	${props => props.SubGridBlue && css`
+		background-color: var(--tux-blue);
+		height: 10px;
+		width: 100%;
+	`}
+`;	
+

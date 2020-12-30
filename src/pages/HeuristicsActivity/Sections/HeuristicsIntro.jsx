@@ -4,7 +4,9 @@ import * as U from '../../../components/TuxComponents/UniversalComponents';
 const HeuristicsIntro = ({ sections }) => {
   return (
     <>
-      <h1>Introduction</h1>
+      <U.Normal semiBold>&lt;Back</U.Normal>
+    <U.Section>
+      <U.Heading1 intro>Introduction</U.Heading1>
       <h2>to the 10 Heuristics of UX Design</h2>
       <span>
         <strong>This is not a test.</strong>The following activity is intended
@@ -28,6 +30,7 @@ const HeuristicsIntro = ({ sections }) => {
         complex design challenges. In addition, it’s also worth it to use them
         as a checklist when designing a new product or a feature.
       </p>
+    </U.Section>
     </>
   );
 };

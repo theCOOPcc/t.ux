@@ -12,7 +12,7 @@ class User extends Component {
   render() {
     return (
       <>
-        <h1>User Landing Page</h1>
+        <h1>You have successfully logged in. User Landing Page</h1>
         {/* // TODO: Render information to screen from state. */}
         <Link to="/corytestingground">Testing Ground</Link>
       </>

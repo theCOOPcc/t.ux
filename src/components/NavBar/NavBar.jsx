@@ -1,9 +1,6 @@
 import React from 'react';
-// import styled from 'styled-components';
 import * as N from '../TuxComponents/NavComponents';
 import * as U from '../TuxComponents/UniversalComponents';
-import ProgressBar from '../ProgressBar/ProgressBar';
-
  
 const NavBar = ({ user, handleLogout }) => {
   return (
