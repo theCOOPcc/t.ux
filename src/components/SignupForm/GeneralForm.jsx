@@ -4,9 +4,9 @@ import * as L from '../TuxComponents/LoginComponents';
 
 const GeneralForm = ({ errors, values, handleChange, touched }) => {
   return (
-    <>
-      <U.FlexBox>
-        <U.FlexBox>
+    <main>
+      <U.FlexBox relative>
+        <U.FlexBox relative>
           <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
           <L.LoginBox wide flexStart>
             <U.Normal semiBold margin50 large>
@@ -84,7 +84,7 @@ const GeneralForm = ({ errors, values, handleChange, touched }) => {
         <U.Normal>Need an Account?</U.Normal>
         <U.LinkTo to="/signup">Sign Up</U.LinkTo>
       </U.FlexBox>
-    </>
+    </main>
   );
 };
 
