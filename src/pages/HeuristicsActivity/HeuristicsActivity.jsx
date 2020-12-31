@@ -82,11 +82,12 @@ class HeuristicsActivity extends Component {
     const {completed} = this.state;
 
     return (
-      <>
+      <U.Main>
         <U.InfoBar>
           <U.Heading1 bolder>Heuristics</U.Heading1>
           <U.Heading3 greyed>&nbsp;-&nbsp;{sections.name}</U.Heading3>
           <U.Heading3 floatRight>Progress&nbsp;&nbsp;</U.Heading3>
+          {/* TODO: Fix bug that once progress bar has gone up in value, when returning to prev section, bar shows different number than color */}
           <ProgressBar 
             completed={completed}
           />
@@ -106,7 +107,7 @@ class HeuristicsActivity extends Component {
           handleCurrentQuestion={this.handleCurrentQuestion}
           handleJumpToSection={this.handleJumpToSection}
         />
-      </>
+      </U.Main>
     );
   }
 }

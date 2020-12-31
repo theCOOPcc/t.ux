@@ -19,6 +19,7 @@ const SideBarNav = ({
         {/* [x] The nav items need to be in a column with a spacing between and a styled line break.  */}
         {/* [x] The buttons below need to change to another componet type, they need to be able to have an onclick property and look like an anchor tag but we dont need the href functionality of an anchor tag. They also will need to be able to change color based off of whether or not their index matches the currentSectionIndex property which is destructured above.*/}
         {/* [x] Need conditional so Introduction (index 0) is not numbered. Numbering begins with first item after intro*/}
+        {/* [ ] TODO: Need some conditional to know if mapped text is the current one clicked/has been clicked previously/has not yet been clicked */}
         {sections.map((section, index) => (
           (index === 0) ?
             <U.SideBarText key={index} onClick={() => handleJumpToSection(index)}>

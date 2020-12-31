@@ -35,6 +35,7 @@ class Login extends Component {
     const { email, pw } = this.state;
 
     return (
+      <main>
     <U.FlexBox>
       <U.FlexBox>
         <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
@@ -87,6 +88,7 @@ class Login extends Component {
         >Sign Up</U.LinkTo>
       </U.FlexBox>
     </U.FlexBox>
+    </main>
       // <main className="Login">
       //   {/* this will be a route to our slack oauth link */}
       //   <div className='slacklogin'>
