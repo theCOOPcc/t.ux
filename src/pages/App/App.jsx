@@ -15,6 +15,7 @@ import CoryTestingGround from '../../pages/CoryTestingGround/CoryTestingGround';
 import './App.css';
 import PasswordResetRequest from '../PasswordResetRequest/PasswordResetRequest';
 import HeuristicsActivity from '../HeuristicsActivity/HeuristicsActivity'
+import TempLanding from '../TempLanding/TempLanding';
 
 // import ReactGA from 'react-ga';
 
@@ -41,6 +42,7 @@ class App extends Component {
     return (
       <>
         <NavBar user={user} handleLogout={this.handleLogout} />
+
         {/* <U.Main> */}
 
 
@@ -49,7 +51,10 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={() => (user ? <User user={user} /> : <Landing />)}
+          render={() => (user ? <User user={user} /> : 
+            <TempLanding />
+          // <Landing />
+            )}
           />
 
         {/* // Signup & Login Routes */}
@@ -94,8 +99,6 @@ class App extends Component {
           render={({history, location}) => <HeuristicsActivity />} />
         {/* </U.Main> */}
         {/* // 10 Heuristics sub-routes for sidebar */}
-
-        
       </>
     );
   }
