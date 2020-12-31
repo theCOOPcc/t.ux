@@ -6,11 +6,11 @@ const TempLanding = (props) => {
     return (
         <React.Fragment>
             <U.FlexBox column >
-                    <img src='/images/vertical-logo.svg' />
+                    <img src='/images/vertical-logo.svg' alt='tux-logo' />
                 <U.Normal twenty4 greyed >
                     A new way to help power the UX Learning Experience
                 </U.Normal>
-                <a href='https://www.thecoop.cc'>
+                <a href='http://www.thecoop.cc'>
                     <U.WideBtn teal>More Information</U.WideBtn>
                 </a>
                 <br></br>
