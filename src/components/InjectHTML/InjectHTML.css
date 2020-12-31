@@ -1,0 +1,117 @@
+.inject {
+    margin: 0 60px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* Heading of Introduction to Heuristics */
+.intro {
+    color: #366062;
+    font: 700 80px 'Poppins', sans-serif;
+    /* text-align: left; */
+    margin: 60px 0 0;
+}
+
+.intro-sub {
+    font: 700 28px 'Poppins', sans-serif;
+    line-height: 24px;
+    border-bottom: 2px dashed rgba(51,51,51,.75);
+    padding-bottom: 20px;
+    margin: 0;
+    /* text-align: left; */
+    color: #FA7700;
+}
+
+.intro-sub-span {
+    font: 400 28px 'Poppins', sans-serif;
+    line-height: 24px;
+    /* border-bottom: 2px dashed rgba (51,51,51,.75); */
+    color: var(--true-black);
+}
+
+/* Subheading Section */
+.notTest {
+    margin: 0;
+    padding-top: 15px;
+
+}
+
+.img {
+    width: 541px;
+    height: 371px;
+    background-color: var(--tux-white);
+    border: var(--img-border);
+    margin: 30px 0 0 0;
+}
+
+.caption {
+    font: 500 8px 'Poppins', sans-serif;
+    line-height: 24px;
+    /* text-align: right; */
+    margin: 0 0 30px 450px;
+}
+
+.page-divider {
+    width: 100%;
+    height: 8px;
+    background: #c4c4c4;
+    
+}
+
+.bold-paragraph {
+    font: 600 18px 'Poppins', sans-serif;
+    line-height: 24px;
+}
+
+.paragraph {
+    font: 400 18px 'Poppins', sans-serif;
+    line-height: 24px;
+
+}
+
+.blue-sticky {
+    width: 100%;
+    height: 210px;
+    background-color: rgba(120,214,218, 0.23);
+
+}
+
+.blue-sticky-top {
+    width: 100%;
+    height: 12px;
+    background-color: var(--tux-blue);
+}
+
+.h3-sticky {
+    font: 600 24px 'Poppins', sans-serif;
+    color: var(--text-grey);
+    margin: 20px 0 0 26px;
+    line-height: 24px;
+    
+}
+
+.sticky-list {
+    font: 400 16px 'Poppins', sans-serif;
+    color: var(--text-grey);
+    margin: 0 ;
+    line-height: 24px;
+}
+
+.sticky-list > li {
+
+}
+
+.lesson-objectives {
+    font: 600 18px 'Poppins', sans-serif;
+    line-height: 100px;
+}
+
+.lesson-objectives > li {
+    margin-left: 0;
+    list-style-type: none;
+    border-bottom: var(--input-border);
+}
+
+.lesson-objectives > li:last-child {
+    border-bottom: none;
+}

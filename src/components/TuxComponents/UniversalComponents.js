@@ -90,7 +90,7 @@ export const SideBarText = styled.button`
 
 /*---------- FlexBox Components Generic ----------*/
 export const FlexBox = styled.div`
-	margin: 0;
+	/* margin: 0; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -114,13 +114,17 @@ export const FlexBox = styled.div`
 	${props => props.signUp && css`
 		position: absolute;
 		top: 700px;
-		/* left: 420px; */
+		left: 420px;
 	`}
 
 	${props => props.login && css`
 		position: absolute;
-		top: 820px;
-		/* left: 420px; */
+		top: 700px;
+		left: 660px;
+	`}
+
+	${props => props.relative && css`
+		position: relative;
 	`}
 `;
 
@@ -151,6 +155,14 @@ export const WideBtn = styled.button`
 
 	${props => props.enable && css`
 		background-color: var(--enable-btn);
+	`}
+
+	${props => props.enable && css`
+	background-color: var(--enable-btn);
+	`}
+
+	${props => props.teal && css`
+	background-color: #3C8582;
 	`}
 `;
 
@@ -378,6 +390,8 @@ export const ColorBlock = styled.div`
 		background-color: var(--tux-blue);
 		height: 10px;
 		width: 100%;
+		margin: 0;
+		padding: 0;
 	`}
 `;	
 
