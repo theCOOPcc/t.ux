@@ -16,6 +16,8 @@ import Test2 from './Test2';
 import Test3 from './Test3';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import ProgressBar from '../../components/ProgressBar/ProgressBar'
+import {HeuristicsSampleData} from '../../SampleData/HeuristicsSampleData.js'
+import InjectHTML from '../../components/InjectHTML/InjectHTML'
 
 // TODO:This will be a major route to /activity/heuristics. Which will live in the App.js router.
 //[x]This page will display the introduction information.
@@ -33,77 +35,10 @@ class HeuristicsActivity extends Component {
     // some state variable to track whether or not next is active or disabled, next is only active after a user answers a question.
     // will have some state to record the activity.
     // Blurb pops up for correct and incorrect answers
-    sections: [
-      {
-        name: 'Introduction',
-        // route: 'introduction',
-        component: <HeuristicsIntro />,
-        questions: [],
-      },
-      {
-        name: 'Visibility of System Status',
-        // route: 'system-status',
-        component: <VisibilityOfSystemStatus />,
-        questions: [<Test2 />, <Test3 />],
-      },
-      {
-        name: 'System / World Match',
-        // route: 'system-world-match',
-        component: <SystemWorldMatch />,
-        questions: [<Test1 />],
-      },
-      {
-        name: 'User Control',
-        // route: 'user-control',
-        component: <UserControlFreedom />,
-        questions: [],
-      },
-      {
-        name: 'Consistency + Standards',
-        // route: 'consistency-standards',
-        component: <ConsistencyStandards />,
-        questions: [<Test2 />, <Test3 />],
-      },
-      {
-        name: 'Error Prevention',
-        // route: 'error-prevention',
-        component: <ErrorPrevention />,
-        questions: [],
-      },
-      {
-        name: 'Recognition over Recall',
-        // route: 'recognition-over-recall',
-        component: <RecognitionOverRecall />,
-        questions: [],
-      },
-      {
-        name: 'Flexibility + Efficiency',
-        // route: 'flexibility-efficiency',
-        component: <FlexibilityEfficiency />,
-        questions: [],
-      },
-      {
-        name: 'Aesthetic + Minimilism',
-        // route: 'aesthetic-minimilism',
-        component: <AestheticMinimalism />,
-        questions: [],
-      },
-      {
-        name: 'Error Recovery',
-        // route: 'error-recovery',
-        component: <ErrorRecovery />,
-        questions: [],
-      },
-      {
-        name: 'Help + Documentation',
-        // route: 'help-documentation',
-        component: <HelpDocumentation />,
-        questions: [],
-      },
-    ],
     currentSectionIndex: 0,
     currentQuestionIndex: null,
     completed: '-10',
+    sampleData: HeuristicsSampleData
   };
 
   handleCurrentSection = () => {
@@ -113,15 +48,22 @@ class HeuristicsActivity extends Component {
     currentSectionIndex++;
     currentQuestionIndex = 0;
     this.setState({ currentSectionIndex, currentQuestionIndex });
+    this.convertIndexToPercent(currentSectionIndex)
   };
 
   handleJumpToSection = (newIndex) => {
-    // Adjusted for progress bar
     const currentSectionIndex = newIndex;
+    this.setState({ currentSectionIndex });
+    this.convertIndexToPercent(newIndex)
+
+  };
+
+  convertIndexToPercent = (newIndex) => {
     const index =  newIndex -1;
     const completed = (index === 0) ? 0 : `${index}0`;
-    this.setState({ currentSectionIndex, completed });
-  };
+    this.setState({ completed });
+  }
+
 
   handleCurrentQuestion = (currentSection) => {
     console.log('onto the next question');
@@ -131,30 +73,31 @@ class HeuristicsActivity extends Component {
       ? currentQuestionIndex++
       : (currentQuestionIndex = null);
     this.setState({ currentQuestionIndex });
-  };
+  }; 
 
   render() {
-    const { currentSectionIndex, sections, currentQuestionIndex } = this.state;
-    const currentSection = sections[currentSectionIndex];
+    const { currentSectionIndex, sampleData, currentQuestionIndex } = this.state;
+    const sections = sampleData.sections
+    // const currentSection = sections[currentSectionIndex];
     const {completed} = this.state;
+
     return (
       <U.Main>
         <U.InfoBar>
           <U.Heading1 bolder>Heuristics</U.Heading1>
-          <U.Heading3 greyed>&nbsp;-&nbsp;{currentSection.name}</U.Heading3>
+          <U.Heading3 greyed>&nbsp;-&nbsp;{sections.name}</U.Heading3>
           <U.Heading3 floatRight>Progress&nbsp;&nbsp;</U.Heading3>
+          {/* TODO: Fix bug that once progress bar has gone up in value, when returning to prev section, bar shows different number than color */}
           <ProgressBar 
             completed={completed}
           />
         </U.InfoBar>
         <U.Sub6ColGrid>
-          <U.ColorBlock SubGridBlue></U.ColorBlock>
-          {/* // Are there any questions in the currentSection.questions, and is currentQuestionIndex set to anything? */}
-          {currentSection.questions.length > 0 && currentQuestionIndex >= 0
-            ? // Render the current Question
-              currentSection.questions[currentQuestionIndex]
-            : // Otherwise render the section component
-              currentSection.component}
+        {/* <U.ColorBlock SubGridBlue></U.ColorBlock> */}
+           
+           {/* // Are there any questions in the currentSection.questions, and is currentQuestionIndex set to anything? */}
+          
+          <div className="injectParent"><InjectHTML markup={sections[currentSectionIndex].modules[0].contents}/></div>
         </U.Sub6ColGrid>
         <SideBarNav
           sections={sections}

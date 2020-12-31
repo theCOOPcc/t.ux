@@ -12,6 +12,6 @@ const ProgressBar = ({completed}) => {
         </U.ProgressContainer>
         </>
      );
-}
+} 
  
 export default ProgressBar;
