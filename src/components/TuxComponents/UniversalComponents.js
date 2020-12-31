@@ -390,6 +390,8 @@ export const ColorBlock = styled.div`
 		background-color: var(--tux-blue);
 		height: 10px;
 		width: 100%;
+		margin: 0;
+		padding: 0;
 	`}
 `;	
 

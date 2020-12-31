@@ -18,6 +18,7 @@ html {
   --tux-white: #f1f2eb;
   --tux-black: #17171e;
   --link-text: #538284;
+  --text-grey: #666666;
   --extraLg-text: #366062;
   --enable-btn: #3c8582;
   --present: #1b9ba0;
@@ -39,6 +40,7 @@ html {
   --solid-border: 1px solid #dddddd;
   --input-border: 2px solid#999999;
   --login-border: 1px solid #BBBBBB;
+  --img-border: 5px solid #eeeeee;
 
 
   /* Alerts/Notifications/Feedback */
