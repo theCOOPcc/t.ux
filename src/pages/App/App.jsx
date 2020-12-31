@@ -16,6 +16,7 @@ import './App.css';
 import PasswordResetRequest from '../PasswordResetRequest/PasswordResetRequest';
 import HeuristicsActivity from '../HeuristicsActivity/HeuristicsActivity'
 import TempLanding from '../TempLanding/TempLanding';
+import Manager from '../Manager/Manager'
 
 // import ReactGA from 'react-ga';
 
@@ -83,6 +84,7 @@ class App extends Component {
 
         <Route exact path="/activities" render={() => <IndexActivities />} />
         {/* <Route exact path="/activities/create" render={() => <CreateActivityRefactor />} /> */}
+        <Route exact path="/managerdashboard" render={() => <Manager />} />
         <Route
           exact
           path="/preview-activity"
