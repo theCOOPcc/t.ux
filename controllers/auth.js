@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 module.exports = {
   signup,
   login,
+  createJWT
 };
 
 async function signup(req, res) {
@@ -20,10 +21,11 @@ async function signup(req, res) {
 }
 
 async function login(req, res) {
-  // console.log('login in as user service, request data', req.body)
+  // console.log('login request data', req.body)
+  // console.log('REQUEST DATA', req)
   try {
     const user = await User.findOne({ email: req.body.email });
-    console.log('request user', user)
+    // console.log('request user', user)
     if (!user) return res.status(401).json({ err: "bad credentials" });
     user.comparePassword(req.body.pw, (err, isMatch) => {
       if (isMatch) {

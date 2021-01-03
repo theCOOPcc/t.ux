@@ -1,6 +1,8 @@
+
 // TODO: Fix positioning yellow sticky 1. Visiblity of System Status
 //  TODO: Why is "Examples" not responding to css? (visibility of...)
 //  TODO: Line up text under images at Examples (visibility of...)
+
 
 export  const HeuristicsSampleData = {
   name: 'Heuristics',
@@ -372,6 +374,7 @@ export  const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
+
           contents: `<h1 class="headline">3. User Control & Freedom</h1>
           <img src="" alt="" />
           <p>
@@ -508,6 +511,7 @@ export  const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
+
           contents: `<h1 class="headline">4. Consistency & Standards</h1>
           <img src="" alt="" />
           <img src="" alt="" />
