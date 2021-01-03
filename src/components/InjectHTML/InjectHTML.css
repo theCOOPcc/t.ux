@@ -12,10 +12,13 @@
     margin: 60px 0 0;
 }
 
+
 .headline {
     color: #f37806;
     font: 700 60px 'Poppins', sans-serif;
     line-height: 24px;
+    border-bottom: var(--dashed-border);
+    padding-bottom: 30px;
 }
 
 .intro-sub {
@@ -30,6 +33,7 @@
 .intro-sub-span {
     font: 400 28px 'Poppins', sans-serif;
     line-height: 24px;
+
     color: var(--true-black);
 }
 
@@ -39,6 +43,7 @@
     padding-top: 15px;
 
 }
+
 
 /* ----------Generic Flexboxes---------- */
 .flexBox {
@@ -105,6 +110,7 @@
 /* images end here */
 
 /* ----------Image Caption---------- */
+
 .caption {
     font: 500 8px 'Poppins', sans-serif;
     line-height: 24px;
@@ -119,19 +125,54 @@
     
 }
 
-.bold-paragraph {
-    font: 600 18px 'Poppins', sans-serif;
-    line-height: 24px;
-}
+/* ---------- Text ---------- */
 
 .paragraph {
-    font: 400 18px 'Poppins', sans-serif;
+    font: var(--pop-reg);
     line-height: 24px;
-
+}
+/* 500 16px */
+.thick {
+    font: var(--pop-thick);
+    line-height: 24px;
 }
 
+/* 600 18px */
 .semi-bold {
     font: var(--semi-bold);
+    line-height: 24px;
+}
+
+/* 700  */
+.bolder {
+    font: var(--pop-bolder);
+    line-height: 24px;
+}
+
+h3 {
+    font: 600 24px 'Poppins', sans-serif;
+    line-height: 24px;
+}
+
+.reg20 {
+    font: 400 20px 'Poppins', sans-serif;
+}
+
+.quote {
+    font: italic 700 24px 'Noto Serif', serif;
+    line-height: 48px;
+    margin: 0;
+}
+
+.quote-caption {
+    font: 400 14px 'Poppins', sans-serif;
+    line-height: 21px;
+    margin: 0;
+}
+
+.with-dash-top {
+    border-top: var(--dashed-border);
+    padding-top: 40px;
 }
 
 
@@ -177,7 +218,7 @@
     color: var(--text-grey);
     margin: 20px 0 0 26px;
     line-height: 24px;
-    
+    padding: 8px;
 }
 
 .sticky-list {
@@ -187,8 +228,8 @@
     line-height: 24px;
 }
 
-.sticky-list > li {
-
+.no-list {
+    padding: 0 36px;
 }
 
 
@@ -232,4 +273,12 @@
     margin: 0;
     font: 500 14px 'Poppins', sans-serif;
     line-height: 24px;
+}
+
+/* Specific to System/World Match */
+#finger {
+    text-align: center;
+    /* margin: 0 auto; */
+    /* padding-top: 50px; */
+    
 }

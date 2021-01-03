@@ -162,6 +162,14 @@ export const WideBtn = styled.button`
 	${props => props.enable && css`
 		background-color: var(--enable-btn);
 	`}
+
+	${props => props.enable && css`
+	background-color: var(--enable-btn);
+	`}
+
+	${props => props.teal && css`
+	background-color: #3C8582;
+	`}
 `;
 
 
