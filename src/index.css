@@ -5,7 +5,8 @@ html {
   /* Fonts */
   --pop-reg: 400 16px 'Poppins', sans-serif;
   --pop-ital: italic 400 18px 'Poppins', sans-serif;
-  --pop-semi-bold: 600 17px 'Poppins', sans-serif;
+  --pop-semi-bold: 600 18px 'Poppins', sans-serif;
+  --pop-bolder: 700 18px 'Poppins', sans-serif;
   --pop-bold: 800 18px 'Poppins', sans-serif;
   --roboto-bold: 700 20px 'Roboto', sans-serif;
   
@@ -41,6 +42,7 @@ html {
   --input-border: 2px solid#999999;
   --login-border: 1px solid #BBBBBB;
   --img-border: 5px solid #eeeeee;
+  --dashed-border: 2px dashed rgba (51,51,51,.75);
 
 
   /* Alerts/Notifications/Feedback */
