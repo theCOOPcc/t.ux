@@ -97,7 +97,7 @@ class HeuristicsActivity extends Component {
            
            {/* // Are there any questions in the currentSection.questions, and is currentQuestionIndex set to anything? */}
           
-          <div className="injectParent"><InjectHTML markup={sections[currentSectionIndex].modules[0].contents}/></div>
+          <div className="injectParent"><InjectHTML markup={sections[2].modules[0].contents}/></div>
 
         </U.Sub6ColGrid>
         <SideBarNav
