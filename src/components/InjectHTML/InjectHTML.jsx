@@ -5,4 +5,4 @@ const InjectHTML = ({markup}) => {
   return ( <div className="inject" dangerouslySetInnerHTML={{__html: markup}}></div> );
 }
  
-export default InjectHTML;
+export default InjectHTML; 
