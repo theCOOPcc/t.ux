@@ -1,3 +1,9 @@
+
+// TODO: Fix positioning yellow sticky 1. Visiblity of System Status
+//  TODO: Why is "Examples" not responding to css? (visibility of...)
+//  TODO: Line up text under images at Examples (visibility of...)
+
+
 export  const HeuristicsSampleData = {
   name: 'Heuristics',
   topic: 'Heuristics',
@@ -32,8 +38,8 @@ export  const HeuristicsSampleData = {
             as a checklist when designing a new product or a feature.
           </p>
 
-          <div class="blue-sticky">
-            <div class="blue-sticky-top"></div>
+          <div class="sticky__blue">
+            <div class="sticky-top__blue"></div>
             <h3 class="h3-sticky">Lesson Objectives</h3>
             <ul class="sticky-list">
                 <li>At the end of this Activity you will be able to:</li>
@@ -66,41 +72,64 @@ export  const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1>1. Visibility of System Status</h1>
+          contents: `<h1 class="headline">1. Visibility of System Status</h1>
           <img src="" alt="" />
-          <p>
+          <div class="traffic-light">
+            <div class="red-circle"></div>
+            <div class="yellow-circle"></div>
+            <div class="blue-circle"></div>
+          </div>
+          <p class="paragraph">
             Users should always be informed about what is going on through
             appropriate and timely feedback. When people interact with any system it
             should always provide immediate feedback on the interaction. This helps
             create a smooth navigation process for users.
           </p>
-          <h2>Scenario</h2>
-          <p>
-            When you pick up your smartphone. As soon as you lift it, the screen
-            lights up and it informs you of missed notifications from various apps,
-            received messages, and missed calls. You can always tell how much
-            battery power you have left, the status of your internet connection, how
-            much cell reception you have (usually using a bar graph), and the time.{' '}
-          </p>
-          <img src="" alt="" />
-          <h2>Examples</h2>
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <p>
-            Some other examples showing how to give feedback to users inappropriate
+          <div class="sticky__yellow">
+          <div class="sticky-top__yellow"></div>
+            <h2 class="h3-sticky">Scenario:</h2>
+            <div class="flexBox">
+              <p class="yellow-text">
+                When you pick up your smartphone. As soon as you lift it, the screen
+                lights up and it informs you of missed notifications from various apps,
+                received messages, and missed calls. You can always tell how much
+                battery power you have left, the status of your internet connection, how
+                much cell reception you have (usually using a bar graph), and the time.
+              </p>
+              <img class="phoneImg" src="/images/phonePic.png" alt="iPhone Home screen held in a hand" />
+            </div>
+          </div>
+
+          <h6 class="examples">Examples</h6>
+          <div class="imgFlexBox">
+            <div class="innerFlexBox">
+              <img src="/images/gmailLoading.png" alt="gmail loading logo" width="175" />
+              <p class="imageP">Mail Loading</p>
+            </div>
+            <div class="innerFlexBox">
+              <img src="/images/loadingCircle.png" alt="Loading circle image" width="145" />
+              <p class="imageP">Load Indicator</p>
+            </div>
+            <div class="innerFlexBox">
+              <img src="/images/editForm.png" alt="Step progress bar, shows Edit Form then three circles" width="300"/>
+              <p class="imageP">Step Progress Bar</p>
+            </div>
+          </div>
+
+          <p class="paragraph">
+            Some other examples showing how to give feedback to users in appropriate
             time. We can do that by image, illustration, text even with sound. After
             posting on Twitter, emailing from mail application we hear a ‘swoosh’
-            sound, its also a good example.
+            sound, it's also a good example.
           </p>
-          <img src="" alt="" />
-          <p>
+          <img src="/images/feedback.png" alt="Shopping cart feedback example" />
+          <p class="paragraph">
             How do feel when you see the item is not available or the size is not
             available in Cart List? Do you become angry after not getting any
-            feedback by clicking ADD TO CART button? The system not giving feedback
+            feedback by clicking <span class="semi-bold">ADD TO CART</span> button? The system not giving feedback
             on the action you did.
           </p>
-          <p>
+          <p class="paragraph">
             You saw the item in the products list but something went wrong now. Look
             at the above screenshots. The system keeps telling the user which size
             is available, which color is out of stock. After selecting the item you
@@ -217,7 +246,7 @@ export  const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1>2. System / World Match</h1>
+          contents: `<h1 class="headline">2. System / World Match</h1>
           <img src="" alt="" />
           <p>
             By using language that is familiar to your user, you create an
@@ -345,7 +374,8 @@ export  const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1>3. User Control & Freedom</h1>
+
+          contents: `<h1 class="headline">3. User Control & Freedom</h1>
           <img src="" alt="" />
           <p>
             Example: The freedom to undo any accidental actions. This principle can
@@ -481,7 +511,8 @@ export  const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1>Consistency & Standards</h1>
+
+          contents: `<h1 class="headline">4. Consistency & Standards</h1>
           <img src="" alt="" />
           <img src="" alt="" />
           <p>
@@ -592,7 +623,7 @@ export  const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1>5. Error Prevention</h1>
+          contents: `<h1 class="headline">5. Error Prevention</h1>
           <img src="" alt="" />
           <p>
             The goal is to design so well that we prevent errors before they even
@@ -761,7 +792,7 @@ export  const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1>6. Recognition Over Recall</h1>
+          contents: `<h1 class="headline">6. Recognition Over Recall</h1>
           <img src="" alt="" />
           <p>
             There are two types of memory retrieval: recognition and recall [5]. The
@@ -892,7 +923,7 @@ export  const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1>7. Flexibility & Efficiency</h1>
+          contents: `<h1 class="headline">7. Flexibility & Efficiency</h1>
           <img src="" alt="" />
           <p>
             Shortcuts— unseen by the novice user — speed up the interaction for the
@@ -972,7 +1003,7 @@ export  const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1>8. Aesthetic & Minimalism</h1>
+          contents: `<h1 class="headline">8. Aesthetic & Minimalism</h1>
           <img src="" alt="" />
           <span>
             <strong>Example:</strong> An ornate teapot may have excessive decorative
@@ -1162,7 +1193,7 @@ export  const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1>9. Error Recovery</h1>
+          contents: `<h1 class="headline">9. Error Recovery</h1>
           <img src="" alt="" />
           <p>
             Good designs should aim to prevent errors from ever occurring in the
@@ -1291,7 +1322,7 @@ export  const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1>10. Help & Documentation</h1>
+          contents: `<h1 class="headline">10. Help & Documentation</h1>
           <img src="" alt="" />
           <p>
             Websites and applications can offer two types of help: proactive and
