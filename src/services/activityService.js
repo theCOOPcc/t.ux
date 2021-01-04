@@ -37,7 +37,7 @@ function getAll() {
       method: 'GET',
       headers: {
         'content-type': 'application/json',
-         'Authorization': 'Bearer' + tokenService.getToken()
+        //  'Authorization': 'Bearer' + tokenService.getToken()
       },
     },
     { mode: 'cors' }
@@ -66,7 +66,7 @@ function getOne(activityId) {
         method: 'GET',
         headers: {
           'content-type': 'application/json',
-          'Authorization': 'Bearer' + tokenService.getToken()
+          // 'Authorization': 'Bearer' + tokenService.getToken()
         },
       },
       {  mode: 'cors' }

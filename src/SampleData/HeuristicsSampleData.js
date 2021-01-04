@@ -230,7 +230,7 @@ export  const HeuristicsSampleData = {
             type: 'multiple-choice',
             media: 'https://picsum.photos/200/300',
             answers: [
-              {
+              { 
                 label: 'True',
                 isCorrect: true,
                 feedback: 'Correct! The Sky is blue!',
@@ -391,7 +391,7 @@ export  const HeuristicsSampleData = {
           type: 'display',
 
           contents: `<h1 class="headline">3. User Control & Freedom</h1>
-          <img src="" alt="" />
+          <img src="/images/googleMailExample.png" alt="Screenshot of google mail interface" class="googleMailExampleImg" />
           <p>
             Example: The freedom to undo any accidental actions. This principle can
             be best illustrated by the Gmail’s flash message with undo action when
