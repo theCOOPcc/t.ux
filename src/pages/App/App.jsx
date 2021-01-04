@@ -14,9 +14,9 @@ import IndexActivities from '../IndexActivities/IndexActivities';
 import CoryTestingGround from '../../pages/CoryTestingGround/CoryTestingGround';
 import './App.css';
 import PasswordResetRequest from '../PasswordResetRequest/PasswordResetRequest';
-import HeuristicsActivity from '../HeuristicsActivity/HeuristicsActivity';
-import activityService from '../../services/activityService';
-import { activityData } from '../../SampleData/SampleData';
+import HeuristicsActivity from '../HeuristicsActivity/HeuristicsActivity'
+import TempLanding from '../TempLanding/TempLanding';
+import Manager from '../Manager/Manager'
 
 // import ReactGA from 'react-ga';
 
@@ -56,8 +56,11 @@ class App extends Component {
         <Route
           exact
           path="/"
-          render={() => (user ? <User user={user} /> : <Landing />)}
-        />
+          render={() => (user ? <User user={user} /> : 
+            <TempLanding />
+          // <Landing />
+            )}
+          />
 
         {/* // Signup & Login Routes */}
         <Route
@@ -85,6 +88,7 @@ class App extends Component {
 
         <Route exact path="/activities" render={() => <IndexActivities />} />
         {/* <Route exact path="/activities/create" render={() => <CreateActivityRefactor />} /> */}
+        <Route exact path="/managerdashboard" render={() => <Manager />} />
         <Route
           exact
           path="/preview-activity"
@@ -104,7 +108,7 @@ class App extends Component {
         <Route
           exact
           path="/activity/heuristics"
-          render={({ history, location }) => <HeuristicsActivity/>}
+          render={({ history, location }) => <HeuristicsActivity />}
         />
         {/* // 10 Heuristics sub-routes for sidebar */}
       </>
