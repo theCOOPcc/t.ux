@@ -14,9 +14,14 @@ import IndexActivities from '../IndexActivities/IndexActivities';
 import CoryTestingGround from '../../pages/CoryTestingGround/CoryTestingGround';
 import './App.css';
 import PasswordResetRequest from '../PasswordResetRequest/PasswordResetRequest';
-import HeuristicsActivity from '../HeuristicsActivity/HeuristicsActivity'
+
+import HeuristicsActivity from '../HeuristicsActivity/HeuristicsActivity';
+import activityService from '../../services/activityService';
+import { activityData } from '../../SampleData/SampleData';
+
 import TempLanding from '../TempLanding/TempLanding';
 import Manager from '../Manager/Manager'
+
 
 // import ReactGA from 'react-ga';
 

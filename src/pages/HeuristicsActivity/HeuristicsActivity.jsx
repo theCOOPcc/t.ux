@@ -13,7 +13,10 @@ const HeuristicsActivity = () => {
     getActivityData().then((data) => setActivityData(data));
   }, []);
 
+
   return activityData ? <Activity details={activityData} /> : <h1>Loading</h1>;
 };
 
+
 export default HeuristicsActivity;
+ 
