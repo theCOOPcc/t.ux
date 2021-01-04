@@ -56,7 +56,6 @@ class App extends Component {
     return (
       <>
         <NavBar user={user} handleLogout={this.handleLogout} />
-
         {/* write conditional routing to proper homepage depending on user type */}
         {/* only get access to certain pages depending on user type */}
         <Route
@@ -67,7 +66,6 @@ class App extends Component {
           // <Landing />
             )}
           />
-
 
         {/* // Signup & Login Routes */}
         <Route
@@ -115,7 +113,7 @@ class App extends Component {
         <Route
           exact
           path="/activity/heuristics"
-          render={({ history, location }) => <HeuristicsActivity/>}
+          render={({ history, location }) => <HeuristicsActivity />}
         />
         {/* // 10 Heuristics sub-routes for sidebar */}
       </>

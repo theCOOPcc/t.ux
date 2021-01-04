@@ -1,0 +1,28 @@
+{
+  "sessionID": "id",
+  "userID": "id",
+  "userName": "username",
+  "activityId": "id",
+  "activityName": "heuristics",
+  "totalSessionTime": "number",
+  "sections": [
+    {
+      "sectionName": "Introduction",
+      "timeSpentOnSection": "Number",
+      "sectionModules": [
+        {
+          "moduleType": "display",
+          "timeSpentOnModule": "number"
+        },
+        {
+          "moduleType": "question",
+          "timeSpentOnModule": "number",
+          "timeToAnswerQuestion": "number",
+          "problemStatement": "Is the sky blue",
+          "selectedAnswer": "Red",
+          "isCorrect": "false"
+        }
+      ]
+    }
+  ]
+}

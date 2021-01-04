@@ -76,3 +76,4 @@ const HeuristicsActivity = () => {
 >>>>>>> a65d639ffeba7487eb09f95b12f7c34a810297c4
 
 export default HeuristicsActivity;
+ 
