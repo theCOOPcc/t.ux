@@ -41,7 +41,6 @@
 .notTest {
     margin: 0;
     padding-top: 15px;
-
 }
 
 
@@ -104,6 +103,10 @@
     height: 200px;
     background-color: var(--tux-grey);
     box-shadow: var(--common-shadow);
+}
+
+.googleMailExampleImg {
+    max-width: 865px;
 }
 
 

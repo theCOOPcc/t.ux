@@ -2,6 +2,14 @@ import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 
 
+export const Placeholder = styled.div`
+	/* grid-column: 1/span 3; */
+	width: 520px;
+	height: 520px;
+	background-color: yellow;
+
+`;
+
 /*---------- Main Grid ----------*/
 export const Main = styled.main`
 	display: grid;
@@ -34,7 +42,9 @@ export const InfoBar = styled.div`
 export const Sub6ColGrid = styled.div`
 	grid-column: 1/ span 1;
 	grid-row: 2/ span 1;
-	display: grid;
+	/* display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: auto; */
 	background-color: var(--true-white);
 	border: var(--solid-border);
 	/* max-width: 1050px; */
@@ -105,6 +115,10 @@ export const FlexBox = styled.div`
 		justify-content: space-between;
 	`}
 
+	${props => props.spaceAround && css`
+		justify-content: space-around;
+	`}
+
 	${props => props.column && css`
 		flex-direction: column;
 	`}
@@ -132,12 +146,17 @@ export const FlexBox = styled.div`
 	${props => props.relative && css`
 		position: relative;
 	`}
+
+	/* ${props => props.answerBtns && css`
+		grid-column: 4/span 2;
+	`} */
 `;
 
 /*---------- Buttons ----------*/
 // [ ] TODO: find out about button active/hover states
 
 export const WideBtn = styled.button`
+	border: none;
 	width: 280px;
 	padding: 12px 0;
 	margin: 17px 8px;
@@ -153,6 +172,16 @@ export const WideBtn = styled.button`
 		background-color: var(--enable-btn);
 	`}
 
+	${props => props.medium && css`
+		width: 224px;
+		height: 50px;
+		font: var(--pop-thick);
+		font-size: 14px;
+		margin: 20 auto;
+		padding: 0;
+		border: 1px solid #3C8582;
+	`}
+
 	${props => props.disabled && css`
 		background-color: var(--primary-disabled-btn-color);
 		color: var(--text-white);
@@ -161,10 +190,6 @@ export const WideBtn = styled.button`
 
 	${props => props.enable && css`
 		background-color: var(--enable-btn);
-	`}
-
-	${props => props.enable && css`
-	background-color: var(--enable-btn);
 	`}
 
 	${props => props.teal && css`
