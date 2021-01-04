@@ -2,7 +2,14 @@ import React from 'react';
 import * as U from '../TuxComponents/UniversalComponents';
 import * as L from '../TuxComponents/LoginComponents';
 
-const GeneralForm = ({ errors, values, handleChange, touched }) => {
+const GeneralForm = ({
+  errors,
+  values,
+  handleChange,
+  touched,
+  handleSubmit,
+}) => {
+  const {userData} = values
   return (
     <main>
       <U.FlexBox relative>
@@ -26,9 +33,9 @@ const GeneralForm = ({ errors, values, handleChange, touched }) => {
                 <U.SmallInput
                   type="text"
                   autoComplete="off"
-                  id="firstName"
-                  value={values.firstName}
-                  name="firstName"
+                  id="userData.firstName"
+                  value={userData.firstName}
+                  name="userData.firstName"
                   onChange={handleChange}
                 ></U.SmallInput>
               </U.FlexBox>
@@ -39,9 +46,9 @@ const GeneralForm = ({ errors, values, handleChange, touched }) => {
                 <U.SmallInput
                   type="text"
                   autoComplete="off"
-                  id="lastName"
-                  value={values.lastName}
-                  name="lastName"
+                  id="userData.lastName"
+                  value={userData.lastName}
+                  name="userData.lastName"
                   onChange={handleChange}
                 ></U.SmallInput>
               </U.FlexBox>
@@ -55,9 +62,9 @@ const GeneralForm = ({ errors, values, handleChange, touched }) => {
                 <U.SmallInput
                   type="text"
                   autoComplete="off"
-                  id="password"
-                  value={values.password}
-                  name="password"
+                  id="userData.password"
+                  value={userData.password}
+                  name="userData.password"
                   onChange={handleChange}
                 ></U.SmallInput>
               </U.FlexBox>
@@ -66,19 +73,22 @@ const GeneralForm = ({ errors, values, handleChange, touched }) => {
                   Confirm Password
                 </U.Normal>
                 <U.SmallInput
-                  disabled={values.password ? false : true}
+                  disabled={userData.password ? false : true}
                   type="password"
                   autoComplete="off"
-                  id="passwordConf"
-                  value={values.passwordConf}
-                  name="passwordConf"
+                  id="userData.passwordConf"
+                  value={userData.passwordConf}
+                  name="userData.passwordConf"
                   onChange={handleChange}
                 ></U.SmallInput>
               </U.FlexBox>
             </U.FlexBox>
-            {errors.password  && <div>{errors.password}</div>}
+            {errors.password && <div>{errors.password}</div>}
             {errors.passwordConf && <div>{errors.passwordConf}</div>}
-            <U.WideBtn disabled>Create Account</U.WideBtn>
+            {/* //TODO: Still need to conditionally enable or disable the button. */}
+            <U.WideBtn onClick={handleSubmit} enable>
+              Create Account
+            </U.WideBtn>
           </L.LoginBox>
         </U.FlexBox>
         <U.Normal>Need an Account?</U.Normal>
