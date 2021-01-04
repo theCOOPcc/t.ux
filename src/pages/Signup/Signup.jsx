@@ -7,9 +7,9 @@ class Signup extends Component {
     message: '',
     type: this.props.type
   }
-
+  
   updateMessage = (msg) => {
-    this.setState({message: msg});
+    this.setState({message: msg}); 
   }
 
   render() {
