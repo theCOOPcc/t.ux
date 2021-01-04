@@ -53,7 +53,7 @@ class TestingGround extends Component {
 
   handleGetAllUsers = async () => {
     const myToken = await tokenService.getToken()
-    console.log('my token', myToken)
+    console.log('my token handle function', myToken)
     const allUsers = await userService.getAllUsers();
     console.log(allUsers)
   }

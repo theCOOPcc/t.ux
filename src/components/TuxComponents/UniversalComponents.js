@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 
 /*---------- Main Grid ----------*/
 export const Main = styled.main`
-	/* margin: 0; */
-	/* height: 100vh; */
 	display: grid;
 	grid-template-columns: 6fr 300px;
 	grid-template-rows: 60px 1fr;
@@ -163,6 +161,14 @@ export const WideBtn = styled.button`
 
 	${props => props.enable && css`
 		background-color: var(--enable-btn);
+	`}
+
+	${props => props.enable && css`
+	background-color: var(--enable-btn);
+	`}
+
+	${props => props.teal && css`
+	background-color: #3C8582;
 	`}
 `;
 
