@@ -14,7 +14,7 @@ const Activity = ({ details }) => {
   const [completed, setCompleted] = useState('-10');
 
   // Variables
-  const currentSection = sections[3];
+  const currentSection = sections[2];
   const currentModule = currentSection.modules[1];
   // const [sessionData, setSessionData] = useState({
   //   userName: 'Dan Boterashvili',

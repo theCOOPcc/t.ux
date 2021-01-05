@@ -164,6 +164,15 @@ export const WideBtn = styled.button`
 	font: var(--pop-bold);
 	line-height: 27px;
 	color: var(--true-white);
+	cursor: pointer;
+
+	&:hover {
+		background: #236C69;
+	}
+
+	&::active {
+		border: var(--btn-active-border);
+	}
 
 	${props => props.extraWide && css`
 		width: 350px;

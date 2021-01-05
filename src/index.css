@@ -45,6 +45,8 @@ html {
   --login-border: 1px solid #BBBBBB;
   --img-border: 5px solid #eeeeee;
   --dashed-border: 2px dashed rgba(51,51,51,.75);
+  --btn-active-border: 2px 2px 3px inset #6FB8B5,
+                        -2px -2px -3px inset #6FB8B5;
 
 
 
