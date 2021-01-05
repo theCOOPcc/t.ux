@@ -5,6 +5,7 @@ import ActivityHeader from '../../components/ActivityHeader/ActivityHeader';
 import ActivityBody from '../../components/ActivityBody/ActivityBody';
 import Timer from 'react-compound-timer';
 
+
 const Activity = ({ details }) => {
   // State Hooks
   const { sections, topic, _id, name } = details;
@@ -13,8 +14,8 @@ const Activity = ({ details }) => {
   const [completed, setCompleted] = useState('-10');
 
   // Variables
-  const currentSection = sections[currentSectionIndex];
-  const currentModule = currentSection.modules[currentModuleIndex];
+  const currentSection = sections[3];
+  const currentModule = currentSection.modules[1];
   // const [sessionData, setSessionData] = useState({
   //   userName: 'Dan Boterashvili',
   //   activityId: _id,
