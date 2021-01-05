@@ -13,8 +13,8 @@ const Activity = ({ details }) => {
   const [completed, setCompleted] = useState('-10');
 
   // Variables
-  const currentSection = sections[2];
-  const currentModule = currentSection.modules[1];
+  const currentSection = sections[currentSectionIndex];
+  const currentModule = currentSection.modules[currentModuleIndex];
   // const [sessionData, setSessionData] = useState({
   //   userName: 'Dan Boterashvili',
   //   activityId: _id,

@@ -154,7 +154,7 @@ export const FlexBox = styled.div`
 
 	${props => props.hint && css`
 		align-items: flex-start;
-		margin: 20px 35px 0 0;
+		margin: 20px 35px 0 10px;
 	`}
 `;
 
@@ -177,7 +177,7 @@ export const WideBtn = styled.button`
 	}
 
 	&:active {
-		border: var(--btn-active-border);
+		box-shadow: var(--btn-active-shadow);
 	}
 
 	${props => props.extraWide && css`

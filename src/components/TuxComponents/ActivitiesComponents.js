@@ -14,7 +14,7 @@ export const ProblemStatement = styled.h2`
 `;
 
 export const Hint = styled.div`
-    height: 50px;
+    height: 65px;
     width: 100px;
     background-color: ${(props) => (props.isCorrect ? 'Green' : 'Red')};
     color: var(--true-white);
@@ -23,21 +23,19 @@ export const Hint = styled.div`
     align-items: center;
     justify-content: center;
     margin: 20px 0 0 65px;
+    /* flex-grow: 3; */
 
 `;
 
 export const Feedback = styled.p`
     font: var(--pop-reg);
-
+    flex-shrink: 3;
+    text-align: left;
 `;
-
-// export const FeedbackFlexBox = styled.div`
-//     display: flex;
-
-// `;
 
 export const Tips = styled.p`
     font: var(--pop-bolder);
     margin: 0;
+    padding: 25px;
     text-align: left;
 `;
