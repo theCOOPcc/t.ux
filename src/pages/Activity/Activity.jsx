@@ -3,8 +3,7 @@ import SideBarNav from '../../pages/HeuristicsActivity/SideBarNav';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import ActivityHeader from '../../components/ActivityHeader/ActivityHeader';
 import ActivityBody from '../../components/ActivityBody/ActivityBody';
-import Timer from 'react-compound-timer';
-
+// import Timer from 'react-compound-timer';
 
 const Activity = ({ details }) => {
   // State Hooks
@@ -78,7 +77,7 @@ const Activity = ({ details }) => {
 
       <ActivityBody
         currentModule={currentModule}
-        handleAnswers={handleAnswers}
+        handleAnswers={handleAnswers} 
       />
       <SideBarNav
         sections={sections}
