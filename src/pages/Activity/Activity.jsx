@@ -3,8 +3,7 @@ import SideBarNav from '../../pages/HeuristicsActivity/SideBarNav';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import ActivityHeader from '../../components/ActivityHeader/ActivityHeader';
 import ActivityBody from '../../components/ActivityBody/ActivityBody';
-import Timer from 'react-compound-timer';
-
+// import Timer from 'react-compound-timer';
 
 const Activity = ({ details }) => {
   // State Hooks
@@ -14,8 +13,8 @@ const Activity = ({ details }) => {
   const [completed, setCompleted] = useState('-10');
 
   // Variables
-  const currentSection = sections[3];
-  const currentModule = currentSection.modules[1];
+  const currentSection = sections[currentSectionIndex];
+  const currentModule = currentSection.modules[currentModuleIndex];
   // const [sessionData, setSessionData] = useState({
   //   userName: 'Dan Boterashvili',
   //   activityId: _id,
@@ -78,7 +77,7 @@ const Activity = ({ details }) => {
 
       <ActivityBody
         currentModule={currentModule}
-        handleAnswers={handleAnswers}
+        handleAnswers={handleAnswers} 
       />
       <SideBarNav
         sections={sections}

@@ -1,14 +1,10 @@
-
 // TODO: Fix positioning yellow sticky 1. Visiblity of System Status
 //  TODO: Why is "Examples" not responding to css? (visibility of...)
 //  TODO: Line up text under images at Examples (visibility of...)
 // TODO: Get finger in system/world match to center
 // TODO: Figure why span bolding not working inside li in system/world
 
-
-
-
-export  const HeuristicsSampleData = {
+export const HeuristicsSampleData = {
   name: 'Heuristics',
   topic: 'Heuristics',
   sections: [
@@ -68,7 +64,6 @@ export  const HeuristicsSampleData = {
           </div>
           `,
         },
-        
       ],
     },
     {
@@ -154,22 +149,26 @@ export  const HeuristicsSampleData = {
               {
                 label: 'A. Progress Bar',
                 isCorrect: false,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Having the ability to see how far they’ve progressed through an activity using a progress bar is a timely and appropriate way to give them an idea of how far they’ve come and how far they have left to go.  Being able to see how many unread texts they have by simply glancing at the messaging icon is another quick and easy way to receive feedback',
               },
               {
                 label: 'B. Camera',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Having the ability to see how far they’ve progressed through an activity using a progress bar is a timely and appropriate way to give them an idea of how far they’ve come and how far they have left to go.  Being able to see how many unread texts they have by simply glancing at the messaging icon is another quick and easy way to receive feedback',
               },
               {
                 label: 'C. Message Count',
                 isCorrect: false,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'Having the ability to see how far they’ve progressed through an activity using a progress bar is a timely and appropriate way to give them an idea of how far they’ve come and how far they have left to go.  Being able to see how many unread texts they have by simply glancing at the messaging icon is another quick and easy way to receive feedback',
               },
               {
                 label: 'D. A & C',
                 isCorrect: true,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'Having the ability to see how far they’ve progressed through an activity using a progress bar is a timely and appropriate way to give them an idea of how far they’ve come and how far they have left to go.  Being able to see how many unread texts they have by simply glancing at the messaging icon is another quick and easy way to receive feedback',
               },
             ],
           },
@@ -230,7 +229,7 @@ export  const HeuristicsSampleData = {
             type: 'multiple-choice',
             media: 'https://picsum.photos/200/300',
             answers: [
-              { 
+              {
                 label: 'True',
                 isCorrect: true,
                 feedback: 'Correct! The Sky is blue!',
