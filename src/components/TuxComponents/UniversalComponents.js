@@ -2,6 +2,14 @@ import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 
 
+export const Placeholder = styled.div`
+	/* grid-column: 1/span 3; */
+	width: 520px;
+	height: 520px;
+	background-color: yellow;
+
+`;
+
 /*---------- Main Grid ----------*/
 export const Main = styled.main`
 	display: grid;
@@ -33,7 +41,9 @@ export const InfoBar = styled.div`
 export const Sub6ColGrid = styled.div`
 	grid-column: 1/ span 1;
 	grid-row: 2/ span 1;
-	display: grid;
+	/* display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: auto; */
 	background-color: var(--true-white);
 	border: var(--solid-border);
 	/* max-width: 1050px; */
@@ -111,6 +121,10 @@ export const FlexBox = styled.div`
 		width: 100%;
 `}
 
+	${props => props.spaceAround && css`
+		justify-content: space-around;
+	`}
+
 	${props => props.column && css`
 		flex-direction: column;
 	`}
@@ -134,9 +148,11 @@ export const FlexBox = styled.div`
 	`}
 
 	${props => props.login && css`
-		position: absolute;
-		top: 700px;
-		left: 660px;
+		/* position: absolute; */
+		/* top: 700px; */
+		/* left: 500px; */
+		margin-top: 625px;
+		padding-left: 160px;
 	`}
 
 	${props => props.relative && css`
@@ -170,12 +186,23 @@ export const FlexBox = styled.div`
 	background-blend-mode: normal, multiply;
 	height: 100vh;
 `}
+
+	${props => props.flexStartJC && css`
+		justify-content: flex-start;
+		align-items: flex-start;
+	`}
+
+	${props => props.hint && css`
+		align-items: flex-start;
+		margin: 20px 35px 0 10px;
+	`}
 `;
 
 /*---------- Buttons ----------*/
 // [ ] TODO: find out about button active/hover states
 
 export const WideBtn = styled.button`
+	border: none;
 	width: 280px;
 	padding: 12px 0;
 	margin: 17px 8px;
@@ -183,12 +210,31 @@ export const WideBtn = styled.button`
 	font: var(--pop-bold);
 	line-height: 27px;
 	color: var(--true-white);
+	cursor: pointer;
+
+	&:hover {
+		background: #236C69;
+	}
+
+	&:active {
+		box-shadow: var(--btn-active-shadow);
+	}
 
 	${props => props.extraWide && css`
 		width: 350px;
 		//this margin is for reset password
 		margin-top: 104px;
 		background-color: var(--enable-btn);
+	`}
+
+	${props => props.medium && css`
+		width: 224px;
+		height: 50px;
+		font: var(--pop-thick);
+		font-size: 14px;
+		margin: 20 auto;
+		padding: 0;
+		border: 1px solid #3C8582;
 	`}
 
 	${props => props.disabled && css`
@@ -199,10 +245,6 @@ export const WideBtn = styled.button`
 
 	${props => props.enable && css`
 		background-color: var(--enable-btn);
-	`}
-
-	${props => props.enable && css`
-	background-color: var(--enable-btn);
 	`}
 
 	${props => props.teal && css`
@@ -341,6 +383,10 @@ export const Normal = styled.p`
   ${props => props.marginLeft && css`
   margin-left: 45px;
   `}
+
+  ${props => props.margin50 && css`
+    	margin-top: 50px;
+	`}
 `;
 
 export const Heading1 = styled.h1`

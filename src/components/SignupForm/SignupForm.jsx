@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Formik, Form } from 'formik';
 import EmailForm from './EmailForm';
 import GeneralForm from './GeneralForm';
+import authAPI from '../../services/authService';
 
 function validateEmail(value) {
   let error;
@@ -11,14 +12,14 @@ function validateEmail(value) {
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
     error = 'Invalid email address';
     console.log(error);
+  } else {
+    error = '';
   }
   return error;
 }
 
 function validatePasswords(password, passwordConf) {
-  // TODO: What are our password validation rules? Consider finding some better convention online. This is a temporary solution.
   let error;
-
   error = password !== passwordConf ? 'Passwords Must Match' : '';
   return error;
 }
@@ -27,40 +28,44 @@ const SignupForm = () => {
   return (
     <Formik
       initialValues={{
-        username: '',
-        email: null,
-        firstName: '',
-        lastName: '',
-        password: '',
-        passwordConf: '',
+        userData: {
+          email: null,
+          firstName: '',
+          lastName: '',
+          password: '',
+          passwordConf: '',
+        },
         continue: false,
       }}
       onSubmit={(values) => {
         console.log(values);
-        // Submit data
+        authAPI.signup(values.userData);
       }}
       validate={(values) => {
         const errors = {};
-        if (values.email) {
-          const error = validateEmail(values.email);
-          errors.email = error;
+        if (values.userData.email) {
+          const error = validateEmail(values.userData.email);
+          error.length > 0 && (errors.email = error);
         }
 
-        // TODO: Write better password validation.
-        if (!values.password) {
+        // TODO: Need better password validation.
+        if (!values.userData.password) {
           const error = 'Password Required';
           errors.password = error;
         }
 
-        if (values.password && values.passwordConf) {
-          const error = validatePasswords(values.password, values.passwordConf);
-          errors.passwordConf = error;
+        if (values.userData.password && values.userData.passwordConf) {
+          const error = validatePasswords(
+            values.userData.password,
+            values.userData.passwordConf
+          );
+          error.length > 0 && (errors.passwordConf = error);
         }
         return errors;
       }}
     >
-      {({ errors, touched, handleChange, values }) => (
-        <Form>
+      {({ errors, touched, handleChange, values, handleSubmit }) => (
+        <Form onSubmit={handleSubmit}>
           {!values.continue && (
             <EmailForm
               errors={errors}
@@ -75,6 +80,7 @@ const SignupForm = () => {
               touched={touched}
               values={values}
               handleChange={handleChange}
+              handleSubmit={handleSubmit}
             />
           )}
         </Form>
