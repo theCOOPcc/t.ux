@@ -165,6 +165,11 @@ export const FlexBox = styled.div`
 		border-radius: 5px;
 		margin: 10px 10px 10px 10px;
 	`}
+	${props => props.tuxStyled && css`
+	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
+	background-blend-mode: normal, multiply;
+	height: 100vh;
+`}
 `;
 
 /*---------- Buttons ----------*/
