@@ -8,8 +8,9 @@ const groupSchema = new Schema(
     name: { type: String, required: true },
     dateStarted: Date,
     endingDate: Date,
-    users: [{type: Schema.Types.ObjectId, ref: 'Student'}],
-    createdBy: String
+    users: [{ type: String }],
+    invited: [],
+    // createdBy: String,
   },
   { timestamps: true }
 );

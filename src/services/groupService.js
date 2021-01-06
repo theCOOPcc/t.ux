@@ -8,7 +8,8 @@ function create(group) {
         method: 'POST',
         headers: { 
             'content-type': 'application/json', 
-            'Authorization': 'Bearer' + tokenService.getToken() },
+            // 'Authorization': 'Bearer' + tokenService.getToken() 
+        },
         body: JSON.stringify(group) 
         }, { mode: 'cors' })
         .then(res => res.json());

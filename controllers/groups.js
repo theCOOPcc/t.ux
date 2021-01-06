@@ -31,7 +31,7 @@ function deleteOne(req, res) {
 }
 
 function update(req, res) {
-  Group.findByIdAndUpdate(req.params, req.body, { new: true })
+  Group.findByIdAndUpdate(req.params.id, req.body, { new: true })
     // .populate('createdBy')
     .then((group) => {
       res.json(group);

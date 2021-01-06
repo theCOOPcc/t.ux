@@ -30,8 +30,8 @@ const Question = ({ details }) => {
             </U.WideBtn>
           ))}
         </U.FlexBox>
-        {response && <Feedback response={response} />}
       </U.FlexBox>
+        {response && <Feedback response={response} />}
     </U.Sub6ColGrid>
   );
 };

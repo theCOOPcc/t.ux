@@ -1,0 +1,1278 @@
+/* screen - visibility-of-ss-example-page */
+
+.border-class-1 {
+
+}
+.poppins-medium-mountain-mist-16px {
+  color: var(--mountain-mist);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.poppins-normal-white-16px {
+  color: transparent;
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 16px;
+}
+.visibility-of-ss-example-page {
+  background-color: rgba(233,233,233,1.0);
+  height: 100vh;
+  margin: 0px;
+  min-height: 1024px;
+  min-width: 1440px;
+  position: relative;
+  width: 100%;
+}
+.visibility-of-ss-example-page .a-bad-exam-tem-status-Ab4kxC {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 100%;
+}
+.visibility-of-ss-example-page .a-bad-exam-tem-status-DqhExc {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 100%;
+}
+.visibility-of-ss-example-page .a-good-exa-tem-status-AjWjTr {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 100%;
+}
+.visibility-of-ss-example-page .a-good-exa-tem-status-cucEBC {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 100%;
+}
+.visibility-of-ss-example-page .bad-example-C61RwL {
+  background-color: transparent;
+  height: 24px;
+  left: 639px;
+  position: absolute;
+  top: 618px;
+  width: 339px;
+}
+.visibility-of-ss-example-page .bad-example-VMr6Om {
+  background-color: transparent;
+  height: 24px;
+  left: 639px;
+  position: absolute;
+  top: 1367px;
+  width: 339px;
+}
+.visibility-of-ss-example-page .body-copy-SuXUfK {
+  background-color: transparent;
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 18px;
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 100%;
+}
+.visibility-of-ss-example-page .body-copy-jdAx62 {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 100%;
+}
+.visibility-of-ss-example-page .button-primary-C61RwL {
+  background-color: rgba(60,133,130,1.0);
+  border-radius: 5px;
+  height: 4.88%;
+  left: 77.01%;
+  position: fixed;
+  top: 93.26%;
+  width: 19.44%;
+}
+.visibility-of-ss-example-page .button-small-Jw1J1D {
+  background-color: transparent;
+  border-radius: 5px;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.visibility-of-ss-example-page .button-text-Jw1J1D {
+  background-color: transparent;
+  color: var(--white);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  height: 40.00%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 30.00%;
+  width: calc(100.00% - 2px);
+}
+.visibility-of-ss-example-page .componentl-y-zi-vjson-C61RwL {
+  background-color: transparent;
+  height: calc(100.00% - 637px);
+  left: calc(50.00% - 509px);
+  position: absolute;
+  top: 1744px;
+  width: 704px;
+}
+.visibility-of-ss-example-page .conclusion-C61RwL {
+  background-color: transparent;
+  height: 290px;
+  left: 115px;
+  position: absolute;
+  top: 2372px;
+  width: 901px;
+}
+.visibility-of-ss-example-page .divider-dotted-C61RwL {
+  align-items: flex-start;
+  background-color: transparent;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  left: 104px;
+  min-height: 0px;
+  position: absolute;
+  top: 895px;
+  width: 935px;
+}
+.visibility-of-ss-example-page .good-example-C61RwL {
+  background-color: transparent;
+  height: 24px;
+  left: 166px;
+  position: absolute;
+  top: 622px;
+  width: 350px;
+}
+.visibility-of-ss-example-page .good-example-VMr6Om {
+  background-color: transparent;
+  height: 24px;
+  left: 166px;
+  position: absolute;
+  top: 1371px;
+  width: 350px;
+}
+.visibility-of-ss-example-page .group-46-C61RwL {
+  background-color: transparent;
+  height: 400px;
+  left: 140px;
+  position: absolute;
+  top: 951px;
+  width: 862px;
+}
+.visibility-of-ss-example-page .header-GVFYpu {
+  background-color: var(--white);
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.visibility-of-ss-example-page .header-activity-C61RwL {
+  background-color: var(--white);
+  border: 1px solid var(--alto);
+  border-radius: 4px;
+  height: 60px;
+  left: 39px;
+  position: fixed;
+  top: 101px;
+  width: 1362px;
+}
+.visibility-of-ss-example-page .heading-JToSJX {
+  background-color: transparent;
+  color: transparent;
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 36px;
+  height: 98.33%;
+  left: 3.82%;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1.67%;
+  width: 66.37%;
+}
+.visibility-of-ss-example-page .heading-nxjFXc {
+  background-color: transparent;
+  color: var(--mine-shaft);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  height: 43.33%;
+  left: 72.83%;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 25.00%;
+  width: 26.21%;
+}
+.visibility-of-ss-example-page .history-ba-tem-status-j7JgN4 {
+  background-color: var(--white);
+  border: 1px solid var(--alto);
+  border-radius: 5px;
+  height: 100%;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.visibility-of-ss-example-page .history-bar-C61RwL {
+  background-color: transparent;
+  height: 759px;
+  left: 1097px;
+  position: fixed;
+  top: 179px;
+  width: 300px;
+}
+.visibility-of-ss-example-page .icon-profile-4SyYWi {
+  background-color: transparent;
+  background-image: url(/images/-avatar@2x.svg);
+  background-size: 100% 100%;
+  height: 50.00%;
+  left: 94.51%;
+  position: absolute;
+  top: 27.50%;
+  width: 2.78%;
+}
+.visibility-of-ss-example-page .introduction-YXXQIY {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  height: 100%;
+  left: 3.63%;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 95.96%;
+}
+.visibility-of-ss-example-page .line-3-GVFYpu {
+  background-color: transparent;
+  height: 2.50%;
+  left: 0px;
+  position: absolute;
+  top: 98.75%;
+  width: 100%;
+}
+.visibility-of-ss-example-page .line-4-xv1xHo {
+  background-color: transparent;
+  flex-shrink: 0;
+  height: 2px;
+  position: relative;
+  width: 100%;
+}
+.visibility-of-ss-example-page .line-5-2fZ832 {
+  background-color: transparent;
+  height: 2.00%;
+  left: 0px;
+  position: absolute;
+  top: 99.00%;
+  width: 100%;
+}
+.visibility-of-ss-example-page .line-5-K6x1Uw {
+  background-color: transparent;
+  height: 2.00%;
+  left: 0px;
+  position: absolute;
+  top: 99.00%;
+  width: 100%;
+}
+.visibility-of-ss-example-page .line-5-SY6Qx2 {
+  background-color: transparent;
+  height: 2.00%;
+  left: 0px;
+  position: absolute;
+  top: 99.00%;
+  width: 100%;
+}
+.visibility-of-ss-example-page .line-5-W4UjSu {
+  background-color: transparent;
+  height: 2.00%;
+  left: 0px;
+  position: absolute;
+  top: 99.00%;
+  width: 100%;
+}
+.visibility-of-ss-example-page .line-5-YXXQIY {
+  background-color: transparent;
+  height: 2.00%;
+  left: 0px;
+  position: absolute;
+  top: 99.00%;
+  width: 100%;
+}
+.visibility-of-ss-example-page .line-5-bJOa67 {
+  background-color: transparent;
+  height: 2.00%;
+  left: 0px;
+  position: absolute;
+  top: 99.00%;
+  width: 100%;
+}
+.visibility-of-ss-example-page .line-5-hCuDrU {
+  background-color: transparent;
+  height: 2.00%;
+  left: 0px;
+  position: absolute;
+  top: 99.00%;
+  width: 100%;
+}
+.visibility-of-ss-example-page .line-5-kx4jRA {
+  background-color: transparent;
+  height: 2.00%;
+  left: 0px;
+  position: absolute;
+  top: 99.00%;
+  width: 100%;
+}
+.visibility-of-ss-example-page .line-5-mVjG0G {
+  background-color: transparent;
+  height: 2.00%;
+  left: 0px;
+  position: absolute;
+  top: 99.00%;
+  width: 100%;
+}
+.visibility-of-ss-example-page .line-5-tORMkY {
+  background-color: transparent;
+  height: 2.00%;
+  left: 0px;
+  position: absolute;
+  top: 99.00%;
+  width: 100%;
+}
+.visibility-of-ss-example-page .line-5-wWZ38F {
+  background-color: transparent;
+  height: 2.00%;
+  left: 0px;
+  position: absolute;
+  top: 99.00%;
+  width: 100%;
+}
+.visibility-of-ss-example-page .logo-tux-w-text-small-GVFYpu {
+  background-color: transparent;
+  height: 46.63%;
+  left: 2.99%;
+  position: absolute;
+  top: 30.00%;
+  width: 8.06%;
+}
+.visibility-of-ss-example-page .main-column-C61RwL {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 2609px;
+  left: 39px;
+  overflow: hidden;
+  position: absolute;
+  top: 181px;
+  width: 1042px;
+}
+.visibility-of-ss-example-page .message-box-scenario-C61RwL {
+  background-color: rgba(255,227,92,0.2);
+  height: 227px;
+  left: 97px;
+  position: absolute;
+  top: 1456px;
+  width: 932px;
+}
+.visibility-of-ss-example-page .message-box-scenario-uxVav3 {
+  background-color: rgba(120,214,218,0.2);
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.visibility-of-ss-example-page .next-triple-chevron-C61RwL {
+  background-color: transparent;
+  height: 31px;
+  left: 976px;
+  position: absolute;
+  top: 2711px;
+  width: 54px;
+}
+.visibility-of-ss-example-page .profiel-icon-label-4SyYWi {
+  background-color: transparent;
+  color: var(--mine-shaft);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  height: 35.00%;
+  left: 86.81%;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  top: 36.25%;
+  width: 7.08%;
+}
+.visibility-of-ss-example-page .progress-bar-10-JToSJX {
+  background-color: var(--granite-gray);
+  background-image: url(/images/mask-group@2x.svg);
+  background-size: 100% 100%;
+  border-radius: 5px;
+  height: 22px;
+  left: 1079px;
+  position: absolute;
+  top: 18px;
+  width: 268px;
+}
+.visibility-of-ss-example-page .progress-dot-j7JgN4 {
+  background-color: transparent;
+  background-image: url(/images/ellipse-19@2x.svg);
+  background-size: 100% 100%;
+  height: 1.05%;
+  left: 4.00%;
+  position: absolute;
+  top: 11.99%;
+  width: 2.67%;
+}
+.visibility-of-ss-example-page .rectangle-37-4SyYWi {
+  background-color: rgba(240,235,126,1.0);
+  height: 6.25%;
+  left: 16.67%;
+  position: absolute;
+  top: 0px;
+  width: 16.67%;
+}
+.visibility-of-ss-example-page .rectangle-38-4SyYWi {
+  background-color: rgba(241,242,235,1.0);
+  height: 6.25%;
+  left: 33.33%;
+  position: absolute;
+  top: 0px;
+  width: 16.67%;
+}
+.visibility-of-ss-example-page .rectangle-39-4SyYWi {
+  background-color: var(--mine-shaft);
+  height: 6.25%;
+  left: 50.00%;
+  position: absolute;
+  top: 0px;
+  width: 16.67%;
+}
+.visibility-of-ss-example-page .rectangle-40-4SyYWi {
+  background-color: rgba(23,23,30,1.0);
+  height: 6.25%;
+  left: 66.67%;
+  position: absolute;
+  top: 0px;
+  width: 16.67%;
+}
+.visibility-of-ss-example-page .rectangle-41-4SyYWi {
+  background-color: rgba(234,74,70,1.0);
+  height: 6.25%;
+  left: 83.33%;
+  position: absolute;
+  top: 0px;
+  width: 16.67%;
+}
+.visibility-of-ss-example-page .rectangle-42-4SyYWi {
+  background-color: var(--aquamarine);
+  height: 6.25%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 16.67%;
+}
+.visibility-of-ss-example-page .rectangle-48-DULOZR {
+  background-color: var(--white);
+  border: 1px solid var(--alto);
+  border-radius: 5px;
+  box-shadow: 0px 4px 9px rgba(0,0,0,0.25);;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.visibility-of-ss-example-page .rectangle-61-DULOZR {
+  background-color: var(--aquamarine);
+  height: 9px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.visibility-of-ss-example-page .rectangle-61-d8dBNM {
+  background-color: rgba(255,227,92,1.0);
+  height: 10px;
+  left: -19px;
+  position: absolute;
+  top: 0px;
+  width: calc(100.00% + 24px);
+}
+.visibility-of-ss-example-page .rectangle-63-rszkyO {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 9.70%;
+}
+.visibility-of-ss-example-page .rectangle-89-K4sexG {
+  background-color: rgba(255,227,92,1.0);
+  height: 6.80%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.visibility-of-ss-example-page .rectangle-89-l8o00t {
+  background-color: var(--aquamarine);
+  height: 6.80%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.visibility-of-ss-example-page .rectangle-91-C61RwL {
+  background-color: rgba(229,229,229,1.0);
+  height: 17.48%;
+  left: 0px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+}
+.visibility-of-ss-example-page .span1-EpTvga {
+  color: rgba(50,50,57,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.00px;
+}
+.visibility-of-ss-example-page .span1-KKqPKC {
+  color: rgba(153,153,153,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.visibility-of-ss-example-page .span1-KinY1a {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.visibility-of-ss-example-page .span1-OxBXd2 {
+  color: rgba(102,102,102,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+}
+.visibility-of-ss-example-page .span1-ZQRbnS {
+  color: rgba(255,3,3,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.visibility-of-ss-example-page .span1-mWojpO {
+  color: rgba(102,102,102,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+}
+.visibility-of-ss-example-page .span1-rdpePV {
+  color: rgba(153,153,153,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.visibility-of-ss-example-page .span1-waxUJz {
+  color: rgba(255,3,3,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.visibility-of-ss-example-page .span2-EpTvga {
+  color: rgba(153,153,153,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.00px;
+}
+.visibility-of-ss-example-page .span2-KKqPKC {
+  color: rgba(12,186,41,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.visibility-of-ss-example-page .span2-KinY1a {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.visibility-of-ss-example-page .span2-OxBXd2 {
+  color: rgba(102,102,102,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+}
+.visibility-of-ss-example-page .span2-ZQRbnS {
+  color: rgba(255,3,3,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.visibility-of-ss-example-page .span2-mWojpO {
+  color: rgba(102,102,102,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+}
+.visibility-of-ss-example-page .span2-rdpePV {
+  color: rgba(12,186,41,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.visibility-of-ss-example-page .span2-waxUJz {
+  color: rgba(255,3,3,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.visibility-of-ss-example-page .span3-KKqPKC {
+  color: rgba(12,186,41,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.visibility-of-ss-example-page .span3-KinY1a {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.visibility-of-ss-example-page .span3-ZQRbnS {
+  color: rgba(255,3,3,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.visibility-of-ss-example-page .span3-rdpePV {
+  color: rgba(12,186,41,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.visibility-of-ss-example-page .span3-waxUJz {
+  color: rgba(255,3,3,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.visibility-of-ss-example-page .span4-KKqPKC {
+  color: rgba(153,153,153,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.visibility-of-ss-example-page .span4-KinY1a {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.visibility-of-ss-example-page .span4-ZQRbnS {
+  color: rgba(153,153,153,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.visibility-of-ss-example-page .span4-rdpePV {
+  color: rgba(153,153,153,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.visibility-of-ss-example-page .span4-waxUJz {
+  color: rgba(153,153,153,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.visibility-of-ss-example-page .span5-KinY1a {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.visibility-of-ss-example-page .span6-KinY1a {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.visibility-of-ss-example-page .subtract-C61RwL {
+  background-color: transparent;
+  height: 1px;
+  left: -0px;
+  position: absolute;
+  top: 4px;
+  width: 1px;
+}
+.visibility-of-ss-example-page .table-date-C61RwL {
+  background-color: transparent;
+  height: 330px;
+  left: 105px;
+  position: absolute;
+  top: 284px;
+  width: 919px;
+}
+.visibility-of-ss-example-page .table-item-8pO85m {
+  background-color: transparent;
+  height: 6.59%;
+  left: 8.00%;
+  position: absolute;
+  top: 35.57%;
+  width: 82.67%;
+}
+.visibility-of-ss-example-page .table-item-9U6cz9 {
+  background-color: transparent;
+  height: 6.59%;
+  left: 8.00%;
+  position: absolute;
+  top: 9.22%;
+  width: 82.67%;
+}
+.visibility-of-ss-example-page .table-item-FSxFUf {
+  background-color: transparent;
+  height: 6.59%;
+  left: 8.00%;
+  position: absolute;
+  top: 55.34%;
+  width: 82.67%;
+}
+.visibility-of-ss-example-page .table-item-FdaKxy {
+  background-color: transparent;
+  height: 6.59%;
+  left: 8.00%;
+  position: absolute;
+  top: 48.75%;
+  width: 82.67%;
+}
+.visibility-of-ss-example-page .table-item-NGsxp2 {
+  background-color: transparent;
+  height: 6.59%;
+  left: 8.00%;
+  position: absolute;
+  top: 68.51%;
+  width: 82.67%;
+}
+.visibility-of-ss-example-page .table-item-d8dBNM {
+  background-color: transparent;
+  height: 6.59%;
+  left: 8.00%;
+  position: absolute;
+  top: 2.64%;
+  width: 79.67%;
+}
+.visibility-of-ss-example-page .table-item-llCfxj {
+  background-color: transparent;
+  height: 6.59%;
+  left: 8.00%;
+  position: absolute;
+  top: 28.99%;
+  width: 82.67%;
+}
+.visibility-of-ss-example-page .table-item-oxmlbm {
+  background-color: transparent;
+  height: 6.59%;
+  left: 8.00%;
+  position: absolute;
+  top: 42.16%;
+  width: 82.67%;
+}
+.visibility-of-ss-example-page .table-item-qgdRdD {
+  background-color: transparent;
+  height: 6.59%;
+  left: 8.00%;
+  position: absolute;
+  top: 61.92%;
+  width: 82.67%;
+}
+.visibility-of-ss-example-page .table-item-vYgxep {
+  background-color: transparent;
+  height: 6.59%;
+  left: 8.00%;
+  position: absolute;
+  top: 22.40%;
+  width: 82.67%;
+}
+.visibility-of-ss-example-page .table-item-xEkZZT {
+  background-color: transparent;
+  height: 6.59%;
+  left: 8.00%;
+  position: absolute;
+  top: 15.81%;
+  width: 82.67%;
+}
+.visibility-of-ss-example-page .text-DULOZR {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Proxima Nova-Bold', Helvetica, Arial, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  height: 20px;
+  left: 554px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 117px;
+  width: 256px;
+}
+.visibility-of-ss-example-page .text-body-paragraph-C61RwL {
+  background-color: transparent;
+  height: 133px;
+  left: 135px;
+  position: absolute;
+  top: 2185px;
+  width: 903px;
+}
+.visibility-of-ss-example-page .text-body-paragraph-VMr6Om {
+  background-color: transparent;
+  height: 133px;
+  left: 110px;
+  position: absolute;
+  top: 702px;
+  width: 903px;
+}
+.visibility-of-ss-example-page .the-visibi--for-users-K4sexG {
+  background-color: transparent;
+  color: var(--granite-gray);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 24px;
+  height: 73.57%;
+  left: 3.86%;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 10.13%;
+  width: 90.67%;
+}
+.visibility-of-ss-example-page .the-visibi--for-users-l8o00t {
+  background-color: transparent;
+  color: var(--granite-gray);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 24px;
+  height: 73.57%;
+  left: 3.86%;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 10.13%;
+  width: 90.67%;
+}
+.visibility-of-ss-example-page .tux-header-C61RwL {
+  background-color: transparent;
+  height: 80px;
+  left: 0px;
+  position: fixed;
+  top: 0px;
+  width: 1440px;
+}
+.visibility-of-ss-example-page .vector-14KMY5 {
+  background-color: transparent;
+  height: 21.44%;
+  left: 12.05%;
+  position: absolute;
+  top: 22.30%;
+  width: 6.03%;
+}
+.visibility-of-ss-example-page .vector-2wXbjd {
+  background-color: transparent;
+  height: 67.02%;
+  left: 11.87%;
+  position: absolute;
+  top: 0.32%;
+  width: 18.10%;
+}
+.visibility-of-ss-example-page .vector-CRETaU {
+  background-color: transparent;
+  height: 67.02%;
+  left: 11.87%;
+  position: absolute;
+  top: 0.32%;
+  width: 18.10%;
+}
+.visibility-of-ss-example-page .vector-FMCBGI {
+  background-color: transparent;
+  height: 67.02%;
+  left: 0px;
+  position: absolute;
+  top: 0.29%;
+  width: 18.10%;
+}
+.visibility-of-ss-example-page .vector-FxZs4Q {
+  background-color: transparent;
+  height: 2.68%;
+  left: 28.58%;
+  position: absolute;
+  top: 0.53%;
+  width: 0.86%;
+}
+.visibility-of-ss-example-page .vector-GQPUQD {
+  background-color: transparent;
+  height: 61.65%;
+  left: -0.31%;
+  position: absolute;
+  top: 40.40%;
+  width: 30.17%;
+}
+.visibility-of-ss-example-page .vector-Hx8FI2 {
+  background-color: transparent;
+  height: 118.66%;
+  left: -6.48%;
+  position: absolute;
+  top: -9.33%;
+  width: 112.96%;
+}
+.visibility-of-ss-example-page .vector-HyxtDx {
+  background-color: transparent;
+  height: 61.65%;
+  left: -0.31%;
+  position: absolute;
+  top: 40.40%;
+  width: 30.17%;
+}
+.visibility-of-ss-example-page .vector-IcfJmf {
+  background-color: transparent;
+  height: 77.74%;
+  left: 52.42%;
+  position: absolute;
+  top: 21.64%;
+  width: 23.28%;
+}
+.visibility-of-ss-example-page .vector-MxwAGX {
+  background-color: transparent;
+  height: 67.02%;
+  left: 0px;
+  position: absolute;
+  top: 0.31%;
+  width: 18.10%;
+}
+.visibility-of-ss-example-page .vector-NS5UBT {
+  background-color: transparent;
+  height: 2.68%;
+  left: 28.58%;
+  position: absolute;
+  top: 0.53%;
+  width: 0.86%;
+}
+.visibility-of-ss-example-page .vector-OJzSAN {
+  background-color: transparent;
+  height: 99.18%;
+  left: 33.05%;
+  position: absolute;
+  top: -0.85%;
+  width: 15.52%;
+}
+.visibility-of-ss-example-page .vector-fp1R1v {
+  background-color: transparent;
+  height: 61.65%;
+  left: -0.31%;
+  position: absolute;
+  top: 40.40%;
+  width: 30.17%;
+}
+.visibility-of-ss-example-page .vector-jx1hhx {
+  background-color: transparent;
+  height: 67.02%;
+  left: 11.87%;
+  position: absolute;
+  top: 0.32%;
+  width: 18.10%;
+}
+.visibility-of-ss-example-page .vector-mcm8JQ {
+  background-color: transparent;
+  height: 2.68%;
+  left: 28.58%;
+  position: absolute;
+  top: 0.53%;
+  width: 0.86%;
+}
+.visibility-of-ss-example-page .vector-npvdOw {
+  background-color: transparent;
+  height: 67.02%;
+  left: 0px;
+  position: absolute;
+  top: 0.29%;
+  width: 18.10%;
+}
+.visibility-of-ss-example-page .vector-sGHeo3 {
+  background-color: transparent;
+  height: 61.65%;
+  left: -0.31%;
+  position: absolute;
+  top: 40.40%;
+  width: 30.17%;
+}
+.visibility-of-ss-example-page .vector-tB5hFK {
+  background-color: transparent;
+  height: 2.68%;
+  left: 28.58%;
+  position: absolute;
+  top: 0.53%;
+  width: 0.86%;
+}
+.visibility-of-ss-example-page .vector-tobGox {
+  background-color: transparent;
+  height: 69.70%;
+  left: 11.83%;
+  position: absolute;
+  top: 31.82%;
+  width: 5.17%;
+}
+.visibility-of-ss-example-page .vector-xfxyux {
+  background-color: transparent;
+  height: 77.74%;
+  left: 79.38%;
+  position: absolute;
+  top: 21.64%;
+  width: 20.69%;
+}
+.visibility-of-ss-example-page .vector-zWa8x5 {
+  background-color: transparent;
+  height: 21.44%;
+  left: 12.05%;
+  position: absolute;
+  top: 22.30%;
+  width: 6.03%;
+}
+.visibility-of-ss-example-page .x-back-DULOZR {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 21px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 22px;
+  white-space: nowrap;
+  width: 52px;
+}
+.visibility-of-ss-example-page .x1-visibili-tem-status-tORMkY {
+  background-color: transparent;
+  color: rgba(27,155,160,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  height: 100%;
+  left: 3.63%;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 95.97%;
+}
+.visibility-of-ss-example-page .x10-help-do-umentation-SY6Qx2 {
+  background-color: transparent;
+  height: 100%;
+  left: 3.63%;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 95.97%;
+}
+.visibility-of-ss-example-page .x10-rszkyO {
+  background-color: transparent;
+  color: rgba(169,170,165,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  height: 109.09%;
+  left: 13.43%;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 8.21%;
+}
+.visibility-of-ss-example-page .x2-system-world-match-bJOa67 {
+  background-color: transparent;
+  height: 100%;
+  left: 3.63%;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 95.97%;
+}
+.visibility-of-ss-example-page .x3-user-con-ol-freedom-wWZ38F {
+  background-color: transparent;
+  height: 100%;
+  left: 3.63%;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 95.97%;
+}
+.visibility-of-ss-example-page .x4-consiste--standards-hCuDrU {
+  background-color: transparent;
+  height: 100%;
+  left: 3.63%;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 95.97%;
+}
+.visibility-of-ss-example-page .x5-error-prevention-mVjG0G {
+  background-color: transparent;
+  height: 100%;
+  left: 3.63%;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 95.97%;
+}
+.visibility-of-ss-example-page .x6-recognit-ver-recall-2fZ832 {
+  background-color: transparent;
+  height: 100%;
+  left: 3.63%;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 95.97%;
+}
+.visibility-of-ss-example-page .x7-flexibil-efficiency-W4UjSu {
+  background-color: transparent;
+  height: 100%;
+  left: 3.63%;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 95.97%;
+}
+.visibility-of-ss-example-page .x8-aestheti-minimilism-K6x1Uw {
+  background-color: transparent;
+  height: 100%;
+  left: 3.63%;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 95.97%;
+}
+.visibility-of-ss-example-page .x9-error-recovery-kx4jRA {
+  background-color: transparent;
+  height: 100%;
+  left: 3.63%;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 95.97%;
+}
+:root {
+  --alto: rgba(221,221,221,1.0);
+  --aquamarine: rgba(120,214,218,1.0);
+  --black: rgba(0,0,0,1.0);
+  --granite-gray: rgba(102,102,102,1.0);
+  --mine-shaft: rgba(50,50,57,1.0);
+  --mountain-mist: rgba(153,153,153,1.0);
+  --white: rgba(255,255,255,1.0);
+}

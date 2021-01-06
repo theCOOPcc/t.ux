@@ -1,20 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
+import * as A from '../TuxComponents/ActivitiesComponents';
+import * as U from '../TuxComponents/UniversalComponents';
 
-const Hint = styled.div`
-  height: 50px;
-  width: 100px;
-  background-color: ${(props) => (props.isCorrect ? 'Green' : 'Red')};
-`;
 
 const FeedbackBox = ({ selection }) => {
   const { feedback, isCorrect } = selection;
   return (
-    <>
-      <Hint isCorrect={isCorrect}>{isCorrect ? 'Correct!' : 'Hint!'}</Hint>
-      <span>Tips:</span>
-      <p>{feedback}</p>
-    </>
+    <U.FlexBox flexStartJC>
+      <A.Hint isCorrect={isCorrect}>{isCorrect ? 'Correct!' : 'Hint!'}</A.Hint>
+      <U.FlexBox column hint>
+        <A.Tips>Tips:</A.Tips>
+        <U.Normal>{feedback}</U.Normal>
+      </U.FlexBox>
+    </U.FlexBox>
   );
 };
 
