@@ -45,19 +45,21 @@ html {
   --login-border: 1px solid #BBBBBB;
   --img-border: 5px solid #eeeeee;
   --dashed-border: 2px dashed rgba(51,51,51,.75);
-
-
-
+  
+  
+  
   /* Alerts/Notifications/Feedback */
   --notification-color: #36C5F0;
   --warning-color: #ecb22e;
   --alert-color: #ff0000;
-
+  
   /* Inputs */
   --background-input: #eeeeee;
-
+  
   /* Shadows */
   --common-shadow: 0px 4px 9px rgba(0,0,0, 0.25);
+  --btn-active-shadow: inset 2px 2px 2px rgba(0,0,0,.25), 
+  inset -3px -3px 2px rgba(0,0,0,.25);
 
 }
 

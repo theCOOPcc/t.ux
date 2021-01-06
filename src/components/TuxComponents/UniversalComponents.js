@@ -147,9 +147,15 @@ export const FlexBox = styled.div`
 		position: relative;
 	`}
 
-	/* ${props => props.answerBtns && css`
-		grid-column: 4/span 2;
-	`} */
+	${props => props.flexStartJC && css`
+		justify-content: flex-start;
+		align-items: flex-start;
+	`}
+
+	${props => props.hint && css`
+		align-items: flex-start;
+		margin: 20px 35px 0 10px;
+	`}
 `;
 
 /*---------- Buttons ----------*/
@@ -164,6 +170,15 @@ export const WideBtn = styled.button`
 	font: var(--pop-bold);
 	line-height: 27px;
 	color: var(--true-white);
+	cursor: pointer;
+
+	&:hover {
+		background: #236C69;
+	}
+
+	&:active {
+		box-shadow: var(--btn-active-shadow);
+	}
 
 	${props => props.extraWide && css`
 		width: 350px;

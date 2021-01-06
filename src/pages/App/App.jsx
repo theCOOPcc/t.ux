@@ -22,7 +22,6 @@ import { activityData } from '../../SampleData/SampleData';
 import TempLanding from '../TempLanding/TempLanding';
 import Manager from '../Manager/Manager'
 
-
 // import ReactGA from 'react-ga';
 
 // const trackingId = "" // Google analytics tracking id
