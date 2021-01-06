@@ -11,9 +11,9 @@ const GeneralForm = ({
 }) => {
   const {userData} = values
   return (
-    <main>
-      <U.FlexBox relative>
-        <U.FlexBox relative>
+    <>
+      {/* <U.FlexBox > */}
+        <U.FlexBox >
           <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
           <L.LoginBox wide flexStart>
             <U.Normal semiBold margin50 large>
@@ -86,15 +86,16 @@ const GeneralForm = ({
             {errors.password && <div>{errors.password}</div>}
             {errors.passwordConf && <div>{errors.passwordConf}</div>}
             {/* //TODO: Still need to conditionally enable or disable the button. */}
-            <U.WideBtn onClick={handleSubmit} enable>
+             <U.WideBtn onClick={handleSubmit} enable>
               Create Account
             </U.WideBtn>
-          </L.LoginBox>
+          </L.LoginBox> 
         </U.FlexBox>
+        <U.FlexBox signUp>
         <U.Normal>Need an Account?</U.Normal>
         <U.LinkTo to="/signup">Sign Up</U.LinkTo>
       </U.FlexBox>
-    </main>
+    </>
   );
 };
 

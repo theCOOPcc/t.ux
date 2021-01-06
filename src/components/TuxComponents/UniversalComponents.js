@@ -138,9 +138,11 @@ export const FlexBox = styled.div`
 	`}
 
 	${props => props.login && css`
-		position: absolute;
-		top: 700px;
-		left: 660px;
+		/* position: absolute; */
+		/* top: 700px; */
+		/* left: 500px; */
+		margin-top: 625px;
+		padding-left: 160px;
 	`}
 
 	${props => props.relative && css`
@@ -302,8 +304,11 @@ export const Normal = styled.p`
   
   ${props => props.alignRight && css`
   align-self: end;
-
   `}
+
+  ${props => props.margin50 && css`
+    	margin-top: 50px;
+	`}
 `;
 
 export const Heading1 = styled.h1`
