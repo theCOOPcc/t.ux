@@ -3,7 +3,7 @@ import * as U from '../TuxComponents/UniversalComponents';
 import * as L from '../TuxComponents/LoginComponents';
 
 const EmailForm = ({ errors, values, handleChange, touched }) => {
-  const { userData} = values
+  const { userData } = values
   return (
     <main>
       <U.FlexBox>
