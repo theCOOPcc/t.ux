@@ -1323,38 +1323,270 @@ export const HeuristicsSampleData = {
           type: 'display',
 
           contents: `
-          <h1 class="headline">3. User Control & Freedom</h1>
-          <img src="/images/googleMailExample.png" alt="Screenshot of google mail interface" class="googleMailExampleImg" />
-          <p>
-            Example: The freedom to undo any accidental actions. This principle can
-            be best illustrated by the Gmail’s flash message with undo action when
-            we accidentally delete an email.
-          </p>
-          <p>
-            It is very common for users to make mistakes while using a product.
-            Because of this, it is important that we design ways to help them undo
-            those mistakes. Imagine a situation that involves something like an
-            accidental deletion of an important file or posting a grammatical
-            mistake on your company’s social media; every system should have a
-            clearly marked “emergency exit” mechanism, that provides users with an
-            easy way to get back after they find themselves in an unwanted state.
-          </p>
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <p>
-            The examples above are some of the UI elements that can help users go
-            back to the previous state the system was in. They are another way of
-            giving the user control.
-          </p>
-          <img src="" alt="" />
-          <p>
-            Another Example of User Control: Gmail Gmail gives users the ability to
-            recover from accidently deleting an email. They can undo the action of
-            deleting an email by finding the email in the “Trash” folder and moving
-            the email back into their “Inbox.” This allows them to recover from
-            their mistake.
-          </p>
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=1042, maximum-scale=1.0" />
+              <link rel="shortcut icon" href="./img/favicon.png" />
+              <meta name="og:type" content="website" />
+              <meta name="twitter:card" content="photo" />
+              <link rel="stylesheet" type="text/css" href="css/user-control-and-freedom.css" />
+              <style>
+                @import url("https://fonts.googleapis.com/css?family=Poppins:700,500,300,400,600|Noto+Serif:600italic,600");
+
+                @font-face {
+                  font-family: "Helvetica Neue-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
+                }
+
+                @font-face {
+                  font-family: "Proxima Nova-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5c5874afb72544000ad1576b/ProximaNova-Reg.ttf")
+                    format("truetype");
+                }
+
+                .component-wrapper a,
+                .screen a {
+                  text-decoration: none;
+                  display: contents;
+                }
+
+                .full-width-a {
+                  width: 100%;
+                }
+
+                .full-height-a {
+                  height: 100%;
+                }
+
+                .screen textarea:focus,
+                .screen input:focus {
+                  outline: none;
+                }
+
+                .screen *,
+                .component-wrapper * {
+                  box-sizing: border-box;
+                }
+
+                .screen div {
+                  -webkit-text-size-adjust: none;
+                }
+
+                .container-center-vertical,
+                .container-center-horizontal {
+                  pointer-events: none;
+                  display: flex;
+                  flex-direction: row;
+                  padding: 0;
+                  margin: 0;
+                }
+
+                .container-center-vertical {
+                  align-items: center;
+                  height: 100%;
+                }
+
+                .container-center-horizontal {
+                  justify-content: center;
+                  width: 100%;
+                }
+
+                .container-center-vertical > *,
+                .container-center-horizontal > * {
+                  pointer-events: auto;
+                  flex-shrink: 0;
+                }
+
+                .component-wrapper,
+                .screen {
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-all;
+                  word-break: break-word;
+                }
+
+                .auto-animated div {
+                  opacity: 0;
+                  position: absolute;
+                  --z-index: -1;
+                }
+
+                .auto-animated .container-center-vertical,
+                .auto-animated .container-center-horizontal {
+                  opacity: 1;
+                }
+
+                .overlay {
+                  position: absolute;
+                  opacity: 0;
+                  display: none;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  position: fixed;
+                }
+
+                .animate-appear {
+                  opacity: 0;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 normal forwards;
+                }
+
+                .animate-disappear {
+                  opacity: 1;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+                }
+
+                .animate-nodelay {
+                  animation-delay: 0s;
+                }
+
+                @keyframes reveal {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
+                }
+                .align-self-flex-start {
+                  align-self: flex-start;
+                }
+                .align-self-flex-end {
+                  align-self: flex-end;
+                }
+                .align-self-flex-center {
+                  align-self: center;
+                }
+                .valign-text-middle {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                }
+                .valign-text-bottom {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-end;
+                }
+                input:focus {
+                  outline: none;
+                }
+                .component-wrapper,
+                .component-wrapper * {
+                  pointer-events: none;
+                }
+
+                .component-wrapper a *,
+                .component-wrapper a,
+                .component-wrapper input,
+                .component-wrapper video,
+                .component-wrapper iframe,
+                .listeners-active,
+                .listeners-active * {
+                  pointer-events: auto;
+                }
+
+                .hidden,
+                .hidden * {
+                  visibility: hidden;
+                  pointer-events: none;
+                }
+
+                .smart-layers-pointers,
+                .smart-layers-pointers * {
+                  pointer-events: auto;
+                  visibility: visible;
+                }
+
+                .component-wrapper.not-ready,
+                .component-wrapper.not-ready * {
+                  visibility: hidden !important;
+                }
+
+                .listeners-active-click,
+                .listeners-active-click * {
+                  cursor: pointer;
+                }
+              </style>
+              <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+            </head>
+            <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+              <input type="hidden" id="anPageName" name="page" value="user-control-and-freedom" />
+              <div class="user-control-and-freedom screen">
+                <div class="rectangle-48-C61RwL"></div>
+                <a href="javascript:history.back()"
+                  ><div class="x-back-C61RwL valign-text-middle border-class-1">&lt;Back</div></a
+                >
+                <div class="rectangle-61-C61RwL"></div>
+                <div class="text-C61RwL valign-text-middle border-class-1"></div>
+                <div class="welcome-C61RwL">
+                  <div class="welcome-0O6yUh valign-text-middle border-class-1">3. User Control &amp; Freedom</div>
+                </div>
+                <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="img/line-4@1x.svg" /></div>
+                <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="img/line-4@1x.svg" /></div>
+                <img class="google-example-C61RwL" src="img/google-example@1x.png" />
+                <div class="image-caption-C61RwL">
+                  <div class="the-visibi--for-users-mWuPKx border-class-1">
+                    <span class="span1-SQKVtq">Example: </span
+                    ><span class="span2-SQKVtq"
+                      >The freedom to undo any accidental actions. This principle can be best illustrated by the Gmail’s flash
+                      message with undo action when we accidentally delete an em</span
+                    ><span class="span3-SQKVtq">ail.</span>
+                  </div>
+                </div>
+                <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="img/vector@2x.svg" /></div>
+                <img class="group-38-C61RwL" src="img/group-38@1x.png" />
+                <div class="text-body-paragraph-C61RwL">
+                  <div class="text-jdAx62 border-class-1 poppins-normal-black-18px">
+                    <span class="span1-cgHpkm">Another Example of User Control: </span
+                    ><span class="span2-cgHpkm">Gmail <br /></span
+                    ><span class="span3-cgHpkm"><br />Gmail gives users the ability to </span
+                    ><span class="span4-cgHpkm">recover</span
+                    ><span class="span5-cgHpkm"> from accidently deleting an email. <br /><br />They can </span
+                    ><span class="span6-cgHpkm">undo</span
+                    ><span class="span7-cgHpkm">
+                      the action of deleting an email by finding the email in the “Trash” folder and moving the email back into
+                      their “Inbox.” This allows them to recover from their mistake.</span
+                    >
+                  </div>
+                </div>
+                <div class="text-body-paragraph-VMr6Om">
+                  <div class="text-SuXUfK border-class-1 poppins-normal-black-18px">
+                    <span class="span1-i2VNyE">The examples above are some of the UI elements that can help users </span
+                    ><span class="span2-i2VNyE">go back to the previous state</span
+                    ><span class="span3-i2VNyE"> the system was in. They are another way of giving the user control.</span>
+                  </div>
+                </div>
+                <div class="rectangle-117-C61RwL"></div>
+                <img class="icon-artwork-C61RwL" src="img/icon-artwork@2x.svg" />
+                <div class="rectangle-81-C61RwL"></div>
+                <div class="cancel-C61RwL valign-text-middle border-class-1">CANCEL</div>
+                <img class="back-button-group-C61RwL" src="img/back-button-group@1x.png" />
+                <div class="text-body-paragraph-mzXdH9">
+                  <div class="body-copy-SCxiAB border-class-1 poppins-normal-black-18px">
+                    <span class="span1-Yh9UKS"
+                      >It is very common for users to make mistakes while using a product. Because of this, it is important that
+                      we design ways to help them </span
+                    ><span class="span2-Yh9UKS">undo those mistakes</span
+                    ><span class="span3-Yh9UKS"
+                      >.<br /><br />Imagine a situation that involves something like an accidental deletion of an important file
+                      or posting a grammatical mistake on your company’s social media; every system should have a clearly marked
+                      “emergency exit” mechanism, that provides users with an easy way to get back after they find themselves in
+                      an unwanted state.<br /><br
+                    /></span>
+                  </div>
+                </div>
+                <div class="rectangle-115-C61RwL"></div>
+              </div>
+            </body>
+          </html>
           `,
         },
         {
