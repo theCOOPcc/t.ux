@@ -3,6 +3,7 @@ import SideBarNav from '../../pages/HeuristicsActivity/SideBarNav';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import ActivityHeader from '../../components/ActivityHeader/ActivityHeader';
 import ActivityBody from '../../components/ActivityBody/ActivityBody';
+// import test from '../../SampleData/img/'
 // import Timer from 'react-compound-timer';
 
 const Activity = ({ details }) => {
@@ -64,7 +65,7 @@ const Activity = ({ details }) => {
 
   const convertIndexToPercent = (newIndex) => {
     const index = newIndex - 1;
-    const completed = index === 0 ? 0 : `${index}0`;
+    const completed = index === 0 ? 0 : `${index}0`; 
     setCompleted(completed);
   };
   return (

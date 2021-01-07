@@ -20,7 +20,8 @@ const InviteModal = ({
   const [newGroups, setNewGroups] = useState('');
 
   const handleSendInvite = async () => {
-    const groupToInvite =groupAPI.update(groups[selectedGroupIndex])
+    const groupToInvite = await groupAPI.update(groups[selectedGroupIndex])
+    console.log(groupToInvite)
     // TODO: send group info to nodemailer api
     mailAPI.create(groupToInvite)
   };

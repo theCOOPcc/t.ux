@@ -14,3 +14,4 @@ const ActivityHeader = ({topic,name,completed}) => {
 };
 
 export default ActivityHeader;
+ 

@@ -10,8 +10,6 @@ const ManagerActivities = ({
   setGroups
 }) => {
   const [activities, setActivities] = useState('');
-
-
   const getActivities = async () => {
     const activities = activityAPI.getAll();
     return activities;

@@ -42,7 +42,7 @@ const ManageGroupMembers = ({
         {selectedGroupIndex && (
           <>
             {groups[selectedGroupIndex].invited.length > 0 && (
-              <GroupUserTable groups={groups} />
+              <GroupUserTable groups={groups} selectedGroupIndex={selectedGroupIndex}/>
             )}
             <label>Add Students Group</label>
             <textarea

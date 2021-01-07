@@ -14,7 +14,7 @@ router.delete('/:id', checkAuth, activitiesCtrl.delete);
 
 /*---------- Auth Checker ----------*/
 function checkAuth(req, res, next) {
-    console.log('activity router', req)
+    // console.log('activity router', req)
     if (req) return next();
     if (req.isAuthenticated()) return next();
     return res.status(401).json({msg: 'Not Authorized'});
