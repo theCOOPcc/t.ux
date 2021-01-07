@@ -1,0 +1,471 @@
+/* screen - introduction */
+
+.border-class-1 {
+
+}
+.border-class-2 {
+  border: 1px solid var(--alto);
+}
+.border-class-3 {
+  border: 1px solid var(--mountain-mist);
+}
+.helveticaneue-bold-mine-shaft-16px {
+  color: var(--mine-shaft);
+  font-family: 'Helvetica Neue-Bold', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.introduction {
+  background-color: var(--white);
+  height: 2378px;
+  position: relative;
+  width: 1036px;
+}
+.introduction .body-copy-SuXUfK {
+  background-color: transparent;
+  color: var(--white);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 18px;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 896px;
+}
+.introduction .body-copy-jdAx62 {
+  background-color: transparent;
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 16px;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 940px;
+}
+.introduction .caption-te-redits-etc-C61RwL {
+  background-color: transparent;
+  height: 12px;
+  left: 457px;
+  position: absolute;
+  top: 678px;
+  width: 142px;
+}
+.introduction .caption-te-redits-etc-VvC9Lz {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 500;
+  height: 12px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: right;
+  top: 0px;
+  white-space: nowrap;
+  width: 142px;
+}
+.introduction .divider-dotted-C61RwL {
+  background-color: transparent;
+  height: 0px;
+  left: 65px;
+  position: absolute;
+  top: 215px;
+  width: 880px;
+}
+.introduction .image-12-C61RwL {
+  background-color: transparent;
+  height: 379px;
+  left: 58px;
+  position: absolute;
+  top: 299px;
+  width: 549px;
+}
+.introduction .item-list--objectives-C61RwL {
+  background-color: transparent;
+  height: 980px;
+  left: 68px;
+  position: absolute;
+  top: 1223px;
+  width: 883px;
+}
+.introduction .lesson-obj--interaces-9MBgm5 {
+  background-color: transparent;
+  height: auto;
+  left: 26px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 33px;
+  width: 862px;
+}
+.introduction .lesson-obj-s-text-box-C61RwL {
+  background-color: rgba(120,214,218,0.23);
+  height: 208px;
+  left: 60px;
+  position: absolute;
+  top: 992px;
+  width: 896px;
+}
+.introduction .line-10-C4nRDb {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: 295px;
+  width: 881px;
+}
+.introduction .line-11-C4nRDb {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: 396px;
+  width: 881px;
+}
+.introduction .line-12-C4nRDb {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: 497px;
+  width: 881px;
+}
+.introduction .line-13-C4nRDb {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: 598px;
+  width: 881px;
+}
+.introduction .line-14-C4nRDb {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: 698px;
+  width: 881px;
+}
+.introduction .line-15-C4nRDb {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: 798px;
+  width: 881px;
+}
+.introduction .line-16-C4nRDb {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: 898px;
+  width: 881px;
+}
+.introduction .line-4-xv1xHo {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: -1px;
+  width: 880px;
+}
+.introduction .line-8-C4nRDb {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: 93px;
+  width: 881px;
+}
+.introduction .line-9-C4nRDb {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: 194px;
+  width: 881px;
+}
+.introduction .next-triple-chevron-C61RwL {
+  background-color: transparent;
+  background-image: url(../img/vector@2x.svg);
+  background-size: 100% 100%;
+  height: 37px;
+  left: 939px;
+  position: absolute;
+  top: 2297px;
+  width: 61px;
+}
+.introduction .page-divider-solid-C61RwL {
+  background-color: rgba(196,196,196,1.0);
+  height: 8px;
+  left: 59px;
+  position: absolute;
+  top: 722px;
+  width: 886px;
+}
+.introduction .rectangle-48-C61RwL {
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0px 4px 9px rgba(0,0,0,0.25);;
+  height: 2378px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1036px;
+}
+.introduction .rectangle-61-C61RwL {
+  background-color: var(--aquamarine);
+  height: 9px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1036px;
+}
+.introduction .rectangle-89-9MBgm5 {
+  background-color: var(--aquamarine);
+  height: 12px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 896px;
+}
+.introduction .span1-E0apyt {
+  color: rgba(102,102,102,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.00px;
+}
+.introduction .span1-EI8spN {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.introduction .span1-KinY1a {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 600;
+}
+.introduction .span1-xxmNLl {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.introduction .span2-E0apyt {
+  color: rgba(102,102,102,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+}
+.introduction .span2-EI8spN {
+  color: rgba(243,119,6,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.introduction .span2-KinY1a {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.introduction .span2-xxmNLl {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.introduction .span3-EI8spN {
+  color: rgba(84,152,155,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.introduction .text-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 554px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 117px;
+  width: 256px;
+}
+.introduction .text-body-paragraph-C61RwL {
+  background-color: transparent;
+  height: 39px;
+  left: 62px;
+  position: absolute;
+  top: 230px;
+  width: 940px;
+}
+.introduction .text-body-paragraph-VMr6Om {
+  background-color: transparent;
+  height: 194px;
+  left: 62px;
+  position: absolute;
+  top: 762px;
+  width: 896px;
+}
+.introduction .text-intro-subheader-C61RwL {
+  background-color: transparent;
+  height: 24px;
+  left: 62px;
+  position: absolute;
+  top: 172px;
+  width: 481px;
+}
+.introduction .to-the-10---ux-design-U0E3HE {
+  background-color: transparent;
+  color: transparent;
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 28px;
+  height: 24px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: auto;
+}
+.introduction .welcome-0O6yUh {
+  background-color: transparent;
+  color: rgba(54,96,98,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  height: 96px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 0.1px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 613px;
+}
+.introduction .welcome-C61RwL {
+  background-color: transparent;
+  height: 96px;
+  left: 62px;
+  position: absolute;
+  top: 69px;
+  width: 613px;
+}
+.introduction .x-back-C61RwL {
+  background-color: transparent;
+  height: 24px;
+  left: 21px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 22px;
+  white-space: nowrap;
+  width: 52px;
+}
+.introduction .x1-system-s-umentation-C4nRDb {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 100px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 883px;
+}
+.poppins-bold-chilean-fire-60px {
+  color: var(--chilean-fire);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-medium-black-16px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.poppins-normal-black-14px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.poppins-normal-black-18px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.poppins-normal-black-18px-2 {
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 18px;
+}
+.poppins-normal-granite-gray-24px {
+  color: var(--granite-gray);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 24px;
+}
+.poppins-normal-white-16px {
+  color: transparent;
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 16px;
+}
+.poppins-semi-bold-black-24px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+.proximanova-bold-black-40px {
+  color: var(--black);
+  font-family: 'Proxima Nova-Bold', Helvetica, Arial, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+:root {
+  --alto: rgba(221,221,221,1.0);
+  --aquamarine: rgba(120,214,218,1.0);
+  --aquamarine-2: rgba(120,214,218,0.2);
+  --black: rgba(0,0,0,1.0);
+  --chilean-fire: rgba(243,119,6,1.0);
+  --granite-gray: rgba(102,102,102,1.0);
+  --mine-shaft: rgba(51,51,51,1.0);
+  --mountain-mist: rgba(153,153,153,1.0);
+  --white: rgba(255,255,255,1.0);
+}

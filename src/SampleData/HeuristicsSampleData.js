@@ -14,54 +14,282 @@ export const HeuristicsSampleData = {
         {
           type: 'display',
           contents: `
-          <h1 class="intro">Introduction</h1>
-          <h2 class="intro-sub"><span class="intro-sub-span">to the</span> 10 Heuristics of UX Design</h2>
+          <!DOCTYPE html>
+            <html>
+              <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=1036, maximum-scale=1.0" />
+                <link rel="shortcut icon" href="./img/favicon.png" />
+                <meta name="og:type" content="website" />
+                <meta name="twitter:card" content="photo" />
+                <link rel="stylesheet" type="text/css" href="css/introduction.css" />
+                <style>
+                  @import url("https://fonts.googleapis.com/css?family=Poppins:500,300,700,400,600|Noto+Serif:600,600italic");
 
-          <p class="notTest">
-            <strong>This is not a test.</strong> The following activity is intended
-            as an introduction to the 10 Heuristic principles of Usability.
-          </p>
-          <div class="img"></div>
-          <p class="caption">Image caption here</p>
-          <div class="page-divider"></div>
-          <p class="semi-bold">
-              25 years ago, Jakob Nielsen described the 10 general principles for
-              interaction design. These principles were developed based on years of
-              experience in the field of usability engineering and they’ve became
-              rules of thumb for human-computer interaction.
-          </p>
-          <p class="paragraph">
-            Today, they are just as relevant as they were then. They can help to
-            save development teams considerable amounts of time during early
-            usability testing, so that they can direct their attention to more
-            complex design challenges. In addition, it’s also worth it to use them
-            as a checklist when designing a new product or a feature.
-          </p>
+                  @font-face {
+                    font-family: "Proxima Nova-Bold";
+                    font-style: normal;
+                    font-weight: 700;
+                    src: url("https://anima-uploads.s3.amazonaws.com/5c5874afb72544000ad1576b/ProximaNova-Reg.ttf")
+                      format("truetype");
+                  }
 
-          <div class="sticky__blue">
-            <div class="sticky-top__blue"></div>
-            <h3 class="h3-sticky">Lesson Objectives</h3>
-            <ul class="sticky-list">
-                <li>At the end of this Activity you will be able to:</li>
-                <li>Define the 10 Usability Heuristics</li>
-                <li>Identify Heuristics as they pertain to Digital Interfaces</li>
-            </ul> 
-          </div>
+                  @font-face {
+                    font-family: "Helvetica Neue-Bold";
+                    font-style: normal;
+                    font-weight: 700;
+                    src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
+                  }
 
-          <div>
-            <ul class="lesson-objectives">
-              <li>1. System Status</li>
-              <li>2. System / World Match</li>
-              <li>3. User Control & Freedom</li>
-              <li>4. Consistency & Standards</li>
-              <li>5. Error Prevention</li>
-              <li>6. Recognition over Recall</li>
-              <li>7. Flexibility & Efficiency</li>
-              <li>8. Aesthetic & Minimalism</li>
-              <li>9. User Errors</li>
-              <li>10. Help & Documentation</li>
-            </ul>
-          </div>
+                  .component-wrapper a,
+                  .screen a {
+                    text-decoration: none;
+                    display: contents;
+                  }
+
+                  .full-width-a {
+                    width: 100%;
+                  }
+
+                  .full-height-a {
+                    height: 100%;
+                  }
+
+                  .screen textarea:focus,
+                  .screen input:focus {
+                    outline: none;
+                  }
+
+                  .screen *,
+                  .component-wrapper * {
+                    box-sizing: border-box;
+                  }
+
+                  .screen div {
+                    -webkit-text-size-adjust: none;
+                  }
+
+                  .container-center-vertical,
+                  .container-center-horizontal {
+                    pointer-events: none;
+                    display: flex;
+                    flex-direction: row;
+                    padding: 0;
+                    margin: 0;
+                  }
+
+                  .container-center-vertical {
+                    align-items: center;
+                    height: 100%;
+                  }
+
+                  .container-center-horizontal {
+                    justify-content: center;
+                    width: 100%;
+                  }
+
+                  .container-center-vertical > *,
+                  .container-center-horizontal > * {
+                    pointer-events: auto;
+                    flex-shrink: 0;
+                  }
+
+                  .component-wrapper,
+                  .screen {
+                    overflow-wrap: break-word;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                    word-break: break-word;
+                  }
+
+                  .auto-animated div {
+                    opacity: 0;
+                    position: absolute;
+                    --z-index: -1;
+                  }
+
+                  .auto-animated .container-center-vertical,
+                  .auto-animated .container-center-horizontal {
+                    opacity: 1;
+                  }
+
+                  .overlay {
+                    position: absolute;
+                    opacity: 0;
+                    display: none;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    position: fixed;
+                  }
+
+                  .animate-appear {
+                    opacity: 0;
+                    display: block;
+                    animation: reveal 0.3s ease-in-out 1 normal forwards;
+                  }
+
+                  .animate-disappear {
+                    opacity: 1;
+                    display: block;
+                    animation: reveal 0.3s ease-in-out 1 reverse forwards;
+                  }
+
+                  .animate-nodelay {
+                    animation-delay: 0s;
+                  }
+
+                  @keyframes reveal {
+                    from {
+                      opacity: 0;
+                    }
+                    to {
+                      opacity: 1;
+                    }
+                  }
+                  .align-self-flex-start {
+                    align-self: flex-start;
+                  }
+                  .align-self-flex-end {
+                    align-self: flex-end;
+                  }
+                  .align-self-flex-center {
+                    align-self: center;
+                  }
+                  .valign-text-middle {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                  }
+                  .valign-text-bottom {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                  }
+                  input:focus {
+                    outline: none;
+                  }
+                  .component-wrapper,
+                  .component-wrapper * {
+                    pointer-events: none;
+                  }
+
+                  .component-wrapper a *,
+                  .component-wrapper a,
+                  .component-wrapper input,
+                  .component-wrapper video,
+                  .component-wrapper iframe,
+                  .listeners-active,
+                  .listeners-active * {
+                    pointer-events: auto;
+                  }
+
+                  .hidden,
+                  .hidden * {
+                    visibility: hidden;
+                    pointer-events: none;
+                  }
+
+                  .smart-layers-pointers,
+                  .smart-layers-pointers * {
+                    pointer-events: auto;
+                    visibility: visible;
+                  }
+
+                  .component-wrapper.not-ready,
+                  .component-wrapper.not-ready * {
+                    visibility: hidden !important;
+                  }
+
+                  .listeners-active-click,
+                  .listeners-active-click * {
+                    cursor: pointer;
+                  }
+                </style>
+                <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+              </head>
+              <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+                <input type="hidden" id="anPageName" name="page" value="introduction" />
+                <div class="container-center-horizontal">
+                  <div class="introduction screen">
+                    <div class="rectangle-48-C61RwL border-class-2"></div>
+                    <a href="javascript:history.back()"
+                      ><div class="x-back-C61RwL valign-text-middle border-class-1 poppins-medium-black-16px">&lt;Back</div></a
+                    >
+                    <div class="rectangle-61-C61RwL"></div>
+                    <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
+                    <div class="welcome-C61RwL">
+                      <div class="welcome-0O6yUh valign-text-middle border-class-1">Introduction</div>
+                    </div>
+                    <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="img/line-4-26@1x.svg" /></div>
+                    <div class="text-intro-subheader-C61RwL">
+                      <div class="to-the-10---ux-design-U0E3HE valign-text-middle border-class-1">
+                        <span>
+                          <span class="span1-EI8spN">to the </span><span class="span2-EI8spN">10 Heuristics of UX Design</span
+                          ><span class="span3-EI8spN">.</span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="page-divider-solid-C61RwL"></div>
+                    <div class="caption-te-redits-etc-C61RwL">
+                      <div class="caption-te-redits-etc-VvC9Lz valign-text-middle border-class-1">
+                        Caption Text: Photo Credits etc....
+                      </div>
+                    </div>
+                    <div class="text-body-paragraph-C61RwL">
+                      <div class="body-copy-jdAx62 border-class-1">
+                        <span class="span1-xxmNLl">This is not a test.</span
+                        ><span class="span2-xxmNLl">
+                          The following activity is intended as an introduction to the 10 Heuristic principles of Usability.
+                        </span>
+                      </div>
+                    </div>
+                    <div class="next-triple-chevron-C61RwL"></div>
+                    <div class="text-body-paragraph-VMr6Om">
+                      <div class="body-copy-SuXUfK border-class-1">
+                        <span class="span1-KinY1a"
+                          >In 1994, Jakob Nielsen released the 10 general usability principles for interaction design. These
+                          principles were developed based on years of experience in the field of usability engineering and they’ve
+                          became rules of thumb for human-computer interaction.<br /><br /></span
+                        ><span class="span2-KinY1a"
+                          >Today, they are just as relevant as they were then. They can help to save development teams considerable
+                          amounts of time during early usability testing, so that they can direct their attention to more complex
+                          design challenges. In addition, it’s also worth it to use them as a checklist when designing a new product
+                          or a feature.<br
+                        /></span>
+                      </div>
+                    </div>
+                    <div class="lesson-obj-s-text-box-C61RwL">
+                      <div class="rectangle-89-9MBgm5"></div>
+                      <div class="lesson-obj--interaces-9MBgm5 border-class-1 poppins-normal-granite-gray-24px">
+                        <span class="span1-E0apyt">Lesson Objectives<br /></span
+                        ><span class="span2-E0apyt"
+                          >• At the end of this Activity you will be able to: <br />• Define the 10 Usability Heuristics<br />• Identify
+                          Heuristics as they pertain to Digital Interaces.&nbsp;&nbsp;</span
+                        >
+                      </div>
+                    </div>
+                    <img class="image-12-C61RwL" src="img/image-12@1x.jpg" />
+                    <div class="item-list--objectives-C61RwL">
+                      <div class="x1-system-s-umentation-C4nRDb border-class-1">
+                        1. System Status<br />2. System / World Match<br />3. User Control &amp; Freedom<br />4. Consistency &amp;
+                        Standards<br />5. Error Prevention<br />6. Recognition over Recall<br />7. Flexibility &amp; Efficiency<br />8.
+                        Aesthetic &amp; Minimilism<br />9. User Errors<br />10. Help &amp; Documentation
+                      </div>
+                      <img class="line-8-C4nRDb" src="img/line-8@1x.svg" />
+                      <img class="line-9-C4nRDb" src="img/line-8@1x.svg" />
+                      <img class="line-10-C4nRDb" src="img/line-8@1x.svg" />
+                      <img class="line-11-C4nRDb" src="img/line-8@1x.svg" />
+                      <img class="line-12-C4nRDb" src="img/line-8@1x.svg" />
+                      <img class="line-13-C4nRDb" src="img/line-8@1x.svg" />
+                      <img class="line-14-C4nRDb" src="img/line-8@1x.svg" />
+                      <img class="line-15-C4nRDb" src="img/line-8@1x.svg" />
+                      <img class="line-16-C4nRDb" src="img/line-8@1x.svg" />
+                    </div>
+                  </div>
+                </div>
+              </body>
+            </html>
           `,
         },
       ],
@@ -71,71 +299,274 @@ export const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1 class="headline">1. Visibility of System Status</h1>
-          <img src="" alt="" />
-          <div class="traffic-light">
-            <div class="red-circle"></div>
-            <div class="yellow-circle"></div>
-            <div class="blue-circle"></div>
-          </div>
-          <p class="paragraph">
-            Users should always be informed about what is going on through
-            appropriate and timely feedback. When people interact with any system it
-            should always provide immediate feedback on the interaction. This helps
-            create a smooth navigation process for users.
-          </p>
-          <div class="sticky__yellow">
-          <div class="sticky-top__yellow"></div>
-            <h2 class="h3-sticky">Scenario:</h2>
-            <div class="flexBox">
-              <p class="yellow-text">
-                When you pick up your smartphone. As soon as you lift it, the screen
-                lights up and it informs you of missed notifications from various apps,
-                received messages, and missed calls. You can always tell how much
-                battery power you have left, the status of your internet connection, how
-                much cell reception you have (usually using a bar graph), and the time.
-              </p>
-              <img class="phoneImg" src="/images/phonePic.png" alt="iPhone Home screen held in a hand" />
-            </div>
-          </div>
+          contents: `
+          <!DOCTYPE html>
+            <html>
+              <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=1042, maximum-scale=1.0" />
+                <link rel="shortcut icon" href="./img/favicon.png" />
+                <meta name="og:type" content="website" />
+                <meta name="twitter:card" content="photo" />
+                <link rel="stylesheet" type="text/css" href="css/visibility-of-system-status.css" />
+                <style>
+                  @import url("https://fonts.googleapis.com/css?family=Poppins:500,300,700,400,600|Noto+Serif:600,600italic");
 
-          <h6 class="examples">Examples</h6>
-          <div class="imgFlexBox">
-            <div class="innerFlexBox">
-              <img src="/images/gmailLoading.png" alt="gmail loading logo" width="175" />
-              <p class="imageP">Mail Loading</p>
-            </div>
-            <div class="innerFlexBox">
-              <img src="/images/loadingCircle.png" alt="Loading circle image" width="145" />
-              <p class="imageP">Load Indicator</p>
-            </div>
-            <div class="innerFlexBox">
-              <img src="/images/editForm.png" alt="Step progress bar, shows Edit Form then three circles" width="300"/>
-              <p class="imageP">Step Progress Bar</p>
-            </div>
-          </div>
+                  @font-face {
+                    font-family: "Proxima Nova-Bold";
+                    font-style: normal;
+                    font-weight: 700;
+                    src: url("https://anima-uploads.s3.amazonaws.com/5c5874afb72544000ad1576b/ProximaNova-Reg.ttf")
+                      format("truetype");
+                  }
 
-          <p class="paragraph">
-            Some other examples showing how to give feedback to users in appropriate
-            time. We can do that by image, illustration, text even with sound. After
-            posting on Twitter, emailing from mail application we hear a ‘swoosh’
-            sound, it's also a good example.
-          </p>
-          <img src="/images/feedback.png" alt="Shopping cart feedback example" />
-          <p class="paragraph">
-            How do feel when you see the item is not available or the size is not
-            available in Cart List? Do you become angry after not getting any
-            feedback by clicking <span class="semi-bold">ADD TO CART</span> button? The system not giving feedback
-            on the action you did.
-          </p>
-          <p class="paragraph">
-            You saw the item in the products list but something went wrong now. Look
-            at the above screenshots. The system keeps telling the user which size
-            is available, which color is out of stock. After selecting the item you
-            get a pop up ‘Your item is added to cart’, now you feel comfortable in
-            using the system as you know what state are you in the system and you
-            continue the shopping.
-          </p>`,
+                  @font-face {
+                    font-family: "Helvetica Neue-Bold";
+                    font-style: normal;
+                    font-weight: 700;
+                    src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
+                  }
+
+                  .component-wrapper a,
+                  .screen a {
+                    text-decoration: none;
+                    display: contents;
+                  }
+
+                  .full-width-a {
+                    width: 100%;
+                  }
+
+                  .full-height-a {
+                    height: 100%;
+                  }
+
+                  .screen textarea:focus,
+                  .screen input:focus {
+                    outline: none;
+                  }
+
+                  .screen *,
+                  .component-wrapper * {
+                    box-sizing: border-box;
+                  }
+
+                  .screen div {
+                    -webkit-text-size-adjust: none;
+                  }
+
+                  .container-center-vertical,
+                  .container-center-horizontal {
+                    pointer-events: none;
+                    display: flex;
+                    flex-direction: row;
+                    padding: 0;
+                    margin: 0;
+                  }
+
+                  .container-center-vertical {
+                    align-items: center;
+                    height: 100%;
+                  }
+
+                  .container-center-horizontal {
+                    justify-content: center;
+                    width: 100%;
+                  }
+
+                  .container-center-vertical > *,
+                  .container-center-horizontal > * {
+                    pointer-events: auto;
+                    flex-shrink: 0;
+                  }
+
+                  .component-wrapper,
+                  .screen {
+                    overflow-wrap: break-word;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                    word-break: break-word;
+                  }
+
+                  .auto-animated div {
+                    opacity: 0;
+                    position: absolute;
+                    --z-index: -1;
+                  }
+
+                  .auto-animated .container-center-vertical,
+                  .auto-animated .container-center-horizontal {
+                    opacity: 1;
+                  }
+
+                  .overlay {
+                    position: absolute;
+                    opacity: 0;
+                    display: none;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    position: fixed;
+                  }
+
+                  .animate-appear {
+                    opacity: 0;
+                    display: block;
+                    animation: reveal 0.3s ease-in-out 1 normal forwards;
+                  }
+
+                  .animate-disappear {
+                    opacity: 1;
+                    display: block;
+                    animation: reveal 0.3s ease-in-out 1 reverse forwards;
+                  }
+
+                  .animate-nodelay {
+                    animation-delay: 0s;
+                  }
+
+                  @keyframes reveal {
+                    from {
+                      opacity: 0;
+                    }
+                    to {
+                      opacity: 1;
+                    }
+                  }
+                  .align-self-flex-start {
+                    align-self: flex-start;
+                  }
+                  .align-self-flex-end {
+                    align-self: flex-end;
+                  }
+                  .align-self-flex-center {
+                    align-self: center;
+                  }
+                  .valign-text-middle {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                  }
+                  .valign-text-bottom {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                  }
+                  input:focus {
+                    outline: none;
+                  }
+                  .component-wrapper,
+                  .component-wrapper * {
+                    pointer-events: none;
+                  }
+
+                  .component-wrapper a *,
+                  .component-wrapper a,
+                  .component-wrapper input,
+                  .component-wrapper video,
+                  .component-wrapper iframe,
+                  .listeners-active,
+                  .listeners-active * {
+                    pointer-events: auto;
+                  }
+
+                  .hidden,
+                  .hidden * {
+                    visibility: hidden;
+                    pointer-events: none;
+                  }
+
+                  .smart-layers-pointers,
+                  .smart-layers-pointers * {
+                    pointer-events: auto;
+                    visibility: visible;
+                  }
+
+                  .component-wrapper.not-ready,
+                  .component-wrapper.not-ready * {
+                    visibility: hidden !important;
+                  }
+
+                  .listeners-active-click,
+                  .listeners-active-click * {
+                    cursor: pointer;
+                  }
+                </style>
+                <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+              </head>
+              <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+                <input type="hidden" id="anPageName" name="page" value="visibility-of-system-status" />
+                <div class="visibility-of-system-status screen">
+                  <div class="rectangle-48-C61RwL border-class-2"></div>
+                  <a href="javascript:history.back()"
+                    ><div class="x-back-C61RwL valign-text-middle border-class-1 poppins-medium-black-16px">&lt;Back</div></a
+                  >
+                  <div class="rectangle-61-C61RwL"></div>
+                  <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
+                  <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="img/line-4@1x.svg" /></div>
+                  <img class="group-41-C61RwL" src="img/group-41@1x.png" />
+                  <div class="welcome-C61RwL">
+                    <div class="x1-visibili-tem-status-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
+                      1. Visibility of System Status
+                    </div>
+                  </div>
+                  <div class="next-triple-chevron-C61RwL"></div>
+                  <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="img/line-4-21@1x.svg" /></div>
+                  <div class="examples-C61RwL valign-text-middle border-class-1">EXAMPLES</div>
+                  <div class="group-94-C61RwL">
+                    <img class="load-indicator-NhvmeG" src="img/load-indicator@1x.png" />
+                    <img class="step-progress-bar-NhvmeG" src="img/step-progress-bar@1x.png" />
+                    <img class="gmail-loading-NhvmeG" src="img/gmail-loading@1x.png" />
+                  </div>
+                  <div class="text-body-paragraph-C61RwL">
+                    <div class="body-copy-jdAx62 border-class-1 poppins-normal-black-18px">
+                      Some more ways we can give feedback to users in appropriate time are through:<br />
+                      • image <br />
+                      • illustration<br />
+                      • text <br />
+                      • sound (ex: after send an email from mail application we hear a ‘swoosh’ sound)
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-VMr6Om">
+                    <div class="body-copy-SuXUfK border-class-1 poppins-normal-black-18px-2">
+                      <span class="span1-KinY1a"
+                        >How do feel when you put an item in your online shopping cart, only to see the item is not available or the
+                        size is not available once in the Cart List? Do you become angry after not getting any feedback by clicking </span
+                      ><span class="span2-KinY1a">ADD TO CART</span
+                      ><span class="span3-KinY1a">
+                        button? The system is not giving feedback on the action you did.<br /><br />You saw the item in the products
+                        list but something went wrong. Look at the above screenshots. The system is telling the user which size is
+                        available, which color is out of stock. After selecting the item you get a pop up ‘Your item is added to
+                        cart’, now you feel comfortable in using the system as you know what state are you in the system and you
+                        continue the shopping.</span
+                      >
+                    </div>
+                  </div>
+                  <img class="x1-mo-mp-kz--lls2-wa-1-C61RwL" src="img/1-mompkzetmd-oz-al-ls2wa-1@1x.jpg" />
+                  <div class="text-body-paragraph-mzXdH9">
+                    <div class="body-copy-SCxiAB border-class-1 poppins-normal-black-18px">
+                      Users should always be informed about what is going on through appropriate and timely feedback.<br />When
+                      people interact with any system it should always provide immediate feedback on the interaction. This helps
+                      create a smooth navigation process for users.
+                    </div>
+                  </div>
+                  <div class="scenario-t-with-image-C61RwL">
+                    <div class="rectangle-89-qCRxHs"></div>
+                    <div class="scenario-w-d-the-time-qCRxHs border-class-1 poppins-normal-granite-gray-24px">
+                      <span class="span1-7FYOOU">Scenario: <br /></span
+                      ><span class="span2-7FYOOU"
+                        >When you pick up your smartphone. As soon as you lift it, the screen lights up and it informs you of missed
+                        notifications from various apps, received messages, and missed calls.&nbsp;&nbsp;You can always tell how
+                        much battery power you have left, the status of your internet connection, how much cell reception you have
+                        (usually using a bar graph), and the time.
+                      </span>
+                    </div>
+                  </div>
+                  <img class="scenario-image-C61RwL" src="img/scenario-image@1x.png" />
+                </div>
+              </body>
+            </html>
+            `,
         },
         {
           type: 'question',
@@ -176,48 +607,309 @@ export const HeuristicsSampleData = {
         {
           type: 'display',
           contents: `
-          <img src="" alt="" />
-      <span>A Good Example of a Visible System Status</span>
-      <img src="" alt="" />
-      <span>A Bad Exaple of a Visible System Status</span>
-      <p>
-        Visibility of System Status is about communication and transparency. The
-        reason it is so important is because it leads to better decision making
-        for the user. Above, are two examples of the same page. Look at Example
-        2. You cannot tell what has been selected and what hasn’t. It does not
-        give the user a clear idea of what is going on.
-      </p>
-      <img src="" alt="" />
-      <span>A Good Example of a Visible System Status</span>
-      <img src="" alt="" />
-      <span>A Bad Exaple of a Visible System Status</span>
-      <p>
-        Scenario: Imagine yourself driving through the city of San Francisco.
-        You need to get to Daly City. You’re not very familiar with your current
-        surroundings. Consider which map you’d rather use to help you get there.
-        The Good example helps your orient where you are. The Bad example leaves
-        you a little more clueless. This is why it’s very important to orient
-        your user.
-      </p>
-      <img src="" alt="" />
-      <p>
-        As previously discussed, the design should always keep users informed
-        about what is going on through appropriate feedback within a reasonable
-        amount of time. When users know the current system status, they learn
-        the outcome of their prior interactions and determine next steps.
-        Predictable interactions create trust in the product as well as the
-        brand.
-      </p>
-      <p>
-        Conclusion: The 7th usability heuristic (flexibility and efficiency of
-        use) is about allowing users to approach tasks in a variety of ways. New
-        users may require guidance in performing their tasks, whereas
-        experienced users can take advantage of accelerators and other secondary
-        features designed to speed up commonly performed actions. Embracing this
-        heuristic means allowing user customization, not being prescriptive
-        about core task steps, and adding unobtrusive accelerators that power
-        users can discover and employ efficiently.{' '}
-      </p>
+          <!DOCTYPE html>
+            <html>
+              <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=1042, maximum-scale=1.0" />
+                <link rel="shortcut icon" href="./img/favicon.png" />
+                <meta name="og:type" content="website" />
+                <meta name="twitter:card" content="photo" />
+                <link rel="stylesheet" type="text/css" href="css/visibility-of-system-status-2.css" />
+                <style>
+                  @import url("https://fonts.googleapis.com/css?family=Poppins:500,300,700,400,600|Noto+Serif:600,600italic");
+
+                  @font-face {
+                    font-family: "Proxima Nova-Bold";
+                    font-style: normal;
+                    font-weight: 700;
+                    src: url("https://anima-uploads.s3.amazonaws.com/5c5874afb72544000ad1576b/ProximaNova-Reg.ttf")
+                      format("truetype");
+                  }
+
+                  @font-face {
+                    font-family: "Helvetica Neue-Bold";
+                    font-style: normal;
+                    font-weight: 700;
+                    src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
+                  }
+
+                  .component-wrapper a,
+                  .screen a {
+                    text-decoration: none;
+                    display: contents;
+                  }
+
+                  .full-width-a {
+                    width: 100%;
+                  }
+
+                  .full-height-a {
+                    height: 100%;
+                  }
+
+                  .screen textarea:focus,
+                  .screen input:focus {
+                    outline: none;
+                  }
+
+                  .screen *,
+                  .component-wrapper * {
+                    box-sizing: border-box;
+                  }
+
+                  .screen div {
+                    -webkit-text-size-adjust: none;
+                  }
+
+                  .container-center-vertical,
+                  .container-center-horizontal {
+                    pointer-events: none;
+                    display: flex;
+                    flex-direction: row;
+                    padding: 0;
+                    margin: 0;
+                  }
+
+                  .container-center-vertical {
+                    align-items: center;
+                    height: 100%;
+                  }
+
+                  .container-center-horizontal {
+                    justify-content: center;
+                    width: 100%;
+                  }
+
+                  .container-center-vertical > *,
+                  .container-center-horizontal > * {
+                    pointer-events: auto;
+                    flex-shrink: 0;
+                  }
+
+                  .component-wrapper,
+                  .screen {
+                    overflow-wrap: break-word;
+                    word-wrap: break-word;
+                    word-break: break-all;
+                    word-break: break-word;
+                  }
+
+                  .auto-animated div {
+                    opacity: 0;
+                    position: absolute;
+                    --z-index: -1;
+                  }
+
+                  .auto-animated .container-center-vertical,
+                  .auto-animated .container-center-horizontal {
+                    opacity: 1;
+                  }
+
+                  .overlay {
+                    position: absolute;
+                    opacity: 0;
+                    display: none;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    position: fixed;
+                  }
+
+                  .animate-appear {
+                    opacity: 0;
+                    display: block;
+                    animation: reveal 0.3s ease-in-out 1 normal forwards;
+                  }
+
+                  .animate-disappear {
+                    opacity: 1;
+                    display: block;
+                    animation: reveal 0.3s ease-in-out 1 reverse forwards;
+                  }
+
+                  .animate-nodelay {
+                    animation-delay: 0s;
+                  }
+
+                  @keyframes reveal {
+                    from {
+                      opacity: 0;
+                    }
+                    to {
+                      opacity: 1;
+                    }
+                  }
+                  .align-self-flex-start {
+                    align-self: flex-start;
+                  }
+                  .align-self-flex-end {
+                    align-self: flex-end;
+                  }
+                  .align-self-flex-center {
+                    align-self: center;
+                  }
+                  .valign-text-middle {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                  }
+                  .valign-text-bottom {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                  }
+                  input:focus {
+                    outline: none;
+                  }
+                  .component-wrapper,
+                  .component-wrapper * {
+                    pointer-events: none;
+                  }
+
+                  .component-wrapper a *,
+                  .component-wrapper a,
+                  .component-wrapper input,
+                  .component-wrapper video,
+                  .component-wrapper iframe,
+                  .listeners-active,
+                  .listeners-active * {
+                    pointer-events: auto;
+                  }
+
+                  .hidden,
+                  .hidden * {
+                    visibility: hidden;
+                    pointer-events: none;
+                  }
+
+                  .smart-layers-pointers,
+                  .smart-layers-pointers * {
+                    pointer-events: auto;
+                    visibility: visible;
+                  }
+
+                  .component-wrapper.not-ready,
+                  .component-wrapper.not-ready * {
+                    visibility: hidden !important;
+                  }
+
+                  .listeners-active-click,
+                  .listeners-active-click * {
+                    cursor: pointer;
+                  }
+                </style>
+                <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+              </head>
+              <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+                <input type="hidden" id="anPageName" name="page" value="visibility-of-system-status-2" />
+                <div class="visibility-of-system-status-2 screen">
+                  <div class="rectangle-48-C61RwL border-class-2"></div>
+                  <a href="javascript:history.back()"
+                    ><div class="x-back-C61RwL valign-text-middle border-class-1 poppins-medium-black-16px">&lt;Back</div></a
+                  >
+                  <div class="rectangle-61-C61RwL"></div>
+                  <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
+                  <img class="table-date-C61RwL" src="img/tabledate@1x.png" />
+                  <div class="good-example-C61RwL">
+                    <div class="a-good-exa-tem-status-AjWjTr valign-text-middle border-class-1 poppins-normal-white-16px">
+                      <span>
+                        <span class="span1-KKqPKC">A</span><span class="span2-KKqPKC">&nbsp;</span
+                        ><span class="span3-KKqPKC">Good Example</span><span class="span4-KKqPKC"> of a Visible System Status</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="bad-example-C61RwL">
+                    <div class="a-bad-exam-tem-status-DqhExc valign-text-middle border-class-1 poppins-normal-white-16px">
+                      <span>
+                        <span class="span1-ZQRbnS">A </span><span class="span2-ZQRbnS">Bad Example</span
+                        ><span class="span3-ZQRbnS">&nbsp;</span><span class="span4-ZQRbnS">of a Visible System Status</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="img/line-4@1x.svg" /></div>
+                  <div class="text-body-paragraph-C61RwL">
+                    <div class="body-copy-jdAx62 border-class-1 poppins-normal-black-18px-2">
+                      <span class="span1-xxmNLl">Visibility of System Status </span><span class="span2-xxmNLl">is about </span
+                      ><span class="span3-xxmNLl">communication </span><span class="span4-xxmNLl">and</span
+                      ><span class="span5-xxmNLl"> transparency</span
+                      ><span class="span6-xxmNLl"
+                        >.&nbsp;&nbsp;The reason it is so important is because it leads to better decision making for the
+                        user.&nbsp;&nbsp;<br /><br />Above, are two examples of the same page.&nbsp;&nbsp;Look at Example
+                        2.&nbsp;&nbsp;You cannot tell what has been selected and what hasn’t.&nbsp;&nbsp;It does not give the user a
+                        clear idea of what is going on.<br /><br
+                      /></span>
+                    </div>
+                  </div>
+                  <div class="scenario-C61RwL">
+                    <div class="rectangle-89-ZsPSgu"></div>
+                    <div class="the-visibi--for-users-ZsPSgu valign-text-middle border-class-1 poppins-normal-granite-gray-24px">
+                      <span>
+                        <span class="span1-YBLvq0">Scenario: <br /></span
+                        ><span class="span2-YBLvq0"
+                          >Imagine yourself driving through the city of San Francisco.&nbsp;&nbsp;You need to get to Daly
+                          City.&nbsp;&nbsp;You’re not very familiar with your current surroundings.&nbsp;&nbsp;Consider which map
+                          you’d rather use to help you get there.&nbsp;&nbsp;The Good example helps your orient where you
+                          are.&nbsp;&nbsp;The Bad example leaves you a little more clueless.&nbsp;&nbsp;This is why it’s very
+                          important to orient your user.
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="good-example-VMr6Om">
+                    <div class="a-good-exa-tem-status-cucEBC valign-text-middle border-class-1 poppins-normal-white-16px">
+                      <span>
+                        <span class="span1-rdpePV">A</span><span class="span2-rdpePV">&nbsp;</span
+                        ><span class="span3-rdpePV">Good Example</span><span class="span4-rdpePV"> of a Visible System Status</span>
+                      </span>
+                    </div>
+                  </div>
+                  <img class="mapsicle-map-C61RwL" src="img/mapsicle-map@2x.jpg" />
+                  <img class="icon-artwork-C61RwL" src="img/icon-artwork@2x.svg" />
+                  <div class="bad-example-VMr6Om">
+                    <div class="a-bad-exam-tem-status-Ab4kxC valign-text-middle border-class-1 poppins-normal-white-16px">
+                      <span>
+                        <span class="span1-waxUJz">A </span><span class="span2-waxUJz">Bad Example</span
+                        ><span class="span3-waxUJz">&nbsp;</span><span class="span4-waxUJz">of a Visible System Status</span>
+                      </span>
+                    </div>
+                  </div>
+                  <img class="mapsicle-map-VMr6Om" src="img/mapsicle-map-1@2x.jpg" />
+                  <div class="text-body-paragraph-VMr6Om">
+                    <div class="body-copy-SuXUfK border-class-1 poppins-normal-black-18px">
+                      As previously discussed, the design should always keep users informed about what is going on through
+                      appropriate feedback within a reasonable amount of time.<br /><br />When users know the current system status,
+                      they learn the outcome of their prior interactions and determine next steps. Predictable interactions create
+                      trust in the product as well as the brand.
+                    </div>
+                  </div>
+                  <div class="conclusion-C61RwL">
+                    <div class="message-box-scenario-uxVav3">
+                      <div class="rectangle-89-l8o00t"></div>
+                      <div class="the-visibi--for-users-l8o00t valign-text-middle border-class-1 poppins-normal-granite-gray-24px">
+                        <span>
+                          <span class="span1-mWojpO">Conclusion:<br /></span
+                          ><span class="span2-mWojpO"
+                            >The 7th usability heuristic (flexibility and efficiency of use) is about allowing users to approach
+                            tasks in a variety of ways. New users may require guidance in performing their tasks, whereas
+                            experienced users can take advantage of accelerators and other secondary features designed to speed up
+                            commonly performed actions. Embracing this heuristic means allowing user customization, not being
+                            prescriptive about core task steps, and adding unobtrusive accelerators that power users can discover
+                            and employ efficiently.
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    class="componentl-y-zi-vjson-C61RwL"
+                    src="img/-component-lottie-https---assets3-lottiefiles-com-private-files-@1x.gif"
+                  />
+                  <div class="next-triple-chevron-C61RwL"></div>
+                </div>
+              </body>
+            </html>
+
           `,
         },
         {
@@ -249,74 +941,315 @@ export const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1 class="headline">2. System / World Match</h1>
-          <img id="finger" src="/images/pointerFinger.svg" alt="Line art of a hand with thumb and index finger extended" width="160" />
-          <p class="paragraph">
-            By using language that is familiar to your user, you create an
-            environment for users that is easier to navigate, understand, and
-            remember how to use.</p>
-          <p class="paragraph">It is important that the language, mental models,
-            and concepts you choose to implement are familiar to your users.</p>
-          <p class="paragraph"><span class="bolder">It is important to: </span>
-            <ol>
-              <li class="paragraph"><span class="semi-bold">Research your user</span>, the wording they use, and design with that in mind</li>
-              <li class="paragraph">Choose <span class="thick">clear and concise wording</span> that is easy to understand</li>
-              <li class="paragraph">If you need to use a word not everyone understands, <span class="thick">provide a definition</span> to go with it. They should never have to leave the
-              site to look up a word. 
-              <li class="paragraph">Leverage familiarity with real-world objects and activities - design in a way that <span class="thick">reflects material objects people already use.</span></li>
-            </ol>
-          </p>
-          <h3>Research your users</h3>
-          <p class="reg20">What are they saying?</p>
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <p class="quote">
-            “In simple terms, the system must speak the user's language which were
-            familiar to them, rather than system oriented jargons. We always seek
-            familiar words, things, concepts, shapes, images to understand and to
-            make a decision.”</p>
-          <p class="quote-capiton"> - Harsh Gorasia uxPlanet.org</p>
-          <h3 class="with-dash-top">The labels and other content</h3>
-          <p class="reg20">
-            Most of the times the users are going to search for you on the internet
-            or are going to navigate within your website using language that seems
-            more natural to them.
-          </p>
-          <img src="/images/shirt-for-party.png" alt="Screenshot of a shopping site search for White Shirt for Party with shirt options as sub images" />
-          <h3 class="with-dash-top">Leverage Familiarity</h3>
-          <p>
-            Below are examples of leveraging familiarity with real-world objects and
-            activities Each item has been translated from a real world object to a
-            digital item with the same purpose.
-          </p>
-          <div class="flexBox">
-            <img src="/images/handheld-calculator.png" alt="A handheld calculator" width="137" />
-            <img src="/images/wall-clock.png" alt="An analog wall clock" width="137" />
-            <img src="/images/aa-battery.png" alt="A single AA battery" width="137" />
-            <img src="/images/paper-calendar.png" alt="A paper calendar of the month Oct 2020" width="137" />
-          </div>
-          <br/>
-          <div class="flexBox">
-            <img src="/images/ios-calculator.png" alt="Screenshot of ios calculator" width="130"/>
-            <img src="/images/ios-clock-app.png" alt="Screenshot of ios clock app icon" width="137" />
-            <img src="/images/ios-battery-symbol.png" alt="Hand holding ios device with low battery symbol on screen" width="137" />
-            <img src="/images/ios-calendar.png" alt="Screnshot of an ios calendar" width="137" />
-          </div>
-          <br/><br/>
-            <div class="sticky__blue">
-            <div class="sticky-top__blue"></div>
-            <h3 class="h3-sticky">Conclusion:</h3>
-            <p class="sticky-list no-list">
-              The 7th usability heuristic (flexibility and efficiency of use) is about
-              allowing users to approach tasks in a variety of ways. New users may
-              require guidance in performing their tasks, whereas experienced users
-              can take advantage of accelerators and other secondary features designed
-              to speed up commonly performed actions. Embracing this heuristic means
-              allowing user customization, not being prescriptive about core task
-              steps, and adding unobtrusive accelerators that power users can discover
-              and employ efficiently.
-            </p>
-          </div>`,
+          contents: `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=1042, maximum-scale=1.0" />
+              <link rel="shortcut icon" href="./img/favicon.png" />
+              <meta name="og:type" content="website" />
+              <meta name="twitter:card" content="photo" />
+              <link rel="stylesheet" type="text/css" href="css/system-world-match.css" />
+              <style>
+                @import url("https://fonts.googleapis.com/css?family=Poppins:500,300,700,400,600|Noto+Serif:600,600italic");
+          
+                @font-face {
+                  font-family: "Proxima Nova-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5c5874afb72544000ad1576b/ProximaNova-Reg.ttf")
+                    format("truetype");
+                }
+          
+                @font-face {
+                  font-family: "Helvetica Neue-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
+                }
+          
+                .component-wrapper a,
+                .screen a {
+                  text-decoration: none;
+                  display: contents;
+                }
+          
+                .full-width-a {
+                  width: 100%;
+                }
+          
+                .full-height-a {
+                  height: 100%;
+                }
+          
+                .screen textarea:focus,
+                .screen input:focus {
+                  outline: none;
+                }
+          
+                .screen *,
+                .component-wrapper * {
+                  box-sizing: border-box;
+                }
+          
+                .screen div {
+                  -webkit-text-size-adjust: none;
+                }
+          
+                .container-center-vertical,
+                .container-center-horizontal {
+                  pointer-events: none;
+                  display: flex;
+                  flex-direction: row;
+                  padding: 0;
+                  margin: 0;
+                }
+          
+                .container-center-vertical {
+                  align-items: center;
+                  height: 100%;
+                }
+          
+                .container-center-horizontal {
+                  justify-content: center;
+                  width: 100%;
+                }
+          
+                .container-center-vertical > *,
+                .container-center-horizontal > * {
+                  pointer-events: auto;
+                  flex-shrink: 0;
+                }
+          
+                .component-wrapper,
+                .screen {
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-all;
+                  word-break: break-word;
+                }
+          
+                .auto-animated div {
+                  opacity: 0;
+                  position: absolute;
+                  --z-index: -1;
+                }
+          
+                .auto-animated .container-center-vertical,
+                .auto-animated .container-center-horizontal {
+                  opacity: 1;
+                }
+          
+                .overlay {
+                  position: absolute;
+                  opacity: 0;
+                  display: none;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  position: fixed;
+                }
+          
+                .animate-appear {
+                  opacity: 0;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 normal forwards;
+                }
+          
+                .animate-disappear {
+                  opacity: 1;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+                }
+          
+                .animate-nodelay {
+                  animation-delay: 0s;
+                }
+          
+                @keyframes reveal {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
+                }
+                .align-self-flex-start {
+                  align-self: flex-start;
+                }
+                .align-self-flex-end {
+                  align-self: flex-end;
+                }
+                .align-self-flex-center {
+                  align-self: center;
+                }
+                .valign-text-middle {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                }
+                .valign-text-bottom {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-end;
+                }
+                input:focus {
+                  outline: none;
+                }
+                .component-wrapper,
+                .component-wrapper * {
+                  pointer-events: none;
+                }
+          
+                .component-wrapper a *,
+                .component-wrapper a,
+                .component-wrapper input,
+                .component-wrapper video,
+                .component-wrapper iframe,
+                .listeners-active,
+                .listeners-active * {
+                  pointer-events: auto;
+                }
+          
+                .hidden,
+                .hidden * {
+                  visibility: hidden;
+                  pointer-events: none;
+                }
+          
+                .smart-layers-pointers,
+                .smart-layers-pointers * {
+                  pointer-events: auto;
+                  visibility: visible;
+                }
+          
+                .component-wrapper.not-ready,
+                .component-wrapper.not-ready * {
+                  visibility: hidden !important;
+                }
+          
+                .listeners-active-click,
+                .listeners-active-click * {
+                  cursor: pointer;
+                }
+              </style>
+              <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+            </head>
+            <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+              <input type="hidden" id="anPageName" name="page" value="system-world-match" />
+              <div class="system-world-match screen">
+                <div class="rectangle-48-C61RwL border-class-2"></div>
+                <a href="javascript:history.back()"
+                  ><div class="x-back-C61RwL valign-text-middle border-class-1 poppins-medium-black-16px">&lt;Back</div></a
+                >
+                <div class="rectangle-61-C61RwL"></div>
+                <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
+                <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="img/line-4-1@1x.svg" /></div>
+                <img class="lahand-pointer-solid-C61RwL" src="img/la-hand-pointer-solid@1x.png" />
+                <div class="welcome-C61RwL">
+                  <div class="welcome-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
+                    2. System / World Match
+                  </div>
+                </div>
+                <div class="conclusion-C61RwL">
+                  <div class="message-box-scenario-uxVav3">
+                    <div class="rectangle-89-l8o00t"></div>
+                    <div class="the-visibi--for-users-l8o00t valign-text-middle border-class-1 poppins-normal-granite-gray-24px">
+                      <span>
+                        <span class="span1-mWojpO">Conclusion:<br /><br /></span
+                        ><span class="span2-mWojpO"
+                          >Though we’ve broken down the individual parts of this heuristic to understand it further, it’s
+                          important to keep in mind that all parts of the principle must work together in order for the experience
+                          to succeed. Upholding the second usability heuristic in writing, visual, and interaction design
+                          demonstrates that the site knows its users and cares about them.</span
+                        >
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="group-95-C61RwL">
+                  <img class="rectangle-96-IUHrKR" src="img/rectangle-96@2x.svg" />
+                  <img class="rectangle-97-IUHrKR" src="img/rectangle-97@2x.svg" />
+                  <img class="rectangle-98-IUHrKR" src="img/rectangle-98@2x.svg" />
+                  <img class="rectangle-99-IUHrKR" src="img/rectangle-99@2x.svg" />
+                  <img class="rectangle-100-IUHrKR" src="img/rectangle-100@2x.svg" />
+                  <img class="rectangle-101-IUHrKR" src="img/rectangle-101@2x.svg" />
+                  <img class="x1-iugn-fsi-zw-IUHrKR" src="img/1iugn-fsizw@2x.svg" />
+                  <img class="png-image-2-IUHrKR" src="img/png-image-2@2x.jpg" />
+                </div>
+                <div class="text-secti--subheader-C61RwL">
+                  <div class="what-are-they-saying-SOgkRd valign-text-middle border-class-1">What are they saying?</div>
+                </div>
+                <img class="artboard-1-1-C61RwL" src="img/artboard---1-1@1x.jpg" />
+                <div class="text-body-paragraph-C61RwL">
+                  <div class="body-copy-jdAx62 border-class-1">
+                    Most of the times the users are going to search for you on the internet or are going to navigate within your
+                    website using language that seems more natural to them.
+                  </div>
+                </div>
+                <div class="text-body-paragraph-VMr6Om">
+                  <div class="body-copy-SuXUfK border-class-1">
+                    Below are examples of leveraging familiarity with real-world objects and activities <br />Each item has been
+                    translated from a real world object to a digital item with the same purpose.
+                  </div>
+                </div>
+                <div class="section-header-C61RwL">
+                  <div class="five-ways---your-work-X1rVr0 valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                    The labels and other content
+                  </div>
+                </div>
+                <div class="section-header-VMr6Om">
+                  <div class="leverage-familiarity-C44tDP valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                    Leverage Familiarity
+                  </div>
+                </div>
+                <div class="text-quote-C61RwL">
+                  <div class="quote-DGgCa2 valign-text-middle border-class-1">
+                    <span>
+                      <span class="span1-OXpQxt"
+                        >“In simple terms, the system must speak the user&#39;s language which were familiar to them, rather than
+                        system oriented jargons. We always seek familiar words, things, concepts, shapes, images to understand and
+                        to make a decision.”<br /></span
+                      ><span class="span2-OXpQxt">- Harsh Gorasia uxPlanet.org </span>
+                    </span>
+                  </div>
+                </div>
+                <img class="line-4-C61RwL" src="img/line-4-1@1x.svg" />
+                <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="img/vector@2x.svg" /></div>
+                <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="img/line-4-24@1x.svg" /></div>
+                <div class="divider-dotted-mzXdH9"><img class="line-4-qa0SLk" src="img/line-4-24@1x.svg" /></div>
+                <div class="text-body-paragraph-mzXdH9">
+                  <div class="body-copy-SCxiAB border-class-1">
+                    <span class="span1-Yh9UKS"
+                      >By using language that is familiar to your user, you create an environment for users that is easier to
+                      navigate, understand, and remember how to use.<br />It is important that the language, mental models, and
+                      concepts you choose to implement are </span
+                    ><span class="span2-Yh9UKS">familiar</span><span class="span3-Yh9UKS"> to your users.<br /></span
+                    ><span class="span4-Yh9UKS">It is important to:<br /></span><span class="span5-Yh9UKS">1. </span
+                    ><span class="span6-Yh9UKS">Research your user</span
+                    ><span class="span7-Yh9UKS">, the wording they use, and design with that in mind<br />2. Choose </span
+                    ><span class="span8-Yh9UKS">clear and concise wording</span
+                    ><span class="span9-Yh9UKS">
+                      that is easy to understand <br />3. If you need to use a word not everyone understands,</span
+                    ><span class="span10-Yh9UKS">&nbsp;</span><span class="span11-Yh9UKS">provide a definition</span
+                    ><span class="span12-Yh9UKS">
+                      to go with it.&nbsp;&nbsp;They should never have to leave the site to look up a word.<br />4. Leverage
+                      familiarity with real-world objects and activities - design in a way that </span
+                    ><span class="span13-Yh9UKS">reflects material objects people already use.</span>
+                  </div>
+                </div>
+                <div class="section-header-mzXdH9">
+                  <div class="five-ways---your-work-IYShxb valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                    Research you users
+                  </div>
+                </div>
+                <img class="group-83-C61RwL" src="img/group-83@1x.png" />
+                <img class="group-82-C61RwL" src="img/group-82@1x.png" />
+              </div>
+            </body>
+          </html>
+          `,
         },
         {
           type: 'question',
@@ -389,7 +1322,8 @@ export const HeuristicsSampleData = {
         {
           type: 'display',
 
-          contents: `<h1 class="headline">3. User Control & Freedom</h1>
+          contents: `
+          <h1 class="headline">3. User Control & Freedom</h1>
           <img src="/images/googleMailExample.png" alt="Screenshot of google mail interface" class="googleMailExampleImg" />
           <p>
             Example: The freedom to undo any accidental actions. This principle can
@@ -420,7 +1354,8 @@ export const HeuristicsSampleData = {
             deleting an email by finding the email in the “Trash” folder and moving
             the email back into their “Inbox.” This allows them to recover from
             their mistake.
-          </p>`,
+          </p>
+          `,
         },
         {
           type: 'question',
@@ -526,55 +1461,338 @@ export const HeuristicsSampleData = {
         {
           type: 'display',
 
-          contents: `<h1 class="headline">4. Consistency & Standards</h1>
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <p>
-            There are platform and industry conventions that must be followed in
-            order to lesson the cognitive burden on users of deciphering every
-            system they encounter. It is important that when a user is using your
-            platform, they know that their expectations will be met. Important
-            things to remember: 1. Maintain internal and external consistency with
-            your platform in order to improve learnability. 2. Stay consistent
-            within your product(s) (internal consistency). 3. Follow established
-            industry conventions (external consistency)
-          </p>
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <p>
-            The example above shows two diffferent layouts for a login form. Notice
-            how strange the second example looks. Thats because it is not following
-            the external consistency rule of following established industry
-            conventions.
-          </p>
-          <h2>Rules For Design Standards</h2>
-          <p>
-            To be successful, an interface design standard must: • be
-            well-illustrated with examples since designers go by the examples much
-            more than body text • make sure that the examples fully comply with the
-            standard in all aspects and not just the one they are intended to
-            illustrate (designers may pick up more than one hint from a given
-            example) • have extensive and comprehensive checklists as much as
-            possible (designers prefer to scan down a list instead of having to read
-            text) — for example, a list of all elements that must be on every page
-            or a list of preferred terminology • have a standards expert available
-            both to review new designs in a formal standards inspections and for
-            more informal consultations whenever designers are in doubt about the
-            correct interpretation of the standard (if there is no easy place to
-            turn with questions, then each designer will make up his or her own
-            answer — guaranteed to be different in each case) • be supported by an
-            active evangelism program. It is not enough to wait to be consulted: you
-            must actively seek out projects and visit them to tell them about the
-            standard and to (gently) comment on their designs and how to correct the
-            inevitable deviations • be a living document under the control of a
-            standards manager who updates the standard as new issues emerge • either
-            comply with the most popular other design standards or contain explicit
-            statements highlighting the differences to these other standards • be
-            supported by development tools and templates that make it easier to
-            comply with the standard than to implement a non-standard design • have
-            a good index (if printed) or a good search supplemented with hypertext
-            links to related rules (if online)
-          </p>`,
+          contents: `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=1042, maximum-scale=1.0" />
+              <link rel="shortcut icon" href="./img/favicon.png" />
+              <meta name="og:type" content="website" />
+              <meta name="twitter:card" content="photo" />
+              <link rel="stylesheet" type="text/css" href="css/consistency-standards.css" />
+              <style>
+                @import url("https://fonts.googleapis.com/css?family=Poppins:500,300,700,400,600|Noto+Serif:600,600italic");
+          
+                @font-face {
+                  font-family: "Proxima Nova-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5c5874afb72544000ad1576b/ProximaNova-Reg.ttf")
+                    format("truetype");
+                }
+          
+                @font-face {
+                  font-family: "Helvetica Neue-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
+                }
+          
+                .component-wrapper a,
+                .screen a {
+                  text-decoration: none;
+                  display: contents;
+                }
+          
+                .full-width-a {
+                  width: 100%;
+                }
+          
+                .full-height-a {
+                  height: 100%;
+                }
+          
+                .screen textarea:focus,
+                .screen input:focus {
+                  outline: none;
+                }
+          
+                .screen *,
+                .component-wrapper * {
+                  box-sizing: border-box;
+                }
+          
+                .screen div {
+                  -webkit-text-size-adjust: none;
+                }
+          
+                .container-center-vertical,
+                .container-center-horizontal {
+                  pointer-events: none;
+                  display: flex;
+                  flex-direction: row;
+                  padding: 0;
+                  margin: 0;
+                }
+          
+                .container-center-vertical {
+                  align-items: center;
+                  height: 100%;
+                }
+          
+                .container-center-horizontal {
+                  justify-content: center;
+                  width: 100%;
+                }
+          
+                .container-center-vertical > *,
+                .container-center-horizontal > * {
+                  pointer-events: auto;
+                  flex-shrink: 0;
+                }
+          
+                .component-wrapper,
+                .screen {
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-all;
+                  word-break: break-word;
+                }
+          
+                .auto-animated div {
+                  opacity: 0;
+                  position: absolute;
+                  --z-index: -1;
+                }
+          
+                .auto-animated .container-center-vertical,
+                .auto-animated .container-center-horizontal {
+                  opacity: 1;
+                }
+          
+                .overlay {
+                  position: absolute;
+                  opacity: 0;
+                  display: none;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  position: fixed;
+                }
+          
+                .animate-appear {
+                  opacity: 0;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 normal forwards;
+                }
+          
+                .animate-disappear {
+                  opacity: 1;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+                }
+          
+                .animate-nodelay {
+                  animation-delay: 0s;
+                }
+          
+                @keyframes reveal {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
+                }
+                .align-self-flex-start {
+                  align-self: flex-start;
+                }
+                .align-self-flex-end {
+                  align-self: flex-end;
+                }
+                .align-self-flex-center {
+                  align-self: center;
+                }
+                .valign-text-middle {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                }
+                .valign-text-bottom {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-end;
+                }
+                input:focus {
+                  outline: none;
+                }
+                .component-wrapper,
+                .component-wrapper * {
+                  pointer-events: none;
+                }
+          
+                .component-wrapper a *,
+                .component-wrapper a,
+                .component-wrapper input,
+                .component-wrapper video,
+                .component-wrapper iframe,
+                .listeners-active,
+                .listeners-active * {
+                  pointer-events: auto;
+                }
+          
+                .hidden,
+                .hidden * {
+                  visibility: hidden;
+                  pointer-events: none;
+                }
+          
+                .smart-layers-pointers,
+                .smart-layers-pointers * {
+                  pointer-events: auto;
+                  visibility: visible;
+                }
+          
+                .component-wrapper.not-ready,
+                .component-wrapper.not-ready * {
+                  visibility: hidden !important;
+                }
+          
+                .listeners-active-click,
+                .listeners-active-click * {
+                  cursor: pointer;
+                }
+              </style>
+              <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+            </head>
+            <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+              <input type="hidden" id="anPageName" name="page" value="consistency-standards" />
+              <div class="consistency-standards screen">
+                <div class="rectangle-48-C61RwL border-class-2"></div>
+                <a href="javascript:history.back()"
+                  ><div class="x-back-C61RwL valign-text-middle border-class-1 poppins-medium-black-16px">&lt;Back</div></a
+                >
+                <div class="rectangle-61-C61RwL"></div>
+                <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
+                <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="img/line-4-1@1x.svg" /></div>
+                <div class="welcome-C61RwL">
+                  <div class="welcome-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
+                    4. Consistency &amp; Standards
+                  </div>
+                </div>
+                <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="img/line-4-1@1x.svg" /></div>
+                <div class="divider-dotted-mzXdH9"><img class="line-4-qa0SLk" src="img/line-4-3@1x.svg" /></div>
+                <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="img/vector@2x.svg" /></div>
+                <img class="group-58-C61RwL" src="img/group-58@1x.png" />
+                <img class="layout-log-nding-page-C61RwL" src="img/layout-login-landing-page@1x.png" />
+                <div class="bad-example-C61RwL valign-text-middle border-class-1">Bad Example</div>
+                <div class="section-header-C61RwL">
+                  <div class="five-ways---your-work-X1rVr0 valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                    Five Ways You Can Achieve Consistency in Your Work
+                  </div>
+                </div>
+                <div class="section-header-VMr6Om">
+                  <div class="five-ways---your-work-C44tDP valign-text-middle border-class-1">
+                    <span>
+                      <span class="span1-FXcdop">Example: </span><span class="span2-FXcdop">Sign Up/Log In Layout</span>
+                    </span>
+                  </div>
+                </div>
+                <img class="x28e90e57f8-910d47f2-1-C61RwL" src="img/28e90e57f8ce9814cdfb9de9910d47f2-1@1x.jpg" />
+                <div class="image-caption-C61RwL">
+                  <div class="the-visibi--for-users-mWuPKx border-class-1 poppins-normal-black-14px">
+                    An example of a style guide and branding manual designed for the company, ‘Goodnyt’. Having a style and
+                    branding manual can help you make sure your visual elements are consistent throughout your site.
+                  </div>
+                </div>
+                <div class="image-caption-VMr6Om">
+                  <div class="the-visibi--for-users-jD5qyr border-class-1 poppins-normal-black-14px">
+                    Checkboxes allow more than one option. Therefore, it only makes sense for HTML’s built-in checkboxes to behave
+                    that way in functionality as well.
+                  </div>
+                </div>
+                <div class="image-caption-mzXdH9">
+                  <div class="the-visibi--for-users-T3UoVK border-class-1 poppins-normal-black-14px">
+                    Radio buttons only allow one option. Therefore, it only makes sense for HTML’s built-in radio buttons to
+                    behave that way in functionality as well.
+                  </div>
+                </div>
+                <img class="x7114fe396e-3641cefd-1-C61RwL" src="img/7114fe396ec6670356fbdfc13641cefd-1@1x.jpg" />
+                <img class="f6193b4e6a-e5dc2fe2-1-C61RwL" src="img/f6193b4e6a9c8ac399d8c6c8e5dc2fe2-1@1x.svg" />
+                <div class="divider-dotted-QxM5SU"><img class="line-4-KBGCks" src="img/line-4-1@1x.svg" /></div>
+                <div class="text-body-paragraph-C61RwL">
+                  <div class="body-copy-jdAx62 border-class-1">
+                    The example above shows two diffferent layouts for a login form.&nbsp;&nbsp;Notice how strange the second
+                    example looks. Thats because it is not following the external consistency rule of following established
+                    industry conventions.
+                  </div>
+                </div>
+                <img class="screen-sho--at-1147-1-C61RwL" src="img/screen-shot-2020-12-14-at-11-47-1@1x.jpg" />
+                <div class="image-caption-QxM5SU">
+                  <div class="the-visibi--for-users-qWiSjq border-class-1">Consistent Icons</div>
+                </div>
+                <img class="screen-sho--at-1147-2-C61RwL" src="img/screen-shot-2020-12-14-at-11-47-2@1x.jpg" />
+                <div class="image-caption-2P4qUJ">
+                  <div class="the-visibi--for-users-NA0Qkv border-class-1">Inconsistent Icons</div>
+                </div>
+                <div class="text-body-paragraph-VMr6Om">
+                  <div class="body-copy-SuXUfK border-class-1 poppins-normal-black-18px-2">
+                    <span class="span1-KinY1a"
+                      >There are platform and industry conventions that must be followed in order to lesson the cognitive burden
+                      on users of deciphering every system they encounter.&nbsp;&nbsp;It is important that when a user is using
+                      your platform, they know that their expectations will be met.<br /></span
+                    ><span class="span2-KinY1a"><br />Important things to remember:<br /></span
+                    ><span class="span3-KinY1a"><br /></span><span class="span4-KinY1a">1. Maintain </span
+                    ><span class="span5-KinY1a">internal and external consistency</span
+                    ><span class="span6-KinY1a"> with your platform in order to improve learnability.<br /><br />2. Stay </span
+                    ><span class="span7-KinY1a">consistent</span
+                    ><span class="span8-KinY1a"> within your product(s) (internal consistency).<br /><br />3. Follow </span
+                    ><span class="span9-KinY1a">established industry conventions</span
+                    ><span class="span10-KinY1a"> (external consistency)<br /></span
+                    ><span class="span11-KinY1a"><br /><br /><br /><br /></span>
+                  </div>
+                </div>
+                <div class="text-body-paragraph-mzXdH9">
+                  <div class="body-copy-SCxiAB border-class-1 poppins-normal-black-18px-2">
+                    <span class="span1-Yh9UKS">1. Your Choice of Language<br /></span
+                    ><span class="span2-Yh9UKS"
+                      >Your tone and word choice influence your user’s perception of your product.<br />Scaring your user with a
+                      serious and threatening error message when they’re browsing an ecommerce site that exhibits an overall
+                      friendly tone will be sure to kill an otherwise good user experience, for instance.<br />When things mean
+                      the same or perform the same operation they should be represented in the same way, as is the case in
+                      Google&#39;s email facility, Gmail. Based on the organization style of client email applications, Gmail’s
+                      folders are labelled &#39;Inbox&#39;, &#39;Drafts&#39;, &#39;Sent Mail&#39;, etc. The language used for
+                      these folders shows familiarity and consistency to anyone who have used email applications in the past.<br /></span
+                    ><span class="span3-Yh9UKS"><br />2. Apply UI Elements as They are Originally Defined<br /></span
+                    ><span class="span4-Yh9UKS"
+                      >UI elements that are commonly used, such as message windows, menu bars, icons, scrollbars, and radio
+                      buttons, are graphic elements that are typically consistent and </span
+                    ><span class="span5-Yh9UKS">have representations that are widely understood by users</span
+                    ><span class="span6-Yh9UKS"
+                      >. For instance, radio buttons are meant to be used when there is only one option allowed. Checkboxes on the
+                      other hand should be used only when the user is allowed more than one option.
+                    </span>
+                  </div>
+                </div>
+                <div class="text-body-paragraph-QxM5SU">
+                  <div class="body-copy-8ROB5j border-class-1 poppins-normal-black-18px-2">
+                    <span class="span1-t71XpP"
+                      >3. Consider Various Well-established Conventions When Deciding on Layout.<br /></span
+                    ><span class="span2-t71XpP"
+                      >It is certainly debatable whether a designer should “copy” how other people lay out their websites or apps.
+                      However, when you design with the user’s perspective and cognition in mind, it is important to understand
+                      that humans have a strong memory for where things are visually located on the screen. You should leverage
+                      this characteristic by reserving commonly used locations for various graphical elements such as having the
+                      logo on the top left, search field on the top right, exit icon on the top right, etc.<br /><br /></span
+                    ><span class="span3-t71XpP">4. Apply UI Elements as They are Originally Defined<br /></span
+                    ><span class="span4-t71XpP"
+                      >Make sure you have the features and functionalities users would expect to see on your site. For example, an
+                      airline site should have a ticket-booking system, while a music-sharing site should have a media player.<br /><br /></span
+                    ><span class="span5-t71XpP">5. Create Consistent Visual Elements throughout Your Site<br /></span
+                    ><span class="span6-t71XpP"
+                      >Make sure visual elements are consistent throughout your site. The content, the UI elements, fonts,
+                      backgrounds and colors should be in harmony and feel consistent at every touch point. As mentioned above,
+                      sticking to technical conventions that exist in the form of HTML5 and CSS3 is one way to keep consistency.
+                      Meanwhile, having a branding and style guide to follow helps when faced with design decisions such as colors
+                      and fonts.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </body>
+          </html>
+          `,
         },
         {
           type: 'question',
@@ -637,104 +1855,321 @@ export const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1 class="headline">5. Error Prevention</h1>
-          <img src="" alt="" />
-          <p>
-            The goal is to design so well that we prevent errors before they even
-            occur. However, it is important to account for errors by having well
-            designed error messages. It is important to carefully check your
-            products for error-prone conditions. It is also important to give users
-            a confirmation option before making a choice they cannot easily recover
-            from.
-          </p>
-          <h3>There are two types of errors:</h3>
-          <p>
-            Before discussing how to prevent errors, it’s important to note that
-            there are two types of errors that users make: slips and mistakes. (Both
-            are discussed in much greater detail in Don Norman’s book The Design of
-            Everyday Things.)
-          </p>
-          <p>
-            <strong>Slips</strong> occur when users intend to perform one action,
-            but end up doing another (often similar) action. For example, typing an
-            “i” instead of an “o” counts as a slip; accidentally putting liquid hand
-            soap on one’s toothbrush instead of toothpaste is also a slip. Slips are
-            typically made when users are on autopilot, and when they do not fully
-            devote their attention resources to the task at hand.
-          </p>
-          <p>
-            <strong>Mistakes</strong> are made when users have goals that are
-            inappropriate for the current problem or task; even if they take the
-            right steps to complete their goals, the steps will result in an error.
-            For example, if I misunderstood the meaning of the oil-pressure warning
-            light in my car, and thought it was the tire-pressure monitor, no matter
-            how carefully I added air to my tires, it would not fix the issue with
-            my oil pressure. This would be a mistake, since the goal that I was
-            attempting to accomplish was inappropriate for the situation, even
-            though I made no errors in executing my plan. Mistakes are conscious
-            errors, and often (though not exclusively) arise when a user has
-            incomplete or incorrect information about the task, and develops a
-            mental model that doesn’t match how the interface actually works.
-          </p>
-          <h2>General Guidelines</h2>
-          <p>
-            Slips often happen when users are quite familiar with the goal that they
-            seek to achieve and with the procedure for accomplishing that goal, but
-            accidentally they take the wrong step when trying to achieve it. Often,
-            when executing tasks that are well practiced, we tend to allocate fewer
-            attentional resources, and, as a result, we can “slip” and perform the
-            wrong action. Thus, ironically, slip-type mistakes often are made by
-            expert users who are very familiar with the process at hand; unlike new
-            users who are still learning how to use the system, experts feel that
-            they have mastered the task and need to pay less attention to its actual
-            completion. Strategies for preventing slips are centered around gently
-            guiding users so that they stay on the right path and have fewer chances
-            of slipping. Assist users by providing the needed level of precision,
-            and encourage users to check for errors.
-          </p>
-          <h2>Include Helpful Constraints</h2>
-          <p>
-            Slips often happen when users are quite familiar with the goal that they
-            seek to achieve and with the procedure for accomplishing that goal, but
-            accidentally they take the wrong step when trying to achieve it. Often,
-            when executing tasks that are well practiced, we tend to allocate fewer
-            attentional resources, and, as a result, we can “slip” and perform the
-            wrong action. Thus, ironically, slip-type mistakes often are made by
-            expert users who are very familiar withInclude Helpful Constraints While
-            it’s not always a good idea to limit users’ choices, in cases where
-            there are clear rules that define acceptable options, it can be a good
-            strategy to constrain the types of input users can make. For example,
-            booking a flight typically involves selecting the dates of travel, and
-            there are a few rules that govern which dates are acceptable. One of the
-            major rules is that a return flight cannot happen before a departure. If
-            users aren’t limited in the dates they can choose, they may slip and
-            accidentally select a set of dates for their flight that don’t follow
-            the rules. A helpful constraint here will force users to pick a date
-            range that fits. the process at hand; unlike new users who are still
-            learning how to use the system, experts feel that they have mastered the
-            task and need to pay less attention to its actual completion. Strategies
-            for preventing slips are centered around gently guiding users so that
-            they stay on the right path and have fewer chances of slipping. Assist
-            users by providing the needed level of precision, and encourage users to
-            check for errors.
-          </p>
-          <img src="" alt="" />
-          <h2>Other Suggestions</h2>
-          <p>
-            Similarly to how constraints guide users toward the correct use of an
-            interface, suggestions can preempt many slips before the user has the
-            opportunity to make them. On websites that offer thousands of products,
-            search is an effective way of helping users find their proverbial needle
-            in a haystack. However, typing can be inaccurate, especially on
-            touchscreens where there isn’t any tactile (also known as haptic)
-            feedback. While you cannot prevent a user from making typos (which are
-            slip-type errors), you can preempt typos from turning into problems by
-            offering contextual suggestions while the user types. Offering search
-            suggestions has also the benefit of supporting recognition over recall
-            in those situations when the users misremember the name of the product
-            or content they’re looking for.
-          </p>
-          <img src="" alt="" />`,
+          contents: `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=1042, maximum-scale=1.0" />
+              <link rel="shortcut icon" href="./img/favicon.png" />
+              <meta name="og:type" content="website" />
+              <meta name="twitter:card" content="photo" />
+              <link rel="stylesheet" type="text/css" href="css/error-prevention.css" />
+              <style>
+                @import url("https://fonts.googleapis.com/css?family=Poppins:500,300,700,400,600|Noto+Serif:600,600italic");
+
+                @font-face {
+                  font-family: "Proxima Nova-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5c5874afb72544000ad1576b/ProximaNova-Reg.ttf")
+                    format("truetype");
+                }
+
+                @font-face {
+                  font-family: "Helvetica Neue-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
+                }
+
+                .component-wrapper a,
+                .screen a {
+                  text-decoration: none;
+                  display: contents;
+                }
+
+                .full-width-a {
+                  width: 100%;
+                }
+
+                .full-height-a {
+                  height: 100%;
+                }
+
+                .screen textarea:focus,
+                .screen input:focus {
+                  outline: none;
+                }
+
+                .screen *,
+                .component-wrapper * {
+                  box-sizing: border-box;
+                }
+
+                .screen div {
+                  -webkit-text-size-adjust: none;
+                }
+
+                .container-center-vertical,
+                .container-center-horizontal {
+                  pointer-events: none;
+                  display: flex;
+                  flex-direction: row;
+                  padding: 0;
+                  margin: 0;
+                }
+
+                .container-center-vertical {
+                  align-items: center;
+                  height: 100%;
+                }
+
+                .container-center-horizontal {
+                  justify-content: center;
+                  width: 100%;
+                }
+
+                .container-center-vertical > *,
+                .container-center-horizontal > * {
+                  pointer-events: auto;
+                  flex-shrink: 0;
+                }
+
+                .component-wrapper,
+                .screen {
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-all;
+                  word-break: break-word;
+                }
+
+                .auto-animated div {
+                  opacity: 0;
+                  position: absolute;
+                  --z-index: -1;
+                }
+
+                .auto-animated .container-center-vertical,
+                .auto-animated .container-center-horizontal {
+                  opacity: 1;
+                }
+
+                .overlay {
+                  position: absolute;
+                  opacity: 0;
+                  display: none;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  position: fixed;
+                }
+
+                .animate-appear {
+                  opacity: 0;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 normal forwards;
+                }
+
+                .animate-disappear {
+                  opacity: 1;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+                }
+
+                .animate-nodelay {
+                  animation-delay: 0s;
+                }
+
+                @keyframes reveal {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
+                }
+                .align-self-flex-start {
+                  align-self: flex-start;
+                }
+                .align-self-flex-end {
+                  align-self: flex-end;
+                }
+                .align-self-flex-center {
+                  align-self: center;
+                }
+                .valign-text-middle {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                }
+                .valign-text-bottom {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-end;
+                }
+                input:focus {
+                  outline: none;
+                }
+                .component-wrapper,
+                .component-wrapper * {
+                  pointer-events: none;
+                }
+
+                .component-wrapper a *,
+                .component-wrapper a,
+                .component-wrapper input,
+                .component-wrapper video,
+                .component-wrapper iframe,
+                .listeners-active,
+                .listeners-active * {
+                  pointer-events: auto;
+                }
+
+                .hidden,
+                .hidden * {
+                  visibility: hidden;
+                  pointer-events: none;
+                }
+
+                .smart-layers-pointers,
+                .smart-layers-pointers * {
+                  pointer-events: auto;
+                  visibility: visible;
+                }
+
+                .component-wrapper.not-ready,
+                .component-wrapper.not-ready * {
+                  visibility: hidden !important;
+                }
+
+                .listeners-active-click,
+                .listeners-active-click * {
+                  cursor: pointer;
+                }
+              </style>
+              <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+            </head>
+            <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+              <input type="hidden" id="anPageName" name="page" value="error-prevention" />
+              <div class="container-center-horizontal">
+                <div class="error-prevention screen">
+                  <div class="rectangle-48-C61RwL border-class-2"></div>
+                  <a href="javascript:history.back()"
+                    ><div class="x-back-C61RwL valign-text-middle border-class-1 poppins-medium-black-16px">&lt;Back</div></a
+                  >
+                  <div class="rectangle-61-C61RwL"></div>
+                  <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
+                  <div class="activity-intro-text-C61RwL"></div>
+                  <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="img/line-4-1@1x.svg" /></div>
+                  <img class="screen-sho--at-1142-1-C61RwL" src="img/screen-shot-2020-12-14-at-11-42-1@1x.jpg" />
+                  <div class="welcome-C61RwL">
+                    <div class="welcome-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
+                      5. Error Prevention
+                    </div>
+                  </div>
+                  <div class="section-header-C61RwL">
+                    <div class="five-ways---your-work-X1rVr0 valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                      General Guidelines
+                    </div>
+                  </div>
+                  <div class="section-header-VMr6Om">
+                    <div class="five-ways---your-work-C44tDP valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                      Include Helpful Constraints
+                    </div>
+                  </div>
+                  <div class="section-header-mzXdH9">
+                    <div class="five-ways---your-work-IYShxb valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                      Offer Suggestions
+                    </div>
+                  </div>
+                  <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="img/vector@2x.svg" /></div>
+                  <img class="southwest-1-C61RwL" src="img/southwest-1@1x.jpg" />
+                  <img class="amazonsearch-1-C61RwL" src="img/amazonsearch-1@1x.png" />
+                  <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="img/line-4-1@1x.svg" /></div>
+                  <div class="text-body-paragraph-C61RwL">
+                    <div class="body-copy-jdAx62 border-class-1">
+                      <span class="span1-xxmNLl"
+                        >The goal is to design so well that we prevent errors before they even occur.&nbsp;&nbsp;However, it is
+                        important to account for errors by having well designed error messages. It is important to carefully check
+                        your products for error-prone conditions.&nbsp;&nbsp;It is also important to give users a confirmation
+                        option before making a choice they cannot easily recover from.<br /></span
+                      ><span class="span2-xxmNLl"><br /></span
+                      ><span class="span3-xxmNLl">There are two types of errors: <br /></span
+                      ><span class="span4-xxmNLl"><br /></span
+                      ><span class="span5-xxmNLl"
+                        >Before discussing how to prevent errors, it’s important to note that there are two types of errors that
+                        users make: slips and mistakes. (Both are discussed in much greater detail in Don Norman’s book The Design
+                        of Everyday Things.)<br /><br /></span
+                      ><span class="span6-xxmNLl">Slips </span
+                      ><span class="span7-xxmNLl"
+                        >occur when users intend to perform one action, but end up doing another (often similar) action. For
+                        example, typing an “i” instead of an “o” counts as a slip; accidentally putting liquid hand soap on one’s
+                        toothbrush instead of toothpaste is also a slip. Slips are typically made when users are on autopilot, and
+                        when they do not fully devote their attention resources to the task at hand.<br /><br /></span
+                      ><span class="span8-xxmNLl">Mistakes</span
+                      ><span class="span9-xxmNLl">
+                        are made when users have goals that are inappropriate for the current problem or task; even if they take
+                        the right steps to complete their goals, the steps will result in an error. For example, if I
+                        misunderstood the meaning of the oil-pressure warning light in my car, and thought it was the
+                        tire-pressure monitor, no matter how carefully I added air to my tires, it would not fix the issue with my
+                        oil pressure. This would be a mistake, since the goal that I was attempting to accomplish was
+                        inappropriate for the situation, even though I made no errors in executing my plan. Mistakes are conscious
+                        errors, and often (though not exclusively) arise when a user has incomplete or incorrect information about
+                        the task, and develops a mental model that doesn’t match how the interface actually works.<br /></span
+                      ><span class="span10-xxmNLl"><br /></span>
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-VMr6Om">
+                    <div class="body-copy-SuXUfK border-class-1">
+                      Slips often happen when users are quite familiar with the goal that they seek to achieve and with the
+                      procedure for accomplishing that goal, but accidentally they take the wrong step when trying to achieve it.
+                      Often, when executing tasks that are well practiced, we tend to allocate fewer attentional resources, and,
+                      as a result, we can “slip” and perform the wrong action. Thus, ironically, slip-type mistakes often are made
+                      by expert users who are very familiar with the process at hand; unlike new users who are still learning how
+                      to use the system, experts feel that they have mastered the task and need to pay less attention to its
+                      actual completion.<br /><br />Strategies for preventing slips are centered around gently guiding users so
+                      that they stay on the right path and have fewer chances of slipping. Assist users by providing the needed
+                      level of precision, and encourage users to check for errors.
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-mzXdH9">
+                    <div class="body-copy-SCxiAB border-class-1">
+                      Slips often happen when users are quite familiar with the goal that they seek to achieve and with the
+                      procedure for accomplishing that goal, but accidentally they take the wrong step when trying to achieve it.
+                      Often, when executing tasks that are well practiced, we tend to allocate fewer attentional resources, and,
+                      as a result, we can “slip” and perform the wrong action. Thus, ironically, slip-type mistakes often are made
+                      by expert users who are very familiar withInclude Helpful Constraints<br /><br />While it’s not always a
+                      good idea to limit users’ choices, in cases where there are clear rules that define acceptable options, it
+                      can be a good strategy to constrain the types of input users can make.<br /><br />For example, booking a
+                      flight typically involves selecting the dates of travel, and there are a few rules that govern which dates
+                      are acceptable. One of the major rules is that a return flight cannot happen before a departure. If users
+                      aren’t limited in the dates they can choose, they may slip and accidentally select a set of dates for their
+                      flight that don’t follow the rules. A helpful constraint here will force users to pick a date range that
+                      fits. the process at hand; unlike new users who are still learning how to use the system, experts feel that
+                      they have mastered the task and need to pay less attention to its actual completion.<br /><br />Strategies
+                      for preventing slips are centered around gently guiding users so that they stay on the right path and have
+                      fewer chances of slipping. Assist users by providing the needed level of precision, and encourage users to
+                      check for errors.
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-QxM5SU">
+                    <div class="body-copy-8ROB5j border-class-1">
+                      Similarly to how constraints guide users toward the correct use of an interface, suggestions can preempt
+                      many slips before the user has the opportunity to make them. On websites that offer thousands of products,
+                      search is an effective way of helping users find their proverbial needle in a haystack. However, typing can
+                      be inaccurate, especially on touchscreens where there isn’t any tactile (also known as haptic) feedback.
+                      While you cannot prevent a user from making typos (which are slip-type errors), you can preempt typos from
+                      turning into problems by offering contextual suggestions while the user types.<br /><br />Offering search
+                      suggestions has also the benefit of supporting recognition over recall in those situations when the users
+                      misremember the name of the product or content they’re looking for.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </body>
+          </html>
+          `,
         },
         {
           type: 'question',
@@ -806,85 +2241,334 @@ export const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1 class="headline">6. Recognition Over Recall</h1>
-          <img src="" alt="" />
-          <p>
-            There are two types of memory retrieval: recognition and recall [5]. The
-            recognition happens when you easily recognize a person or an object that
-            you’re familiar with. It is a very shallow form of retrieval from memory
-            and it doesn’t require any work. The recall happens when you have to
-            find rarely used information in your memory (names, years, details,
-            etc.). To recall information, people have to activate more memory
-            chunks. Therefore, the recall process is a deeper retrieval and requires
-            more work. (That’s why multiple-choice questions in tests are much
-            easier to answer than open-answer questions.)
-          </p>
-          <h2>RECALL IN USER INTERFACES</h2>
-          <p>
-            The classic example of recall in an interface is login. When you log in
-            to a site, you have to remember both a username (or email) and a
-            password. You receive very few cues to help you with that memory
-            retrieval: usually, just the site itself. Some people make it easier for
-            themselves by using the same credentials everywhere on the web. Others
-            create a password that is related to the site (e.g., “amazonpassword”
-            for Amazon.com or “buyshoes” on zappos.com) so that they can increase
-            the ability of recall by making the site a stronger cue. And many others
-            just keep their passwords somewhere on their computer or on a piece of
-            paper.
-          </p>
-          <h2>RECOGNITION IN INTERFACES</h2>
-          <p>
-            A menu system is the most classic example of a recognition-based user
-            interface: the computer shows you the available commands, and you
-            recognize the one you want. Say, for example, that you’re working with a
-            word processor and want to draw a line through a sentence to indicate
-            that it's no longer valid. Before the advent of graphical user
-            interfaces you would have had to recall the name of this rarely used
-            formatting feature. A difficult and error-prone task. Now, however, you
-            look at the menu of formatting options and easily recognize the term
-            strikethrough as being the one you want.
-          </p>
-          <h2>PROMOTE RECOGNITION IN USER INTERFACES</h2>
-          <p>
-            How do you promote recognition? By making information and interface
-            functions visible and easily accessible. An application or a website
-            usually has two components: The chrome or the interface: namely all the
-            buttons, navigation, and other elements that are there to help the user
-            reach his goal The content: the information that the user needs to
-            achieve his goal You can make both the content and the interface easy to
-            remember; both can benefit from designing for recognition rather than
-            recall. We’ll look at a few successful and less successful examples of
-            supporting retrieval of information through recognition. .
-          </p>
-          <h2>HISTORY AND PREVIOUSLY VISITED CONTENT</h2>
-          <p>
-            Providing access to the pages recently visited and searches performed in
-            the near past can help users resume tasks that they left incomplete and
-            that may have a hard time recalling. Search engines such as Google and
-            Bing often help users retrace their searches by providing past
-            histories.
-          </p>
-          <img src="" alt="" />
-          <span>
-            Bing has a link to the user’s search history. The link helps users
-            remember previous searches.
-          </span>
-          <img src="" alt="" />
-          <span>
-            When a user goes back to Amazon.com, the personalized homepage includes
-            a list of recently viewed items.
-          </span>
-          <h2>Conclusion:</h2>
-          <p>
-            The 7th usability heuristic (flexibility and efficiency of use) is about
-            allowing users to approach tasks in a variety of ways. New users may
-            require guidance in performing their tasks, whereas experienced users
-            can take advantage of accelerators and other secondary features designed
-            to speed up commonly performed actions. Embracing this heuristic means
-            allowing user customization, not being prescriptive about core task
-            steps, and adding unobtrusive accelerators that power users can discover
-            and employ efficiently.{' '}
-          </p>`,
+          contents: `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=1042, maximum-scale=1.0" />
+              <link rel="shortcut icon" href="./img/favicon.png" />
+              <meta name="og:type" content="website" />
+              <meta name="twitter:card" content="photo" />
+              <link rel="stylesheet" type="text/css" href="css/recognition-over-recall.css" />
+              <style>
+                @import url("https://fonts.googleapis.com/css?family=Poppins:500,300,700,400,600|Noto+Serif:600,600italic");
+
+                @font-face {
+                  font-family: "Proxima Nova-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5c5874afb72544000ad1576b/ProximaNova-Reg.ttf")
+                    format("truetype");
+                }
+
+                @font-face {
+                  font-family: "Helvetica Neue-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
+                }
+
+                .component-wrapper a,
+                .screen a {
+                  text-decoration: none;
+                  display: contents;
+                }
+
+                .full-width-a {
+                  width: 100%;
+                }
+
+                .full-height-a {
+                  height: 100%;
+                }
+
+                .screen textarea:focus,
+                .screen input:focus {
+                  outline: none;
+                }
+
+                .screen *,
+                .component-wrapper * {
+                  box-sizing: border-box;
+                }
+
+                .screen div {
+                  -webkit-text-size-adjust: none;
+                }
+
+                .container-center-vertical,
+                .container-center-horizontal {
+                  pointer-events: none;
+                  display: flex;
+                  flex-direction: row;
+                  padding: 0;
+                  margin: 0;
+                }
+
+                .container-center-vertical {
+                  align-items: center;
+                  height: 100%;
+                }
+
+                .container-center-horizontal {
+                  justify-content: center;
+                  width: 100%;
+                }
+
+                .container-center-vertical > *,
+                .container-center-horizontal > * {
+                  pointer-events: auto;
+                  flex-shrink: 0;
+                }
+
+                .component-wrapper,
+                .screen {
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-all;
+                  word-break: break-word;
+                }
+
+                .auto-animated div {
+                  opacity: 0;
+                  position: absolute;
+                  --z-index: -1;
+                }
+
+                .auto-animated .container-center-vertical,
+                .auto-animated .container-center-horizontal {
+                  opacity: 1;
+                }
+
+                .overlay {
+                  position: absolute;
+                  opacity: 0;
+                  display: none;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  position: fixed;
+                }
+
+                .animate-appear {
+                  opacity: 0;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 normal forwards;
+                }
+
+                .animate-disappear {
+                  opacity: 1;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+                }
+
+                .animate-nodelay {
+                  animation-delay: 0s;
+                }
+
+                @keyframes reveal {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
+                }
+                .align-self-flex-start {
+                  align-self: flex-start;
+                }
+                .align-self-flex-end {
+                  align-self: flex-end;
+                }
+                .align-self-flex-center {
+                  align-self: center;
+                }
+                .valign-text-middle {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                }
+                .valign-text-bottom {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-end;
+                }
+                input:focus {
+                  outline: none;
+                }
+                .component-wrapper,
+                .component-wrapper * {
+                  pointer-events: none;
+                }
+
+                .component-wrapper a *,
+                .component-wrapper a,
+                .component-wrapper input,
+                .component-wrapper video,
+                .component-wrapper iframe,
+                .listeners-active,
+                .listeners-active * {
+                  pointer-events: auto;
+                }
+
+                .hidden,
+                .hidden * {
+                  visibility: hidden;
+                  pointer-events: none;
+                }
+
+                .smart-layers-pointers,
+                .smart-layers-pointers * {
+                  pointer-events: auto;
+                  visibility: visible;
+                }
+
+                .component-wrapper.not-ready,
+                .component-wrapper.not-ready * {
+                  visibility: hidden !important;
+                }
+
+                .listeners-active-click,
+                .listeners-active-click * {
+                  cursor: pointer;
+                }
+              </style>
+              <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+            </head>
+            <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+              <input type="hidden" id="anPageName" name="page" value="recognition-over-recall" />
+              <div class="container-center-horizontal">
+                <div class="recognition-over-recall screen">
+                  <div class="rectangle-48-C61RwL border-class-2"></div>
+                  <a href="javascript:history.back()"
+                    ><div class="x-back-C61RwL valign-text-middle border-class-1 poppins-medium-black-16px">&lt;Back</div></a
+                  >
+                  <div class="rectangle-61-C61RwL"></div>
+                  <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
+                  <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="img/line-4-1@1x.svg" /></div>
+                  <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="img/line-4-1@1x.svg" /></div>
+                  <div class="welcome-C61RwL">
+                    <div class="welcome-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
+                      6. Recognition over Recall
+                    </div>
+                  </div>
+                  <img class="best5406-1-C61RwL" src="img/best-5406-1@1x.svg" />
+                  <img class="x2014-5-12-amazon-2-1-C61RwL" src="img/2014-5-12-amazon-2-1@1x.jpg" />
+                  <div class="divider-dotted-mzXdH9"><img class="line-4-qa0SLk" src="img/line-4-1@1x.svg" /></div>
+                  <img class="line-4-C61RwL" src="img/line-4-1@1x.svg" />
+                  <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="img/vector@2x.svg" /></div>
+                  <div class="section-header-C61RwL">
+                    <div class="five-ways---your-work-X1rVr0 valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                      HISTORY AND PREVIOUSLY VISITED CONTENT
+                    </div>
+                  </div>
+                  <div class="section-header-VMr6Om">
+                    <div class="five-ways---your-work-C44tDP valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                      PROMOTE RECOGNITION IN USER INTERFACES
+                    </div>
+                  </div>
+                  <div class="section-header-mzXdH9">
+                    <div class="five-ways---your-work-IYShxb valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                      RECOGNITION&nbsp;&nbsp;IN INTERFACES
+                    </div>
+                  </div>
+                  <div class="section-header-QxM5SU">
+                    <div class="five-ways---your-work-tO655I valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                      RECALL IN USER INTERFACES
+                    </div>
+                  </div>
+                  <div class="image-caption-C61RwL">
+                    <div class="the-visibi--for-users-mWuPKx border-class-1">
+                      <span class="span1-SQKVtq">Example: </span
+                      ><span class="span2-SQKVtq">
+                        Bing has a link to the user’s search history. The link helps users remember previous searches.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="image-caption-VMr6Om">
+                    <div class="the-visibi--for-users-jD5qyr border-class-1">
+                      <span class="span1-sx37NZ">Example: </span
+                      ><span class="span2-sx37NZ">
+                        When a user goes back to Amazon.com, the personalized homepage includes a list of recently viewed
+                        items.</span
+                      >
+                    </div>
+                  </div>
+                  <img class="x2014-05-12-bing1-1-C61RwL" src="img/2014-05-12-bing1-1@1x.jpg" />
+                  <div class="conclusion-C61RwL">
+                    <div class="message-box-scenario-uxVav3">
+                      <div class="rectangle-89-l8o00t"></div>
+                      <div
+                        class="the-visibi--for-users-l8o00t valign-text-middle border-class-1 poppins-normal-granite-gray-24px"
+                      >
+                        <span>
+                          <span class="span1-mWojpO">Conclusion:<br /></span
+                          ><span class="span2-mWojpO"
+                            >The 7th usability heuristic (flexibility and efficiency of use) is about allowing users to approach
+                            tasks in a variety of ways. New users may require guidance in performing their tasks, whereas
+                            experienced users can take advantage of accelerators and other secondary features designed to speed up
+                            commonly performed actions. Embracing this heuristic means allowing user customization, not being
+                            prescriptive about core task steps, and adding unobtrusive accelerators that power users can discover
+                            and employ efficiently.
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-C61RwL">
+                    <div class="body-copy-jdAx62 border-class-1 poppins-normal-black-18px">
+                      The classic example of recall in an interface is login. When you log in to a site, you have to remember both
+                      a username (or email) and a password. You receive very few cues to help you with that memory retrieval:
+                      usually, just the site itself. Some people make it easier for themselves by using the same credentials
+                      everywhere on the web. Others create a password that is related to the site (e.g., “amazonpassword” for
+                      Amazon.com or “buyshoes” on zappos.com) so that they can increase the ability of recall by making the site a
+                      stronger cue. And many others just keep their passwords somewhere on their computer or on a piece of paper.
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-VMr6Om">
+                    <div class="body-copy-SuXUfK border-class-1 poppins-normal-black-18px">
+                      A menu system is the most classic example of a recognition-based user interface: the computer shows you the
+                      available commands, and you recognize the one you want. Say, for example, that you’re working with a word
+                      processor and want to draw a line through a sentence to indicate that it&#39;s no longer valid. Before the
+                      advent of graphical user interfaces you would have had to recall the name of this rarely used formatting
+                      feature. A difficult and error-prone task. Now, however, you look at the menu of formatting options and
+                      easily recognize the term strikethrough as being the one you want.
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-mzXdH9">
+                    <div class="body-copy-SCxiAB border-class-1 poppins-normal-black-18px">
+                      How do you promote recognition? By making information and interface functions visible and easily
+                      accessible.<br /><br />An application or a website usually has two components:<br /><br />The chrome or the
+                      interface: namely all the buttons, navigation, and other elements that are there to help the user reach his
+                      goal<br />The content: the information that the user needs to achieve his goal<br />You can make both the
+                      content and the interface easy to remember; both can benefit from designing for recognition rather than
+                      recall. We’ll look at a few successful and less successful examples of supporting retrieval of information
+                      through recognition.<br />.
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-QxM5SU">
+                    <div class="body-copy-8ROB5j border-class-1 poppins-normal-black-18px">
+                      Providing access to the pages recently visited and searches performed in the near past can help users resume
+                      tasks that they left incomplete and that may have a hard time recalling. Search engines such as Google and
+                      Bing often help users retrace their searches by providing past histories.
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-2P4qUJ">
+                    <div class="body-copy-aD3clP border-class-1 poppins-normal-black-18px">
+                      There are two types of memory retrieval: recognition and recall [5]. The recognition happens when you easily
+                      recognize a person or an object that you’re familiar with. It is a very shallow form of retrieval from
+                      memory and it doesn’t require any work. The recall happens when you have to find rarely used information in
+                      your memory (names, years, details, etc.). To recall information, people have to activate more memory
+                      chunks. Therefore, the recall process is a deeper retrieval and requires more work. (That’s why
+                      multiple-choice questions in tests are much easier to answer than open-answer questions.)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </body>
+          </html>
+`,
         },
         {
           type: 'question',
@@ -937,14 +2621,343 @@ export const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1 class="headline">7. Flexibility & Efficiency</h1>
-          <img src="" alt="" />
-          <p>
-            Shortcuts— unseen by the novice user — speed up the interaction for the
-            expert users such that the system can cater to both inexperienced and
-            experienced users.
-          </p>
-          <img src="" alt="" />`,
+          contents: `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=1042, maximum-scale=1.0" />
+              <link rel="shortcut icon" href="./img/favicon.png" />
+              <meta name="og:type" content="website" />
+              <meta name="twitter:card" content="photo" />
+              <link rel="stylesheet" type="text/css" href="css/flexibility-efficiency.css" />
+              <style>
+                @import url("https://fonts.googleapis.com/css?family=Poppins:500,300,700,400,600|Noto+Serif:600,600italic");
+
+                @font-face {
+                  font-family: "Proxima Nova-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5c5874afb72544000ad1576b/ProximaNova-Reg.ttf")
+                    format("truetype");
+                }
+
+                @font-face {
+                  font-family: "Helvetica Neue-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
+                }
+
+                .component-wrapper a,
+                .screen a {
+                  text-decoration: none;
+                  display: contents;
+                }
+
+                .full-width-a {
+                  width: 100%;
+                }
+
+                .full-height-a {
+                  height: 100%;
+                }
+
+                .screen textarea:focus,
+                .screen input:focus {
+                  outline: none;
+                }
+
+                .screen *,
+                .component-wrapper * {
+                  box-sizing: border-box;
+                }
+
+                .screen div {
+                  -webkit-text-size-adjust: none;
+                }
+
+                .container-center-vertical,
+                .container-center-horizontal {
+                  pointer-events: none;
+                  display: flex;
+                  flex-direction: row;
+                  padding: 0;
+                  margin: 0;
+                }
+
+                .container-center-vertical {
+                  align-items: center;
+                  height: 100%;
+                }
+
+                .container-center-horizontal {
+                  justify-content: center;
+                  width: 100%;
+                }
+
+                .container-center-vertical > *,
+                .container-center-horizontal > * {
+                  pointer-events: auto;
+                  flex-shrink: 0;
+                }
+
+                .component-wrapper,
+                .screen {
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-all;
+                  word-break: break-word;
+                }
+
+                .auto-animated div {
+                  opacity: 0;
+                  position: absolute;
+                  --z-index: -1;
+                }
+
+                .auto-animated .container-center-vertical,
+                .auto-animated .container-center-horizontal {
+                  opacity: 1;
+                }
+
+                .overlay {
+                  position: absolute;
+                  opacity: 0;
+                  display: none;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  position: fixed;
+                }
+
+                .animate-appear {
+                  opacity: 0;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 normal forwards;
+                }
+
+                .animate-disappear {
+                  opacity: 1;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+                }
+
+                .animate-nodelay {
+                  animation-delay: 0s;
+                }
+
+                @keyframes reveal {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
+                }
+                .align-self-flex-start {
+                  align-self: flex-start;
+                }
+                .align-self-flex-end {
+                  align-self: flex-end;
+                }
+                .align-self-flex-center {
+                  align-self: center;
+                }
+                .valign-text-middle {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                }
+                .valign-text-bottom {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-end;
+                }
+                input:focus {
+                  outline: none;
+                }
+                .component-wrapper,
+                .component-wrapper * {
+                  pointer-events: none;
+                }
+
+                .component-wrapper a *,
+                .component-wrapper a,
+                .component-wrapper input,
+                .component-wrapper video,
+                .component-wrapper iframe,
+                .listeners-active,
+                .listeners-active * {
+                  pointer-events: auto;
+                }
+
+                .hidden,
+                .hidden * {
+                  visibility: hidden;
+                  pointer-events: none;
+                }
+
+                .smart-layers-pointers,
+                .smart-layers-pointers * {
+                  pointer-events: auto;
+                  visibility: visible;
+                }
+
+                .component-wrapper.not-ready,
+                .component-wrapper.not-ready * {
+                  visibility: hidden !important;
+                }
+
+                .listeners-active-click,
+                .listeners-active-click * {
+                  cursor: pointer;
+                }
+              </style>
+              <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+            </head>
+            <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+              <input type="hidden" id="anPageName" name="page" value="flexibility-efficiency" />
+              <div class="container-center-horizontal">
+                <div class="flexibility-efficiency screen">
+                  <div class="rectangle-48-C61RwL border-class-2"></div>
+                  <a href="javascript:history.back()"
+                    ><div class="x-back-C61RwL valign-text-middle border-class-1 poppins-medium-black-16px">&lt;Back</div></a
+                  >
+                  <div class="rectangle-61-C61RwL"></div>
+                  <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
+                  <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="img/line-4-1@1x.svg" /></div>
+                  <img class="screen-sho-2-at-802-1-C61RwL" src="img/screen-shot-2020-12-02-at-8-02-1@1x.jpg" />
+                  <div class="welcome-C61RwL">
+                    <div class="welcome-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
+                      7. Flexibility &amp; Efficiency
+                    </div>
+                  </div>
+                  <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="img/line-4-1@1x.svg" /></div>
+                  <div class="divider-dotted-mzXdH9"><img class="line-4-qa0SLk" src="img/line-4-1@1x.svg" /></div>
+                  <div class="divider-dotted-QxM5SU"><img class="line-4-KBGCks" src="img/line-4-1@1x.svg" /></div>
+                  <div class="novice-vs--pert-users-C61RwL valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                    Novice vs. Expert Users
+                  </div>
+                  <div class="section-header-C61RwL">
+                    <div class="five-ways---your-work-X1rVr0 valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                      Multiple Methods to Accomplish the Same Task
+                    </div>
+                  </div>
+                  <div class="section-header-VMr6Om">
+                    <div class="five-ways---your-work-C44tDP valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                      Let Users Log In Via Username or Email
+                    </div>
+                  </div>
+                  <div class="section-header-mzXdH9">
+                    <div class="five-ways---your-work-IYShxb valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                      Let Users Drag and Drop Elements
+                    </div>
+                  </div>
+                  <div class="section-header-QxM5SU">
+                    <div class="five-ways---your-work-tO655I valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                      Offer Keyboard Shortcuts for Repetitive Functions
+                    </div>
+                  </div>
+                  <div class="section-header-2P4qUJ">
+                    <div class="five-ways---your-work-gMZtlt valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                      Accelerators Improve Repetitious Usage
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-C61RwL">
+                    <div class="body-copy-jdAx62 border-class-1 poppins-normal-black-18px">
+                      Accelerators are secondary ways of accomplishing the same task that function as faster (but typically less
+                      obvious) methods. An example of an accelerator is how modern mobile keyboards allow users to perform a swipe
+                      gesture over the letters to input text, rather than tapping each individual letter. This gesture is an
+                      enhancement: it doesn’t get in the way of a new user (who very likely is not aware of it at all), but can
+                      save a lot of time to a seasoned user.
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-VMr6Om">
+                    <div class="body-copy-SuXUfK border-class-1 poppins-normal-black-18px">
+                      The trick for designing a usable accelerator is making it discoverable (which mobile keyboard gestures lack)
+                      but unobtrusive. The classic solution for keyboard-shortcut accelerators is to show them next to the
+                      associated commands in a menu or toolbar. A novice user doesn’t have to pay attention to the keyboard
+                      shortcut at all, but repeated exposure to it supports learning for experienced users.
+                    </div>
+                  </div>
+                  <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="img/vector@2x.svg" /></div>
+                  <div class="rectangle-106-C61RwL"></div>
+                  <div class="text-body-paragraph-mzXdH9">
+                    <div class="body-copy-SCxiAB border-class-1 poppins-normal-black-14px">
+                      The iOS keyboard allows swiping through the letters of a word instead of tapping them individually. This
+                      gesture is an accelerator: it helps experienced users but does not make typing harder to learn for novices.
+                    </div>
+                  </div>
+                  <img class="swipe-keyb-rator-sm-1-C61RwL" src="img/swipe-keyboard-accelerator-sm-1@2x.gif" />
+                  <div class="conclusion-C61RwL">
+                    <div class="message-box-scenario-uxVav3">
+                      <div class="rectangle-89-l8o00t"></div>
+                      <div
+                        class="the-visibi--for-users-l8o00t valign-text-middle border-class-1 poppins-normal-granite-gray-24px"
+                      >
+                        <span>
+                          <span class="span1-mWojpO">Conclusion:<br /></span
+                          ><span class="span2-mWojpO"
+                            >The 7th usability heuristic (flexibility and efficiency of use) is about allowing users to approach
+                            tasks in a variety of ways. New users may require guidance in performing their tasks, whereas
+                            experienced users can take advantage of accelerators and other secondary features designed to speed up
+                            commonly performed actions. Embracing this heuristic means allowing user customization, not being
+                            prescriptive about core task steps, and adding unobtrusive accelerators that power users can discover
+                            and employ efficiently.
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-QxM5SU">
+                    <div class="body-copy-8ROB5j border-class-1 poppins-normal-black-18px">
+                      New users often require guidance when using a system and need clear and obvious options because they have
+                      not yet developed a mental model of how the system works. Novice users rely heavily on step-by-step wizards
+                      or clearly labeled menus, for example, while more-experienced users learn keyboard shortcuts or touchscreen
+                      gestures to complete the same task. The expert users could still use the slower, more deliberate methods, of
+                      course, but get no benefit in doing so. Instead, they use a faster (but less guided) approach to the task.
+                      These faster, alternate methods of completing a frequent action are referred to as accelerators.
+                      <br /><br />If a system caters primarily to new users by focusing on being very learnable, repeat users will
+                      be slowed down because the system likely includes a lot more step-by-step handholding than a repeat user
+                      would need. So, the extra clicks to guide users through a wizard might be necessary to lead someone through
+                      a task the first time but extraneous for future repetitions.<br /><br />On the other hand, if a system
+                      focused only on efficiency for expert users, it would probably be very difficult to learn. Keyboard
+                      combinations or performing a touch gesture are faster to execute than navigating through a sequence of menus
+                      to activate the same action, but place a higher burden on the user’s memory. Relying only on them would be
+                      like ditching a graphical user interface (GUI) altogether for a command-line one.<br /><br />So, there are
+                      two different aspects to making a flexible and efficient system:<br /><br />Multiple methods to accomplish
+                      the same task according to one’s preferences<br />Accelerators that don’t slow down inexperienced users, but
+                      speed up advanced users
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-2P4qUJ">
+                    <div class="body-copy-aD3clP border-class-1 poppins-normal-black-18px">
+                      Shortcuts— unseen by the novice user — speed up the interaction for the expert users such that the system
+                      can cater to both inexperienced and experienced users.
+                    </div>
+                  </div>
+                  <img class="x0fh5-g613a-t-o8-qvl-1-C61RwL" src="img/0-fh5g613aet-o8qvl-1@1x.png" />
+                  <img class="ux-tactic--dit-data-1-C61RwL" src="img/ux-tactic-20-let-users-directly-edit-data-1@1x.png" />
+                  <div class="section-header-qr8e7q">
+                    <div class="five-ways---your-work-3Bxx2b valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                      Let Users Directly Edit Data
+                    </div>
+                  </div>
+                  <img
+                    class="ux-tactic--or-email-1-C61RwL"
+                    src="img/ux-tactic-30-let-users-log-in-via-username-or-email-1@1x.png"
+                  />
+                  <img
+                    class="ux-tactic--unctions-1-C61RwL"
+                    src="img/ux-tactic-31-offer-keyboard-shortcuts-for-repetitive-functions-1@1x.png"
+                  />
+                  <img class="ux-tactic--elements-1-C61RwL" src="img/ux-tactic-19-let-users-drag-and-drop-elements-1@1x.png" />
+                </div>
+              </div>
+            </body>
+          </html>
+          `,
         },
         {
           type: 'question',
@@ -1017,48 +3030,288 @@ export const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1 class="headline">8. Aesthetic & Minimalism</h1>
-          <img src="" alt="" />
-          <span>
-            <strong>Example:</strong> An ornate teapot may have excessive decorative
-            elements that can interfere with usability, like an uncomfortable handle
-            or hard to wash nozzle.
-          </span>
-          <p>
-            Interfaces should not contain information which is irrelevant or rarely
-            needed. Every extra unit of information in an interface competes with
-            the relevant units of information and diminishes their relative
-            visibility. This heuristic doesn't mean you have to use a flat design —
-            it's about making sure you're keeping the content and visual design
-            focused on the essentials. Ensure that the visual elements of the
-            interface support the user's primary goals.
-          </p>
-          <p>
-            Dialogues should not contain information which is irrelevant or rarely
-            needed. Every extra unit of information in a dialogue competes with the
-            relevant units of information and diminishes their relative visibility.
-            read here. Jacob Nielson
-          </p>
-          <img src="" alt="" />
-          <h2>Ways to ensure Aesthetic and minimalist design</h2>
-          <h3>1. Show only relevant things</h3>
-          <p>
-            Medium – the blogging platform is a great example of this heuristic. It
-            is essentially like a blank piece of paper and if you need to add
-            anything beyond text, you just need to click on the + sign which again
-            is the universal sign for adding something.
-          </p>
-          <img src="" alt="" />
-          <span>Google: Nothing More and Nothing Less.</span>
-          <h3>2. Maintain hierarchy</h3>
-          <p>
-            If you have created something that needs a lot of content, think of ways
-            to organize it in proper hierarchy and sections. This is an important
-            concept of aesthetic and minimalist design. The websites like Atlassian
-            and Stripe are the perfect examples. They have a lot of aesthetically
-            placed content.
-          </p>
-          <img src="" alt="" />`,
+          contents: `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=1042, maximum-scale=1.0" />
+              <link rel="shortcut icon" href="./img/favicon.png" />
+              <meta name="og:type" content="website" />
+              <meta name="twitter:card" content="photo" />
+              <link rel="stylesheet" type="text/css" href="css/aesthetic-minimilism.css" />
+              <style>
+                @import url("https://fonts.googleapis.com/css?family=Poppins:500,300,700,400,600|Noto+Serif:600,600italic");
+
+                @font-face {
+                  font-family: "Proxima Nova-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5c5874afb72544000ad1576b/ProximaNova-Reg.ttf")
+                    format("truetype");
+                }
+
+                @font-face {
+                  font-family: "Helvetica Neue-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
+                }
+
+                .component-wrapper a,
+                .screen a {
+                  text-decoration: none;
+                  display: contents;
+                }
+
+                .full-width-a {
+                  width: 100%;
+                }
+
+                .full-height-a {
+                  height: 100%;
+                }
+
+                .screen textarea:focus,
+                .screen input:focus {
+                  outline: none;
+                }
+
+                .screen *,
+                .component-wrapper * {
+                  box-sizing: border-box;
+                }
+
+                .screen div {
+                  -webkit-text-size-adjust: none;
+                }
+
+                .container-center-vertical,
+                .container-center-horizontal {
+                  pointer-events: none;
+                  display: flex;
+                  flex-direction: row;
+                  padding: 0;
+                  margin: 0;
+                }
+
+                .container-center-vertical {
+                  align-items: center;
+                  height: 100%;
+                }
+
+                .container-center-horizontal {
+                  justify-content: center;
+                  width: 100%;
+                }
+
+                .container-center-vertical > *,
+                .container-center-horizontal > * {
+                  pointer-events: auto;
+                  flex-shrink: 0;
+                }
+
+                .component-wrapper,
+                .screen {
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-all;
+                  word-break: break-word;
+                }
+
+                .auto-animated div {
+                  opacity: 0;
+                  position: absolute;
+                  --z-index: -1;
+                }
+
+                .auto-animated .container-center-vertical,
+                .auto-animated .container-center-horizontal {
+                  opacity: 1;
+                }
+
+                .overlay {
+                  position: absolute;
+                  opacity: 0;
+                  display: none;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  position: fixed;
+                }
+
+                .animate-appear {
+                  opacity: 0;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 normal forwards;
+                }
+
+                .animate-disappear {
+                  opacity: 1;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+                }
+
+                .animate-nodelay {
+                  animation-delay: 0s;
+                }
+
+                @keyframes reveal {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
+                }
+                .align-self-flex-start {
+                  align-self: flex-start;
+                }
+                .align-self-flex-end {
+                  align-self: flex-end;
+                }
+                .align-self-flex-center {
+                  align-self: center;
+                }
+                .valign-text-middle {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                }
+                .valign-text-bottom {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-end;
+                }
+                input:focus {
+                  outline: none;
+                }
+                .component-wrapper,
+                .component-wrapper * {
+                  pointer-events: none;
+                }
+
+                .component-wrapper a *,
+                .component-wrapper a,
+                .component-wrapper input,
+                .component-wrapper video,
+                .component-wrapper iframe,
+                .listeners-active,
+                .listeners-active * {
+                  pointer-events: auto;
+                }
+
+                .hidden,
+                .hidden * {
+                  visibility: hidden;
+                  pointer-events: none;
+                }
+
+                .smart-layers-pointers,
+                .smart-layers-pointers * {
+                  pointer-events: auto;
+                  visibility: visible;
+                }
+
+                .component-wrapper.not-ready,
+                .component-wrapper.not-ready * {
+                  visibility: hidden !important;
+                }
+
+                .listeners-active-click,
+                .listeners-active-click * {
+                  cursor: pointer;
+                }
+              </style>
+              <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+            </head>
+            <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+              <input type="hidden" id="anPageName" name="page" value="aesthetic-minimilism" />
+              <div class="container-center-horizontal">
+                <div class="aesthetic-minimilism screen">
+                  <div class="rectangle-48-C61RwL border-class-2"></div>
+                  <a href="javascript:history.back()"
+                    ><div class="x-back-C61RwL valign-text-middle border-class-1 poppins-medium-black-16px">&lt;Back</div></a
+                  >
+                  <div class="rectangle-61-C61RwL"></div>
+                  <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
+                  <div class="text-body-paragraph-C61RwL">
+                    <div class="body-copy-jdAx62 border-class-1 poppins-normal-black-14px">
+                      Google: Nothing More and Nothing Less.
+                    </div>
+                  </div>
+                  <div class="section-header-C61RwL">
+                    <div class="ways-to-en-ist-design-X1rVr0 valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                      Ways to ensure Aesthetic and minimalist design
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-VMr6Om">
+                    <div class="body-copy-SuXUfK border-class-1 poppins-normal-black-18px">
+                      Interfaces should not contain information which is irrelevant or rarely needed. Every extra unit of
+                      information in an interface competes with the relevant units of information and diminishes their relative
+                      visibility.<br /><br />This heuristic doesn&#39;t mean you have to use a flat design — it&#39;s about making
+                      sure you&#39;re keeping the content and visual design focused on the essentials. Ensure that the visual
+                      elements of the interface support the user&#39;s primary goals.
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-mzXdH9">
+                    <div class="body-copy-SCxiAB border-class-1 poppins-normal-black-18px-2">
+                      <span class="span1-Yh9UKS">1. Show only relevant things<br /></span
+                      ><span class="span2-Yh9UKS"
+                        >Medium – the blogging platform is a great example of this heuristic. It is essentially like a blank piece
+                        of paper and if you need to add anything beyond text, you just need to click on the + sign which is the
+                        universal sign for adding something.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-QxM5SU">
+                    <div class="body-copy-8ROB5j border-class-1 poppins-normal-black-18px-2">
+                      <span class="span1-t71XpP">2. Maintain hierarchy<br /></span
+                      ><span class="span2-t71XpP"
+                        >If you have created something that needs a lot of content, think of ways to organize it in proper
+                        hierarchy and sections. This is an important concept of aesthetic and minimalist design.<br /><br />The
+                        websites like Atlassian and Stripe are the perfect examples. They have a lot of aesthetically placed
+                        content.</span
+                      >
+                    </div>
+                  </div>
+                  <img class="img22-1-C61RwL" src="img/img22-1@1x.jpg" />
+                  <div class="text-quote-C61RwL">
+                    <div class="quote-DGgCa2 valign-text-middle border-class-1">
+                      <span>
+                        <span class="span1-OXpQxt"
+                          ><br />Dialogues should not contain information which is irrelevant or rarely needed. Every extra unit
+                          of information in a dialogue competes with the relevant units of information and diminishes their
+                          relative visibility.&nbsp;&nbsp;<br /></span
+                        ><span class="span2-OXpQxt">Jacob Nielson</span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="img/line-4-1@1x.svg" /></div>
+                  <div class="welcome-C61RwL">
+                    <div class="welcome-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
+                      8. Aesthitic &amp; Minimalism
+                    </div>
+                  </div>
+                  <div class="image-caption-C61RwL">
+                    <div class="the-visibi--for-users-mWuPKx border-class-1">
+                      <span class="span1-SQKVtq">Example:&nbsp;&nbsp;</span
+                      ><span class="span2-SQKVtq"
+                        >An ornate teapot may have excessive decorative elements that can interfere with usability, like an
+                        uncomfortable handle or hard to wash nozzle.
+                      </span>
+                    </div>
+                  </div>
+                  <img class="heuristic--ample-80-1-C61RwL" src="img/heuristic-example-80-1@1x.jpg" />
+                  <img class="x1w-as-pgdc--t-xe-ca-1-C61RwL" src="img/1-waspgdcm0dazlypx-txeca-1@1x.jpg" />
+                  <img class="x1v8x5u-fvk--ywo-ffa-1-C61RwL" src="img/1-v8x5ufvkkx54xi3qywoffa-1@1x.svg" />
+                  <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="img/vector@2x.svg" /></div>
+                  <div class="section-header-VMr6Om"></div>
+                </div>
+              </div>
+            </body>
+          </html>
+          `,
         },
         {
           type: 'question',
@@ -1116,57 +3369,266 @@ export const HeuristicsSampleData = {
         },
         {
           type: 'display',
-          contents: `<h3>3.Keep "Above the fold" in mind</h3>
-          <ul>
-            <li>The term Above the fold came from conventional printing.</li>
-            <li>
-              Like the front-page of the newspaper, it is the most important real
-              estate in your interface.
-            </li>
-            <li>
-              Since most users will see this part, it’s important to keep only the
-              most important things in this section.
-            </li>
-            <li>
-              In case of a website, Above the fold is the portion of the page
-              visible without scrolling.
-            </li>
-            <li>
-               Although, with changing user behavior, above the fold is not as
-              relevant today.
-            </li>
-            <li>
-               But it’s still good to keep it in mind and show only the most
-              important things above the fold.
-            </li>
-          </ul>
-          <img src="" alt="" />
-          <h3>4. Get rid of the extra mass</h3>
-          <p>Extra mass is created by:</p>
-          <ul>
-            <li>Features that are rarely used</li>
-            <li>Copy that can be shrunk without losing the meaning</li>
-            <li>Irrelevant images</li>
-            <li>Redundant features</li>
-          </ul>
-          <p>Remember only a fraction of things are useful on your page.</p>
-          <p>
-            Always ask yourself if there is one thing that you can remove from your
-            interface, what would it be?
-          </p>
-          <img src="" alt="" />
-          <span>
-            Apple provides only the basic information of a feature, hiding
-            additional information under “Learn More”. Check the same product on a
-            retail website to understand the importance of clutter-free experience.
-          </span>
-          <div>
-            Conclusion: Aesthetic and Minimalist design is not about adding white
-            space. Its all about giving relevant data and removing all the unwanted
-            things. Grab users attention towards the action needed there or give
-            exact data that they want to see. Don't add irrelevant data and elements
-            to confuse users.
-          </div>  `,
+          contents: `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=1042, maximum-scale=1.0" />
+              <link rel="shortcut icon" href="./img/favicon.png" />
+              <meta name="og:type" content="website" />
+              <meta name="twitter:card" content="photo" />
+              <link rel="stylesheet" type="text/css" href="css/aesthetic-minimilism1.css" />
+              <style>
+                @import url("https://fonts.googleapis.com/css?family=Poppins:500,300,700,400,600|Noto+Serif:600,600italic");
+
+                @font-face {
+                  font-family: "Proxima Nova-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5c5874afb72544000ad1576b/ProximaNova-Reg.ttf")
+                    format("truetype");
+                }
+
+                @font-face {
+                  font-family: "Helvetica Neue-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
+                }
+
+                .component-wrapper a,
+                .screen a {
+                  text-decoration: none;
+                  display: contents;
+                }
+
+                .full-width-a {
+                  width: 100%;
+                }
+
+                .full-height-a {
+                  height: 100%;
+                }
+
+                .screen textarea:focus,
+                .screen input:focus {
+                  outline: none;
+                }
+
+                .screen *,
+                .component-wrapper * {
+                  box-sizing: border-box;
+                }
+
+                .screen div {
+                  -webkit-text-size-adjust: none;
+                }
+
+                .container-center-vertical,
+                .container-center-horizontal {
+                  pointer-events: none;
+                  display: flex;
+                  flex-direction: row;
+                  padding: 0;
+                  margin: 0;
+                }
+
+                .container-center-vertical {
+                  align-items: center;
+                  height: 100%;
+                }
+
+                .container-center-horizontal {
+                  justify-content: center;
+                  width: 100%;
+                }
+
+                .container-center-vertical > *,
+                .container-center-horizontal > * {
+                  pointer-events: auto;
+                  flex-shrink: 0;
+                }
+
+                .component-wrapper,
+                .screen {
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-all;
+                  word-break: break-word;
+                }
+
+                .auto-animated div {
+                  opacity: 0;
+                  position: absolute;
+                  --z-index: -1;
+                }
+
+                .auto-animated .container-center-vertical,
+                .auto-animated .container-center-horizontal {
+                  opacity: 1;
+                }
+
+                .overlay {
+                  position: absolute;
+                  opacity: 0;
+                  display: none;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  position: fixed;
+                }
+
+                .animate-appear {
+                  opacity: 0;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 normal forwards;
+                }
+
+                .animate-disappear {
+                  opacity: 1;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+                }
+
+                .animate-nodelay {
+                  animation-delay: 0s;
+                }
+
+                @keyframes reveal {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
+                }
+                .align-self-flex-start {
+                  align-self: flex-start;
+                }
+                .align-self-flex-end {
+                  align-self: flex-end;
+                }
+                .align-self-flex-center {
+                  align-self: center;
+                }
+                .valign-text-middle {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                }
+                .valign-text-bottom {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-end;
+                }
+                input:focus {
+                  outline: none;
+                }
+                .component-wrapper,
+                .component-wrapper * {
+                  pointer-events: none;
+                }
+
+                .component-wrapper a *,
+                .component-wrapper a,
+                .component-wrapper input,
+                .component-wrapper video,
+                .component-wrapper iframe,
+                .listeners-active,
+                .listeners-active * {
+                  pointer-events: auto;
+                }
+
+                .hidden,
+                .hidden * {
+                  visibility: hidden;
+                  pointer-events: none;
+                }
+
+                .smart-layers-pointers,
+                .smart-layers-pointers * {
+                  pointer-events: auto;
+                  visibility: visible;
+                }
+
+                .component-wrapper.not-ready,
+                .component-wrapper.not-ready * {
+                  visibility: hidden !important;
+                }
+
+                .listeners-active-click,
+                .listeners-active-click * {
+                  cursor: pointer;
+                }
+              </style>
+              <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+            </head>
+            <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+              <input type="hidden" id="anPageName" name="page" value="aesthetic-minimilism1" />
+              <div class="container-center-horizontal">
+                <div class="aesthetic-minimilism1 screen">
+                  <div class="rectangle-48-C61RwL border-class-2"></div>
+                  <a href="javascript:history.back()"
+                    ><div class="x-back-C61RwL valign-text-middle border-class-1 poppins-medium-black-16px">&lt;Back</div></a
+                  >
+                  <div class="rectangle-61-C61RwL"></div>
+                  <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
+                  <div class="text-body-paragraph-C61RwL">
+                    <div class="body-copy-jdAx62 border-class-1 poppins-normal-black-18px">
+                      Apple provides only the basic information of a feature, hiding additional information under “Learn More”.
+                      Check the same product on a retail website to understand the importance of clutter-free experience.
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-VMr6Om">
+                    <div class="body-copy-SuXUfK border-class-1 poppins-normal-black-18px-2">
+                      <span class="span1-KinY1a">3. Keep “Above the fold” in mind<br /></span
+                      ><span class="span2-KinY1a"
+                        ><br />• The term Above the fold came from conventional printing.<br /><br />• Like the front-page of the
+                        newspaper, it is the most important real estate in your interface.<br /><br />• Since most users will see
+                        this part, it’s important to keep only the most important things in this section.<br /><br />• In case of
+                        a website, Above the fold is the portion of the page visible without scrolling.<br /><br />• Although,
+                        with changing user behavior, above the fold is not as relevant today.<br /><br />• But it’s still good to
+                        keep it in mind and show only the most important things above the fold.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="conclusion-C61RwL">
+                    <div class="message-box-scenario-uxVav3">
+                      <div class="rectangle-89-l8o00t"></div>
+                      <div
+                        class="the-visibi--for-users-l8o00t valign-text-middle border-class-1 poppins-normal-granite-gray-24px"
+                      >
+                        <span>
+                          <span class="span1-mWojpO">Conclusion:<br /></span
+                          ><span class="span2-mWojpO"
+                            >Aesthetic and Minimalist design is not about adding white space. Its all about giving relevant data
+                            and removing all the unwanted things. Grab users attention towards the action needed there or give
+                            exact data that they want to see. Don&#39;t add irrelevant data and elements to confuse users.</span
+                          >
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="img/vector-6@2x.svg" /></div>
+                  <img class="x1ls-o-qu-h-e-x6-t2g-1-C61RwL" src="img/1-lsoquhbkhke2gjbe-x6t2g-1@1x.jpg" />
+                  <div class="text-body-paragraph-mzXdH9">
+                    <div class="body-copy-SCxiAB border-class-1 poppins-normal-black-18px-2">
+                      <span class="span1-Yh9UKS">4. Get rid of the extra mass<br /></span
+                      ><span class="span2-Yh9UKS"
+                        ><br />Extra mass is created by:<br /><br />• Features that are rarely used<br />• Copy that can be shrunk
+                        without losing the meaning<br />• Irrelevant images<br />• Redundant features<br /><br />Remember only a
+                        fraction of things are useful on your page.<br /><br />Always ask yourself - if there is one thing that
+                        you can remove from your interface, what would it be?</span
+                      >
+                    </div>
+                  </div>
+                  <img class="shopify20a-he20fold-1-C61RwL" src="img/shopify-20above-20the-20fold-1@1x.jpg" />
+                </div>
+              </div>
+            </body>
+          </html>
+          `,
         },
         {
           type: 'question',
@@ -1207,64 +3669,289 @@ export const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1 class="headline">9. Error Recovery</h1>
-          <img src="" alt="" />
-          <p>
-            Good designs should aim to prevent errors from ever occurring in the
-            first place, but sometimes this goal just isn’t realistic. To best meet
-            the needs of users, designs must also provide ways for users to overcome
-            any errors they encounter when interacting with the system. This can be
-            achieved three different ways. First, users should be informed of errors
-            so they can recognize they made one. Second, the system should diagnose
-            the error for the user by telling them in plain, easy to understand
-            language what went wrong. Third, the user should be given clear
-            directions on how to recover from the error.
-          </p>
-          <h3>Recognize</h3>
-          <p>
-            The most straightforward way to inform a user of an error is to use an
-            error message. This can be achieved with text alone or with text that is
-            accompanied by a visual cue like a red X for example. The error message
-            must be highly noticeable and visible to the user.
-          </p>
-          <img src="" alt="" />
-          <h3>Diagnose</h3>
-          <p>
-            The error message must use simple language when describing the problem
-            to the user. Errors should be presented in everyday language, not using
-            code or jargon. The language should also be precise in describing the
-            problem while remaining gentle and non-condemning to the user. The
-            message needs to go beyond just stating that there has been an error. It
-            needs to describe the problem that occured. A common example of this can
-            be seen in the 404 error message.
-          </p>
-          <img src="" alt="" />
-          <span>
-            A check needs to be done if exception handling is done across the
-            application so that relevant messages can be shown to the user. Empty
-            state messaging, 404, 500, etc are some examples.{' '}
-          </span>
-          <h3>Recover</h3>
-          <p>
-            Designs need to help users recover from errors by providing actionable
-            ways to fix them. Advice should always be detailed and constructive. The
-            best way to do this is to give the user instructions as well as
-            shortcuts within the error itself so they can recover from the error
-            immediately. Users must be given a way to fix mistakes they make while
-            interacting with a system. One of the most common ways of allowing users
-            to recover from errors is to provide the user with an undo or back
-            button. Internet browsers have back and forward buttons for this
-            purpose. Many types of applications including word processors like
-            Google Docs feature an undo and redo button so users stay in control of
-            their interactions.
-          </p>
-          <img src="" alt="" />
-          <h2>Conclusion</h2>
-          <p>
-            Users are humans. Humans tend to do mistakes. So we should always keep
-            an eye to avoid those possible mistakes by giving appropriate
-            suggestions and notifications when needed.
-          </p> `,
+          contents: `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=1042, maximum-scale=1.0" />
+              <link rel="shortcut icon" href="./img/favicon.png" />
+              <meta name="og:type" content="website" />
+              <meta name="twitter:card" content="photo" />
+              <link rel="stylesheet" type="text/css" href="css/error-recovery.css" />
+              <style>
+                @import url("https://fonts.googleapis.com/css?family=Poppins:500,300,700,400,600|Noto+Serif:600,600italic");
+
+                @font-face {
+                  font-family: "Proxima Nova-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5c5874afb72544000ad1576b/ProximaNova-Reg.ttf")
+                    format("truetype");
+                }
+
+                @font-face {
+                  font-family: "Helvetica Neue-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
+                }
+
+                .component-wrapper a,
+                .screen a {
+                  text-decoration: none;
+                  display: contents;
+                }
+
+                .full-width-a {
+                  width: 100%;
+                }
+
+                .full-height-a {
+                  height: 100%;
+                }
+
+                .screen textarea:focus,
+                .screen input:focus {
+                  outline: none;
+                }
+
+                .screen *,
+                .component-wrapper * {
+                  box-sizing: border-box;
+                }
+
+                .screen div {
+                  -webkit-text-size-adjust: none;
+                }
+
+                .container-center-vertical,
+                .container-center-horizontal {
+                  pointer-events: none;
+                  display: flex;
+                  flex-direction: row;
+                  padding: 0;
+                  margin: 0;
+                }
+
+                .container-center-vertical {
+                  align-items: center;
+                  height: 100%;
+                }
+
+                .container-center-horizontal {
+                  justify-content: center;
+                  width: 100%;
+                }
+
+                .container-center-vertical > *,
+                .container-center-horizontal > * {
+                  pointer-events: auto;
+                  flex-shrink: 0;
+                }
+
+                .component-wrapper,
+                .screen {
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-all;
+                  word-break: break-word;
+                }
+
+                .auto-animated div {
+                  opacity: 0;
+                  position: absolute;
+                  --z-index: -1;
+                }
+
+                .auto-animated .container-center-vertical,
+                .auto-animated .container-center-horizontal {
+                  opacity: 1;
+                }
+
+                .overlay {
+                  position: absolute;
+                  opacity: 0;
+                  display: none;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  position: fixed;
+                }
+
+                .animate-appear {
+                  opacity: 0;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 normal forwards;
+                }
+
+                .animate-disappear {
+                  opacity: 1;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+                }
+
+                .animate-nodelay {
+                  animation-delay: 0s;
+                }
+
+                @keyframes reveal {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
+                }
+                .align-self-flex-start {
+                  align-self: flex-start;
+                }
+                .align-self-flex-end {
+                  align-self: flex-end;
+                }
+                .align-self-flex-center {
+                  align-self: center;
+                }
+                .valign-text-middle {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                }
+                .valign-text-bottom {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-end;
+                }
+                input:focus {
+                  outline: none;
+                }
+                .component-wrapper,
+                .component-wrapper * {
+                  pointer-events: none;
+                }
+
+                .component-wrapper a *,
+                .component-wrapper a,
+                .component-wrapper input,
+                .component-wrapper video,
+                .component-wrapper iframe,
+                .listeners-active,
+                .listeners-active * {
+                  pointer-events: auto;
+                }
+
+                .hidden,
+                .hidden * {
+                  visibility: hidden;
+                  pointer-events: none;
+                }
+
+                .smart-layers-pointers,
+                .smart-layers-pointers * {
+                  pointer-events: auto;
+                  visibility: visible;
+                }
+
+                .component-wrapper.not-ready,
+                .component-wrapper.not-ready * {
+                  visibility: hidden !important;
+                }
+
+                .listeners-active-click,
+                .listeners-active-click * {
+                  cursor: pointer;
+                }
+              </style>
+              <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+            </head>
+            <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+              <input type="hidden" id="anPageName" name="page" value="error-recovery" />
+              <div class="container-center-horizontal">
+                <div class="error-recovery screen">
+                  <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
+                  <div class="rectangle-48-C61RwL border-class-2"></div>
+                  <div class="error-recovery-C61RwL">
+                    <a href="javascript:history.back()"
+                      ><div class="x-back-Oltj0X valign-text-middle border-class-1 poppins-medium-black-16px">&lt;Back</div></a
+                    >
+                    <div class="welcome-Oltj0X valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
+                      9. Error Recovery
+                    </div>
+                    <img class="line-4-Oltj0X" src="img/line-4-1@1x.svg" />
+                    <img class="line-4-YkvUY0" src="img/line-4-1@1x.svg" />
+                    <div class="body-copy-Oltj0X border-class-1 poppins-normal-black-18px">
+                      Good designs should aim to prevent errors from ever occurring in the first place, but sometimes this goal
+                      just isn’t realistic. To best meet the needs of users, designs must also provide ways for users to overcome
+                      any errors they encounter when interacting with the system. This can be achieved three different ways.
+                      First, users should be informed of errors so they can recognize they made one. Second, the system should
+                      diagnose the error for the user by telling them in plain, easy to understand language what went wrong.
+                      Third, the user should be given clear directions on how to recover from the error.
+                    </div>
+                    <img class="frame-Oltj0X" src="img/frame@1x.png" />
+                    <div class="body-copy-YkvUY0 border-class-1 poppins-normal-black-18px-2">
+                      <span class="span1-Atnf6P">Recognize<br /></span
+                      ><span class="span2-Atnf6P"
+                        >The most straightforward way to inform a user of an error is to use an error message. This can be
+                        achieved with text alone or with text that is accompanied by a visual cue like a red X for example. The
+                        error message must be highly noticeable and visible to the user.</span
+                      >
+                    </div>
+                    <div class="body-copy-aHUrjj border-class-1 poppins-normal-black-18px-2">
+                      <span class="span1-7VYIGS">Diagnose<br /></span
+                      ><span class="span2-7VYIGS"
+                        >The error message must use simple language when describing the problem to the user. Errors should be
+                        presented in everyday language, not using code or jargon. The language should also be precise in
+                        describing the problem while remaining gentle and non-condemning to the user. The message needs to go
+                        beyond just stating that there has been an error. It needs to describe the problem that occured. A common
+                        example of this can be seen in the 404 error message.</span
+                      >
+                    </div>
+                    <div class="body-copy-aJiKBD border-class-1 poppins-normal-black-18px-2">
+                      <span class="span1-eysx3n">Recover<br /></span
+                      ><span class="span2-eysx3n"
+                        >Designs need to help users recover from errors by providing actionable ways to fix them. Advice should
+                        always be detailed and constructive. The best way to do this is to give the user instructions as well as
+                        shortcuts within the error itself so they can recover from the error immediately. Users must be given a
+                        way to fix mistakes they make while interacting with a system.<br />One of the most common ways of
+                        allowing users to recover from errors is to provide the user with an undo or back button. Internet
+                        browsers have back and forward buttons for this purpose. Many types of applications including word
+                        processors like Google Docs feature an undo and redo button so users stay in control of their
+                        interactions.</span
+                      >
+                    </div>
+                    <img class="x0tv-b9-eq--bbvygw-i-1-Oltj0X" src="img/0--tvb9eqnnbbvygwi-1@1x.jpg" />
+                    <img class="x0lw-tf6-an-t3-qq-cy-1-Oltj0X" src="img/0-lwtf6anphxt3qqcy-1@1x.svg" />
+                    <img class="x0cc0f7-vg9hp-to-af-1-Oltj0X" src="img/0-cc0f7vg9--hptoaf-1@1x.svg" />
+                    <div class="text-image-subtext-Oltj0X">
+                      <div class="the-visibi--for-users-tlgKvU border-class-1 poppins-normal-black-14px">
+                        A check needs to be done if exception handling is done across the application so that relevant messages
+                        can be shown to the user. Empty state messaging, 404, 500, etc are some examples.
+                      </div>
+                    </div>
+                    <div class="message-box-scenario-Oltj0X">
+                      <div class="rectangle-89-MoibeY"></div>
+                      <div
+                        class="the-visibi--for-users-MoibeY valign-text-middle border-class-1 poppins-normal-granite-gray-24px"
+                      >
+                        <span>
+                          <span class="span1-zOk0Er">Conclusion:<br /></span
+                          ><span class="span2-zOk0Er"
+                            >Users are humans. Humans tend to do mistakes. So we should always keep an eye to avoid those possible
+                            mistakes by giving appropriate suggestions and notifications when needed.</span
+                          >
+                        </span>
+                      </div>
+                    </div>
+                    <div class="divider-dotted-Oltj0X"></div>
+                    <div class="text-body-paragraph-Oltj0X"></div>
+                    <img class="vector-Oltj0X" src="img/vector@2x.svg" />
+                  </div>
+                  <div class="rectangle-61-C61RwL"></div>
+                </div>
+              </div>
+            </body>
+          </html>
+          `,
         },
         {
           type: 'question',
@@ -1336,134 +4023,583 @@ export const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1 class="headline">10. Help & Documentation</h1>
-          <img src="" alt="" />
-          <p>
-            Websites and applications can offer two types of help: proactive and
-            reactive. Proactive help is provided before the user has encountered a
-            problem, in order to prevent issues. It includes onboarding tutorials
-            and contextual tips. In contrast, reactive help includes materials such
-            as documentation, videos, or even tutorials for those situations when
-            users have an issue and they seek out advice to address it. (Even though
-            some users may consume such materials proactively, it is rare that they
-            do so.)
-          </p>
-          <img src="" alt="" />
-          <p>
-            Proactive Help The goal of proactive help is to familiarize users with
-            an interface. Proactive help often occurs in three scenarios: New users
-            at first launch of an interface Novice users as they gain proficiency
-            with an interface (this happens over time and is most relevant for
-            complex applications) Existing users encountering a new or redesigned
-            interface Proactive help can be implemented through tutorials,
-            instructional overlays, templates, contextual help, tooltips, and
-            wizards.
-          </p>
-          <img src="" alt="" />
-          <p>
-            Push and Pull Revelations: Two Types of Proactive Help Proactive help
-            comes in two forms, push revelations and pull revelations. The
-            difference between these relies on whether they are individualized to
-            the user’s context and likely to be related to the current user goal.
-            Push revelations occur when an interface provides assistance or help
-            content that isn’t relevant to the users’ goals. Aptly named, this type
-            of proactive help pushes help content in a relatively random way, with
-            no regard for what the user is trying to do at the moment. The classic
-            example is the tips or instructional overlays that occur when an
-            application is launched and that inform users of new features.
-          </p>
-          <img src="" alt="" />
-          <p>
-            When logging into O’Reilly, a digital library, the system pushed
-            proactive help with an instructional overlay highlighting interface
-            elements.
-          </p>`,
+          contents: `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=1042, maximum-scale=1.0" />
+              <link rel="shortcut icon" href="./img/favicon.png" />
+              <meta name="og:type" content="website" />
+              <meta name="twitter:card" content="photo" />
+              <link rel="stylesheet" type="text/css" href="css/help-documentation.css" />
+              <style>
+                @import url("https://fonts.googleapis.com/css?family=Poppins:500,300,700,400,600|Noto+Serif:600,600italic");
+          
+                @font-face {
+                  font-family: "Proxima Nova-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5c5874afb72544000ad1576b/ProximaNova-Reg.ttf")
+                    format("truetype");
+                }
+          
+                @font-face {
+                  font-family: "Helvetica Neue-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
+                }
+          
+                .component-wrapper a,
+                .screen a {
+                  text-decoration: none;
+                  display: contents;
+                }
+          
+                .full-width-a {
+                  width: 100%;
+                }
+          
+                .full-height-a {
+                  height: 100%;
+                }
+          
+                .screen textarea:focus,
+                .screen input:focus {
+                  outline: none;
+                }
+          
+                .screen *,
+                .component-wrapper * {
+                  box-sizing: border-box;
+                }
+          
+                .screen div {
+                  -webkit-text-size-adjust: none;
+                }
+          
+                .container-center-vertical,
+                .container-center-horizontal {
+                  pointer-events: none;
+                  display: flex;
+                  flex-direction: row;
+                  padding: 0;
+                  margin: 0;
+                }
+          
+                .container-center-vertical {
+                  align-items: center;
+                  height: 100%;
+                }
+          
+                .container-center-horizontal {
+                  justify-content: center;
+                  width: 100%;
+                }
+          
+                .container-center-vertical > *,
+                .container-center-horizontal > * {
+                  pointer-events: auto;
+                  flex-shrink: 0;
+                }
+          
+                .component-wrapper,
+                .screen {
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-all;
+                  word-break: break-word;
+                }
+          
+                .auto-animated div {
+                  opacity: 0;
+                  position: absolute;
+                  --z-index: -1;
+                }
+          
+                .auto-animated .container-center-vertical,
+                .auto-animated .container-center-horizontal {
+                  opacity: 1;
+                }
+          
+                .overlay {
+                  position: absolute;
+                  opacity: 0;
+                  display: none;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  position: fixed;
+                }
+          
+                .animate-appear {
+                  opacity: 0;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 normal forwards;
+                }
+          
+                .animate-disappear {
+                  opacity: 1;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+                }
+          
+                .animate-nodelay {
+                  animation-delay: 0s;
+                }
+          
+                @keyframes reveal {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
+                }
+                .align-self-flex-start {
+                  align-self: flex-start;
+                }
+                .align-self-flex-end {
+                  align-self: flex-end;
+                }
+                .align-self-flex-center {
+                  align-self: center;
+                }
+                .valign-text-middle {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                }
+                .valign-text-bottom {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-end;
+                }
+                input:focus {
+                  outline: none;
+                }
+                .component-wrapper,
+                .component-wrapper * {
+                  pointer-events: none;
+                }
+          
+                .component-wrapper a *,
+                .component-wrapper a,
+                .component-wrapper input,
+                .component-wrapper video,
+                .component-wrapper iframe,
+                .listeners-active,
+                .listeners-active * {
+                  pointer-events: auto;
+                }
+          
+                .hidden,
+                .hidden * {
+                  visibility: hidden;
+                  pointer-events: none;
+                }
+          
+                .smart-layers-pointers,
+                .smart-layers-pointers * {
+                  pointer-events: auto;
+                  visibility: visible;
+                }
+          
+                .component-wrapper.not-ready,
+                .component-wrapper.not-ready * {
+                  visibility: hidden !important;
+                }
+          
+                .listeners-active-click,
+                .listeners-active-click * {
+                  cursor: pointer;
+                }
+              </style>
+              <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+            </head>
+            <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+              <input type="hidden" id="anPageName" name="page" value="help-documentation" />
+              <div class="container-center-horizontal">
+                <div class="help-documentation screen">
+                  <a href="javascript:history.back()"
+                    ><div class="x-back-C61RwL valign-text-middle border-class-1 poppins-medium-black-16px">&lt;Back</div></a
+                  >
+                  <div class="rectangle-61-C61RwL"></div>
+                  <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
+                  <div class="welcome-C61RwL">
+                    <div class="welcome-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
+                      10. Help &amp; Documentation
+                    </div>
+                  </div>
+                  <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="img/line-4-1@1x.svg" /></div>
+                  <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="img/line-4-1@1x.svg" /></div>
+                  <div class="text-body-paragraph-C61RwL">
+                    <div class="body-copy-jdAx62 border-class-1 poppins-normal-black-18px">
+                      Websites and applications can offer two types of help: proactive and reactive. Proactive help is provided
+                      before the user has encountered a problem, in order to prevent issues. It includes onboarding tutorials and
+                      contextual tips. In contrast, reactive help includes materials such as documentation, videos, or even
+                      tutorials for those situations when users have an issue and they seek out advice to address
+                      it.&nbsp;&nbsp;(Even though some users may consume such materials proactively, it is rare that they do so.)
+                    </div>
+                  </div>
+                  <img class="heuristic--le-73-82-1-C61RwL" src="img/heuristic-example-73-82-1@1x.jpg" />
+                  <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="img/vector@2x.svg" /></div>
+                  <div class="text-body-paragraph-VMr6Om">
+                    <div class="body-copy-SuXUfK border-class-1 poppins-normal-black-18px">
+                      Proactive Help<br /><br />The goal of proactive help is to familiarize users with an interface. Proactive
+                      help often occurs in three scenarios:<br /><br />New users at first launch of an interface<br />Novice users
+                      as they gain proficiency with an interface (this happens over time and is most relevant for complex
+                      applications)<br />Existing users encountering a new or redesigned interface<br />Proactive help can be
+                      implemented through tutorials, instructional overlays, templates, contextual help, tooltips, and wizards.
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-mzXdH9">
+                    <div class="body-copy-SCxiAB border-class-1 poppins-normal-black-18px">
+                      Push and Pull Revelations: Two Types of Proactive Help<br />Proactive help comes in two forms, push
+                      revelations and pull revelations. The difference between these relies on whether they are individualized to
+                      the user’s context and likely to be related to the current user goal.<br /><br />Push revelations occur when
+                      an interface provides assistance or help content that isn’t relevant to the users’ goals.&nbsp;&nbsp;Aptly
+                      named, this type of proactive help pushes help content in a relatively random way, with no regard for what
+                      the user is trying to do at the moment. The classic example is the tips or instructional overlays that occur
+                      when an application is launched and that inform users of new features.
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-QxM5SU">
+                    <div class="body-copy-8ROB5j border-class-1 poppins-normal-black-18px">
+                      When logging into O’Reilly, a digital library, the system pushed proactive help with an instructional
+                      overlay highlighting interface elements.
+                    </div>
+                  </div>
+                  <img class="oreilly-1-C61RwL" src="img/oreilly-1@1x.png" />
+                  <img class="helpasset-4-1-C61RwL" src="img/helpasset-4-1@1x.jpg" />
+                  <img class="asana-1-C61RwL" src="img/asana-1@1x.svg" />
+                  <div class="rectangle-62-C61RwL"></div>
+                </div>
+              </div>
+            </body>
+          </html>          
+          `,
         },
         {
           type: 'display',
-          contents: `<p>
-          Push revelations are often ignored by users because they get in the way:
-          people want to use the interface, not just read about it. This type of
-          help also lacks context, as it’s challenging to remember the pushed
-          information when it is not related to your immediate goals.
-        </p>
-        <img src="" alt="" />
-        <p>
-          AddEvent, a calendar event tool, prompted new users with an option to
-          view a tutorial of the interface. This push revelation was appropriately
-          paired with the option to skip the tutorial. However, even if users
-          engaged with the tutorial, they would discover that it was too basic!
-          Instructions to create an event are likely unnecessary because the
-          system follows design standards and is aligned with traditional mental
-          models of how to create a calendar event. Interfaces that provide basic
-          information as proactive help are partly why users skip push
-          revelations. When users engage with them and are shown obvious commands
-          and controls, they may start to perceive all push revelations as low
-          value and not worth engaging with.
-        </p>
-        <p>
-          Pull revelations show contextual tips that are relevant to the user’s
-          task. They could appear when the mouse is near corresponding controls or
-          when the user has started a corresponding flow. Implementation methods
-          include tooltips, contextual overlays, or wizards. Pull revelations are
-          less likely to be ignored because they provide timely information to
-          help users accomplish a task.
-        </p>
-        <img src="" alt="" />
-        <span>
-          Microsoft Word recognized that the user was working on a resume and
-          provided a tip to See resume suggestions from LinkedIn. This is an
-          example of a pull revelation, because it is triggered by the individual
-          user’s behavior, not ‘pushed’ to all users.
-        </span>
-        <h2>Guidance for Providing Proactive Help</h2>
-        <p>
-          Keep proactive help short and to the point. Proactive help distracts
-          users from their core task, so it’s important that the help is timely,
-          informative, and relevant. Write the content from the user’s perspective
-          and consider using verb-oriented phrases.
-        </p>
-  
-        <p>
-          Favor pull over push revelations. Make help content accessible, but
-          don’t force users into it. Use push revelations for information that is
-          likely to be needed regardless of context and pull revelations to
-          provide timely help content relevant to the user’s task.
-        </p>
-        <img src="" alt="" />
-        <span>
-          Dovetail, a user research platform, provided timely help content when
-          users opened a data page — a pull revelation. This was a better choice
-          than presenting this content as a push revelation (e.g., at login)
-        </span>
-        <p>
-          Push revelations should be easy to ignore (e.g., by dismissing them).
-          Push revelations stall users from accessing the core interface.
-          Additionally, push revelations can frustrate users that are already
-          familiar with the interface or don’t feel they need help. Anytime you
-          present content in this way, make sure users can skip it.
-        </p>
-        <img src="" alt="" />
-        <span>
-          Dovetail, a user research platform, provided timely help content when
-          users opened a data page — a pull revelation. This was a better choice
-          than presenting this content as a push revelation (e.g., at login).
-          ​​​​​s.
-        </span>
-        <p>
-          Conclusion: Help and documentation are an important element of user
-          experience. They are often necessary, but rarely fun. In general, users
-          don’t like to read, and they particularly don’t like to read
-          instructions. But any kind of trouble in the interaction is also a
-          learning opportunity for the user and thus an opportunity for the
-          designer to impact information and grow the user’s mental model in ways
-          that would not have happened without the impetus of this trouble.
-          Anticipate when your users will need help and provide relevant
-          information that will support them in accomplishing their goal.
-          Supplement your proactive help with a documentation repository that
-          users can refer to as needed. And remember to keep help content brief,
-          to the point, and easy to scan.{' '}
-        </p>`,
+          contents: `
+          <!DOCTYPE html>
+          <html>
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=1042, maximum-scale=1.0" />
+              <link rel="shortcut icon" href="./img/favicon.png" />
+              <meta name="og:type" content="website" />
+              <meta name="twitter:card" content="photo" />
+              <link rel="stylesheet" type="text/css" href="css/help-documentation-cont.css" />
+              <style>
+                @import url("https://fonts.googleapis.com/css?family=Poppins:500,300,700,400,600|Noto+Serif:600,600italic");
+
+                @font-face {
+                  font-family: "Proxima Nova-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5c5874afb72544000ad1576b/ProximaNova-Reg.ttf")
+                    format("truetype");
+                }
+
+                @font-face {
+                  font-family: "Helvetica Neue-Bold";
+                  font-style: normal;
+                  font-weight: 700;
+                  src: url("https://anima-uploads.s3.amazonaws.com/5ad90c8b588afb000b501a89/HelveticaNeue.ttf") format("truetype");
+                }
+
+                .component-wrapper a,
+                .screen a {
+                  text-decoration: none;
+                  display: contents;
+                }
+
+                .full-width-a {
+                  width: 100%;
+                }
+
+                .full-height-a {
+                  height: 100%;
+                }
+
+                .screen textarea:focus,
+                .screen input:focus {
+                  outline: none;
+                }
+
+                .screen *,
+                .component-wrapper * {
+                  box-sizing: border-box;
+                }
+
+                .screen div {
+                  -webkit-text-size-adjust: none;
+                }
+
+                .container-center-vertical,
+                .container-center-horizontal {
+                  pointer-events: none;
+                  display: flex;
+                  flex-direction: row;
+                  padding: 0;
+                  margin: 0;
+                }
+
+                .container-center-vertical {
+                  align-items: center;
+                  height: 100%;
+                }
+
+                .container-center-horizontal {
+                  justify-content: center;
+                  width: 100%;
+                }
+
+                .container-center-vertical > *,
+                .container-center-horizontal > * {
+                  pointer-events: auto;
+                  flex-shrink: 0;
+                }
+
+                .component-wrapper,
+                .screen {
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-all;
+                  word-break: break-word;
+                }
+
+                .auto-animated div {
+                  opacity: 0;
+                  position: absolute;
+                  --z-index: -1;
+                }
+
+                .auto-animated .container-center-vertical,
+                .auto-animated .container-center-horizontal {
+                  opacity: 1;
+                }
+
+                .overlay {
+                  position: absolute;
+                  opacity: 0;
+                  display: none;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  position: fixed;
+                }
+
+                .animate-appear {
+                  opacity: 0;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 normal forwards;
+                }
+
+                .animate-disappear {
+                  opacity: 1;
+                  display: block;
+                  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+                }
+
+                .animate-nodelay {
+                  animation-delay: 0s;
+                }
+
+                @keyframes reveal {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
+                }
+                .align-self-flex-start {
+                  align-self: flex-start;
+                }
+                .align-self-flex-end {
+                  align-self: flex-end;
+                }
+                .align-self-flex-center {
+                  align-self: center;
+                }
+                .valign-text-middle {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                }
+                .valign-text-bottom {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-end;
+                }
+                input:focus {
+                  outline: none;
+                }
+                .component-wrapper,
+                .component-wrapper * {
+                  pointer-events: none;
+                }
+
+                .component-wrapper a *,
+                .component-wrapper a,
+                .component-wrapper input,
+                .component-wrapper video,
+                .component-wrapper iframe,
+                .listeners-active,
+                .listeners-active * {
+                  pointer-events: auto;
+                }
+
+                .hidden,
+                .hidden * {
+                  visibility: hidden;
+                  pointer-events: none;
+                }
+
+                .smart-layers-pointers,
+                .smart-layers-pointers * {
+                  pointer-events: auto;
+                  visibility: visible;
+                }
+
+                .component-wrapper.not-ready,
+                .component-wrapper.not-ready * {
+                  visibility: hidden !important;
+                }
+
+                .listeners-active-click,
+                .listeners-active-click * {
+                  cursor: pointer;
+                }
+              </style>
+              <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+            </head>
+            <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+              <input type="hidden" id="anPageName" name="page" value="help-documentation-cont" />
+              <div class="container-center-horizontal">
+                <div class="help-documentation-cont screen">
+                  <div class="rectangle-48-C61RwL border-class-2"></div>
+                  <a href="javascript:history.back()"
+                    ><div class="x-back-C61RwL valign-text-middle border-class-1 poppins-medium-black-16px">&lt;Back</div></a
+                  >
+                  <div class="rectangle-61-C61RwL"></div>
+                  <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
+                  <div class="text-body-paragraph-C61RwL">
+                    <div class="body-copy-jdAx62 border-class-1 poppins-normal-black-18px">
+                      Push revelations are often ignored by users because they get in the way: people want to use the interface,
+                      not just read about it. This type of help also lacks context, as it’s challenging to remember the pushed
+                      information when it is not related to your immediate goals.
+                    </div>
+                  </div>
+                  <img class="addevent-1-C61RwL" src="img/addevent-1@1x.svg" />
+                  <div class="text-image-subtext-C61RwL">
+                    <div class="the-visibi--for-users-KvLq2Y border-class-1 poppins-normal-black-14px">
+                      Microsoft Word recognized that the user was working on a resume and provided a tip to See resume suggestions
+                      from LinkedIn. This is an example of a pull revelation, because it is triggered by the individual user’s
+                      behavior, not ‘pushed’ to all users.
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-VMr6Om">
+                    <div class="body-copy-SuXUfK border-class-1">
+                      Dovetail, a user research platform, provided timely help content when users opened a data page — a pull
+                      revelation. This was a better choice than presenting this content as a push revelation (e.g., at login)
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-mzXdH9">
+                    <div class="body-copy-SCxiAB border-class-1">
+                      Dovetail, a user research platform, provided timely help content when users opened a data page — a pull
+                      revelation. This was a better choice than presenting this content as a push revelation (e.g., at
+                      login).&nbsp;&nbsp; ​​​​​s.
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-QxM5SU">
+                    <div class="body-copy-8ROB5j border-class-1 poppins-normal-black-18px">
+                      AddEvent, a calendar event tool, prompted new users with an option to view a tutorial of the interface. This
+                      push revelation was appropriately paired with the option to skip the tutorial. However, even if
+                      users&nbsp;&nbsp;engaged with the tutorial, they would discover that it was too basic! Instructions to
+                      create an event are likely unnecessary because the system follows design standards and is aligned with
+                      traditional mental models of how to create a calendar event. Interfaces that provide basic information as
+                      proactive help are partly why users skip push revelations. When users engage with them and are shown obvious
+                      commands and controls, they may start to perceive all push revelations as low value and not worth engaging
+                      with.
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-2P4qUJ">
+                    <div class="body-copy-aD3clP border-class-1 poppins-normal-black-18px-2">
+                      <span class="span1-SxnzLU"
+                        >Pull revelations show contextual tips that are relevant to the user’s task. They could appear when the
+                        mouse is near corresponding controls or when the user has started a corresponding flow. </span
+                      ><span class="span2-SxnzLU"
+                        >Implementation methods include tooltips, contextual overlays, or wizards. Pull revelations are less
+                        likely to be ignored because they provide timely information to help users accomplish a task.<br /><br
+                      /></span>
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-qr8e7q">
+                    <div class="body-copy-OF6xV9 border-class-1 poppins-normal-black-18px-2">
+                      <span class="span1-53Lcuj">Keep proactive help short and to the point.</span
+                      ><span class="span2-53Lcuj">
+                        Proactive help distracts users from their core task, so it’s important that the help is timely,
+                        informative, and relevant. Write the content from the user’s perspective and consider using verb-oriented
+                        phrases.<br /><br /></span
+                      ><span class="span3-53Lcuj">Favor pull over push revelations. </span
+                      ><span class="span4-53Lcuj"
+                        >Make help content accessible, but don’t force users into it.&nbsp;&nbsp;Use push revelations for
+                        information that is likely to be needed regardless of context and pull revelations to provide timely help
+                        content relevant to the user’s task.</span
+                      >
+                    </div>
+                  </div>
+                  <div class="text-body-paragraph-J1YQmd">
+                    <div class="body-copy-AkjVFn border-class-1 poppins-normal-black-18px-2">
+                      <span class="span1-BHHr0j">Push revelations should be easy to ignore (e.g., by dismissing them). </span
+                      ><span class="span2-BHHr0j"
+                        >Push revelations stall users from accessing the core interface. Additionally, push revelations can
+                        frustrate users that are already familiar with the interface or don’t feel they need help. Anytime you
+                        present content in this way, make sure users can skip it.</span
+                      >
+                    </div>
+                  </div>
+                  <img class="mind-1-C61RwL" src="img/mind-1@1x.svg" />
+                  <div class="conclusion-C61RwL">
+                    <div class="message-box-scenario-uxVav3">
+                      <div class="rectangle-89-l8o00t"></div>
+                      <div
+                        class="the-visibi--for-users-l8o00t valign-text-middle border-class-1 poppins-normal-granite-gray-24px"
+                      >
+                        <span>
+                          <span class="span1-mWojpO">Conclusion:<br /></span
+                          ><span class="span2-mWojpO"
+                            >Help and documentation are an important element of user experience. They are often necessary, but
+                            rarely fun. In general, users don’t like to read, and they particularly don’t like to read
+                            instructions. But any kind of trouble in the interaction is also a learning opportunity for the user
+                            and thus an opportunity for the designer to impact information and grow the user’s mental model in
+                            ways that would not have happened without the impetus of this trouble. Anticipate when your users will
+                            need help and provide relevant information that will support them in accomplishing their goal.
+                            Supplement your proactive help with a documentation repository that users can refer to as needed. And
+                            remember to keep help content brief, to the point, and easy to scan.&nbsp;&nbsp;</span
+                          >
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <img class="word-1-C61RwL" src="img/word-1@1x.svg" />
+                  <img class="dovetail-1-C61RwL" src="img/dovetail-1@1x.svg" />
+                  <div class="section-header-C61RwL">
+                    <div class="guidance-f-ctive-help-X1rVr0 valign-text-middle border-class-1 poppins-semi-bold-black-24px">
+                      Guidance for Providing Proactive Help
+                    </div>
+                  </div>
+                  <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="img/vector@2x.svg" /></div>
+                </div>
+              </div>
+            </body>
+          </html>
+          `,
         },
         {
           type: 'question',
