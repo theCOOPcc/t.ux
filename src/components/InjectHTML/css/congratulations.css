@@ -1,0 +1,426 @@
+/* screen - congratulations */
+
+.border-class-1 {
+
+}
+.border-class-2 {
+  border: 1px solid var(--alto);
+}
+.border-class-3 {
+  border: 1px solid var(--mountain-mist);
+}
+.congratulations {
+  background-color: var(--white);
+  height: 943px;
+  overflow: hidden;
+  position: relative;
+  width: 1042px;
+}
+.congratulations .additional-r-comments-C61RwL {
+  background-color: transparent;
+  color: rgba(50,50,57,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  height: auto;
+  left: 271px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 674px;
+  width: 336px;
+}
+.congratulations .aesthetic-minimalism-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 441px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 540px;
+  width: auto;
+}
+.congratulations .checkbox-c-nent-20x20-2P4qUJ {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 20px;
+  left: 410px;
+  position: absolute;
+  top: 435px;
+  width: 20px;
+}
+.congratulations .checkbox-c-nent-20x20-C61RwL {
+  background-color: transparent;
+  border-radius: 5px;
+  height: 20px;
+  left: 410px;
+  position: absolute;
+  top: 295px;
+  width: 20px;
+}
+.congratulations .checkbox-c-nent-20x20-HlKRTo {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 20px;
+  left: 411px;
+  position: absolute;
+  top: 575px;
+  width: 20px;
+}
+.congratulations .checkbox-c-nent-20x20-J1YQmd {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 20px;
+  left: 410px;
+  position: absolute;
+  top: 505px;
+  width: 20px;
+}
+.congratulations .checkbox-c-nent-20x20-QxM5SU {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 20px;
+  left: 410px;
+  position: absolute;
+  top: 400px;
+  width: 20px;
+}
+.congratulations .checkbox-c-nent-20x20-VMr6Om {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 20px;
+  left: 410px;
+  position: absolute;
+  top: 330px;
+  width: 20px;
+}
+.congratulations .checkbox-c-nent-20x20-VkPPtx {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 20px;
+  left: 412px;
+  position: absolute;
+  top: 610px;
+  width: 20px;
+}
+.congratulations .checkbox-c-nent-20x20-a5WPlX {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 20px;
+  left: 410px;
+  position: absolute;
+  top: 540px;
+  width: 20px;
+}
+.congratulations .checkbox-c-nent-20x20-mzXdH9 {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 20px;
+  left: 410px;
+  position: absolute;
+  top: 365px;
+  width: 20px;
+}
+.congratulations .checkbox-c-nent-20x20-qr8e7q {
+  background-color: var(--white);
+  border-radius: 5px;
+  height: 20px;
+  left: 410px;
+  position: absolute;
+  top: 470px;
+  width: 20px;
+}
+.congratulations .congratulations-0O6yUh {
+  background-color: transparent;
+  color: rgba(54,96,98,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  height: 81px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 1044px;
+}
+.congratulations .consistenc--standards-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 441px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 400px;
+  width: auto;
+}
+.congratulations .error-prevention-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 441px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 435px;
+  width: auto;
+}
+.congratulations .error-recovery-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 442px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 575px;
+  width: auto;
+}
+.congratulations .flexibilit-efficiency-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 441px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 505px;
+  width: auto;
+}
+.congratulations .help-documentation-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 443px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 610px;
+  width: auto;
+}
+.congratulations .line-14-PllR71 {
+  background-color: transparent;
+  height: 18px;
+  left: 484px;
+  position: absolute;
+  top: 100px;
+  width: 15px;
+}
+.congratulations .line-15-PllR71 {
+  background-color: transparent;
+  height: 12px;
+  left: 490px;
+  position: absolute;
+  top: 106px;
+  width: 10px;
+}
+.congratulations .line-16-PllR71 {
+  background-color: transparent;
+  height: 6px;
+  left: 494px;
+  position: absolute;
+  top: 111px;
+  width: 5px;
+}
+.congratulations .recognitio-ver-recall-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 441px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 470px;
+  width: auto;
+}
+.congratulations .rectangle-61-C61RwL {
+  background-color: var(--aquamarine);
+  height: 9px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1042px;
+}
+.congratulations .span1-DOG2E6 {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.congratulations .span2-DOG2E6 {
+  color: rgba(243,119,6,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.congratulations .span3-DOG2E6 {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.congratulations .system-world-match-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 441px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 330px;
+  width: auto;
+}
+.congratulations .text-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 554px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 117px;
+  width: 256px;
+}
+.congratulations .text-activ-on-message-C61RwL {
+  background-color: transparent;
+  height: 130px;
+  left: 5px;
+  position: absolute;
+  top: 135px;
+  width: 1039px;
+}
+.congratulations .text-box-C61RwL {
+  background-color: var(--white);
+  border: 1px solid rgba(60,133,130,1.0);
+  border-radius: 5px;
+  height: 124px;
+  left: 271px;
+  position: absolute;
+  top: 705px;
+  width: 505px;
+}
+.congratulations .user-control-freedom-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 441px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 365px;
+  width: auto;
+}
+.congratulations .visibility-tem-status-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 441px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 295px;
+  width: auto;
+}
+.congratulations .welcome-C61RwL {
+  background-color: transparent;
+  height: 81px;
+  left: 0px;
+  position: absolute;
+  top: 54px;
+  width: 1044px;
+}
+.congratulations .youve-succ-r-feedback-r097xv {
+  background-color: transparent;
+  color: transparent;
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 28px;
+  height: 120px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  width: 1039px;
+}
+.helveticaneue-bold-mine-shaft-16px {
+  color: var(--mine-shaft);
+  font-family: 'Helvetica Neue-Bold', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-bold-chilean-fire-60px {
+  color: var(--chilean-fire);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-medium-black-16px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.poppins-normal-black-14px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.poppins-normal-black-18px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.poppins-normal-black-18px-2 {
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 18px;
+}
+.poppins-normal-granite-gray-24px {
+  color: var(--granite-gray);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 24px;
+}
+.poppins-normal-white-16px {
+  color: transparent;
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 16px;
+}
+.poppins-semi-bold-black-24px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+.proximanova-bold-black-40px {
+  color: var(--black);
+  font-family: 'Proxima Nova-Bold', Helvetica, Arial, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+:root {
+  --alto: rgba(221,221,221,1.0);
+  --aquamarine: rgba(120,214,218,1.0);
+  --aquamarine-2: rgba(120,214,218,0.2);
+  --black: rgba(0,0,0,1.0);
+  --chilean-fire: rgba(243,119,6,1.0);
+  --granite-gray: rgba(102,102,102,1.0);
+  --mine-shaft: rgba(51,51,51,1.0);
+  --mountain-mist: rgba(153,153,153,1.0);
+  --white: rgba(255,255,255,1.0);
+}
