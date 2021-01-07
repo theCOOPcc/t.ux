@@ -72,7 +72,6 @@ const Manager = () => {
     console.log(update);
     setGroups(updatedGroups);
     setTextInput('');
-    // call update groups
   };
 
   const handleCreateGroup = async () => {
@@ -89,6 +88,7 @@ const Manager = () => {
       <ManagerStudentResults results={results} />
       <ManagerActivites
         groups={groups}
+        setGroups={setGroups}
         selectedGroupIndex={selectedGroupIndex}
         setSelectedGroupIndex={setSelectedGroupIndex}
       />
