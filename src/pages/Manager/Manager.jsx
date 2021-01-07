@@ -1,134 +1,111 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import * as U from '../../components/TuxComponents/UniversalComponents'
+import React, { useState, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import groupAPI from '../../services/groupService';
+import * as mailAPI from '../../services/mail-api';
+import ManagerActivites from '../../components/ManagerActivities/ManagerActivities';
+import ManagerStudentResults from '../../components/ManagerStudentResults/ManagerStudentResults';
 
-// The Manager Page will get information relative to the Manager (activities, reports, profile info) through props coming in from App.js
-// It will set that information to state.
-// It will render that information to the screen and allow the Manager/Teacher to take certain actions.
+import ManageGroupMembers from '../../components/ManageGroupMembers/ManageGroupMembers';
 
-class Manager extends Component {
-  state = {
-    // TODO: set from props
-    // i think the manager component, when it loads, can call the API itself. no need to call the api every time the app loads -cory
-    results: '',
-    activities: [{
-      name: 'Heuristics', 
-      icon: 'images/Heuristic.svg',
-    }, {
-      name: 'Accessability', 
-      icon: 'images/Accessibility.svg',
-    }, {
-      name: 'Research Methodologies', 
-      icon: 'images/Research.svg',
-    }, {
-      name: 'UI Patterns',
-      icon:'images/UIPattern.svg'}],
-    groups: [{ 
-      name: 'topaz',
-      members: [{
-        name: 'Dan Boterashvili',
-        email: 'dan@gmail.com'
-       }, {
-        name: 'Aaron Neeley',
-        email: 'aaron@gmail.com'
-       },
-       {
-        name: 'Catilin Hartung',
-        email: 'caitlin@gmail.com'
-       }]
-    }, {
-      name: 'sei 7-27',
-      members: [{
-        name: 'Cory Spicer',
-        email: 'cory@gmail.com'
-      },{
-        name: 'Karen Lobin Perkins',
-        email: 'karen@gmail.com'
-      }]},
-    ]
+
+const Manager = () => {
+  const [newGroupName, setNewGroupName] = useState('');
+  const [textInput, setTextInput] = useState('');
+  const [results, setResults] = useState('');
+  const [groups, setGroups] = useState('');
+  const [selectedGroupIndex, setSelectedGroupIndex] = useState('');
+
+  const getAllGroups = async () => {
+    return await groupAPI.getAll();
   };
-  render() {
-    return (
-      <>
-        {/* // TODO: Render information to screen from state. */}
-        <U.FlexBox  bordered managerDash column>
-          <U.ColorBlock SubGridBlue />
-          <U.Heading3 alignLeft bolder>Student Results</U.Heading3>
-          {this.state.results ? 
-          <React.Fragment>
-            <U.Normal center greyed>
-              {this.state.results}
-            </U.Normal> 
-          </React.Fragment> :
-            <React.Fragment>
-            <U.FlexBox>
-              <U.Normal twentyThirty center greyed>
-                You Have No Results Yet. 
-                <br></br>
-                Invite Students to an Activity to see their Progress.
-              </U.Normal>
-            </U.FlexBox>
-            </React.Fragment>
-        }
-        </U.FlexBox>
-        <U.FlexBox bordered managerDash column>
-        <U.ColorBlock SubGridBlue></U.ColorBlock>
-          <U.Heading3 alignLeft bolder >Activities</U.Heading3>
-          {this.state.activities.map((activity, idx) => 
-          <U.FlexBox column wide>
-            <U.FlexBox wide spaceBetween>
-              <U.FlexBox alignLeft>
-                <U.Normal marginLeft><img src={activity.icon}/></U.Normal>
-                <U.Normal marginLeft twenty8 key={idx}>{activity.name}</U.Normal> 
-              </U.FlexBox>
-              <U.FlexBox alignRight>
-                <U.WideBtn preview teal>Assign</U.WideBtn>
-                <U.NakedBtn preview>Preview</U.NakedBtn>
-              </U.FlexBox>
-            </U.FlexBox>
-              <U.ColorBlock SubGridGrey />
-            </U.FlexBox>
-          )}
-        </U.FlexBox>
-        <U.FlexBox bordered managerDash column>
-          <U.ColorBlock SubGridBlue />
-          <U.Heading3 alignLeft bolder>Manage Group Members</U.Heading3>
-          {this.state.groups.map((group, idx) => 
-            <U.FlexBox column wide >
-              <U.FlexBox alignLeft>
-                <U.Heading3 >Group:</U.Heading3><U.Heading3 blue>{group.name}</U.Heading3>
-              </U.FlexBox>
-            <U.FlexBox wide spaceBetween>
-            <table>
-              <tr>
-                <th>Student Name</th>
-                <th>Email</th>
-                <th>Delete</th>
-              </tr>
-              <tr>
-                {group.members.map(member =>
-                  <U.FlexBox bottomBordered wide spaceBetween>
-                    <td>{member.name}</td>
-                    <td>{member.email}</td>
-                    <td>trash can icon</td>
-                  </U.FlexBox>
-                  )}
-              </tr>
-            </table>
-          </U.FlexBox>
-          </U.FlexBox>
-          )}
-        <U.FlexBox column>
-          <U.FlexBox column alignLeft>
-            <U.Normal greyed sixteen>Add Students to Group</U.Normal>
-            <input type='textarea' placeholder='Enter email addresses seperated by commas (Ex: leo@gmail.com, dan@gmail.com, etc..' />
-          </U.FlexBox>
-          <U.WideBtn preview teal>Add to Group</U.WideBtn>
-        </U.FlexBox>
-        </U.FlexBox>
-      </>
+
+  useEffect(() => {
+    const retreivedGroups = getAllGroups();
+    console.log(retreivedGroups);
+    retreivedGroups.then((newGroups) => {
+      setGroups(newGroups);
+    });
+  }, []);
+
+  const handleInputChange = (e) => {
+    e.preventDefault();
+    const { value } = e.target;
+    // setInput(value);
+  };
+
+  const handleTextInputChange = (e) => {
+    e.preventDefault();
+    const { value } = e.target;
+    setTextInput(value);
+  };
+
+  const splitGroupMembers = (textInput) => {
+    // Split and trim emails
+    const members = textInput.split(',');
+    const trimmed = members.map((member) => member.trim());
+    return trimmed;
+  };
+
+  const sendEmailInvite = async (group) => {
+    await mailAPI.create(group);
+  };
+
+  const handleAddToGroup = async () => {
+    console.log(groups);
+    const emails = splitGroupMembers(textInput);
+    const inviteList = [];
+    emails.forEach((email) =>
+      inviteList.push({ email: email, invited: false, signedUp: false })
     );
-  }
-}
+    const updatedGroups = groups;
+    const selectedGroup = updatedGroups[selectedGroupIndex];
+
+    inviteList.forEach((member) => {
+      selectedGroup.invited.push({
+        email: member.email,
+        invited: false,
+        signedUp: false,
+      });
+    });
+
+    const update = await groupAPI.update(selectedGroup);
+    console.log(update);
+    setGroups(updatedGroups);
+    setTextInput('');
+    // call update groups
+  };
+
+  const handleCreateGroup = async () => {
+    const group = await groupAPI.create({ name: newGroupName });
+    const updatedGroups = groups;
+    updatedGroups.push(group);
+    setGroups(updatedGroups);
+    setNewGroupName('');
+  };
+
+  return (
+    <>
+      <h1>Manager Landing Page</h1>
+      <ManagerStudentResults results={results} />
+      <ManagerActivites
+        groups={groups}
+        selectedGroupIndex={selectedGroupIndex}
+        setSelectedGroupIndex={setSelectedGroupIndex}
+      />
+      <ManageGroupMembers
+        groups={groups}
+        selectedGroupIndex={selectedGroupIndex}
+        setSelectedGroupIndex={setSelectedGroupIndex}
+        textInput={textInput}
+        handleTextInputChange={handleTextInputChange}
+        handleAddToGroup={handleAddToGroup}
+        newGroupName={newGroupName}
+        setNewGroupName={setNewGroupName}
+        handleCreateGroup={handleCreateGroup}
+      />
+    </>
+  );
+};
 
 export default Manager;

@@ -6,8 +6,8 @@ const groupsCtrl = require('../controllers/groups');
 
 /*---------- Protected Routes ----------*/
 router.use(require("../config/auth"));
-router.get('/', checkAuth, groupsCtrl.index);
-router.post('/', checkAuth, groupsCtrl.create);
+router.get('/',  groupsCtrl.index);
+router.post('/', groupsCtrl.create);
 router.get('/:id',checkAuth, groupsCtrl.show);
 router.put('/:id', checkAuth, groupsCtrl.update);
 router.delete('/:id', checkAuth, groupsCtrl.delete);

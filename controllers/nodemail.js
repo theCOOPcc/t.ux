@@ -5,8 +5,9 @@ module.exports = {
 }
 
 function sendNodeMail(req,res){
-    sendMail(req.body.subject, req.body.message, req.body.email, req.body.name)
-    res.status(200).json('Email sent...')
+    console.log('send invite emails', req.body)
+    // sendMail(req.body.subject, req.body.message, req.body.email, req.body.name)
+    // res.status(200).json('Email sent...')
 }
 
 function sendMail(subject, name, email, message){
