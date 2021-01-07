@@ -55,7 +55,7 @@ const ManagerActivities = ({
                   <U.WideBtn preview teal onClick={handleShow}>
                     Assign
                   </U.WideBtn>
-                  <U.NakedBtn preview>Preview</U.NakedBtn>
+                  {/* <U.NakedBtn preview>Preview</U.NakedBtn> */}
                 </U.FlexBox>
               </U.FlexBox>
               <U.ColorBlock SubGridGrey />

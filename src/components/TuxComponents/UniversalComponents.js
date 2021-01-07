@@ -200,6 +200,10 @@ export const FlexBox = styled.div`
 		align-items: flex-start;
 		margin: 20px 35px 0 10px;
 	`}
+
+	${props => props.transparent && css`
+		background-color: transparent;
+	`}
 `;
 
 /*---------- Buttons ----------*/
@@ -450,7 +454,13 @@ export const Heading3 = styled.h3`
 
 	${props => props.blue && css`
 	color: #1B98A0;
-  `}
+	  `}
+	  
+	/* ${props => props.invite & css`
+		/* font-size: 36px; */
+		line-height: 54px;
+		color: var(--text-grey) !important;
+	`} */
 
 `;
 
