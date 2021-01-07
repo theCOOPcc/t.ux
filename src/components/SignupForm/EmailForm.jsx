@@ -3,6 +3,7 @@ import * as U from '../TuxComponents/UniversalComponents';
 import * as L from '../TuxComponents/LoginComponents';
 
 const EmailForm = ({ errors, values, handleChange, touched }) => {
+  const { userData } = values
   return (
     <main>
       <U.FlexBox>
@@ -17,9 +18,9 @@ const EmailForm = ({ errors, values, handleChange, touched }) => {
             <U.SmallInput
               type="text"
               autoComplete="off"
-              id="email"
-              value={values.email}
-              name="email"
+              id="userData.email"
+              value={userData.email}
+              name="userData.email"
               onChange={handleChange}
             ></U.SmallInput>
             {errors.email && <div>{errors.email}</div>}
@@ -27,7 +28,7 @@ const EmailForm = ({ errors, values, handleChange, touched }) => {
             <U.WideBtn
               extraWide
               disabled={
-                !errors.email && values.email && values.email.length > 0
+                !errors.email && userData.email && userData.email.length > 0
                   ? false
                   : true
               }

@@ -1,10 +1,10 @@
-
 // TODO: Fix positioning yellow sticky 1. Visiblity of System Status
 //  TODO: Why is "Examples" not responding to css? (visibility of...)
 //  TODO: Line up text under images at Examples (visibility of...)
+// TODO: Get finger in system/world match to center
+// TODO: Figure why span bolding not working inside li in system/world
 
-
-export  const HeuristicsSampleData = {
+export const HeuristicsSampleData = {
   name: 'Heuristics',
   topic: 'Heuristics',
   sections: [
@@ -24,7 +24,7 @@ export  const HeuristicsSampleData = {
           <div class="img"></div>
           <p class="caption">Image caption here</p>
           <div class="page-divider"></div>
-          <p class="bold-paragraph">
+          <p class="semi-bold">
               25 years ago, Jakob Nielsen described the 10 general principles for
               interaction design. These principles were developed based on years of
               experience in the field of usability engineering and they’ve became
@@ -64,7 +64,6 @@ export  const HeuristicsSampleData = {
           </div>
           `,
         },
-        
       ],
     },
     {
@@ -150,22 +149,26 @@ export  const HeuristicsSampleData = {
               {
                 label: 'A. Progress Bar',
                 isCorrect: false,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Having the ability to see how far they’ve progressed through an activity using a progress bar is a timely and appropriate way to give them an idea of how far they’ve come and how far they have left to go.  Being able to see how many unread texts they have by simply glancing at the messaging icon is another quick and easy way to receive feedback',
               },
               {
                 label: 'B. Camera',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Having the ability to see how far they’ve progressed through an activity using a progress bar is a timely and appropriate way to give them an idea of how far they’ve come and how far they have left to go.  Being able to see how many unread texts they have by simply glancing at the messaging icon is another quick and easy way to receive feedback',
               },
               {
                 label: 'C. Message Count',
                 isCorrect: false,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'Having the ability to see how far they’ve progressed through an activity using a progress bar is a timely and appropriate way to give them an idea of how far they’ve come and how far they have left to go.  Being able to see how many unread texts they have by simply glancing at the messaging icon is another quick and easy way to receive feedback',
               },
               {
                 label: 'D. A & C',
                 isCorrect: true,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'Having the ability to see how far they’ve progressed through an activity using a progress bar is a timely and appropriate way to give them an idea of how far they’ve come and how far they have left to go.  Being able to see how many unread texts they have by simply glancing at the messaging icon is another quick and easy way to receive feedback',
               },
             ],
           },
@@ -247,62 +250,73 @@ export  const HeuristicsSampleData = {
         {
           type: 'display',
           contents: `<h1 class="headline">2. System / World Match</h1>
-          <img src="" alt="" />
-          <p>
+          <img id="finger" src="/images/pointerFinger.svg" alt="Line art of a hand with thumb and index finger extended" width="160" />
+          <p class="paragraph">
             By using language that is familiar to your user, you create an
             environment for users that is easier to navigate, understand, and
-            remember how to use. It is important that the language, mental models,
-            and concepts you choose to implement are familiar to your users. It is
-            important to: 1. Research your user, the wording they use, and design
-            with that in mind 2. Choose clear and concise wording that is easy to
-            understand 3. If you need to use a word not everyone understands,
-            provide a definition to go with it. They should never have to leave the
-            site to look up a word. 4. Leverage familiarity with real-world objects
-            and activities - design in a way that reflects material objects people
-            already use.
+            remember how to use.</p>
+          <p class="paragraph">It is important that the language, mental models,
+            and concepts you choose to implement are familiar to your users.</p>
+          <p class="paragraph"><span class="bolder">It is important to: </span>
+            <ol>
+              <li class="paragraph"><span class="semi-bold">Research your user</span>, the wording they use, and design with that in mind</li>
+              <li class="paragraph">Choose <span class="thick">clear and concise wording</span> that is easy to understand</li>
+              <li class="paragraph">If you need to use a word not everyone understands, <span class="thick">provide a definition</span> to go with it. They should never have to leave the
+              site to look up a word. 
+              <li class="paragraph">Leverage familiarity with real-world objects and activities - design in a way that <span class="thick">reflects material objects people already use.</span></li>
+            </ol>
           </p>
-          <h2>Research your users</h2>
-          <span>What are they saying?</span>
+          <h3>Research your users</h3>
+          <p class="reg20">What are they saying?</p>
           <img src="" alt="" />
           <img src="" alt="" />
-          <p>
+          <p class="quote">
             “In simple terms, the system must speak the user's language which were
             familiar to them, rather than system oriented jargons. We always seek
             familiar words, things, concepts, shapes, images to understand and to
-            make a decision.” - Harsh Gorasia uxPlanet.org{' '}
-          </p>
-          <h3>The labels and other content</h3>
-          <p>
+            make a decision.”</p>
+          <p class="quote-capiton"> - Harsh Gorasia uxPlanet.org</p>
+          <h3 class="with-dash-top">The labels and other content</h3>
+          <p class="reg20">
             Most of the times the users are going to search for you on the internet
             or are going to navigate within your website using language that seems
             more natural to them.
           </p>
-          <img src="" alt="" />
-          <h3>Leverage Familiarity</h3>
+          <img src="/images/shirt-for-party.png" alt="Screenshot of a shopping site search for White Shirt for Party with shirt options as sub images" />
+          <h3 class="with-dash-top">Leverage Familiarity</h3>
           <p>
-            Above are examples of leveraging familiarity with real-world objects and
+            Below are examples of leveraging familiarity with real-world objects and
             activities Each item has been translated from a real world object to a
             digital item with the same purpose.
           </p>
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <h2>Conclusion:</h2>
-          <p>
-            The 7th usability heuristic (flexibility and efficiency of use) is about
-            allowing users to approach tasks in a variety of ways. New users may
-            require guidance in performing their tasks, whereas experienced users
-            can take advantage of accelerators and other secondary features designed
-            to speed up commonly performed actions. Embracing this heuristic means
-            allowing user customization, not being prescriptive about core task
-            steps, and adding unobtrusive accelerators that power users can discover
-            and employ efficiently.{' '}
-          </p>`,
+          <div class="flexBox">
+            <img src="/images/handheld-calculator.png" alt="A handheld calculator" width="137" />
+            <img src="/images/wall-clock.png" alt="An analog wall clock" width="137" />
+            <img src="/images/aa-battery.png" alt="A single AA battery" width="137" />
+            <img src="/images/paper-calendar.png" alt="A paper calendar of the month Oct 2020" width="137" />
+          </div>
+          <br/>
+          <div class="flexBox">
+            <img src="/images/ios-calculator.png" alt="Screenshot of ios calculator" width="130"/>
+            <img src="/images/ios-clock-app.png" alt="Screenshot of ios clock app icon" width="137" />
+            <img src="/images/ios-battery-symbol.png" alt="Hand holding ios device with low battery symbol on screen" width="137" />
+            <img src="/images/ios-calendar.png" alt="Screnshot of an ios calendar" width="137" />
+          </div>
+          <br/><br/>
+            <div class="sticky__blue">
+            <div class="sticky-top__blue"></div>
+            <h3 class="h3-sticky">Conclusion:</h3>
+            <p class="sticky-list no-list">
+              The 7th usability heuristic (flexibility and efficiency of use) is about
+              allowing users to approach tasks in a variety of ways. New users may
+              require guidance in performing their tasks, whereas experienced users
+              can take advantage of accelerators and other secondary features designed
+              to speed up commonly performed actions. Embracing this heuristic means
+              allowing user customization, not being prescriptive about core task
+              steps, and adding unobtrusive accelerators that power users can discover
+              and employ efficiently.
+            </p>
+          </div>`,
         },
         {
           type: 'question',
@@ -376,7 +390,7 @@ export  const HeuristicsSampleData = {
           type: 'display',
 
           contents: `<h1 class="headline">3. User Control & Freedom</h1>
-          <img src="" alt="" />
+          <img src="/images/googleMailExample.png" alt="Screenshot of google mail interface" class="googleMailExampleImg" />
           <p>
             Example: The freedom to undo any accidental actions. This principle can
             be best illustrated by the Gmail’s flash message with undo action when

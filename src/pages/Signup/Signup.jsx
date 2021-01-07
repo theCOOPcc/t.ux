@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import SignupForm from '../../components/SignupForm/SignupForm';
-import './Signup.css';
+// import './Signup.css';
+import * as U from '../../components/TuxComponents/UniversalComponents'
 
 class Signup extends Component {
   state = {
     message: '',
     type: this.props.type
   }
-
+  
   updateMessage = (msg) => {
-    this.setState({message: msg});
+    this.setState({message: msg}); 
   }
 
   render() {
@@ -17,7 +18,7 @@ class Signup extends Component {
     return (
       <main>
         <SignupForm {...this.props} type={this.state.type} updateMessage={this.updateMessage} />
-        <p>{this.state.message}</p>
+        <U.Normal>{this.state.message}</U.Normal>
       </main>
     );
   }

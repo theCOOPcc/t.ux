@@ -77,7 +77,7 @@ const Activity = ({ details }) => {
 
       <ActivityBody
         currentModule={currentModule}
-        handleAnswers={handleAnswers}
+        handleAnswers={handleAnswers} 
       />
       <SideBarNav
         sections={sections}
