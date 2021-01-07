@@ -11,7 +11,18 @@ class Manager extends Component {
     // TODO: set from props
     // i think the manager component, when it loads, can call the API itself. no need to call the api every time the app loads -cory
     results: '',
-    activities: ['Heuristics', 'Accessability', 'Research Methodologies', 'UI Patterns'],
+    activities: [{
+      name: 'Heuristics', 
+      icon: 'images/Heuristic.svg',
+    }, {
+      name: 'Accessability', 
+      icon: 'images/Accessibility.svg',
+    }, {
+      name: 'Research Methodologies', 
+      icon: 'images/Research.svg',
+    }, {
+      name: 'UI Patterns',
+      icon:'images/UIPattern.svg'}],
     groups: [{ 
       name: 'topaz',
       members: [{
@@ -67,8 +78,8 @@ class Manager extends Component {
           <U.FlexBox column wide>
             <U.FlexBox wide spaceBetween>
               <U.FlexBox alignLeft>
-                <U.Normal marginLeft>icon</U.Normal>
-                <U.Normal marginLeft twenty8 key={idx}>{activity}</U.Normal> 
+                <U.Normal marginLeft><img src={activity.icon}/></U.Normal>
+                <U.Normal marginLeft twenty8 key={idx}>{activity.name}</U.Normal> 
               </U.FlexBox>
               <U.FlexBox alignRight>
                 <U.WideBtn preview teal>Assign</U.WideBtn>
