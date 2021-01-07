@@ -8,7 +8,6 @@ module.exports = {
   };
   
   function indexManagers(req, res) {
-    console.log("req.user", req.user);
     User.find({}).then((users) => res.json(users));
   }
   

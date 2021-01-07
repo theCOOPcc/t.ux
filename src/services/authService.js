@@ -8,12 +8,12 @@ function signup(user) {
     body: JSON.stringify(user)
   })
   .then(res => {
-    console.log(res, '<-- response object')
+    // console.log(res, '<-- response object')
     return res.json();
   })
   .then(json => {
     if(json.token) return json;
-    console.log(json, '<-- the error')
+    // console.log(json, '<-- the error')
     throw new Error(`${json.err}`)
   })
   .then(({ token }) => {
@@ -30,7 +30,7 @@ function logout() {
 }
  
 function login(creds) {
-  console.log('auth service login function -- creds', creds)
+  // console.log('auth service login function -- creds', creds)
   return fetch(BASE_URL + "login", {
     method: "POST",
     headers: new Headers({ "Content-Type": "application/json" }),

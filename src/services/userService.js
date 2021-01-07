@@ -34,7 +34,7 @@ function getUser(user) {
 
 // this one works cory
 function updateUser(user) {
-  console.log('update service function', user)
+  // console.log('update service function', user)
   return fetch(`${BASE_URL}${user._id}`, {
       method: "PUT",
       headers: {

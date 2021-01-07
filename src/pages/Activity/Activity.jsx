@@ -64,7 +64,7 @@ const Activity = ({ details }) => {
 
   const convertIndexToPercent = (newIndex) => {
     const index = newIndex - 1;
-    const completed = index === 0 ? 0 : `${index}0`;
+    const completed = index === 0 ? 0 : `${index}0`; 
     setCompleted(completed);
   };
   return (

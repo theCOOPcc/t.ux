@@ -9,8 +9,6 @@ module.exports = {
 };
 
 function create(req, res) {
-  console.log('controller function', req.body);
-  // req.body.createdBy = req.user._id
   Group.create(req.body)
     .then((group) => {
       res.json(group);
@@ -52,7 +50,6 @@ function show(req, res) {
 }
 
 function index(req, res) {
-  console.log('getting groups!');
   Group.find({})
     .then((groups) => {
       res.json(groups);

@@ -71,7 +71,8 @@ export const HeuristicsSampleData = {
       modules: [
         {
           type: 'display',
-          contents: `<h1 class="headline">1. Visibility of System Status</h1>
+          contents: `
+          <h1 class="headline">1. Visibility of System Status</h1>
           <img src="" alt="" />
           <div class="traffic-light">
             <div class="red-circle"></div>

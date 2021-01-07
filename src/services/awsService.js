@@ -8,9 +8,9 @@ const s3 = new AWS.S3({ apiVersion: '2006-03-01' });
 //test bucket lists
 s3.listBuckets(function(err, res) {
     if (err) {
-        console.log('error', err)
+        // console.log('error', err)
     } else {
-        console.log('success', res.Buckets)
+        // console.log('success', res.Buckets)
     }
 })
 
