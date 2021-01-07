@@ -132,9 +132,11 @@ export const FlexBox = styled.div`
 	`}
 
 	${props => props.signUp && css`
-		position: absolute;
+		/* position: absolute;
 		top: 700px;
-		left: 420px;
+		left: 420px; */
+		margin-top: 730px;
+		padding-left: 550px;
 	`}
 
 	${props => props.login && css`
@@ -174,35 +176,40 @@ export const WideBtn = styled.button`
 	color: var(--true-white);
 	cursor: pointer;
 
-	&:hover {
-		background: #236C69;
-	}
-
-	&:active {
-		box-shadow: var(--btn-active-shadow);
-	}
-
+		&:hover {
+			background: #236C69;
+		}
+	
+		&:active {
+			box-shadow: var(--btn-active-shadow);
+		}
+	
 	${props => props.extraWide && css`
-		width: 350px;
-		//this margin is for reset password
-		margin-top: 104px;
-		background-color: var(--enable-btn);
+	width: 350px;
+	//this margin is for reset password
+	margin-top: 104px;
+	background-color: var(--enable-btn);
 	`}
-
+	
 	${props => props.medium && css`
-		width: 224px;
-		height: 50px;
-		font: var(--pop-thick);
-		font-size: 14px;
-		margin: 20 auto;
-		padding: 0;
-		border: 1px solid #3C8582;
+	width: 224px;
+	height: 50px;
+	font: var(--pop-thick);
+	font-size: 14px;
+	margin: 20 auto;
+	padding: 0;
+	border: 1px solid #3C8582;
 	`}
-
+	
 	${props => props.disabled && css`
-		background-color: var(--primary-disabled-btn-color);
-		color: var(--text-white);
-		border: var(--input-border);
+	background-color: var(--primary-disabled-btn-color);
+	color: var(--text-white);
+	border: var(--input-border);
+	
+		&:hover {
+			background-color: var(--primary-disabled-btn-color);
+			/* background: #236C69; */
+		}
 	`}
 
 	${props => props.enable && css`
@@ -287,7 +294,6 @@ export const Normal = styled.p`
     font-size: 24px;
     line-height: 36px;
   `}
-	
   
   ${props => props.greyed && css`
     color: var(--future);
@@ -297,13 +303,21 @@ export const Normal = styled.p`
     color: var(--extraLg-text);
   `}
 
-  ${props => props.alignLeft && css`
+  ${props => props.red && css`
+  	color: var(--tux-red);
+  `}
+
+  /* ${props => props.alignLeft && css`
   align-self: start;
   margin-left: 13px;
   `}
   
   ${props => props.alignRight && css`
   align-self: end;
+  `} */
+
+  ${props => props.center && css`
+	text-align: center;
   `}
 
   ${props => props.margin50 && css`
