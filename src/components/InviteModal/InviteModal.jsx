@@ -3,6 +3,7 @@ import { Button, Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EmailCheckbox from '../../components/EmailCheckbox/EmailCheckbox';
 import groupAPI from '../../services/groupService';
+import * as mailAPI from '../../services/mail-api'
 
 const InviteModal = ({
   show,
@@ -16,8 +17,9 @@ const InviteModal = ({
   const [newGroups, setNewGroups] = useState('');
 
   const handleSendInvite = async () => {
-    const groupToGroup =groupAPI.update(groups[selectedGroupIndex])
+    const groupToInvite =groupAPI.update(groups[selectedGroupIndex])
     // TODO: send group info to nodemailer api
+    mailAPI.create(groupToInvite)
   };
 
   const handleCopyLink = () => {
