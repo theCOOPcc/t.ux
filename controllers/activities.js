@@ -21,10 +21,9 @@ function index(req, res) {
 
 // Confirmed: create controller is working
 function create(req, res) {
-  console.log('request body', req.body)
   Activity.create(req.body)
     .then((activity) => {
-      console.log('activity', activity)
+      // console.log('activity', activity)
       res.status(200).json(activity);
     })
     .catch((err) => {
