@@ -11,10 +11,10 @@ const EmailForm = ({ errors, values, handleChange, touched }) => {
           <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
           <L.LoginBox flexStart>
             <U.Heading1 margin50>Enter an Email</U.Heading1>
-            <U.Normal eighteen>
+            <U.Normal setup>
               We'll use this email to set up your account.
             </U.Normal>
-            <U.Normal semiBold>Email Address</U.Normal>
+            <U.Normal semiBold margin>Email Address</U.Normal>
             <U.SmallInput
               type="text"
               autoComplete="off"

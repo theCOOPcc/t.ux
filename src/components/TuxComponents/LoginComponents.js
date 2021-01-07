@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 
 export const TuxFlower = styled.img`
 	width: 140px;
@@ -53,8 +53,8 @@ export const GoogleBox = styled.a`
     background: linear-gradient(360deg, #F9F9F9 0%, rgba(255, 255, 255, 0) 100%);
     display: flex;
     justify-content: center;
-    align-content: center;
-    margin: 50px 0 0 0;
+    align-items: center;
+    margin-bottom: 10px;
     box-shadow: var(--common-shadow);
     text-decoration: none;
 `;
@@ -63,7 +63,7 @@ export const SignIn = styled.p`
     font: 700 20px 'Roboto', sans-serif;
     /* line-height: 23.44px; */
     color: rgba(0,0,0,.54);
-    
+    margin-top: 15px;
 `;
 
 

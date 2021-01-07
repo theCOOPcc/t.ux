@@ -18,6 +18,8 @@ const SideBarNav = ({
         {sections.map((section, index) =>
           index === 0 ? (
             <U.SideBarText
+              past={currentSectionIndex < index ? true : false}
+              present={currentSectionIndex === index}
               key={index}
               onClick={() => handleJumpToSection(index)}
             >
@@ -25,6 +27,8 @@ const SideBarNav = ({
             </U.SideBarText>
           ) : (
             <U.SideBarText
+              past={currentSectionIndex < index ? true : false}
+              present={currentSectionIndex === index}
               key={index}
               onClick={() => handleJumpToSection(index)}
             >

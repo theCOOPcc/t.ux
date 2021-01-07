@@ -86,6 +86,8 @@ export const SideBarText = styled.button`
 	font-size: 16px;
 	line-height: 24px;
 	font-family: Poppins;
+	color: var(--future);
+		font-weight: 500;
 
 	${props => props.past && css`
 		color: var(--true-black);
@@ -97,10 +99,10 @@ export const SideBarText = styled.button`
 		font-weight: 700;
 	`}
 
-	${props => props.future && css`
+	/* ${props => props.future && css`
 		color: var(--future);
 		font-weight: 500;
-	`}
+	`} */
 `;
 
 /*---------- FlexBox Components Generic ----------*/
@@ -339,9 +341,8 @@ export const Normal = styled.p`
   line-height: 24px;
 `}
 
-  ${props => props.eighteen && css`
-	font-size: 18px;
-	line-height: 27px;
+  ${props => props.setup && css`
+	margin-bottom: 50px;
   `}
 
   ${props => props.twenty && css`
@@ -379,6 +380,7 @@ export const Normal = styled.p`
 
    ${props => props.margin && css`
 	margin-left: 10px;
+	text-align: left;
   `}
   
   /* ${props => props.alignRight && css`
