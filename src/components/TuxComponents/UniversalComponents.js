@@ -21,7 +21,6 @@ export const Main = styled.main`
 	background-blend-mode: normal, multiply;
 	padding: 20px 39px 15px;
 	position: relative;
-	
 `;
 
 
@@ -106,7 +105,7 @@ export const SideBarText = styled.button`
 
 /*---------- FlexBox Components Generic ----------*/
 export const FlexBox = styled.div`
-	/* margin: 0; */
+	// margin: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -115,12 +114,23 @@ export const FlexBox = styled.div`
 		justify-content: space-between;
 	`}
 
+	${props => props.alignLeft && css`
+		align-items: left !important;
+		text-align: left !important;
+		justify-content: left;
+		width: 100%;
+`}
+
 	${props => props.spaceAround && css`
 		justify-content: space-around;
 	`}
 
 	${props => props.column && css`
 		flex-direction: column;
+	`}
+
+	${props => props.wide && css`
+		width: 100%;
 	`}
 
 	${props => props.flexMargin && css`
@@ -138,14 +148,44 @@ export const FlexBox = styled.div`
 	`}
 
 	${props => props.login && css`
-		position: absolute;
-		top: 700px;
-		left: 660px;
+		/* position: absolute; */
+		/* top: 700px; */
+		/* left: 500px; */
+		margin-top: 625px;
+		padding-left: 160px;
 	`}
 
 	${props => props.relative && css`
 		position: relative;
 	`}
+
+	${props => props.managerDash && css`
+	// position: absolute;
+	// left: 0px;
+	// right: 0px;
+	// top: 0px;
+	// bottom: 0px;
+		background: #FFFFFF;
+		border: 1px solid #DDDDD;
+		box-sizing: border-box;
+		border-radius: 5px;
+		margin: 10px 60px 10px 60px;
+		width: 100%;
+		padding-bottom: 20px;
+`}
+
+	${props => props.bordered && css`
+		background: #FFFFFF;
+		border: 1px solid #DDDDDD !important;
+		box-sizing: border-box;
+		border-radius: 5px;
+		margin: 10px 10px 10px 10px;
+	`}
+	${props => props.tuxStyled && css`
+	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
+	background-blend-mode: normal, multiply;
+	height: 100vh;
+`}
 
 	${props => props.flexStartJC && css`
 		justify-content: flex-start;
@@ -210,9 +250,25 @@ export const WideBtn = styled.button`
 	${props => props.teal && css`
 	background-color: #3C8582;
 	`}
+
+	${props => props.preview && css`
+	width: 245px !important;
+	height: 50px;
+	`}
 `;
 
+export const NakedBtn = styled.button`
+	border: none;
+	background-color: transparent;
+	align-items: center;
+	text-align: center;
 
+	${props => props.preview && css`
+	font-size: 12px;
+	line-height: 18px;
+	margin-right: 60px;
+	`}
+`;
 
 /*---------- Progress Bar ----------*/
 export const ProgressContainer = styled.div`
@@ -266,6 +322,11 @@ export const Normal = styled.p`
   font: var(--pop-reg);
   line-height: 20px;
 
+  ${props => props.sixteen && css`
+  font-size: 16px;
+  line-height: 24px;
+`}
+
   ${props => props.eighteen && css`
 	font-size: 18px;
 	line-height: 27px;
@@ -276,6 +337,12 @@ export const Normal = styled.p`
 	line-height: 24px;
   `}
 
+  ${props => props.twentyThirty && css`
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 600;
+`}
+
   ${props => props.semiBold && css`
     font-weight: 500;
     margin: 0;
@@ -285,7 +352,12 @@ export const Normal = styled.p`
     font-size: 24px;
     line-height: 36px;
   `}
-	
+
+  ${props => props.twenty8 && css`
+    font-size: 28px;
+	line-height: 42px;
+	font-weight: 600;
+  `}
   
   ${props => props.greyed && css`
     color: var(--future);
@@ -302,8 +374,19 @@ export const Normal = styled.p`
   
   ${props => props.alignRight && css`
   align-self: end;
-
   `}
+
+  ${props => props.center && css`
+  text-align: center;
+  `}
+
+  ${props => props.marginLeft && css`
+  margin-left: 45px;
+  `}
+
+  ${props => props.margin50 && css`
+    	margin-top: 50px;
+	`}
 `;
 
 export const Heading1 = styled.h1`
@@ -340,6 +423,20 @@ export const Heading3 = styled.h3`
 	${props => props.floatRight && css`
 		margin-left: auto;
 	`}
+
+	${props => props.bolder && css`
+		font-weight: 600;
+	`}
+
+	${props => props.alignLeft && css`
+		align-self: start;
+		margin-left: 30px;
+	`}
+
+	${props => props.blue && css`
+	color: #1B98A0;
+  `}
+
 `;
 
 /*--------------- FORMS ---------------*/
@@ -378,16 +475,9 @@ export const SmallInput = styled.input`
 	`}
 `;
 
-
-
-
-
-
-
-
 // Color Blocks
 export const ColorBlock = styled.div`
-  /* grid-column: span 1; */
+//   grid-column: span 1; 
   height: 5px;
   
   ${props => props.tuxBlue && css`
@@ -433,11 +523,18 @@ export const ColorBlock = styled.div`
 	`}
 
 	${props => props.SubGridBlue && css`
-		background-color: var(--tux-blue);
-		height: 10px;
-		width: 100%;
+		background-color: var(--tux-blue) !important;
+		height: 10px !important;
+		width: 100% !important;
 		margin: 0;
 		padding: 0;
 	`}
+
+	${props => props.SubGridGrey && css`
+	background-color: #CCCCCC!important;
+	height: 1px !important;
+	width: 95% !important;
+	padding: 0;
+`}
 `;	
 

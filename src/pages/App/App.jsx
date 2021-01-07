@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import User from '../User/User';
-import * as U from '../../components/TuxComponents/UniversalComponents';
+import * as U from '../../components/TuxComponents/UniversalComponents'
 import NavBar from '../../components/NavBar/NavBar';
 import CreateActivity from '../CreateActivity/CreateActivity';
 // import CreateActivityRefactor from '../CreateActivity/CreateActivityRefactor'
@@ -14,11 +14,7 @@ import IndexActivities from '../IndexActivities/IndexActivities';
 import CoryTestingGround from '../../pages/CoryTestingGround/CoryTestingGround';
 import './App.css';
 import PasswordResetRequest from '../PasswordResetRequest/PasswordResetRequest';
-
-import HeuristicsActivity from '../HeuristicsActivity/HeuristicsActivity';
-import activityService from '../../services/activityService';
-import { activityData } from '../../SampleData/SampleData';
-
+import HeuristicsActivity from '../HeuristicsActivity/HeuristicsActivity'
 import TempLanding from '../TempLanding/TempLanding';
 import Manager from '../Manager/Manager'
 
@@ -31,10 +27,7 @@ import Manager from '../Manager/Manager'
 // })
 
 class App extends Component {
-  state = {
-    user: authService.getUser(),
-    // activityData: null
-  };
+  state = { user: authService.getUser() };
 
   handleLogout = () => {
     authService.logout();
@@ -45,16 +38,15 @@ class App extends Component {
     this.setState({ user: authService.getUser() });
   };
 
-  // async componentDidMount() {
-  //   const activityData = await activityService.getOne('5fedff0ed2cde92a7579795c')
-  //   this.setState({activityData})
-  // }
-
   render() {
     const { user } = this.state;
     return (
       <>
         <NavBar user={user} handleLogout={this.handleLogout} />
+
+        {/* <U.Main> */}
+
+
         {/* write conditional routing to proper homepage depending on user type */}
         {/* only get access to certain pages depending on user type */}
         <Route
@@ -72,48 +64,42 @@ class App extends Component {
           path="/signup"
           render={({ history }) => (
             <Signup
-              history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
+            history={history}
+            handleSignupOrLogin={this.handleSignupOrLogin}
             />
-          )}
-        />
+            )}
+            />
         <Route
           exact
           path="/login"
           render={({ history }) => (
             <Login
-              history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
+            history={history}
+            handleSignupOrLogin={this.handleSignupOrLogin}
             />
-          )}
-        />
+            )}
+            />
 
         {/* // General Routes */}
 
         <Route exact path="/activities" render={() => <IndexActivities />} />
         {/* <Route exact path="/activities/create" render={() => <CreateActivityRefactor />} /> */}
-        <Route exact path="/managerdashboard" render={() => <Manager />} />
+        <Route exact path="/manager-dashboard" render={() => <Manager />} />
         <Route
           exact
           path="/preview-activity"
-          render={({ location }) => <PreviewActivity location={location} />}
-        />
+          render={({ location }) => <PreviewActivity location={location} />} />
+        <Route 
+          exact path="/corytestingground" 
+          render={() => <CoryTestingGround />} />
         <Route
-          exact
-          path="/corytestingground"
-          render={() => <CoryTestingGround />}
-        />
-        <Route
-          exact
-          path="/passwordresetrequest"
-          render={() => <PasswordResetRequest />}
-        />
+          exact path="/passwordresetrequest"
+          render={() => <PasswordResetRequest />} />
         {/* // Heuristics Route */}
         <Route
-          exact
-          path="/activity/heuristics"
-          render={({ history, location }) => <HeuristicsActivity />}
-        />
+          exact path="/activity/heuristics"
+          render={({history, location}) => <HeuristicsActivity />} />
+        {/* </U.Main> */}
         {/* // 10 Heuristics sub-routes for sidebar */}
       </>
     );
