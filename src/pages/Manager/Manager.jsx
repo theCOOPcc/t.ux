@@ -8,6 +8,7 @@ import ManagerStudentResults from '../../components/ManagerStudentResults/Manage
 
 import ManageGroupMembers from '../../components/ManageGroupMembers/ManageGroupMembers';
 
+
 const Manager = () => {
   const [newGroupName, setNewGroupName] = useState('');
   const [textInput, setTextInput] = useState('');
