@@ -8,7 +8,6 @@ import ManagerStudentResults from '../../components/ManagerStudentResults/Manage
 
 import ManageGroupMembers from '../../components/ManageGroupMembers/ManageGroupMembers';
 
-
 const Manager = () => {
   const [newGroupName, setNewGroupName] = useState('');
   const [textInput, setTextInput] = useState('');
@@ -73,7 +72,6 @@ const Manager = () => {
     console.log(update);
     setGroups(updatedGroups);
     setTextInput('');
-    // call update groups
   };
 
   const handleCreateGroup = async () => {
@@ -90,6 +88,7 @@ const Manager = () => {
       <ManagerStudentResults results={results} />
       <ManagerActivites
         groups={groups}
+        setGroups={setGroups}
         selectedGroupIndex={selectedGroupIndex}
         setSelectedGroupIndex={setSelectedGroupIndex}
       />

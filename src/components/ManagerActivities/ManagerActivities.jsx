@@ -7,8 +7,10 @@ const ManagerActivities = ({
   groups,
   selectedGroupIndex,
   setSelectedGroupIndex,
+  setGroups
 }) => {
   const [activities, setActivities] = useState('');
+
 
   const getActivities = async () => {
     const activities = activityAPI.getAll();
@@ -30,6 +32,7 @@ const ManagerActivities = ({
         show={show}
         handleClose={handleClose}
         groups={groups}
+        setGroups={setGroups}
         selectedGroupIndex={selectedGroupIndex}
         setSelectedGroupIndex={setSelectedGroupIndex}
       />
