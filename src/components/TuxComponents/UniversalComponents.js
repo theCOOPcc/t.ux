@@ -142,9 +142,11 @@ export const FlexBox = styled.div`
 	`}
 
 	${props => props.signUp && css`
-		position: absolute;
+		/* position: absolute;
 		top: 700px;
-		left: 420px;
+		left: 420px; */
+		margin-top: 730px;
+		padding-left: 550px;
 	`}
 
 	${props => props.login && css`
@@ -210,23 +212,28 @@ export const WideBtn = styled.button`
 	font: var(--pop-bold);
 	line-height: 27px;
 	color: var(--true-white);
+	background-color: var(--enable-btn);
 	cursor: pointer;
 
-	&:hover {
-		background: #236C69;
-	}
+		&:hover {
+			background: #236C69;
+		}
+	
+		&:active {
+			box-shadow: var(--btn-active-shadow);
+		}
 
-	&:active {
-		box-shadow: var(--btn-active-shadow);
-	}
-
+	${props => props.login && css`
+		margin: 17px 45px;
+  	`}
+	
 	${props => props.extraWide && css`
 		width: 350px;
 		//this margin is for reset password
 		margin-top: 104px;
 		background-color: var(--enable-btn);
 	`}
-
+	
 	${props => props.medium && css`
 		width: 224px;
 		height: 50px;
@@ -236,11 +243,16 @@ export const WideBtn = styled.button`
 		padding: 0;
 		border: 1px solid #3C8582;
 	`}
-
+	
 	${props => props.disabled && css`
 		background-color: var(--primary-disabled-btn-color);
 		color: var(--text-white);
 		border: var(--input-border);
+	
+		&:hover {
+			background-color: var(--primary-disabled-btn-color);
+			/* background: #236C69; */
+		}
 	`}
 
 	${props => props.enable && css`
@@ -248,12 +260,12 @@ export const WideBtn = styled.button`
 	`}
 
 	${props => props.teal && css`
-	background-color: #3C8582;
+		background-color: #3C8582;
 	`}
 
 	${props => props.preview && css`
-	width: 245px !important;
-	height: 50px;
+		width: 245px !important;
+		height: 50px;
 	`}
 `;
 
@@ -352,12 +364,6 @@ export const Normal = styled.p`
     font-size: 24px;
     line-height: 36px;
   `}
-
-  ${props => props.twenty8 && css`
-    font-size: 28px;
-	line-height: 42px;
-	font-weight: 600;
-  `}
   
   ${props => props.greyed && css`
     color: var(--future);
@@ -367,17 +373,24 @@ export const Normal = styled.p`
     color: var(--extraLg-text);
   `}
 
-  ${props => props.alignLeft && css`
-  align-self: start;
-  margin-left: 13px;
+  ${props => props.red && css`
+  	color: var(--tux-red);
+  `}
+
+   ${props => props.margin && css`
+	margin-left: 10px;
   `}
   
-  ${props => props.alignRight && css`
-  align-self: end;
+  /* ${props => props.alignRight && css`
+	text-align: center;
+  `} */
+
+  ${props => props.center && css`
+	text-align: center;
   `}
 
   ${props => props.center && css`
-  text-align: center;
+  	text-align: center;
   `}
 
   ${props => props.marginLeft && css`

@@ -36,7 +36,6 @@ class Login extends Component {
 
     return (
       <main>
-    <U.FlexBox>
       <U.FlexBox>
         <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
         <L.LoginBox>
@@ -47,9 +46,9 @@ class Login extends Component {
             <L.GoogleG src="/images/googleG.png"></L.GoogleG>
             <L.SignIn>Sign in with Google</L.SignIn>
           </L.GoogleBox>
-        <form autoComplete="off" onSubmit={this.handleSubmit}>
-          <U.Normal twenty>or:</U.Normal>
-          <U.Normal semiBold>Username or Email</U.Normal>
+        <form autoComplete="off" onSubmit={this.handleSubmit} >
+          <U.Normal twenty center>or:</U.Normal>
+          <U.Normal semiBold margin>Username or Email</U.Normal>
             <U.SmallInput
               type="text"
               autoComplete="off"
@@ -59,7 +58,7 @@ class Login extends Component {
               onChange={this.handleChange}
             ></U.SmallInput>
             <br/><br/>
-          <U.Normal semiBold>Password</U.Normal>
+          <U.Normal semiBold margin>Password</U.Normal>
           <U.SmallInput
             type="password"
             autoComplete="off"
@@ -69,15 +68,23 @@ class Login extends Component {
             onChange={this.handleChange}
           ></U.SmallInput>
           <U.FlexBox spaceBetween>
-            <U.FlexBox negMargin>
+            {/* These are on hold until next sprint */}
+            {/* TODO: Make ability to stay logged in */}
+            {/* TODO: Create password reset */}
+            {/* <U.FlexBox negMargin>
               <U.Checkbox></U.Checkbox>
               <U.Normal>Stay signed in</U.Normal>
-            </U.FlexBox>
+            </U.FlexBox> 
             <U.LinkTo
               to="/passwordresetrequest"
-            >Forgot Password?</U.LinkTo>
+            >Forgot Password?</U.LinkTo>*/}
           </U.FlexBox>
-          <U.WideBtn greyed>Log In</U.WideBtn>
+          <U.WideBtn login 
+              disabled={
+                email.length > 0 && pw.length > 0
+                ? false
+                : true
+              }>Log In</U.WideBtn>
         </form>
         </L.LoginBox>
       </U.FlexBox>
@@ -87,52 +94,7 @@ class Login extends Component {
           to="/signup"
         >Sign Up</U.LinkTo>
       </U.FlexBox>
-    </U.FlexBox>
     </main>
-      // <main className="Login">
-      //   {/* this will be a route to our slack oauth link */}
-      //   <div className='slacklogin'>
-      //   <a href="">
-      //     <h1>Sign in with slack</h1>
-      //   </a>
-      //   </div>
-      //   <h2>Or:</h2>
-      //   <div className="container">
-      //   <form autoComplete="off" onSubmit={this.handleSubmit}>
-      //     <label htmlFor="email">Email:</label>
-      //     <br></br>
-      //     <input
-      //       type="text"
-      //       autoComplete="off"
-      //       id="email"
-      //       value={email}
-      //       name="email"
-      //       onChange={this.handleChange}
-      //       />
-      //       <br></br>
-      //       <label htmlFor="password">Password:</label>
-      //       <br></br>
-      //     <input
-      //       type="password"
-      //       autoComplete="off"
-      //       id="password"
-      //       value={pw}
-      //       name="pw"
-      //       onChange={this.handleChange}
-      //       />
-      //       <br></br>
-      //       <input type='checkbox' />Stay signed in
-      //       {/* This will be a route to the password reset page */}
-      //       <a href="/passwordresetrequest">Forgot Password?</a>
-      //       <br></br>
-      //     <button className="btn green">Log In</button>&nbsp;&nbsp;&nbsp;
-      //     {/* <Link className="btn red" to="/">
-      //       Cancel
-      //     </Link> */}
-      //   </form>
-      //   </div>
-      //       <h5>Need an Account? <span><a href='/signup'>Sign Up</a></span></h5>
-      // </main>
     );
   }
 }

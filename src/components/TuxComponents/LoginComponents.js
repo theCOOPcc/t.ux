@@ -18,8 +18,8 @@ export const LoginBox = styled.div`
     background-color: var(--true-white);
     box-shadow: var(--common-shadow);
     border-radius: 10px;
-    position: absolute;
-    top: 200px;
+    margin-top: 120px;
+
 
     ${props => props.wide && css`
       width: 785px;
@@ -28,6 +28,15 @@ export const LoginBox = styled.div`
 
     ${props => props.flexStart && css`
       justify-content: flex-start;
+    `}
+    
+    ${props => props.signup && css`
+        position: absolute;
+        top: 150px;
+    `}
+
+    ${props => props.general && css`
+        margin-top: 120px;
     `}
 `;
 

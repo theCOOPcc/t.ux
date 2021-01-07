@@ -3,6 +3,7 @@ import { Formik, Form } from 'formik';
 import EmailForm from './EmailForm';
 import GeneralForm from './GeneralForm';
 import authAPI from '../../services/authService';
+import * as U from '../TuxComponents/UniversalComponents'
 
 function validateEmail(value) {
   let error;
