@@ -1,0 +1,307 @@
+/* screen - help-documentation */
+
+.border-class-1 {
+
+}
+.border-class-2 {
+  border: 1px solid var(--alto);
+}
+.border-class-3 {
+  border: 1px solid var(--mountain-mist);
+}
+.help-documentation {
+  background-color: var(--white);
+  height: 3384px;
+  overflow: hidden;
+  position: relative;
+  width: 1042px;
+}
+.help-documentation .asana-1-C61RwL {
+  background-color: transparent;
+  height: 456px;
+  left: 138px;
+  position: absolute;
+  top: 1763px;
+  width: 683px;
+}
+.help-documentation .body-copy-8ROB5j {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 903px;
+}
+.help-documentation .body-copy-SCxiAB {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 903px;
+}
+.help-documentation .body-copy-SuXUfK {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: -65px;
+  width: 903px;
+}
+.help-documentation .body-copy-jdAx62 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 903px;
+}
+.help-documentation .divider-dotted-C61RwL {
+  background-color: transparent;
+  height: 0px;
+  left: 61px;
+  position: absolute;
+  top: 200px;
+  width: 929px;
+}
+.help-documentation .divider-dotted-VMr6Om {
+  background-color: transparent;
+  height: 0px;
+  left: 61px;
+  position: absolute;
+  top: 765px;
+  width: 929px;
+}
+.help-documentation .helpasset-4-1-C61RwL {
+  background-color: transparent;
+  height: 625px;
+  left: 193px;
+  position: absolute;
+  top: 796px;
+  width: 576px;
+}
+.help-documentation .heuristic--le-73-82-1-C61RwL {
+  background-color: transparent;
+  height: 356px;
+  left: 257px;
+  position: absolute;
+  top: 197px;
+  width: 501px;
+}
+.help-documentation .line-4-OrBG3r {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: -1px;
+  width: 929px;
+}
+.help-documentation .line-4-xv1xHo {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: -57px;
+  width: 929px;
+}
+.help-documentation .next-triple-chevron-C61RwL {
+  background-color: transparent;
+  height: 31px;
+  left: 931px;
+  position: absolute;
+  top: 3309px;
+  width: 54px;
+}
+.help-documentation .oreilly-1-C61RwL {
+  background-color: transparent;
+  height: 502px;
+  left: 192px;
+  position: absolute;
+  top: 2594px;
+  width: 617px;
+}
+.help-documentation .rectangle-61-C61RwL {
+  background-color: var(--aquamarine);
+  height: 9px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1042px;
+}
+.help-documentation .rectangle-62-C61RwL {
+  background-color: var(--aquamarine);
+  height: 9px;
+  left: 1px;
+  position: absolute;
+  top: 1px;
+  width: 1042px;
+}
+.help-documentation .text-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 554px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 117px;
+  width: 256px;
+}
+.help-documentation .text-body-paragraph-C61RwL {
+  background-color: transparent;
+  height: 153px;
+  left: 78px;
+  position: absolute;
+  top: 583px;
+  width: 903px;
+}
+.help-documentation .text-body-paragraph-QxM5SU {
+  background-color: transparent;
+  height: 114px;
+  left: 57px;
+  position: absolute;
+  top: 3136px;
+  width: 903px;
+}
+.help-documentation .text-body-paragraph-VMr6Om {
+  background-color: transparent;
+  height: 264px;
+  left: 57px;
+  position: absolute;
+  top: 1517px;
+  width: 903px;
+}
+.help-documentation .text-body-paragraph-mzXdH9 {
+  background-color: transparent;
+  height: 236px;
+  left: 57px;
+  position: absolute;
+  top: 2266px;
+  width: 903px;
+}
+.help-documentation .vector-Hx8FI2 {
+  background-color: transparent;
+  height: 37px;
+  left: -4px;
+  position: absolute;
+  top: -3px;
+  width: 61px;
+}
+.help-documentation .welcome-0O6yUh {
+  background-color: transparent;
+  height: 96px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 915px;
+}
+.help-documentation .welcome-C61RwL {
+  background-color: transparent;
+  height: 96px;
+  left: 51px;
+  position: absolute;
+  top: 39px;
+  width: 915px;
+}
+.help-documentation .x-back-C61RwL {
+  background-color: transparent;
+  height: 24px;
+  left: 21px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 22px;
+  white-space: nowrap;
+  width: 52px;
+}
+.helveticaneue-bold-mine-shaft-16px {
+  color: var(--mine-shaft);
+  font-family: 'Helvetica Neue-Bold', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-bold-chilean-fire-60px {
+  color: var(--chilean-fire);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-medium-black-16px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.poppins-normal-black-14px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.poppins-normal-black-18px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.poppins-normal-black-18px-2 {
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 18px;
+}
+.poppins-normal-granite-gray-24px {
+  color: var(--granite-gray);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 24px;
+}
+.poppins-normal-white-16px {
+  color: transparent;
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 16px;
+}
+.poppins-semi-bold-black-24px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+.proximanova-bold-black-40px {
+  color: var(--black);
+  font-family: 'Proxima Nova-Bold', Helvetica, Arial, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+:root {
+  --alto: rgba(221,221,221,1.0);
+  --aquamarine: rgba(120,214,218,1.0);
+  --aquamarine-2: rgba(120,214,218,0.2);
+  --black: rgba(0,0,0,1.0);
+  --chilean-fire: rgba(243,119,6,1.0);
+  --granite-gray: rgba(102,102,102,1.0);
+  --mine-shaft: rgba(51,51,51,1.0);
+  --mountain-mist: rgba(153,153,153,1.0);
+  --white: rgba(255,255,255,1.0);
+}
