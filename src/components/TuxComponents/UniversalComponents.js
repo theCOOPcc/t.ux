@@ -212,6 +212,7 @@ export const WideBtn = styled.button`
 	font: var(--pop-bold);
 	line-height: 27px;
 	color: var(--true-white);
+	background-color: var(--enable-btn);
 	cursor: pointer;
 
 		&:hover {
@@ -221,28 +222,32 @@ export const WideBtn = styled.button`
 		&:active {
 			box-shadow: var(--btn-active-shadow);
 		}
+
+	${props => props.login && css`
+		margin: 17px 45px;
+  	`}
 	
 	${props => props.extraWide && css`
-	width: 350px;
-	//this margin is for reset password
-	margin-top: 104px;
-	background-color: var(--enable-btn);
+		width: 350px;
+		//this margin is for reset password
+		margin-top: 104px;
+		background-color: var(--enable-btn);
 	`}
 	
 	${props => props.medium && css`
-	width: 224px;
-	height: 50px;
-	font: var(--pop-thick);
-	font-size: 14px;
-	margin: 20 auto;
-	padding: 0;
-	border: 1px solid #3C8582;
+		width: 224px;
+		height: 50px;
+		font: var(--pop-thick);
+		font-size: 14px;
+		margin: 20 auto;
+		padding: 0;
+		border: 1px solid #3C8582;
 	`}
 	
 	${props => props.disabled && css`
-	background-color: var(--primary-disabled-btn-color);
-	color: var(--text-white);
-	border: var(--input-border);
+		background-color: var(--primary-disabled-btn-color);
+		color: var(--text-white);
+		border: var(--input-border);
 	
 		&:hover {
 			background-color: var(--primary-disabled-btn-color);
@@ -255,12 +260,12 @@ export const WideBtn = styled.button`
 	`}
 
 	${props => props.teal && css`
-	background-color: #3C8582;
+		background-color: #3C8582;
 	`}
 
 	${props => props.preview && css`
-	width: 245px !important;
-	height: 50px;
+		width: 245px !important;
+		height: 50px;
 	`}
 `;
 
@@ -372,13 +377,12 @@ export const Normal = styled.p`
   	color: var(--tux-red);
   `}
 
-  /* ${props => props.alignLeft && css`
-  align-self: start;
-  margin-left: 13px;
+   ${props => props.margin && css`
+	margin-left: 10px;
   `}
   
-  ${props => props.alignRight && css`
-  align-self: end;
+  /* ${props => props.alignRight && css`
+	text-align: center;
   `} */
 
   ${props => props.center && css`
@@ -386,7 +390,7 @@ export const Normal = styled.p`
   `}
 
   ${props => props.center && css`
-  text-align: center;
+  	text-align: center;
   `}
 
   ${props => props.marginLeft && css`

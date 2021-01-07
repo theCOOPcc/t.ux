@@ -60,7 +60,7 @@ const GeneralForm = ({
                 Password
               </U.Normal>
               <U.SmallInput
-                type="text"
+                type="password"
                 autoComplete="off"
                 id="userData.password"
                 value={userData.password}

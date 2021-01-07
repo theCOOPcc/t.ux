@@ -36,6 +36,7 @@ class App extends Component {
 
   handleSignupOrLogin = () => {
     this.setState({ user: authService.getUser() });
+    this.props.history.push('/activity/heuristics');
   };
 
   render() {
