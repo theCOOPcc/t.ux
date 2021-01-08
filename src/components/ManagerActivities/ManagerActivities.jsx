@@ -50,7 +50,7 @@ const ManagerActivities = ({
                   </U.Normal>
                 </U.FlexBox>
                 <U.FlexBox alignRight>
-                  <U.WideBtn preview teal onClick={handleShow}>
+                  <U.WideBtn preview onClick={handleShow}>
                     Assign
                   </U.WideBtn>
                   {/* <U.NakedBtn preview>Preview</U.NakedBtn> */}

@@ -16,6 +16,7 @@ const ManageGroupMembers = ({
 }) => {
   const [createGroup, setCreateGroup] = useState(false);
   return (
+
     <U.FlexBox column>
       {/* <button onClick={() => setCreateGroup(!createGroup)}>Create Group</button> */}
       {/* <U.Normal twenty4>Manage Group Members</U.Normal> */}
@@ -78,6 +79,7 @@ const ManageGroupMembers = ({
       {/* <U.FlexBox bordered managerDash notFlex> */}
       {/* <U.ColorBlock SubGridBlue></U.ColorBlock> */}
       {/* <div style={{margin: `20px 20px 80px 40px`}}> */}
+
     </U.FlexBox>
   );
 };

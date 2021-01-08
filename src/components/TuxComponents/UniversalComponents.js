@@ -82,12 +82,10 @@ export const SideBarText = styled.button`
 	border-bottom: var(--solid-border);
 	width: 238px;
 	height: 50px;
-	background-color: var(--text-white);
-	font-size: 16px;
+	background-color: #f1f2eb
 	line-height: 24px;
-	font-family: Poppins;
 	color: var(--future);
-		font-weight: 500;
+	font: 500 16px 'Poppins', sans-serif;
 
 	${props => props.past && css`
 		color: var(--true-black);
@@ -257,22 +255,22 @@ export const WideBtn = styled.button`
 	
 		&:hover {
 			background-color: var(--primary-disabled-btn-color);
-			/* background: #236C69; */
 		}
 	`}
+	
 
-	${props => props.enable && css`
+	/* ${props => props.enable && css`
 		background-color: var(--enable-btn);
-	`}
+	`} */
 
-	${props => props.teal && css`
+	/* ${props => props.teal && css`
 		background-color: #3C8582;
-	`}
+	`} */
 
-	${props => props.preview && css`
+	/* ${props => props.preview && css`
 		width: 245px !important;
 		height: 50px;
-	`}
+	`} */
 `;
 
 export const NakedBtn = styled.button`
@@ -315,7 +313,7 @@ export const ProgressContainer = styled.div`
 	transparent);
 	border-radius: 5px;
 	display: flex;
-	align-items: center;
+	/* align-items: center; */
 `;
 export const ProgressFiller = styled.div`
 	z-index: 1;
@@ -499,6 +497,60 @@ export const SmallInput = styled.input`
 		margin: 98px 10px 88px 0;
 	`}
 `;
+
+
+/*---------- Tables ----------*/
+export const Table = styled.table`
+	width: 100%;
+
+`;
+
+export const TableHead = styled.thead`
+	
+`;
+
+export const TableRow = styled.tr`
+	border-bottom: 1px solid #cccccc;
+`;
+
+export const TableHeader = styled.th`
+	font: var(--table);
+	font-weight: 600;
+	line-height: 24px;
+	color: rgba(51,51,51,.75);
+	height: 50px;
+	text-align: left;
+	
+	${props => props.left && css`
+		padding-left: 20px;
+		
+	`}
+`;
+
+export const TableBody = styled.tbody`
+
+`;
+
+export const TableData = styled.td`
+	font: var(--table);
+	color: rgba(51,51,51,.75);
+	font-weight: 400;
+	height: 50px;
+	text-align: left;
+
+	${props => props.left && css`
+		padding-left: 15px;
+		
+	`}
+`;
+
+/*---------- Images ----------*/
+export const Icon25 = styled.img`
+	width: 25px;
+	height: 25px;
+
+`;
+
 
 // Color Blocks
 export const ColorBlock = styled.div`
