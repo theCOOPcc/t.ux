@@ -80,9 +80,10 @@ export const SideBar = styled.div`
 export const SideBarText = styled.button`
 	border: none;
 	border-bottom: var(--solid-border);
-	width: 238px;
+	/* width: 238px; */
+	width: 100%;
 	height: 50px;
-	background-color: #f1f2eb
+	background-color: #f1f2eb;
 	line-height: 24px;
 	color: var(--future);
 	font: 500 16px 'Poppins', sans-serif;
@@ -261,13 +262,12 @@ export const WideBtn = styled.button`
 			background-color: var(--primary-disabled-btn-color);
 		}
 	`}
-	
 
-	/* ${props => props.enable && css`
-		background-color: var(--enable-btn);
-	`} */
+	/* ${props => props.red && css`
+		background-color: var(--tux-red);
+	`}
 
-	/* ${props => props.teal && css`
+	${props => props.green && css`
 		background-color: #3C8582;
 	`} */
 
