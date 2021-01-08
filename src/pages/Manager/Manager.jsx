@@ -84,7 +84,7 @@ const Manager = () => {
 
   return (
     <>
-      <h1>Manager Landing Page</h1>
+      {/* <h1>Manager Landing Page</h1> */}
       <ManagerStudentResults results={results} />
       <ManagerActivites
         groups={groups}
@@ -92,7 +92,7 @@ const Manager = () => {
         selectedGroupIndex={selectedGroupIndex}
         setSelectedGroupIndex={setSelectedGroupIndex}
       />
-      <ManageGroupMembers
+      {/* <ManageGroupMembers
         groups={groups}
         selectedGroupIndex={selectedGroupIndex}
         setSelectedGroupIndex={setSelectedGroupIndex}
@@ -102,7 +102,7 @@ const Manager = () => {
         newGroupName={newGroupName}
         setNewGroupName={setNewGroupName}
         handleCreateGroup={handleCreateGroup}
-      />
+      /> */}
     </>
   );
 };

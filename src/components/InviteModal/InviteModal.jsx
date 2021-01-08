@@ -3,7 +3,10 @@ import { Button, Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EmailCheckbox from '../../components/EmailCheckbox/EmailCheckbox';
 import groupAPI from '../../services/groupService';
-import * as mailAPI from '../../services/mail-api'
+import * as mailAPI from '../../services/mail-api';
+import './InviteModal.css';
+// import * as U from '../TuxComponents/UniversalComponents';
+import * as L from '../TuxComponents/LoginComponents';
 
 const InviteModal = ({
   show,
@@ -61,11 +64,17 @@ const InviteModal = ({
   };
 
   return (
-    <>
+    <section className="modal">
+          <div className="flexBox" transparent relative>
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Body>
-          <h1>Invite Students</h1>
+            <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
+            <div className="inviteBox" flesStart>
+              <h3 className="invite">Invite Students</h3>
+            </div>
+          
           <h2>Group:</h2>
+          import './InviteModal.css';
 
           <select
             value={selectedGroupIndex}
@@ -96,7 +105,8 @@ const InviteModal = ({
           <Button onClick={handleCopyLink}>Copy Link</Button>
         </Modal.Body>
       </Modal>
-    </>
+          </div>
+    </section>
   );
 };
 
