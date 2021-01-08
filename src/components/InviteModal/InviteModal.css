@@ -1,7 +1,5 @@
-.modal {
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
+Modal {
+    background-color: blue !important;
 }
 
 .invite {
@@ -14,7 +12,7 @@
     display: flex !important;
 	justify-content: center !important;
     align-items: center !important;
-    background-color: transparent !important;
+    background-color: rgba(255,255,255,.01) !important;
 }
 
 .inviteBox {
@@ -27,12 +25,12 @@
     background-color: var(--true-white);
     box-shadow: var(--common-shadow);
     border-radius: 10px;
-    margin-top: 120px;
+    margin-top: 180px;
 }
 
 .group {
     font: 400 20px 'Poppins', sans-serif;
-    
+    color: var(--text-grey);
 }
 
 .groupName {
@@ -43,6 +41,26 @@
 .label {
     font: 700 16px 'Poppins', sans-serif;
     color: #333;
+}
+
+.GroupInviteLabel {
+    font: var(--pop-bolder);
+    font-size: 16px;
+    line-height: 24px;
+    color: #333 !important;
+    margin: 10px 40px 10px 20px !important;
+    text-align: left !important;
+}
+
+.GroupInviteCheckbox {
+    background-color: rgba(0,0,0,.5);
+    margin-left: 40px !important;
+}
+
+.groupBox {
+    display: flex ;
+    flex-direction: column;
+    justify-content: ;
 }
 
 button {
@@ -56,8 +74,6 @@ button {
 	color: var(--true-white);
 	background-color: var(--enable-btn) !important;
 	cursor: pointer;
-
-    
 }
 
 button:hover {

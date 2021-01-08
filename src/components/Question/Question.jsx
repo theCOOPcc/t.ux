@@ -21,7 +21,7 @@ const Question = ({ details }) => {
         <U.FlexBox column spaceAround>
           {answers.map((answer, index) => (
             <U.WideBtn
-              enable
+              
               medium
               key={index}
               onClick={() => handleResponse(answer, index)}

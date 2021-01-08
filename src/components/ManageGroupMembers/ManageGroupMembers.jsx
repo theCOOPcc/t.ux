@@ -56,7 +56,7 @@ const ManageGroupMembers = ({
               placeholder="Enter email addresses seperated by commas (Ex: leo@gmail.com, dan@gmail.com, etc.."
             />
             </U.FlexBox >
-            <U.WideBtn AddGroup enable onClick={handleAddToGroup}>
+            <U.WideBtn AddGroup onClick={handleAddToGroup}>
               Add To Group
             </U.WideBtn>
           </>
