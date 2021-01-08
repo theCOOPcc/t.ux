@@ -18,6 +18,7 @@ function signup(user) {
   })
   .then(({ token }) => {
     tokenService.setToken(token);
+    window.location = 'http://localhost:3000/activity/heuristics'
   })
 }
 
@@ -45,6 +46,12 @@ function login(creds) {
   tokenService.setToken(token)
   )
 }
+
+// add this function to the google strategy:
+// getJWTAfterGoogleLogin (req, res) <--this is on the front end
+// respond with a token from the server
+// put token in localStorage
+// set the token to the google login
 
 export default {
   signup,
