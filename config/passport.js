@@ -3,6 +3,12 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('../models/user')
 const authCtrl = require('../controllers/auth')
 
+// add this function to the google strategy:
+// getJWTAfterGoogleLogin (req, res) <--this is on the front end
+// respond with a token from the server
+// put token in localStorage
+// set the token to the google login
+
 passport.use(
     new GoogleStrategy(
         {
