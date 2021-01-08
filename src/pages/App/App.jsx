@@ -15,7 +15,6 @@ import CoryTestingGround from '../../pages/CoryTestingGround/CoryTestingGround';
 import './App.css';
 import PasswordResetRequest from '../PasswordResetRequest/PasswordResetRequest';
 import HeuristicsActivity from '../HeuristicsActivity/HeuristicsActivity'
-import TempLanding from '../TempLanding/TempLanding';
 import Manager from '../Manager/Manager'
 
 // import ReactGA from 'react-ga';
@@ -54,8 +53,7 @@ class App extends Component {
           exact
           path="/"
           render={() => (user ? <User user={user} /> : 
-            <TempLanding />
-          // <Landing />
+          <Landing />
             )}
           />
 
