@@ -575,7 +575,9 @@ export const HeuristicsSampleData = {
               'Which of the following elements gives appropriate and timely feedback to the user?',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media:
+              '/images/question_images/Visibility_of_System_Status_Q1/Visibility_of_System_Status_Q1.png',
+
             answers: [
               {
                 label: 'A. Progress Bar',
@@ -924,12 +926,14 @@ export const HeuristicsSampleData = {
               {
                 label: 'True',
                 isCorrect: true,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Present feedback to the user as quickly as possible (ideally, immediately).Build trust through open and continuous communication.',
               },
               {
                 label: 'False',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Present feedback to the user as quickly as possible (ideally, immediately).Build trust through open and continuous communication.',
               },
             ],
           },
@@ -1263,22 +1267,26 @@ export const HeuristicsSampleData = {
               {
                 label: 'A. Calendar',
                 isCorrect: true,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Leveraging familiarity with real-world objects and activities is an effective way to help users understand how to use a product.  If they already know how to use it in the real world, the transition to digital will be more intuitive.',
               },
               {
                 label: 'B. Clock',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Leveraging familiarity with real-world objects and activities is an effective way to help users understand how to use a product.  If they already know how to use it in the real world, the transition to digital will be more intuitive.',
               },
               {
                 label: 'C. Battery',
                 isCorrect: false,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'Leveraging familiarity with real-world objects and activities is an effective way to help users understand how to use a product.  If they already know how to use it in the real world, the transition to digital will be more intuitive.',
               },
               {
                 label: 'D. Exclamation Point',
                 isCorrect: true,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'Leveraging familiarity with real-world objects and activities is an effective way to help users understand how to use a product.  If they already know how to use it in the real world, the transition to digital will be more intuitive.',
               },
             ],
           },
@@ -1286,30 +1294,35 @@ export const HeuristicsSampleData = {
         {
           type: 'question',
           contents: {
-            problemStatement: 'What color is the sky?',
+            problemStatement:
+              'Which of the following is NOT an example of Match Between System & Real World?',
             timeLimit: 4,
             type: 'multiple-choice',
             media: 'https://picsum.photos/200/300',
             answers: [
               {
                 label: 'A',
-                isCorrect: true,
-                feedback: 'Correct! The Sky is blue!',
+                isCorrect: false,
+                feedback:
+                  'Leveraging familiarity with real-world objects and activities is an effective way to help users understand how to use a product.  If they already know how to use it in the real world, the transition to digital will be more intuitive.',
               },
               {
                 label: 'B',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Leveraging familiarity with real-world objects and activities is an effective way to help users understand how to use a product.  If they already know how to use it in the real world, the transition to digital will be more intuitive.',
               },
               {
                 label: 'C',
                 isCorrect: false,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'Leveraging familiarity with real-world objects and activities is an effective way to help users understand how to use a product.  If they already know how to use it in the real world, the transition to digital will be more intuitive.',
               },
               {
                 label: 'D',
                 isCorrect: true,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'Leveraging familiarity with real-world objects and activities is an effective way to help users understand how to use a product.  If they already know how to use it in the real world, the transition to digital will be more intuitive.',
               },
             ],
           },
@@ -1601,22 +1614,26 @@ export const HeuristicsSampleData = {
               {
                 label: 'A',
                 isCorrect: false,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Remember common UI elements that help the user GO BACK after accidentally going to the wrong page, to undo a mistake, or exit out of a window. One of the options above does not accomplis any of those goals.',
               },
               {
                 label: 'B',
                 isCorrect: true,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Remember common UI elements that help the user GO BACK after accidentally going to the wrong page, to undo a mistake, or exit out of a window. One of the options above does not accomplis any of those goals.',
               },
               {
                 label: 'C',
                 isCorrect: false,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'Remember common UI elements that help the user GO BACK after accidentally going to the wrong page, to undo a mistake, or exit out of a window. One of the options above does not accomplis any of those goals.',
               },
               {
                 label: 'D',
                 isCorrect: false,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'Remember common UI elements that help the user GO BACK after accidentally going to the wrong page, to undo a mistake, or exit out of a window. One of the options above does not accomplis any of those goals.',
               },
             ],
           },
@@ -1633,22 +1650,26 @@ export const HeuristicsSampleData = {
               {
                 label: 'A. Continue Button',
                 isCorrect: false,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'User needs complete control and freedom over the entire system. The system should help them to undo an action that happened by mistake. Frustrating usability issues would never help to retain users. That is how it is becoming one of the important points in this topic.',
               },
               {
                 label: 'B. Undo Button',
                 isCorrect: true,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'User needs complete control and freedom over the entire system. The system should help them to undo an action that happened by mistake. Frustrating usability issues would never help to retain users. That is how it is becoming one of the important points in this topic.',
               },
               {
                 label: 'C. Check Mark',
                 isCorrect: false,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'User needs complete control and freedom over the entire system. The system should help them to undo an action that happened by mistake. Frustrating usability issues would never help to retain users. That is how it is becoming one of the important points in this topic.',
               },
               {
                 label: 'D. None of the Above',
                 isCorrect: false,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'User needs complete control and freedom over the entire system. The system should help them to undo an action that happened by mistake. Frustrating usability issues would never help to retain users. That is how it is becoming one of the important points in this topic.',
               },
             ],
           },
@@ -1665,22 +1686,26 @@ export const HeuristicsSampleData = {
               {
                 label: 'A. Save Link',
                 isCorrect: false,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Users shouldn’t have to worry or panic about entering the wrong data into a field. Users should have the control and freedom to edit text that was previously submitted.Users must be given a way to fix mistakes they make while interacting with a system.',
               },
               {
                 label: 'B. Edit Post',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Users shouldn’t have to worry or panic about entering the wrong data into a field. Users should have the control and freedom to edit text that was previously submitted.Users must be given a way to fix mistakes they make while interacting with a system.',
               },
               {
                 label: 'C. Delete',
                 isCorrect: false,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'Users shouldn’t have to worry or panic about entering the wrong data into a field. Users should have the control and freedom to edit text that was previously submitted.Users must be given a way to fix mistakes they make while interacting with a system.',
               },
               {
                 label: 'D. All of the Above',
                 isCorrect: true,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'Users shouldn’t have to worry or panic about entering the wrong data into a field. Users should have the control and freedom to edit text that was previously submitted.Users must be given a way to fix mistakes they make while interacting with a system.',
               },
             ],
           },
@@ -2038,12 +2063,14 @@ export const HeuristicsSampleData = {
               {
                 label: 'Check Boxes',
                 isCorrect: true,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Users need a component for selecting from a list of options that’s uniform and consistent. Instead of using radio buttons and checkboxes, use check circles for both instead. A check circle combines both the outer shape of a radio button with the checkmark cue of a checkbox.',
               },
               {
                 label: 'Radio Buttons',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Users need a component for selecting from a list of options that’s uniform and consistent. Instead of using radio buttons and checkboxes, use check circles for both instead. A check circle combines both the outer shape of a radio button with the checkmark cue of a checkbox.',
               },
             ],
           },
@@ -2060,22 +2087,26 @@ export const HeuristicsSampleData = {
               {
                 label: 'South Facing Arrow',
                 isCorrect: false,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'BBC Comment section displays a down arrow for ‘Highest Rated’ and up arrow for ‘Lowest Rated’. This representation is inconsistent and confusing for your users, as the concept “higher” is generally synonymous with an up arrow and “lower” is synonymous with a down arrow.',
               },
               {
                 label: 'North Facing Arrow',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'BBC Comment section displays a down arrow for ‘Highest Rated’ and up arrow for ‘Lowest Rated’. This representation is inconsistent and confusing for your users, as the concept “higher” is generally synonymous with an up arrow and “lower” is synonymous with a down arrow.',
               },
               {
                 label: 'Both A & B',
                 isCorrect: true,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'BBC Comment section displays a down arrow for ‘Highest Rated’ and up arrow for ‘Lowest Rated’. This representation is inconsistent and confusing for your users, as the concept “higher” is generally synonymous with an up arrow and “lower” is synonymous with a down arrow.',
               },
               {
                 label: 'None of the Above',
                 isCorrect: false,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'BBC Comment section displays a down arrow for ‘Highest Rated’ and up arrow for ‘Lowest Rated’. This representation is inconsistent and confusing for your users, as the concept “higher” is generally synonymous with an up arrow and “lower” is synonymous with a down arrow.',
               },
             ],
           },
@@ -2414,22 +2445,26 @@ export const HeuristicsSampleData = {
               {
                 label: 'A',
                 isCorrect: true,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Despite the fact that the users will always make some mistakes when using a system, it is possible to reduce the errors by designing the system with the user’s experience in mind. The errors can be prevented by helping the user to find their way through the interface of the system.',
               },
               {
                 label: 'B',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Despite the fact that the users will always make some mistakes when using a system, it is possible to reduce the errors by designing the system with the user’s experience in mind. The errors can be prevented by helping the user to find their way through the interface of the system.',
               },
               {
                 label: 'C',
                 isCorrect: false,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'Despite the fact that the users will always make some mistakes when using a system, it is possible to reduce the errors by designing the system with the user’s experience in mind. The errors can be prevented by helping the user to find their way through the interface of the system.',
               },
               {
                 label: 'D',
                 isCorrect: false,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'Despite the fact that the users will always make some mistakes when using a system, it is possible to reduce the errors by designing the system with the user’s experience in mind. The errors can be prevented by helping the user to find their way through the interface of the system.',
               },
             ],
           },
@@ -2446,22 +2481,26 @@ export const HeuristicsSampleData = {
               {
                 label: 'A. Image',
                 isCorrect: false,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Prevent mistakes by eliminating your users’ ability to make them.',
               },
               {
                 label: 'B. Star Rating',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Prevent mistakes by eliminating your users’ ability to make them.',
               },
               {
                 label: 'C. Inventory Supply',
                 isCorrect: true,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'Prevent mistakes by eliminating your users’ ability to make them.',
               },
               {
                 label: 'D. Wishlist',
                 isCorrect: false,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'Prevent mistakes by eliminating your users’ ability to make them.',
               },
             ],
           },
@@ -2814,12 +2853,14 @@ export const HeuristicsSampleData = {
               {
                 label: 'Recognition',
                 isCorrect: false,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Providing access to the pages recently visited and searches performed in the near past can help users resume tasks that they left incomplete and that may have a hard time recalling.',
               },
               {
                 label: 'Recall',
                 isCorrect: true,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Providing access to the pages recently visited and searches performed in the near past can help users resume tasks that they left incomplete and that may have a hard time recalling.',
               },
             ],
           },
@@ -2836,12 +2877,14 @@ export const HeuristicsSampleData = {
               {
                 label: 'Recognition',
                 isCorrect: false,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Users can’t always remember the name of what they recently worked on or opened, so platforms like Keynote and Word provide an option to “open recent” documents in order to help users recall what they worked on.',
               },
               {
                 label: 'Recall',
                 isCorrect: true,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Users can’t always remember the name of what they recently worked on or opened, so platforms like Keynote and Word provide an option to “open recent” documents in order to help users recall what they worked on.',
               },
             ],
           },
@@ -3203,22 +3246,26 @@ export const HeuristicsSampleData = {
               {
                 label: 'Advanced Feature',
                 isCorrect: true,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Accelerators are basically hidden shortcuts, that allow users to perform a specific action in an efficient way. They are usually targeted towards the heaviest users of an app. These users need ways to engage with your app quickly and more easily, so accelerators are a good way to achieve that. Accelerators are derived from existing features of your app.',
               },
               {
                 label: 'Experienced User',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Accelerators are basically hidden shortcuts, that allow users to perform a specific action in an efficient way. They are usually targeted towards the heaviest users of an app. These users need ways to engage with your app quickly and more easily, so accelerators are a good way to achieve that. Accelerators are derived from existing features of your app.',
               },
               {
                 label: 'Accelerator',
                 isCorrect: true,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'Accelerators are basically hidden shortcuts, that allow users to perform a specific action in an efficient way. They are usually targeted towards the heaviest users of an app. These users need ways to engage with your app quickly and more easily, so accelerators are a good way to achieve that. Accelerators are derived from existing features of your app.',
               },
               {
                 label: 'Multifunction Use',
                 isCorrect: false,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'Accelerators are basically hidden shortcuts, that allow users to perform a specific action in an efficient way. They are usually targeted towards the heaviest users of an app. These users need ways to engage with your app quickly and more easily, so accelerators are a good way to achieve that. Accelerators are derived from existing features of your app.',
               },
             ],
           },
@@ -3235,22 +3282,26 @@ export const HeuristicsSampleData = {
               {
                 label: 'Alternative MEthod',
                 isCorrect: true,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Having keyboard shortcuts allows user an additional method to perform certain repetative commands.  It is designed as an alternative method that can accelerate a users speed. It is one of multiple methods the user can use to accomplish a task.',
               },
               {
                 label: 'Accessibility',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Having keyboard shortcuts allows user an additional method to perform certain repetative commands.  It is designed as an alternative method that can accelerate a users speed. It is one of multiple methods the user can use to accomplish a task.',
               },
               {
                 label: 'Repetative Usage',
                 isCorrect: false,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'Having keyboard shortcuts allows user an additional method to perform certain repetative commands.  It is designed as an alternative method that can accelerate a users speed. It is one of multiple methods the user can use to accomplish a task.',
               },
               {
                 label: 'Multifunction Use',
                 isCorrect: false,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'Having keyboard shortcuts allows user an additional method to perform certain repetative commands.  It is designed as an alternative method that can accelerate a users speed. It is one of multiple methods the user can use to accomplish a task.',
               },
             ],
           },
@@ -3557,22 +3608,26 @@ export const HeuristicsSampleData = {
               {
                 label: 'A',
                 isCorrect: false,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'All but one of the examples above are either overcrowded with options and things to look at, or they’re confusing to the user.  One of the options is both easy to understand, simple, and minimalistic.',
               },
               {
                 label: 'B',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'All but one of the examples above are either overcrowded with options and things to look at, or they’re confusing to the user.  One of the options is both easy to understand, simple, and minimalistic.',
               },
               {
                 label: 'C',
                 isCorrect: false,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'All but one of the examples above are either overcrowded with options and things to look at, or they’re confusing to the user.  One of the options is both easy to understand, simple, and minimalistic.',
               },
               {
                 label: 'D',
                 isCorrect: true,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'All but one of the examples above are either overcrowded with options and things to look at, or they’re confusing to the user.  One of the options is both easy to understand, simple, and minimalistic.',
               },
             ],
           },
@@ -3589,12 +3644,14 @@ export const HeuristicsSampleData = {
               {
                 label: 'True',
                 isCorrect: true,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Airbnb has designed their homepage with a high signal-to-noise ratio. The main purpose of the user is easily achieved due to use of the minimal and clean design of the search section, which allows users to select their destination, check-in, and add number of guests without distraction.',
               },
               {
                 label: 'False',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Airbnb has designed their homepage with a high signal-to-noise ratio. The main purpose of the user is easily achieved due to use of the minimal and clean design of the search section, which allows users to select their destination, check-in, and add number of guests without distraction.',
               },
             ],
           },
@@ -3874,22 +3931,26 @@ export const HeuristicsSampleData = {
               {
                 label: 'A. Description',
                 isCorrect: false,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'It’s important to keep the most important things above the fold.  Of the options above, all are important for the user to see no matter where they are on the page.',
               },
               {
                 label: 'B. Logo',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'It’s important to keep the most important things above the fold.  Of the options above, all are important for the user to see no matter where they are on the page.',
               },
               {
                 label: 'C. Call to Action',
                 isCorrect: false,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'It’s important to keep the most important things above the fold.  Of the options above, all are important for the user to see no matter where they are on the page.',
               },
               {
                 label: 'All of the Above',
                 isCorrect: true,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'It’s important to keep the most important things above the fold.  Of the options above, all are important for the user to see no matter where they are on the page.',
               },
             ],
           },
@@ -4196,22 +4257,26 @@ export const HeuristicsSampleData = {
               {
                 label: 'A',
                 isCorrect: false,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'One of the most common ways of allowing users to recover from errors is to provide the user with an undo or back button. Internet browsers have back and forward buttons for this purpose.',
               },
               {
                 label: 'B',
                 isCorrect: true,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'One of the most common ways of allowing users to recover from errors is to provide the user with an undo or back button. Internet browsers have back and forward buttons for this purpose.',
               },
               {
                 label: 'C',
                 isCorrect: false,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'One of the most common ways of allowing users to recover from errors is to provide the user with an undo or back button. Internet browsers have back and forward buttons for this purpose.',
               },
               {
                 label: 'D',
                 isCorrect: false,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'One of the most common ways of allowing users to recover from errors is to provide the user with an undo or back button. Internet browsers have back and forward buttons for this purpose.',
               },
             ],
           },
@@ -4228,22 +4293,26 @@ export const HeuristicsSampleData = {
               {
                 label: 'A',
                 isCorrect: false,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'The user can often recover from an error if they understand what they did wrong. Explaining the exact requirements for the password help the user better understand what kind of password they need to input in order to move to the next screen.',
               },
               {
                 label: 'B',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'The user can often recover from an error if they understand what they did wrong. Explaining the exact requirements for the password help the user better understand what kind of password they need to input in order to move to the next screen.',
               },
               {
                 label: 'C',
                 isCorrect: false,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'The user can often recover from an error if they understand what they did wrong. Explaining the exact requirements for the password help the user better understand what kind of password they need to input in order to move to the next screen.',
               },
               {
                 label: 'D',
                 isCorrect: true,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'The user can often recover from an error if they understand what they did wrong. Explaining the exact requirements for the password help the user better understand what kind of password they need to input in order to move to the next screen.',
               },
             ],
           },
@@ -4845,22 +4914,26 @@ export const HeuristicsSampleData = {
               {
                 label: 'Productive Help',
                 isCorrect: false,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Whenever possible, present the documentation in-context right at the moment that the user requires it. Pull revelations show contextual tips that are relevant to the user’s task. Pull revelations provide timely information to help users accomplish a task.',
               },
               {
                 label: 'Reactive Help',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Whenever possible, present the documentation in-context right at the moment that the user requires it. Pull revelations show contextual tips that are relevant to the user’s task. Pull revelations provide timely information to help users accomplish a task.',
               },
               {
                 label: 'Push Notification',
                 isCorrect: false,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'Whenever possible, present the documentation in-context right at the moment that the user requires it. Pull revelations show contextual tips that are relevant to the user’s task. Pull revelations provide timely information to help users accomplish a task.',
               },
               {
                 label: 'Pull Revelation',
                 isCorrect: true,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'Whenever possible, present the documentation in-context right at the moment that the user requires it. Pull revelations show contextual tips that are relevant to the user’s task. Pull revelations provide timely information to help users accomplish a task.',
               },
             ],
           },
@@ -4877,22 +4950,26 @@ export const HeuristicsSampleData = {
               {
                 label: 'A. Upload Option',
                 isCorrect: true,
-                feedback: 'Correct! The Sky is blue!',
+                feedback:
+                  'Ensure that the help documentation is easy to search. Whenever possible, present the documentation in context right at the moment that the user requires it.  There should always be a place for users to go to find help with something.',
               },
               {
                 label: 'B. Tips',
                 isCorrect: false,
-                feedback: 'The Sky is not red!',
+                feedback:
+                  'Ensure that the help documentation is easy to search. Whenever possible, present the documentation in context right at the moment that the user requires it.  There should always be a place for users to go to find help with something.',
               },
               {
                 label: 'C. Information',
                 isCorrect: false,
-                feedback: 'The Sky is not green!',
+                feedback:
+                  'Ensure that the help documentation is easy to search. Whenever possible, present the documentation in context right at the moment that the user requires it.  There should always be a place for users to go to find help with something.',
               },
               {
                 label: 'D. Customer Service',
                 isCorrect: false,
-                feedback: 'The Sky is not yellow!',
+                feedback:
+                  'Ensure that the help documentation is easy to search. Whenever possible, present the documentation in context right at the moment that the user requires it.  There should always be a place for users to go to find help with something.',
               },
             ],
           },

@@ -1,7 +1,17 @@
 import React from 'react';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 
-const CreateGroup = ({setNewGroupName, newGroupName, handleCreateGroup}) => {
+const CreateGroup = ({
+  setNewGroupName,
+  newGroupName,
+  handleCreateGroup,
+  createGroup,
+  setCreateGroup,
+}) => {
+  const createNewGroup = () => {
+    handleCreateGroup();
+    setCreateGroup(!createGroup);
+  };
   return (
     <>
       <h1>Group: None</h1>
@@ -12,10 +22,9 @@ const CreateGroup = ({setNewGroupName, newGroupName, handleCreateGroup}) => {
         onChange={(e) => setNewGroupName(e.target.value)}
         value={newGroupName}
       />
-      <U.WideBtn teal onClick={handleCreateGroup}>
+      <U.WideBtn teal onClick={createNewGroup}>
         Create Group
-      </U.WideBtn>{' '}
-      */
+      </U.WideBtn>
     </>
   );
 };
