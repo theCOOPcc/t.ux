@@ -16,8 +16,11 @@ const ManageGroupMembers = ({
   setSelectedGroupIndex
 }) => {
   return (
-    <U.FlexBox column>
-    <U.Normal twenty4>Manage Group Members</U.Normal>
+    <U.FlexBox bordered managerDash notFlex>
+    <U.ColorBlock SubGridBlue></U.ColorBlock>
+    <div style={{margin: `20px 20px 80px 40px`}}>
+
+    <U.Heading3 bolder>Manage Group Members</U.Heading3>
     {!groups.length > 0 && (
       <CreateGroup
         newGroupName={newGroupName}
@@ -27,7 +30,7 @@ const ManageGroupMembers = ({
     )}
     {groups.length > 0 && (
       <>
-        <h2>Group:</h2>
+        <U.Normal twenty>Group:</U.Normal>
         <select
           value={selectedGroupIndex}
           onChange={(e) => setSelectedGroupIndex(e.target.value)}
@@ -44,21 +47,24 @@ const ManageGroupMembers = ({
             {groups[selectedGroupIndex].invited.length > 0 && (
               <GroupUserTable groups={groups} selectedGroupIndex={selectedGroupIndex}/>
             )}
-            <label>Add Students Group</label>
-            <textarea
+            <U.FlexBox column flexStartJC>
+            <U.AddStudents>Add Students Group</U.AddStudents>
+            <U.TextArea
               type="textarea"
               value={textInput}
               onChange={handleTextInputChange}
               placeholder="Enter email addresses seperated by commas (Ex: leo@gmail.com, dan@gmail.com, etc.."
             />
-            <U.WideBtn teal onClick={handleAddToGroup}>
+            </U.FlexBox >
+            <U.WideBtn AddGroup enable onClick={handleAddToGroup}>
               Add To Group
             </U.WideBtn>
           </>
         )}
       </>
     )}
-  </U.FlexBox>
+    </div>
+    </U.FlexBox>
   );
 };
 

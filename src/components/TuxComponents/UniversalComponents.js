@@ -116,12 +116,12 @@ export const FlexBox = styled.div`
 		justify-content: space-between;
 	`}
 
-	${props => props.alignLeft && css`
+	/* ${props => props.alignLeft && css`
 		align-items: left !important;
 		text-align: left !important;
 		justify-content: left;
 		width: 100%;
-`}
+	`} */
 
 	${props => props.spaceAround && css`
 		justify-content: space-around;
@@ -164,32 +164,28 @@ export const FlexBox = styled.div`
 	`}
 
 	${props => props.managerDash && css`
-	// position: absolute;
-	// left: 0px;
-	// right: 0px;
-	// top: 0px;
-	// bottom: 0px;
-		background: #FFFFFF;
+		/* background: #FFFFFF; */
 		border: 1px solid #DDDDD;
-		box-sizing: border-box;
+		/* box-sizing: border-box; */
 		border-radius: 5px;
-		margin: 10px 60px 10px 60px;
+		margin: 10px 60px;
 		width: 100%;
 		padding-bottom: 20px;
 `}
 
 	${props => props.bordered && css`
-		background: #FFFFFF;
-		border: 1px solid #DDDDDD !important;
-		box-sizing: border-box;
+		/* background: #FFFFFF; */
+		border: var(--solid-border);
+		/* box-sizing: border-box; */
 		border-radius: 5px;
-		margin: 10px 10px 10px 10px;
+		margin: 10px;
 	`}
+
 	${props => props.tuxStyled && css`
-	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
-	background-blend-mode: normal, multiply;
-	height: 100vh;
-`}
+		background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
+		background-blend-mode: normal, multiply;
+		height: 100vh;
+	`}
 
 	${props => props.flexStartJC && css`
 		justify-content: flex-start;
@@ -199,6 +195,14 @@ export const FlexBox = styled.div`
 	${props => props.hint && css`
 		align-items: flex-start;
 		margin: 20px 35px 0 10px;
+	`}
+
+	${props => props.transparent && css`
+		background-color: transparent;
+	`}
+
+	${props => props.notFlex && css`
+		display: block;
 	`}
 `;
 
@@ -227,6 +231,10 @@ export const WideBtn = styled.button`
 
 	${props => props.login && css`
 		margin: 17px 45px;
+	  `}
+	  
+	${props => props.AddGroup && css`
+		margin-left: 300px;
   	`}
 	
 	${props => props.extraWide && css`
@@ -450,11 +458,34 @@ export const Heading3 = styled.h3`
 
 	${props => props.blue && css`
 	color: #1B98A0;
-  `}
+	  `}
+	  
+	/* ${props => props.invite & css`
+		 font-size: 36px; 
+		line-height: 54px;
+		color: var(--text-grey) !important;
+	`} */
 
 `;
 
 /*--------------- FORMS ---------------*/
+// from Manage Group Members
+export const AddStudents = styled.label`
+	font: var(--table);
+	font-weight: 600;
+	line-height: 24px;
+	color: rgba(51,51,51,.75);
+	margin-top: 50px;
+	`;
+
+export const TextArea = styled.textarea`
+	width: 580px;
+	height: 100px;
+	border-radius: 5px;
+	text-align: left;
+	padding: 10px;
+`;
+
 
 /*---------- Checkbox ----------*/
 export const checkedBox = css`
@@ -488,6 +519,57 @@ export const SmallInput = styled.input`
 	${props => props.marginTop && css`
 		margin: 98px 10px 88px 0;
 	`}
+`;
+
+/*---------- Tables ----------*/
+export const Table = styled.table`
+	width: 100%;
+
+`;
+
+export const TableHead = styled.thead`
+	
+`;
+
+export const TableRow = styled.tr`
+	border-bottom: 1px solid #cccccc;
+`;
+
+export const TableHeader = styled.th`
+	font: var(--table);
+	font-weight: 600;
+	line-height: 24px;
+	color: rgba(51,51,51,.75);
+	height: 50px;
+	text-align: left;
+	
+	${props => props.left && css`
+		padding-left: 20px;
+		
+	`}
+`;
+
+export const TableBody = styled.tbody`
+
+`;
+
+export const TableData = styled.td`
+	font: var(--table);
+	color: rgba(51,51,51,.75);
+	font-weight: 400;
+	height: 50px;
+	text-align: left;
+
+	${props => props.left && css`
+		padding-left: 15px;
+		
+	`}
+`;
+
+/*---------- Images ----------*/
+export const Icon25 = styled.img`
+	width: 25px;
+	height: 25px;
 `;
 
 // Color Blocks
