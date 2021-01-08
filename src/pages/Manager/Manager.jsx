@@ -84,7 +84,7 @@ const Manager = () => {
 
   return (
     <>
-      <h1>Manager Landing Page</h1>
+      {/* <h1>Manager Landing Page</h1> */}
       <ManagerStudentResults results={results} />
       <ManagerActivites
         groups={groups}

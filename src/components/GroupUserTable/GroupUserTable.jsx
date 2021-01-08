@@ -1,30 +1,31 @@
 import React from 'react';
+import * as U from '../TuxComponents/UniversalComponents';
 
 const GroupUserTable = ({groups, selectedGroupIndex}) => {
   const selectedGroup = groups[selectedGroupIndex]
   const {invited} = selectedGroup
-  return ( <table>
+  return ( <U.Table>
     <thead>
-      <tr> 
-        <th colspan="1">Student Name</th>
-        <th colspan="1">Email</th>
-        <th colspan="1">Delete</th>
-      </tr>
+      <U.TableRow> 
+        <U.TableHeader left colspan="1">Student Name</U.TableHeader>
+        <U.TableHeader left colspan="1">Email</U.TableHeader>
+        <U.TableHeader colspan="1">Delete</U.TableHeader>
+      </U.TableRow>
     </thead>
     <tbody>
       {invited.length > 0 ? (
         invited.map((user, index) => (
-          <tr>
-            <td>{user.name && user.name.length > 0 ? user.name : '--- --- ---'}</td>
-            <td>{user.email}</td>
-            <td>delete button</td>
-          </tr>
+          <U.TableRow>
+            <U.TableData>{user.name && user.name.length > 0 ? user.name : '--- not sign up ---'}</U.TableData>
+            <U.TableData>{user.email}</U.TableData>
+            <U.TableData left><U.Icon25 src="/images/icons/trash.svg"></U.Icon25></U.TableData>
+          </U.TableRow>
         ))
       ) : (
         <>No users yet</>
       )}
     </tbody>
-  </table> );
+  </U.Table> );
 }
  
 export default GroupUserTable;
