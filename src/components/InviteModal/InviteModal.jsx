@@ -101,7 +101,7 @@ const InviteModal = ({
                   />
                 ))}
                 </div>
-              <Button onClick={handleSendInvite}>Send Invite</Button>
+              <Button className="modalButton" onClick={handleSendInvite}>Send Invite</Button>
               {/* <Button onClick={handleCopyLink}>Copy Link</Button> */}
             </div>
           </Modal.Body>
