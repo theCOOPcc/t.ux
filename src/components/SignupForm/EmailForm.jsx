@@ -22,6 +22,7 @@ const EmailForm = ({ errors, values, handleChange, touched }) => {
               value={userData.email}
               name="userData.email"
               onChange={handleChange}
+              placeholder={userData.email}
             ></U.SmallInput>
             {errors.email && <div>{errors.email}</div>}
 
