@@ -1,9 +1,3 @@
-// TODO: Fix positioning yellow sticky 1. Visiblity of System Status
-//  TODO: Why is "Examples" not responding to css? (visibility of...)
-//  TODO: Line up text under images at Examples (visibility of...)
-// TODO: Get finger in system/world match to center
-// TODO: Figure why span bolding not working inside li in system/world
-
 export const HeuristicsSampleData = {
   name: 'Heuristics',
   topic: 'Heuristics',
@@ -921,7 +915,7 @@ export const HeuristicsSampleData = {
               'True or False: In the following graphic. The blue line, ‘Syncing 5 of 21’ and the loading animation circle are ALL examples of “Visibility of System Status.',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/Visibility_of_System_Status_Q2/Loadingbar.png',
             answers: [
               {
                 label: 'True',
@@ -1262,7 +1256,7 @@ export const HeuristicsSampleData = {
               'Which of the following elements is NOT an example of a digital item created to look like and serve the same purpose as it’s real-life match?',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/System_World_Mathc_Q1/Answer-4-UP.png',
             answers: [
               {
                 label: 'A. Calendar',
@@ -1298,7 +1292,7 @@ export const HeuristicsSampleData = {
               'Which of the following is NOT an example of Match Between System & Real World?',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/SystemWMAnswer.png',
             answers: [
               {
                 label: 'A',
@@ -1609,7 +1603,7 @@ export const HeuristicsSampleData = {
               'All of the following are examples of User Control and Freedom EXCEPT: ',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/User_Control_Q1/AnswerOptions.png',
             answers: [
               {
                 label: 'A',
@@ -1645,7 +1639,7 @@ export const HeuristicsSampleData = {
               'Which element on the screen provides the user Control and Freedom to go back and set up the profile again if they have done that by mistake?',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/User_Control_Q2/Phone.png',
             answers: [
               {
                 label: 'A. Continue Button',
@@ -1681,7 +1675,7 @@ export const HeuristicsSampleData = {
               'Which of the following is an example of User Control and Freedom',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/User_Control_Q3/List.png',
             answers: [
               {
                 label: 'A. Save Link',
@@ -2058,7 +2052,7 @@ export const HeuristicsSampleData = {
               'Which of the following is the best choice when allowing a User to select Multiple items?',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/Consistency___Standards_Q1/radio-checkbox-functionality_1.png',
             answers: [
               {
                 label: 'Check Boxes',
@@ -2082,7 +2076,7 @@ export const HeuristicsSampleData = {
               'Which UI pattern will cause a user discomfort, and increase decision making time? ',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/Consistency___Standards_Q2/HeuQ2.png',
             answers: [
               {
                 label: 'South Facing Arrow',
@@ -2436,11 +2430,11 @@ export const HeuristicsSampleData = {
         },
         {
           type: 'question',
-          contents: {
+          contents: { 
             problemStatement: 'Choose the best example of Error Prevention',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/ErrorPrevention.png',
             answers: [
               {
                 label: 'A',
@@ -2476,7 +2470,7 @@ export const HeuristicsSampleData = {
               'Which elements on the following page help prevent user errors?',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/Error_Prevention_Q2/Group_84.png',
             answers: [
               {
                 label: 'A. Image',
@@ -2848,7 +2842,7 @@ export const HeuristicsSampleData = {
               'Is the following image an example of Recognition or Recall? ',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/RecOverRecQ1.png',
             answers: [
               {
                 label: 'Recognition',
@@ -2872,7 +2866,7 @@ export const HeuristicsSampleData = {
               'Is the following image an example of Recognition or Recall? ',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/Recognition_over_Recall_Q2/Keynote.png',
             answers: [
               {
                 label: 'Recognition',
@@ -3241,7 +3235,7 @@ export const HeuristicsSampleData = {
               'Double tapping on a photo on Instagram causes the “like” heart to fill in automatically.  This is an example of a(n):',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/Flexibility___Efficiency_Q1/Instagram.png',
             answers: [
               {
                 label: 'Advanced Feature',
@@ -3277,7 +3271,7 @@ export const HeuristicsSampleData = {
               'What does creating keyboard shortcuts for repetative functions give the user in order to execute certain commands? ',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/flexibilit_efficiency_q2.png',
             answers: [
               {
                 label: 'Alternative MEthod',
@@ -3603,7 +3597,7 @@ export const HeuristicsSampleData = {
               'Which of the following is an example of aesthetic and minimalist design?',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/Aesthitic_Minimalism_Q1/Group_73.png',
             answers: [
               {
                 label: 'A',
@@ -3639,7 +3633,7 @@ export const HeuristicsSampleData = {
               'True or False: This Airbnb homepage is an exmaple of Aesthetic & Minimalism.  ',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/Aesthitic_Minimalism_Q2/Image_Airbnb_Question_1.png',
             answers: [
               {
                 label: 'True',
@@ -3926,7 +3920,7 @@ export const HeuristicsSampleData = {
               'Which of the below elements belong above the fold on a webpage?',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/Aesthitic_Minimalism_Q3/Group_84.png',
             answers: [
               {
                 label: 'A. Description',
@@ -3959,7 +3953,7 @@ export const HeuristicsSampleData = {
     },
     {
       name: 'Error Recovery',
-      modules: [
+      modules: [   
         {
           type: 'display',
           contents: `
@@ -4252,7 +4246,7 @@ export const HeuristicsSampleData = {
             problemStatement: 'What color is the sky?',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/Error_Recovery_Q1/Group_74.png',
             answers: [
               {
                 label: 'A',
@@ -4288,7 +4282,7 @@ export const HeuristicsSampleData = {
               'Which of the following input fields would best help the user recover from inputting a password that doesn’t meet requirements?',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/ErrorRecov.png',
             answers: [
               {
                 label: 'A',
@@ -4909,7 +4903,7 @@ export const HeuristicsSampleData = {
               'How is the image below an example of Help & Documentation?',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '',
             answers: [
               {
                 label: 'Productive Help',
@@ -4945,7 +4939,7 @@ export const HeuristicsSampleData = {
               'All of the following are important to keep in mind when designing for users as they are key to Help & Documentation EXCEPT:',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: 'https://picsum.photos/200/300',
+            media: '/images/question_images/Help___Documentation_Q2/Group 74.png',
             answers: [
               {
                 label: 'A. Upload Option',

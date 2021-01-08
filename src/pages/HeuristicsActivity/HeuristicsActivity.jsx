@@ -1,23 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import Activity from '../Activity/Activity';
 import activityService from '../../services/activityService';
-import {HeuristicsSampleData} from '../../SampleData/HeuristicsSampleData'
 
 const getActivityData = () => {
-  return activityService.getOne('5fedff0ed2cde92a7579795c');
+  return activityService.getOne('5ff8b36e56fdee429c008d3a');
 };
 
 const HeuristicsActivity = () => {
-  const [activityData, setActivityData] = useState(HeuristicsSampleData);
+  const [activityData, setActivityData] = useState('');
 
-  // useEffect(() => {
-  //   getActivityData().then((data) => setActivityData(data));
-  // }, []);
-
+  useEffect(() => {
+    getActivityData().then((data) => setActivityData(data));
+  }, []);
 
   return activityData ? <Activity details={activityData} /> : <h1>Loading</h1>;
 };
 
-
 export default HeuristicsActivity;
-  
