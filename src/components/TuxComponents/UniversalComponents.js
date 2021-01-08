@@ -82,12 +82,10 @@ export const SideBarText = styled.button`
 	border-bottom: var(--solid-border);
 	width: 238px;
 	height: 50px;
-	background-color: var(--text-white);
-	font-size: 16px;
+	background-color: #f1f2eb
 	line-height: 24px;
-	font-family: Poppins;
 	color: var(--future);
-		font-weight: 500;
+	font: 500 16px 'Poppins', sans-serif;
 
 	${props => props.past && css`
 		color: var(--true-black);
@@ -261,22 +259,22 @@ export const WideBtn = styled.button`
 	
 		&:hover {
 			background-color: var(--primary-disabled-btn-color);
-			/* background: #236C69; */
 		}
 	`}
+	
 
-	${props => props.enable && css`
+	/* ${props => props.enable && css`
 		background-color: var(--enable-btn);
-	`}
+	`} */
 
-	${props => props.teal && css`
+	/* ${props => props.teal && css`
 		background-color: #3C8582;
-	`}
+	`} */
 
-	${props => props.preview && css`
+	/* ${props => props.preview && css`
 		width: 245px !important;
 		height: 50px;
-	`}
+	`} */
 `;
 
 export const NakedBtn = styled.button`
@@ -319,7 +317,7 @@ export const ProgressContainer = styled.div`
 	transparent);
 	border-radius: 5px;
 	display: flex;
-	align-items: center;
+	/* align-items: center; */
 `;
 export const ProgressFiller = styled.div`
 	z-index: 1;
@@ -570,6 +568,7 @@ export const TableData = styled.td`
 export const Icon25 = styled.img`
 	width: 25px;
 	height: 25px;
+
 `;
 
 // Color Blocks
