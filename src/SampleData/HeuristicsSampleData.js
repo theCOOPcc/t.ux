@@ -1216,7 +1216,6 @@ export const HeuristicsSampleData = {
                   </div>
                 </div>
                 <img class="line-4-C61RwL" src="/images/img/line-4-1@1x.svg" />
-                <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="/images/img/vector@2x.svg" /></div>
                 <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="/images/img/line-4-24@1x.svg" /></div>
                 <div class="divider-dotted-mzXdH9"><img class="line-4-qa0SLk" src="/images/img/line-4-24@1x.svg" /></div>
                 <div class="text-body-paragraph-mzXdH9">
@@ -1541,7 +1540,6 @@ export const HeuristicsSampleData = {
                     ><span class="span3-SQKVtq">ail.</span>
                   </div>
                 </div>
-                <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="/images/img/vector@2x.svg" /></div>
                 <img class="group-38-C61RwL" src="/images/img/group-38@1x.png" />
                 <div class="text-body-paragraph-C61RwL">
                   <div class="text-jdAx62 border-class-1 poppins-normal-black-18px">
@@ -1905,7 +1903,6 @@ export const HeuristicsSampleData = {
                 </div>
                 <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="/images/img/line-4-1@1x.svg" /></div>
                 <div class="divider-dotted-mzXdH9"><img class="line-4-qa0SLk" src="/images/img/line-4-3@1x.svg" /></div>
-                <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="/images/img/vector@2x.svg" /></div>
                 <img class="group-58-C61RwL" src="/images/img/group-58@1x.png" />
                 <img class="layout-log-nding-page-C61RwL" src="/images/img/layout-login-landing-page@1x.png" />
                 <div class="bad-example-C61RwL valign-text-middle border-class-1">Bad Example</div>
@@ -2315,7 +2312,6 @@ export const HeuristicsSampleData = {
                       Offer Suggestions
                     </div>
                   </div>
-                  <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="/images/img/vector@2x.svg" /></div>
                   <img class="southwest-1-C61RwL" src="/images/img/southwest-1@1x.jpg" />
                   <img class="amazonsearch-1-C61RwL" src="/images/img/amazonsearch-1@1x.png" />
                   <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="/images/img/line-4-1@1x.svg" /></div>
@@ -2689,7 +2685,6 @@ export const HeuristicsSampleData = {
                   <img class="x2014-5-12-amazon-2-1-C61RwL" src="/images/img/2014-5-12-amazon-2-1@1x.jpg" />
                   <div class="divider-dotted-mzXdH9"><img class="line-4-qa0SLk" src="/images/img/line-4-1@1x.svg" /></div>
                   <img class="line-4-C61RwL" src="/images/img/line-4-1@1x.svg" />
-                  <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="/images/img/vector@2x.svg" /></div>
                   <div class="section-header-C61RwL">
                     <div class="five-ways---your-work-X1rVr0 valign-text-middle border-class-1 poppins-semi-bold-black-24px">
                       HISTORY AND PREVIOUSLY VISITED CONTENT
@@ -3113,7 +3108,6 @@ export const HeuristicsSampleData = {
                       shortcut at all, but repeated exposure to it supports learning for experienced users.
                     </div>
                   </div>
-                  <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="/images/img/vector@2x.svg" /></div>
                   <div class="rectangle-106-C61RwL"></div>
                   <div class="text-body-paragraph-mzXdH9">
                     <div class="body-copy-SCxiAB border-class-1 poppins-normal-black-14px">
@@ -3537,7 +3531,6 @@ export const HeuristicsSampleData = {
                   <img class="heuristic--ample-80-1-C61RwL" src="/images/img/heuristic-example-80-1@1x.jpg" />
                   <img class="x1w-as-pgdc--t-xe-ca-1-C61RwL" src="/images/img/1-waspgdcm0dazlypx-txeca-1@1x.jpg" />
                   <img class="x1v8x5u-fvk--ywo-ffa-1-C61RwL" src="/images/img/1-v8x5ufvkkx54xi3qywoffa-1@1x.svg" />
-                  <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="/images/img/vector@2x.svg" /></div>
                   <div class="section-header-VMr6Om"></div>
                 </div>
               </div>
@@ -4176,7 +4169,6 @@ export const HeuristicsSampleData = {
                     </div>
                     <div class="divider-dotted-Oltj0X"></div>
                     <div class="text-body-paragraph-Oltj0X"></div>
-                    <img class="vector-Oltj0X" src="/images/img/vector@2x.svg" />
                   </div>
                   <div class="rectangle-61-C61RwL"></div>
                 </div>
@@ -4476,7 +4468,6 @@ export const HeuristicsSampleData = {
                     </div>
                   </div>
                   <img class="heuristic--le-73-82-1-C61RwL" src="/images/img/heuristic-example-73-82-1@1x.jpg" />
-                  <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="/images/img/vector@2x.svg" /></div>
                   <div class="text-body-paragraph-VMr6Om">
                     <div class="body-copy-SuXUfK border-class-1 poppins-normal-black-18px">
                       Proactive Help<br /><br />The goal of proactive help is to familiarize users with an interface. Proactive
@@ -4826,7 +4817,6 @@ export const HeuristicsSampleData = {
                       Guidance for Providing Proactive Help
                     </div>
                   </div>
-                  <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="/images/img/vector@2x.svg" /></div>
                 </div>
               </div>
             </body>

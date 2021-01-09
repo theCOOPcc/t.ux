@@ -274,7 +274,7 @@
 }
 .visibility-of-ss-example-page .icon-profile-4SyYWi {
   background-color: transparent;
-  background-image: url(/images/-avatar@2x.svg);
+  /* background-image: url(/images/img/-avatar@2x.svg); */
   background-size: 100% 100%;
   height: 50.00%;
   left: 94.51%;
@@ -461,7 +461,7 @@
 }
 .visibility-of-ss-example-page .progress-bar-10-JToSJX {
   background-color: var(--granite-gray);
-  background-image: url(/images/mask-group@2x.svg);
+  /* background-image: url(/images/img/mask-group@2x.svg); */
   background-size: 100% 100%;
   border-radius: 5px;
   height: 22px;
@@ -472,7 +472,7 @@
 }
 .visibility-of-ss-example-page .progress-dot-j7JgN4 {
   background-color: transparent;
-  background-image: url(/images/ellipse-19@2x.svg);
+  /* background-image: url(/images/img/ellipse-19@2x.svg); */
   background-size: 100% 100%;
   height: 1.05%;
   left: 4.00%;
