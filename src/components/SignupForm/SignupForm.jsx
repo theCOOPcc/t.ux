@@ -25,12 +25,12 @@ function validatePasswords(password, passwordConf) {
   return error;
 }
 
-const SignupForm = () => {
+const SignupForm = ({groupId, email}) => {
   return (
     <Formik
       initialValues={{
         userData: {
-          email: null,
+          email: email,
           firstName: '',
           lastName: '',
           password: '',
@@ -68,7 +68,7 @@ const SignupForm = () => {
       {({ errors, touched, handleChange, values, handleSubmit }) => (
         <Form onSubmit={handleSubmit}>
           {!values.continue && (
-            <EmailForm
+            <EmailForm 
               errors={errors}
               touched={touched}
               values={values}

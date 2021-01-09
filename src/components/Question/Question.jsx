@@ -7,7 +7,7 @@ const Question = ({ details }) => {
   const [response, setResponse] = useState('');
   // const [bkgrdColor, setbkgrdColor] = useState(['blue', 'green', 'red'])
 
-  const { problemStatement, image, answers } = details.contents;
+  const { problemStatement, media, answers } = details.contents;
 
   const handleResponse = (answer, index) => {
     setResponse({ selection: answer, selectionIndex: index });
@@ -17,8 +17,8 @@ const Question = ({ details }) => {
     <U.Sub6ColGrid>
       <A.ProblemStatement>{problemStatement}</A.ProblemStatement>
       <U.FlexBox spaceAround>
-        <U.Placeholder></U.Placeholder>
-        {/* <img src={`${image}`} alt="" /> */}
+        {/* <U.Placeholder></U.Placeholder> */}
+        <img src={media} alt="" />
         <U.FlexBox column spaceAround>
           {answers.map((answer, index) => (
             <A.SubmitQuestion

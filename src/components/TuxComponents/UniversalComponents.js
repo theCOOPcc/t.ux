@@ -137,7 +137,7 @@ export const FlexBox = styled.div`
 	${props => props.managerDash && css`
 		border: 1px solid #DDDDD;
 		border-radius: 5px;
-		margin: 10px 60px;
+		margin: 10px 60px 10px 60px;
 		width: 100%;
 		padding-bottom: 20px;
 `}
@@ -145,14 +145,14 @@ export const FlexBox = styled.div`
 	${props => props.bordered && css`
 		border: var(--solid-border);
 		border-radius: 5px;
-		margin: 10px;
+		margin: 10px 10px 10px 10px;
 	`}
 
 	${props => props.tuxStyled && css`
-		background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
-		background-blend-mode: normal, multiply;
-		height: 100vh;
-	`}
+	  background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
+	  background-blend-mode: normal, multiply;
+	  height: 100vh;
+`}
 
 	${props => props.flexStartJC && css`
 		justify-content: flex-start;
@@ -197,10 +197,6 @@ export const WideBtn = styled.button`
 
 	${props => props.login && css`
 		margin: 17px 45px;
-	  `}
-	  
-	${props => props.AddGroup && css`
-		margin-left: 300px;
   	`}
 	
 	${props => props.extraWide && css`
@@ -431,7 +427,6 @@ export const TextArea = styled.textarea`
 	padding: 10px;
 `;
 
-
 /*---------- Checkbox ----------*/
 export const checkedBox = css`
 
@@ -465,6 +460,7 @@ export const SmallInput = styled.input`
 		margin: 98px 10px 88px 0;
 	`}
 `;
+
 
 /*---------- Tables ----------*/
 export const Table = styled.table`
@@ -517,6 +513,7 @@ export const Icon25 = styled.img`
 	height: 25px;
 
 `;
+
 
 // Color Blocks
 export const ColorBlock = styled.div`
@@ -573,7 +570,7 @@ export const ColorBlock = styled.div`
 	`}
 
 	${props => props.SubGridGrey && css`
-	background-color: #CCCCCC!important;
+	background-color: #CCCCCC;
 	height: 1px !important;
 	width: 95% !important;
 	padding: 0;
