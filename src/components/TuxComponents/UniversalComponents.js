@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 
 export const Placeholder = styled.div`
-	/* grid-column: 1/span 3; */
 	width: 520px;
 	height: 520px;
 	background-color: yellow;
@@ -32,7 +31,6 @@ export const InfoBar = styled.div`
 	justify-self: stretch;
 	background-color: var(--true-white);
 	display: flex;
-	/* justify-content: center; */
 	align-items: center;
 	padding-left: 50px;
 `;
@@ -41,17 +39,12 @@ export const InfoBar = styled.div`
 export const Sub6ColGrid = styled.div`
 	grid-column: 1/ span 1;
 	grid-row: 2/ span 1;
-	/* display: grid;
-	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: auto; */
 	background-color: var(--true-white);
 	border: var(--solid-border);
-	/* max-width: 1050px; */
 `;
 
 /* ----------- SubGrid Section ----------- */
 export const Section = styled.section`
-	/* padding: 0 60px; */
 	margin-left: 50px;
 	text-align: left;
 `;
@@ -72,7 +65,6 @@ export const SideBar = styled.div`
 	height: calc(100vh - 159px);
 	display: flex;
 	flex-direction: column;
-	/* justify-content: center; */
 	align-items: center;
 	border: var(--solid-border);
 `;
@@ -80,7 +72,6 @@ export const SideBar = styled.div`
 export const SideBarText = styled.button`
 	border: none;
 	border-bottom: var(--solid-border);
-	/* width: 238px; */
 	width: 100%;
 	height: 50px;
 	background-color: #f1f2eb;
@@ -97,16 +88,10 @@ export const SideBarText = styled.button`
 		color: var(--present);
 		font-weight: 700;
 	`}
-
-	/* ${props => props.future && css`
-		color: var(--future);
-		font-weight: 500;
-	`} */
 `;
 
 /*---------- FlexBox Components Generic ----------*/
 export const FlexBox = styled.div`
-	// margin: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -114,13 +99,6 @@ export const FlexBox = styled.div`
 	${props => props.spaceBetween && css`
 		justify-content: space-between;
 	`}
-
-	${props => props.alignLeft && css`
-		align-items: left !important;
-		text-align: left !important;
-		justify-content: left;
-		width: 100%;
-`}
 
 	${props => props.spaceAround && css`
 		justify-content: space-around;
@@ -143,17 +121,11 @@ export const FlexBox = styled.div`
 	`}
 
 	${props => props.signUp && css`
-		/* position: absolute;
-		top: 700px;
-		left: 420px; */
 		margin-top: 730px;
 		padding-left: 550px;
 	`}
 
 	${props => props.login && css`
-		/* position: absolute; */
-		/* top: 700px; */
-		/* left: 500px; */
 		margin-top: 625px;
 		padding-left: 160px;
 	`}
@@ -163,14 +135,7 @@ export const FlexBox = styled.div`
 	`}
 
 	${props => props.managerDash && css`
-	// position: absolute;
-	// left: 0px;
-	// right: 0px;
-	// top: 0px;
-	// bottom: 0px;
-		background: #FFFFFF;
 		border: 1px solid #DDDDD;
-		box-sizing: border-box;
 		border-radius: 5px;
 		margin: 10px 60px 10px 60px;
 		width: 100%;
@@ -178,16 +143,15 @@ export const FlexBox = styled.div`
 `}
 
 	${props => props.bordered && css`
-		background: #FFFFFF;
-		border: 1px solid #DDDDDD !important;
-		box-sizing: border-box;
+		border: var(--solid-border);
 		border-radius: 5px;
 		margin: 10px 10px 10px 10px;
 	`}
+
 	${props => props.tuxStyled && css`
-	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
-	background-blend-mode: normal, multiply;
-	height: 100vh;
+	  background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
+	  background-blend-mode: normal, multiply;
+	  height: 100vh;
 `}
 
 	${props => props.flexStartJC && css`
@@ -203,10 +167,13 @@ export const FlexBox = styled.div`
 	${props => props.transparent && css`
 		background-color: transparent;
 	`}
+
+	${props => props.notFlex && css`
+		display: block;
+	`}
 `;
 
 /*---------- Buttons ----------*/
-// [ ] TODO: find out about button active/hover states
 
 export const WideBtn = styled.button`
 	border: none;
@@ -259,18 +226,9 @@ export const WideBtn = styled.button`
 		}
 	`}
 
-	/* ${props => props.red && css`
-		background-color: var(--tux-red);
+	${props => props.preview && css`
+		margin-right: 20px;
 	`}
-
-	${props => props.green && css`
-		background-color: #3C8582;
-	`} */
-
-	/* ${props => props.preview && css`
-		width: 245px !important;
-		height: 50px;
-	`} */
 `;
 
 export const NakedBtn = styled.button`
@@ -384,10 +342,6 @@ export const Normal = styled.p`
 	margin-left: 10px;
 	text-align: left;
   `}
-  
-  /* ${props => props.alignRight && css`
-	text-align: center;
-  `} */
 
   ${props => props.center && css`
 	text-align: center;
@@ -453,16 +407,25 @@ export const Heading3 = styled.h3`
 	${props => props.blue && css`
 	color: #1B98A0;
 	  `}
-	  
-	/* ${props => props.invite & css`
-		/* font-size: 36px; */
-		line-height: 54px;
-		color: var(--text-grey) !important;
-	`} */
-
 `;
 
 /*--------------- FORMS ---------------*/
+// from Manage Group Members
+export const AddStudents = styled.label`
+	font: var(--table);
+	font-weight: 600;
+	line-height: 24px;
+	color: rgba(51,51,51,.75);
+	margin-top: 50px;
+	`;
+
+export const TextArea = styled.textarea`
+	width: 580px;
+	height: 100px;
+	border-radius: 5px;
+	text-align: left;
+	padding: 10px;
+`;
 
 /*---------- Checkbox ----------*/
 export const checkedBox = css`
@@ -554,7 +517,6 @@ export const Icon25 = styled.img`
 
 // Color Blocks
 export const ColorBlock = styled.div`
-//   grid-column: span 1; 
   height: 5px;
   
   ${props => props.tuxBlue && css`
@@ -608,7 +570,7 @@ export const ColorBlock = styled.div`
 	`}
 
 	${props => props.SubGridGrey && css`
-	background-color: #CCCCCC!important;
+	background-color: #CCCCCC;
 	height: 1px !important;
 	width: 95% !important;
 	padding: 0;
