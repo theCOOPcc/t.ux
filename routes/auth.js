@@ -16,9 +16,10 @@ router.get(
   passport.authenticate(
     'google',
     {
-      // we need to dial in our redirect URLs once users have been authenticated: what page do they land on?
-      successRedirect: 'http://localhost:3000/corytestingground',
-      failureRedirect: '/login',
+        // we need to dial in our redirect URLs once users have been authenticated: what page do they land on?
+        successRedirect: "http://taketux.io/corytestingground",
+        // successRedirect: "http://localhost:3000/corytestingground",
+        failureRedirect: "/login",
     }
     // generateUserToken
   )
