@@ -61,12 +61,13 @@ class App extends Component {
 
         {/* // Signup & Login Routes */}
         <Route
-          exact
-          path="/signup"
-          render={({ history }) => (
+          
+          path="/signup/:groupId?/:email?"
+          render={({ history, match }) => (
             <Signup
             history={history}
             handleSignupOrLogin={this.handleSignupOrLogin}
+            match={match}
             />
             )}
             />
