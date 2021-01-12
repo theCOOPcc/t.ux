@@ -39,3 +39,36 @@ export const Tips = styled.p`
     padding: 25px;
     text-align: left;
 `;
+
+export const SubmitQuestion = styled.button`
+	border: none;
+	width: 224px;
+	padding: 12px 0;
+	margin: 17px 8px;
+	border-radius: 5px;
+	font: var(--pop-bold);
+	line-height: 27px;
+	color: var(--true-white);
+    background-color: var(--enable-btn);
+    cursor: pointer;
+    
+    /* ${props => props.isCorrect && css`
+        background-color: ${(props) => (props.isCorrect ? 'Green' : 'Red')};
+
+        `} */
+
+    ${props => props.right && css`
+        background: #136207;
+    `}
+    ${props => props.wrong && css`
+        background: #ff0000;
+    `}
+
+		/* &:hover {
+			background: #236C69;
+		}
+	
+		&:active {
+			box-shadow: var(--btn-active-shadow);
+		} */
+`;
