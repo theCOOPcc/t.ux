@@ -17,18 +17,19 @@ const ManageGroupMembers = ({
   const [createGroup, setCreateGroup] = useState(false);
   return (
 
-    <U.FlexBox column>
-      {/* <button onClick={() => setCreateGroup(!createGroup)}>Create Group</button> */}
-      {/* <U.Normal twenty4>Manage Group Members</U.Normal> */}
-      {/* <U.Heading3 bolder>Manage Group Members</U.Heading3> */}
-      {/* {!groups.length > 0 && (
+    <U.FlexBox bordered managerDash notFlex>
+    <U.ColorBlock SubGridBlue></U.ColorBlock>
+    <div style={{margin: `20px 20px 80px 40px`}}>
+
+    <U.Heading3 bolder>Manage Group Members</U.Heading3>
+      {!groups.length > 0 && (
          <CreateGroup
            newGroupName={newGroupName}
            setNewGroupName={setNewGroupName}
            handleCreateGroup={handleCreateGroup}
          />
-       )} */}
-      {/* {createGroup && (
+       )}
+      {createGroup && (
          <CreateGroup
            newGroupName={newGroupName}
            setNewGroupName={setNewGroupName}
@@ -36,10 +37,10 @@ const ManageGroupMembers = ({
            setCreateGroup={setCreateGroup}
            createGroup={createGroup}
          />
-       )} */}
+       )}
       {groups.length > 0 && createGroup === false && (
         <>
-          <h2>Group:</h2>
+        <U.FlexBox column>
           <U.Normal twenty>Group:</U.Normal>
           <select
             value={selectedGroupIndex}
@@ -74,12 +75,11 @@ const ManageGroupMembers = ({
               </U.WideBtn>
             </>
           )}
+          </U.FlexBox>
         </>
       )}
-      {/* <U.FlexBox bordered managerDash notFlex> */}
-      {/* <U.ColorBlock SubGridBlue></U.ColorBlock> */}
-      {/* <div style={{margin: `20px 20px 80px 40px`}}> */}
 
+      </div>
     </U.FlexBox>
   );
 };

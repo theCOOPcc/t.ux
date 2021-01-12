@@ -228,7 +228,12 @@ export const WideBtn = styled.button`
 
 	${props => props.preview && css`
 		margin-right: 20px;
+		max-width: 250px;
 	`}
+
+	${props => props.AddGroup && css`
+		margin-left: 300px;
+  	`}
 `;
 
 export const NakedBtn = styled.button`
