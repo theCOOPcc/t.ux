@@ -43,14 +43,15 @@ const ManagerActivities = ({
           activities.map((activity, idx) => (
             <U.FlexBox column wide>
               <U.FlexBox wide spaceBetween>
-                <U.FlexBox >
-                  <U.Normal marginLeft><U.Icon25 src="/images/icons/Heuristic.svg"></U.Icon25></U.Normal>
+              <U.FlexBox >
+                  <U.Normal marginLeft>
+                    <U.Icon25 src="/images/icons/Heuristic.svg"></U.Icon25></U.Normal>
                   <U.Normal marginLeft twenty8 key={idx}>
                     {activity.name}
                   </U.Normal>
                 </U.FlexBox>
                 <U.FlexBox alignRight>
-                  <U.WideBtn preview teal onClick={handleShow}>
+                  <U.WideBtn preview onClick={handleShow}>
                     Assign
                   </U.WideBtn>
                   {/* <U.NakedBtn preview>Preview</U.NakedBtn> */}

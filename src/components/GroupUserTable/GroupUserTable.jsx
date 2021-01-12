@@ -6,11 +6,11 @@ const GroupUserTable = ({groups, selectedGroupIndex}) => {
   const {invited} = selectedGroup
   return ( <U.Table>
     <thead>
-      <U.TableRow> 
+    <U.TableRow> 
         <U.TableHeader left colspan="1">Student Name</U.TableHeader>
         <U.TableHeader left colspan="1">Email</U.TableHeader>
         <U.TableHeader colspan="1">Delete</U.TableHeader>
-      </U.TableRow>
+    </U.TableRow>
     </thead>
     <tbody>
       {invited.length > 0 ? (
@@ -18,7 +18,7 @@ const GroupUserTable = ({groups, selectedGroupIndex}) => {
           <U.TableRow>
             <U.TableData>{user.name && user.name.length > 0 ? user.name : '--- not sign up ---'}</U.TableData>
             <U.TableData>{user.email}</U.TableData>
-            <U.TableData left><U.Icon25 src="/images/icons/trash.svg"></U.Icon25></U.TableData>
+            <U.TableData left><U.Icon25 src="/images/icons/Trashcan.png"></U.Icon25></U.TableData>
           </U.TableRow>
         ))
       ) : (

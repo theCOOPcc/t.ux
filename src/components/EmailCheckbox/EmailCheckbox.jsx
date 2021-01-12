@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../InviteModal/InviteModal.css';
 
 const EmailCheckbox = ({
   user,
@@ -25,9 +26,10 @@ const EmailCheckbox = ({
   }, [isChecked]);
 
   return (
-    <label>
+    <label className="GroupInviteLabel">
       {user.email}
       <input
+        className="GroupInviteCheckbox"
         type="checkbox"
         id={index}
         name="email"

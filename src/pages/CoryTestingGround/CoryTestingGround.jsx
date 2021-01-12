@@ -150,7 +150,7 @@ class TestingGround extends Component {
         <button onClick={this.handleAddGroup}>add group</button>
         <button onClick={this.handleAssignActivity}>assign JT</button>
         <a href='http://localhost:3000/logout'>Log Out</a>
-        
+        <h1>Cory Rules</h1>
       </Container>
     )}
 }
