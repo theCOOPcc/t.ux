@@ -6,7 +6,7 @@ const managersCtrl = require('../controllers/managers');
 
 
 /*---------- Protected Routes ----------*/
-router.use(require("../config/auth"));
+// router.use(require("../config/auth"));
 router.get("/", checkAuth, managersCtrl.indexManagers);
 router.put('/:id', checkAuth, managersCtrl.updateManager);
 
@@ -14,7 +14,7 @@ router.put('/:id', checkAuth, managersCtrl.updateManager);
 
 /*---------- Auth Checker ----------*/
 function checkAuth(req, res, next) {
-  if (req.user.userPermissions === 100) return next();
+  // if (req.user.userPermissions === 100) return next();
   if (req.isAuthenticated()) return next();
   return res.status(401).json({msg: 'Not Authorized'});
 }
