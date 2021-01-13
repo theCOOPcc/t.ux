@@ -64,8 +64,8 @@ passport.deserializeUser(function(id, done) {
     });
 });
 
-// Helper function
+// Helper function -- something like this:
 
-function setToken(token) {
-  localStorage.setItem("token", token);
-}
+// function setToken(token) {
+//   localStorage.setItem("token", token);
+// }

@@ -18,8 +18,10 @@ function signup(user) {
   })
   .then(({ token }) => {
     tokenService.setToken(token);
-    window.location = 'http://localhost:3000/activity/heuristics'
-    // window.location = 'http://taketux.io/activity/heuristics'
+    window.location = 
+    // 'http://localhost:3000/activity/heuristics'
+    // 'http://taketux.io/activity/heuristics'
+    'https://tux-staging.herokuapp.com/activity/heuristics'
   })
 }
 
