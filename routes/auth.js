@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const authCtrl = require('../controllers/auth');
-// const token = require('../controllers/auth')
 
 /*---------- Public Routes ----------*/
 router.post('/signup', authCtrl.signup);
@@ -20,7 +19,7 @@ router.get(
         successRedirect: 
         // "http://taketux.io/activity/heuristics",
         // "http://localhost:3000/activity/heuristics",
-        "https://tux-staging.herokuapp.com/activity/heuristics",
+        "https://tux-staging.herokuapp.com/activity/heuristics/",
         failureRedirect: "/login",
     }
     // generateUserToken
