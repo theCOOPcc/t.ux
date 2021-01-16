@@ -8,7 +8,9 @@ const activitiesCtrl = require('../controllers/activities');
 // router.use(require('../config/auth'));
 router.get('/', activitiesCtrl.index);
 router.post('/', checkAuth, activitiesCtrl.create);
-router.get('/:id', checkAuth, activitiesCtrl.show);
+router.get('/:id', 
+// checkAuth, 
+activitiesCtrl.show);
 router.put('/:id', checkAuth, activitiesCtrl.update);
 router.delete('/:id', checkAuth, activitiesCtrl.delete);
 

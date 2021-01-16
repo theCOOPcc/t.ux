@@ -101,12 +101,12 @@ class App extends Component {
         <Route
           exact
           path="/activity/heuristics"
-          render={({ history, location }) => <HeuristicsActivity />}
+          render={( ) => <Activity activityId='5ff8b36e56fdee429c008d3a' />}
         />
         <Route
           exact
           path="/activity/accessability"
-          render={({ history, location }) => <Activity />}
+          render={() => <Activity />}
         />
         {/* </U.Main> */}
         {/* // 10 Heuristics sub-routes for sidebar */}

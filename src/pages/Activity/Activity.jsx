@@ -3,31 +3,30 @@ import SideBarNav from '../../pages/HeuristicsActivity/SideBarNav';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import ActivityHeader from '../../components/ActivityHeader/ActivityHeader';
 import ActivityBody from '../../components/ActivityBody/ActivityBody';
+import activityService from '../../services/activityService';
 // import test from '../../SampleData/img/'
 // import Timer from 'react-compound-timer';
 
-const Activity = ({ details }) => {
+const Activity = ({ activityId }) => {
   // State Hooks
-  const { sections, topic, _id, name } = details;
+  const [activityData, setActivityData] = useState('');
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
   const [completed, setCompleted] = useState('-10');
 
+  const getActivityData = () => {
+    return activityService.getOne(activityId);
+  };
+
+  useEffect(() => {
+    getActivityData().then((data) => setActivityData(data));
+  }, []);
+
+  const { sections, topic } = activityData;
   // Variables
-  const currentSection = sections[currentSectionIndex];
-  const currentModule = currentSection.modules[currentModuleIndex];
-  // const [sessionData, setSessionData] = useState({
-  //   userName: 'Dan Boterashvili',
-  //   activityId: _id,
-  //   activityName: name,
-  //   activityTopic: topic,
-  //   sections: [
-  //     {
-  //       sectionName: currentSection.name,
-  //       sectionModules: [{ moduleType: currentModule.type }],
-  //     },
-  //   ],
-  // });
+  const currentSection = sections && sections[currentSectionIndex];
+  const currentModule =
+    currentSection && currentSection.modules[currentModuleIndex];
 
   // Helper Functions
   const handleJumpToSection = (index) => {
@@ -65,33 +64,35 @@ const Activity = ({ details }) => {
 
   const convertIndexToPercent = (newIndex) => {
     const index = newIndex - 1;
-    const completed = index === 0 ? 0 : `${index}0`; 
+    const completed = index === 0 ? 0 : `${index}0`;
     setCompleted(completed);
   };
   return (
-    <U.Main>
-      <ActivityHeader
-        topic={topic}
-        name={currentSection.name}
-        completed={completed}
-      />
+    activityData && (
+      <U.Main>
+        <ActivityHeader
+          topic={topic}
+          name={currentSection.name}
+          completed={completed}
+        />
 
-      <ActivityBody
-        currentModule={currentModule}
-        handleAnswers={handleAnswers} 
-      />
-      <SideBarNav
-        sections={sections}
-        currentSection={currentSection}
-        currentSectionIndex={currentSectionIndex}
-        setCurrentSectionIndex={setCurrentSectionIndex}
-        currentModule={currentModule}
-        currentModuleIndex={currentModuleIndex}
-        handleJumpToSection={handleJumpToSection}
-        handleCurrentSection={handleCurrentSection}
-        handleCurrentModule={handleCurrentModule}
-      />
-    </U.Main>
+        <ActivityBody
+          currentModule={currentModule}
+          handleAnswers={handleAnswers}
+        />
+        <SideBarNav
+          sections={sections}
+          currentSection={currentSection}
+          currentSectionIndex={currentSectionIndex}
+          setCurrentSectionIndex={setCurrentSectionIndex}
+          currentModule={currentModule}
+          currentModuleIndex={currentModuleIndex}
+          handleJumpToSection={handleJumpToSection}
+          handleCurrentSection={handleCurrentSection}
+          handleCurrentModule={handleCurrentModule}
+        />
+      </U.Main>
+    )
   );
 };
 
