@@ -1,5 +1,5 @@
 import React from 'react';
-import * as U from '../../components/TuxComponents/UniversalComponents';
+import * as U from '../TuxComponents/UniversalComponents';
 
 const SideBarNav = ({
   sections,
@@ -16,27 +16,27 @@ const SideBarNav = ({
       <U.SideBar>
         <U.ColorBlock SideBarYellow></U.ColorBlock>
         <U.SideBarTextBox>
-        {sections.map((section, index) =>
-          index === 0 ? (
-            <U.SideBarText
-              past={currentSectionIndex < index ? true : false}
-              present={currentSectionIndex === index}
-              key={index}
-              onClick={() => handleJumpToSection(index)}
-            >
-              {section.name}
-            </U.SideBarText>
-          ) : (
-            <U.SideBarText
-              past={currentSectionIndex < index ? true : false}
-              present={currentSectionIndex === index}
-              key={index}
-              onClick={() => handleJumpToSection(index)}
-            >
-              {index}. {section.name}
-            </U.SideBarText>
-          )
-        )}
+          {sections.map((section, index) =>
+            index === 0 ? (
+              <U.SideBarText
+                past={currentSectionIndex < index ? true : false}
+                present={currentSectionIndex === index}
+                key={index}
+                onClick={() => handleJumpToSection(index)}
+              >
+                {section.name}
+              </U.SideBarText>
+            ) : (
+              <U.SideBarText
+                past={currentSectionIndex < index ? true : false}
+                present={currentSectionIndex === index}
+                key={index}
+                onClick={() => handleJumpToSection(index)}
+              >
+                {index}. {section.name}
+              </U.SideBarText>
+            )
+          )}
         </U.SideBarTextBox>
         {currentSection.name === 'Introduction' ? (
           <U.WideBtn enable onClick={() => handleJumpToSection(1)}>

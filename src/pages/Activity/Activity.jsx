@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import SideBarNav from '../../pages/HeuristicsActivity/SideBarNav';
+
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import ActivityHeader from '../../components/ActivityHeader/ActivityHeader';
 import ActivityBody from '../../components/ActivityBody/ActivityBody';
 import activityService from '../../services/activityService';
+import SideBarNav from '../../components/SideBarNav/SideBarNav'
 // import test from '../../SampleData/img/'
 // import Timer from 'react-compound-timer';
 

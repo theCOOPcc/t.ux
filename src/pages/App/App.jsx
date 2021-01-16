@@ -14,7 +14,6 @@ import IndexActivities from '../IndexActivities/IndexActivities';
 import CoryTestingGround from '../../pages/CoryTestingGround/CoryTestingGround';
 import './App.css';
 import PasswordResetRequest from '../PasswordResetRequest/PasswordResetRequest';
-import HeuristicsActivity from '../HeuristicsActivity/HeuristicsActivity';
 import Manager from '../Manager/Manager';
 import Activity from '../Activity/Activity';
 
