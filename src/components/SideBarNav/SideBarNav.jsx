@@ -10,6 +10,8 @@ const SideBarNav = ({
   handleJumpToSection,
   handleCurrentSection,
   handleCurrentModule,
+  started,
+  handleStarted,
 }) => {
   return (
     <U.SideBarParent>
@@ -38,19 +40,22 @@ const SideBarNav = ({
             )
           )}
         </U.SideBarTextBox>
-        {currentSection.name === 'Introduction' ? (
-          <U.WideBtn enable onClick={() => handleJumpToSection(1)}>
+        {!started && (
+          <U.WideBtn enable onClick={() => handleStarted()}>
             Begin
           </U.WideBtn>
-        ) : currentSectionIndex < sections.length - 1 ? (
-          <U.WideBtn enable onClick={() => handleCurrentModule()}>
-            Next
-          </U.WideBtn>
-        ) : (
-          <U.WideBtn enable onClick={() => handleCurrentModule()}>
-            Submit
-          </U.WideBtn>
         )}
+        {started  &&
+          currentSectionIndex < sections.length - 1 &&
+          currentModuleIndex < currentSection.modules.length + 1 && (
+            <U.WideBtn enable onClick={() => handleCurrentModule()}>
+              Next
+            </U.WideBtn>
+          )}
+
+        {/* <U.WideBtn enable onClick={() => handleCurrentModule()}>
+          Submit
+        </U.WideBtn> */}
       </U.SideBar>
     </U.SideBarParent>
   );
