@@ -11,7 +11,7 @@ const GeneralForm = ({
 }) => {
   const { userData } = values;
   return (
-    <main>
+    <L.Main>
       {/* <U.FlexBox > */}
       <U.FlexBox>
         <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
@@ -102,7 +102,7 @@ const GeneralForm = ({
         <U.Normal>Have an Account?&nbsp;</U.Normal>
         <U.LinkTo to="/login">Log In</U.LinkTo>
       </U.FlexBox>
-    </main>
+    </L.Main>
   );
 };
 

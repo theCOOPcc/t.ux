@@ -1,6 +1,14 @@
 import styled, { css } from 'styled-components'
 // import {Link} from 'react-router-dom'
 
+/*---------- Main Grid ----------*/
+export const Main = styled.main`
+	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
+	background-blend-mode: normal, multiply;
+	margin: 0 auto;
+	width: 1440px;
+`;
+
 export const TuxFlower = styled.img`
 	width: 140px;
 	z-index: 10;

@@ -35,7 +35,7 @@ class Login extends Component {
     const { email, pw } = this.state;
 
     return (
-      <main>
+      <L.Main>
       <U.FlexBox>
         <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
         <L.LoginBox>
@@ -95,7 +95,7 @@ class Login extends Component {
           to="/signup"
         >Sign Up</U.LinkTo>
       </U.FlexBox>
-    </main>
+    </L.Main>
     );
   }
 }

@@ -16,8 +16,7 @@ export const Main = styled.main`
 	grid-template-rows: 60px 1fr;
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
-	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
-	background-blend-mode: normal, multiply;
+	background: #e9e9e9;
 	padding: 20px 39px 15px;
 	margin: 0 auto;
 	/* position: relative; */
@@ -76,11 +75,11 @@ export const SideBar = styled.section`
 `;
 
 export const SideBarText = styled.button`
+	background-color: #f1f2eb;
 	border: none;
 	border-bottom: var(--solid-border);
 	width: 100%;
 	height: 50px;
-	background-color: #f1f2eb;
 	line-height: 24px;
 	color: var(--future);
 	font: 500 16px 'Poppins', sans-serif;
