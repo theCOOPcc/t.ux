@@ -4,7 +4,7 @@ import * as U from '../../components/TuxComponents/UniversalComponents';
 import ActivityHeader from '../../components/ActivityHeader/ActivityHeader';
 import ActivityBody from '../../components/ActivityBody/ActivityBody';
 import activityService from '../../services/activityService';
-import SideBarNav from '../../components/SideBarNav/SideBarNav'
+import SideBarNav from '../../components/SideBarNav/SideBarNav';
 // import test from '../../SampleData/img/'
 // import Timer from 'react-compound-timer';
 
@@ -13,6 +13,7 @@ const Activity = ({ activityId }) => {
   const [activityData, setActivityData] = useState('');
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
+  const [started, setStarted] = useState(null);
   const [completed, setCompleted] = useState('-10');
 
   const getActivityData = () => {
@@ -68,6 +69,10 @@ const Activity = ({ activityId }) => {
     const completed = index === 0 ? 0 : `${index}0`;
     setCompleted(completed);
   };
+
+  const handleStarted = () => {
+    setStarted(true)
+  }
   return (
     activityData && (
       <U.Main>
@@ -78,6 +83,7 @@ const Activity = ({ activityId }) => {
         />
 
         <ActivityBody
+          started={started}
           currentModule={currentModule}
           handleAnswers={handleAnswers}
         />
@@ -91,6 +97,8 @@ const Activity = ({ activityId }) => {
           handleJumpToSection={handleJumpToSection}
           handleCurrentSection={handleCurrentSection}
           handleCurrentModule={handleCurrentModule}
+          started={started}
+          handleStarted={handleStarted}
         />
       </U.Main>
     )
