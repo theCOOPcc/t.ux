@@ -63,7 +63,7 @@ export const SideBarParent = styled.article`
 `;
 
 /*---------- The SideBar Itself ----------*/
-export const SideBar = styled.section`
+export const SideBar = styled.article`
 	grid-row: 1/span 1;
 	background-color: var(--true-white);
 	height: calc(100vh - 159px);
@@ -74,19 +74,26 @@ export const SideBar = styled.section`
 	border-radius: 5px 5px 0 0;
 `;
 
+export const SideBarTextBox = styled.section`
+	height: 100%;
+	width: 100%;
+	padding: 20px;
+`;
+
 export const SideBarText = styled.button`
-	background-color: #f1f2eb;
+	background: transparent;
+	font: 500 16px 'Poppins', sans-serif;
+	line-height: 24px;
+	text-align: left;
+	color: var(--true-black);
+	/* padding: 0 20px; */
 	border: none;
 	border-bottom: var(--solid-border);
 	width: 100%;
 	height: 50px;
-	line-height: 24px;
-	color: var(--future);
-	font: 500 16px 'Poppins', sans-serif;
-	padding: 0 20px;
 
 	${props => props.past && css`
-		color: var(--true-black);
+		color: var(--future);
 		font-weight: 600;
 	`}
 

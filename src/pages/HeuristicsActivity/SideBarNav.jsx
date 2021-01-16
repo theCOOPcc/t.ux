@@ -15,6 +15,7 @@ const SideBarNav = ({
     <U.SideBarParent>
       <U.SideBar>
         <U.ColorBlock SideBarYellow></U.ColorBlock>
+        <U.SideBarTextBox>
         {sections.map((section, index) =>
           index === 0 ? (
             <U.SideBarText
@@ -36,6 +37,7 @@ const SideBarNav = ({
             </U.SideBarText>
           )
         )}
+        </U.SideBarTextBox>
         {currentSection.name === 'Introduction' ? (
           <U.WideBtn enable onClick={() => handleJumpToSection(1)}>
             Begin
