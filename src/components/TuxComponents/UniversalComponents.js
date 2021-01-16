@@ -2,12 +2,12 @@ import styled, { css } from 'styled-components'
 import { Link } from 'react-router-dom'
 
 
-export const Placeholder = styled.div`
-	width: 520px;
-	height: 520px;
-	background-color: yellow;
+// export const Placeholder = styled.div`
+// 	width: 520px;
+// 	height: 520px;
+// 	background-color: yellow;
 
-`;
+// `;
 
 /*---------- Main Grid ----------*/
 export const Main = styled.main`
@@ -19,13 +19,15 @@ export const Main = styled.main`
 	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
 	background-blend-mode: normal, multiply;
 	padding: 20px 39px 15px;
-	position: relative;
+	margin: 0 auto;
+	/* position: relative; */
+	width: 1440px;
 `;
 
 
 
 /*---------- Top Info Bar Grid ----------*/
-export const InfoBar = styled.div`
+export const InfoBar = styled.section`
 	grid-column: 1/span 2;
 	grid-row: 1/span 1;
 	justify-self: stretch;
@@ -33,14 +35,16 @@ export const InfoBar = styled.div`
 	display: flex;
 	align-items: center;
 	padding-left: 50px;
+	width: 1440px;
 `;
 
 /*---------- 6 Col SubGrid for Activities ----------*/
-export const Sub6ColGrid = styled.div`
+export const Sub6ColGrid = styled.article`
 	grid-column: 1/ span 1;
 	grid-row: 2/ span 1;
 	background-color: var(--true-white);
 	border: var(--solid-border);
+	width: 1042px;
 `;
 
 /* ----------- SubGrid Section ----------- */
@@ -51,15 +55,16 @@ export const Section = styled.section`
 
 
 /*---------- 300px Sidebar Parent Grid ----------*/
-export const SideBarParent = styled.div`
+export const SideBarParent = styled.article`
 	height: 90vh;
 	display: grid;
 	grid-template-columns: auto;
 	grid-template-rows: 1fr 100px;
+	border-radius: 5px 5px 0 0;
 `;
 
 /*---------- The SideBar Itself ----------*/
-export const SideBar = styled.div`
+export const SideBar = styled.section`
 	grid-row: 1/span 1;
 	background-color: var(--true-white);
 	height: calc(100vh - 159px);
@@ -67,6 +72,7 @@ export const SideBar = styled.div`
 	flex-direction: column;
 	align-items: center;
 	border: var(--solid-border);
+	border-radius: 5px 5px 0 0;
 `;
 
 export const SideBarText = styled.button`
@@ -78,6 +84,7 @@ export const SideBarText = styled.button`
 	line-height: 24px;
 	color: var(--future);
 	font: 500 16px 'Poppins', sans-serif;
+	padding: 0 20px;
 
 	${props => props.past && css`
 		color: var(--true-black);
@@ -564,14 +571,16 @@ export const ColorBlock = styled.div`
 		background-color: var(--tux-yellow);
 		height: 10px;
 		width: 100%;
+		border-radius: 5px 5px 0 0;
 	`}
 
 	${props => props.SubGridBlue && css`
-		background-color: var(--tux-blue) !important;
-		height: 10px !important;
-		width: 100% !important;
-		margin: 0;
-		padding: 0;
+		background-color: var(--tux-blue);
+		height: 10px;
+		width: 100%;
+
+		/* margin: 0;
+		padding: 0; */
 	`}
 
 	${props => props.SubGridGrey && css`
