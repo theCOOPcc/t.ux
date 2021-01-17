@@ -7,6 +7,7 @@ A full-stack MERN application with built in user authentication utilizing JWT al
 - Dan B.
 - Karen L.P.
 - Cory S.
+- Alexandria S.
 
 ## Technologies: ##
 

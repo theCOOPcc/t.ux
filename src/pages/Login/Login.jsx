@@ -42,6 +42,7 @@ class Login extends Component {
           <L.GoogleBox
           // this is the "href" go to google
             href="http://localhost:3001/api/auth/google"
+            // href="https://tux-staging.herokuapp.com/api/auth/google"
           >
             <L.GoogleG src="/images/googleG.png"></L.GoogleG>
             <L.SignIn>Sign in with Google</L.SignIn>

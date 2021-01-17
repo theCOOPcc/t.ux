@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import User from '../User/User';
-import * as U from '../../components/TuxComponents/UniversalComponents'
+import * as U from '../../components/TuxComponents/UniversalComponents';
 import NavBar from '../../components/NavBar/NavBar';
 import CreateActivity from '../CreateActivity/CreateActivity';
 // import CreateActivityRefactor from '../CreateActivity/CreateActivityRefactor'
@@ -14,9 +14,8 @@ import IndexActivities from '../IndexActivities/IndexActivities';
 import CoryTestingGround from '../../pages/CoryTestingGround/CoryTestingGround';
 import './App.css';
 import PasswordResetRequest from '../PasswordResetRequest/PasswordResetRequest';
-import HeuristicsActivity from '../HeuristicsActivity/HeuristicsActivity'
-import TempLanding from '../TempLanding/TempLanding';
-import Manager from '../Manager/Manager'
+import Manager from '../Manager/Manager';
+import Activity from '../Activity/Activity';
 
 // import ReactGA from 'react-ga';
 
@@ -47,40 +46,35 @@ class App extends Component {
 
         {/* <U.Main> */}
 
-
         {/* write conditional routing to proper homepage depending on user type */}
         {/* only get access to certain pages depending on user type */}
         <Route
           exact
           path="/"
-          render={() => (user ? <User user={user} /> : 
-            <TempLanding />
-          // <Landing />
-            )}
-          />
+          render={() => (user ? <User user={user} /> : <Landing />)}
+        />
 
         {/* // Signup & Login Routes */}
         <Route
-          
           path="/signup/:groupId?/:email?"
           render={({ history, match }) => (
             <Signup
-            history={history}
-            handleSignupOrLogin={this.handleSignupOrLogin}
-            match={match}
+              history={history}
+              handleSignupOrLogin={this.handleSignupOrLogin}
+              match={match}
             />
-            )}
-            />
+          )}
+        />
         <Route
           exact
           path="/login"
           render={({ history }) => (
             <Login
-            history={history}
-            handleSignupOrLogin={this.handleSignupOrLogin}
+              history={history}
+              handleSignupOrLogin={this.handleSignupOrLogin}
             />
-            )}
-            />
+          )}
+        />
 
         {/* // General Routes */}
 
@@ -90,17 +84,29 @@ class App extends Component {
         <Route
           exact
           path="/preview-activity"
-          render={({ location }) => <PreviewActivity location={location} />} />
-        <Route 
-          exact path="/corytestingground" 
-          render={() => <CoryTestingGround />} />
+          render={({ location }) => <PreviewActivity location={location} />}
+        />
         <Route
-          exact path="/passwordresetrequest"
-          render={() => <PasswordResetRequest />} />
+          exact
+          path="/corytestingground"
+          render={() => <CoryTestingGround />}
+        />
+        <Route
+          exact
+          path="/passwordresetrequest"
+          render={() => <PasswordResetRequest />}
+        />
         {/* // Heuristics Route */}
         <Route
-          exact path="/activity/heuristics"
-          render={({history, location}) => <HeuristicsActivity />} />
+          exact
+          path="/activity/heuristics"
+          render={( ) => <Activity activityId='5ff8b36e56fdee429c008d3a' />}
+        />
+        <Route
+          exact
+          path="/activity/accessability"
+          render={() => <Activity />}
+        />
         {/* </U.Main> */}
         {/* // 10 Heuristics sub-routes for sidebar */}
       </>
