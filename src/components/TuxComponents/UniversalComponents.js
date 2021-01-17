@@ -20,7 +20,7 @@ export const Main = styled.main`
 	padding: 20px 39px 15px;
 	margin: 0 auto;
 	/* position: relative; */
-	width: 1440px;
+	max-width: 1440px;
 `;
 
 
@@ -33,8 +33,8 @@ export const InfoBar = styled.section`
 	background-color: var(--true-white);
 	display: flex;
 	align-items: center;
-	padding-left: 50px;
-	width: 1440px;
+	padding: 0 40px;
+	max-width: 1440px;
 `;
 
 /*---------- 6 Col SubGrid for Activities ----------*/
@@ -194,7 +194,7 @@ export const WideBtn = styled.button`
 	padding: 12px 0;
 	margin: 17px 8px;
 	border-radius: 5px;
-	font: var(--pop-bold);
+	font: var(--pop-bolder);
 	line-height: 27px;
 	color: var(--true-white);
 	background-color: var(--enable-btn);
@@ -208,9 +208,9 @@ export const WideBtn = styled.button`
 			box-shadow: var(--btn-active-shadow);
 		}
 
-	${props => props.login && css`
+	/* ${props => props.login && css`
 		margin: 17px 45px;
-  	`}
+  	`} */
 	
 	${props => props.extraWide && css`
 		width: 350px;
@@ -289,8 +289,8 @@ export const ProgressContainer = styled.div`
 	transparent);
 	border-radius: 5px;
 	display: flex;
-	/* align-items: center; */
 `;
+
 export const ProgressFiller = styled.div`
 	z-index: 1;
 	height: 100%;
@@ -300,6 +300,7 @@ export const ProgressFiller = styled.div`
 export const ProgressLabel = styled.p`
 	padding: 2px;
 	font: 400 12px 'Poppins', sans-serif;
+	line-height: 24px;
 	color: #a9aaa5;
 `;
 
@@ -409,8 +410,11 @@ export const Heading3 = styled.h3`
 	${props => props.greyed && css`
 		color: var(--future);
 	`}
-	${props => props.floatRight && css`
+	${props => props.progress && css`
 		margin-left: auto;
+		font: var(--pop-semi-bold);
+		font-size: 16px;
+		line-height: 24px;
 	`}
 
 	${props => props.bolder && css`

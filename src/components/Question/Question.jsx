@@ -15,13 +15,14 @@ const Question = ({ details }) => {
 
   return (
     <U.Sub6ColGrid>
+      <U.ColorBlock SubGridBlue></U.ColorBlock>
       <A.ProblemStatement>{problemStatement}</A.ProblemStatement>
       <U.FlexBox spaceAround>
         {/* <U.Placeholder></U.Placeholder> */}
         <img src={media} alt="" />
-        <U.FlexBox column spaceAround>
+        <U.FlexBox column >
           {answers.map((answer, index) => (
-            <A.SubmitQuestion
+            <A.AnswerBtn
               right={response && (response.selectionIndex === index) && (response.selection.isCorrect === true) }
               wrong={response && (response.selectionIndex === index) && (response.selection.isCorrect === false) }
               medium
@@ -29,7 +30,7 @@ const Question = ({ details }) => {
               onClick={() => handleResponse(answer, index)}
             >
               {answer.label}
-            </A.SubmitQuestion>
+            </A.AnswerBtn>
           ))}
         </U.FlexBox>
       </U.FlexBox>

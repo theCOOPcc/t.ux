@@ -2,7 +2,6 @@ import React from 'react';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 
 const ProgressBar = ({ completed }) => {
-  // const { completed } = props;
 
   return (
     <>

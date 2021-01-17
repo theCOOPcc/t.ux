@@ -40,14 +40,14 @@ export const Tips = styled.p`
     text-align: left;
 `;
 
-export const SubmitQuestion = styled.button`
-	border: none;
+export const AnswerBtn = styled.button`
+	border: 1px solid #3c8582;
 	width: 224px;
 	padding: 12px 0;
-	margin: 17px 8px;
+	margin: 10px 8px;
 	border-radius: 5px;
-	font: var(--pop-bold);
-	line-height: 27px;
+	font: var(--answer-btn);
+	line-height: 24px;
 	color: var(--true-white);
     background-color: var(--enable-btn);
     cursor: pointer;
@@ -58,10 +58,12 @@ export const SubmitQuestion = styled.button`
         `} */
 
     ${props => props.right && css`
-        background: #136207;
+        background: #78C077;
+        border: 1px solid #78C077;
     `}
     ${props => props.wrong && css`
-        background: #ff0000;
+        background: #EE6E6B;
+        border: 1px solid #EE6E6B;
     `}
 
 		/* &:hover {
