@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import User from '../User/User';
@@ -40,21 +40,50 @@ class App extends Component {
 
   render() {
     const { user } = this.state;
+    const NavRoutes = () => {
+      // These routes will render the NavBar
+      return (
+        <>
+          <NavBar user={user} handleLogout={this.handleLogout} />
+          <Route exact path="/activities" render={() => <IndexActivities />} />
+          <Route exact path="/manager-dashboard" render={() => <Manager />} />
+          <Route
+            exact
+            path="/preview-activity"
+            render={({ location }) => <PreviewActivity location={location} />}
+          />
+          <Route
+            exact
+            path="/corytestingground"
+            render={() => <CoryTestingGround />}
+          />
+          <Route
+            exact
+            path="/passwordresetrequest"
+            render={() => <PasswordResetRequest />}
+          />
+
+          <Route
+            exact
+            path="/activity/heuristics"
+            render={() => <Activity activityId="5ff8b36e56fdee429c008d3a" />}
+          />
+          <Route
+            exact
+            path="/activity/accessability"
+            render={() => <Activity />}
+          />
+        </>
+      );
+    };
     return (
       <>
-        <NavBar user={user} handleLogout={this.handleLogout} />
-
-        {/* <U.Main> */}
-
-        {/* write conditional routing to proper homepage depending on user type */}
-        {/* only get access to certain pages depending on user type */}
+        {/* These Routes will not render a Navbar. */}
         <Route
           exact
           path="/"
           render={() => (user ? <User user={user} /> : <Landing />)}
         />
-
-        {/* // Signup & Login Routes */}
         <Route
           path="/signup/:groupId?/:email?"
           render={({ history, match }) => (
@@ -76,39 +105,8 @@ class App extends Component {
           )}
         />
 
-        {/* // General Routes */}
-
-        <Route exact path="/activities" render={() => <IndexActivities />} />
-        {/* <Route exact path="/activities/create" render={() => <CreateActivityRefactor />} /> */}
-        <Route exact path="/manager-dashboard" render={() => <Manager />} />
-        <Route
-          exact
-          path="/preview-activity"
-          render={({ location }) => <PreviewActivity location={location} />}
-        />
-        <Route
-          exact
-          path="/corytestingground"
-          render={() => <CoryTestingGround />}
-        />
-        <Route
-          exact
-          path="/passwordresetrequest"
-          render={() => <PasswordResetRequest />}
-        />
-        {/* // Heuristics Route */}
-        <Route
-          exact
-          path="/activity/heuristics"
-          render={( ) => <Activity activityId='5ff8b36e56fdee429c008d3a' />}
-        />
-        <Route
-          exact
-          path="/activity/accessability"
-          render={() => <Activity />}
-        />
-        {/* </U.Main> */}
-        {/* // 10 Heuristics sub-routes for sidebar */}
+        {/* These routes will render the NavBar */}
+        <Route component={NavRoutes} />
       </>
     );
   }
