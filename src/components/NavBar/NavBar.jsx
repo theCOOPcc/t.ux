@@ -6,7 +6,7 @@ const NavBar = ({ user, handleLogout }) => {
   return (
     <>
       {!user ? (
-        <N.Nav>
+        <N.NavColor>
         {/* View Not Logged In */}
 
           {/* Color Bar */}
@@ -17,7 +17,7 @@ const NavBar = ({ user, handleLogout }) => {
           <U.ColorBlock tuxBlack></U.ColorBlock>
           <U.ColorBlock tuxRed></U.ColorBlock>
 
-          <N.NavRow2>
+          <N.Nav>
           {/* Logo */}
           <N.NavLink href="/">
             <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
@@ -28,11 +28,11 @@ const NavBar = ({ user, handleLogout }) => {
           <N.NavLink  href="/signup">
             Sign Up
           </N.NavLink>
-        </N.NavRow2>
         </N.Nav>
+        </N.NavColor>
         
-      ) : user.userPermissions === 0 ?
-        <N.Nav>
+      ) : user ?
+        <N.NavColor>
           {/* Color Bar */}
           <U.ColorBlock tuxBlue></U.ColorBlock>
           <U.ColorBlock tuxYellow></U.ColorBlock>
@@ -41,7 +41,7 @@ const NavBar = ({ user, handleLogout }) => {
           <U.ColorBlock tuxBlack></U.ColorBlock>
           <U.ColorBlock tuxRed></U.ColorBlock>
 
-        <N.NavRow2>
+        <N.Nav>
         {/* Logo */}
         <N.NavLink href="/">
 
@@ -54,42 +54,15 @@ const NavBar = ({ user, handleLogout }) => {
           <N.NavLink right href=" ">
             {user.name}
           </N.NavLink>
+          <N.Avatar>
+            {user.avatar}
+          </N.Avatar>
           <N.NavLink  href=" " onClick={handleLogout}>
             LogOut
           </N.NavLink>
 
-        </N.NavRow2>
         </N.Nav>
-      : user.userPermissions === 100 ? (
-        <N.Nav>
-          {/* Color Bar */}
-          <U.ColorBlock tuxBlue></U.ColorBlock>
-          <U.ColorBlock tuxYellow></U.ColorBlock>
-          <U.ColorBlock tuxWhite></U.ColorBlock>
-          <U.ColorBlock tuxGrey></U.ColorBlock>
-          <U.ColorBlock tuxBlack></U.ColorBlock>
-          <U.ColorBlock tuxRed></U.ColorBlock>
-
-        <N.NavRow2>
-        {/* Logo */}
-        <N.NavLink href="/">
-          <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
-        </N.NavLink>
-          <N.NavLink right href=" ">
-            {user.name}
-          </N.NavLink>
-          <N.NavLink left href="/activities/create ">
-            Create Activity
-          </N.NavLink>
-          <N.NavLink href="/activities">
-            Activities
-          </N.NavLink>
-          <N.NavLink farRight href=" " onClick={handleLogout}>
-            Log Out
-          </N.NavLink>
-        </N.NavRow2>
-        </N.Nav>
-      )
+        </N.NavColor>
       :
       <p>You need a navbar</p>}
     </>

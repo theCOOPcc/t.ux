@@ -35,13 +35,14 @@ class Login extends Component {
     const { email, pw } = this.state;
 
     return (
-      <main>
+      <L.Main>
       <U.FlexBox>
         <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
         <L.LoginBox>
           <L.GoogleBox
           // this is the "href" go to google
             href="http://localhost:3001/api/auth/google"
+            // href="https://tux-staging.herokuapp.com/api/auth/google"
           >
             <L.GoogleG src="/images/googleG.png"></L.GoogleG>
             <L.SignIn>Sign in with Google</L.SignIn>
@@ -94,7 +95,7 @@ class Login extends Component {
           to="/signup"
         >Sign Up</U.LinkTo>
       </U.FlexBox>
-    </main>
+    </L.Main>
     );
   }
 }
