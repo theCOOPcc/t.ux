@@ -15,7 +15,7 @@ export const TuxFlower = styled.img`
     position: absolute;
     top: 100px;
 	border-radius: 50%;
-    box-shadow: 2px 2px 5px #dddddd;
+    /* box-shadow: 2px 2px 5px #dddddd; */
     
     ${props => props.center && css`
         left: 100px;
@@ -33,7 +33,7 @@ export const LoginBox = styled.div`
     box-shadow: var(--common-shadow);
     border-radius: 10px;
     margin-top: 120px;
-
+    /* clip-path: circle(25% at 50% 0); */
 
     ${props => props.wide && css`
       width: 785px;
