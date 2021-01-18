@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Feedback from '../Feedback/Feedback';
 import * as U from '../TuxComponents/UniversalComponents';
 import * as A from '../TuxComponents/ActivitiesComponents';
+import Answer from '../Answer/Answer'
 
 const Question = ({ details }) => {
   const [response, setResponse] = useState('');
@@ -17,19 +18,16 @@ const Question = ({ details }) => {
     <U.Sub6ColGrid>
       <A.ProblemStatement>{problemStatement}</A.ProblemStatement>
       <U.FlexBox spaceAround>
-        {/* <U.Placeholder></U.Placeholder> */}
         <img src={media} alt="" />
         <U.FlexBox column spaceAround>
           {answers.map((answer, index) => (
-            <A.SubmitQuestion
-              right={response && (response.selectionIndex === index) && (response.selection.isCorrect === true) }
-              wrong={response && (response.selectionIndex === index) && (response.selection.isCorrect === false) }
-              medium
-              key={index}
-              onClick={() => handleResponse(answer, index)}
-            >
-              {answer.label}
-            </A.SubmitQuestion>
+            <Answer 
+             key={index}
+              response={response}
+              index={index}
+              handleResponse={handleResponse}
+              answer={answer}
+            />
           ))}
         </U.FlexBox>
       </U.FlexBox>
