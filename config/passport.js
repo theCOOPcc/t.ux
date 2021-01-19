@@ -1,14 +1,7 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('../models/user')
-const mongoose = require('mongoose')
 const authCtrl = require('../controllers/auth')
-
-// add this function to the google strategy:
-// getJWTAfterGoogleLogin (req, res) <--this is on the front end
-// respond with a token from the server
-// put token in localStorage
-// set the token to the google login
 
 passport.use(
     new GoogleStrategy(
@@ -23,17 +16,12 @@ passport.use(
                 if (user) {
                   // console.log('PROFILE FROM GOOGLE', profile)
                   // console.log('USER IN DATABASE', user)
-                  // const userToken = authCtrl.createJWT(profile)
-                  // console.log('boom token', userToken)
-                  // setToken(userToken)
-                  // authCtrl.login(user)
                   return done(null, 
                               user,
                               // userToken
                               );
                 } else {
                   // we have a new user via OAuth!
-                  // console.log(profile)
                   let newUser = new User({
                     firstName: profile.name.givenName,
                     lastName: profile.name.familyName,
