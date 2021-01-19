@@ -64,6 +64,10 @@ export const SubmitQuestion = styled.button`
         background: #ff0000;
     `}
 
+    ${props => props.disabled && css`
+        background: #dddddd
+    `}
+
 		/* &:hover {
 			background: #236C69;
 		}
