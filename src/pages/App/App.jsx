@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
@@ -16,6 +16,7 @@ import './App.css';
 import PasswordResetRequest from '../PasswordResetRequest/PasswordResetRequest';
 import Manager from '../Manager/Manager';
 import Activity from '../Activity/Activity';
+import userService from '../../services/userService'
 
 // import ReactGA from 'react-ga';
 
@@ -25,34 +26,31 @@ import Activity from '../Activity/Activity';
 //   userId: this.state.user.id
 // })
 
-class App extends Component {
-  state = { user: authService.getUser() };
+const App = () => {
+  const [user, setUser] = useState(null)
+  
+  const getUser = async () => {
+    const userProfile = await userService.getCurrentUser()
+    setUser(userProfile)
+  }
 
-  handleLogout = () => {
-    authService.logout();
-    this.setState({ user: null });
-  };
+  useEffect (()=> {
+    getUser()
+  }, [])
 
-  handleSignupOrLogin = () => {
-    this.setState({ user: authService.getUser() });
-    this.props.history.push('/activity/heuristics');
-  };
-
-  render() {
-    const { user } = this.state;
     return (
       <>
-        <NavBar user={user} handleLogout={this.handleLogout} />
+        {/* <NavBar user={user} setUser={setUser} handleLogout={this.handleLogout} /> */}
 
         {/* <U.Main> */}
 
         {/* write conditional routing to proper homepage depending on user type */}
         {/* only get access to certain pages depending on user type */}
-        <Route
+        {/* <Route
           exact
           path="/"
           render={() => (user ? <User user={user} /> : <Landing />)}
-        />
+        /> */}
 
         {/* // Signup & Login Routes */}
         <Route
@@ -60,7 +58,6 @@ class App extends Component {
           render={({ history, match }) => (
             <Signup
               history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
               match={match}
             />
           )}
@@ -71,7 +68,6 @@ class App extends Component {
           render={({ history }) => (
             <Login
               history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
             />
           )}
         />
@@ -112,6 +108,5 @@ class App extends Component {
       </>
     );
   }
-}
 
 export default App;

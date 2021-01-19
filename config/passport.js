@@ -1,6 +1,7 @@
 const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const User = require('../models/user')
+const mongoose = require('mongoose')
 const authCtrl = require('../controllers/auth')
 
 // add this function to the google strategy:
@@ -20,11 +21,10 @@ passport.use(
             User.findOne({ googleId: profile.id }, function (err, user) {
                 if (err) return done(err);
                 if (user) {
-                  console.log('PROFILE', profile)
-                  console.log('USER', user)
-                  console.log('EMAIL', user.email)
-                  const userToken = authCtrl.createJWT(profile)
-                  console.log('boom token', userToken)
+                  // console.log('PROFILE FROM GOOGLE', profile)
+                  // console.log('USER IN DATABASE', user)
+                  // const userToken = authCtrl.createJWT(profile)
+                  // console.log('boom token', userToken)
                   // setToken(userToken)
                   // authCtrl.login(user)
                   return done(null, 
@@ -54,7 +54,6 @@ passport.use(
         );
 
 passport.serializeUser(function(user, done) {
-    // console.log(user)
     done(null, user.id)
 });
 
@@ -63,9 +62,3 @@ passport.deserializeUser(function(id, done) {
     done(err, user);
     });
 });
-
-// Helper function -- something like this:
-
-// function setToken(token) {
-//   localStorage.setItem("token", token);
-// }

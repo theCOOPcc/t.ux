@@ -4,7 +4,8 @@ module.exports = {
   index,
   showProfile,
   update,
-  deleteProfile
+  deleteProfile,
+  currentUser
 };
 
 function index(req, res) {
@@ -13,7 +14,8 @@ function index(req, res) {
 }
 
 function showProfile(req, res) {
-  User.find(req.user.id)
+  console.log('CONTROLLER', req.user)
+  User.findById(req.user.id)
   .then((user) => res.json(user))
 }
 
@@ -25,4 +27,8 @@ function update(req, res) {
 function deleteProfile(req, res) {
   User.findByIdAndDelete(req.user._id)
   .then((user) => res.json(user))
+}
+
+function currentUser(req, res){
+  res.json(req.user)
 }
