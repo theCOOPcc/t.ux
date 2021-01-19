@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Route } from 'react-router-dom';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import User from '../User/User';
@@ -16,30 +16,21 @@ import './App.css';
 import PasswordResetRequest from '../PasswordResetRequest/PasswordResetRequest';
 import Manager from '../Manager/Manager';
 import Activity from '../Activity/Activity';
+import userService from '../../services/userService'
 
-// import ReactGA from 'react-ga';
+const App = () => {
+  const [user, setUser] = useState(null)
+  
+  const getUser = async () => {
+    const userProfile = await userService.getCurrentUser()
+    setUser(userProfile)
+  }
 
-// const trackingId = "" // Google analytics tracking id
-// ReactGA.initialize(trackingId)
-// ReactGA.set({
-//   userId: this.state.user.id
-// })
+  useEffect (()=> {
+    getUser()
+  }, [])
 
-class App extends Component {
-  state = { user: authService.getUser() };
 
-  handleLogout = () => {
-    authService.logout();
-    this.setState({ user: null });
-  };
-
-  handleSignupOrLogin = () => {
-    this.setState({ user: authService.getUser() });
-    this.props.history.push('/activity/heuristics');
-  };
-
-  render() {
-    const { user } = this.state;
     const NavRoutes = () => {
       // These routes will render the NavBar
       return (
@@ -84,12 +75,12 @@ class App extends Component {
           path="/"
           render={() => (user ? <User user={user} /> : <Landing />)}
         />
+
         <Route
           path="/signup/:groupId?/:email?"
           render={({ history, match }) => (
             <Signup
               history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
               match={match}
             />
           )}
@@ -100,7 +91,6 @@ class App extends Component {
           render={({ history }) => (
             <Login
               history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
             />
           )}
         />
@@ -110,6 +100,5 @@ class App extends Component {
       </>
     );
   }
-}
 
 export default App;

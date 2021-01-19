@@ -14,15 +14,8 @@ router.delete('/:id', checkAuth, groupsCtrl.delete);
 
 /*---------- Auth Checker ----------*/
 function checkAuth(req, res, next) {
-    // console.log('group router', req)
-    // if (req) return next();
     if (req.isAuthenticated()) return next();
     return res.status(401).json({msg: 'Not Authorized'});
 }
-
-// function isLoggedIn(req, res, next) {
-//     if (req.isAuthenticated()) return next();
-//     res.redirect("/auth/google");
-//   }
 
 module.exports = router;

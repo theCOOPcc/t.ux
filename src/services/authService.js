@@ -32,6 +32,13 @@ function getUser() {
 function logout() {
   tokenService.removeToken();
 }
+
+function logoutFromGoogle() {
+  return fetch(BASE_URL + "logout")
+  .then(
+    console.log('logging out from google')
+  )
+}
  
 function login(creds) {
   // console.log('auth service login function -- creds', creds)
@@ -60,5 +67,6 @@ export default {
   signup,
   getUser,
   logout,
+  logoutFromGoogle,
   login,
 };
