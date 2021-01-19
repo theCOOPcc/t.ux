@@ -32,7 +32,9 @@ router.get(
 router.get('/logout', function (req, res) {
   console.log('logging out', req.user)
   req.logout();
-  res.redirect('/');
+  res.redirect(
+    'http://localhost:3000'
+    );
 });
 /*---------- Protected Routes ----------*/
 
