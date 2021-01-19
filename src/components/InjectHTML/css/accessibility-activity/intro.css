@@ -1,0 +1,354 @@
+/* screen - intro */
+
+.border-class-1 {
+
+}
+.border-class-2 {
+  border: 1px solid var(--alto);
+}
+.helveticaneue-bold-mine-shaft-16px {
+  color: var(--mine-shaft);
+  font-family: 'Helvetica Neue-Bold', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.intro {
+  background-color: var(--white);
+  height: 100vh;
+  margin: 0px;
+  min-height: 1807px;
+  min-width: 1036px;
+  position: relative;
+  width: 100%;
+}
+.intro .divider-dotted-C61RwL {
+  background-color: transparent;
+  height: 0px;
+  left: 51px;
+  position: absolute;
+  top: 221px;
+  width: 935px;
+}
+.intro .divider-dotted-VMr6Om {
+  background-color: transparent;
+  height: 0px;
+  left: 30px;
+  position: absolute;
+  top: 695px;
+  width: 962px;
+}
+.intro .intro-image-C61RwL {
+  background-color: transparent;
+  height: 297px;
+  left: 196px;
+  position: absolute;
+  top: 302px;
+  width: 612px;
+}
+.intro .introduction-C61RwL {
+  background-color: transparent;
+  color: var(--casal);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  height: 5.31%;
+  left: 3.28%;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 3.93%;
+  width: 90.54%;
+}
+.intro .lesson-obj-avoid-them-C61RwL {
+  background-color: transparent;
+  color: rgba(102,102,102,1.0);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 18px;
+  height: auto;
+  left: 95px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 1072px;
+  width: 835px;
+}
+.intro .line-10-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 78px;
+  position: absolute;
+  top: 1533px;
+  width: 881px;
+}
+.intro .line-11-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 78px;
+  position: absolute;
+  top: 1634px;
+  width: 881px;
+}
+.intro .line-4-OrBG3r {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: -1px;
+  width: 100%;
+}
+.intro .line-4-xv1xHo {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: -1px;
+  width: 100%;
+}
+.intro .line-8-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 78px;
+  position: absolute;
+  top: 1331px;
+  width: 881px;
+}
+.intro .line-9-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 78px;
+  position: absolute;
+  top: 1432px;
+  width: 881px;
+}
+.intro .most-recen-y-everyone-C61RwL {
+  background-color: transparent;
+  height: auto;
+  left: 62px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 749px;
+  width: 914px;
+}
+.intro .rectangle-61-C61RwL {
+  background-color: var(--aquamarine);
+  height: 9px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.intro .rectangle-89-C61RwL {
+  background-color: rgba(255,227,92,1.0);
+  height: 11px;
+  left: 69px;
+  position: absolute;
+  top: 1040px;
+  width: 896px;
+}
+.intro .rectangle-90-C61RwL {
+  background-color: rgba(255,227,92,0.2);
+  height: 197px;
+  left: 69px;
+  position: absolute;
+  top: 1040px;
+  width: 896px;
+}
+.intro .span1-466SDy {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+}
+.intro .span1-IAmBUU {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.intro .span1-q7DJcE {
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.00px;
+}
+.intro .span1-xiWbc1 {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+}
+.intro .span2-466SDy {
+  color: rgba(243,119,6,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+.intro .span2-IAmBUU {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.intro .span2-q7DJcE {
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+}
+.intro .span2-xiWbc1 {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.intro .span3-466SDy {
+  color: rgba(84,152,155,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+.intro .text-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 554px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 117px;
+  width: 256px;
+}
+.intro .this-is-no-essibility-C61RwL {
+  background-color: transparent;
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 16px;
+  height: 1.38%;
+  left: 5.50%;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 13.61%;
+  white-space: nowrap;
+  width: 87.45%;
+}
+.intro .to-the-4-p-essibility-C61RwL {
+  background-color: transparent;
+  height: 1.33%;
+  left: 4.92%;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 9.30%;
+  white-space: nowrap;
+  width: 88.71%;
+}
+.intro .x-back-C61RwL {
+  background-color: transparent;
+  height: 24px;
+  left: 21px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 22px;
+  white-space: nowrap;
+  width: 52px;
+}
+.intro .x1-perceiva-4-robust-r-C61RwL {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  height: auto;
+  left: 78px;
+  letter-spacing: 0.00px;
+  line-height: 100px;
+  position: absolute;
+  text-align: left;
+  top: 1238px;
+  width: 883px;
+}
+.poppins-bold-casal-48px {
+  color: var(--casal);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-bold-chilean-fire-60px {
+  color: var(--chilean-fire);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-medium-black-16px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.poppins-normal-black-14px {
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 14px;
+}
+.poppins-normal-black-18px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.poppins-normal-black-18px-2 {
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 18px;
+}
+.poppins-normal-white-28px {
+  color: transparent;
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 28px;
+}
+.poppins-semi-bold-black-24px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+.proximanova-bold-black-40px {
+  color: var(--black);
+  font-family: 'Proxima Nova-Bold', Helvetica, Arial, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+:root {
+  --alto: rgba(221,221,221,1.0);
+  --aquamarine: rgba(120,214,218,1.0);
+  --black: rgba(0,0,0,1.0);
+  --casal: rgba(54,96,98,1.0);
+  --chilean-fire: rgba(243,119,6,1.0);
+  --mine-shaft: rgba(51,51,51,1.0);
+  --mountain-mist: rgba(153,153,153,1.0);
+  --onyx: rgba(58,58,58,1.0);
+  --white: rgba(255,255,255,1.0);
+}

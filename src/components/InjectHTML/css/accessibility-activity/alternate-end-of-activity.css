@@ -1,0 +1,183 @@
+/* screen - alternate-end-of-activity */
+
+.alternate-end-of-activity {
+  background-color: var(--white);
+  height: 100vh;
+  margin: 0px;
+  min-height: 826px;
+  min-width: 1036px;
+  position: relative;
+  width: 100%;
+}
+.alternate-end-of-activity .alternate--vity-image-C61RwL {
+  background-color: transparent;
+  height: 368px;
+  left: 137px;
+  position: absolute;
+  top: 343px;
+  width: 762px;
+}
+.alternate-end-of-activity .rectangle-61-C61RwL {
+  background-color: var(--aquamarine);
+  height: 9px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.alternate-end-of-activity .span1-0OrvDJ {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+}
+.alternate-end-of-activity .span2-0OrvDJ {
+  color: rgba(243,119,6,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+.alternate-end-of-activity .text-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 554px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 117px;
+  width: 256px;
+}
+.alternate-end-of-activity .text-activ-on-message-C61RwL {
+  background-color: transparent;
+  height: 82px;
+  left: 40px;
+  position: absolute;
+  top: 196px;
+  width: 958px;
+}
+.alternate-end-of-activity .welcome-0O6yUh {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+}
+.alternate-end-of-activity .welcome-C61RwL {
+  background-color: transparent;
+  height: 81px;
+  left: 40px;
+  position: absolute;
+  top: 93px;
+  width: 958px;
+}
+.alternate-end-of-activity .x-back-C61RwL {
+  background-color: transparent;
+  height: 24px;
+  left: 21px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 22px;
+  white-space: nowrap;
+  width: 52px;
+}
+.alternate-end-of-activity .youve-succ-n-activity-r097xv {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+}
+.border-class-1 {
+
+}
+.border-class-2 {
+  border: 1px solid var(--alto);
+}
+.helveticaneue-bold-mine-shaft-16px {
+  color: var(--mine-shaft);
+  font-family: 'Helvetica Neue-Bold', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-bold-casal-48px {
+  color: var(--casal);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-bold-chilean-fire-60px {
+  color: var(--chilean-fire);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-medium-black-16px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.poppins-normal-black-14px {
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 14px;
+}
+.poppins-normal-black-18px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.poppins-normal-black-18px-2 {
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 18px;
+}
+.poppins-normal-white-28px {
+  color: transparent;
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 28px;
+}
+.poppins-semi-bold-black-24px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+.proximanova-bold-black-40px {
+  color: var(--black);
+  font-family: 'Proxima Nova-Bold', Helvetica, Arial, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+:root {
+  --alto: rgba(221,221,221,1.0);
+  --aquamarine: rgba(120,214,218,1.0);
+  --black: rgba(0,0,0,1.0);
+  --casal: rgba(54,96,98,1.0);
+  --chilean-fire: rgba(243,119,6,1.0);
+  --mine-shaft: rgba(51,51,51,1.0);
+  --mountain-mist: rgba(153,153,153,1.0);
+  --onyx: rgba(58,58,58,1.0);
+  --white: rgba(255,255,255,1.0);
+}
