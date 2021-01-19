@@ -2,7 +2,9 @@ import React from 'react';
 import * as N from '../TuxComponents/NavComponents';
 import * as U from '../TuxComponents/UniversalComponents';
  
-const NavBar = ({ user, handleLogout }) => {
+const NavBar = ({ user, 
+                  // handleLogout 
+                }) => {
   return (
     <>
       {!user ? (
@@ -52,12 +54,12 @@ const NavBar = ({ user, handleLogout }) => {
             Activities
           </N.NavLink>
           <N.NavLink right href=" ">
-            {user.name}
+            {user.firstName}
           </N.NavLink>
-          <N.Avatar>
-            {user.avatar}
-          </N.Avatar>
-          <N.NavLink  href=" " onClick={handleLogout}>
+          <N.Avatar src={user.avatar} />
+          <N.NavLink  href="http://localhost:3001/api/auth/logout" 
+          // onClick={handleLogout}
+          >
             LogOut
           </N.NavLink>
 

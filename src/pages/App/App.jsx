@@ -35,7 +35,7 @@ const App = () => {
       // These routes will render the NavBar
       return (
         <>
-          <NavBar user={user} handleLogout={this.handleLogout} />
+          <NavBar user={user} />
           <Route exact path="/activities" render={() => <IndexActivities />} />
           <Route exact path="/manager-dashboard" render={() => <Manager />} />
           <Route
