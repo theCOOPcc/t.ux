@@ -5,15 +5,11 @@ import Login from '../Login/Login';
 import User from '../User/User';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import NavBar from '../../components/NavBar/NavBar';
-import CreateActivity from '../CreateActivity/CreateActivity';
-// import CreateActivityRefactor from '../CreateActivity/CreateActivityRefactor'
 import authService from '../../services/authService';
 import Landing from '../Landing/Landing';
 import PreviewActivity from '../PreviewActivity/PreviewActivity';
 import IndexActivities from '../IndexActivities/IndexActivities';
-import CoryTestingGround from '../../pages/CoryTestingGround/CoryTestingGround';
 import './App.css';
-import PasswordResetRequest from '../PasswordResetRequest/PasswordResetRequest';
 import Manager from '../Manager/Manager';
 import Activity from '../Activity/Activity';
 import userService from '../../services/userService'
@@ -43,17 +39,6 @@ const App = () => {
             path="/preview-activity"
             render={({ location }) => <PreviewActivity location={location} />}
           />
-          <Route
-            exact
-            path="/corytestingground"
-            render={() => <CoryTestingGround />}
-          />
-          <Route
-            exact
-            path="/passwordresetrequest"
-            render={() => <PasswordResetRequest />}
-          />
-
           <Route
             exact
             path="/activity/heuristics"

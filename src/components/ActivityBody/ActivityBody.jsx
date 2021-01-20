@@ -3,13 +3,12 @@ import * as U from '../../components/TuxComponents/UniversalComponents';
 import Question from '../../components/Question/Question';
 import InjectHTML from '../../components/InjectHTML/InjectHTML';
 import Overview from '../../components/Overview/Overview';
+import ActivityLinks from '../ActivityLinks/ActivityLinks';
 
-const ActivityBody = ({ currentModule, handleAnswers, started }) => {
+const ActivityBody = ({ currentModule, handleAnswers, started, links }) => {
   return (
-    // If started is set to null/false then the overview page will be shown.
-    !started  ? (
-      <Overview />
-    ) : (
+    <>
+      (<Overview /> ) : (
       <U.Sub6ColGrid>
         {/* <U.ColorBlock SubGridBlue></U.ColorBlock> */}
         {currentModule.type === 'display' ? (
@@ -20,8 +19,13 @@ const ActivityBody = ({ currentModule, handleAnswers, started }) => {
           <Question details={currentModule} handleAnswers={handleAnswers} />
         )}
       </U.Sub6ColGrid>
-    )
+      )
+
+      {/* <ActivityLinks links={links} /> */}
+    </>
   );
 };
 
 export default ActivityBody;
+
+// // !started  ? (

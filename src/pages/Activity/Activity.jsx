@@ -7,10 +7,11 @@ import activityService from '../../services/activityService';
 import SideBarNav from '../../components/SideBarNav/SideBarNav';
 // import test from '../../SampleData/img/'
 // import Timer from 'react-compound-timer';
+import { HeuristicsSampleData } from '../../SampleData/HeuristicsSampleData';
 
 const Activity = ({ activityId }) => {
   // State Hooks
-  const [activityData, setActivityData] = useState('');
+  const [activityData, setActivityData] = useState(HeuristicsSampleData);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
   const [started, setStarted] = useState(null);
@@ -20,9 +21,9 @@ const Activity = ({ activityId }) => {
     return activityService.getOne(activityId);
   };
 
-  useEffect(() => {
-    getActivityData().then((data) => setActivityData(data));
-  }, []);
+  // useEffect(() => {
+  //   getActivityData().then((data) => setActivityData(data));
+  // }, []);
 
   const { sections, topic } = activityData;
   // Variables
@@ -71,8 +72,8 @@ const Activity = ({ activityId }) => {
   };
 
   const handleStarted = () => {
-    setStarted(true)
-  }
+    setStarted(true);
+  };
   return (
     activityData && (
       <U.Main>
@@ -81,8 +82,8 @@ const Activity = ({ activityId }) => {
           name={currentSection.name}
           completed={completed}
         />
-
         <ActivityBody
+          links={activityData.links}
           started={started}
           currentModule={currentModule}
           handleAnswers={handleAnswers}
