@@ -616,7 +616,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              `<p>Which of the following <span style="color: red">elements</span> <strong>gives</strong> appropriate and timely feedback to the user?</p>`,
+              `<p>Which of the following elements gives <strong>appropriate and timely feedback</strong> to the user?</p>`,
             timeLimit: 4,
             type: 'multiple-choice',
             media:
@@ -962,7 +962,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'True or False: In the following graphic. The blue line, ‘Syncing 5 of 21’ and the loading animation circle are ALL examples of “Visibility of System Status.',
+              `<strong>True or False:</strong> In the following graphic. The blue line, ‘Syncing 5 of 21’ and the loading animation circle are ALL examples of “Visibility of System Status.`,
             timeLimit: 4,
             type: 'multiple-choice',
             media:
@@ -1303,7 +1303,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'Which of the following elements is NOT an example of a digital item created to look like and serve the same purpose as it’s real-life match?',
+              `Which of the following elements is <span style='color:red; font-weight: 700'>NOT</span> an example of a digital item created to look like and serve the same purpose as it’s real-life match?`,
             timeLimit: 4,
             type: 'multiple-choice',
             media:
@@ -1340,7 +1340,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'Which of the following is NOT an example of Match Between System & Real World?',
+              `Which of the following is <span style='color:red; font-weight: 700'>NOT</span> an example of <strong>Match Between System & Real World?</strong>`,
             timeLimit: 4,
             type: 'multiple-choice',
             media: '/images/question_images/SystemWMAnswer.png',

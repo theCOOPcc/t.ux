@@ -22,6 +22,11 @@ const App = () => {
     setUser(userProfile)
   }
 
+  const handleLogout = async () => {
+    setUser(null)
+    authService.logoutFromGoogle()
+  }
+
   useEffect (()=> {
     getUser()
   }, [])
@@ -31,7 +36,7 @@ const App = () => {
       // These routes will render the NavBar
       return (
         <>
-          <NavBar user={user} />
+          <NavBar user={user} handleLogout={handleLogout}/>
           <Route exact path="/activities" render={() => <IndexActivities />} />
           <Route exact path="/manager-dashboard" render={() => <Manager />} />
           <Route

@@ -4,7 +4,7 @@ import * as U from '../TuxComponents/UniversalComponents';
 
 const NavBar = ({
   user,
-  // handleLogout
+  handleLogout
 }) => {
   return (
     <>
@@ -33,8 +33,8 @@ const NavBar = ({
             user && (
               <>
                 <N.NavLink right>{user.firstName}</N.NavLink>
-                <N.NavLink>{user.avatar}</N.NavLink>
-                <N.NavLink href="/">Log Out</N.NavLink>
+                <N.Avatar src={user.avatar} alt="User Profile Pic" />
+                <N.NavLink href="/" onClick={handleLogout}>Log Out</N.NavLink>
               </>
             )
           )}
