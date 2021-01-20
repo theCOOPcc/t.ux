@@ -35,7 +35,14 @@ const ManagerActivities = ({
         selectedGroupIndex={selectedGroupIndex}
         setSelectedGroupIndex={setSelectedGroupIndex}
       /> */}
-      <ActivityInvite isOpen={isOpen} setIsOpen={setIsOpen} />
+      <ActivityInvite 
+      isOpen={isOpen} 
+      setIsOpen={setIsOpen} 
+      groups={groups}
+      setGroups={setGroups}
+      selectedGroupIndex={selectedGroupIndex}
+      setSelectedGroupIndex={setSelectedGroupIndex}
+      />
       <U.FlexBox bordered managerDash column>
         <U.ColorBlock SubGridBlue></U.ColorBlock>
         <U.Heading3 alignLeft bolder>

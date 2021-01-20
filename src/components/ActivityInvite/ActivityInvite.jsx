@@ -72,12 +72,13 @@ const ActivityInvite = ({
         className='inviteModal'
         overlayClassName='inviteModalOverlay'
     >
-        <L.TuxFlower invite src="/images/circle.png"></L.TuxFlower>
+        <L.TuxFlower invite src="/images/tuxFlower.png"></L.TuxFlower>
         <L.LoginBox invite>
             <U.Heading3 invite>Invite Students</U.Heading3>
             <U.Normal invite>Group: {<i>group name</i>}</U.Normal>
             {/* <div className="email"> */}
             <select
+                className="selectGroup"
                 value={selectedGroupIndex}
                 onChange={(e) => setSelectedGroupIndex(e.target.value)}
               >
@@ -85,17 +86,20 @@ const ActivityInvite = ({
                 {groups &&
                   groups.length >= 0 &&
                   groups.map((group, index) => (
-                    <option key={index} value={index}>
+                    <option 
+                      key={index} 
+                      value={index}>
                       {group.name}
                     </option>
                   ))}
               </select>
-              <div className="email">
+              <div className="group-email-box">
               {groups &&
                 groups.length >= 0 &&
                 selectedGroupIndex &&
                 groups[selectedGroupIndex].invited.map((user, index) => (
                   <EmailCheckbox
+                    className="GroupInviteCheckbox"
                     key={index}
                     user={user}
                     index={index}
@@ -107,7 +111,7 @@ const ActivityInvite = ({
             {/* </div> */}
             <button className="send-invite">Send Invite</button>
             <p className="or">or</p>
-            <button className="copy-link">Copy Link<img src="/images/icons/copy-icon.png" width="50" height="50" alt="copy icon"></img></button>
+            <button className="copy-link">Copy Link<img className="copy" src="/images/icons/copy-icon.png" width="28" height="28" alt="copy icon"></img></button>
         </L.LoginBox>  
     </ReactModal>
      );

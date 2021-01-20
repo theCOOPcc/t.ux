@@ -20,7 +20,7 @@ export const TuxFlower = styled.img`
         left: 100px;
     `}
     ${props => props.invite && css`
-        top: 130px;
+        top: 160px;
     `}
 `;
 
