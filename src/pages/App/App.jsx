@@ -63,7 +63,7 @@ const App = () => {
         <Route
           exact
           path="/"
-          render={() => (user ? <User user={user} /> : <Landing />)}
+          render={() => (!user ? <User user={user} /> : <Landing />)}
         />
 
         <Route
