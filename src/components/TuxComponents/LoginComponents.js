@@ -6,7 +6,7 @@ export const Main = styled.main`
 	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
 	background-blend-mode: normal, multiply;
 	margin: 0 auto;
-	width: 1440px;
+	max-width: 1440px;
 `;
 
 export const TuxFlower = styled.img`
@@ -15,10 +15,12 @@ export const TuxFlower = styled.img`
     position: absolute;
     top: 100px;
 	border-radius: 50%;
-    box-shadow: 2px 2px 5px #dddddd;
     
     ${props => props.center && css`
         left: 100px;
+    `}
+    ${props => props.invite && css`
+        top: 160px;
     `}
 `;
 
@@ -52,6 +54,10 @@ export const LoginBox = styled.div`
     ${props => props.general && css`
         margin-top: 120px;
     `}
+    ${props => props.invite && css`
+        width: 515px;
+        height: 585px;
+    `}
 `;
 
 export const GoogleG = styled.img`
@@ -80,6 +86,33 @@ export const SignIn = styled.p`
     margin-top: 15px;
 `;
 
+export const LoginBtn = styled.button`
+	border: none;
+	width: 343px;
+	padding: 12px 0;
+	margin: 17px 8px;
+	border-radius: 5px;
+	font: var(--pop-bolder);
+	line-height: 27px;
+	color: var(--true-white);
+	background-color: var(--enable-btn);
+	cursor: pointer;
+		&:hover {
+			background: #236C69;
+		}
+	
+		&:active {
+			box-shadow: var(--btn-active-shadow);
+        }
+        ${props => props.disabled && css`
+		background-color: var(--primary-disabled-btn-color);
+		border: var(--input-border);
+	
+		&:hover {
+			background-color: var(--primary-disabled-btn-color);
+		}
+	`}
+`;
 
 
 

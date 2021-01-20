@@ -1,50 +1,42 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Route } from 'react-router-dom';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import User from '../User/User';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import NavBar from '../../components/NavBar/NavBar';
-import CreateActivity from '../CreateActivity/CreateActivity';
-// import CreateActivityRefactor from '../CreateActivity/CreateActivityRefactor'
 import authService from '../../services/authService';
 import Landing from '../Landing/Landing';
 import PreviewActivity from '../PreviewActivity/PreviewActivity';
 import IndexActivities from '../IndexActivities/IndexActivities';
-import CoryTestingGround from '../../pages/CoryTestingGround/CoryTestingGround';
 import './App.css';
-import PasswordResetRequest from '../PasswordResetRequest/PasswordResetRequest';
 import Manager from '../Manager/Manager';
 import Activity from '../Activity/Activity';
+import userService from '../../services/userService'
 
-// import ReactGA from 'react-ga';
+const App = () => {
+  const [user, setUser] = useState(null)
+  
+  const getUser = async () => {
+    const userProfile = await userService.getCurrentUser()
+    setUser(userProfile)
+  }
 
-// const trackingId = "" // Google analytics tracking id
-// ReactGA.initialize(trackingId)
-// ReactGA.set({
-//   userId: this.state.user.id
-// })
+  const handleLogout = async () => {
+    setUser(null)
+    authService.logoutFromGoogle()
+  }
 
-class App extends Component {
-  state = { user: authService.getUser() };
+  useEffect (()=> {
+    getUser()
+  }, [])
 
-  handleLogout = () => {
-    authService.logout();
-    this.setState({ user: null });
-  };
 
-  handleSignupOrLogin = () => {
-    this.setState({ user: authService.getUser() });
-    this.props.history.push('/activity/heuristics');
-  };
-
-  render() {
-    const { user } = this.state;
     const NavRoutes = () => {
       // These routes will render the NavBar
       return (
         <>
-          <NavBar user={user} handleLogout={this.handleLogout} />
+          <NavBar user={user} handleLogout={handleLogout}/>
           <Route exact path="/activities" render={() => <IndexActivities />} />
           <Route exact path="/manager-dashboard" render={() => <Manager />} />
           <Route
@@ -52,17 +44,6 @@ class App extends Component {
             path="/preview-activity"
             render={({ location }) => <PreviewActivity location={location} />}
           />
-          <Route
-            exact
-            path="/corytestingground"
-            render={() => <CoryTestingGround />}
-          />
-          <Route
-            exact
-            path="/passwordresetrequest"
-            render={() => <PasswordResetRequest />}
-          />
-
           <Route
             exact
             path="/activity/heuristics"
@@ -84,12 +65,12 @@ class App extends Component {
           path="/"
           render={() => (user ? <User user={user} /> : <Landing />)}
         />
+
         <Route
           path="/signup/:groupId?/:email?"
           render={({ history, match }) => (
             <Signup
               history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
               match={match}
             />
           )}
@@ -100,7 +81,6 @@ class App extends Component {
           render={({ history }) => (
             <Login
               history={history}
-              handleSignupOrLogin={this.handleSignupOrLogin}
             />
           )}
         />
@@ -110,6 +90,5 @@ class App extends Component {
       </>
     );
   }
-}
 
 export default App;

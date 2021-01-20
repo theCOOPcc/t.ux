@@ -1,6 +1,56 @@
 export const HeuristicsSampleData = {
   name: 'Heuristics',
   topic: 'Heuristics',
+  links: [
+    {
+      text: '10 Usability Heuristics for User Interface Design',
+      url: 'https://www.nngroup.com/articles/ten-usability-heuristics/',
+    },
+    {
+      text: '10 Usability Heuristics for User Interface Design',
+      url:
+        'https://www.designprinciplesftw.com/collections/10-usability-heuristics-for-user-interface-design',
+    },
+    {
+      text: 'Heuristic Evaluation: How to Conduct a Heuristic Evaluation',
+      url:
+        'https://www.interaction-design.org/literature/article/heuristic-evaluation-how-to-conduct-a-heuristic-evaluation',
+    },
+    {
+      text:
+        'User Experience is one of the hottest topics in day today designer’s life.',
+      url:
+        'https://uxdesign.cc/user-experience-is-one-of-the-hottest-topics-in-day-today-designers-life-fb314978e1ff',
+    },
+    {
+      text: 'Your Step-By-Step Guide To Heuristic Evaluation In UX Design',
+      url:
+        'https://careerfoundry.com/en/blog/ux-design/what-is-a-heuristic-evaluation-in-ux/',
+    },
+    {
+      text: '11 Usability Heuristics Every Designer Should Know',
+      url: 'https://careerfoundry.com/en/blog/ux-design/usability-heuristics/',
+    },
+    {
+      text: '10 Usability Heuristics and How To Apply Them To Product Design',
+      url:
+        'https://uxplanet.org/10-usability-heuristics-and-how-to-apply-them-to-product-design-dd4a4a06d78c',
+    },
+    {
+      text: '10 Usability Heuristics Explained',
+      url:
+        'https://medium.com/@erangatl/10-usability-heuristics-explained-caa5903faba2',
+    },
+    {
+      text: '10 Usability Heuristics That All UI Designers Should Know',
+      url: 'https://www.secretstache.com/blog/usability-heuristics/',
+    },
+    {
+      text: '10 Usability Heuristics with Examples',
+      url:
+        'https://blog.prototypr.io/10-usability-heuristics-with-examples-4a81ada920c',
+    },
+  ],
   sections: [
     {
       name: 'Introduction',
@@ -566,7 +616,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'Which of the following elements gives appropriate and timely feedback to the user?',
+              `<p>Which of the following elements gives <strong>appropriate and timely feedback</strong> to the user?</p>`,
             timeLimit: 4,
             type: 'multiple-choice',
             media:
@@ -912,10 +962,11 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'True or False: In the following graphic. The blue line, ‘Syncing 5 of 21’ and the loading animation circle are ALL examples of “Visibility of System Status.',
+              `<strong>True or False:</strong> In the following graphic. The blue line, ‘Syncing 5 of 21’ and the loading animation circle are ALL examples of “Visibility of System Status.`,
             timeLimit: 4,
             type: 'multiple-choice',
-            media: '/images/question_images/Visibility_of_System_Status_Q2/Loadingbar.png',
+            media:
+              '/images/question_images/Visibility_of_System_Status_Q2/Loadingbar.png',
             answers: [
               {
                 label: 'True',
@@ -1252,10 +1303,11 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'Which of the following elements is NOT an example of a digital item created to look like and serve the same purpose as it’s real-life match?',
+              `Which of the following elements is <span style='color:red; font-weight: 700'>NOT</span> an example of a digital item created to look like and serve the same purpose as it’s real-life match?`,
             timeLimit: 4,
             type: 'multiple-choice',
-            media: '/images/question_images/System_World_Mathc_Q1/Answer-4-UP.png',
+            media:
+              '/images/question_images/System_World_Mathc_Q1/Answer-4-UP.png',
             answers: [
               {
                 label: 'A. Calendar',
@@ -1288,7 +1340,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'Which of the following is NOT an example of Match Between System & Real World?',
+              `Which of the following is <span style='color:red; font-weight: 700'>NOT</span> an example of <strong>Match Between System & Real World?</strong>`,
             timeLimit: 4,
             type: 'multiple-choice',
             media: '/images/question_images/SystemWMAnswer.png',
@@ -2049,7 +2101,8 @@ export const HeuristicsSampleData = {
               'Which of the following is the best choice when allowing a User to select Multiple items?',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: '/images/question_images/Consistency___Standards_Q1/radio-checkbox-functionality_1.png',
+            media:
+              '/images/question_images/Consistency___Standards_Q1/radio-checkbox-functionality_1.png',
             answers: [
               {
                 label: 'Check Boxes',
@@ -2073,7 +2126,8 @@ export const HeuristicsSampleData = {
               'Which UI pattern will cause a user discomfort, and increase decision making time? ',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: '/images/question_images/Consistency___Standards_Q2/HeuQ2.png',
+            media:
+              '/images/question_images/Consistency___Standards_Q2/HeuQ2.png',
             answers: [
               {
                 label: 'South Facing Arrow',
@@ -2426,7 +2480,7 @@ export const HeuristicsSampleData = {
         },
         {
           type: 'question',
-          contents: { 
+          contents: {
             problemStatement: 'Choose the best example of Error Prevention',
             timeLimit: 4,
             type: 'multiple-choice',
@@ -2861,7 +2915,8 @@ export const HeuristicsSampleData = {
               'Is the following image an example of Recognition or Recall? ',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: '/images/question_images/Recognition_over_Recall_Q2/Keynote.png',
+            media:
+              '/images/question_images/Recognition_over_Recall_Q2/Keynote.png',
             answers: [
               {
                 label: 'Recognition',
@@ -3229,7 +3284,8 @@ export const HeuristicsSampleData = {
               'Double tapping on a photo on Instagram causes the “like” heart to fill in automatically.  This is an example of a(n):',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: '/images/question_images/Flexibility___Efficiency_Q1/Instagram.png',
+            media:
+              '/images/question_images/Flexibility___Efficiency_Q1/Instagram.png',
             answers: [
               {
                 label: 'Advanced Feature',
@@ -3590,7 +3646,8 @@ export const HeuristicsSampleData = {
               'Which of the following is an example of aesthetic and minimalist design?',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: '/images/question_images/Aesthitic_Minimalism_Q1/Group_73.png',
+            media:
+              '/images/question_images/Aesthitic_Minimalism_Q1/Group_73.png',
             answers: [
               {
                 label: 'A',
@@ -3626,7 +3683,8 @@ export const HeuristicsSampleData = {
               'True or False: This Airbnb homepage is an exmaple of Aesthetic & Minimalism.  ',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: '/images/question_images/Aesthitic_Minimalism_Q2/Image_Airbnb_Question_1.png',
+            media:
+              '/images/question_images/Aesthitic_Minimalism_Q2/Image_Airbnb_Question_1.png',
             answers: [
               {
                 label: 'True',
@@ -3913,7 +3971,8 @@ export const HeuristicsSampleData = {
               'Which of the below elements belong above the fold on a webpage?',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: '/images/question_images/Aesthitic_Minimalism_Q3/Group_84.png',
+            media:
+              '/images/question_images/Aesthitic_Minimalism_Q3/Group_84.png',
             answers: [
               {
                 label: 'A. Description',
@@ -3946,7 +4005,7 @@ export const HeuristicsSampleData = {
     },
     {
       name: 'Error Recovery',
-      modules: [   
+      modules: [
         {
           type: 'display',
           contents: `
@@ -4929,7 +4988,8 @@ export const HeuristicsSampleData = {
               'All of the following are important to keep in mind when designing for users as they are key to Help & Documentation EXCEPT:',
             timeLimit: 4,
             type: 'multiple-choice',
-            media: '/images/question_images/Help___Documentation_Q2/Group 74.png',
+            media:
+              '/images/question_images/Help___Documentation_Q2/Group 74.png',
             answers: [
               {
                 label: 'A. Upload Option',

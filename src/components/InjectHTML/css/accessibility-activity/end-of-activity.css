@@ -1,0 +1,398 @@
+/* screen - end-of-activity */
+
+.border-class-1 {
+
+}
+.border-class-2 {
+  border: 1px solid var(--alto);
+}
+.end-of-activity {
+  background-color: var(--white);
+  height: 100vh;
+  margin: 0px;
+  min-height: 826px;
+  min-width: 1036px;
+  position: relative;
+  width: 100%;
+}
+.end-of-activity .additional-r-comments-C61RwL {
+  background-color: transparent;
+  color: rgba(50,50,57,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  height: 2.91%;
+  left: 3.86%;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 68.52%;
+  width: 92.47%;
+}
+.end-of-activity .checkbox-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 426px;
+  position: absolute;
+  top: 377px;
+  width: 122px;
+}
+.end-of-activity .checkbox-QxM5SU {
+  background-color: transparent;
+  height: 20px;
+  left: 426px;
+  position: absolute;
+  top: 482px;
+  width: 73px;
+}
+.end-of-activity .checkbox-VMr6Om {
+  background-color: transparent;
+  height: 20px;
+  left: 426px;
+  position: absolute;
+  top: 412px;
+  width: 73px;
+}
+.end-of-activity .checkbox-c-ox-default-7nEilF {
+  background-color: transparent;
+  border: 1px solid var(--mountain-mist);
+  border-radius: 5px;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 27.40%;
+}
+.end-of-activity .checkbox-c-ox-default-C3KYGZ {
+  background-color: transparent;
+  border: 1px solid var(--mountain-mist);
+  border-radius: 5px;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 27.40%;
+}
+.end-of-activity .checkbox-c-ox-default-ckkASn {
+  background-color: transparent;
+  border: 1px solid var(--mountain-mist);
+  border-radius: 5px;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 27.40%;
+}
+.end-of-activity .checkbox-c-ox-default-jOya0a {
+  background-color: transparent;
+  border: 1px solid var(--mountain-mist);
+  border-radius: 5px;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 16.39%;
+}
+.end-of-activity .checkbox-mzXdH9 {
+  background-color: transparent;
+  height: 20px;
+  left: 426px;
+  position: absolute;
+  top: 447px;
+  width: 73px;
+}
+.end-of-activity .label-7nEilF {
+  background-color: transparent;
+  height: 100%;
+  left: 42.47%;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 2.74%;
+}
+.end-of-activity .label-C3KYGZ {
+  background-color: transparent;
+  height: 100%;
+  left: 42.47%;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 2.74%;
+}
+.end-of-activity .label-ckkASn {
+  background-color: transparent;
+  height: 100%;
+  left: 42.47%;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 2.74%;
+}
+.end-of-activity .label-jOya0a {
+  background-color: transparent;
+  height: 100%;
+  left: 25.41%;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 74.59%;
+}
+.end-of-activity .line-14-PllR71 {
+  background-color: transparent;
+  bottom: 7px;
+  height: 18px;
+  position: absolute;
+  right: 5px;
+  width: 15px;
+}
+.end-of-activity .line-15-PllR71 {
+  background-color: transparent;
+  bottom: 7px;
+  height: 12px;
+  position: absolute;
+  right: 5px;
+  width: 10px;
+}
+.end-of-activity .line-16-PllR71 {
+  background-color: transparent;
+  bottom: 7px;
+  height: 6px;
+  position: absolute;
+  right: 5px;
+  width: 5px;
+}
+.end-of-activity .operable-C61RwL {
+  background-color: transparent;
+  height: 2.42%;
+  left: 44.31%;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 49.88%;
+  width: 6.95%;
+}
+.end-of-activity .question-OvaCyR {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  height: 128.57%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: -16.67%;
+  width: 100%;
+}
+.end-of-activity .rectangle-61-C61RwL {
+  background-color: var(--aquamarine);
+  height: 9px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.end-of-activity .robust-C61RwL {
+  background-color: transparent;
+  height: 2.42%;
+  left: 44.31%;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 58.35%;
+  width: 5.50%;
+}
+.end-of-activity .span1-0OrvDJ {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+}
+.end-of-activity .span2-0OrvDJ {
+  color: rgba(243,119,6,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+}
+.end-of-activity .text-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 554px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 117px;
+  width: 256px;
+}
+.end-of-activity .text-activ-on-message-C61RwL {
+  background-color: transparent;
+  height: 83px;
+  left: 40px;
+  position: absolute;
+  top: 176px;
+  width: 958px;
+}
+.end-of-activity .text-box-C61RwL {
+  background-color: var(--white);
+  border: 1px solid rgba(60,133,130,1.0);
+  border-radius: 5px;
+  height: 157px;
+  left: 136px;
+  position: absolute;
+  top: 597px;
+  width: 763px;
+}
+.end-of-activity .text-quest-n-question-C61RwL {
+  background-color: transparent;
+  height: 56px;
+  left: 40px;
+  position: absolute;
+  top: 288px;
+  width: 958px;
+}
+.end-of-activity .understandable-C61RwL {
+  background-color: transparent;
+  height: 2.42%;
+  left: 44.31%;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 54.12%;
+  width: 11.97%;
+}
+.end-of-activity .welcome-0O6yUh {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+}
+.end-of-activity .welcome-C61RwL {
+  background-color: transparent;
+  height: 81px;
+  left: 40px;
+  position: absolute;
+  top: 93px;
+  width: 958px;
+}
+.end-of-activity .x-back-C61RwL {
+  background-color: transparent;
+  height: 24px;
+  left: 21px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 22px;
+  white-space: nowrap;
+  width: 52px;
+}
+.end-of-activity .youve-succ-n-activity-r097xv {
+  background-color: transparent;
+  height: 108.43%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 40px;
+  position: absolute;
+  text-align: center;
+  top: -4.82%;
+  width: 100%;
+}
+.helveticaneue-bold-mine-shaft-16px {
+  color: var(--mine-shaft);
+  font-family: 'Helvetica Neue-Bold', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-bold-casal-48px {
+  color: var(--casal);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-bold-chilean-fire-60px {
+  color: var(--chilean-fire);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-medium-black-16px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.poppins-normal-black-14px {
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 14px;
+}
+.poppins-normal-black-18px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.poppins-normal-black-18px-2 {
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 18px;
+}
+.poppins-normal-white-28px {
+  color: transparent;
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 28px;
+}
+.poppins-semi-bold-black-24px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+.proximanova-bold-black-40px {
+  color: var(--black);
+  font-family: 'Proxima Nova-Bold', Helvetica, Arial, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+:root {
+  --alto: rgba(221,221,221,1.0);
+  --aquamarine: rgba(120,214,218,1.0);
+  --black: rgba(0,0,0,1.0);
+  --casal: rgba(54,96,98,1.0);
+  --chilean-fire: rgba(243,119,6,1.0);
+  --mine-shaft: rgba(51,51,51,1.0);
+  --mountain-mist: rgba(153,153,153,1.0);
+  --onyx: rgba(58,58,58,1.0);
+  --white: rgba(255,255,255,1.0);
+}

@@ -80,12 +80,12 @@ class Login extends Component {
               to="/passwordresetrequest"
             >Forgot Password?</U.LinkTo>*/}
           </U.FlexBox>
-          <U.WideBtn login 
+          <L.LoginBtn  
               disabled={
                 email.length > 0 && pw.length > 0
                 ? false
                 : true
-              }>Log In</U.WideBtn>
+              }>Log In</L.LoginBtn>
         </form>
         </L.LoginBox>
       </U.FlexBox>
