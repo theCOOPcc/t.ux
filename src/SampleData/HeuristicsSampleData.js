@@ -616,7 +616,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'Which of the following elements gives appropriate and timely feedback to the user?',
+              `<p>Which of the following <span style="color: red">elements</span> <strong>gives</strong> appropriate and timely feedback to the user?</p>`,
             timeLimit: 4,
             type: 'multiple-choice',
             media:

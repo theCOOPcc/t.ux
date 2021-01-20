@@ -6,23 +6,19 @@ import Overview from '../../components/Overview/Overview';
 import ActivityLinks from '../ActivityLinks/ActivityLinks';
 
 const ActivityBody = ({ currentModule, handleAnswers, started, links }) => {
-  return (
-    <>
-      (<Overview /> ) : (
-      <U.Sub6ColGrid>
-        {/* <U.ColorBlock SubGridBlue></U.ColorBlock> */}
-        {currentModule.type === 'display' ? (
-          <div className="injectParent">
-            <InjectHTML markup={currentModule.contents} />
-          </div>
-        ) : (
-          <Question details={currentModule} handleAnswers={handleAnswers} />
-        )}
-      </U.Sub6ColGrid>
-      )
-
-      {/* <ActivityLinks links={links} /> */}
-    </>
+  return !started ? (
+    <Overview />
+  ) : (
+    <U.Sub6ColGrid>
+      {/* <U.ColorBlock SubGridBlue></U.ColorBlock> */}
+      {currentModule.type === 'display' ? (
+        <div className="injectParent">
+          <InjectHTML markup={currentModule.contents} />
+        </div>
+      ) : (
+        <Question details={currentModule} handleAnswers={handleAnswers} />
+      )}
+    </U.Sub6ColGrid>
   );
 };
 
