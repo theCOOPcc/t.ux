@@ -83,6 +83,8 @@ const Activity = ({ activityId }) => {
           completed={completed}
         />
         <ActivityBody
+          sections={sections}
+          currentModule={currentModule}
           links={activityData.links}
           started={started}
           currentModule={currentModule}
