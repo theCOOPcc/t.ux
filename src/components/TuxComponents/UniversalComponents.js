@@ -462,6 +462,7 @@ export const Normal = styled.p`
       line-height: 30px;
       color: var(--tux-grey);
       text-align: left;
+      margin: 0;
     `}
 `;
 
@@ -510,7 +511,7 @@ export const Heading3 = styled.h3`
       font-size: 36px;
       line-height: 54px;
       color: #666;
-      margin-top: 25px;
+      margin: 25px 0 0 ;
     `}
 	${(props) =>
     props.progress &&
