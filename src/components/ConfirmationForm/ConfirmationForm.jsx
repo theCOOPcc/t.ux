@@ -1,16 +1,9 @@
 import React from 'react';
-// import styled from 'styled-components';
 import { Formik, Field, Form } from "formik";
-import {
-    // Input,
-    // Form,
-    // InputGroup,
-    // Label,
-    // TextArea,
-    Button,
-} from '../../components/TuxComponents/FormComponents';
+import * as U from '../../components/TuxComponents/UniversalComponents';
+import * as F from '../../components/TuxComponents/FormComponents';
 
-const ConfirmationForm = ({ sections }) => {
+const ConfirmationForm = ({ sections, currentModule }) => {
 
     // initialize the section names for initalValues
     let data = []
@@ -22,6 +15,9 @@ const ConfirmationForm = ({ sections }) => {
     })
     return (
         <>
+            <h1>Congratulations!</h1>
+            <h3>You've successfully completed your</h3>
+            sections.
             <Formik
                 initialValues={{ concepts: data, comment: '', }}
                 onSubmit={(data, { setSubmitting }) => {
