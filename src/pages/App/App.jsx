@@ -51,7 +51,7 @@ const App = () => {
           />
           <Route
             exact
-            path="/activity/accessability"
+            path="/activity/accessibility"
             render={() => <Activity />}
           />
         </>
