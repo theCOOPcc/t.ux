@@ -8,7 +8,7 @@ import {
     // Label,
     // TextArea,
     Button,
-} from '../../components/TuxComponents/FormComponents';
+} from '../../components/TuxComponents/FormComponents';  
 
 const ConfirmationForm = ({ sections }) => {
 
