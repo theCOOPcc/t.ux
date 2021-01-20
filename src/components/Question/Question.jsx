@@ -16,10 +16,11 @@ const Question = ({ details }) => {
 
   return (
     <U.Sub6ColGrid>
+      <U.ColorBlock SubGridBlue></U.ColorBlock>
       <A.ProblemStatement>{problemStatement}</A.ProblemStatement>
       <U.FlexBox spaceAround>
         <img src={media} alt="" />
-        <U.FlexBox column spaceAround>
+        <U.FlexBox column>
           {answers.map((answer, index) => (
             <Answer
               key={index}

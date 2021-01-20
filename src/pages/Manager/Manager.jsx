@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Button } from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import groupAPI from '../../services/groupService';
 import * as mailAPI from '../../services/mail-api';
 import ManagerActivites from '../../components/ManagerActivities/ManagerActivities';
