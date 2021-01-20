@@ -315,6 +315,12 @@ export const NakedBtn = styled.button`
       line-height: 18px;
       margin-right: 60px;
     `}
+  
+  ${props => props.create && css`
+    color: var(--link-text);
+    font: var(--pop-bolder);
+
+  `}
 `;
 
 /*---------- Progress Bar ----------*/
