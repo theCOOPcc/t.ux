@@ -234,13 +234,13 @@ export const WideBtn = styled.button`
   background-color: var(--enable-btn);
   cursor: pointer;
 
-  &:hover {
+    &:hover {
     background: #236c69;
-  }
+    }
 
-  &:active {
+    &:active {
     box-shadow: var(--btn-active-shadow);
-  }
+    }
 
   /*	${(props) =>
     props.login &&

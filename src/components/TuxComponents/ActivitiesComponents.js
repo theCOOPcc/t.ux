@@ -64,10 +64,13 @@ export const AnswerBtn = styled.button`
     ${props => props.wrong && css`
         background: #EE6E6B;
         border: 1px solid #EE6E6B;
+<<<<<<< HEAD
     `}
 
     ${props => props.disabled && css`
         background: #dddddd
+=======
+>>>>>>> a997d3c10784d61fc69e1d94339535fb61e0ab99
     `}
 
 		/* &:hover {
