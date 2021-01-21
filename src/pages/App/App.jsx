@@ -47,7 +47,7 @@ const App = () => {
           <Route
             exact
             path="/activity/heuristics"
-            render={() => <Activity user={user} activityId="5ff8b36e56fdee429c008d3a" />}
+            render={() => <Activity user={user} activityId="6009f75ea00e3f38a7c65c7d" />}
           />
           <Route
             exact
