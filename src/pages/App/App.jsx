@@ -51,7 +51,7 @@ const App = () => {
           />
           <Route
             exact
-            path="/activity/accessability"
+            path="/activity/accessibility"
             render={() => <Activity />}
           />
         </>
@@ -63,7 +63,7 @@ const App = () => {
         <Route
           exact
           path="/"
-          render={() => (user ? <User user={user} /> : <Landing />)}
+          render={() => (!user ? <User user={user} /> : <Landing />)}
         />
 
         <Route
