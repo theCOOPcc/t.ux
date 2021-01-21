@@ -5,6 +5,7 @@ const ActivityLinks = ({ links }) => {
   return (
     <U.Sub6ColGrid>
       <U.Heading2>More Heuristics Resources</U.Heading2>
+      <U.FlexBox column flexStartJC flexMargin>
       <U.Normal twenty4>
         Don't stop here! There are a lot more ways to learn about accessibility
         and many websites designed to help you better design for accessibility.
@@ -13,12 +14,13 @@ const ActivityLinks = ({ links }) => {
       <ul>
         {links.map((link, index) => (
           <U.ListLinks>
-            <a key={index} href={link.url}>
+            <U.LinkTo noDecor key={index} href={link.url}>
               {link.text}
-            </a>
+            </U.LinkTo>
           </U.ListLinks>
         ))}
       </ul>
+      </U.FlexBox>
     </U.Sub6ColGrid>
   );
 };

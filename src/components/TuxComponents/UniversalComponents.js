@@ -363,6 +363,11 @@ export const ProgressLabel = styled.p`
 /*---------- Links ----------*/
 export const LinkTo = styled(Link)`
   color: var(--link-text);
+
+  ${(props) => props.noDecor && css `
+    list-style: none;
+
+  `}
 `;
 
 /*---------- Text ----------*/
@@ -500,6 +505,8 @@ export const Heading2 = styled.h2`
   font: 700 48px 'Poppins', sans-serif;
   line-height: 24px;
   color: var(--extraLg-text);
+  text-align: center;
+  margin-top: 75px;
 `;
 
 export const Heading3 = styled.h3`
@@ -552,7 +559,7 @@ export const Heading6 = styled.h6`
   font: var(--table);
   font-weight: 700;
   line-height: 24px;
-  `;
+`;
 
 export const ListLinks = styled.li`
   font: var(--table);
