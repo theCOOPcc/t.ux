@@ -16,6 +16,7 @@ const Activity = ({ activityId, user }) => {
   const [finished, setFinished] = useState(null)
   const [completed, setCompleted] = useState('-10');
 
+
   const getActivityData = () => {
     return activityService.getOne(activityId);
   };
@@ -24,7 +25,7 @@ const Activity = ({ activityId, user }) => {
   //   getActivityData().then((data) => setActivityData(data));
   // }, []);
 
-  const { sections, topic } = activityData;
+  const { sections, topic, name, time } = activityData;
   // Variables
   const currentSection = sections && sections[currentSectionIndex];
   const currentModule =
@@ -75,7 +76,7 @@ const Activity = ({ activityId, user }) => {
     activityData && (
       <U.Main>
         {started === null ? (
-          <Overview setStarted={setStarted}/>
+          <Overview activityName={name} activityTime={time}setStarted={setStarted}/>
         ) : (
           <>
             <ActivityHeader
