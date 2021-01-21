@@ -77,70 +77,40 @@ const Activity = ({ activityId, user }) => {
   return (
     activityData && (
       <U.Main>
-        {/* <<<<<<< HEAD */}
-        <ActivityHeader
-          topic={topic}
-          name={currentSection.name}
-          completed={completed}
-        />
-        <ActivityBody
-          topic={topic}
-          sections={sections}
-          currentModule={currentModule}
-          links={activityData.links}
-          started={started}
-          handleAnswers={handleAnswers}
-        />
-        <SideBarNav
-          sections={sections}
-          currentSection={currentSection}
-          currentSectionIndex={currentSectionIndex}
-          setCurrentSectionIndex={setCurrentSectionIndex}
-          currentModule={currentModule}
-          currentModuleIndex={currentModuleIndex}
-          handleJumpToSection={handleJumpToSection}
-          handleCurrentSection={handleCurrentSection}
-          handleCurrentModule={handleCurrentModule}
-          started={started}
-        // handleStarted={handleStarted}
-        />
-        {/* =======
         {started === null ? (
-          <Overview activityName={name} activityTime={time}setStarted={setStarted}/>
+          <Overview activityName={name} activityTime={time} setStarted={setStarted} />
         ) : (
-          <>
-            <ActivityHeader
-              topic={topic}
-              name={currentSection.name}
-              completed={completed}
-            />
-            <ActivityBody
-              links={activityData.links}
-              sections={sections}
-              started={started}
-              finished={finished}
-              currentModule={currentModule}
-              handleAnswers={handleAnswers}
-            />
-            <SideBarNav
-              sections={sections}
-              currentSection={currentSection}
-              currentSectionIndex={currentSectionIndex}
-              setCurrentSectionIndex={setCurrentSectionIndex}
-              currentModule={currentModule}
-              currentModuleIndex={currentModuleIndex}
-              handleJumpToSection={handleJumpToSection}
-              handleCurrentSection={handleCurrentSection}
-              handleCurrentModule={handleCurrentModule}
-              started={started}
-              finished={finished}
-              setFinished={setFinished}
-              setStarted={setStarted}
-            />
-          </>
-        )}
-
->>>>>>> 619f24bc55a0fd146673a177ecd5533c2f2e32ed */}
+            <>
+              <ActivityHeader
+                topic={topic}
+                name={currentSection.name}
+                completed={completed}
+              />
+              <ActivityBody
+                links={activityData.links}
+                sections={sections}
+                started={started}
+                finished={finished}
+                currentModule={currentModule}
+                handleAnswers={handleAnswers}
+              />
+              <SideBarNav
+                sections={sections}
+                currentSection={currentSection}
+                currentSectionIndex={currentSectionIndex}
+                setCurrentSectionIndex={setCurrentSectionIndex}
+                currentModule={currentModule}
+                currentModuleIndex={currentModuleIndex}
+                handleJumpToSection={handleJumpToSection}
+                handleCurrentSection={handleCurrentSection}
+                handleCurrentModule={handleCurrentModule}
+                started={started}
+                finished={finished}
+                setFinished={setFinished}
+                setStarted={setStarted}
+              />
+            </>
+          )}
       </U.Main>
     )
   );
