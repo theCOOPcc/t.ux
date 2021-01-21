@@ -15,6 +15,10 @@ export const TuxFlower = styled.img`
     position: absolute;
     top: 100px;
 	border-radius: 50%;
+<<<<<<< HEAD
+=======
+    /* box-shadow: 2px 2px 5px #dddddd; */
+>>>>>>> a997d3c10784d61fc69e1d94339535fb61e0ab99
     
     ${props => props.center && css`
         left: 100px;
@@ -35,7 +39,7 @@ export const LoginBox = styled.div`
     box-shadow: var(--common-shadow);
     border-radius: 10px;
     margin-top: 120px;
-
+    /* clip-path: circle(25% at 50% 0); */
 
     ${props => props.wide && css`
       width: 785px;
@@ -97,6 +101,10 @@ export const LoginBtn = styled.button`
 	color: var(--true-white);
 	background-color: var(--enable-btn);
 	cursor: pointer;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a997d3c10784d61fc69e1d94339535fb61e0ab99
 		&:hover {
 			background: #236C69;
 		}
@@ -104,6 +112,10 @@ export const LoginBtn = styled.button`
 		&:active {
 			box-shadow: var(--btn-active-shadow);
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a997d3c10784d61fc69e1d94339535fb61e0ab99
         ${props => props.disabled && css`
 		background-color: var(--primary-disabled-btn-color);
 		border: var(--input-border);
@@ -113,6 +125,10 @@ export const LoginBtn = styled.button`
 		}
 	`}
 `;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a997d3c10784d61fc69e1d94339535fb61e0ab99
 
 
 
