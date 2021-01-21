@@ -3,6 +3,7 @@ import ActivityLinks from '../ActivityLinks/ActivityLinks';
 import ActivityMain from '../ActivityMain/ActivityMain';
 import MoreInfo from '../MoreInfo/MoreInfo';
 
+
 const ActivityBody = ({
   currentModule,
   handleAnswers,

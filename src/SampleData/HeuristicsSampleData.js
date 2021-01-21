@@ -1,6 +1,7 @@
 export const HeuristicsSampleData = {
-  name: 'Heuristics',
+  name: '10 Heuristics of UX Design',
   topic: 'Heuristics',
+  time: 30,
   links: [
     {
       text: '10 Usability Heuristics for User Interface Design',

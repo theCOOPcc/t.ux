@@ -7,7 +7,7 @@ import SideBarNav from '../../components/SideBarNav/SideBarNav';
 import { HeuristicsSampleData } from '../../SampleData/HeuristicsSampleData';
 import Overview from '../../components/Overview/Overview';
 
-const Activity = ({ activityId }) => {
+const Activity = ({ activityId, user }) => {
   // State Hooks
   const [activityData, setActivityData] = useState(HeuristicsSampleData);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
@@ -15,6 +15,7 @@ const Activity = ({ activityId }) => {
   const [started, setStarted] = useState(null);
   const [finished, setFinished] = useState(null)
   const [completed, setCompleted] = useState('-10');
+
 
   const getActivityData = () => {
     return activityService.getOne(activityId);
@@ -24,7 +25,7 @@ const Activity = ({ activityId }) => {
   //   getActivityData().then((data) => setActivityData(data));
   // }, []);
 
-  const { sections, topic } = activityData;
+  const { sections, topic, name, time } = activityData;
   // Variables
   const currentSection = sections && sections[currentSectionIndex];
   const currentModule =
@@ -75,7 +76,7 @@ const Activity = ({ activityId }) => {
     activityData && (
       <U.Main>
         {started === null ? (
-          <Overview setStarted={setStarted}/>
+          <Overview activityName={name} activityTime={time}setStarted={setStarted}/>
         ) : (
           <>
             <ActivityHeader
@@ -102,10 +103,12 @@ const Activity = ({ activityId }) => {
               handleCurrentModule={handleCurrentModule}
               started={started}
               finished={finished}
+              setFinished={setFinished}
               setStarted={setStarted}
             />
           </>
         )}
+
       </U.Main>
     )
   );
