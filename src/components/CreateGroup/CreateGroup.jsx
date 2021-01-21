@@ -8,6 +8,7 @@ const CreateGroup = ({
   createGroup,
   setCreateGroup,
 }) => {
+  
   const createNewGroup = () => {
     handleCreateGroup();
     setCreateGroup(!createGroup);
