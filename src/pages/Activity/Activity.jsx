@@ -83,13 +83,11 @@ const Activity = ({ activityId, user }) => {
           />
         ) : (
           <>
-            <ActivityHeader
-              topic={topic}
-              name={currentSection.name}
-              completed={completed}
-            />
+            <ActivityHeader name={currentSection.name} completed={completed} />
             <ActivityBody
+              name={name}
               links={activityData.links}
+              topic={topic}
               sections={sections}
               started={started}
               finished={finished}
