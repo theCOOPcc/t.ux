@@ -1,6 +1,7 @@
 export const AccessibilitySampleData = {
   name: 'Accessibility',
   topic: 'Accessibility',
+  time: 30,
   sections: [
     // introduction
     {

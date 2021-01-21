@@ -7,7 +7,7 @@ import SideBarNav from '../../components/SideBarNav/SideBarNav';
 import { HeuristicsSampleData } from '../../SampleData/HeuristicsSampleData';
 import Overview from '../../components/Overview/Overview';
 
-const Activity = ({ activityId }) => {
+const Activity = ({ activityId, user }) => {
   // State Hooks
   const [activityData, setActivityData] = useState(HeuristicsSampleData);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
@@ -106,6 +106,7 @@ const Activity = ({ activityId }) => {
             />
           </>
         )}
+
       </U.Main>
     )
   );

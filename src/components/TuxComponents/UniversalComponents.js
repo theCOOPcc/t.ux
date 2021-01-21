@@ -193,6 +193,12 @@ export const FlexBox = styled.div`
       height: 100vh;
     `}
 
+  ${(props) =>
+    props.tight &&
+    css`
+      align-content: center;
+    `}
+
 	${(props) =>
     props.flexStartJC &&
     css`
@@ -218,6 +224,21 @@ export const FlexBox = styled.div`
     css`
       display: block;
     `}
+
+  ${(props) =>
+    props.overview &&
+    css`
+      margin: 270px 250px;
+      background: white;
+      width: 1010px;
+      border-radius: 5px;
+    `}
+
+  ${(props) =>
+    props.overview2 &&
+    css`
+      padding: 50px;
+      `}
 `;
 
 /*---------- Buttons ----------*/
@@ -376,6 +397,12 @@ export const Normal = styled.p`
   line-height: 20px;
 
   ${(props) =>
+    props.bold &&
+    css`
+      font-weight: bold;
+    `}
+
+  ${(props) =>
     props.sixteen &&
     css`
       font-size: 16px;
@@ -469,6 +496,12 @@ export const Normal = styled.p`
       text-align: left;
       margin: 0;
     `}
+
+    ${(props) =>
+      props.overview &&
+      css`
+        margin: 0;
+      `}
 `;
 
 export const Heading1 = styled.h1`
@@ -499,6 +532,15 @@ export const Heading1 = styled.h1`
       margin: 0;
       padding: 0;
     `}
+
+  ${(props) =>
+    props.overview &&
+    css`
+      font-size: 35px;
+      line-height: 24px;
+      color: var(--overview-orange);
+      font-weight: bold;
+      `}
 `;
 
 export const Heading2 = styled.h2`
