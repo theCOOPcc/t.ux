@@ -3,8 +3,6 @@ import ReactModal from 'react-modal';
 import * as U from '../TuxComponents/UniversalComponents';
 import * as L from '../TuxComponents/LoginComponents';
 import EmailCheckbox from "../../components/EmailCheckbox/EmailCheckbox";
-import groupAPI from "../../services/groupService";
-import * as mailAPI from "../../services/mail-api";
 import './ActivityInvite.css';
 const ActivityInvite = ({ 
     isOpen, 
@@ -15,15 +13,17 @@ const ActivityInvite = ({
     setSelectedGroupIndex,
 }) => {
     const [newGroups, setNewGroups] = useState("");
-    const handleSendInvite = async () => {
-        const groupToInvite = await groupAPI.update(groups[selectedGroupIndex]);
-        console.log(groupToInvite);
-        // TODO: send group info to nodemailer api
-        mailAPI.create(groupToInvite);
-    };
-    const handleCopyLink = () => {
-      //
-    };
+
+    // const handleSendInvite = async () => {
+    //     const groupToInvite = await groupAPI.update(groups[selectedGroupIndex]);
+    //     console.log(groupToInvite);
+    //     // TODO: send group info to nodemailer api
+    //     mailAPI.create(groupToInvite);
+    // };
+
+    // const handleCopyLink = () => {
+    //   //
+    // };
     const handleAddInvited = (index) => {
         console.log("adding", index);
         // get the selected group
