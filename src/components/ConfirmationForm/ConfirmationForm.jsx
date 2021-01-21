@@ -54,8 +54,8 @@ const ConfirmationForm = ({ sections, name }) => {
   });
   return (
     <>
-      <U.ColorBlock SubGridBlue> </U.ColorBlock>
       <Div>
+      <U.ColorBlock SubGridBlue> </U.ColorBlock>
         <Heading1>Congratulations!</Heading1>
         <Heading3>You've successfully completed your</Heading3>
         <Heading3 activityTitle>{name} Activity.</Heading3>
