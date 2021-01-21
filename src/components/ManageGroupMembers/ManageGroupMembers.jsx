@@ -26,6 +26,7 @@ const ManageGroupMembers = ({
             newGroupName={newGroupName}
             setNewGroupName={setNewGroupName}
             handleCreateGroup={handleCreateGroup}
+            setCreateGroup={setCreateGroup}
           />
         )}
         {createGroup && (
