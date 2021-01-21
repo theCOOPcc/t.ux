@@ -83,11 +83,11 @@ const Activity = ({ activityId }) => {
           completed={completed}
         />
         <ActivityBody
+          topic={topic}
           sections={sections}
           currentModule={currentModule}
           links={activityData.links}
           started={started}
-          currentModule={currentModule}
           handleAnswers={handleAnswers}
         />
         <SideBarNav
