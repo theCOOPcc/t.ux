@@ -218,6 +218,12 @@ export const FlexBox = styled.div`
     css`
       display: block;
     `}
+	${(props) =>
+    props.problemStatement &&
+    css`
+      justify-content: flex-start;
+      margin: 30px 60px;
+    `}
 `;
 
 /*---------- Buttons ----------*/
