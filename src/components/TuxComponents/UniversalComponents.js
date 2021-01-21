@@ -1,13 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
-// export const Placeholder = styled.div`
-// 	width: 520px;
-// 	height: 520px;
-// 	background-color: yellow;
-
-// `;
-
 /*---------- Main Grid ----------*/
 export const Main = styled.main`
   display: grid;
@@ -502,6 +495,12 @@ export const Heading1 = styled.h1`
     `}
 `;
 
+export const Heading2 = styled.h2`
+  font: 700 48px 'Poppins', sans-serif;
+  line-height: 24px;
+  color: var(--extraLg-text);
+`;
+
 export const Heading3 = styled.h3`
   font: 500 24px 'Poppins', sans-serif;
   line-height: 36px;
@@ -546,7 +545,23 @@ export const Heading3 = styled.h3`
     css`
       color: #1b98a0;
     `}
+
+ 
 `;
+
+export const Heading6 = styled.h6`
+  font: 700 16px 'Poppins', sans-serif;
+  line-height: 24px;
+`;
+
+export const ListLinks = styled.li`
+  font: var(--table);
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--present);
+`;
+
+/*----- End of Text -----*/
 
 /*--------------- FORMS ---------------*/
 // from Manage Group Members

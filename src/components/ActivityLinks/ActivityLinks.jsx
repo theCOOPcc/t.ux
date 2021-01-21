@@ -4,19 +4,19 @@ import * as U from '../../components/TuxComponents/UniversalComponents';
 const ActivityLinks = ({ links }) => {
   return (
     <U.Sub6ColGrid>
-      <h2>More Heuristics Resources</h2>
-      <p>
+      <U.Heading2>More Heuristics Resources</U.Heading2>
+      <U.Normal twenty4>
         Don't stop here! There are a lot more ways to learn about accessibility
         and many websites designed to help you better design for accessibility.
-      </p>
-      <h3>Articles:</h3>
+      </U.Normal>
+      <U.Heading6>Articles:</U.Heading6>
       <ul>
         {links.map((link, index) => (
-          <li>
+          <U.ListLinks>
             <a key={index} href={link.url}>
               {link.text}
             </a>
-          </li>
+          </U.ListLinks>
         ))}
       </ul>
     </U.Sub6ColGrid>
