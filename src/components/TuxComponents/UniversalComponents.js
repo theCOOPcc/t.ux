@@ -404,6 +404,12 @@ export const Normal = styled.p`
   line-height: 20px;
 
   ${(props) =>
+    props.lineTwentySeven &&
+    css`
+      line-height: 27px;
+    `}
+
+  ${(props) =>
     props.bold &&
     css`
       font-weight: bold;
