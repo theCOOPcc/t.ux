@@ -12,8 +12,7 @@ const ActivityBody = ({
 }) => {
   return (
     <>
-    <ActivityLinks links={links} />
-      {/* {started === true && (
+      {started === true && (
         <ActivityMain
           currentModule={currentModule}
           handleAnswers={handleAnswers}
@@ -21,8 +20,8 @@ const ActivityBody = ({
       )}
       {started === false && !finished && <MoreInfo />}
       {started === false && finished === true && (
-        
-      )} */}
+        <ActivityLinks links={links} />
+      )}
     </>
   );
 };
