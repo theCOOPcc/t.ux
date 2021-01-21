@@ -9,10 +9,6 @@ export const Header = styled.header`
   margin: 0 auto;
 `;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a997d3c10784d61fc69e1d94339535fb61e0ab99
 export const Logo = styled.img`
   width: 100px;
 `;
