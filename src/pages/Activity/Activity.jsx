@@ -36,6 +36,8 @@ const Activity = ({ activityId, user }) => {
     setCurrentSectionIndex(index);
     setCurrentModuleIndex(0);
     convertIndexToPercent(index);
+    setStarted(true)
+    setFinished(null)
   };
 
   const incrementCurrentSection = () => {
@@ -86,6 +88,7 @@ const Activity = ({ activityId, user }) => {
             />
             <ActivityBody
               links={activityData.links}
+              sections={sections}
               started={started}
               finished={finished}
               currentModule={currentModule}

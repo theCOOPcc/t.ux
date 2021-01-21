@@ -2,6 +2,7 @@ import React from 'react';
 import ActivityLinks from '../ActivityLinks/ActivityLinks';
 import ActivityMain from '../ActivityMain/ActivityMain';
 import MoreInfo from '../MoreInfo/MoreInfo';
+import ConfirmationForm from '../ConfirmationForm/ConfirmationForm'
 
 
 const ActivityBody = ({
@@ -10,6 +11,7 @@ const ActivityBody = ({
   started,
   links,
   finished,
+  sections
 }) => {
   return (
     <>
@@ -19,7 +21,7 @@ const ActivityBody = ({
           handleAnswers={handleAnswers}
         />
       )}
-      {started === false && !finished && <MoreInfo />}
+      {started === false && finished === null && <ConfirmationForm sections={sections}/>}
       {started === false && finished === true && (
         <ActivityLinks links={links} />
       )}
