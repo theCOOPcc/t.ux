@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
-
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import ActivityHeader from '../../components/ActivityHeader/ActivityHeader';
 import ActivityBody from '../../components/ActivityBody/ActivityBody';
 import activityService from '../../services/activityService';
 import SideBarNav from '../../components/SideBarNav/SideBarNav';
-// import test from '../../SampleData/img/'
-// import Timer from 'react-compound-timer';
 import { HeuristicsSampleData } from '../../SampleData/HeuristicsSampleData';
+import Overview from '../../components/Overview/Overview';
 
 const Activity = ({ activityId }) => {
   // State Hooks
@@ -15,6 +13,7 @@ const Activity = ({ activityId }) => {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
   const [started, setStarted] = useState(null);
+  const [finished, setFinished] = useState(null)
   const [completed, setCompleted] = useState('-10');
 
   const getActivityData = () => {
@@ -71,36 +70,42 @@ const Activity = ({ activityId }) => {
     setCompleted(completed);
   };
 
-  const handleStarted = () => {
-    setStarted(true);
-  };
+  
   return (
     activityData && (
       <U.Main>
-        <ActivityHeader
-          topic={topic}
-          name={currentSection.name}
-          completed={completed}
-        />
-        <ActivityBody
-          links={activityData.links}
-          started={started}
-          currentModule={currentModule}
-          handleAnswers={handleAnswers}
-        />
-        <SideBarNav
-          sections={sections}
-          currentSection={currentSection}
-          currentSectionIndex={currentSectionIndex}
-          setCurrentSectionIndex={setCurrentSectionIndex}
-          currentModule={currentModule}
-          currentModuleIndex={currentModuleIndex}
-          handleJumpToSection={handleJumpToSection}
-          handleCurrentSection={handleCurrentSection}
-          handleCurrentModule={handleCurrentModule}
-          started={started}
-          handleStarted={handleStarted}
-        />
+        {started === null ? (
+          <Overview setStarted={setStarted}/>
+        ) : (
+          <>
+            <ActivityHeader
+              topic={topic}
+              name={currentSection.name}
+              completed={completed}
+            />
+            <ActivityBody
+              links={activityData.links}
+              started={started}
+              finished={finished}
+              currentModule={currentModule}
+              handleAnswers={handleAnswers}
+            />
+            <SideBarNav
+              sections={sections}
+              currentSection={currentSection}
+              currentSectionIndex={currentSectionIndex}
+              setCurrentSectionIndex={setCurrentSectionIndex}
+              currentModule={currentModule}
+              currentModuleIndex={currentModuleIndex}
+              handleJumpToSection={handleJumpToSection}
+              handleCurrentSection={handleCurrentSection}
+              handleCurrentModule={handleCurrentModule}
+              started={started}
+              finished={finished}
+              setStarted={setStarted}
+            />
+          </>
+        )}
       </U.Main>
     )
   );
