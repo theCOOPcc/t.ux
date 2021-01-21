@@ -5,10 +5,10 @@ import InjectHTML from '../../components/InjectHTML/InjectHTML';
 import Overview from '../../components/Overview/Overview';
 import ConfirmationForm from '../../components/ConfirmationForm/ConfirmationForm'
 
-const ActivityBody = ({ currentModule, handleAnswers, started, sections }) => {
+const ActivityBody = ({ currentModule, handleAnswers, started, sections, topic }) => {
   return (
     <U.Sub6ColGrid>
-      <ConfirmationForm sections={sections} currentModule={currentModule} />
+      <ConfirmationForm sections={sections} topic={topic} />
     </U.Sub6ColGrid>
     // If started is set to null/false then the overview page will be shown.
 
