@@ -28,6 +28,7 @@ export const NavLink = styled.a`
   font: var(--pop-semi-bold);
   text-decoration: none;
   padding: 15px;
+
   ${props => props.right && css`
     margin-left: auto;
   `}

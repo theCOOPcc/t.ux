@@ -1,34 +1,31 @@
 import React from 'react';
-import * as U from '../../components/TuxComponents/UniversalComponents';
-import Question from '../../components/Question/Question';
-import InjectHTML from '../../components/InjectHTML/InjectHTML';
-import Overview from '../../components/Overview/Overview';
 import ActivityLinks from '../ActivityLinks/ActivityLinks';
+import ActivityMain from '../ActivityMain/ActivityMain';
+import MoreInfo from '../MoreInfo/MoreInfo';
 
-const ActivityBody = ({ 
-  currentModule, 
-  handleAnswers, 
-  started, 
-  links, 
-  user, 
-  activityName,
-  activityTime }) => {
-  return !started ? (
-    <Overview user={user} activityName={activityName} activityTime={activityTime} />
-  ) : (
-    <U.Sub6ColGrid>
-      {/* <U.ColorBlock SubGridBlue></U.ColorBlock> */}
-      {currentModule.type === 'display' ? (
-        <div className="injectParent">
-          <InjectHTML markup={currentModule.contents} />
-        </div>
-      ) : (
-        <Question details={currentModule} handleAnswers={handleAnswers} />
+
+const ActivityBody = ({
+  currentModule,
+  handleAnswers,
+  started,
+  links,
+  finished,
+}) => {
+  return (
+    <>
+      {started === true && (
+        <ActivityMain
+          currentModule={currentModule}
+          handleAnswers={handleAnswers}
+        />
       )}
-    </U.Sub6ColGrid>
+      {started === false && !finished && <MoreInfo />}
+      {started === false && finished === true && (
+        <ActivityLinks links={links} />
+      )}
+    </>
   );
 };
 
 export default ActivityBody;
 
-// // !started  ? (
