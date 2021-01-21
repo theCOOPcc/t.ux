@@ -40,9 +40,9 @@ const Question = ({ details }) => {
           ))}
         </U.FlexBox>
       </U.FlexBox>
+      
       {response && <Feedback response={response} />}
     </U.Sub6ColGrid>
   );
 };
-
 export default Question;

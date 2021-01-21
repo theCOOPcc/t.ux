@@ -346,6 +346,7 @@ export const ProgressContainer = styled.div`
   border-radius: 5px;
   display: flex;
 `;
+
 export const ProgressFiller = styled.div`
   z-index: 1;
   height: 100%;
@@ -543,23 +544,23 @@ export const Heading3 = styled.h3`
 	${(props) =>
     props.blue &&
     css`
-      color: #1b98a0;
+      color: var(--present);
     `}
-
- 
 `;
 
 export const Heading6 = styled.h6`
-  font: 700 16px 'Poppins', sans-serif;
+  font: var(--table);
+  font-weight: 700;
   line-height: 24px;
-`;
+  `;
 
 export const ListLinks = styled.li`
   font: var(--table);
-  font-weight: 400;
   line-height: 24px;
+  font-weight: 400;
   color: var(--present);
 `;
+
 
 /*----- End of Text -----*/
 
