@@ -18,7 +18,7 @@ const Question = ({ details }) => {
     <U.Sub6ColGrid>
       <U.ColorBlock SubGridBlue></U.ColorBlock>
       {/* <A.ProblemStatement>{problemStatement}</A.ProblemStatement> */}
-      <div dangerouslySetInnerHTML={{ __html: problemStatement }}></div>
+      <U.FlexBox problemStatement dangerouslySetInnerHTML={{ __html: problemStatement }}></U.FlexBox>
       <U.FlexBox spaceAround>
         <img src={media} alt="" />
         <U.FlexBox column>

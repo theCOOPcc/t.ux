@@ -1,6 +1,7 @@
 export const HeuristicsSampleData = {
-  name: 'Heuristics',
+  name: '10 Heuristics of UX Design',
   topic: 'Heuristics',
+  time: 30,
   links: [
     {
       text: '10 Usability Heuristics for User Interface Design',
@@ -1650,7 +1651,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'All of the following are examples of User Control and Freedom EXCEPT: ',
+              `All of the following are examples of User Control and Freedom <span style='color: red; font-weight: 700; font-style: italic'>EXCEPT: </span> `,
             timeLimit: 4,
             type: 'multiple-choice',
             media: '/images/question_images/User_Control_Q1/AnswerOptions.png',
@@ -1686,7 +1687,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'Which element on the screen provides the user Control and Freedom to go back and set up the profile again if they have done that by mistake?',
+              `Which element on the screen provides the user <strong>Control and Freedom</strong> to go back and set up the profile again if they have done that by mistake?`,
             timeLimit: 4,
             type: 'multiple-choice',
             media: '/images/question_images/User_Control_Q2/Phone.png',
@@ -1722,7 +1723,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'Which of the following is an example of User Control and Freedom',
+              'Which of the following is an example of <strong>User Control and Freedom</strong>',
             timeLimit: 4,
             type: 'multiple-choice',
             media: '/images/question_images/User_Control_Q3/List.png',
@@ -2098,7 +2099,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'Which of the following is the best choice when allowing a User to select Multiple items?',
+              `Which of the following is the best choice when allowing a User to select <strong>Multiple</strong> items?`,
             timeLimit: 4,
             type: 'multiple-choice',
             media:
@@ -2123,7 +2124,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'Which UI pattern will cause a user discomfort, and increase decision making time? ',
+              `Which <strong>UI pattern</strong> will cause a user discomfort, and increase decision making time? `,
             timeLimit: 4,
             type: 'multiple-choice',
             media:
@@ -2481,7 +2482,7 @@ export const HeuristicsSampleData = {
         {
           type: 'question',
           contents: {
-            problemStatement: 'Choose the best example of Error Prevention',
+            problemStatement: `Choose the best example of <strong>Error Prevention</strong>`,
             timeLimit: 4,
             type: 'multiple-choice',
             media: '/images/question_images/ErrorPrevention.png',
@@ -2517,7 +2518,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'Which elements on the following page help prevent user errors?',
+              `Which elements on the following page help <strong>prevent</strong> user errors?`,
             timeLimit: 4,
             type: 'multiple-choice',
             media: '/images/question_images/Error_Prevention_Q2/Group_84.png',
@@ -2888,7 +2889,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'Is the following image an example of Recognition or Recall? ',
+              `Is the following image an example of <span style="color: red; font-weight: 700">Recognition</span> or <span style='color: #1b9ba0; font-weight: 700'>Recall?</span>`,
             timeLimit: 4,
             type: 'multiple-choice',
             media: '/images/question_images/RecOverRecQ1.png',
@@ -2912,7 +2913,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'Is the following image an example of Recognition or Recall? ',
+              `Is the following image an example of <span style="color: red; font-weight: 700">Recognition</span> or <span style='color: #1b9ba0; font-weight: 700'>Recall?</span>`,
             timeLimit: 4,
             type: 'multiple-choice',
             media:
@@ -3318,7 +3319,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'What does creating keyboard shortcuts for repetative functions give the user in order to execute certain commands? ',
+              'What does creating keyboard shortcuts for repetitive functions give the user in order to execute certain commands? ',
             timeLimit: 4,
             type: 'multiple-choice',
             media: '/images/question_images/flexibilit_efficiency_q2.png',
@@ -3617,7 +3618,7 @@ export const HeuristicsSampleData = {
                   <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="/images/img/line-4-1@1x.svg" /></div>
                   <div class="welcome-C61RwL">
                     <div class="welcome-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
-                      8. Aesthitic &amp; Minimalism
+                      8. Aesthetic &amp; Minimalism
                     </div>
                   </div>
                   <div class="image-caption-C61RwL">
@@ -3643,7 +3644,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'Which of the following is an example of aesthetic and minimalist design?',
+              'Which of the following is an example of <strong>aesthetic and minimalist design</strong>?',
             timeLimit: 4,
             type: 'multiple-choice',
             media:
@@ -3680,7 +3681,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'True or False: This Airbnb homepage is an exmaple of Aesthetic & Minimalism.  ',
+              'True or False: This Airbnb homepage is an example of Aesthetic & Minimalism.  ',
             timeLimit: 4,
             type: 'multiple-choice',
             media:
@@ -3968,7 +3969,7 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'Which of the below elements belong above the fold on a webpage?',
+              `Which of the below elements belong <strong>above the fold</strong> on a webpage?`,
             timeLimit: 4,
             type: 'multiple-choice',
             media:
@@ -4294,7 +4295,7 @@ export const HeuristicsSampleData = {
         {
           type: 'question',
           contents: {
-            problemStatement: 'What color is the sky?',
+            problemStatement: `Which of the following icons is <strong>commonly</strong> used to allow user to recover from an error?`,
             timeLimit: 4,
             type: 'multiple-choice',
             media: '/images/question_images/Error_Recovery_Q1/Group_74.png',
@@ -4949,10 +4950,10 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'How is the image below an example of Help & Documentation?',
+              `How is the image below an example of  <strong> Help & Documentation</strong>?`,
             timeLimit: 4,
             type: 'multiple-choice',
-            media: '',
+            media: '/images/question_images/Help___Documentation_Q1/invisionapp.png',
             answers: [
               {
                 label: 'Productive Help',
@@ -4985,11 +4986,11 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              'All of the following are important to keep in mind when designing for users as they are key to Help & Documentation EXCEPT:',
+              `All of the following are important to keep in mind when designing for users as they are key to <strong>Help & Documentation <span style='color: red'>EXCEPT:</span></strong>`,
             timeLimit: 4,
             type: 'multiple-choice',
             media:
-              '/images/question_images/Help___Documentation_Q2/Group 74.png',
+              '/images/question_images/Help___Documentation_Q2/Group_74.png',
             answers: [
               {
                 label: 'A. Upload Option',

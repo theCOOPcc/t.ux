@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
-
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import ActivityHeader from '../../components/ActivityHeader/ActivityHeader';
 import ActivityBody from '../../components/ActivityBody/ActivityBody';
 import activityService from '../../services/activityService';
 import SideBarNav from '../../components/SideBarNav/SideBarNav';
-// import test from '../../SampleData/img/'
-// import Timer from 'react-compound-timer';
 import { HeuristicsSampleData } from '../../SampleData/HeuristicsSampleData';
+import Overview from '../../components/Overview/Overview';
 
-const Activity = ({ activityId }) => {
+const Activity = ({ activityId, user }) => {
   // State Hooks
   const [activityData, setActivityData] = useState(HeuristicsSampleData);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
   const [started, setStarted] = useState(null);
+  const [finished, setFinished] = useState(null)
   const [completed, setCompleted] = useState('-10');
+
 
   const getActivityData = () => {
     return activityService.getOne(activityId);
@@ -25,7 +25,7 @@ const Activity = ({ activityId }) => {
   //   getActivityData().then((data) => setActivityData(data));
   // }, []);
 
-  const { sections, topic } = activityData;
+  const { sections, topic, name, time } = activityData;
   // Variables
   const currentSection = sections && sections[currentSectionIndex];
   const currentModule =
@@ -36,6 +36,8 @@ const Activity = ({ activityId }) => {
     setCurrentSectionIndex(index);
     setCurrentModuleIndex(0);
     convertIndexToPercent(index);
+    setStarted(true)
+    setFinished(null)
   };
 
   const incrementCurrentSection = () => {
@@ -71,12 +73,11 @@ const Activity = ({ activityId }) => {
     setCompleted(completed);
   };
 
-  const handleStarted = () => {
-    setStarted(true);
-  };
+
   return (
     activityData && (
       <U.Main>
+        {/* <<<<<<< HEAD */}
         <ActivityHeader
           topic={topic}
           name={currentSection.name}
@@ -101,8 +102,45 @@ const Activity = ({ activityId }) => {
           handleCurrentSection={handleCurrentSection}
           handleCurrentModule={handleCurrentModule}
           started={started}
-          handleStarted={handleStarted}
+        // handleStarted={handleStarted}
         />
+        {/* =======
+        {started === null ? (
+          <Overview activityName={name} activityTime={time}setStarted={setStarted}/>
+        ) : (
+          <>
+            <ActivityHeader
+              topic={topic}
+              name={currentSection.name}
+              completed={completed}
+            />
+            <ActivityBody
+              links={activityData.links}
+              sections={sections}
+              started={started}
+              finished={finished}
+              currentModule={currentModule}
+              handleAnswers={handleAnswers}
+            />
+            <SideBarNav
+              sections={sections}
+              currentSection={currentSection}
+              currentSectionIndex={currentSectionIndex}
+              setCurrentSectionIndex={setCurrentSectionIndex}
+              currentModule={currentModule}
+              currentModuleIndex={currentModuleIndex}
+              handleJumpToSection={handleJumpToSection}
+              handleCurrentSection={handleCurrentSection}
+              handleCurrentModule={handleCurrentModule}
+              started={started}
+              finished={finished}
+              setFinished={setFinished}
+              setStarted={setStarted}
+            />
+          </>
+        )}
+
+>>>>>>> 619f24bc55a0fd146673a177ecd5533c2f2e32ed */}
       </U.Main>
     )
   );

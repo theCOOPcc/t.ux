@@ -34,8 +34,8 @@ export const LoginBox = styled.div`
     background-color: var(--true-white);
     box-shadow: var(--common-shadow);
     border-radius: 10px;
-    margin-top: 120px;
-
+    margin-top: 200px;
+    /* clip-path: circle(25% at 50% 0); */
 
     ${props => props.wide && css`
       width: 785px;
@@ -57,6 +57,7 @@ export const LoginBox = styled.div`
     ${props => props.invite && css`
         width: 515px;
         height: 585px;
+        margin-top: 120px;
     `}
 `;
 

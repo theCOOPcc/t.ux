@@ -8,7 +8,7 @@ const EmailForm = ({ errors, values, handleChange, touched }) => {
     <L.Main>
       <U.FlexBox>
         <U.FlexBox realtive>
-        <L.TuxFlower src="/images/TuxFlower.svg"></L.TuxFlower>
+          <L.TuxFlower src="/images/TuxFlower.svg"></L.TuxFlower>
           <L.LoginBox flexStart>
             <U.Heading1 margin50>Enter an Email</U.Heading1>
             <U.Normal setup>

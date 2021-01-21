@@ -47,12 +47,12 @@ const App = () => {
           <Route
             exact
             path="/activity/heuristics"
-            render={() => <Activity activityId="5ff8b36e56fdee429c008d3a" />}
+            render={() => <Activity user={user} activityId="5ff8b36e56fdee429c008d3a" />}
           />
           <Route
             exact
-            path="/activity/accessability"
-            render={() => <Activity />}
+            path="/activity/accessibility"
+            render={() => <Activity user={user} />}
           />
         </>
       );
@@ -63,7 +63,7 @@ const App = () => {
         <Route
           exact
           path="/"
-          render={() => (user ? <User user={user} /> : <Landing />)}
+          render={() => (!user ? <User user={user} /> : <Landing />)}
         />
 
         <Route
