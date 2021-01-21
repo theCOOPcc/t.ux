@@ -13,17 +13,16 @@ const Activity = ({ activityId, user }) => {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
   const [started, setStarted] = useState(null);
-  const [finished, setFinished] = useState(null)
+  const [finished, setFinished] = useState(null);
   const [completed, setCompleted] = useState('-10');
-
 
   const getActivityData = () => {
     return activityService.getOne(activityId);
   };
 
-  // useEffect(() => {
-  //   getActivityData().then((data) => setActivityData(data));
-  // }, []);
+  useEffect(() => {
+    getActivityData().then((data) => setActivityData(data));
+  }, []);
 
   const { sections, topic, name, time } = activityData;
   // Variables
@@ -36,8 +35,8 @@ const Activity = ({ activityId, user }) => {
     setCurrentSectionIndex(index);
     setCurrentModuleIndex(0);
     convertIndexToPercent(index);
-    setStarted(true)
-    setFinished(null)
+    setStarted(true);
+    setFinished(null);
   };
 
   const incrementCurrentSection = () => {
@@ -73,12 +72,15 @@ const Activity = ({ activityId, user }) => {
     setCompleted(completed);
   };
 
-  
   return (
     activityData && (
       <U.Main>
         {started === null ? (
-          <Overview activityName={name} activityTime={time}setStarted={setStarted}/>
+          <Overview
+            activityName={name}
+            activityTime={time}
+            setStarted={setStarted}
+          />
         ) : (
           <>
             <ActivityHeader
@@ -111,7 +113,6 @@ const Activity = ({ activityId, user }) => {
             />
           </>
         )}
-
       </U.Main>
     )
   );
