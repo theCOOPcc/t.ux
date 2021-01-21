@@ -225,6 +225,13 @@ export const FlexBox = styled.div`
       display: block;
     `}
 
+	${(props) =>
+    props.problemStatement &&
+    css`
+      justify-content: flex-start;
+      margin: 30px 60px;
+    `}
+
   ${(props) =>
     props.overview &&
     css`
