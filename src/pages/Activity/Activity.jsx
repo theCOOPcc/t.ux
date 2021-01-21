@@ -102,6 +102,7 @@ const Activity = ({ activityId }) => {
               handleCurrentModule={handleCurrentModule}
               started={started}
               finished={finished}
+              setFinished={setFinished}
               setStarted={setStarted}
             />
           </>
