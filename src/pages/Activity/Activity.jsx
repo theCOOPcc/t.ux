@@ -102,6 +102,7 @@ const Activity = ({ activityId, user }) => {
               handleCurrentModule={handleCurrentModule}
               started={started}
               finished={finished}
+              setFinished={setFinished}
               setStarted={setStarted}
             />
           </>
