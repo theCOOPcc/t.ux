@@ -9,7 +9,7 @@ import SideBarNav from '../../components/SideBarNav/SideBarNav';
 // import Timer from 'react-compound-timer';
 import { HeuristicsSampleData } from '../../SampleData/HeuristicsSampleData';
 
-const Activity = ({ activityId }) => {
+const Activity = ({ activityId, user }) => {
   // State Hooks
   const [activityData, setActivityData] = useState(HeuristicsSampleData);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
@@ -84,9 +84,12 @@ const Activity = ({ activityId }) => {
         />
         <ActivityBody
           links={activityData.links}
+          activityName={activityData.name}
           started={started}
           currentModule={currentModule}
           handleAnswers={handleAnswers}
+          user={user}
+          activityTime={activityData.time}
         />
         <SideBarNav
           sections={sections}

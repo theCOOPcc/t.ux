@@ -5,9 +5,16 @@ import InjectHTML from '../../components/InjectHTML/InjectHTML';
 import Overview from '../../components/Overview/Overview';
 import ActivityLinks from '../ActivityLinks/ActivityLinks';
 
-const ActivityBody = ({ currentModule, handleAnswers, started, links }) => {
+const ActivityBody = ({ 
+  currentModule, 
+  handleAnswers, 
+  started, 
+  links, 
+  user, 
+  activityName,
+  activityTime }) => {
   return !started ? (
-    <Overview />
+    <Overview user={user} activityName={activityName} activityTime={activityTime} />
   ) : (
     <U.Sub6ColGrid>
       {/* <U.ColorBlock SubGridBlue></U.ColorBlock> */}
