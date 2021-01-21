@@ -477,6 +477,12 @@ export const Heading1 = styled.h1`
       margin-top: 50px;
     `}
 
+    ${(props) =>
+    props.darkGrey &&
+    css`
+      color: #323239;
+    `}
+
   ${(props) =>
     props.bolder &&
     css`
@@ -551,7 +557,7 @@ export const AddStudents = styled.label`
   color: rgba(51, 51, 51, 0.75);
   margin-top: 50px;
 `;
-
+// Alexandria pulled this from FromComponents.js
 export const TextArea = styled.textarea`
   width: 580px;
   height: 100px;
@@ -559,6 +565,7 @@ export const TextArea = styled.textarea`
   text-align: left;
   padding: 10px;
 `;
+
 
 /*---------- Checkbox ----------*/
 export const checkedBox = css``;
