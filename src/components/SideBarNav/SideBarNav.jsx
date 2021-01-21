@@ -11,8 +11,11 @@ const SideBarNav = ({
   handleCurrentSection,
   handleCurrentModule,
   started,
-  handleStarted,
+  finished,
+  setFinished,
+  setStarted
 }) => {
+  
   return (
     <U.SideBarParent>
       <U.SideBar>
@@ -40,19 +43,29 @@ const SideBarNav = ({
             )
           )}
         </U.SideBarTextBox>
-        {!started && (
-          <U.WideBtn enable onClick={() => handleStarted()}>
-            Begin
-          </U.WideBtn>
-        )}
-        {started  &&
-          currentSectionIndex < sections.length - 1 &&
-          currentModuleIndex < currentSection.modules.length + 1 && (
+        {/* {started && 
+          currentSectionIndex < sections.length   &&
+          currentModuleIndex <= currentSection.modules.length && currentModuleIndex != sections[sections.length -](
             <U.WideBtn enable onClick={() => handleCurrentModule()}>
               Next
             </U.WideBtn>
-          )}
+          )} */}
 
+        {started && currentSectionIndex === sections.length - 1 && currentModuleIndex === currentSection.modules.length - 1 ? (
+          <U.WideBtn enable onClick={setStarted(false)}>
+            Next
+          </U.WideBtn>
+        ) : (
+          <U.WideBtn enable onClick={() => handleCurrentModule()}>
+            Next
+          </U.WideBtn>
+        )}
+
+
+        {/* if started is now false and !finished then show Next button , which will change finished to true */}
+        {started === false && !finished && <U.WideBtn enable>Fuck you</U.WideBtn>}
+        {/* if started is false and finished equals false then show end button */}
+        {started === false && finished === false && <U.WideBtn enable>End</U.WideBtn>}
         {/* <U.WideBtn enable onClick={() => handleCurrentModule()}>
           Submit
         </U.WideBtn> */}
