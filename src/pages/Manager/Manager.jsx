@@ -5,7 +5,6 @@ import groupAPI from '../../services/groupService';
 import * as mailAPI from '../../services/mail-api';
 import ManagerActivites from '../../components/ManagerActivities/ManagerActivities';
 import ManagerStudentResults from '../../components/ManagerStudentResults/ManagerStudentResults';
-
 import ManageGroupMembers from '../../components/ManageGroupMembers/ManageGroupMembers';
 
 const Manager = () => {
