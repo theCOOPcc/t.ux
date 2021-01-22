@@ -8,6 +8,7 @@ function sendNodeMail(req, res) {
   console.log('send invite emails', req.body);
   const { _id: groupId } = req.body;
   // const { invited } = req.body;
+  // need to update to group selected
   const inviteList = ['corys4139@gmail.com'];
   // invited.forEach((invite) => {
   //   invite.invited === true && inviteList.push(invite.email);
@@ -19,9 +20,12 @@ function sendNodeMail(req, res) {
 }
 
 function sendMail(email, groupId) {
-  const link = `localhost:3000/signup/${groupId}/${email}`;
+  const link = 
+  // localhost:3000/signup/${groupId}/${email}
+  `
+  tux-staging.herokuapp.com/signup/${groupId}/${email}
+  `;
   const subject = 'Welcome To Tux';
-  const message = `You have been invited to Tux, click on the link below to sign up. ${link}`;
   const userName = 'Cory Spicer';
   const managerName= 'Sarah Cooper';
   const anotherLink = '';
