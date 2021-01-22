@@ -18,8 +18,7 @@ const Question = ({ details }) => {
     <U.Sub6ColGrid>
       <U.ColorBlock SubGridBlue></U.ColorBlock>
       {/* <A.ProblemStatement>{problemStatement}</A.ProblemStatement> */}
-      <div dangerouslySetInnerHTML={{ __html: problemStatement }}></div>
-      <A.ProblemStatement>{problemStatement}</A.ProblemStatement>
+      <U.FlexBox problemStatement dangerouslySetInnerHTML={{ __html: problemStatement }}></U.FlexBox>
       <U.FlexBox spaceAround>
         <img src={media} alt="" />
         <U.FlexBox column>
@@ -41,9 +40,9 @@ const Question = ({ details }) => {
           ))}
         </U.FlexBox>
       </U.FlexBox>
-      
       {response && <Feedback response={response} />}
     </U.Sub6ColGrid>
   );
 };
+
 export default Question;

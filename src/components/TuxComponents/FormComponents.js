@@ -24,6 +24,10 @@ export const Select = styled.select`
 
 
 export const TextArea = styled.textarea`
+  background: #FFFFFF;
+  border: 1px solid #3C8582;
+  box-sizing: border-box;
+  border-radius: 5px;
 `;
 
 export const Button = styled.button`
