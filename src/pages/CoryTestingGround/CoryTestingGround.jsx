@@ -149,7 +149,10 @@ class TestingGround extends Component {
         <button onClick={this.handleDemotion}>Demote Me</button>
         <button onClick={this.handleAddGroup}>add group</button>
         <button onClick={this.handleAssignActivity}>assign JT</button>
-        <a href='http://localhost:3000/logout'>Log Out</a>
+        <a href=
+        // 'http://localhost:3000/logout'
+        'http://tux-staging.herokuapp.com'
+        >Log Out</a>
         <h1>Cory Rules</h1>
       </Container>
     )}
