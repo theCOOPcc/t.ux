@@ -1,7 +1,8 @@
 import React from 'react';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 
-const Overview = ({user, activityName, activityTime}) => {
+
+const Overview = ({user, activityName, activityTime, setStarted}) => {
   return (
     <>
     {/* <U.Sub6ColGrid> */}
@@ -24,11 +25,12 @@ const Overview = ({user, activityName, activityTime}) => {
           <U.Normal overview>Begin when you're ready. Good luck!</U.Normal>
         </U.FlexBox>
       </U.FlexBox>
-      <U.WideBtn enable>
+      <U.WideBtn enable onClick={() => setStarted(true)}>
             Begin
         </U.WideBtn>
     {/* </U.Sub6ColGrid> */}
     </>
+
   );
 };
 

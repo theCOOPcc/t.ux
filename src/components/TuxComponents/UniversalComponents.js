@@ -1,13 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
-// export const Placeholder = styled.div`
-// 	width: 520px;
-// 	height: 520px;
-// 	background-color: yellow;
-
-// `;
-
 /*---------- Main Grid ----------*/
 export const Main = styled.main`
   display: grid;
@@ -262,13 +255,13 @@ export const WideBtn = styled.button`
   background-color: var(--enable-btn);
   cursor: pointer;
 
-  &:hover {
+    &:hover {
     background: #236c69;
-  }
+    }
 
-  &:active {
+    &:active {
     box-shadow: var(--btn-active-shadow);
-  }
+    }
 
   /*	${(props) =>
     props.login &&
@@ -374,6 +367,7 @@ export const ProgressContainer = styled.div`
   border-radius: 5px;
   display: flex;
 `;
+
 export const ProgressFiller = styled.div`
   z-index: 1;
   height: 100%;
@@ -390,6 +384,11 @@ export const ProgressLabel = styled.p`
 /*---------- Links ----------*/
 export const LinkTo = styled(Link)`
   color: var(--link-text);
+
+  ${(props) => props.noDecor && css `
+    list-style: none;
+
+  `}
 `;
 
 /*---------- Text ----------*/
@@ -544,6 +543,14 @@ export const Heading1 = styled.h1`
       `}
 `;
 
+export const Heading2 = styled.h2`
+  font: 700 48px 'Poppins', sans-serif;
+  line-height: 24px;
+  color: var(--extraLg-text);
+  text-align: center;
+  margin-top: 75px;
+`;
+
 export const Heading3 = styled.h3`
   font: 500 24px 'Poppins', sans-serif;
   line-height: 36px;
@@ -586,9 +593,25 @@ export const Heading3 = styled.h3`
 	${(props) =>
     props.blue &&
     css`
-      color: #1b98a0;
+      color: var(--present);
     `}
 `;
+
+export const Heading6 = styled.h6`
+  font: var(--table);
+  font-weight: 700;
+  line-height: 24px;
+`;
+
+export const ListLinks = styled.li`
+  font: var(--table);
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--present);
+`;
+
+
+/*----- End of Text -----*/
 
 /*--------------- FORMS ---------------*/
 // from Manage Group Members
