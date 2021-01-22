@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import activityAPI from '../../services/activityService';
-import InviteModal from '../../components/InviteModal/InviteModal';
+import ActivityInvite from '../ActivityInvite/ActivityInvite';
 
 const ManagerActivities = ({
   groups,
   selectedGroupIndex,
   setSelectedGroupIndex,
-  setGroups
+  setGroups,
+  sendEmailInvite
 }) => {
   const [activities, setActivities] = useState('');
   const getActivities = async () => {
@@ -20,19 +21,29 @@ const ManagerActivities = ({
   }, []);
 
   // Modal
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [isOpen, setIsOpen] = useState(false);
+  // const [show, setShow] = useState(false);
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
 
   return (
     <>
-      <InviteModal
+      {/* <InviteModal
         show={show}
         handleClose={handleClose}
         groups={groups}
         setGroups={setGroups}
         selectedGroupIndex={selectedGroupIndex}
         setSelectedGroupIndex={setSelectedGroupIndex}
+      /> */}
+      <ActivityInvite 
+      isOpen={isOpen} 
+      setIsOpen={setIsOpen} 
+      groups={groups}
+      setGroups={setGroups}
+      selectedGroupIndex={selectedGroupIndex}
+      setSelectedGroupIndex={setSelectedGroupIndex}
+      sendEmailInvite={sendEmailInvite}
       />
       <U.FlexBox bordered managerDash column>
         <U.ColorBlock SubGridBlue></U.ColorBlock>
@@ -43,15 +54,16 @@ const ManagerActivities = ({
           activities.map((activity, idx) => (
             <U.FlexBox column wide>
               <U.FlexBox wide spaceBetween>
-              <U.FlexBox >
+                <U.FlexBox>
                   <U.Normal marginLeft>
-                    <U.Icon25 src="/images/icons/Heuristic.svg"></U.Icon25></U.Normal>
+                    <U.Icon25 src="/images/icons/Heuristic.svg"></U.Icon25>
+                  </U.Normal>
                   <U.Normal marginLeft twenty8 key={idx}>
                     {activity.name}
                   </U.Normal>
                 </U.FlexBox>
                 <U.FlexBox alignRight>
-                  <U.WideBtn preview onClick={handleShow}>
+                  <U.WideBtn preview onClick={() => setIsOpen(!isOpen)}>
                     Assign
                   </U.WideBtn>
                   {/* <U.NakedBtn preview>Preview</U.NakedBtn> */}

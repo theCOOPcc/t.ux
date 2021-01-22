@@ -28,7 +28,12 @@ function deleteUser(id) {
 
 // this one works cory
 function getUser(user) {
-  return fetch(`${BASE_URL}${user._id}`, {mode: "cors"})
+  return fetch(`${BASE_URL}${user.id}`, {mode: "cors"})
+  .then(res => res.json())
+}
+
+function getCurrentUser() {
+  return fetch(`${BASE_URL}`+'getMe', {mode: 'cors'})
   .then(res => res.json())
 }
 
@@ -50,5 +55,6 @@ export default {
   getAllUsers,
   deleteUser,
   getUser,
-  updateUser
+  updateUser,
+  getCurrentUser
 }

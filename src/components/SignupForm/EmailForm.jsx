@@ -5,10 +5,10 @@ import * as L from '../TuxComponents/LoginComponents';
 const EmailForm = ({ errors, values, handleChange, touched }) => {
   const { userData } = values
   return (
-    <main>
+    <L.Main>
       <U.FlexBox>
         <U.FlexBox realtive>
-          <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
+          <L.TuxFlower src="/images/TuxFlower.svg"></L.TuxFlower>
           <L.LoginBox flexStart>
             <U.Heading1 margin50>Enter an Email</U.Heading1>
             <U.Normal setup>
@@ -47,7 +47,7 @@ const EmailForm = ({ errors, values, handleChange, touched }) => {
         <U.Normal alignRight>Have an Account?&nbsp;</U.Normal>
         <U.LinkTo to="/login">Log In</U.LinkTo>
       </U.FlexBox>
-    </main>
+    </L.Main>
   );
 };
 

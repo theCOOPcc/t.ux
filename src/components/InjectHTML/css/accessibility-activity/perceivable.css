@@ -1,0 +1,3302 @@
+/* screen - perceivable */
+
+.border-class-1 {
+
+}
+.border-class-2 {
+  border: 1px solid var(--alto);
+}
+.helveticaneue-bold-mine-shaft-16px {
+  color: var(--mine-shaft);
+  font-family: 'Helvetica Neue-Bold', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.perceivable {
+  background-color: var(--white);
+  height: 100vh;
+  margin: 0px;
+  min-height: 3948px;
+  min-width: 1042px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.perceivable .arrow-1Ee8tN {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(90deg);
+  width: 23px;
+}
+.perceivable .arrow-2mtH7D {
+  background-color: transparent;
+  height: 23px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 15px;
+}
+.perceivable .arrow-5RgZvx {
+  background-color: transparent;
+  height: 23px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 16px;
+}
+.perceivable .arrow-5TTYTv {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(-90.47deg);
+  width: 24px;
+}
+.perceivable .arrow-6jc168 {
+  background-color: transparent;
+  height: 23px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 16px;
+}
+.perceivable .arrow-8HDS7L {
+  background-color: transparent;
+  height: 23px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 16px;
+}
+.perceivable .arrow-8VdKlP {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(90deg);
+  width: 23px;
+}
+.perceivable .arrow-9KOfAI {
+  background-color: transparent;
+  height: 23px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 15px;
+}
+.perceivable .arrow-9jZgs5 {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(90deg);
+  width: 23px;
+}
+.perceivable .arrow-CwR3YI {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(90deg);
+  width: 23px;
+}
+.perceivable .arrow-DkpVx9 {
+  background-color: transparent;
+  height: 24px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 15px;
+}
+.perceivable .arrow-EpeAAN {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(-90.47deg);
+  width: 24px;
+}
+.perceivable .arrow-Fd1Dgl {
+  background-color: transparent;
+  height: 23px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 15px;
+}
+.perceivable .arrow-FmLjec {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(-90deg);
+  width: 23px;
+}
+.perceivable .arrow-FqyqBX {
+  background-color: transparent;
+  height: 23px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 16px;
+}
+.perceivable .arrow-L0DJjq {
+  background-color: transparent;
+  height: 20px;
+  position: absolute;
+  right: -2px;
+  top: calc(50.00% - 10px);
+  width: 12px;
+}
+.perceivable .arrow-QxU2w2 {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(-90deg);
+  width: 23px;
+}
+.perceivable .arrow-R23veA {
+  background-color: transparent;
+  height: 23px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 15px;
+}
+.perceivable .arrow-R2adEB {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(90deg);
+  width: 23px;
+}
+.perceivable .arrow-RoxMqt {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(90deg);
+  width: 23px;
+}
+.perceivable .arrow-SaugEM {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(90deg);
+  width: 23px;
+}
+.perceivable .arrow-TZ9Exm {
+  background-color: transparent;
+  height: 24px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 15px;
+}
+.perceivable .arrow-V64ixE {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(-90.47deg);
+  width: 24px;
+}
+.perceivable .arrow-VKDAsf {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(-90.47deg);
+  width: 24px;
+}
+.perceivable .arrow-XiQxux {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(90deg);
+  width: 23px;
+}
+.perceivable .arrow-Y8Vu52 {
+  background-color: transparent;
+  height: 23px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 16px;
+}
+.perceivable .arrow-bls4LO {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(90deg);
+  width: 23px;
+}
+.perceivable .arrow-ciuQSm {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(-90.00deg);
+  width: 23px;
+}
+.perceivable .arrow-fH50B9 {
+  background-color: transparent;
+  height: 24px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 15px;
+}
+.perceivable .arrow-gWxjPS {
+  background-color: transparent;
+  height: 24px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 15px;
+}
+.perceivable .arrow-gwgRCl {
+  background-color: transparent;
+  height: 24px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 15px;
+}
+.perceivable .arrow-k9saW0 {
+  background-color: transparent;
+  height: 23px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 16px;
+}
+.perceivable .arrow-mva8kQ {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(-90.00deg);
+  width: 23px;
+}
+.perceivable .arrow-n2KMxq {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(-90.00deg);
+  width: 23px;
+}
+.perceivable .arrow-oB0zZ2 {
+  background-color: transparent;
+  height: 24px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 15px;
+}
+.perceivable .arrow-oSre6K {
+  background-color: transparent;
+  height: 15px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(90deg);
+  width: 23px;
+}
+.perceivable .arrow-pBJTIg {
+  background-color: transparent;
+  height: 23px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 16px;
+}
+.perceivable .arrow-pYhnqA {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(-90.47deg);
+  width: 24px;
+}
+.perceivable .arrow-qNkBU2 {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(90deg);
+  width: 23px;
+}
+.perceivable .arrow-qoN9IZ {
+  background-color: transparent;
+  height: 15px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(90deg);
+  width: 23px;
+}
+.perceivable .arrow-rSYQDE {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(90deg);
+  width: 23px;
+}
+.perceivable .arrow-vNxSfx {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(-90.47deg);
+  width: 24px;
+}
+.perceivable .arrow-vvzelS {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(-90.47deg);
+  width: 24px;
+}
+.perceivable .arrow-xUkMIC {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(90deg);
+  width: 23px;
+}
+.perceivable .arrow-xtxcog {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(-90.47deg);
+  width: 24px;
+}
+.perceivable .arrow-yZP1J2 {
+  background-color: transparent;
+  height: 23px;
+  position: absolute;
+  right: -4px;
+  top: calc(50.00% - 12px);
+  width: 16px;
+}
+.perceivable .arrow-yjuGQ2 {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -8px;
+  top: calc(50.00% - 8px);
+  transform: rotate(-90.47deg);
+  width: 24px;
+}
+.perceivable .arrows-00LGpa {
+  background-color: transparent;
+  height: 240px;
+  left: 18508px;
+  position: absolute;
+  top: 178px;
+  transform: rotate(-90deg);
+  width: 410px;
+}
+.perceivable .arrows-2P4qUJ {
+  background-color: transparent;
+  height: 822px;
+  left: 22645px;
+  position: absolute;
+  top: -1642px;
+  transform: rotate(0.47deg);
+  width: 367px;
+}
+.perceivable .arrows-3kIbHG {
+  background-color: transparent;
+  height: 240px;
+  left: 4102px;
+  position: absolute;
+  top: 268px;
+  transform: rotate(-90deg);
+  width: 237px;
+}
+.perceivable .arrows-4XW1xH {
+  background-color: transparent;
+  height: 240px;
+  left: 20584px;
+  position: absolute;
+  top: -13428px;
+  transform: rotate(-90deg);
+  width: 392px;
+}
+.perceivable .arrows-4yyt9N {
+  background-color: transparent;
+  height: 240px;
+  left: 17110px;
+  position: absolute;
+  top: -13429px;
+  transform: rotate(-90deg);
+  width: 392px;
+}
+.perceivable .arrows-6y9Vs4 {
+  background-color: transparent;
+  height: 240px;
+  left: 19763px;
+  position: absolute;
+  top: -12698px;
+  width: 297px;
+}
+.perceivable .arrows-AViU91 {
+  background-color: transparent;
+  height: 1201px;
+  left: 23236px;
+  position: absolute;
+  top: -18159px;
+  width: 380px;
+}
+.perceivable .arrows-AqJEqU {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .arrows-C61RwL {
+  background-color: transparent;
+  height: 946px;
+  left: 35707px;
+  position: absolute;
+  top: -1143px;
+  transform: rotate(0.47deg);
+  width: 310px;
+}
+.perceivable .arrows-CTgWnK {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .arrows-HlKRTo {
+  background-color: transparent;
+  height: 562px;
+  left: 32536px;
+  position: absolute;
+  top: 1878px;
+  transform: rotate(0.47deg);
+  width: 571px;
+}
+.perceivable .arrows-J1YQmd {
+  background-color: transparent;
+  height: 946px;
+  left: 37560px;
+  position: absolute;
+  top: -1180px;
+  transform: rotate(0.47deg);
+  width: 478px;
+}
+.perceivable .arrows-JNxCmP {
+  background-color: transparent;
+  height: 240px;
+  left: 47201px;
+  position: absolute;
+  top: -16055px;
+  width: 297px;
+}
+.perceivable .arrows-Jq80WT {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .arrows-K0Quix {
+  background-color: transparent;
+  height: 240px;
+  left: -714px;
+  position: absolute;
+  top: 891px;
+  width: 254px;
+}
+.perceivable .arrows-MGnoC8 {
+  background-color: transparent;
+  height: 240px;
+  left: 24087px;
+  position: absolute;
+  top: 233px;
+  transform: rotate(-90deg);
+  width: 174px;
+}
+.perceivable .arrows-NVuCL2 {
+  background-color: transparent;
+  height: 240px;
+  left: 47508px;
+  position: absolute;
+  top: -16055px;
+  width: 297px;
+}
+.perceivable .arrows-NjZa5V {
+  background-color: transparent;
+  height: 2723px;
+  left: 46935px;
+  position: absolute;
+  top: -16055px;
+  transform: rotate(180deg);
+  width: 256px;
+}
+.perceivable .arrows-OoCC4Z {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .arrows-Pmjxql {
+  background-color: transparent;
+  height: 240px;
+  left: 24160px;
+  position: absolute;
+  top: -17600px;
+  transform: rotate(-90deg);
+  width: 367px;
+}
+.perceivable .arrows-QL5zbd {
+  background-color: transparent;
+  height: 240px;
+  left: 14341px;
+  position: absolute;
+  top: 232px;
+  transform: rotate(-90deg);
+  width: 228px;
+}
+.perceivable .arrows-QxM5SU {
+  background-color: transparent;
+  height: 260px;
+  left: 3858px;
+  position: absolute;
+  top: 3638px;
+  transform: rotate(90.00deg);
+  width: 597px;
+}
+.perceivable .arrows-R7WrHk {
+  background-color: transparent;
+  height: 240px;
+  left: 9508px;
+  position: absolute;
+  top: 290px;
+  transform: rotate(-90deg);
+  width: 192px;
+}
+.perceivable .arrows-V4bTox {
+  background-color: transparent;
+  height: 240px;
+  left: 22258px;
+  position: absolute;
+  top: -16186px;
+  transform: rotate(90deg);
+  width: 483px;
+}
+.perceivable .arrows-VMr6Om {
+  background-color: transparent;
+  height: 1285px;
+  left: 27456px;
+  position: absolute;
+  top: -1495px;
+  transform: rotate(0.47deg);
+  width: 671px;
+}
+.perceivable .arrows-VkPPtx {
+  background-color: transparent;
+  height: 963px;
+  left: 32538px;
+  position: absolute;
+  top: -1177px;
+  transform: rotate(0.47deg);
+  width: 425px;
+}
+.perceivable .arrows-XZCSIE {
+  background-color: transparent;
+  height: 240px;
+  left: 21499px;
+  position: absolute;
+  top: -15449px;
+  transform: rotate(-180deg);
+  width: 297px;
+}
+.perceivable .arrows-YWzA7M {
+  background-color: transparent;
+  height: 240px;
+  left: 1948px;
+  position: absolute;
+  top: 272px;
+  transform: rotate(-90deg);
+  width: 237px;
+}
+.perceivable .arrows-a5WPlX {
+  background-color: transparent;
+  height: 959px;
+  left: 37638px;
+  position: absolute;
+  top: 834px;
+  transform: rotate(0.47deg);
+  width: 548px;
+}
+.perceivable .arrows-a73nmY {
+  background-color: transparent;
+  height: 240px;
+  left: 7714px;
+  position: absolute;
+  top: 282px;
+  transform: rotate(-90deg);
+  width: 207px;
+}
+.perceivable .arrows-dMQSMw {
+  background-color: transparent;
+  height: 240px;
+  left: 23434px;
+  position: absolute;
+  top: 4303px;
+  transform: rotate(90.00deg);
+  width: 480px;
+}
+.perceivable .arrows-eCxQ2N {
+  background-color: transparent;
+  height: 240px;
+  left: 21660px;
+  position: absolute;
+  top: 4834px;
+  transform: rotate(90.00deg);
+  width: 213px;
+}
+.perceivable .arrows-fFhl4P {
+  background-color: transparent;
+  height: 240px;
+  left: 19762px;
+  position: absolute;
+  top: -15449px;
+  transform: rotate(-180deg);
+  width: 297px;
+}
+.perceivable .arrows-fxLfJc {
+  background-color: transparent;
+  height: 240px;
+  left: 21500px;
+  position: absolute;
+  top: -12738px;
+  width: 297px;
+}
+.perceivable .arrows-k63xqQ {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .arrows-mzXdH9 {
+  background-color: transparent;
+  height: 257px;
+  left: 4147px;
+  position: absolute;
+  top: 3816px;
+  transform: rotate(0.47deg);
+  width: 1669px;
+}
+.perceivable .arrows-oGxSr2 {
+  background-color: transparent;
+  height: 24911px;
+  left: 14335px;
+  position: absolute;
+  top: -16055px;
+  width: 32590px;
+}
+.perceivable .arrows-qr8e7q {
+  background-color: transparent;
+  height: 130px;
+  left: 27402px;
+  position: absolute;
+  top: 3427px;
+  transform: rotate(0.47deg);
+  width: 798px;
+}
+.perceivable .arrows-qrGft6 {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .arrows-rxvq3k {
+  background-color: transparent;
+  height: 240px;
+  left: 14651px;
+  position: absolute;
+  top: -830px;
+  transform: rotate(-90deg);
+  width: 450px;
+}
+.perceivable .arrows-rzkej8 {
+  background-color: transparent;
+  height: 240px;
+  left: 20768px;
+  position: absolute;
+  top: 288px;
+  transform: rotate(-90deg);
+  width: 189px;
+}
+.perceivable .arrows-sOxCtc {
+  background-color: transparent;
+  height: 1049px;
+  left: 48612px;
+  position: absolute;
+  top: -16055px;
+  transform: rotate(180deg);
+  width: 389px;
+}
+.perceivable .arrows-uEHKQf {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .arrows-uUmcMD {
+  background-color: transparent;
+  height: 1049px;
+  left: 48213px;
+  position: absolute;
+  top: -16055px;
+  transform: rotate(180deg);
+  width: 389px;
+}
+.perceivable .arrows-ucCvyV {
+  background-color: transparent;
+  height: 240px;
+  left: 18026px;
+  position: absolute;
+  top: -12738px;
+  width: 297px;
+}
+.perceivable .arrows-x5xjB4 {
+  background-color: transparent;
+  height: 240px;
+  left: 16594px;
+  position: absolute;
+  top: 159px;
+  transform: rotate(-90deg);
+  width: 374px;
+}
+.perceivable .arrows-xL517Z {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .arrows-xsJokX {
+  background-color: transparent;
+  height: 240px;
+  left: 18025px;
+  position: absolute;
+  top: -15421px;
+  transform: rotate(-180deg);
+  width: 297px;
+}
+.perceivable .arrows-xxPnZw {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .circle-64h8qX {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(179.53deg);
+  width: 22px;
+}
+.perceivable .circle-6Z2x6E {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -17px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-6riH4Z {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-9l7LTZ {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-AvwTxe {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-C9ICD6 {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  width: 21px;
+}
+.perceivable .circle-DDFxpg {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  width: 21px;
+}
+.perceivable .circle-EBBky8 {
+  background-color: transparent;
+  height: 21px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 10px);
+  width: 22px;
+}
+.perceivable .circle-EWg7nJ {
+  background-color: transparent;
+  height: 21px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 10px);
+  width: 22px;
+}
+.perceivable .circle-EdSul4 {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: 2px;
+  top: calc(50.00% - 11px);
+  width: 21px;
+}
+.perceivable .circle-GW9AFU {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(179.53deg);
+  width: 22px;
+}
+.perceivable .circle-HxPi7R {
+  background-color: transparent;
+  height: 21px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 10px);
+  width: 21px;
+}
+.perceivable .circle-IY6ygl {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-K5xWjC {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(179.53deg);
+  width: 22px;
+}
+.perceivable .circle-M6tyV3 {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(179.53deg);
+  width: 22px;
+}
+.perceivable .circle-OfEFdA {
+  background-color: transparent;
+  height: 21px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 10px);
+  width: 21px;
+}
+.perceivable .circle-PFATD5 {
+  background-color: transparent;
+  height: 21px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 10px);
+  width: 21px;
+}
+.perceivable .circle-QPHUNO {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-RprOp1 {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-Tesj9r {
+  background-color: transparent;
+  height: 21px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 10px);
+  width: 22px;
+}
+.perceivable .circle-VBxTSi {
+  background-color: transparent;
+  height: 21px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 10px);
+  width: 21px;
+}
+.perceivable .circle-WilVx5 {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-Y2m0dH {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(179.53deg);
+  width: 22px;
+}
+.perceivable .circle-Z4uaac {
+  background-color: transparent;
+  height: 21px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 10px);
+  width: 22px;
+}
+.perceivable .circle-Zc68sm {
+  background-color: transparent;
+  height: 21px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 10px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-ezCUt6 {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  width: 21px;
+}
+.perceivable .circle-fNDTVt {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(179.53deg);
+  width: 22px;
+}
+.perceivable .circle-if9zBr {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(179.53deg);
+  width: 22px;
+}
+.perceivable .circle-igEA4I {
+  background-color: transparent;
+  height: 21px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 10px);
+  width: 21px;
+}
+.perceivable .circle-jhlCFz {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(179.53deg);
+  width: 22px;
+}
+.perceivable .circle-jlFycb {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-k6uuW4 {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-krlFG6 {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-m9oihe {
+  background-color: transparent;
+  height: 21px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 10px);
+  width: 22px;
+}
+.perceivable .circle-qHaffj {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-s3unbu {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-s6JKa3 {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(179.53deg);
+  width: 22px;
+}
+.perceivable .circle-uwJica {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  width: 21px;
+}
+.perceivable .circle-wWjyMV {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-x58iqR {
+  background-color: transparent;
+  height: 21px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 10px);
+  width: 22px;
+}
+.perceivable .circle-xMSK42 {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-xXbFhQ {
+  background-color: transparent;
+  height: 21px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 10px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-xZxeJV {
+  background-color: transparent;
+  height: 21px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 10px);
+  width: 22px;
+}
+.perceivable .circle-xsWxhn {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-xx2egJ {
+  background-color: transparent;
+  height: 22px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 11px);
+  transform: rotate(-90deg);
+  width: 21px;
+}
+.perceivable .circle-ycr7Zt {
+  background-color: transparent;
+  height: 21px;
+  position: absolute;
+  right: -18px;
+  top: calc(50.00% - 10px);
+  width: 22px;
+}
+.perceivable .conclusion-C61RwL {
+  background-color: transparent;
+  height: 290px;
+  left: 40px;
+  position: absolute;
+  top: 2145px;
+  width: 962px;
+}
+.perceivable .divider-dotted-C61RwL {
+  background-color: transparent;
+  height: 0px;
+  left: 39px;
+  position: absolute;
+  top: 1117px;
+  width: 962px;
+}
+.perceivable .end-arrow-0aO1VI {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-2afLls {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-53pGde {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-77EOdN {
+  background-color: transparent;
+  bottom: 4px;
+  height: 16px;
+  position: absolute;
+  right: 4px;
+  transform: rotate(90.00deg);
+  width: 16px;
+}
+.perceivable .end-arrow-7SuQQW {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-8k6xAd {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-B81KrX {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-BbwkIO {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-C61RwL {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: -3939px;
+  top: calc(50.00% - 1000px);
+  width: 16px;
+}
+.perceivable .end-arrow-D6XEqY {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 16px;
+}
+.perceivable .end-arrow-DRE5oQ {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-FIkP59 {
+  background-color: transparent;
+  bottom: 4px;
+  height: 16px;
+  position: absolute;
+  right: 4px;
+  transform: rotate(90.00deg);
+  width: 16px;
+}
+.perceivable .end-arrow-FLZs8k {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-GjMvlA {
+  background-color: transparent;
+  bottom: 4px;
+  height: 16px;
+  position: absolute;
+  right: 4px;
+  transform: rotate(90.00deg);
+  width: 16px;
+}
+.perceivable .end-arrow-N6pqu4 {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-N8VbF9 {
+  background-color: transparent;
+  bottom: 4px;
+  height: 16px;
+  position: absolute;
+  right: 4px;
+  transform: rotate(90.00deg);
+  width: 16px;
+}
+.perceivable .end-arrow-NuvwBY {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-NxraJ0 {
+  background-color: transparent;
+  bottom: 4px;
+  height: 16px;
+  position: absolute;
+  right: 4px;
+  transform: rotate(90.00deg);
+  width: 16px;
+}
+.perceivable .end-arrow-QgopHv {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-Qrtl8p {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-Qv573z {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-Uc3bIO {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-V50siW {
+  background-color: transparent;
+  bottom: 4px;
+  height: 16px;
+  position: absolute;
+  right: 4px;
+  transform: rotate(90.00deg);
+  width: 16px;
+}
+.perceivable .end-arrow-Wxfvkr {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 16px;
+}
+.perceivable .end-arrow-XOxNi0 {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-YMmEkW {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-d1MhVV {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-dyxDQU {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-fm9YjI {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-hcxild {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-hvSJxm {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-iPQYgu {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-ixr2pu {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-jTFAAL {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-jeV6nn {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-nbGgow {
+  background-color: transparent;
+  bottom: 4px;
+  height: 16px;
+  position: absolute;
+  right: 4px;
+  transform: rotate(90.00deg);
+  width: 16px;
+}
+.perceivable .end-arrow-neAleF {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-pNWzPk {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-pZEISt {
+  background-color: transparent;
+  bottom: 4px;
+  height: 16px;
+  position: absolute;
+  right: 4px;
+  transform: rotate(90.00deg);
+  width: 16px;
+}
+.perceivable .end-arrow-pflG9e {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-qIbqgp {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-qTIc1H {
+  background-color: transparent;
+  height: 16px;
+  left: 18px;
+  position: absolute;
+  top: 2px;
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-arrow-vFFAA6 {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-vxIQIV {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-wVBmTr {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  width: 16px;
+}
+.perceivable .end-arrow-xDNiYj {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-xx5tTK {
+  background-color: transparent;
+  height: 16px;
+  position: absolute;
+  right: 1px;
+  top: calc(50.00% - 8px);
+  width: 16px;
+}
+.perceivable .end-arrow-xyzGYC {
+  background-color: transparent;
+  bottom: 4px;
+  height: 16px;
+  position: absolute;
+  right: 4px;
+  transform: rotate(90.00deg);
+  width: 16px;
+}
+.perceivable .end-circle-0aO1VI {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-2afLls {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-53pGde {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-77EOdN {
+  background-color: transparent;
+  height: 16px;
+  left: 18px;
+  position: absolute;
+  top: 3px;
+  transform: rotate(-180.00deg);
+  width: 16px;
+}
+.perceivable .end-circle-7SuQQW {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-8k6xAd {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-B81KrX {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-BbwkIO {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-D6XEqY {
+  background-color: transparent;
+  bottom: 3px;
+  height: 16px;
+  left: 18px;
+  position: absolute;
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-DRE5oQ {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-FIkP59 {
+  background-color: transparent;
+  height: 16px;
+  left: 18px;
+  position: absolute;
+  top: 3px;
+  transform: rotate(-180.00deg);
+  width: 16px;
+}
+.perceivable .end-circle-FLZs8k {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-GjMvlA {
+  background-color: transparent;
+  height: 16px;
+  left: 18px;
+  position: absolute;
+  top: 3px;
+  transform: rotate(-180.00deg);
+  width: 16px;
+}
+.perceivable .end-circle-N6pqu4 {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-N8VbF9 {
+  background-color: transparent;
+  height: 16px;
+  left: 18px;
+  position: absolute;
+  top: 3px;
+  transform: rotate(-180.00deg);
+  width: 16px;
+}
+.perceivable .end-circle-NuvwBY {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-NxraJ0 {
+  background-color: transparent;
+  height: 16px;
+  left: 18px;
+  position: absolute;
+  top: 3px;
+  transform: rotate(-180.00deg);
+  width: 16px;
+}
+.perceivable .end-circle-QgopHv {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-Qrtl8p {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-Qv573z {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-Uc3bIO {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-V50siW {
+  background-color: transparent;
+  height: 16px;
+  left: 18px;
+  position: absolute;
+  top: 3px;
+  transform: rotate(-180.00deg);
+  width: 16px;
+}
+.perceivable .end-circle-Wxfvkr {
+  background-color: transparent;
+  bottom: 3px;
+  height: 16px;
+  left: 18px;
+  position: absolute;
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-XOxNi0 {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-YMmEkW {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-d1MhVV {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-dyxDQU {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-fm9YjI {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-hcxild {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-hvSJxm {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-iPQYgu {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-ixr2pu {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-jTFAAL {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-jeV6nn {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-nbGgow {
+  background-color: transparent;
+  height: 16px;
+  left: 18px;
+  position: absolute;
+  top: 3px;
+  transform: rotate(-180.00deg);
+  width: 16px;
+}
+.perceivable .end-circle-neAleF {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-pNWzPk {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-pZEISt {
+  background-color: transparent;
+  height: 16px;
+  left: 18px;
+  position: absolute;
+  top: 3px;
+  transform: rotate(-180.00deg);
+  width: 16px;
+}
+.perceivable .end-circle-pflG9e {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-qIbqgp {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-qTIc1H {
+  background-color: transparent;
+  bottom: 3px;
+  height: 16px;
+  left: 18px;
+  position: absolute;
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-vFFAA6 {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-vxIQIV {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-wVBmTr {
+  background-color: transparent;
+  bottom: 3px;
+  height: 16px;
+  left: 18px;
+  position: absolute;
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-xDNiYj {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-xx5tTK {
+  background-color: transparent;
+  height: 16px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 8px);
+  transform: rotate(180deg);
+  width: 16px;
+}
+.perceivable .end-circle-xyzGYC {
+  background-color: transparent;
+  height: 16px;
+  left: 18px;
+  position: absolute;
+  top: 3px;
+  transform: rotate(-180.00deg);
+  width: 16px;
+}
+.perceivable .five-ways---your-work-C44tDP {
+  background-color: transparent;
+  height: 92.31%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 99.96%;
+}
+.perceivable .five-ways---your-work-IYShxb {
+  background-color: transparent;
+  height: 92.31%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 99.96%;
+}
+.perceivable .five-ways---your-work-X1rVr0 {
+  background-color: transparent;
+  height: 92.31%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 99.97%;
+}
+.perceivable .five-ways---your-work-gMZtlt {
+  background-color: transparent;
+  height: 92.31%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 99.96%;
+}
+.perceivable .five-ways---your-work-tO655I {
+  background-color: transparent;
+  height: 92.31%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 99.96%;
+}
+.perceivable .image-caption-C61RwL {
+  background-color: transparent;
+  height: 34px;
+  left: 40px;
+  position: absolute;
+  top: 1542px;
+  width: 964px;
+}
+.perceivable .image-caption-VMr6Om {
+  background-color: transparent;
+  height: 34px;
+  left: 40px;
+  position: absolute;
+  top: 2955px;
+  width: 964px;
+}
+.perceivable .image-caption-mzXdH9 {
+  background-color: transparent;
+  height: 61px;
+  left: 40px;
+  position: absolute;
+  top: 3791px;
+  width: 964px;
+}
+.perceivable .line-4-xv1xHo {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: -1px;
+  width: 100%;
+}
+.perceivable .line-77EOdN {
+  background-color: transparent;
+  height: calc(100.00% - 3px);
+  left: 14px;
+  position: absolute;
+  top: 5px;
+  transform: rotate(-0.47deg);
+  width: calc(100.00% - 23px);
+}
+.perceivable .line-FIkP59 {
+  background-color: transparent;
+  height: calc(100.00% - 2px);
+  left: 14px;
+  position: absolute;
+  top: 4px;
+  transform: rotate(-0.47deg);
+  width: calc(100.00% - 22px);
+}
+.perceivable .line-GjMvlA {
+  background-color: transparent;
+  height: calc(100.00% - 7px);
+  left: 13px;
+  position: absolute;
+  top: 7px;
+  transform: rotate(-0.47deg);
+  width: calc(100.00% - 20px);
+}
+.perceivable .line-N8VbF9 {
+  background-color: transparent;
+  height: calc(100.00% - 4px);
+  left: 14px;
+  position: absolute;
+  top: 6px;
+  transform: rotate(-0.47deg);
+  width: calc(100.00% - 23px);
+}
+.perceivable .line-NxraJ0 {
+  background-color: transparent;
+  height: calc(100.00% - 7px);
+  left: 10px;
+  position: absolute;
+  top: 7px;
+  transform: rotate(-0.47deg);
+  width: calc(100.00% - 14px);
+}
+.perceivable .line-V50siW {
+  background-color: transparent;
+  height: calc(100.00% - 4px);
+  left: 14px;
+  position: absolute;
+  top: 6px;
+  transform: rotate(-0.47deg);
+  width: calc(100.00% - 23px);
+}
+.perceivable .line-nbGgow {
+  background-color: transparent;
+  height: calc(100.00% - 7px);
+  left: 14px;
+  position: absolute;
+  top: 7px;
+  transform: rotate(-0.47deg);
+  width: calc(100.00% - 21px);
+}
+.perceivable .line-pZEISt {
+  background-color: transparent;
+  height: calc(100.00% - 8px);
+  left: 12px;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-0.47deg);
+  width: calc(100.00% - 17px);
+}
+.perceivable .line-qTIc1H {
+  background-color: transparent;
+  height: calc(100.00% - 13px);
+  left: 14px;
+  position: absolute;
+  top: 6px;
+  width: calc(100.00% - 14px);
+}
+.perceivable .line-xyzGYC {
+  background-color: transparent;
+  height: calc(100.00% - 5px);
+  left: 14px;
+  position: absolute;
+  top: 6px;
+  transform: rotate(-0.47deg);
+  width: calc(100.00% - 23px);
+}
+.perceivable .message-box-scenario-uxVav3 {
+  background-color: rgba(120,214,218,0.2);
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .perceivable-image-C61RwL {
+  background-color: transparent;
+  height: 419px;
+  left: 229px;
+  position: absolute;
+  top: 177px;
+  width: 582px;
+}
+.perceivable .rectangle-48-C61RwL {
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0px 4px 9px rgba(0,0,0,0.25);;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .rectangle-61-C61RwL {
+  background-color: var(--aquamarine);
+  height: 9px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .rectangle-89-l8o00t {
+  background-color: var(--aquamarine);
+  height: 6.80%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .screen-sho--at-1021-1-C61RwL {
+  background-color: transparent;
+  height: 210px;
+  left: 122px;
+  position: absolute;
+  top: 1317px;
+  width: 806px;
+}
+.perceivable .section-header-2P4qUJ {
+  background-color: transparent;
+  height: 26px;
+  left: 40px;
+  position: absolute;
+  top: 3089px;
+  width: 1890px;
+}
+.perceivable .section-header-C61RwL {
+  background-color: transparent;
+  height: 26px;
+  left: 40px;
+  position: absolute;
+  top: 801px;
+  width: 1888px;
+}
+.perceivable .section-header-QxM5SU {
+  background-color: transparent;
+  height: 26px;
+  left: 40px;
+  position: absolute;
+  top: 2488px;
+  width: 1890px;
+}
+.perceivable .section-header-VMr6Om {
+  background-color: transparent;
+  height: 26px;
+  left: 40px;
+  position: absolute;
+  top: 1157px;
+  width: 1890px;
+}
+.perceivable .section-header-mzXdH9 {
+  background-color: transparent;
+  height: 26px;
+  left: 40px;
+  position: absolute;
+  top: 1630px;
+  width: 1890px;
+}
+.perceivable .span1-D0bpM7 {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.perceivable .span1-SQKVtq {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+.perceivable .span1-mWojpO {
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+}
+.perceivable .span1-ptoeQD {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+.perceivable .span1-sx37NZ {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+.perceivable .span2-D0bpM7 {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+.perceivable .span2-SQKVtq {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.perceivable .span2-mWojpO {
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+}
+.perceivable .span2-ptoeQD {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.perceivable .span2-sx37NZ {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.perceivable .span3-D0bpM7 {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.perceivable .span4-D0bpM7 {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+.perceivable .span5-D0bpM7 {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.perceivable .straight-2P4qUJ {
+  background-color: transparent;
+  height: 1.97%;
+  left: 104.32%;
+  position: absolute;
+  top: 24.88%;
+  width: 29.27%;
+}
+.perceivable .straight-4Cnj9O {
+  background-color: transparent;
+  height: 100%;
+  left: 5.70%;
+  position: relative;
+  top: 0px;
+  width: 93.04%;
+}
+.perceivable .straight-4bBlGY {
+  background-color: transparent;
+  height: 100%;
+  left: 7.09%;
+  position: relative;
+  top: 0px;
+  width: 91.39%;
+}
+.perceivable .straight-5lGawT {
+  background-color: transparent;
+  height: 100%;
+  left: 5.70%;
+  position: relative;
+  top: 0px;
+  width: 93.04%;
+}
+.perceivable .straight-BvRG2a {
+  background-color: transparent;
+  height: 100%;
+  left: 7.09%;
+  position: relative;
+  top: 0px;
+  width: 91.39%;
+}
+.perceivable .straight-C61RwL {
+  background-color: transparent;
+  height: 1.97%;
+  left: 2476.10%;
+  position: absolute;
+  top: 22.98%;
+  width: 14.97%;
+}
+.perceivable .straight-IRCBUA {
+  background-color: transparent;
+  height: 100%;
+  left: 5.70%;
+  position: relative;
+  top: 0px;
+  width: 93.04%;
+}
+.perceivable .straight-J1YQmd {
+  background-color: transparent;
+  height: 1.97%;
+  left: 1246.64%;
+  position: absolute;
+  top: 24.06%;
+  width: 73.51%;
+}
+.perceivable .straight-Ku5SWk {
+  background-color: transparent;
+  height: 100%;
+  left: 7.09%;
+  position: relative;
+  top: 0px;
+  width: 91.39%;
+}
+.perceivable .straight-NiiWBv {
+  background-color: transparent;
+  height: 100%;
+  left: 7.09%;
+  position: relative;
+  top: 0px;
+  width: 91.39%;
+}
+.perceivable .straight-QxM5SU {
+  background-color: transparent;
+  height: 5.91%;
+  left: 4588.77%;
+  position: absolute;
+  top: -395.05%;
+  width: 37.24%;
+}
+.perceivable .straight-RN3tVf {
+  background-color: transparent;
+  height: 100%;
+  left: 5.70%;
+  position: relative;
+  top: 0px;
+  width: 93.04%;
+}
+.perceivable .straight-StUVBj {
+  background-color: transparent;
+  height: 100%;
+  left: 5.70%;
+  position: relative;
+  top: 0px;
+  width: 93.04%;
+}
+.perceivable .straight-U97laX {
+  background-color: transparent;
+  height: 100%;
+  left: 7.09%;
+  position: relative;
+  top: 0px;
+  width: 91.39%;
+}
+.perceivable .straight-UHfHL9 {
+  background-color: transparent;
+  height: 100%;
+  left: 5.70%;
+  position: relative;
+  top: 0px;
+  width: 93.04%;
+}
+.perceivable .straight-VMr6Om {
+  background-color: transparent;
+  height: 6.08%;
+  left: 2507.44%;
+  position: absolute;
+  top: 3.65%;
+  transform: rotate(-90deg);
+  width: 29.46%;
+}
+.perceivable .straight-VeMWtl {
+  background-color: transparent;
+  height: 100%;
+  left: 5.70%;
+  position: relative;
+  top: 0px;
+  width: 93.04%;
+}
+.perceivable .straight-XbotIx {
+  background-color: transparent;
+  height: 100%;
+  left: 7.09%;
+  position: relative;
+  top: 0px;
+  width: 91.39%;
+}
+.perceivable .straight-Z3Bd6G {
+  background-color: transparent;
+  height: 100%;
+  left: 5.70%;
+  position: relative;
+  top: 0px;
+  width: 93.04%;
+}
+.perceivable .straight-a5WPlX {
+  background-color: transparent;
+  height: 6.08%;
+  left: 3293.76%;
+  position: absolute;
+  top: 40.28%;
+  transform: rotate(90deg);
+  width: 42.42%;
+}
+.perceivable .straight-bsrUp3 {
+  background-color: transparent;
+  height: 33.33%;
+  left: 8.66%;
+  position: relative;
+  top: 50.00%;
+  width: 120.08%;
+}
+.perceivable .straight-fDlEfQ {
+  background-color: transparent;
+  height: 100%;
+  left: 7.09%;
+  position: relative;
+  top: 0px;
+  width: 91.39%;
+}
+.perceivable .straight-fQfPSS {
+  background-color: transparent;
+  height: 100%;
+  left: 5.70%;
+  position: relative;
+  top: 0px;
+  width: 93.04%;
+}
+.perceivable .straight-h7vOa8 {
+  background-color: transparent;
+  height: 100%;
+  left: 7.09%;
+  position: relative;
+  top: 0px;
+  width: 91.39%;
+}
+.perceivable .straight-hm6SoA {
+  background-color: transparent;
+  height: 100%;
+  left: 7.09%;
+  position: relative;
+  top: 0px;
+  width: 91.39%;
+}
+.perceivable .straight-hnlRxw {
+  background-color: transparent;
+  height: 100%;
+  left: 5.70%;
+  position: relative;
+  top: 0px;
+  width: 93.04%;
+}
+.perceivable .straight-k989eE {
+  background-color: transparent;
+  height: 100%;
+  left: 7.09%;
+  position: relative;
+  top: 0px;
+  width: 91.39%;
+}
+.perceivable .straight-mzXdH9 {
+  background-color: transparent;
+  height: 5.91%;
+  left: 2469.19%;
+  position: absolute;
+  top: 141.41%;
+  width: 42.13%;
+}
+.perceivable .straight-nrrmIW {
+  background-color: transparent;
+  height: 100%;
+  left: 5.70%;
+  position: relative;
+  top: 0px;
+  width: 93.04%;
+}
+.perceivable .straight-nwrCA7 {
+  background-color: transparent;
+  height: 100%;
+  left: 5.70%;
+  position: relative;
+  top: 0px;
+  width: 93.04%;
+}
+.perceivable .straight-qr8e7q {
+  background-color: transparent;
+  height: 1.97%;
+  left: 656.72%;
+  position: absolute;
+  top: 24.06%;
+  width: 27.54%;
+}
+.perceivable .straight-vkgCvA {
+  background-color: transparent;
+  height: 100%;
+  left: 7.09%;
+  position: relative;
+  top: 0px;
+  width: 91.39%;
+}
+.perceivable .straight-w47nXc {
+  background-color: transparent;
+  height: 100%;
+  left: 7.09%;
+  position: relative;
+  top: 0px;
+  width: 91.39%;
+}
+.perceivable .straight-xRxczN {
+  background-color: transparent;
+  height: 100%;
+  left: 5.70%;
+  position: relative;
+  top: 0px;
+  width: 93.04%;
+}
+.perceivable .text-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 554px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 117px;
+  width: 256px;
+}
+.perceivable .text-VMr6Om {
+  background-color: transparent;
+  height: calc(100.00% - 3684px);
+  left: 40px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 840px;
+  width: 963px;
+}
+.perceivable .the-visibi--for-users-2P4qUJ {
+  background-color: transparent;
+  height: auto;
+  left: 40px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 3127px;
+  width: 964px;
+}
+.perceivable .the-visibi--for-users-C61RwL {
+  background-color: transparent;
+  height: 107px;
+  left: 40px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 654px;
+  width: 963px;
+}
+.perceivable .the-visibi--for-users-QxM5SU {
+  background-color: transparent;
+  height: auto;
+  left: 40px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 2527px;
+  width: 964px;
+}
+.perceivable .the-visibi--for-users-T3UoVK {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .the-visibi--for-users-VMr6Om {
+  background-color: transparent;
+  height: 107px;
+  left: 40px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 1183px;
+  width: 964px;
+}
+.perceivable .the-visibi--for-users-jD5qyr {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .the-visibi--for-users-l8o00t {
+  background-color: transparent;
+  color: rgba(102,102,102,1.0);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 24px;
+  height: 73.57%;
+  left: 3.86%;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 10.13%;
+  width: 90.66%;
+}
+.perceivable .the-visibi--for-users-mWuPKx {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+}
+.perceivable .the-visibi--for-users-mzXdH9 {
+  background-color: transparent;
+  height: auto;
+  left: 40px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 1676px;
+  width: 964px;
+}
+.perceivable .vector-C61RwL {
+  background-color: transparent;
+  height: 37px;
+  left: 945px;
+  position: absolute;
+  top: 3873px;
+  width: 60px;
+}
+.perceivable .welcome-C61RwL {
+  background-color: transparent;
+  height: 96px;
+  left: 40px;
+  position: absolute;
+  top: 71px;
+  width: 965px;
+}
+.perceivable .x-0aO1VI {
+  background-color: transparent;
+  height: 170px;
+  left: 78px;
+  position: absolute;
+  top: calc(50.00% - 85px);
+  transform: rotate(90deg);
+  width: calc(100.00% - 155px);
+}
+.perceivable .x-2afLls {
+  background-color: transparent;
+  height: 450px;
+  left: 218px;
+  position: absolute;
+  top: calc(50.00% - 225px);
+  transform: rotate(-90deg);
+  width: calc(100.00% - 435px);
+}
+.perceivable .x-53pGde {
+  background-color: transparent;
+  height: 8px;
+  left: -4px;
+  position: absolute;
+  top: calc(50.00% - 3px);
+  width: calc(100.00% + 7px);
+}
+.perceivable .x-7SuQQW {
+  background-color: transparent;
+  height: 426px;
+  left: 206px;
+  position: absolute;
+  top: calc(50.00% - 213px);
+  transform: rotate(90deg);
+  width: calc(100.00% - 412px);
+}
+.perceivable .x-8k6xAd {
+  background-color: transparent;
+  height: 8px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 4px);
+  width: 100%;
+}
+.perceivable .x-B81KrX {
+  background-color: transparent;
+  height: 186px;
+  left: 86px;
+  position: absolute;
+  top: calc(50.00% - 93px);
+  transform: rotate(90deg);
+  width: calc(100.00% - 172px);
+}
+.perceivable .x-BbwkIO {
+  background-color: transparent;
+  height: 563px;
+  left: 274px;
+  position: absolute;
+  top: calc(50.00% - 282px);
+  transform: rotate(-90.00deg);
+  width: calc(100.00% - 547px);
+}
+.perceivable .x-D6XEqY {
+  background-color: transparent;
+  height: 7px;
+  left: 78px;
+  position: absolute;
+  top: 9px;
+  width: calc(100.00% - 79px);
+}
+.perceivable .x-DRE5oQ {
+  background-color: transparent;
+  height: 7px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 4px);
+  width: 100%;
+}
+.perceivable .x-FLZs8k {
+  background-color: transparent;
+  height: 8px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 4px);
+  width: 100%;
+}
+.perceivable .x-N6pqu4 {
+  background-color: transparent;
+  height: 7px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 4px);
+  width: 100%;
+}
+.perceivable .x-NuvwBY {
+  background-color: transparent;
+  height: 442px;
+  left: 217px;
+  position: absolute;
+  top: calc(50.00% - 221px);
+  transform: rotate(-90deg);
+  width: calc(100.00% - 434px);
+}
+.perceivable .x-QgopHv {
+  background-color: transparent;
+  height: 7px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 4px);
+  width: 100%;
+}
+.perceivable .x-Qrtl8p {
+  background-color: transparent;
+  height: 314px;
+  left: 150px;
+  position: absolute;
+  top: calc(50.00% - 157px);
+  transform: rotate(90deg);
+  width: calc(100.00% - 300px);
+}
+.perceivable .x-Qv573z {
+  background-color: transparent;
+  height: 7px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 4px);
+  width: 100%;
+}
+.perceivable .x-RbyElE {
+  background-color: transparent;
+  height: calc(100.00% - 15px);
+  left: 18px;
+  position: absolute;
+  top: 8px;
+  width: 80px;
+}
+.perceivable .x-Uc3bIO {
+  background-color: transparent;
+  height: 220px;
+  left: 102px;
+  position: absolute;
+  top: calc(50.00% - 110px);
+  transform: rotate(90deg);
+  width: calc(100.00% - 205px);
+}
+.perceivable .x-Wxfvkr {
+  background-color: transparent;
+  height: 7px;
+  left: 78px;
+  position: absolute;
+  top: 9px;
+  width: calc(100.00% - 79px);
+}
+.perceivable .x-XOxNi0 {
+  background-color: transparent;
+  height: 8px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 4px);
+  width: 100%;
+}
+.perceivable .x-YMmEkW {
+  background-color: transparent;
+  height: 200px;
+  left: 93px;
+  position: absolute;
+  top: calc(50.00% - 100px);
+  transform: rotate(90deg);
+  width: calc(100.00% - 186px);
+}
+.perceivable .x-back-C61RwL {
+  background-color: transparent;
+  height: 24px;
+  left: 21px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 22px;
+  white-space: nowrap;
+  width: 52px;
+}
+.perceivable .x-d1MhVV {
+  background-color: transparent;
+  height: 358px;
+  left: 176px;
+  position: absolute;
+  top: calc(50.00% - 179px);
+  transform: rotate(90deg);
+  width: calc(100.00% - 351px);
+}
+.perceivable .x-dyxDQU {
+  background-color: transparent;
+  height: 454px;
+  left: 220px;
+  position: absolute;
+  top: calc(50.00% - 227px);
+  transform: rotate(-90.00deg);
+  width: calc(100.00% - 440px);
+}
+.perceivable .x-fm9YjI {
+  background-color: transparent;
+  height: 8px;
+  left: 8px;
+  position: absolute;
+  top: calc(50.00% - 4px);
+  width: calc(100.00% - 8px);
+}
+.perceivable .x-hcxild {
+  background-color: transparent;
+  height: 356px;
+  left: 170px;
+  position: absolute;
+  top: calc(50.00% - 178px);
+  transform: rotate(90deg);
+  width: calc(100.00% - 341px);
+}
+.perceivable .x-hqJgpG {
+  background-color: transparent;
+  height: calc(100.00% - 15px);
+  left: 18px;
+  position: absolute;
+  top: 8px;
+  width: 80px;
+}
+.perceivable .x-hvSJxm {
+  background-color: transparent;
+  height: 7px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 4px);
+  width: 100%;
+}
+.perceivable .x-iPQYgu {
+  background-color: transparent;
+  height: 8px;
+  left: -4px;
+  position: absolute;
+  top: calc(50.00% - 3px);
+  width: calc(100.00% + 7px);
+}
+.perceivable .x-ixr2pu {
+  background-color: transparent;
+  height: 206px;
+  left: 96px;
+  position: absolute;
+  top: calc(50.00% - 103px);
+  transform: rotate(-90.00deg);
+  width: calc(100.00% - 191px);
+}
+.perceivable .x-jTFAAL {
+  background-color: transparent;
+  height: 184px;
+  left: 84px;
+  position: absolute;
+  top: calc(50.00% - 92px);
+  transform: rotate(90deg);
+  width: calc(100.00% - 169px);
+}
+.perceivable .x-jXfIdh {
+  background-color: transparent;
+  height: calc(100.00% - 15px);
+  left: 18px;
+  position: absolute;
+  top: 8px;
+  width: 80px;
+}
+.perceivable .x-jeV6nn {
+  background-color: transparent;
+  height: 388px;
+  left: 187px;
+  position: absolute;
+  top: calc(50.00% - 194px);
+  transform: rotate(90deg);
+  width: calc(100.00% - 374px);
+}
+.perceivable .x-neAleF {
+  background-color: transparent;
+  height: 228px;
+  left: 107px;
+  position: absolute;
+  top: calc(50.00% - 114px);
+  transform: rotate(90deg);
+  width: calc(100.00% - 214px);
+}
+.perceivable .x-pNWzPk {
+  background-color: transparent;
+  height: 7px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 4px);
+  width: 100%;
+}
+.perceivable .x-pflG9e {
+  background-color: transparent;
+  height: 7px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 4px);
+  width: 100%;
+}
+.perceivable .x-qIbqgp {
+  background-color: transparent;
+  height: 228px;
+  left: 107px;
+  position: absolute;
+  top: calc(50.00% - 114px);
+  transform: rotate(90deg);
+  width: calc(100.00% - 214px);
+}
+.perceivable .x-vFFAA6 {
+  background-color: transparent;
+  height: 336px;
+  left: 164px;
+  position: absolute;
+  top: calc(50.00% - 168px);
+  transform: rotate(90deg);
+  width: calc(100.00% - 328px);
+}
+.perceivable .x-vxIQIV {
+  background-color: transparent;
+  height: 358px;
+  left: 176px;
+  position: absolute;
+  top: calc(50.00% - 179px);
+  transform: rotate(90deg);
+  width: calc(100.00% - 351px);
+}
+.perceivable .x-wVBmTr {
+  background-color: transparent;
+  height: 7px;
+  left: 78px;
+  position: absolute;
+  top: 9px;
+  width: calc(100.00% - 79px);
+}
+.perceivable .x-xDNiYj {
+  background-color: transparent;
+  height: 7px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 4px);
+  width: 100%;
+}
+.perceivable .x-xx5tTK {
+  background-color: transparent;
+  height: 7px;
+  left: 0px;
+  position: absolute;
+  top: calc(50.00% - 4px);
+  width: 100%;
+}
+.perceivable .x0yno3-lx1t--lxxz7-p-1-C61RwL {
+  background-color: transparent;
+  height: 570px;
+  left: 121px;
+  position: absolute;
+  top: 3197px;
+  width: 797px;
+}
+.perceivable .x1-perceivable-0O6yUh {
+  background-color: transparent;
+  height: 50.00%;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 25.00%;
+  width: 100%;
+}
+.perceivable .x1v3-q-ducp-jns7-q-1-1-C61RwL {
+  background-color: transparent;
+  height: 267px;
+  left: 234px;
+  position: absolute;
+  top: 2668px;
+  width: 574px;
+}
+.poppins-bold-casal-48px {
+  color: var(--casal);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-bold-chilean-fire-60px {
+  color: var(--chilean-fire);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-medium-black-16px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.poppins-normal-black-14px {
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 14px;
+}
+.poppins-normal-black-18px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.poppins-normal-black-18px-2 {
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 18px;
+}
+.poppins-normal-white-28px {
+  color: transparent;
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 28px;
+}
+.poppins-semi-bold-black-24px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+.proximanova-bold-black-40px {
+  color: var(--black);
+  font-family: 'Proxima Nova-Bold', Helvetica, Arial, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+:root {
+  --alto: rgba(221,221,221,1.0);
+  --aquamarine: rgba(120,214,218,1.0);
+  --black: rgba(0,0,0,1.0);
+  --casal: rgba(54,96,98,1.0);
+  --chilean-fire: rgba(243,119,6,1.0);
+  --mine-shaft: rgba(51,51,51,1.0);
+  --mountain-mist: rgba(153,153,153,1.0);
+  --onyx: rgba(58,58,58,1.0);
+  --white: rgba(255,255,255,1.0);
+}

@@ -35,7 +35,8 @@ class Login extends Component {
     const { email, pw } = this.state;
 
     return (
-      <main>
+      <>
+      <L.Main>
       <U.FlexBox>
         <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
         <L.LoginBox>
@@ -80,12 +81,12 @@ class Login extends Component {
               to="/passwordresetrequest"
             >Forgot Password?</U.LinkTo>*/}
           </U.FlexBox>
-          <U.WideBtn login 
+          <L.LoginBtn  
               disabled={
                 email.length > 0 && pw.length > 0
                 ? false
                 : true
-              }>Log In</U.WideBtn>
+              }>Log In</L.LoginBtn>
         </form>
         </L.LoginBox>
       </U.FlexBox>
@@ -95,7 +96,8 @@ class Login extends Component {
           to="/signup"
         >Sign Up</U.LinkTo>
       </U.FlexBox>
-    </main>
+    </L.Main>
+    </>
     );
   }
 }

@@ -1,39 +1,42 @@
 import React, { useState, useEffect } from 'react';
-import SideBarNav from '../../pages/HeuristicsActivity/SideBarNav';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import ActivityHeader from '../../components/ActivityHeader/ActivityHeader';
 import ActivityBody from '../../components/ActivityBody/ActivityBody';
-// import test from '../../SampleData/img/'
-// import Timer from 'react-compound-timer';
+import activityService from '../../services/activityService';
+import SideBarNav from '../../components/SideBarNav/SideBarNav';
+import { HeuristicsSampleData } from '../../SampleData/HeuristicsSampleData';
+import Overview from '../../components/Overview/Overview';
 
-const Activity = ({ details }) => {
+const Activity = ({ activityId, user }) => {
   // State Hooks
-  const { sections, topic, _id, name } = details;
+  const [activityData, setActivityData] = useState(HeuristicsSampleData);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
+  const [started, setStarted] = useState(null);
+  const [finished, setFinished] = useState(null);
   const [completed, setCompleted] = useState('-10');
 
+  const getActivityData = () => {
+    return activityService.getOne(activityId);
+  };
+
+  useEffect(() => {
+    getActivityData().then((data) => setActivityData(data));
+  }, []);
+
+  const { sections, topic, name, time } = activityData;
   // Variables
-  const currentSection = sections[currentSectionIndex];
-  const currentModule = currentSection.modules[currentModuleIndex];
-  // const [sessionData, setSessionData] = useState({
-  //   userName: 'Dan Boterashvili',
-  //   activityId: _id,
-  //   activityName: name,
-  //   activityTopic: topic,
-  //   sections: [
-  //     {
-  //       sectionName: currentSection.name,
-  //       sectionModules: [{ moduleType: currentModule.type }],
-  //     },
-  //   ],
-  // });
+  const currentSection = sections && sections[currentSectionIndex];
+  const currentModule =
+    currentSection && currentSection.modules[currentModuleIndex];
 
   // Helper Functions
   const handleJumpToSection = (index) => {
     setCurrentSectionIndex(index);
     setCurrentModuleIndex(0);
     convertIndexToPercent(index);
+    setStarted(true);
+    setFinished(null);
   };
 
   const incrementCurrentSection = () => {
@@ -65,33 +68,51 @@ const Activity = ({ details }) => {
 
   const convertIndexToPercent = (newIndex) => {
     const index = newIndex - 1;
-    const completed = index === 0 ? 0 : `${index}0`; 
+    const completed = index === 0 ? 0 : `${index}0`;
     setCompleted(completed);
   };
-  return (
-    <U.Main>
-      <ActivityHeader
-        topic={topic}
-        name={currentSection.name}
-        completed={completed}
-      />
 
-      <ActivityBody
-        currentModule={currentModule}
-        handleAnswers={handleAnswers} 
-      />
-      <SideBarNav
-        sections={sections}
-        currentSection={currentSection}
-        currentSectionIndex={currentSectionIndex}
-        setCurrentSectionIndex={setCurrentSectionIndex}
-        currentModule={currentModule}
-        currentModuleIndex={currentModuleIndex}
-        handleJumpToSection={handleJumpToSection}
-        handleCurrentSection={handleCurrentSection}
-        handleCurrentModule={handleCurrentModule}
-      />
-    </U.Main>
+  return (
+    activityData && (
+      <U.Main>
+        {started === null ? (
+          <Overview
+            activityName={name}
+            activityTime={time}
+            setStarted={setStarted}
+          />
+        ) : (
+          <>
+            <ActivityHeader name={currentSection.name} completed={completed} />
+            <ActivityBody
+              name={name}
+              links={activityData.links}
+              topic={topic}
+              sections={sections}
+              started={started}
+              finished={finished}
+              currentModule={currentModule}
+              handleAnswers={handleAnswers}
+            />
+            <SideBarNav
+              sections={sections}
+              currentSection={currentSection}
+              currentSectionIndex={currentSectionIndex}
+              setCurrentSectionIndex={setCurrentSectionIndex}
+              currentModule={currentModule}
+              currentModuleIndex={currentModuleIndex}
+              handleJumpToSection={handleJumpToSection}
+              handleCurrentSection={handleCurrentSection}
+              handleCurrentModule={handleCurrentModule}
+              started={started}
+              finished={finished}
+              setFinished={setFinished}
+              setStarted={setStarted}
+            />
+          </>
+        )}
+      </U.Main>
+    )
   );
 };
 

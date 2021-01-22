@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Button } from 'react-bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import groupAPI from '../../services/groupService';
 import * as mailAPI from '../../services/mail-api';
 import ManagerActivites from '../../components/ManagerActivities/ManagerActivities';
@@ -47,6 +47,7 @@ const Manager = () => {
   };
 
   const sendEmailInvite = async (group) => {
+    console.log('sending email front end')
     await mailAPI.create(group);
   };
 
@@ -91,6 +92,7 @@ const Manager = () => {
         setGroups={setGroups}
         selectedGroupIndex={selectedGroupIndex}
         setSelectedGroupIndex={setSelectedGroupIndex}
+        sendEmailInvite={sendEmailInvite}
       />
       <ManageGroupMembers
         groups={groups}

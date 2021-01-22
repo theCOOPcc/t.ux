@@ -13,42 +13,33 @@ router.get(
 router.get(
   '/google/oauth2callback',
   passport.authenticate(
-    'google',
+    'google'
+    ,
     {
         // we need to dial in our redirect URLs once users have been authenticated: what page do they land on?
-        successRedirect: 
-        // "http://taketux.io/activity/heuristics",
+        // successRedirect: 
         // "http://localhost:3000/activity/heuristics",
-        "https://tux-staging.herokuapp.com/activity/heuristics/",
+        // "http://taketux.io/activity/heuristics",
+        // "https://tux-staging.herokuapp.com/activity/heuristics/",
         failureRedirect: "/login",
     }
-    // generateUserToken
-  )
+  ), function (req, res) {
+    console.log('AUTHENTICATED USER', req.user)
+    res.redirect(
+      // 'http://localhost:3000/activity/heuristics'
+      'http://tux-staging.herokuapp.com/activity/heuristics'
+      )
+  }
 );
+
 router.get('/logout', function (req, res) {
+  console.log('logging out', req.user)
   req.logout();
-  res.redirect('/');
+  res.redirect(
+    // 'http://localhost:3000'
+    'http://tux-staging.herokuapp.com'
+    );
 });
 /*---------- Protected Routes ----------*/
-
-function isLoggedIn(req, res, next) {
-  if (req.isAuthenticated()) return next();
-  res.redirect('/auth/google');
-}
-
-// function createJWT(user) {
-//     return jwt.sign(
-//       { user }, // data payload
-//       process.env.SECRET,
-//       { expiresIn: "24h" }
-//     );
-//   }
-
-// function generateUserToken(req, res) {
-//     console.log('generating user token', req)
-//     // const accessToken = token.createJWT(req.user);
-//     // console.log('user token: ', accessToken)
-//     // res.render('https://localhost:3000', { accessToken })
-// }
 
 module.exports = router;

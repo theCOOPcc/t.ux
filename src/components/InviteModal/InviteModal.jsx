@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import EmailCheckbox from "../../components/EmailCheckbox/EmailCheckbox";
 import groupAPI from "../../services/groupService";
 import * as mailAPI from "../../services/mail-api";

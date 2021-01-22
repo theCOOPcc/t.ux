@@ -1,21 +1,31 @@
 import React from 'react';
-import * as U from '../../components/TuxComponents/UniversalComponents';
-import Question from '../../components/Question/Question';
-import InjectHTML from '../../components/InjectHTML/InjectHTML';
+import ActivityLinks from '../ActivityLinks/ActivityLinks';
+import ActivityMain from '../ActivityMain/ActivityMain';
+import ConfirmationForm from '../ConfirmationForm/ConfirmationForm'
 
-const ActivityBody = ({ currentModule, handleAnswers }) => {
+const ActivityBody = ({
+  currentModule,
+  handleAnswers,
+  started,
+  links,
+  finished,
+  sections,
+  name
+}) => {
   return (
-    <U.Sub6ColGrid>
-      {/* <U.ColorBlock SubGridBlue></U.ColorBlock> */}
-      {currentModule.type === 'display' ? (
-        <div className="injectParent">
-          <InjectHTML markup={currentModule.contents} />
-        </div>
-      ) : (
-        <Question details={currentModule} handleAnswers={handleAnswers}/>
+    <>
+      {started === true && (
+        <ActivityMain
+          currentModule={currentModule}
+          handleAnswers={handleAnswers}
+        />
       )}
-    </U.Sub6ColGrid>
+      {started === false && finished === null && <ConfirmationForm sections={sections} name={name} />}
+      {started === false && finished === true && (
+        <ActivityLinks links={links} />
+      )}
+    </>
   );
 };
 
-export default ActivityBody; 
+export default ActivityBody;

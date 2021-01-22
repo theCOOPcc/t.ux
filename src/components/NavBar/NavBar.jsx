@@ -1,97 +1,45 @@
 import React from 'react';
 import * as N from '../TuxComponents/NavComponents';
 import * as U from '../TuxComponents/UniversalComponents';
- 
-const NavBar = ({ user, handleLogout }) => {
+
+const NavBar = ({
+  user,
+  handleLogout
+}) => {
   return (
     <>
-      {!user ? (
+      <N.Header>
+        {/* Color Bar */}
+        <U.ColorBlock tuxBlue></U.ColorBlock>
+        <U.ColorBlock tuxYellow></U.ColorBlock>
+        <U.ColorBlock tuxWhite></U.ColorBlock>
+        <U.ColorBlock tuxGrey></U.ColorBlock>
+        <U.ColorBlock tuxBlack></U.ColorBlock>
+        <U.ColorBlock tuxRed></U.ColorBlock>
+
         <N.Nav>
-        {/* View Not Logged In */}
-
-          {/* Color Bar */}
-          <U.ColorBlock tuxBlue></U.ColorBlock>
-          <U.ColorBlock tuxYellow></U.ColorBlock>
-          <U.ColorBlock tuxWhite></U.ColorBlock>
-          <U.ColorBlock tuxGrey></U.ColorBlock>
-          <U.ColorBlock tuxBlack></U.ColorBlock>
-          <U.ColorBlock tuxRed></U.ColorBlock>
-
-          <N.NavRow2>
-          {/* Logo */}
           <N.NavLink href="/">
             <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
           </N.NavLink>
-          <N.NavLink right href="/login">
-            Log In
-          </N.NavLink>
-          <N.NavLink  href="/signup">
-            Sign Up
-          </N.NavLink>
-        </N.NavRow2>
+
+          {!user ? (
+            <>
+              <N.NavLink right href="/login">
+                Log In
+              </N.NavLink>
+              <N.NavLink href="/signup">Sign Up</N.NavLink>
+            </>
+          ) : (
+            user && (
+              <>
+                <N.NavLink right>{user.firstName}</N.NavLink>
+                <N.Avatar src={user.avatar} alt="User Profile Pic" />
+                <N.NavLink href="/" onClick={handleLogout}>Log Out</N.NavLink>
+              </>
+            )
+          )}
         </N.Nav>
-        
-      ) : user.userPermissions === 0 ?
-        <N.Nav>
-          {/* Color Bar */}
-          <U.ColorBlock tuxBlue></U.ColorBlock>
-          <U.ColorBlock tuxYellow></U.ColorBlock>
-          <U.ColorBlock tuxWhite></U.ColorBlock>
-          <U.ColorBlock tuxGrey></U.ColorBlock>
-          <U.ColorBlock tuxBlack></U.ColorBlock>
-          <U.ColorBlock tuxRed></U.ColorBlock>
-
-        <N.NavRow2>
-        {/* Logo */}
-        <N.NavLink href="/">
-
-        <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
-        </N.NavLink>
-
-          <N.NavLink  href="/activities">
-            Activities
-          </N.NavLink>
-          <N.NavLink right href=" ">
-            {user.name}
-          </N.NavLink>
-          <N.NavLink  href=" " onClick={handleLogout}>
-            LogOut
-          </N.NavLink>
-
-        </N.NavRow2>
-        </N.Nav>
-      : user.userPermissions === 100 ? (
-        <N.Nav>
-          {/* Color Bar */}
-          <U.ColorBlock tuxBlue></U.ColorBlock>
-          <U.ColorBlock tuxYellow></U.ColorBlock>
-          <U.ColorBlock tuxWhite></U.ColorBlock>
-          <U.ColorBlock tuxGrey></U.ColorBlock>
-          <U.ColorBlock tuxBlack></U.ColorBlock>
-          <U.ColorBlock tuxRed></U.ColorBlock>
-
-        <N.NavRow2>
-        {/* Logo */}
-        <N.NavLink href="/">
-          <N.Logo src="/images/logo.png" alt="Tux Logo"></N.Logo>
-        </N.NavLink>
-          <N.NavLink right href=" ">
-            {user.name}
-          </N.NavLink>
-          <N.NavLink left href="/activities/create ">
-            Create Activity
-          </N.NavLink>
-          <N.NavLink href="/activities">
-            Activities
-          </N.NavLink>
-          <N.NavLink farRight href=" " onClick={handleLogout}>
-            Log Out
-          </N.NavLink>
-        </N.NavRow2>
-        </N.Nav>
-      )
-      :
-      <p>You need a navbar</p>}
+      </N.Header>
     </>
   );
 };
