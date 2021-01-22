@@ -47,6 +47,7 @@ const Manager = () => {
   };
 
   const sendEmailInvite = async (group) => {
+    console.log('sending email front end')
     await mailAPI.create(group);
   };
 
@@ -91,6 +92,7 @@ const Manager = () => {
         setGroups={setGroups}
         selectedGroupIndex={selectedGroupIndex}
         setSelectedGroupIndex={setSelectedGroupIndex}
+        sendEmailInvite={sendEmailInvite}
       />
       <ManageGroupMembers
         groups={groups}

@@ -13,9 +13,11 @@ const ActivityInvite = ({
     setGroups,
     selectedGroupIndex,
     setSelectedGroupIndex,
+    sendEmailInvite
 }) => {
     const [newGroups, setNewGroups] = useState("");
     const handleSendInvite = async () => {
+        console.log('function fired')
         const groupToInvite = await groupAPI.update(groups[selectedGroupIndex]);
         console.log(groupToInvite);
         // TODO: send group info to nodemailer api
@@ -109,7 +111,7 @@ const ActivityInvite = ({
                 ))}
                 </div>
             {/* </div> */}
-            <button className="send-invite">Send Invite</button>
+            <button className="send-invite" onClick={()=>handleSendInvite()}>Send Invite</button>
             <p className="or">or</p>
             <button className="copy-link">Copy Link<img className="copy" src="/images/icons/copy-icon.png" width="28" height="28" alt="copy icon"></img></button>
         </L.LoginBox>  

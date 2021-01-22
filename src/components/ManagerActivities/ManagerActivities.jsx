@@ -8,6 +8,7 @@ const ManagerActivities = ({
   selectedGroupIndex,
   setSelectedGroupIndex,
   setGroups,
+  sendEmailInvite
 }) => {
   const [activities, setActivities] = useState('');
   const getActivities = async () => {
@@ -42,6 +43,7 @@ const ManagerActivities = ({
       setGroups={setGroups}
       selectedGroupIndex={selectedGroupIndex}
       setSelectedGroupIndex={setSelectedGroupIndex}
+      sendEmailInvite={sendEmailInvite}
       />
       <U.FlexBox bordered managerDash column>
         <U.ColorBlock SubGridBlue></U.ColorBlock>
