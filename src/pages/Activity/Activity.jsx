@@ -13,18 +13,18 @@ const Activity = ({ activityId, user }) => {
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
   const [started, setStarted] = useState(null);
-  const [finished, setFinished] = useState(null)
+  const [finished, setFinished] = useState(null);
   const [completed, setCompleted] = useState('-10');
 
   const getActivityData = () => {
     return activityService.getOne(activityId);
   };
 
-  // useEffect(() => {
-  //   getActivityData().then((data) => setActivityData(data));
-  // }, []);
+  useEffect(() => {
+    getActivityData().then((data) => setActivityData(data));
+  }, []);
 
-  const { sections, topic } = activityData;
+  const { sections, topic, name, time } = activityData;
   // Variables
   const currentSection = sections && sections[currentSectionIndex];
   const currentModule =
@@ -35,6 +35,8 @@ const Activity = ({ activityId, user }) => {
     setCurrentSectionIndex(index);
     setCurrentModuleIndex(0);
     convertIndexToPercent(index);
+    setStarted(true);
+    setFinished(null);
   };
 
   const incrementCurrentSection = () => {
@@ -70,21 +72,23 @@ const Activity = ({ activityId, user }) => {
     setCompleted(completed);
   };
 
-  
   return (
     activityData && (
       <U.Main>
         {started === null ? (
-          <Overview setStarted={setStarted}/>
+          <Overview
+            activityName={name}
+            activityTime={time}
+            setStarted={setStarted}
+          />
         ) : (
           <>
-            <ActivityHeader
-              topic={topic}
-              name={currentSection.name}
-              completed={completed}
-            />
+            <ActivityHeader name={currentSection.name} completed={completed} />
             <ActivityBody
+              name={name}
               links={activityData.links}
+              topic={topic}
+              sections={sections}
               started={started}
               finished={finished}
               currentModule={currentModule}
@@ -102,11 +106,11 @@ const Activity = ({ activityId, user }) => {
               handleCurrentModule={handleCurrentModule}
               started={started}
               finished={finished}
+              setFinished={setFinished}
               setStarted={setStarted}
             />
           </>
         )}
-
       </U.Main>
     )
   );

@@ -7,9 +7,11 @@ const activitiesCtrl = require('../controllers/activities');
 /*---------- Protected Routes ----------*/
 // router.use(require('../config/auth'));
 router.get('/', activitiesCtrl.index);
-router.post('/', checkAuth, activitiesCtrl.create);
+router.post('/', 
+// checkAuth, 
+activitiesCtrl.create);
 router.get('/:id', 
-checkAuth, 
+// checkAuth, 
 activitiesCtrl.show);
 router.put('/:id', checkAuth, activitiesCtrl.update);
 router.delete('/:id', checkAuth, activitiesCtrl.delete);

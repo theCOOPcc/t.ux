@@ -4950,10 +4950,10 @@ export const HeuristicsSampleData = {
           type: 'question',
           contents: {
             problemStatement:
-              `How is the image below an example of <strong>Help & Documentation</strong>?`,
+              `How is the image below an example of  <strong> Help & Documentation</strong>?`,
             timeLimit: 4,
             type: 'multiple-choice',
-            media: '',
+            media: '/images/question_images/Help___Documentation_Q1/invisionapp.png',
             answers: [
               {
                 label: 'Productive Help',
@@ -4990,7 +4990,7 @@ export const HeuristicsSampleData = {
             timeLimit: 4,
             type: 'multiple-choice',
             media:
-              '/images/question_images/Help___Documentation_Q2/Group 74.png',
+              '/images/question_images/Help___Documentation_Q2/Group_74.png',
             answers: [
               {
                 label: 'A. Upload Option',

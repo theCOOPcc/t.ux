@@ -48,9 +48,9 @@ const ModifyGroup = ({
             <U.WideBtn teal onClick={handleAddToGroup}>
               Add To Group
             </U.WideBtn>
-            <U.WideBtn teal onClick={() => setCreateGroup(!createGroup)}>
+            <a href="" onClick={() => setCreateGroup(!createGroup)}>
               Create Group
-            </U.WideBtn>
+            </a>
           </>
         )}
       </U.FlexBox>

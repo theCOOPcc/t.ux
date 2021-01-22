@@ -1,8 +1,7 @@
 import React from 'react';
 import ActivityLinks from '../ActivityLinks/ActivityLinks';
 import ActivityMain from '../ActivityMain/ActivityMain';
-import MoreInfo from '../MoreInfo/MoreInfo';
-
+import ConfirmationForm from '../ConfirmationForm/ConfirmationForm'
 
 const ActivityBody = ({
   currentModule,
@@ -10,6 +9,8 @@ const ActivityBody = ({
   started,
   links,
   finished,
+  sections,
+  name
 }) => {
   return (
     <>
@@ -19,7 +20,7 @@ const ActivityBody = ({
           handleAnswers={handleAnswers}
         />
       )}
-      {started === false && !finished && <MoreInfo />}
+      {started === false && finished === null && <ConfirmationForm sections={sections} name={name} />}
       {started === false && finished === true && (
         <ActivityLinks links={links} />
       )}
@@ -28,4 +29,3 @@ const ActivityBody = ({
 };
 
 export default ActivityBody;
-

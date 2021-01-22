@@ -3,8 +3,6 @@ import ReactModal from 'react-modal';
 import * as U from '../TuxComponents/UniversalComponents';
 import * as L from '../TuxComponents/LoginComponents';
 import EmailCheckbox from "../../components/EmailCheckbox/EmailCheckbox";
-import groupAPI from "../../services/groupService";
-import * as mailAPI from "../../services/mail-api";
 import './ActivityInvite.css';
 const ActivityInvite = ({ 
     isOpen, 
