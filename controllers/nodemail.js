@@ -21,8 +21,8 @@ function sendNodeMail(req, res) {
 
 function sendMail(email, groupId) {
   const link = 
-  `localhost:3000/signup/${groupId}/${email}`
-  // `tux-staging.herokuapp.com/signup/${groupId}/${email}`;
+  // `localhost:3000/signup/${groupId}/${email}`
+  `tux-staging.herokuapp.com/signup/${groupId}/${email}`;
   const subject = 'Welcome To Tux';
   const userName = 'Cory Spicer';
   const managerName= 'Sarah Cooper';
