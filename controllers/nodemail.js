@@ -21,8 +21,8 @@ function sendNodeMail(req, res) {
 
 function sendMail(email, groupId) {
   const link = 
-  // `localhost:3000/signup/${groupId}/${email}`
-  `tux-staging.herokuapp.com/signup/${groupId}/${email}`;
+  `localhost:3000/login`
+  // `tux-staging.herokuapp.com/login/`;
   const subject = 'Welcome To Tux';
   const userName = 'Cory Spicer';
   const managerName= 'Sarah Cooper';
@@ -46,8 +46,8 @@ function sendMail(email, groupId) {
       <br></br>
       <p>You've been invited by your instructor ${managerName} to take one of our activities. If it is your first time, you will need to sign up for an account with your gmail in order to gain access. If you don't have a gmail account you'll need to create one <a href=${link}>here</a>.</p>
       <br></br>
-      <p>Click on the link below to get started:</p>
-      <a href=${anotherLink}>Another Link</a>
+      <p> on the link below to get started:</p>
+      <a href=${anotherLink}>Already have an account? Click Here!</a>
       <br></br>
       <p>Thanks,<p>
       <br></br>
