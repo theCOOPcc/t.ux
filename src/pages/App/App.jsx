@@ -4,7 +4,7 @@ import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import User from '../User/User';
 import * as U from '../../components/TuxComponents/UniversalComponents';
-import NavBar from '../../components/NavBar/NavBar';
+import NavBar from '../../components/TuxComponents/layouts/NavBar'
 import authService from '../../services/authService';
 import Landing from '../Landing/Landing';
 import PreviewActivity from '../PreviewActivity/PreviewActivity';

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 // import {Link} from 'react-router-dom'
+import { common_shadow } from './utilities'
 
 /*---------- Main Grid ----------*/
 export const Main = styled.main`
@@ -32,7 +33,7 @@ export const LoginBox = styled.div`
     width: 425px;
     height: 510px;
     background-color: var(--true-white);
-    box-shadow: var(--common-shadow);
+    box-shadow: ${common_shadow};
     border-radius: 10px;
     margin-top: 200px;
     /* clip-path: circle(25% at 50% 0); */
@@ -76,7 +77,7 @@ export const GoogleBox = styled.a`
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-    box-shadow: var(--common-shadow);
+    box-shadow: ${common_shadow};
     text-decoration: none;
 `;
 
