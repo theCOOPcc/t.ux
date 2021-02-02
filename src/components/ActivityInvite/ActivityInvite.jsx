@@ -19,10 +19,10 @@ const ActivityInvite = ({
     const [newGroups, setNewGroups] = useState("");
     const handleSendInvite = async () => {
         console.log('function fired')
-        const groupToInvite = await groupAPI.update(groups[selectedGroupIndex]);
-        console.log(groupToInvite);
+        // const groupToInvite = await groupAPI.update(groups[selectedGroupIndex]);
+        // console.log(groupToInvite);
         // TODO: send group info to nodemailer api
-        mailAPI.create(groupToInvite);
+        // mailAPI.create(groupToInvite);
     };
     const handleCopyLink = () => {
       //
