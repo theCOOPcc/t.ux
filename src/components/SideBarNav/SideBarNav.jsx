@@ -10,12 +10,10 @@ const SideBarNav = ({
   handleJumpToSection,
   handleCurrentSection,
   handleCurrentModule,
-  started,
-  setStarted,
-  finished,
-  setFinished,
 }) => {
-  const { sections } = useContext(ActivityContext);
+  const { sections, started, finished, setStarted, setFinished } = useContext(
+    ActivityContext
+  );
   return (
     <U.SideBarParent>
       <U.SideBar>

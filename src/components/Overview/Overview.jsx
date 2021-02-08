@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import { ActivityContext } from '../../contexts/ActivityContext';
 
-const Overview = ({ user, setStarted }) => {
-  const { name: activityName, time: activityTime } = useContext(
+const Overview = ({ user }) => {
+  const { name: activityName, time: activityTime, setStarted } = useContext(
     ActivityContext
   );
   return (

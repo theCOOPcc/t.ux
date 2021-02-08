@@ -80,7 +80,7 @@ const Activity = ({ activityId, user }) => {
     activityData && (
       <U.Main>
         {started === null ? (
-          <Overview setStarted={setStarted} />
+          <Overview />
         ) : (
           <>
             <ActivityHeader name={currentSection.name} completed={completed} />
@@ -97,10 +97,6 @@ const Activity = ({ activityId, user }) => {
               handleJumpToSection={handleJumpToSection}
               handleCurrentSection={handleCurrentSection}
               handleCurrentModule={handleCurrentModule}
-              started={started}
-              finished={finished}
-              setFinished={setFinished}
-              setStarted={setStarted}
             />
           </>
         )}

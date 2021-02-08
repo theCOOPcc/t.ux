@@ -21,7 +21,14 @@ const ActivityContextProvider = ({ activityId, children }) => {
 
   return (
     <ActivityContext.Provider
-      value={{ ...activityData, started, finished, completed }}
+      value={{
+        ...activityData,
+        started,
+        finished,
+        completed,
+        setStarted,
+        setFinished,
+      }}
     >
       {children}
     </ActivityContext.Provider>
