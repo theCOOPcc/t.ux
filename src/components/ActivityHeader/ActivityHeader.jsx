@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ActivityContext } from '../../contexts/ActivityContext';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 
-const ActivityHeader = ({topic,name,completed}) => {
+const ActivityHeader = () => {
+  const { completed, currentSection, topic } = useContext(ActivityContext);
+  const { name } = currentSection;
   return (
     <U.InfoBar>
       <U.Heading1 bolder>{topic}</U.Heading1>
@@ -14,4 +17,3 @@ const ActivityHeader = ({topic,name,completed}) => {
 };
 
 export default ActivityHeader;
- 

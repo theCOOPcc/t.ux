@@ -19,6 +19,12 @@ const ActivityContextProvider = ({ activityId, children }) => {
     getActivityData().then((data) => setActivityData(data));
   }, []);
 
+  // Variables
+  const { sections } = activityData;
+  const currentSection = sections && sections[currentSectionIndex];
+  const currentModule =
+    currentSection && currentSection.modules[currentModuleIndex];
+
   return (
     <ActivityContext.Provider
       value={{
@@ -28,6 +34,8 @@ const ActivityContextProvider = ({ activityId, children }) => {
         completed,
         setStarted,
         setFinished,
+        currentSection,
+        currentModule
       }}
     >
       {children}

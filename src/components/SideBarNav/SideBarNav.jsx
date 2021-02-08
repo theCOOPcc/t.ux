@@ -3,17 +3,23 @@ import { ActivityContext } from '../../contexts/ActivityContext';
 import * as U from '../TuxComponents/UniversalComponents';
 
 const SideBarNav = ({
-  currentSection,
+  // currentSection,
   currentSectionIndex,
-  currentModule,
+  // currentModule,
   currentModuleIndex,
   handleJumpToSection,
   handleCurrentSection,
   handleCurrentModule,
 }) => {
-  const { sections, started, finished, setStarted, setFinished } = useContext(
-    ActivityContext
-  );
+  const {
+    sections,
+    started,
+    finished,
+    setStarted,
+    setFinished,
+    currentSection,
+    currentModule,
+  } = useContext(ActivityContext);
   return (
     <U.SideBarParent>
       <U.SideBar>

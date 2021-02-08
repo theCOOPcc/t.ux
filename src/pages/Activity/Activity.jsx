@@ -83,16 +83,11 @@ const Activity = ({ activityId, user }) => {
           <Overview />
         ) : (
           <>
-            <ActivityHeader name={currentSection.name} completed={completed} />
-            <ActivityBody
-              currentModule={currentModule}
-              handleAnswers={handleAnswers}
-            />
+            <ActivityHeader />
+            <ActivityBody handleAnswers={handleAnswers} />
             <SideBarNav
-              currentSection={currentSection}
               currentSectionIndex={currentSectionIndex}
               setCurrentSectionIndex={setCurrentSectionIndex}
-              currentModule={currentModule}
               currentModuleIndex={currentModuleIndex}
               handleJumpToSection={handleJumpToSection}
               handleCurrentSection={handleCurrentSection}
