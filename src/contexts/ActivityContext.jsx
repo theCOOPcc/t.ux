@@ -11,6 +11,7 @@ const ActivityContextProvider = ({ activityId, children }) => {
   const [finished, setFinished] = useState(null);
   const [completed, setCompleted] = useState('-10');
 
+  // Set Activity from Database
   const getActivityData = () => {
     return activityService.getOne(activityId);
   };
@@ -25,6 +26,48 @@ const ActivityContextProvider = ({ activityId, children }) => {
   const currentModule =
     currentSection && currentSection.modules[currentModuleIndex];
 
+  // Helper Functions
+  const handleJumpToSection = (index) => {
+    setCurrentSectionIndex(index);
+    setCurrentModuleIndex(0);
+    convertIndexToPercent(index);
+    setStarted(true);
+    setFinished(null);
+  };
+
+  const incrementCurrentSection = () => {
+    setCurrentSectionIndex(currentSectionIndex + 1);
+  };
+
+  const handleCurrentSection = () => {
+    incrementCurrentSection();
+    // Push new section data into section array
+    // Reset Module Index to 0
+    setCurrentModuleIndex(0);
+    // Convert to percentage for Progress Bar
+    convertIndexToPercent(currentSectionIndex);
+  };
+
+  const updateCurrentModule = () => {
+    setCurrentModuleIndex(currentModuleIndex + 1);
+  };
+
+  const handleCurrentModule = () => {
+    currentModuleIndex < currentSection.modules.length - 1
+      ? updateCurrentModule()
+      : handleCurrentSection();
+  };
+
+  const handleAnswers = (answers) => {
+    console.log(answers);
+  };
+
+  const convertIndexToPercent = (newIndex) => {
+    const index = newIndex - 1;
+    const completed = index === 0 ? 0 : `${index}0`;
+    setCompleted(completed);
+  };
+
   return (
     <ActivityContext.Provider
       value={{
@@ -35,7 +78,13 @@ const ActivityContextProvider = ({ activityId, children }) => {
         setStarted,
         setFinished,
         currentSection,
-        currentModule
+        currentModule,
+        handleAnswers,
+        handleCurrentModule,
+        handleCurrentSection,
+        handleJumpToSection,
+        currentSectionIndex,
+        currentModuleIndex,
       }}
     >
       {children}

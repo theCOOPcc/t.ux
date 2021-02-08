@@ -1,102 +1,26 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import { ActivityContext } from '../../contexts/ActivityContext';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import ActivityHeader from '../../components/ActivityHeader/ActivityHeader';
 import ActivityBody from '../../components/ActivityBody/ActivityBody';
-import activityService from '../../services/activityService';
 import SideBarNav from '../../components/SideBarNav/SideBarNav';
-import { HeuristicsSampleData } from '../../SampleData/HeuristicsSampleData';
 import Overview from '../../components/Overview/Overview';
 
-const Activity = ({ activityId, user }) => {
-  // State Hooks
-  const [activityData, setActivityData] = useState(HeuristicsSampleData);
-  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
-  const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
-  const [started, setStarted] = useState(null);
-  const [finished, setFinished] = useState(null);
-  const [completed, setCompleted] = useState('-10');
-
-  // useContext hook for this Activity component.
-  const { name } = useContext(ActivityContext);
-
-  const getActivityData = () => {
-    return activityService.getOne(activityId);
-  };
-
-  useEffect(() => {
-    getActivityData().then((data) => setActivityData(data));
-  }, []);
-
-  const { sections, topic, time } = activityData;
-  // Variables
-  const currentSection = sections && sections[currentSectionIndex];
-  const currentModule =
-    currentSection && currentSection.modules[currentModuleIndex];
-
-  // Helper Functions
-  const handleJumpToSection = (index) => {
-    setCurrentSectionIndex(index);
-    setCurrentModuleIndex(0);
-    convertIndexToPercent(index);
-    setStarted(true);
-    setFinished(null);
-  };
-
-  const incrementCurrentSection = () => {
-    setCurrentSectionIndex(currentSectionIndex + 1);
-  };
-
-  const handleCurrentSection = () => {
-    incrementCurrentSection();
-    // Push new section data into section array
-    // Reset Module Index to 0
-    setCurrentModuleIndex(0);
-    // Convert to percentage for Progress Bar
-    convertIndexToPercent(currentSectionIndex);
-  };
-
-  const updateCurrentModule = () => {
-    setCurrentModuleIndex(currentModuleIndex + 1);
-  };
-
-  const handleCurrentModule = () => {
-    currentModuleIndex < currentSection.modules.length - 1
-      ? updateCurrentModule()
-      : handleCurrentSection();
-  };
-
-  const handleAnswers = (answers) => {
-    console.log(answers);
-  };
-
-  const convertIndexToPercent = (newIndex) => {
-    const index = newIndex - 1;
-    const completed = index === 0 ? 0 : `${index}0`;
-    setCompleted(completed);
-  };
+const Activity = () => {
+  const { started } = useContext(ActivityContext);
 
   return (
-    activityData && (
-      <U.Main>
-        {started === null ? (
-          <Overview />
-        ) : (
-          <>
-            <ActivityHeader />
-            <ActivityBody handleAnswers={handleAnswers} />
-            <SideBarNav
-              currentSectionIndex={currentSectionIndex}
-              setCurrentSectionIndex={setCurrentSectionIndex}
-              currentModuleIndex={currentModuleIndex}
-              handleJumpToSection={handleJumpToSection}
-              handleCurrentSection={handleCurrentSection}
-              handleCurrentModule={handleCurrentModule}
-            />
-          </>
-        )}
-      </U.Main>
-    )
+    <U.Main>
+      {started === null ? (
+        <Overview />
+      ) : (
+        <>
+          <ActivityHeader />
+          <ActivityBody />
+          <SideBarNav />
+        </>
+      )}
+    </U.Main>
   );
 };
 
