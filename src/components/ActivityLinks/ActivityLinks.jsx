@@ -2,6 +2,18 @@ import React, { useContext } from 'react';
 import { ActivityContext } from '../../contexts/ActivityContext';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 
+const LinkList = ({ links }) => {
+  <ul>
+    {links.map((link, index) => (
+      <U.ListLinks>
+        <U.LinkTo noDecor key={index} href={link.url}>
+          {link.text}
+        </U.LinkTo>
+      </U.ListLinks>
+    ))}
+  </ul>;
+};
+
 const ActivityLinks = () => {
   const { links } = useContext(ActivityContext);
   return (
@@ -14,7 +26,8 @@ const ActivityLinks = () => {
           accessibility.
         </U.Normal>
         <U.Heading6>Articles:</U.Heading6>
-        <ul>
+        <LinkList links={links} />
+        {/* <ul>
           {links.map((link, index) => (
             <U.ListLinks>
               <U.LinkTo noDecor key={index} href={link.url}>
@@ -22,7 +35,7 @@ const ActivityLinks = () => {
               </U.LinkTo>
             </U.ListLinks>
           ))}
-        </ul>
+        </ul> */}
       </U.FlexBox>
     </U.Sub6ColGrid>
   );

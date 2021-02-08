@@ -5,7 +5,6 @@ import ActivityMain from '../ActivityMain/ActivityMain';
 import ConfirmationForm from '../ConfirmationForm/ConfirmationForm';
 
 const ActivityBody = () => {
-  // Context instead of props
   const { started, finished } = useContext(ActivityContext);
   return (
     <>

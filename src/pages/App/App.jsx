@@ -15,6 +15,7 @@ import Activity from '../Activity/Activity';
 import userService from '../../services/userService';
 
 import ActivityContextProvider from '../../contexts/ActivityContext';
+import ManagerContextProvider from '../../contexts/ManagerContext';
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -39,28 +40,30 @@ const App = () => {
       <>
         <NavBar user={user} handleLogout={handleLogout} />
         <Route exact path="/activities" render={() => <IndexActivities />} />
-        <Route exact path="/manager-dashboard" render={() => <Manager />} />
+        {/* <Route exact path="/manager-dashboard" render={() => <Manager />} /> */}
+        <Route
+          exact
+          path="/manager-dashboard"
+          render={() => (
+            <ManagerContextProvider>
+              <Manager />
+            </ManagerContextProvider>
+          )}
+        />
         <Route
           exact
           path="/preview-activity"
           render={({ location }) => <PreviewActivity location={location} />}
         />
+
         <Route
           exact
           path="/activity/heuristics"
-          render={() => (
-            <Activity user={user} activityId="6009f75ea00e3f38a7c65c7d" />
-          )}
-        />
-        <Route
-          exact
-          path="/activity/heuristics1"
           render={() => (
             <ActivityContextProvider activityId="6009f75ea00e3f38a7c65c7d">
               <Activity />
             </ActivityContextProvider>
           )}
-          // render={() => <Activity user={user} activityId="6009f75ea00e3f38a7c65c7d" />}
         />
         <Route
           exact
