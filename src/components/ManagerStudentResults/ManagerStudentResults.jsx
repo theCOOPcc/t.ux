@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ManagerContext } from '../../contexts/ManagerContext';
+
 import * as U from '../../components/TuxComponents/UniversalComponents';
 
-const ManagerStudentResults = ({ results }) => {
+const ManagerStudentResults = () => {
+  const { results } = useContext(ManagerContext);
   return (
     <U.FlexBox bordered managerDash column>
       <U.ColorBlock SubGridBlue />

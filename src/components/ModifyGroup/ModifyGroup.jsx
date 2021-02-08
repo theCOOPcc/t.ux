@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ManagerContext } from '../../contexts/ManagerContext';
+
 import GroupUserTable from '../../components/GroupUserTable/GroupUserTable';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 
-const ModifyGroup = ({
-  selectedGroupIndex,
-  setSelectedGroupIndex,
-  groups,
-  handleAddToGroup,
-  createGroup,
-  setCreateGroup,
-  textInput,
-  handleTextInputChange,
-}) => {
+const ModifyGroup = ({ createGroup, setCreateGroup }) => {
+  const {
+    groups,
+    selectedGroupIndex,
+    setSelectedGroupIndex,
+    handleAddToGroup,
+    textInput,
+    handleTextInputChange,
+  } = useContext(ManagerContext);
+  
   return (
     <>
       <U.FlexBox column>

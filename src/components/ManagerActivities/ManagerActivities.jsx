@@ -4,17 +4,16 @@ import * as U from '../../components/TuxComponents/UniversalComponents';
 import activityAPI from '../../services/activityService';
 import ActivityInvite from '../ActivityInvite/ActivityInvite';
 
-const ManagerActivities = ({
-  sendEmailInvite,
-}) => {
+const ManagerActivities = () => {
   const {
     groups,
     setGroups,
     selectedGroupIndex,
     setSelectedGroupIndex,
+    sendEmailInvite,
   } = useContext(ManagerContext);
 
-  // TODO: replace with useContext call to ActivityContext
+  
   const [activities, setActivities] = useState('');
   const getActivities = async () => {
     const activities = activityAPI.getAll();
