@@ -11,8 +11,6 @@ const ActivityContextProvider = ({ activityId, children }) => {
   const [finished, setFinished] = useState(null);
   const [completed, setCompleted] = useState('-10');
 
-
-
   const getActivityData = () => {
     return activityService.getOne(activityId);
   };
@@ -22,7 +20,9 @@ const ActivityContextProvider = ({ activityId, children }) => {
   }, []);
 
   return (
-    <ActivityContext.Provider value={activityData}>
+    <ActivityContext.Provider
+      value={{ ...activityData, started, finished, completed }}
+    >
       {children}
     </ActivityContext.Provider>
   );

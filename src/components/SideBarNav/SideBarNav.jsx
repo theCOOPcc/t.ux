@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ActivityContext } from '../../contexts/ActivityContext';
 import * as U from '../TuxComponents/UniversalComponents';
 
 const SideBarNav = ({
-  sections,
   currentSection,
   currentSectionIndex,
   currentModule,
@@ -15,6 +15,7 @@ const SideBarNav = ({
   finished,
   setFinished,
 }) => {
+  const { sections } = useContext(ActivityContext);
   return (
     <U.SideBarParent>
       <U.SideBar>

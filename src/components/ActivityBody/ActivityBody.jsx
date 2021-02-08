@@ -4,13 +4,11 @@ import ActivityLinks from '../ActivityLinks/ActivityLinks';
 import ActivityMain from '../ActivityMain/ActivityMain';
 import ConfirmationForm from '../ConfirmationForm/ConfirmationForm';
 
-const ActivityBody = ({
-  currentModule,
-  handleAnswers,
-  started,
-  finished,
-}) => {
-  const { name, links, sections } = useContext(ActivityContext);
+const ActivityBody = ({ currentModule, handleAnswers }) => {
+  // Context instead of props
+  const { name, links, sections, started, finished } = useContext(
+    ActivityContext
+  );
   return (
     <>
       {started === true && (
