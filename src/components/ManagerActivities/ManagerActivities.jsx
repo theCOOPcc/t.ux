@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import {ManagerContext} from '../../contexts/ManagerContext'
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import activityAPI from '../../services/activityService';
 import ActivityInvite from '../ActivityInvite/ActivityInvite';
 
 const ManagerActivities = ({
-  groups,
   selectedGroupIndex,
   setSelectedGroupIndex,
-  setGroups,
   sendEmailInvite
 }) => {
+
+  const {groups, setGroups } = useContext(ManagerContext)
+
   const [activities, setActivities] = useState('');
   const getActivities = async () => {
     const activities = activityAPI.getAll();

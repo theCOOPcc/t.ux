@@ -85,8 +85,6 @@ const Manager = () => {
       <h1>Manager Landing Page</h1>
       <ManagerStudentResults results={results} />
       <ManagerActivites
-        groups={groups}
-        setGroups={setGroups}
         selectedGroupIndex={selectedGroupIndex}
         setSelectedGroupIndex={setSelectedGroupIndex}
         sendEmailInvite={sendEmailInvite}
