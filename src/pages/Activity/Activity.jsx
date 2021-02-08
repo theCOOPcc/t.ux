@@ -78,13 +78,8 @@ const Activity = ({ activityId, user }) => {
   return (
     activityData && (
       <U.Main>
-        {console.log(name)}
         {started === null ? (
-          <Overview
-            activityName={name}
-            activityTime={time}
-            setStarted={setStarted}
-          />
+          <Overview setStarted={setStarted} />
         ) : (
           <>
             <ActivityHeader name={currentSection.name} completed={completed} />

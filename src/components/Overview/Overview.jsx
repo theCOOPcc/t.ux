@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import * as U from '../../components/TuxComponents/UniversalComponents';
+import { ActivityContext } from '../../contexts/ActivityContext';
 
-const Overview = ({ user, activityName, activityTime, setStarted }) => {
+const Overview = ({ user, setStarted }) => {
+  const { name: activityName, time: activityTime } = useContext(
+    ActivityContext
+  );
   return (
     <>
       {/* <U.Sub6ColGrid> */}
