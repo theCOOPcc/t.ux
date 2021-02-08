@@ -17,6 +17,7 @@ const Activity = ({ activityId, user }) => {
   const [finished, setFinished] = useState(null);
   const [completed, setCompleted] = useState('-10');
 
+  // useContext hook for this Activity component.
   const { name } = useContext(ActivityContext);
 
   const getActivityData = () => {
@@ -84,10 +85,6 @@ const Activity = ({ activityId, user }) => {
           <>
             <ActivityHeader name={currentSection.name} completed={completed} />
             <ActivityBody
-              name={name}
-              links={activityData.links}
-              topic={topic}
-              sections={sections}
               started={started}
               finished={finished}
               currentModule={currentModule}

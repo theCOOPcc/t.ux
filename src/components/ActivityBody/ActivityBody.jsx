@@ -1,17 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ActivityContext } from '../../contexts/ActivityContext';
 import ActivityLinks from '../ActivityLinks/ActivityLinks';
 import ActivityMain from '../ActivityMain/ActivityMain';
-import ConfirmationForm from '../ConfirmationForm/ConfirmationForm'
+import ConfirmationForm from '../ConfirmationForm/ConfirmationForm';
 
 const ActivityBody = ({
   currentModule,
   handleAnswers,
   started,
-  links,
   finished,
-  sections,
-  name
 }) => {
+  const { name, links, sections } = useContext(ActivityContext);
   return (
     <>
       {started === true && (
@@ -20,7 +19,9 @@ const ActivityBody = ({
           handleAnswers={handleAnswers}
         />
       )}
-      {started === false && finished === null && <ConfirmationForm sections={sections} name={name} />}
+      {started === false && finished === null && (
+        <ConfirmationForm sections={sections} name={name} />
+      )}
       {started === false && finished === true && (
         <ActivityLinks links={links} />
       )}
