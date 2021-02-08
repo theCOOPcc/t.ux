@@ -4,7 +4,7 @@ import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import User from '../User/User';
 import * as U from '../../components/TuxComponents/UniversalComponents';
-import NavBar from '../../components/TuxComponents/layouts/NavBar'
+import NavBar from '../../components/TuxComponents/layouts/NavBar';
 import authService from '../../services/authService';
 import Landing from '../Landing/Landing';
 import PreviewActivity from '../PreviewActivity/PreviewActivity';
@@ -12,83 +12,89 @@ import IndexActivities from '../IndexActivities/IndexActivities';
 import './App.css';
 import Manager from '../Manager/Manager';
 import Activity from '../Activity/Activity';
-import userService from '../../services/userService'
+import userService from '../../services/userService';
+
+import ActivityContextProvider from '../../contexts/ActivityContext';
 
 const App = () => {
-  const [user, setUser] = useState(null)
-  
+  const [user, setUser] = useState(null);
+
   const getUser = async () => {
-    const userProfile = await userService.getCurrentUser()
-    setUser(userProfile)
-  }
+    const userProfile = await userService.getCurrentUser();
+    setUser(userProfile);
+  };
 
   const handleLogout = async () => {
-    setUser(null)
-    authService.logoutFromGoogle()
-  }
+    setUser(null);
+    authService.logoutFromGoogle();
+  };
 
-  useEffect (()=> {
-    getUser()
-  }, [])
+  useEffect(() => {
+    getUser();
+  }, []);
 
-
-    const NavRoutes = () => {
-      // These routes will render the NavBar
-      return (
-        <>
-          <NavBar user={user} handleLogout={handleLogout}/>
-          <Route exact path="/activities" render={() => <IndexActivities />} />
-          <Route exact path="/manager-dashboard" render={() => <Manager />} />
-          <Route
-            exact
-            path="/preview-activity"
-            render={({ location }) => <PreviewActivity location={location} />}
-          />
-          <Route
-            exact
-            path="/activity/heuristics"
-            render={() => <Activity user={user} activityId="6009f75ea00e3f38a7c65c7d" />}
-          />
-          <Route
-            exact
-            path="/activity/accessibility"
-            render={() => <Activity user={user} />}
-          />
-        </>
-      );
-    };
+  const NavRoutes = () => {
+    // These routes will render the NavBar
     return (
       <>
-        {/* These Routes will not render a Navbar. */}
+        <NavBar user={user} handleLogout={handleLogout} />
+        <Route exact path="/activities" render={() => <IndexActivities />} />
+        <Route exact path="/manager-dashboard" render={() => <Manager />} />
         <Route
           exact
-          path="/"
-          render={() => (!user ? <User user={user} /> : <Landing />)}
+          path="/preview-activity"
+          render={({ location }) => <PreviewActivity location={location} />}
         />
-
         <Route
-          path="/signup/:groupId?/:email?"
-          render={({ history, match }) => (
-            <Signup
-              history={history}
-              match={match}
-            />
+          exact
+          path="/activity/heuristics"
+          render={() => (
+            <Activity user={user} activityId="6009f75ea00e3f38a7c65c7d" />
           )}
         />
         <Route
           exact
-          path="/login"
-          render={({ history }) => (
-            <Login
-              history={history}
-            />
+          path="/activity/heuristics1"
+          render={() => (
+            <ActivityContextProvider activityId="6009f75ea00e3f38a7c65c7d">
+              <Activity />
+            </ActivityContextProvider>
           )}
+          // render={() => <Activity user={user} activityId="6009f75ea00e3f38a7c65c7d" />}
         />
-
-        {/* These routes will render the NavBar */}
-        <Route component={NavRoutes} />
+        <Route
+          exact
+          path="/activity/accessibility"
+          render={() => <Activity user={user} />}
+        />
       </>
     );
-  }
+  };
+  return (
+    <>
+      {/* These Routes will not render a Navbar. */}
+      <Route
+        exact
+        path="/"
+        render={() => (!user ? <User user={user} /> : <Landing />)}
+      />
+
+      <Route
+        path="/signup/:groupId?/:email?"
+        render={({ history, match }) => (
+          <Signup history={history} match={match} />
+        )}
+      />
+      <Route
+        exact
+        path="/login"
+        render={({ history }) => <Login history={history} />}
+      />
+
+      {/* These routes will render the NavBar */}
+      <Route component={NavRoutes} />
+    </>
+  );
+};
 
 export default App;

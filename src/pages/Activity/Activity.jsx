@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { ActivityContext } from '../../contexts/ActivityContext';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import ActivityHeader from '../../components/ActivityHeader/ActivityHeader';
 import ActivityBody from '../../components/ActivityBody/ActivityBody';
@@ -16,6 +17,8 @@ const Activity = ({ activityId, user }) => {
   const [finished, setFinished] = useState(null);
   const [completed, setCompleted] = useState('-10');
 
+  const { name } = useContext(ActivityContext);
+
   const getActivityData = () => {
     return activityService.getOne(activityId);
   };
@@ -24,7 +27,7 @@ const Activity = ({ activityId, user }) => {
     getActivityData().then((data) => setActivityData(data));
   }, []);
 
-  const { sections, topic, name, time } = activityData;
+  const { sections, topic, time } = activityData;
   // Variables
   const currentSection = sections && sections[currentSectionIndex];
   const currentModule =
@@ -75,6 +78,7 @@ const Activity = ({ activityId, user }) => {
   return (
     activityData && (
       <U.Main>
+        {console.log(name)}
         {started === null ? (
           <Overview
             activityName={name}
