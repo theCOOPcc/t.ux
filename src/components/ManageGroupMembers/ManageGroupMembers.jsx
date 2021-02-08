@@ -5,16 +5,19 @@ import CreateGroup from '../../components/CreateGroup/CreateGroup';
 import ModifyGroup from '../ModifyGroup/ModifyGroup';
 
 const ManageGroupMembers = ({
-  selectedGroupIndex,
   textInput,
   handleTextInputChange,
   handleAddToGroup,
   newGroupName,
   setNewGroupName,
   handleCreateGroup,
-  setSelectedGroupIndex,
 }) => {
-  const { groups, setGroups } = useContext(ManagerContext);
+  const {
+    groups,
+    setGroups,
+    selectedGroupIndex,
+    setSelectedGroupIndex,
+  } = useContext(ManagerContext);
 
   const [createGroup, setCreateGroup] = useState(false);
   return (
