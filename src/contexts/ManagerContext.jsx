@@ -5,6 +5,8 @@ export const ManagerContext = createContext();
 
 const ManagerContextProvider = ({ children }) => {
   const [groups, setGroups] = useState('');
+  const [selectedGroupIndex, setSelectedGroupIndex] = useState('');
+
   const getAllGroups = async () => {
     return await groupAPI.getAll();
   };
@@ -17,7 +19,14 @@ const ManagerContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <ManagerContext.Provider value={{ groups:{...groups}, setGroups }}>
+    <ManagerContext.Provider
+      value={{
+        groups: { ...groups },
+        setGroups,
+        selectedGroupIndex,
+        setSelectedGroupIndex,
+      }}
+    >
       {children}
     </ManagerContext.Provider>
   );

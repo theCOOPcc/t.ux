@@ -15,13 +15,7 @@ const Manager = () => {
   //useContext
   const { groups, setGroups } = useContext(ManagerContext);
 
- 
 
-  const handleInputChange = (e) => {
-    e.preventDefault();
-    const { value } = e.target;
-    // setInput(value);
-  };
 
   const handleTextInputChange = (e) => {
     e.preventDefault();
@@ -42,7 +36,7 @@ const Manager = () => {
   };
 
   const handleAddToGroup = async () => {
-    console.log(groups);
+   
     const emails = splitGroupMembers(textInput);
     const inviteList = [];
     emails.forEach((email) =>
@@ -83,7 +77,6 @@ const Manager = () => {
         sendEmailInvite={sendEmailInvite}
       />
       <ManageGroupMembers
-        // groups={groups}
         selectedGroupIndex={selectedGroupIndex}
         setSelectedGroupIndex={setSelectedGroupIndex}
         textInput={textInput}

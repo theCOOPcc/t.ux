@@ -1,17 +1,20 @@
 import React, { useState, useEffect, useContext } from 'react';
-import {ManagerContext} from '../../contexts/ManagerContext'
+import { ManagerContext } from '../../contexts/ManagerContext';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import activityAPI from '../../services/activityService';
 import ActivityInvite from '../ActivityInvite/ActivityInvite';
 
 const ManagerActivities = ({
-  selectedGroupIndex,
-  setSelectedGroupIndex,
-  sendEmailInvite
+  sendEmailInvite,
 }) => {
+  const {
+    groups,
+    setGroups,
+    selectedGroupIndex,
+    setSelectedGroupIndex,
+  } = useContext(ManagerContext);
 
-  const {groups, setGroups } = useContext(ManagerContext)
-
+  // TODO: replace with useContext call to ActivityContext
   const [activities, setActivities] = useState('');
   const getActivities = async () => {
     const activities = activityAPI.getAll();
@@ -38,14 +41,14 @@ const ManagerActivities = ({
         selectedGroupIndex={selectedGroupIndex}
         setSelectedGroupIndex={setSelectedGroupIndex}
       /> */}
-      <ActivityInvite 
-      isOpen={isOpen} 
-      setIsOpen={setIsOpen} 
-      groups={groups}
-      setGroups={setGroups}
-      selectedGroupIndex={selectedGroupIndex}
-      setSelectedGroupIndex={setSelectedGroupIndex}
-      sendEmailInvite={sendEmailInvite}
+      <ActivityInvite
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        groups={groups}
+        setGroups={setGroups}
+        selectedGroupIndex={selectedGroupIndex}
+        setSelectedGroupIndex={setSelectedGroupIndex}
+        sendEmailInvite={sendEmailInvite}
       />
       <U.FlexBox bordered managerDash column>
         <U.ColorBlock SubGridBlue></U.ColorBlock>
