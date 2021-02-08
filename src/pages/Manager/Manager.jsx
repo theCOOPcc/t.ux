@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { ManagerContext } from '../../contexts/ManagerContext';
 import groupAPI from '../../services/groupService';
 import * as mailAPI from '../../services/mail-api';
 import ManagerActivites from '../../components/ManagerActivities/ManagerActivities';
@@ -9,20 +10,12 @@ const Manager = () => {
   const [newGroupName, setNewGroupName] = useState('');
   const [textInput, setTextInput] = useState('');
   const [results, setResults] = useState('');
-  const [groups, setGroups] = useState('');
   const [selectedGroupIndex, setSelectedGroupIndex] = useState('');
 
-  const getAllGroups = async () => {
-    return await groupAPI.getAll();
-  };
+  //useContext
+  const { groups, setGroups } = useContext(ManagerContext);
 
-  useEffect(() => {
-    const retreivedGroups = getAllGroups();
-    console.log(retreivedGroups);
-    retreivedGroups.then((newGroups) => {
-      setGroups(newGroups);
-    });
-  }, []);
+ 
 
   const handleInputChange = (e) => {
     e.preventDefault();
@@ -44,7 +37,7 @@ const Manager = () => {
   };
 
   const sendEmailInvite = async (group) => {
-    console.log('sending email front end')
+    console.log('sending email front end');
     await mailAPI.create(group);
   };
 
@@ -90,7 +83,7 @@ const Manager = () => {
         sendEmailInvite={sendEmailInvite}
       />
       <ManageGroupMembers
-        groups={groups}
+        // groups={groups}
         selectedGroupIndex={selectedGroupIndex}
         setSelectedGroupIndex={setSelectedGroupIndex}
         textInput={textInput}

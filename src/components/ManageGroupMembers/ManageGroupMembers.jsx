@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { ManagerContext } from '../../contexts/ManagerContext';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import CreateGroup from '../../components/CreateGroup/CreateGroup';
 import ModifyGroup from '../ModifyGroup/ModifyGroup';
 
 const ManageGroupMembers = ({
-  groups,
   selectedGroupIndex,
   textInput,
   handleTextInputChange,
@@ -14,6 +14,8 @@ const ManageGroupMembers = ({
   handleCreateGroup,
   setSelectedGroupIndex,
 }) => {
+  const { groups, setGroups } = useContext(ManagerContext);
+
   const [createGroup, setCreateGroup] = useState(false);
   return (
     <U.FlexBox bordered managerDash notFlex>
@@ -38,7 +40,7 @@ const ManageGroupMembers = ({
             createGroup={createGroup}
           />
         )}
-        {groups.length > 0 && createGroup === false && (
+        {/* {groups.length > 0 && createGroup === false && (
           <ModifyGroup
             selectedGroupIndex={selectedGroupIndex}
             setSelectedGroupIndex={setSelectedGroupIndex}
@@ -49,7 +51,7 @@ const ManageGroupMembers = ({
             textInput={textInput}
             handleTextInputChange={handleTextInputChange}
           />
-        )}
+        )} */}
       </div>
     </U.FlexBox>
   );

@@ -11,14 +11,13 @@ const ManagerContextProvider = ({ children }) => {
 
   useEffect(() => {
     const retreivedGroups = getAllGroups();
-    console.log(retreivedGroups);
     retreivedGroups.then((newGroups) => {
       setGroups(newGroups);
     });
   }, []);
 
   return (
-    <ManagerContext.Provider value={{ ...groups, setGroups }}>
+    <ManagerContext.Provider value={{ groups:{...groups}, setGroups }}>
       {children}
     </ManagerContext.Provider>
   );
