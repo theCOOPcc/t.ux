@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { ActivityContext } from '../../contexts/ActivityContext';
+import {UserContext} from '../../contexts/UserContext'
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import ActivityHeader from '../../components/ActivityHeader/ActivityHeader';
 import ActivityBody from '../../components/ActivityBody/ActivityBody';
