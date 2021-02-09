@@ -3,12 +3,11 @@ import { Route } from 'react-router-dom';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
 import User from '../User/User';
-import * as U from '../../components/TuxComponents/UniversalComponents';
 import NavBar from '../../components/TuxComponents/layouts/NavBar';
 import authService from '../../services/authService';
 import Landing from '../Landing/Landing';
 import PreviewActivity from '../PreviewActivity/PreviewActivity';
-import IndexActivities from '../IndexActivities/IndexActivities';
+// import IndexActivities from '../IndexActivities/IndexActivities';
 import './App.css';
 import Manager from '../Manager/Manager';
 import Activity from '../Activity/Activity';
@@ -16,6 +15,9 @@ import userService from '../../services/userService';
 
 import ActivityContextProvider from '../../contexts/ActivityContext';
 import ManagerContextProvider from '../../contexts/ManagerContext';
+
+// !A temporary list of activity route names and their ids. Below you will see this variable being mapped through and rendering the Activity Routes. This way when we have multiple activities the Routes will be dynamically generated, and we just have to store these properties on the activities themselves or the User object if we want to restrict the user to only seeing the activities that have been assigned to them.
+const activities = [{ name: 'heuristics', id: '6009f75ea00e3f38a7c65c7d' }];
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -39,7 +41,7 @@ const App = () => {
     return (
       <>
         <NavBar user={user} handleLogout={handleLogout} />
-        <Route exact path="/activities" render={() => <IndexActivities />} />
+        {/* <Route exact path="/activities" render={() => <IndexActivities />} /> */}
         {/* <Route exact path="/manager-dashboard" render={() => <Manager />} /> */}
         <Route
           exact
@@ -56,26 +58,25 @@ const App = () => {
           render={({ location }) => <PreviewActivity location={location} />}
         />
 
-        <Route
-          exact
-          path="/activity/heuristics"
-          render={() => (
-            <ActivityContextProvider activityId="6009f75ea00e3f38a7c65c7d">
-              <Activity />
-            </ActivityContextProvider>
-          )}
-        />
-        <Route
-          exact
-          path="/activity/accessibility"
-          render={() => <Activity user={user} />}
-        />
+        {/* // !Mapping through the activities array to dynamically render Activity Routes. */}
+        {activities.length > 0 &&
+          activities.map((activity, index) => (
+            <Route
+              exact
+              path={`/activity/${activity.name}`}
+              render={() => (
+                <ActivityContextProvider activityId={activity.id}>
+                  <Activity />
+                </ActivityContextProvider>
+              )}
+            />
+          ))}
       </>
     );
   };
   return (
     <>
-      {/* These Routes will not render a Navbar. */}
+      {/* //! These routes will not render a navbar */}
       <Route
         exact
         path="/"
