@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import authService from '../../../services/authService';
+import { FlexCenter } from '../utilities';
 
 
 class login extends Component {
@@ -54,10 +55,7 @@ const TuxFlower = styled.img`
 `;
 
 const LoginBox = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    ${FlexCenter({dir:'column'})};
     width: 425px;
     height: 510px;
     background-color: var(--true-white);
@@ -77,9 +75,7 @@ const GoogleBox = styled.a`
     height: 80px;
     border-radius: 5px;
     background: linear-gradient(360deg, #F9F9F9 0%, rgba(255, 255, 255, 0) 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    ${FlexCenter};
     margin-bottom: 10px;
     box-shadow: ${common_shadow};
     text-decoration: none;

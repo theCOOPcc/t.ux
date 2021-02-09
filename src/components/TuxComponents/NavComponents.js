@@ -1,4 +1,5 @@
 import styled, {css} from 'styled-components'
+import { FlexCenter } from './utilities';
 
 export const Header = styled.header`
   max-width: 1440px;
@@ -16,9 +17,7 @@ export const Logo = styled.img`
 export const Nav = styled.nav`
   max-width: 1440px;
   grid-column: 1/span all;
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
+  ${FlexCenter};
   padding: 0 40px;
   border-bottom: var(--nav-border);
 `;

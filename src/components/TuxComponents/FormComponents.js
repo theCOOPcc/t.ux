@@ -1,20 +1,19 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { Flex } from './utilities';
 
 export const Input = styled.input`
-  display: flex;
+  ${Flex};
   border-radius: 5px;
 `;
 
 export const InputGroup = styled.div`
-  display: flex;
-  justify-content: space-between;
+  ${Flex({jc:'space-between'})};
   width: 100%;
   margin: 10px 0px;
 `;
 
 export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
+  ${Flex({dir:'column'})};
   width: 100%;
 `; 
 
