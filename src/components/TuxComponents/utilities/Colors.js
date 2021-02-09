@@ -19,6 +19,7 @@ export const text_white = '#fff';
 
 // Button Element Colors
 export const enable_btn = '#3c8582';
+export const enable_hover = '#236c69';
 export const disable_btn = '#ccc';
 
 // Input Colors
