@@ -58,11 +58,11 @@ const App = () => {
             exact
             path={`/activity/${activity.name}`}
             render={() => (
-              <SessionContextProvider>
-                <ActivityContextProvider activityId={activity.id}>
+              <ActivityContextProvider activityId={activity.id}>
+                <SessionContextProvider>
                   <Activity />
-                </ActivityContextProvider>
-              </SessionContextProvider>
+                </SessionContextProvider>
+              </ActivityContextProvider>
             )}
           />
         ))}

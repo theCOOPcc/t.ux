@@ -6,30 +6,14 @@ import Question from '../../components/Question/Question';
 import InjectHTML from '../../components/InjectHTML/InjectHTML';
 
 const ActivityMain = () => {
-  const {
-    currentModule,
-    handleAnswers,
-    currentSectionIndex,
-    currentModuleIndex,
-  } = useContext(ActivityContext);
+  const { currentModule, handleAnswers } = useContext(ActivityContext);
 
-  const { sessionData, setCurrentSessionModule } = useContext(SessionContext);
-  const { sections } = sessionData;
+  const { sessionData } = useContext(SessionContext);
 
-  const touchModule = () => {
-    const currentSessionModule = { ...currentModule };
-    currentSessionModule.touched = true;
-    currentSessionModule.completed = false;
-    setCurrentSessionModule(currentSessionModule);
-  };
-
-  const completeModule = () => {
-    //
-  };
-
-  useEffect(() => {
-    touchModule();
-  }, []);
+  // useEffect(() => {
+  //   // touchSection();
+  //   // touchModule();
+  // }, []);
 
   return (
     <U.Sub6ColGrid>

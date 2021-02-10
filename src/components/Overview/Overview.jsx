@@ -4,36 +4,13 @@ import { ActivityContext } from '../../contexts/ActivityContext';
 import { SessionContext } from '../../contexts/SessionContext';
 
 const Overview = ({ user }) => {
-  const {
-    name: activityName,
-    time: activityTime,
-    setStarted,
-    _id: activityId,
-    sections,
-  } = useContext(ActivityContext);
-
-  const { setSessionData } = useContext(SessionContext);
-  // !This function builds the initial session object, which will be pushed to the session context when the Begin button is clicked.
-  const buildInitialSessionObject = () => {
-    const { _id, firstName, lastName } = user;
-    const session = {
-      userId: _id,
-      userName: `${firstName} ${lastName}`,
-      activityId: activityId,
-      activityName: activityName,
-      totalSessionTime: null,
-      sections: sections,
-    };
-    return session;
-  };
-
-  const initializeSessionTracking = () => {
-    const initialSessionObject = buildInitialSessionObject();
-    setSessionData(initialSessionObject);
-  };
+  const { setStarted, name: activityName, time: activityTime } = useContext(
+    ActivityContext
+  );
+  const { startSessionTracking } = useContext(SessionContext);
 
   const handleStartSession = () => {
-    initializeSessionTracking();
+    startSessionTracking();
     setStarted(true);
   };
 
