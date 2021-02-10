@@ -3,9 +3,41 @@ import * as U from '../../components/TuxComponents/UniversalComponents';
 import { ActivityContext } from '../../contexts/ActivityContext';
 
 const Overview = ({ user }) => {
-  const { name: activityName, time: activityTime, setStarted } = useContext(
-    ActivityContext
-  );
+  const {
+    name: activityName,
+    time: activityTime,
+    setStarted,
+    _id: activityId,
+    sections,
+  } = useContext(ActivityContext);
+
+  // !This function builds the initial session object, which will be pushed to the session context when the Begin button is clicked.
+  const buildInitialSessionObject = () => {
+    const { _id, firstName, lastName } = user;
+    const session = {
+      userId: _id,
+      userName: `${firstName} ${lastName}`,
+      activityId: activityId,
+      activityName: activityName,
+      totalSessionTime: null,
+      sections: sections,
+    };
+    return session;
+  };
+
+  const initializeSessionTracking = () => {
+    const initialSessionObject = buildInitialSessionObject();
+    // TODO: Call setSession function passed down from SessionContext
+  };
+
+  const handleStartSession = () => {
+    // TODO: []Build initial session chunk
+    initializeSessionTracking();
+
+    // Set session state hook to true to load Introduction of activity.
+    setStarted(true);
+  };
+
   return (
     <>
       {/* <U.Sub6ColGrid> */}
@@ -35,7 +67,7 @@ const Overview = ({ user }) => {
           </U.Normal>
           <U.Normal overview>Begin when you're ready. Good luck!</U.Normal>
         </U.FlexBox>
-        <U.WideBtn enable onClick={() => setStarted(true)}>
+        <U.WideBtn enable onClick={handleStartSession}>
           Begin
         </U.WideBtn>
       </U.FlexBox>

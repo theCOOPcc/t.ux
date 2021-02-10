@@ -9,11 +9,12 @@ import Overview from '../../components/Overview/Overview';
 
 const Activity = () => {
   const { started } = useContext(ActivityContext);
+  const {user} = useContext(UserContext)
 
   return (
     <U.Main>
       {started === null ? (
-        <Overview />
+        <Overview user={user}/>
       ) : (
         <>
           <ActivityHeader />
