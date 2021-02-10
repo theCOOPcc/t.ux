@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import { ActivityContext } from '../../contexts/ActivityContext';
+import { SessionContext } from '../../contexts/SessionContext';
 
 const Overview = ({ user }) => {
   const {
@@ -11,6 +12,7 @@ const Overview = ({ user }) => {
     sections,
   } = useContext(ActivityContext);
 
+  const { setSessionData } = useContext(SessionContext);
   // !This function builds the initial session object, which will be pushed to the session context when the Begin button is clicked.
   const buildInitialSessionObject = () => {
     const { _id, firstName, lastName } = user;
@@ -27,7 +29,7 @@ const Overview = ({ user }) => {
 
   const initializeSessionTracking = () => {
     const initialSessionObject = buildInitialSessionObject();
-    // TODO: Call setSession function passed down from SessionContext
+    setSessionData(initialSessionObject);
   };
 
   const handleStartSession = () => {

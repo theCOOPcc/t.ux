@@ -11,6 +11,7 @@ import Activity from '../Activity/Activity';
 
 import ActivityContextProvider from '../../contexts/ActivityContext';
 import ManagerContextProvider from '../../contexts/ManagerContext';
+import SessionContextProvider from '../../contexts/SessionContext';
 
 // !A temporary list of activity route names and their ids. Below you will see this variable being mapped through and rendering the Activity Routes. This way when we have multiple activities the Routes will be dynamically generated, and we just have to store these properties on the activities themselves or the User object if we want to restrict the user to only seeing the activities that have been assigned to them.
 const activities = [{ name: 'heuristics', id: '6009f75ea00e3f38a7c65c7d' }];
@@ -57,9 +58,11 @@ const App = () => {
             exact
             path={`/activity/${activity.name}`}
             render={() => (
-              <ActivityContextProvider activityId={activity.id}>
-                <Activity />
-              </ActivityContextProvider>
+              <SessionContextProvider>
+                <ActivityContextProvider activityId={activity.id}>
+                  <Activity />
+                </ActivityContextProvider>
+              </SessionContextProvider>
             )}
           />
         ))}
