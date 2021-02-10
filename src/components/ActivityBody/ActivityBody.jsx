@@ -6,6 +6,7 @@ import ConfirmationForm from '../ConfirmationForm/ConfirmationForm';
 
 const ActivityBody = () => {
   const { started, finished } = useContext(ActivityContext);
+  
   return (
     <>
       {started === true && <ActivityMain />}

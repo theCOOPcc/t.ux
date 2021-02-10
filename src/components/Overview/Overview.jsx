@@ -24,6 +24,8 @@ const Overview = ({ user }) => {
       totalSessionTime: null,
       sections: sections,
     };
+    session.sections[0].modules[0].touched = true
+    session.sections[0].modules[0].completed = false
     return session;
   };
 
