@@ -24,8 +24,6 @@ const Overview = ({ user }) => {
       totalSessionTime: null,
       sections: sections,
     };
-    session.sections[0].modules[0].touched = true
-    session.sections[0].modules[0].completed = false
     return session;
   };
 
@@ -35,10 +33,7 @@ const Overview = ({ user }) => {
   };
 
   const handleStartSession = () => {
-    // TODO: []Build initial session chunk
     initializeSessionTracking();
-
-    // Set session state hook to true to load Introduction of activity.
     setStarted(true);
   };
 
