@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { tux_blue, tux_yellow, tux_red, tux_grey, tux_white, tux_black } from '../utilities/Colors';
-import { nav_border, Flex } from '../utilities';
+import { nav_border, Flex, tux_blue, tux_yellow, 
+  tux_red, tux_grey, tux_white, tux_black } from '../utilities';
 
 const Header = styled.header`
   max-width: 1440px;
