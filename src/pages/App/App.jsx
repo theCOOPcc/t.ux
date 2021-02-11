@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import Signup from '../Signup/Signup';
-import Login from '../Login/Login';
+// import Login from '../Login/Login';
+import Login from '../../components/TuxComponents/layouts/Login'
 import User from '../User/User';
 import NavBar from '../../components/TuxComponents/layouts/NavBar'
 import authService from '../../services/authService';
