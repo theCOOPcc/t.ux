@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import authService from '../../../services/authService';
-import { FlexCenter } from '../utilities';
+import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom'
+import { FlexCenter, common_shadow, pop_reg, pop_thick } from '../utilities';
+import { SmallInput, Button280 } from '../elements';
+// styled components for this Login comoponent are at the bottom
 
-
-class login extends Component {
+class Login extends Component {
     state = { 
         email: '',
         pw: '',
@@ -32,18 +35,88 @@ class login extends Component {
     render() { 
         const { email, pw } = this.state;
         return ( 
-
+            <Main>
+                <OutsideFlex>
+                    <TuxFlower src="/images/tuxFlower.png"></TuxFlower>
+                    <LoginBox>
+                        <GoogleBox
+                        // this is the "href" go to google
+                        href="http://localhost:3001/api/auth/google"
+                        // href="https://tux-staging.herokuapp.com/api/auth/google"
+                        >
+                            <GoogleG src="/images/GoogleG.png" />
+                            <SignIn>Sign in with Google</SignIn>
+                        </GoogleBox>
+                    <form autoComplete="off" onSubmit={this.handleSubmit}>
+                        <Text>or:</Text>
+                        <Label>Username or Email</Label>
+                        <SmallInput
+                            type="text"
+                            autoComplete="off"
+                            id="email"
+                            value={email}
+                            name="email"
+                            onChange={this.handleChange}
+                        ></SmallInput>
+                        <br/><br/>
+                        <Label>Password</Label>
+                        <SmallInput
+                            type="password"
+                            autoComplete="off"
+                            id="password"
+                            value={pw}
+                            name="pw"
+                            onChange={this.handleChange}
+                        ></SmallInput>
+                        {/* <OutsideFlex> */}
+                            {/* These are on hold until next sprint */}
+                            {/* TODO: Make ability to stay logged in */}
+                            {/* TODO: Create password reset */}
+                            {/* <U.FlexBox negMargin>
+                            <U.Checkbox></U.Checkbox>
+                            <U.Normal>Stay signed in</U.Normal>
+                            </U.FlexBox> 
+                            <U.LinkTo
+                                to="/passwordresetrequest"
+                            >Forgot Password?</U.LinkTo>*/}
+                        {/* </OutsideFlex> */}
+                        <Button280 wide350
+                            disabled={
+                                email.length > 0 && pw.length > 0
+                                ? false
+                                : true}
+                        >Log In</Button280>
+                    </form>
+                    </LoginBox>
+                </OutsideFlex>
+                <OutsideFlex signUp>
+                    <Text>Need an Account?&nbsp;</Text>
+                    <LinkTo
+                        to="/signup"
+                    >Sign Up</LinkTo>
+                </OutsideFlex>
+            </Main>
         );
     }
 }
  
-export default login;
+export default Login;
 
 const Main = styled.main`
 	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
 	background-blend-mode: normal, multiply;
-	margin: 0 auto;
-	max-width: 1440px;
+	margin: 0;
+	/* max-width: 1440px; */
+`;
+
+const OutsideFlex = styled.article`
+    ${FlexCenter};
+
+    ${(props) =>
+    props.signUp && css`
+      margin-top: 30px;
+      padding-left: 550px;
+    `}
 `;
 
 const TuxFlower = styled.img`
@@ -79,4 +152,26 @@ const GoogleBox = styled.a`
     margin-bottom: 10px;
     box-shadow: ${common_shadow};
     text-decoration: none;
+    /* margin-top: 60px; */
+`;
+
+const SignIn = styled.p`
+    font: 700 20px 'Roboto', sans-serif;
+    /* line-height: 23.44px; */
+    color: rgba(0,0,0,.54);
+    margin-top: 15px;
+`;
+
+const Text = styled.p`
+    font: ${pop_reg};
+    margin: 0;
+`;
+
+const Label = styled.label`
+    font: ${pop_thick};
+
+`;
+
+const LinkTo = styled(Link)`
+  color: var(--link-text);
 `;
