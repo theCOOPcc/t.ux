@@ -6,15 +6,13 @@ import { UserContext } from './UserContext';
 export const SessionContext = createContext();
 
 const SessionContextProvider = ({ children, activityId }) => {
-  const [sessionData, setSessionData] = useState(null);
   const [activityData, setActivityData] = useState('');
+  const [sessionData, setSessionData] = useState(null);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
   const [started, setStarted] = useState(null);
   const [finished, setFinished] = useState(null);
   const [completed, setCompleted] = useState('-10');
-  // const [currentSessionModule, setCurrentSessionModule] = useState(null);
-  // const [currentSessionSection, setCurrentSessionSection] = useState(null);
 
   const { user } = useContext(UserContext);
 
@@ -27,9 +25,8 @@ const SessionContextProvider = ({ children, activityId }) => {
     getActivityData().then((data) => setActivityData(data));
   }, []);
 
-
   // Activity Variables
-  const {activityName} = activityData
+  const { activityName } = activityData;
 
   // Variables
   const { sections } = activityData;
@@ -79,17 +76,35 @@ const SessionContextProvider = ({ children, activityId }) => {
     setCompleted(completed);
   };
 
- 
-
   // !This function builds the initial session object, which will be pushed to the session context when the Begin button is clicked.
+  const buildInitialSections = () => {
+    const initialSections = [...sections];
+    // ! iterate through sections and modules,  add touched and completed property, set to false.
+    initialSections.forEach((section, index) => {
+      const { modules } = section;
+      section.touched = false;
+      section.completed = false;
+      modules.forEach((module, index) => {
+        module.touched = false;
+        module.completed = false;
+      });
+    });
+    initialSections[0].touched = true;
+    initialSections[0].modules[0].touched = true;
+    return initialSections;
+  };
+
   const buildInitialSessionObject = () => {
     const { _id, firstName, lastName } = user;
+    const initialSections = buildInitialSections();
+
     const session = {
       userId: _id,
       userName: `${firstName} ${lastName}`,
       activityId: activityId,
       activityName: activityName,
       totalSessionTime: null,
+      sections: initialSections
     };
     return session;
   };
@@ -99,10 +114,15 @@ const SessionContextProvider = ({ children, activityId }) => {
     setSessionData(initialSessionObject);
   };
 
+  // todo: Write these functions to track session.
+  // const touchSection = () => {}
+  // const completeSection = () => {}
+  // const touchModule = () => {}
+  // const completeModule = () => {}
+
   return (
     <SessionContext.Provider
       value={{
-        ...activityData,
         started,
         finished,
         completed,
@@ -118,11 +138,6 @@ const SessionContextProvider = ({ children, activityId }) => {
         currentModuleIndex,
         sessionData,
         setSessionData,
-        // setCurrentSessionModule,
-        // currentSessionModule,
-        // setCurrentSessionSection,
-        // currentSessionSection,
-        // sections,
         startSessionTracking,
       }}
     >

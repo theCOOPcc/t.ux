@@ -4,7 +4,7 @@ import * as U from '../TuxComponents/UniversalComponents';
 
 const SideBarNav = () => {
   const {
-    sections,
+    sessionData,
     started,
     finished,
     setStarted,
@@ -17,6 +17,9 @@ const SideBarNav = () => {
     currentSectionIndex,
     currentModuleIndex,
   } = useContext(SessionContext);
+
+  const { sections } = sessionData;
+  
   return (
     <U.SideBarParent>
       <U.SideBar>
