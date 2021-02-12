@@ -5,11 +5,11 @@ import ActivityMain from '../ActivityMain/ActivityMain';
 import ConfirmationForm from '../ConfirmationForm/ConfirmationForm';
 
 const ActivityBody = () => {
-  const { started, finished } = useContext(SessionContext);
-  
-  return ( 
+  const { started, finished, currentSection } = useContext(SessionContext);
+
+  return (
     <>
-      {started === true && <ActivityMain />}
+      {started === true && currentSection && <ActivityMain />}
       {started === false && finished === null && <ConfirmationForm />}
       {started === false && finished === true && <ActivityLinks />}
     </>

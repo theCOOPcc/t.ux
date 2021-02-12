@@ -1,12 +1,9 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import activityService from '../services/activityService';
-
 import { UserContext } from './UserContext';
-
 export const SessionContext = createContext();
 
 const SessionContextProvider = ({ children, activityId }) => {
-  const [activityData, setActivityData] = useState('');
   const [sessionData, setSessionData] = useState(null);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
@@ -17,20 +14,17 @@ const SessionContextProvider = ({ children, activityId }) => {
   const { user } = useContext(UserContext);
 
   // Set Activity from Database
-  const getActivityData = () => {
-    return activityService.getOne(activityId);
+  const getActivityData = async () => {
+    return await activityService.getOne(activityId);
   };
 
+  // !Get and set data to state, set initial section and module indexes. Fires once on render and does not have any update dependencies.
   useEffect(() => {
-    getActivityData().then((data) => setActivityData(data));
+    getActivityData().then((data) => startSessionTracking(data));
   }, []);
 
-  // Activity Variables
-  const { activityName } = activityData;
-
-  // Variables
-  const { sections } = activityData;
-  const currentSection = sections && sections[currentSectionIndex];
+  const currentSection =
+    sessionData && sessionData.sections[currentSectionIndex];
   const currentModule =
     currentSection && currentSection.modules[currentModuleIndex];
 
@@ -45,19 +39,30 @@ const SessionContextProvider = ({ children, activityId }) => {
 
   const incrementCurrentSection = () => {
     setCurrentSectionIndex(currentSectionIndex + 1);
+    resetModuleIndex();
+  };
+
+  const resetModuleIndex = async () => {
+    await setCurrentModuleIndex(0);
+  };
+
+  const incrementModuleIndex = async () => {
+    await setCurrentModuleIndex(currentModuleIndex + 1);
   };
 
   const handleCurrentSection = () => {
+    completeSection();
     incrementCurrentSection();
-    // Push new section data into section array
-    // Reset Module Index to 0
-    setCurrentModuleIndex(0);
-    // Convert to percentage for Progress Bar
+
     convertIndexToPercent(currentSectionIndex);
   };
 
-  const updateCurrentModule = () => {
-    setCurrentModuleIndex(currentModuleIndex + 1);
+  const updateCurrentModule = async () => {
+    touchSection();
+    touchModule()
+    completeModule();
+    await incrementModuleIndex();
+    console.log('currentModule', currentModule);
   };
 
   const handleCurrentModule = () => {
@@ -77,7 +82,7 @@ const SessionContextProvider = ({ children, activityId }) => {
   };
 
   // !This function builds the initial session object, which will be pushed to the session context when the Begin button is clicked.
-  const buildInitialSections = () => {
+  const buildInitialSections = (sections) => {
     const initialSections = [...sections];
     // ! iterate through sections and modules,  add touched and completed property, set to false.
     initialSections.forEach((section, index) => {
@@ -94,31 +99,53 @@ const SessionContextProvider = ({ children, activityId }) => {
     return initialSections;
   };
 
-  const buildInitialSessionObject = () => {
-    const { _id, firstName, lastName } = user;
-    const initialSections = buildInitialSections();
+  const buildInitialSessionObject = (activityData) => {
+    // const { _id, firstName, lastName } = user;
+    const { name, sections } = activityData;
+    const initialSections = buildInitialSections(sections);
 
     const session = {
-      userId: _id,
-      userName: `${firstName} ${lastName}`,
+      // userId: _id,
+      // userName: `${firstName} ${lastName}`,
       activityId: activityId,
-      activityName: activityName,
+      activityName: name,
       totalSessionTime: null,
-      sections: initialSections
+      sections: initialSections,
     };
     return session;
   };
 
-  const startSessionTracking = () => {
-    const initialSessionObject = buildInitialSessionObject();
+  const startSessionTracking = (activityData) => {
+    const initialSessionObject = buildInitialSessionObject(activityData);
     setSessionData(initialSessionObject);
   };
 
   // todo: Write these functions to track session.
-  // const touchSection = () => {}
-  // const completeSection = () => {}
-  // const touchModule = () => {}
-  // const completeModule = () => {}
+  const touchSection = () => {
+    const updateSessionData = { ...sessionData };
+    updateSessionData.sections[currentSectionIndex].touched = true;
+    setSessionData(updateSessionData);
+  };
+  // !working
+  const completeSection = () => {
+    const updateSessionData = { ...sessionData };
+    updateSessionData.sections[currentSectionIndex].completed = true;
+    setSessionData(updateSessionData);
+  };
+  const touchModule = () => {
+    const updateSessionData = { ...sessionData };
+    updateSessionData.sections[currentSectionIndex].modules[
+      currentModuleIndex
+    ].touched = true;
+    setSessionData(updateSessionData);
+  };
+  const completeModule = () => {
+    const updateSessionData = { ...sessionData };
+    updateSessionData.sections[currentSectionIndex].modules[
+      currentModuleIndex
+    ].completed = true;
+    setSessionData(updateSessionData);
+  };
 
   return (
     <SessionContext.Provider
@@ -139,6 +166,10 @@ const SessionContextProvider = ({ children, activityId }) => {
         sessionData,
         setSessionData,
         startSessionTracking,
+        touchModule,
+        touchSection,
+        completeModule,
+        completeSection,
       }}
     >
       {children}
