@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { ActivityContext } from '../../contexts/ActivityContext';
+import { SessionContext } from '../../contexts/SessionContext';
 import ProgressBar from '../../components/ProgressBar/ProgressBar';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 
 const ActivityHeader = () => {
-  const { completed, currentSection, topic } = useContext(ActivityContext);
+  const { completed, currentSection, topic } = useContext(SessionContext);
   const { name } = currentSection;
   return (
     <U.InfoBar>

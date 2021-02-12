@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ActivityContext } from '../../contexts/ActivityContext';
+import { SessionContext } from '../../contexts/SessionContext';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 
 const LinkList = ({ links }) => {
@@ -15,7 +15,7 @@ const LinkList = ({ links }) => {
 };
 
 const ActivityLinks = () => {
-  const { links } = useContext(ActivityContext);
+  const { links } = useContext(SessionContext);
   return (
     <U.Sub6ColGrid>
       <U.Heading2>More Heuristics Resources</U.Heading2>

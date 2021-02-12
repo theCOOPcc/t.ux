@@ -1,13 +1,15 @@
 import React, { useContext } from 'react';
 import * as U from '../../components/TuxComponents/UniversalComponents';
-import { ActivityContext } from '../../contexts/ActivityContext';
+
 import { SessionContext } from '../../contexts/SessionContext';
 
 const Overview = ({ user }) => {
-  const { setStarted, name: activityName, time: activityTime } = useContext(
-    ActivityContext
-  );
-  const { startSessionTracking } = useContext(SessionContext);
+  const {
+    setStarted,
+    name: activityName,
+    time: activityTime,
+    startSessionTracking,
+  } = useContext(SessionContext);
 
   const handleStartSession = () => {
     startSessionTracking();

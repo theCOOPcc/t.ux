@@ -9,7 +9,6 @@ import './App.css';
 import Manager from '../Manager/Manager';
 import Activity from '../Activity/Activity';
 
-import ActivityContextProvider from '../../contexts/ActivityContext';
 import ManagerContextProvider from '../../contexts/ManagerContext';
 import SessionContextProvider from '../../contexts/SessionContext';
 
@@ -58,11 +57,9 @@ const App = () => {
             exact
             path={`/activity/${activity.name}`}
             render={() => (
-              <ActivityContextProvider activityId={activity.id}>
-                <SessionContextProvider>
-                  <Activity />
-                </SessionContextProvider>
-              </ActivityContextProvider>
+              <SessionContextProvider activityId={activity.id}>
+                <Activity />
+              </SessionContextProvider>
             )}
           />
         ))}

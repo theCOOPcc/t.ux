@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ActivityContext } from '../../contexts/ActivityContext';
+import { SessionContext } from '../../contexts/SessionContext';
 import * as U from '../TuxComponents/UniversalComponents';
 
 const SideBarNav = () => {
@@ -16,7 +16,7 @@ const SideBarNav = () => {
     handleCurrentModule,
     currentSectionIndex,
     currentModuleIndex,
-  } = useContext(ActivityContext);
+  } = useContext(SessionContext);
   return (
     <U.SideBarParent>
       <U.SideBar>

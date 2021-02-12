@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { ActivityContext } from '../../contexts/ActivityContext';
+import {SessionContext}  from '../../contexts/SessionContext';
 import { Formik, Field, Form } from 'formik';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import * as F from '../../components/TuxComponents/FormComponents';
@@ -45,7 +45,7 @@ export const Heading3 = styled.h3`
 `;
 //  orange Hheading3or: rgba(243,119,6,1.0);
 const ConfirmationForm = () => {
-  const { sections, name } = useContext(ActivityContext);
+  const { sections, name } = useContext(SessionContext);
   // initialize the section names for initalValues
   let data = [];
   sections.forEach((ele, idx, arr) => {
