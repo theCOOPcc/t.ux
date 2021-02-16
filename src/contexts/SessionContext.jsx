@@ -12,6 +12,8 @@ const SessionContextProvider = ({ children, activityId }) => {
   const [finished, setFinished] = useState(null);
   // !completed variable is used for the progress bar.
   const [completed, setCompleted] = useState('-10');
+  // !response variable is used to track Question response.
+  const [response, setResponse] = useState(null);
 
   const { user } = useContext(UserContext);
 
@@ -55,7 +57,7 @@ const SessionContextProvider = ({ children, activityId }) => {
   const handleCurrentSection = () => {
     completeSection();
     incrementCurrentSection();
-
+    setResponse(null);
     convertIndexToPercent(currentSectionIndex);
   };
 
@@ -64,6 +66,7 @@ const SessionContextProvider = ({ children, activityId }) => {
     touchModule();
     completeModule();
     await incrementModuleIndex();
+    setResponse(null);
     console.log('currentModule', currentModule);
   };
 
@@ -151,12 +154,17 @@ const SessionContextProvider = ({ children, activityId }) => {
   };
 
   const addAttempt = (details) => {
-    console.log(details)
+    console.log(details);
     const updateSessionData = { ...sessionData };
     updateSessionData.sections[currentSectionIndex].modules[
       currentModuleIndex
     ].attempts.push(details);
     setSessionData(updateSessionData);
+  };
+
+  const handleResponse = (answer, index) => {
+    addAttempt({ selectedAnswer: answer.label, isCorrect: answer.isCorrect });
+    setResponse({ selection: answer, selectionIndex: index });
   };
 
   return (
@@ -182,7 +190,10 @@ const SessionContextProvider = ({ children, activityId }) => {
         touchSection,
         completeModule,
         completeSection,
-        addAttempt
+        addAttempt,
+        response,
+        setResponse,
+        handleResponse,
       }}
     >
       {children}

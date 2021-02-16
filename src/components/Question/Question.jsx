@@ -6,17 +6,9 @@ import Answer from '../Answer/Answer';
 import { SessionContext } from '../../contexts/SessionContext';
 
 const Question = ({ details }) => {
-  const [response, setResponse] = useState(null);
-  const { addAttempt } = useContext(SessionContext);
+  const { response } = useContext(SessionContext);
   // const [bkgrdColor, setbkgrdColor] = useState(['blue', 'green', 'red'])
   const { problemStatement, media, answers } = details.contents;
-
-  
-
-  const handleResponse = (answer, index) => {
-    addAttempt({ selectedAnswer: answer.label, isCorrect: answer.isCorrect });
-    setResponse({ selection: answer, selectionIndex: index });
-  };
 
   return (
     <U.Sub6ColGrid>
@@ -34,7 +26,6 @@ const Question = ({ details }) => {
               key={index}
               index={index}
               response={response}
-              handleResponse={handleResponse}
               answer={answer}
               disabled={
                 !response
