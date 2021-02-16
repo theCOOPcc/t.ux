@@ -7,8 +7,10 @@ const SessionContextProvider = ({ children, activityId }) => {
   const [sessionData, setSessionData] = useState(null);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
+  // !started and finished are for session tracking.
   const [started, setStarted] = useState(null);
   const [finished, setFinished] = useState(null);
+  // !completed variable is used for the progress bar.
   const [completed, setCompleted] = useState('-10');
 
   const { user } = useContext(UserContext);
@@ -59,7 +61,7 @@ const SessionContextProvider = ({ children, activityId }) => {
 
   const updateCurrentModule = async () => {
     touchSection();
-    touchModule()
+    touchModule();
     completeModule();
     await incrementModuleIndex();
     console.log('currentModule', currentModule);
@@ -84,7 +86,7 @@ const SessionContextProvider = ({ children, activityId }) => {
   // !This function builds the initial session object, which will be pushed to the session context when the Begin button is clicked.
   const buildInitialSections = (sections) => {
     const initialSections = [...sections];
-    // ! iterate through sections and modules,  add touched and completed property, set to false.
+    // ! iterate through sections and modules,  add touched and completed property, set to false, if the module type is "question" add an empty array called attempts to the module.
     initialSections.forEach((section, index) => {
       const { modules } = section;
       section.touched = false;
@@ -92,6 +94,7 @@ const SessionContextProvider = ({ children, activityId }) => {
       modules.forEach((module, index) => {
         module.touched = false;
         module.completed = false;
+        module.type === 'question' && (module.attempts = []);
       });
     });
     initialSections[0].touched = true;
@@ -147,6 +150,15 @@ const SessionContextProvider = ({ children, activityId }) => {
     setSessionData(updateSessionData);
   };
 
+  const addAttempt = (details) => {
+    console.log(details)
+    const updateSessionData = { ...sessionData };
+    updateSessionData.sections[currentSectionIndex].modules[
+      currentModuleIndex
+    ].attempts.push(details);
+    setSessionData(updateSessionData);
+  };
+
   return (
     <SessionContext.Provider
       value={{
@@ -170,6 +182,7 @@ const SessionContextProvider = ({ children, activityId }) => {
         touchSection,
         completeModule,
         completeSection,
+        addAttempt
       }}
     >
       {children}

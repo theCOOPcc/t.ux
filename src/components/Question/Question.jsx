@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Feedback from '../Feedback/Feedback';
 import * as U from '../TuxComponents/UniversalComponents';
 import * as A from '../TuxComponents/ActivitiesComponents';
 import Answer from '../Answer/Answer';
+import { SessionContext } from '../../contexts/SessionContext';
 
 const Question = ({ details }) => {
   const [response, setResponse] = useState(null);
+  const { addAttempt } = useContext(SessionContext);
   // const [bkgrdColor, setbkgrdColor] = useState(['blue', 'green', 'red'])
 
   const { problemStatement, media, answers } = details.contents;
 
   const handleResponse = (answer, index) => {
+    addAttempt({ selectedAnswer: answer.label, isCorrect: answer.isCorrect });
     setResponse({ selection: answer, selectionIndex: index });
   };
 
@@ -18,7 +21,10 @@ const Question = ({ details }) => {
     <U.Sub6ColGrid>
       <U.ColorBlock SubGridBlue></U.ColorBlock>
       {/* <A.ProblemStatement>{problemStatement}</A.ProblemStatement> */}
-      <U.FlexBox problemStatement dangerouslySetInnerHTML={{ __html: problemStatement }}></U.FlexBox>
+      <U.FlexBox
+        problemStatement
+        dangerouslySetInnerHTML={{ __html: problemStatement }}
+      ></U.FlexBox>
       <U.FlexBox spaceAround>
         <img src={media} alt="" />
         <U.FlexBox column>
