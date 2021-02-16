@@ -61,6 +61,7 @@ export default ManageGroupMembers;
 
 const OutisdeFlex = styled.article`
     ${Flex({jc:'center',ai:'center'})};
+    max-width: 1440px;
 `;
 
 const ColorBlock = styled.div`
