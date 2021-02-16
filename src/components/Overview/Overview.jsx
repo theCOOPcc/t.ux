@@ -4,12 +4,13 @@ import * as U from '../../components/TuxComponents/UniversalComponents';
 import { SessionContext } from '../../contexts/SessionContext';
 
 const Overview = ({ user }) => {
-  const { setStarted, name: activityName, time: activityTime } = useContext(
+  const { setStarted, name: activityName, time: activityTime, startTimer } = useContext(
     SessionContext
   );
 
   const handleStartSession = () => {
     setStarted(true);
+    startTimer()
   };
 
   return (

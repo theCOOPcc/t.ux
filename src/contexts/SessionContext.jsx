@@ -1,9 +1,10 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import activityService from '../services/activityService';
 import { UserContext } from './UserContext';
+
 export const SessionContext = createContext();
 
-const SessionContextProvider = ({ children, activityId }) => {
+const SessionContextProvider = ({ children, activityId, timerProps }) => {
   const [sessionData, setSessionData] = useState(null);
   const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
@@ -167,6 +168,10 @@ const SessionContextProvider = ({ children, activityId }) => {
     setResponse({ selection: answer, selectionIndex: index });
   };
 
+  const startTimer = () => {
+    timerProps.start()
+  };
+
   return (
     <SessionContext.Provider
       value={{
@@ -194,6 +199,7 @@ const SessionContextProvider = ({ children, activityId }) => {
         response,
         setResponse,
         handleResponse,
+        startTimer,
       }}
     >
       {children}
