@@ -128,13 +128,15 @@ const TuxFlower = styled.img`
 `;
 
 const LoginBox = styled.div`
-    ${Flex({fd:'column'})};
+    ${Flex({fd:'column', ai:'center'})};
     width: 425px;
     height: 510px;
     background-color: var(--true-white);
     box-shadow: ${common_shadow};
     border-radius: 10px;
     margin-top: 200px;
+    padding: 50px 0 0;
+    // check figma file to refine this
 `;
 
 const GoogleG = styled.img`
