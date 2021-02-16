@@ -9,8 +9,9 @@ const Question = ({ details }) => {
   const [response, setResponse] = useState(null);
   const { addAttempt } = useContext(SessionContext);
   // const [bkgrdColor, setbkgrdColor] = useState(['blue', 'green', 'red'])
-
   const { problemStatement, media, answers } = details.contents;
+
+  
 
   const handleResponse = (answer, index) => {
     addAttempt({ selectedAnswer: answer.label, isCorrect: answer.isCorrect });
@@ -31,8 +32,8 @@ const Question = ({ details }) => {
           {answers.map((answer, index) => (
             <Answer
               key={index}
-              response={response}
               index={index}
+              response={response}
               handleResponse={handleResponse}
               answer={answer}
               disabled={
