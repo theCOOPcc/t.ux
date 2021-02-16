@@ -25,8 +25,8 @@ const Question = ({ details }) => {
             <Answer
               key={index}
               index={index}
-              response={response}
               answer={answer}
+              response={response}
               disabled={
                 !response
                   ? false

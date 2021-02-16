@@ -6,15 +6,11 @@ const Answer = ({  answer, index, disabled, response }) => {
 
   const {handleResponse} = useContext(SessionContext)
 
-  // const handleSelection = (answer, index) => {
-  //   handleResponse(answer, index);
-  // };
-
   return (
     <A.SubmitQuestion
 
-      right={response && response.isCorrect === true}
-      wrong={response && response.isCorrect === false}
+      right={response && response.selection.isCorrect === true}
+      wrong={response && response.selection.isCorrect === false}
       medium
       onClick={() => handleResponse(answer, index)}
       disabled={disabled}
