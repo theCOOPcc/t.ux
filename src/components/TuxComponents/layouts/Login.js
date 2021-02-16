@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import authService from '../../../services/authService';
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom'
-import { FlexCenter, common_shadow, pop_reg, pop_thick } from '../utilities';
+import { Flex, common_shadow, pop_reg, pop_thick } from '../utilities';
 import { SmallInput, Button280 } from '../elements';
 // styled components for this Login comoponent are at the bottom
 
@@ -72,10 +72,10 @@ class Login extends Component {
                             {/* These are on hold until next sprint */}
                             {/* TODO: Make ability to stay logged in */}
                             {/* TODO: Create password reset */}
-                            {/* <U.FlexBox negMargin>
+                            {/* <U. negMargin>
                             <U.Checkbox></U.Checkbox>
                             <U.Normal>Stay signed in</U.Normal>
-                            </U.FlexBox> 
+                            </U.> 
                             <U.LinkTo
                                 to="/passwordresetrequest"
                             >Forgot Password?</U.LinkTo>*/}
@@ -110,7 +110,7 @@ const Main = styled.main`
 `;
 
 const OutsideFlex = styled.article`
-    ${FlexCenter};
+    ${Flex({jc:'center',ai:'center'})};
 
     ${(props) =>
     props.signUp && css`
@@ -128,7 +128,7 @@ const TuxFlower = styled.img`
 `;
 
 const LoginBox = styled.div`
-    ${FlexCenter({dir:'column'})};
+    ${Flex({fd:'column'})};
     width: 425px;
     height: 510px;
     background-color: var(--true-white);
@@ -148,7 +148,7 @@ const GoogleBox = styled.a`
     height: 80px;
     border-radius: 5px;
     background: linear-gradient(360deg, #F9F9F9 0%, rgba(255, 255, 255, 0) 100%);
-    ${FlexCenter};
+    ${Flex({jc:'center',ai:'center'})};
     margin-bottom: 10px;
     box-shadow: ${common_shadow};
     text-decoration: none;
