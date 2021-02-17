@@ -6,3 +6,4 @@ export const pop_bolder = '700 18px "Poppins", sans-serif';
 export const pop_bold = '800 18px "Poppins", sans-serif';
 
 export const answerBtn = '500 14px "Poppins", sans-serif';
+export const Poppins = '"Poppins", sans-serif';
