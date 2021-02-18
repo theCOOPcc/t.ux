@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import ReactModal from 'react-modal';
 import styled from 'styled-components';
 import { grey_text, Flex, common_shadow } from '../TuxComponents/utilities';
-import * as U from '../TuxComponents/UniversalComponents';
-import * as L from '../TuxComponents/LoginComponents';
 import EmailCheckbox from "../../components/EmailCheckbox/EmailCheckbox";
 import groupAPI from '../../services/groupService'
 import * as mailAPI from '../../services/mail-api'
@@ -78,7 +76,7 @@ const ActivityInvite = ({
         overlayClassName='inviteModalOverlay'
     >
         <TuxFlower invite src="/images/tuxFlower.png"></TuxFlower>
-        <LoginBox>
+        <FlexBox>
             <Heading3 invite>Invite Students</Heading3>
             <Text>Group: {<i>group name</i>}</Text>
             {/* <div className="email"> */}
@@ -117,7 +115,7 @@ const ActivityInvite = ({
             <button className="send-invite" onClick={()=>handleSendInvite()}>Send Invite</button>
             <p className="or">or</p>
             <button className="copy-link">Copy Link<img className="copy" src="/images/icons/copy-icon.png" width="28" height="28" alt="copy icon"></img></button>
-        </LoginBox>  
+        </FlexBox>  
     </ReactModal>
      );
 }
@@ -140,7 +138,7 @@ export const TuxFlower = styled.img`
 
 `;
 
-const LoginBox = styled.div`
+const FlexBox = styled.div`
     ${Flex({fd:'column',ai:'center',jc:'center'})};
     background-color: var(--true-white);
     box-shadow: ${common_shadow};
