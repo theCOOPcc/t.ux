@@ -1,5 +1,8 @@
 import React from 'react';
+import styled from 'styled-components';
 import GroupUserTable from '../../components/GroupUserTable/GroupUserTable';
+import { Flex, } from '../TuxComponents/utilities';
+import { Button280, } from '../TuxComponents/elements';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 
 const ModifyGroup = ({
@@ -14,8 +17,8 @@ const ModifyGroup = ({
 }) => {
   return (
     <>
-      <U.FlexBox column>
-        <U.Normal twenty>Group:</U.Normal>
+      <OuterBox>
+        <Text>Group:</Text>
         <select
           value={selectedGroupIndex}
           onChange={(e) => setSelectedGroupIndex(e.target.value)}
@@ -35,27 +38,59 @@ const ModifyGroup = ({
                 selectedGroupIndex={selectedGroupIndex}
               />
             )}
-            <U.FlexBox column flexStartJC>
-              <U.AddStudents>Add Students Group</U.AddStudents>
-              <U.TextArea
+            <FlexBox>
+              <AddStudents>Add Students Group</AddStudents>
+              <TextArea
                 type="textarea"
                 value={textInput}
                 onChange={handleTextInputChange}
                 placeholder="Enter email addresses seperated by commas (Ex:
               leo@gmail.com, dan@gmail.com, etc.."
               />
-            </U.FlexBox>
-            <U.WideBtn teal onClick={handleAddToGroup}>
+            </FlexBox>
+            <Button280 onClick={handleAddToGroup}>
               Add To Group
-            </U.WideBtn>
+            </Button280>
             <a href="" onClick={() => setCreateGroup(!createGroup)}>
               Create Group
             </a>
           </>
         )}
-      </U.FlexBox>
+      </OuterBox>
     </>
   );
 };
 
 export default ModifyGroup;
+
+const OuterBox = styled.div`
+  ${Flex({fd:'column',ai:'center',jc:'center'})};
+
+`;
+
+const FlexBox = styled.div`
+  ${Flex({fd:'column'})};
+
+`;
+
+const Text = styled.p`
+  font: var(--pop-reg);
+  line-height: 20px;
+  font-size: 20px;
+`;
+
+const AddStudents = styled.label`
+  font: var(--table);
+  font-weight: 600;
+  line-height: 24px;
+  color: rgba(51, 51, 51, 0.75);
+  margin-top: 50px;
+`;
+
+const TextArea = styled.textarea`
+  width: 580px;
+  height: 100px;
+  border-radius: 5px;
+  text-align: left;
+  padding: 10px;
+`;
