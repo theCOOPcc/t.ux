@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
+import { FlexCenter, Flex } from './utilities';
 
 /*---------- Main Grid ----------*/
 export const Main = styled.main`
@@ -21,8 +22,7 @@ export const InfoBar = styled.section`
   grid-row: 1 / span 1;
   justify-self: stretch;
   background-color: var(--true-white);
-  display: flex;
-  align-items: center;
+  ${Flex({ai:'center'})};
   padding: 0 40px;
   max-width: 1440px;
 `;
@@ -56,9 +56,7 @@ export const SideBar = styled.article`
   grid-row: 1 / span 1;
   background-color: var(--true-white);
   height: calc(100vh - 159px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  ${Flex({ai:'center',fd:'column'})};
   border: var(--solid-border);
   border-radius: 5px 5px 0 0;
 `;
@@ -98,9 +96,7 @@ export const SideBarText = styled.button`
 
 /*---------- FlexBox Components Generic ----------*/
 export const FlexBox = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${FlexCenter};
 
   ${(props) =>
     props.spaceBetween &&
@@ -372,7 +368,7 @@ export const ProgressContainer = styled.div`
     transparent
   );
   border-radius: 5px;
-  display: flex;
+  ${Flex};
 `;
 
 export const ProgressFiller = styled.div`
