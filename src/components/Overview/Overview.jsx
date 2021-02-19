@@ -1,10 +1,20 @@
-import React from 'react';
+
+import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
 import { Flex, orange_text, tux_blue } from '../TuxComponents/utilities';
 import { Button280 } from '../TuxComponents/elements';
-import * as U from '../../components/TuxComponents/UniversalComponents';
+import { SessionContext } from '../../contexts/SessionContext';
 
-const Overview = ({ user, activityName, activityTime, setStarted }) => {
+const Overview = ({ user }) => {
+  const { setStarted, name: activityName, time: activityTime, startTimer } = useContext(
+    SessionContext
+  );
+
+  const handleStartSession = () => {
+    setStarted(true);
+    startTimer()
+  };
+
   return (
     <>
       <Main>
@@ -31,6 +41,7 @@ const Overview = ({ user, activityName, activityTime, setStarted }) => {
           <br></br>
           <Text overview>
             Time to complete activity is <strong>{activityTime} min</strong>
+
           </Text>
           <Text overview>Begin when you're ready. Good luck!</Text>
         </FlexBox>

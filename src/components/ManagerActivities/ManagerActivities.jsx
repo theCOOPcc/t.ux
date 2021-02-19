@@ -1,20 +1,22 @@
 
-
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { ManagerContext } from '../../contexts/ManagerContext';
 import activityAPI from '../../services/activityService';
 import ActivityInvite from '../ActivityInvite/ActivityInvite';
 import styled, { css } from 'styled-components';
 import { Flex, solid_border, Poppins, tux_blue, pop_reg } from '../TuxComponents/utilities';
 import { Button350, Button280 } from '../TuxComponents/elements';
 
-const ManagerActivities = ({
-  groups,
-  selectedGroupIndex,
-  setSelectedGroupIndex,
-  setGroups,
-  sendEmailInvite
-}) => {
+const ManagerActivities = () => {
+  const {
+    groups,
+    setGroups,
+    selectedGroupIndex,
+    setSelectedGroupIndex,
+    sendEmailInvite,
+  } = useContext(ManagerContext);
+
+  
   const [activities, setActivities] = useState('');
   const getActivities = async () => {
     const activities = activityAPI.getAll();
@@ -41,14 +43,14 @@ const ManagerActivities = ({
         selectedGroupIndex={selectedGroupIndex}
         setSelectedGroupIndex={setSelectedGroupIndex}
       /> */}
-      <ActivityInvite 
-      isOpen={isOpen} 
-      setIsOpen={setIsOpen} 
-      groups={groups}
-      setGroups={setGroups}
-      selectedGroupIndex={selectedGroupIndex}
-      setSelectedGroupIndex={setSelectedGroupIndex}
-      sendEmailInvite={sendEmailInvite}
+      <ActivityInvite
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        groups={groups}
+        setGroups={setGroups}
+        selectedGroupIndex={selectedGroupIndex}
+        setSelectedGroupIndex={setSelectedGroupIndex}
+        sendEmailInvite={sendEmailInvite}
       />
       <OutsideBox>
         <ColorBlock></ColorBlock>

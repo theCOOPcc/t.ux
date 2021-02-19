@@ -1,20 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ManagerContext } from '../../contexts/ManagerContext';
 import styled from 'styled-components';
 import GroupUserTable from '../../components/GroupUserTable/GroupUserTable';
 import { Flex, } from '../TuxComponents/utilities';
 import { Button280, } from '../TuxComponents/elements';
-import * as U from '../../components/TuxComponents/UniversalComponents';
 
-const ModifyGroup = ({
-  selectedGroupIndex,
-  setSelectedGroupIndex,
-  groups,
-  handleAddToGroup,
-  createGroup,
-  setCreateGroup,
-  textInput,
-  handleTextInputChange,
-}) => {
+const ModifyGroup = ({ createGroup, setCreateGroup }) => {
+  const {
+    groups,
+    selectedGroupIndex,
+    setSelectedGroupIndex,
+    handleAddToGroup,
+    textInput,
+    handleTextInputChange,
+  } = useContext(ManagerContext);
+  
   return (
     <>
       <OuterBox>

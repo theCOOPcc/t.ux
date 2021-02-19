@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import {SessionContext}  from '../../contexts/SessionContext';
 import { Formik, Field, Form } from 'formik';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import * as F from '../../components/TuxComponents/FormComponents';
@@ -43,7 +44,8 @@ export const Heading3 = styled.h3`
     `}
 `;
 //  orange Hheading3or: rgba(243,119,6,1.0);
-const ConfirmationForm = ({ sections, name }) => {
+const ConfirmationForm = () => {
+  const { sections, name } = useContext(SessionContext);
   // initialize the section names for initalValues
   let data = [];
   sections.forEach((ele, idx, arr) => {
@@ -55,7 +57,7 @@ const ConfirmationForm = ({ sections, name }) => {
   return (
     <>
       <Div>
-      <U.ColorBlock SubGridBlue> </U.ColorBlock>
+        <U.ColorBlock SubGridBlue> </U.ColorBlock>
         <Heading1>Congratulations!</Heading1>
         <Heading3>You've successfully completed your</Heading3>
         <Heading3 activityTitle>{name} Activity.</Heading3>
