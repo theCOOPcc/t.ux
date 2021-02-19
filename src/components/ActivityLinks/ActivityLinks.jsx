@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { SessionContext } from '../../contexts/SessionContext';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Flex } from '../TuxComponents/utilities';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 
-const ActivityLinks = ({ links }) => {
+const LinkList = ({ links }) => {
+  <ul>
+    {links.map((link, index) => (
+      <U.ListLinks>
+        <U.LinkTo noDecor key={index} href={link.url}>
+          {link.text}
+        </U.LinkTo>
+      </U.ListLinks>
+    ))}
+  </ul>;
+};
+
+const ActivityLinks = () => {
+  const { links } = useContext(SessionContext);
   return (
     <U.Sub6ColGrid>
       <U.Heading2>More Heuristics Resources</U.Heading2>

@@ -1,20 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Feedback from '../Feedback/Feedback';
 import Answer from '../Answer/Answer';
 import styled from 'styled-components';
 import { Flex, tux_blue, common_shadow } from '../TuxComponents/utilities';
 import * as U from '../TuxComponents/UniversalComponents';
 import * as A from '../TuxComponents/ActivitiesComponents';
+import { SessionContext } from '../../contexts/SessionContext';
 
 const Question = ({ details }) => {
-  const [response, setResponse] = useState(null);
+  const { response } = useContext(SessionContext);
   // const [bkgrdColor, setbkgrdColor] = useState(['blue', 'green', 'red'])
-
   const { problemStatement, media, answers } = details.contents;
-
-  const handleResponse = (answer, index) => {
-    setResponse({ selection: answer, selectionIndex: index });
-  };
 
   return (
     <U.Sub6ColGrid>
@@ -27,10 +23,9 @@ const Question = ({ details }) => {
           {answers.map((answer, index) => (
             <Answer
               key={index}
-              response={response}
               index={index}
-              handleResponse={handleResponse}
               answer={answer}
+              response={response}
               disabled={
                 !response
                   ? false

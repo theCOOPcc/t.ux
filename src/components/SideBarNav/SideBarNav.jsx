@@ -1,20 +1,25 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { SessionContext } from '../../contexts/SessionContext';
 import * as U from '../TuxComponents/UniversalComponents';
 
-const SideBarNav = ({
-  sections,
-  currentSection,
-  currentSectionIndex,
-  currentModule,
-  currentModuleIndex,
-  handleJumpToSection,
-  handleCurrentSection,
-  handleCurrentModule,
-  started,
-  setStarted,
-  finished,
-  setFinished,
-}) => {
+const SideBarNav = () => {
+  const {
+    sessionData,
+    started,
+    finished,
+    setStarted,
+    setFinished,
+    currentSection,
+    currentModule,
+    handleCurrentSection,
+    handleJumpToSection,
+    handleCurrentModule,
+    currentSectionIndex,
+    currentModuleIndex,
+  } = useContext(SessionContext);
+
+  const { sections } = sessionData;
+  
   return (
     <U.SideBarParent>
       <U.SideBar>

@@ -1,14 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ManagerContext } from '../../contexts/ManagerContext';
+
 import * as U from '../../components/TuxComponents/UniversalComponents';
 
-const CreateGroup = ({
-  setNewGroupName,
-  newGroupName,
-  handleCreateGroup,
-  createGroup,
-  setCreateGroup,
-}) => {
-  
+const CreateGroup = ({ createGroup, setCreateGroup }) => {
+  const { newGroupName, setNewGroupName, handleCreateGroup } = useContext(
+    ManagerContext
+  );
   const createNewGroup = () => {
     handleCreateGroup();
     setCreateGroup(!createGroup);

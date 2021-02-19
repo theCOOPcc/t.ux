@@ -1,29 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { SessionContext } from '../../contexts/SessionContext';
 import ActivityLinks from '../ActivityLinks/ActivityLinks';
 import ActivityMain from '../ActivityMain/ActivityMain';
-import ConfirmationForm from '../ConfirmationForm/ConfirmationForm'
+import ConfirmationForm from '../ConfirmationForm/ConfirmationForm';
 
-const ActivityBody = ({
-  currentModule,
-  handleAnswers,
-  started,
-  links,
-  finished,
-  sections,
-  name
-}) => {
+const ActivityBody = () => {
+  const { started, finished, currentSection } = useContext(SessionContext);
+
   return (
     <>
-      {started === true && (
-        <ActivityMain
-          currentModule={currentModule}
-          handleAnswers={handleAnswers}
-        />
-      )}
-      {started === false && finished === null && <ConfirmationForm sections={sections} name={name} />}
-      {started === false && finished === true && (
-        <ActivityLinks links={links} />
-      )}
+      {started === true && currentSection && <ActivityMain />}
+      {started === false && finished === null && <ConfirmationForm />}
+      {started === false && finished === true && <ActivityLinks />}
     </>
   );
 };

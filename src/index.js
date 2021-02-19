@@ -4,11 +4,14 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './index.css';
 import App from './pages/App/App';
 import * as serviceWorker from './serviceWorker';
+import UserContextProvider from './contexts/UserContext';
 
 ReactDOM.render(
   <Router>
     <React.StrictMode>
-      <Route render={({ history }) => <App history={history} />} />
+      <UserContextProvider>
+        <Route render={({ history }) => <App history={history} />} />
+      </UserContextProvider>
     </React.StrictMode>
   </Router>,
   document.getElementById('root')

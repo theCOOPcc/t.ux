@@ -1,8 +1,11 @@
-import React from 'react';
+
+import React, { useContext } from 'react';
+import { ManagerContext } from '../../contexts/ManagerContext';
 import { Flex, solid_border, tux_blue, Poppins, grey_text, pop_reg } from '../TuxComponents/utilities'
 import styled, { css } from 'styled-components';
 
-const ManagerStudentResults = ({ results }) => {
+const ManagerStudentResults = () => {
+  const { results } = useContext(ManagerContext);
   return (
     <OutsideBox>
       <ColorBlock />
