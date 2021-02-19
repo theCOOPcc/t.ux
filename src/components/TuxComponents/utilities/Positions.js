@@ -23,3 +23,4 @@ export const Flex = ({jc='flex-start', ai='flex-start', fd='row', fw='no wrap'})
         flex-wrap: ${fw};
     `;
 }
+
