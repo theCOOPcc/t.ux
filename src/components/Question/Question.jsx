@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Feedback from '../Feedback/Feedback';
+import Answer from '../Answer/Answer';
+import styled from 'styled-components';
+import { Flex, tux_blue, common_shadow } from '../TuxComponents/utilities';
 import * as U from '../TuxComponents/UniversalComponents';
 import * as A from '../TuxComponents/ActivitiesComponents';
-import Answer from '../Answer/Answer';
 import { SessionContext } from '../../contexts/SessionContext';
 
 const Question = ({ details }) => {
@@ -12,15 +14,12 @@ const Question = ({ details }) => {
 
   return (
     <U.Sub6ColGrid>
-      <U.ColorBlock SubGridBlue></U.ColorBlock>
+      <ColorBlock></ColorBlock>
       {/* <A.ProblemStatement>{problemStatement}</A.ProblemStatement> */}
-      <U.FlexBox
-        problemStatement
-        dangerouslySetInnerHTML={{ __html: problemStatement }}
-      ></U.FlexBox>
-      <U.FlexBox spaceAround>
+      <FlexBox dangerouslySetInnerHTML={{ __html: problemStatement }}></FlexBox>
+      <MediaBox>
         <img src={media} alt="" />
-        <U.FlexBox column>
+        <BtnBox>
           {answers.map((answer, index) => (
             <Answer
               key={index}
@@ -36,11 +35,33 @@ const Question = ({ details }) => {
               }
             />
           ))}
-        </U.FlexBox>
-      </U.FlexBox>
+        </BtnBox>
+      </MediaBox>
       {response && <Feedback response={response} />}
     </U.Sub6ColGrid>
   );
 };
 
 export default Question;
+
+const ColorBlock = styled.div`
+    height: 10px;
+    background: ${tux_blue};
+    width: 100%;
+`;
+
+const FlexBox = styled.div`
+    ${Flex({fd:'column',})};
+    background-color: var(--true-white);
+    /* box-shadow: ${common_shadow}; */
+    border-radius: 10px;
+    margin: 30px 60px;
+`;
+
+const MediaBox = styled.div`
+  ${Flex({jc:'space-around',ai:'center'})};
+`;
+
+const BtnBox = styled.div`
+  ${Flex({fd:'column',jc:'center',ai:'center'})};
+`;

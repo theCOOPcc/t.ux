@@ -2,9 +2,12 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import Signup from '../Signup/Signup';
 import Login from '../Login/Login';
-// import User from '../User/User';
-import NavBar from '../../components/NavBar/NavBar';
-// import Landing from '../Landing/Landing';
+import User from '../User/User';
+import NavBar from '../../components/TuxComponents/layouts/NavBar'
+import authService from '../../services/authService';
+import Landing from '../Landing/Landing';
+import PreviewActivity from '../PreviewActivity/PreviewActivity';
+import IndexActivities from '../IndexActivities/IndexActivities';
 import './App.css';
 import Manager from '../Manager/Manager';
 import Activity from '../Activity/Activity';

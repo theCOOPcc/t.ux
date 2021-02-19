@@ -1,4 +1,5 @@
 import styled, {css} from 'styled-components';
+import { FlexCenter } from '../TuxComponents/utilities/Positions';
 
 export const ProblemStatement = styled.h2`
     font: var(--pop-reg);
@@ -19,9 +20,7 @@ export const Hint = styled.div`
     background-color: ${(props) => (props.isCorrect ? 'Green' : 'Red')};
     color: var(--true-white);
     font: var(--pop-bolder);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    ${FlexCenter};
     margin: 20px 0 0 65px;
     /* flex-grow: 3; */
 

@@ -266,7 +266,7 @@ export const HeuristicsSampleData = {
                     <div class="welcome-C61RwL">
                       <div class="welcome-0O6yUh valign-text-middle border-class-1">Introduction</div>
                     </div>
-                    <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="/images/img/line-4-26@1x.svg" /></div>
+                    <div class="divider-dotted-C61RwL"><img alt="" class="line-4-xv1xHo" src="/images/img/line-4-26@1x.svg" /></div>
                     <div class="text-intro-subheader-C61RwL">
                       <div class="to-the-10---ux-design-U0E3HE valign-text-middle border-class-1">
                         <span>
@@ -314,22 +314,22 @@ export const HeuristicsSampleData = {
                         >
                       </div>
                     </div>
-                    <img class="image-12-C61RwL" src="/images/img/image-12@1x.jpg" />
+                    <img alt="" class="image-12-C61RwL" src="/images/img/image-12@1x.jpg" />
                     <div class="item-list--objectives-C61RwL">
                       <div class="x1-system-s-umentation-C4nRDb border-class-1">
                         1. System Status<br />2. System / World Match<br />3. User Control &amp; Freedom<br />4. Consistency &amp;
                         Standards<br />5. Error Prevention<br />6. Recognition over Recall<br />7. Flexibility &amp; Efficiency<br />8.
                         Aesthetic &amp; Minimilism<br />9. User Errors<br />10. Help &amp; Documentation
                       </div>
-                      <img class="line-8-C4nRDb" src="/images/img/line-8@1x.svg" />
-                      <img class="line-9-C4nRDb" src="/images/img/line-8@1x.svg" />
-                      <img class="line-10-C4nRDb" src="/images/img/line-8@1x.svg" />
-                      <img class="line-11-C4nRDb" src="/images/img/line-8@1x.svg" />
-                      <img class="line-12-C4nRDb" src="/images/img/line-8@1x.svg" />
-                      <img class="line-13-C4nRDb" src="/images/img/line-8@1x.svg" />
-                      <img class="line-14-C4nRDb" src="/images/img/line-8@1x.svg" />
-                      <img class="line-15-C4nRDb" src="/images/img/line-8@1x.svg" />
-                      <img class="line-16-C4nRDb" src="/images/img/line-8@1x.svg" />
+                      <img alt="" class="line-8-C4nRDb" src="/images/img/line-8@1x.svg" />
+                      <img alt="" class="line-9-C4nRDb" src="/images/img/line-8@1x.svg" />
+                      <img alt="" class="line-10-C4nRDb" src="/images/img/line-8@1x.svg" />
+                      <img alt="" class="line-11-C4nRDb" src="/images/img/line-8@1x.svg" />
+                      <img alt="" class="line-12-C4nRDb" src="/images/img/line-8@1x.svg" />
+                      <img alt="" class="line-13-C4nRDb" src="/images/img/line-8@1x.svg" />
+                      <img alt="" class="line-14-C4nRDb" src="/images/img/line-8@1x.svg" />
+                      <img alt="" class="line-15-C4nRDb" src="/images/img/line-8@1x.svg" />
+                      <img alt="" class="line-16-C4nRDb" src="/images/img/line-8@1x.svg" />
                     </div>
                   </div>
                 </div>
@@ -548,20 +548,20 @@ export const HeuristicsSampleData = {
                   >
                   <div class="rectangle-61-C61RwL"></div>
                   <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
-                  <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="/images/img/line-4@1x.svg" /></div>
-                  <img class="group-41-C61RwL" src="/images/img/group-41@1x.png" />
+                  <div class="divider-dotted-C61RwL"><img alt="" class="line-4-xv1xHo" src="/images/img/line-4@1x.svg" /></div>
+                  <img alt="" class="group-41-C61RwL" src="/images/img/group-41@1x.png" />
                   <div class="welcome-C61RwL">
                     <div class="x1-visibili-tem-status-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
                       1. Visibility of System Status
                     </div>
                   </div>
                   <div class="next-triple-chevron-C61RwL"></div>
-                  <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="/images/img/line-4-21@1x.svg" /></div>
+                  <div class="divider-dotted-VMr6Om"><img alt="" class="line-4-OrBG3r" src="/images/img/line-4-21@1x.svg" /></div>
                   <div class="examples-C61RwL valign-text-middle border-class-1">EXAMPLES</div>
                   <div class="group-94-C61RwL">
-                    <img class="load-indicator-NhvmeG" src="/images/img/load-indicator@1x.png" />
-                    <img class="step-progress-bar-NhvmeG" src="/images/img/step-progress-bar@1x.png" />
-                    <img class="gmail-loading-NhvmeG" src="/images/img/gmail-loading@1x.png" />
+                    <img alt="" class="load-indicator-NhvmeG" src="/images/img/load-indicator@1x.png" />
+                    <img alt="" class="step-progress-bar-NhvmeG" src="/images/img/step-progress-bar@1x.png" />
+                    <img alt="" class="gmail-loading-NhvmeG" src="/images/img/gmail-loading@1x.png" />
                   </div>
                   <div class="text-body-paragraph-C61RwL">
                     <div class="body-copy-jdAx62 border-class-1 poppins-normal-black-18px">
@@ -587,7 +587,7 @@ export const HeuristicsSampleData = {
                       >
                     </div>
                   </div>
-                  <img class="x1-mo-mp-kz--lls2-wa-1-C61RwL" src="/images/img/1-mompkzetmd-oz-al-ls2wa-1@1x.jpg" />
+                  <img alt="" class="x1-mo-mp-kz--lls2-wa-1-C61RwL" src="/images/img/1-mompkzetmd-oz-al-ls2wa-1@1x.jpg" />
                   <div class="text-body-paragraph-mzXdH9">
                     <div class="body-copy-SCxiAB border-class-1 poppins-normal-black-18px">
                       Users should always be informed about what is going on through appropriate and timely feedback.<br />When
@@ -607,7 +607,7 @@ export const HeuristicsSampleData = {
                       </span>
                     </div>
                   </div>
-                  <img class="scenario-image-C61RwL" src="/images/img/scenario-image@1x.png" />
+                  <img alt="" class="scenario-image-C61RwL" src="/images/img/scenario-image@1x.png" />
                 </div>
               </body>
             </html>
@@ -857,7 +857,7 @@ export const HeuristicsSampleData = {
                   >
                   <div class="rectangle-61-C61RwL"></div>
                   <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
-                  <img class="table-date-C61RwL" src="/images/img/tabledate@1x.png" />
+                  <img alt="" class="table-date-C61RwL" src="/images/img/tabledate@1x.png" />
                   <div class="good-example-C61RwL">
                     <div class="a-good-exa-tem-status-AjWjTr valign-text-middle border-class-1 poppins-normal-white-16px">
                       <span>
@@ -874,7 +874,7 @@ export const HeuristicsSampleData = {
                       </span>
                     </div>
                   </div>
-                  <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="/images/img/line-4@1x.svg" /></div>
+                  <div class="divider-dotted-C61RwL"><img alt="" class="line-4-xv1xHo" src="/images/img/line-4@1x.svg" /></div>
                   <div class="text-body-paragraph-C61RwL">
                     <div class="body-copy-jdAx62 border-class-1 poppins-normal-black-18px-2">
                       <span class="span1-xxmNLl">Visibility of System Status </span><span class="span2-xxmNLl">is about </span
@@ -911,8 +911,8 @@ export const HeuristicsSampleData = {
                       </span>
                     </div>
                   </div>
-                  <img class="mapsicle-map-C61RwL" src="/images/img/mapsicle-map@2x.jpg" />
-                  <img class="icon-artwork-C61RwL" src="/images/img/icon-artwork@2x.svg" />
+                  <img alt="" class="mapsicle-map-C61RwL" src="/images/img/mapsicle-map@2x.jpg" />
+                  <img alt="" class="icon-artwork-C61RwL" src="/images/img/icon-artwork@2x.svg" />
                   <div class="bad-example-VMr6Om">
                     <div class="a-bad-exam-tem-status-Ab4kxC valign-text-middle border-class-1 poppins-normal-white-16px">
                       <span>
@@ -921,7 +921,7 @@ export const HeuristicsSampleData = {
                       </span>
                     </div>
                   </div>
-                  <img class="mapsicle-map-VMr6Om" src="/images/img/mapsicle-map-1@2x.jpg" />
+                  <img alt="" class="mapsicle-map-VMr6Om" src="/images/img/mapsicle-map-1@2x.jpg" />
                   <div class="text-body-paragraph-VMr6Om">
                     <div class="body-copy-SuXUfK border-class-1 poppins-normal-black-18px">
                       As previously discussed, the design should always keep users informed about what is going on through
@@ -1195,8 +1195,8 @@ export const HeuristicsSampleData = {
                 >
                 <div class="rectangle-61-C61RwL"></div>
                 <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
-                <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="/images/img/line-4-1@1x.svg" /></div>
-                <img class="lahand-pointer-solid-C61RwL" src="/images/img/la-hand-pointer-solid@1x.png" />
+                <div class="divider-dotted-C61RwL"><img alt="" class="line-4-xv1xHo" src="/images/img/line-4-1@1x.svg" /></div>
+                <img alt="" class="lahand-pointer-solid-C61RwL" src="/images/img/la-hand-pointer-solid@1x.png" />
                 <div class="welcome-C61RwL">
                   <div class="welcome-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
                     2. System / World Match
@@ -1219,19 +1219,19 @@ export const HeuristicsSampleData = {
                   </div>
                 </div>
                 <div class="group-95-C61RwL">
-                  <img class="rectangle-96-IUHrKR" src="/images/img/rectangle-96@2x.svg" />
-                  <img class="rectangle-97-IUHrKR" src="/images/img/rectangle-97@2x.svg" />
-                  <img class="rectangle-98-IUHrKR" src="/images/img/rectangle-98@2x.svg" />
-                  <img class="rectangle-99-IUHrKR" src="/images/img/rectangle-99@2x.svg" />
-                  <img class="rectangle-100-IUHrKR" src="/images/img/rectangle-100@2x.svg" />
-                  <img class="rectangle-101-IUHrKR" src="/images/img/rectangle-101@2x.svg" />
-                  <img class="x1-iugn-fsi-zw-IUHrKR" src="/images/img/1iugn-fsizw@2x.svg" />
-                  <img class="png-image-2-IUHrKR" src="/images/img/png-image-2@2x.jpg" />
+                  <img alt="" class="rectangle-96-IUHrKR" src="/images/img/rectangle-96@2x.svg" />
+                  <img alt="" class="rectangle-97-IUHrKR" src="/images/img/rectangle-97@2x.svg" />
+                  <img alt="" class="rectangle-98-IUHrKR" src="/images/img/rectangle-98@2x.svg" />
+                  <img alt="" class="rectangle-99-IUHrKR" src="/images/img/rectangle-99@2x.svg" />
+                  <img alt="" class="rectangle-100-IUHrKR" src="/images/img/rectangle-100@2x.svg" />
+                  <img alt="" class="rectangle-101-IUHrKR" src="/images/img/rectangle-101@2x.svg" />
+                  <img alt="" class="x1-iugn-fsi-zw-IUHrKR" src="/images/img/1iugn-fsizw@2x.svg" />
+                  <img alt="" class="png-image-2-IUHrKR" src="/images/img/png-image-2@2x.jpg" />
                 </div>
                 <div class="text-secti--subheader-C61RwL">
                   <div class="what-are-they-saying-SOgkRd valign-text-middle border-class-1">What are they saying?</div>
                 </div>
-                <img class="artboard-1-1-C61RwL" src="/images/img/artboard---1-1@1x.jpg" />
+                <img alt="" class="artboard-1-1-C61RwL" src="/images/img/artboard---1-1@1x.jpg" />
                 <div class="text-body-paragraph-C61RwL">
                   <div class="body-copy-jdAx62 border-class-1">
                     Most of the times the users are going to search for you on the internet or are going to navigate within your
@@ -1265,9 +1265,9 @@ export const HeuristicsSampleData = {
                     </span>
                   </div>
                 </div>
-                <img class="line-4-C61RwL" src="/images/img/line-4-1@1x.svg" />
-                <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="/images/img/line-4-24@1x.svg" /></div>
-                <div class="divider-dotted-mzXdH9"><img class="line-4-qa0SLk" src="/images/img/line-4-24@1x.svg" /></div>
+                <img alt="" class="line-4-C61RwL" src="/images/img/line-4-1@1x.svg" />
+                <div class="divider-dotted-VMr6Om"><img alt="" class="line-4-OrBG3r" src="/images/img/line-4-24@1x.svg" /></div>
+                <div class="divider-dotted-mzXdH9"><img alt="" class="line-4-qa0SLk" src="/images/img/line-4-24@1x.svg" /></div>
                 <div class="text-body-paragraph-mzXdH9">
                   <div class="body-copy-SCxiAB border-class-1">
                     <span class="span1-Yh9UKS"
@@ -1293,8 +1293,8 @@ export const HeuristicsSampleData = {
                     Research you users
                   </div>
                 </div>
-                <img class="group-83-C61RwL" src="/images/img/group-83@1x.png" />
-                <img class="group-82-C61RwL" src="/images/img/group-82@1x.png" />
+                <img alt="" class="group-83-C61RwL" src="/images/img/group-83@1x.png" />
+                <img alt="" class="group-82-C61RwL" src="/images/img/group-82@1x.png" />
               </div>
             </body>
           </html>
@@ -1588,9 +1588,9 @@ export const HeuristicsSampleData = {
                 <div class="welcome-C61RwL">
                   <div class="welcome-0O6yUh valign-text-middle border-class-1">3. User Control &amp; Freedom</div>
                 </div>
-                <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="/images/img/line-4@1x.svg" /></div>
-                <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="/images/img/line-4@1x.svg" /></div>
-                <img class="google-example-C61RwL" src="/images/img/google-example@1x.png" />
+                <div class="divider-dotted-C61RwL"><img alt="" class="line-4-xv1xHo" src="/images/img/line-4@1x.svg" /></div>
+                <div class="divider-dotted-VMr6Om"><img alt="" class="line-4-OrBG3r" src="/images/img/line-4@1x.svg" /></div>
+                <img alt="" class="google-example-C61RwL" src="/images/img/google-example@1x.png" />
                 <div class="image-caption-C61RwL">
                   <div class="the-visibi--for-users-mWuPKx border-class-1">
                     <span class="span1-SQKVtq">Example: </span
@@ -1600,7 +1600,7 @@ export const HeuristicsSampleData = {
                     ><span class="span3-SQKVtq">ail.</span>
                   </div>
                 </div>
-                <img class="group-38-C61RwL" src="/images/img/group-38@1x.png" />
+                <img alt="" class="group-38-C61RwL" src="/images/img/group-38@1x.png" />
                 <div class="text-body-paragraph-C61RwL">
                   <div class="text-jdAx62 border-class-1 poppins-normal-black-18px">
                     <span class="span1-cgHpkm">Another Example of User Control: </span
@@ -1623,10 +1623,10 @@ export const HeuristicsSampleData = {
                   </div>
                 </div>
                 <div class="rectangle-117-C61RwL"></div>
-                <img class="icon-artwork-C61RwL" src="/images/img/icon-artwork@2x.svg" />
+                <img alt="" class="icon-artwork-C61RwL" src="/images/img/icon-artwork@2x.svg" />
                 <div class="rectangle-81-C61RwL"></div>
                 <div class="cancel-C61RwL valign-text-middle border-class-1">CANCEL</div>
-                <img class="back-button-group-C61RwL" src="/images/img/back-button-group@1x.png" />
+                <img alt="" class="back-button-group-C61RwL" src="/images/img/back-button-group@1x.png" />
                 <div class="text-body-paragraph-mzXdH9">
                   <div class="body-copy-SCxiAB border-class-1 poppins-normal-black-18px">
                     <span class="span1-Yh9UKS"
@@ -1967,16 +1967,16 @@ export const HeuristicsSampleData = {
                 >
                 <div class="rectangle-61-C61RwL"></div>
                 <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
-                <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="/images/img/line-4-1@1x.svg" /></div>
+                <div class="divider-dotted-C61RwL"><img alt="" class="line-4-xv1xHo" src="/images/img/line-4-1@1x.svg" /></div>
                 <div class="welcome-C61RwL">
                   <div class="welcome-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
                     4. Consistency &amp; Standards
                   </div>
                 </div>
-                <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="/images/img/line-4-1@1x.svg" /></div>
-                <div class="divider-dotted-mzXdH9"><img class="line-4-qa0SLk" src="/images/img/line-4-3@1x.svg" /></div>
-                <img class="group-58-C61RwL" src="/images/img/group-58@1x.png" />
-                <img class="layout-log-nding-page-C61RwL" src="/images/img/layout-login-landing-page@1x.png" />
+                <div class="divider-dotted-VMr6Om"><img alt="" class="line-4-OrBG3r" src="/images/img/line-4-1@1x.svg" /></div>
+                <div class="divider-dotted-mzXdH9"><img alt="" class="line-4-qa0SLk" src="/images/img/line-4-3@1x.svg" /></div>
+                <img alt="" class="group-58-C61RwL" src="/images/img/group-58@1x.png" />
+                <img alt="" class="layout-log-nding-page-C61RwL" src="/images/img/layout-login-landing-page@1x.png" />
                 <div class="bad-example-C61RwL valign-text-middle border-class-1">Bad Example</div>
                 <div class="section-header-C61RwL">
                   <div class="five-ways---your-work-X1rVr0 valign-text-middle border-class-1 poppins-semi-bold-black-24px">
@@ -1990,7 +1990,7 @@ export const HeuristicsSampleData = {
                     </span>
                   </div>
                 </div>
-                <img class="x28e90e57f8-910d47f2-1-C61RwL" src="/images/img/28e90e57f8ce9814cdfb9de9910d47f2-1@1x.jpg" />
+                <img alt="" class="x28e90e57f8-910d47f2-1-C61RwL" src="/images/img/28e90e57f8ce9814cdfb9de9910d47f2-1@1x.jpg" />
                 <div class="image-caption-C61RwL">
                   <div class="the-visibi--for-users-mWuPKx border-class-1 poppins-normal-black-14px">
                     An example of a style guide and branding manual designed for the company, ‘Goodnyt’. Having a style and
@@ -2009,9 +2009,9 @@ export const HeuristicsSampleData = {
                     behave that way in functionality as well.
                   </div>
                 </div>
-                <img class="x7114fe396e-3641cefd-1-C61RwL" src="/images/img/7114fe396ec6670356fbdfc13641cefd-1@1x.jpg" />
-                <img class="f6193b4e6a-e5dc2fe2-1-C61RwL" src="/images/img/f6193b4e6a9c8ac399d8c6c8e5dc2fe2-1@1x.svg" />
-                <div class="divider-dotted-QxM5SU"><img class="line-4-KBGCks" src="/images/img/line-4-1@1x.svg" /></div>
+                <img alt="" class="x7114fe396e-3641cefd-1-C61RwL" src="/images/img/7114fe396ec6670356fbdfc13641cefd-1@1x.jpg" />
+                <img alt="" class="f6193b4e6a-e5dc2fe2-1-C61RwL" src="/images/img/f6193b4e6a9c8ac399d8c6c8e5dc2fe2-1@1x.svg" />
+                <div class="divider-dotted-QxM5SU"><img alt="" class="line-4-KBGCks" src="/images/img/line-4-1@1x.svg" /></div>
                 <div class="text-body-paragraph-C61RwL">
                   <div class="body-copy-jdAx62 border-class-1">
                     The example above shows two diffferent layouts for a login form.&nbsp;&nbsp;Notice how strange the second
@@ -2019,11 +2019,11 @@ export const HeuristicsSampleData = {
                     industry conventions.
                   </div>
                 </div>
-                <img class="screen-sho--at-1147-1-C61RwL" src="/images/img/screen-shot-2020-12-14-at-11-47-1@1x.jpg" />
+                <img alt="" class="screen-sho--at-1147-1-C61RwL" src="/images/img/screen-shot-2020-12-14-at-11-47-1@1x.jpg" />
                 <div class="image-caption-QxM5SU">
                   <div class="the-visibi--for-users-qWiSjq border-class-1">Consistent Icons</div>
                 </div>
-                <img class="screen-sho--at-1147-2-C61RwL" src="/images/img/screen-shot-2020-12-14-at-11-47-2@1x.jpg" />
+                <img alt="" class="screen-sho--at-1147-2-C61RwL" src="/images/img/screen-shot-2020-12-14-at-11-47-2@1x.jpg" />
                 <div class="image-caption-2P4qUJ">
                   <div class="the-visibi--for-users-NA0Qkv border-class-1">Inconsistent Icons</div>
                 </div>
@@ -2370,8 +2370,8 @@ export const HeuristicsSampleData = {
                   <div class="rectangle-61-C61RwL"></div>
                   <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
                   <div class="activity-intro-text-C61RwL"></div>
-                  <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="/images/img/line-4-1@1x.svg" /></div>
-                  <img class="screen-sho--at-1142-1-C61RwL" src="/images/img/screen-shot-2020-12-14-at-11-42-1@1x.jpg" />
+                  <div class="divider-dotted-C61RwL"><img alt="" class="line-4-xv1xHo" src="/images/img/line-4-1@1x.svg" /></div>
+                  <img alt="" class="screen-sho--at-1142-1-C61RwL" src="/images/img/screen-shot-2020-12-14-at-11-42-1@1x.jpg" />
                   <div class="welcome-C61RwL">
                     <div class="welcome-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
                       5. Error Prevention
@@ -2392,9 +2392,9 @@ export const HeuristicsSampleData = {
                       Offer Suggestions
                     </div>
                   </div>
-                  <img class="southwest-1-C61RwL" src="/images/img/southwest-1@1x.jpg" />
-                  <img class="amazonsearch-1-C61RwL" src="/images/img/amazonsearch-1@1x.png" />
-                  <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="/images/img/line-4-1@1x.svg" /></div>
+                  <img alt="" class="southwest-1-C61RwL" src="/images/img/southwest-1@1x.jpg" />
+                  <img alt="" class="amazonsearch-1-C61RwL" src="/images/img/amazonsearch-1@1x.png" />
+                  <div class="divider-dotted-VMr6Om"><img alt="" class="line-4-OrBG3r" src="/images/img/line-4-1@1x.svg" /></div>
                   <div class="text-body-paragraph-C61RwL">
                     <div class="body-copy-jdAx62 border-class-1">
                       <span class="span1-xxmNLl"
@@ -2762,17 +2762,17 @@ export const HeuristicsSampleData = {
                   >
                   <div class="rectangle-61-C61RwL"></div>
                   <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
-                  <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="/images/img/line-4-1@1x.svg" /></div>
-                  <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="/images/img/line-4-1@1x.svg" /></div>
+                  <div class="divider-dotted-C61RwL"><img alt="" class="line-4-xv1xHo" src="/images/img/line-4-1@1x.svg" /></div>
+                  <div class="divider-dotted-VMr6Om"><img alt="" class="line-4-OrBG3r" src="/images/img/line-4-1@1x.svg" /></div>
                   <div class="welcome-C61RwL">
                     <div class="welcome-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
                       6. Recognition over Recall
                     </div>
                   </div>
-                  <img class="best5406-1-C61RwL" src="/images/img/best-5406-1@1x.svg" />
-                  <img class="x2014-5-12-amazon-2-1-C61RwL" src="/images/img/2014-5-12-amazon-2-1@1x.jpg" />
-                  <div class="divider-dotted-mzXdH9"><img class="line-4-qa0SLk" src="/images/img/line-4-1@1x.svg" /></div>
-                  <img class="line-4-C61RwL" src="/images/img/line-4-1@1x.svg" />
+                  <img alt="" class="best5406-1-C61RwL" src="/images/img/best-5406-1@1x.svg" />
+                  <img alt="" class="x2014-5-12-amazon-2-1-C61RwL" src="/images/img/2014-5-12-amazon-2-1@1x.jpg" />
+                  <div class="divider-dotted-mzXdH9"><img alt="" class="line-4-qa0SLk" src="/images/img/line-4-1@1x.svg" /></div>
+                  <img alt="" class="line-4-C61RwL" src="/images/img/line-4-1@1x.svg" />
                   <div class="section-header-C61RwL">
                     <div class="five-ways---your-work-X1rVr0 valign-text-middle border-class-1 poppins-semi-bold-black-24px">
                       HISTORY AND PREVIOUSLY VISITED CONTENT
@@ -2810,7 +2810,7 @@ export const HeuristicsSampleData = {
                       >
                     </div>
                   </div>
-                  <img class="x2014-05-12-bing1-1-C61RwL" src="/images/img/2014-05-12-bing1-1@1x.jpg" />
+                  <img alt="" class="x2014-05-12-bing1-1-C61RwL" src="/images/img/2014-05-12-bing1-1@1x.jpg" />
                   <div class="conclusion-C61RwL">
                     <div class="message-box-scenario-uxVav3">
                       <div class="rectangle-89-l8o00t"></div>
@@ -3146,16 +3146,16 @@ export const HeuristicsSampleData = {
                   >
                   <div class="rectangle-61-C61RwL"></div>
                   <div class="text-C61RwL valign-text-middle border-class-1 proximanova-bold-black-40px"></div>
-                  <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="/images/img/line-4-1@1x.svg" /></div>
-                  <img class="screen-sho-2-at-802-1-C61RwL" src="/images/img/screen-shot-2020-12-02-at-8-02-1@1x.jpg" />
+                  <div class="divider-dotted-C61RwL"><img alt="" class="line-4-xv1xHo" src="/images/img/line-4-1@1x.svg" /></div>
+                  <img alt="" class="screen-sho-2-at-802-1-C61RwL" src="/images/img/screen-shot-2020-12-02-at-8-02-1@1x.jpg" />
                   <div class="welcome-C61RwL">
                     <div class="welcome-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
                       7. Flexibility &amp; Efficiency
                     </div>
                   </div>
-                  <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="/images/img/line-4-1@1x.svg" /></div>
-                  <div class="divider-dotted-mzXdH9"><img class="line-4-qa0SLk" src="/images/img/line-4-1@1x.svg" /></div>
-                  <div class="divider-dotted-QxM5SU"><img class="line-4-KBGCks" src="/images/img/line-4-1@1x.svg" /></div>
+                  <div class="divider-dotted-VMr6Om"><img alt="" class="line-4-OrBG3r" src="/images/img/line-4-1@1x.svg" /></div>
+                  <div class="divider-dotted-mzXdH9"><img alt="" class="line-4-qa0SLk" src="/images/img/line-4-1@1x.svg" /></div>
+                  <div class="divider-dotted-QxM5SU"><img alt="" class="line-4-KBGCks" src="/images/img/line-4-1@1x.svg" /></div>
                   <div class="novice-vs--pert-users-C61RwL valign-text-middle border-class-1 poppins-semi-bold-black-24px">
                     Novice vs. Expert Users
                   </div>
@@ -3208,7 +3208,7 @@ export const HeuristicsSampleData = {
                       gesture is an accelerator: it helps experienced users but does not make typing harder to learn for novices.
                     </div>
                   </div>
-                  <img class="swipe-keyb-rator-sm-1-C61RwL" src="/images/img/swipe-keyboard-accelerator-sm-1@2x.gif" />
+                  <img alt="" class="swipe-keyb-rator-sm-1-C61RwL" src="/images/img/swipe-keyboard-accelerator-sm-1@2x.gif" />
                   <div class="conclusion-C61RwL">
                     <div class="message-box-scenario-uxVav3">
                       <div class="rectangle-89-l8o00t"></div>
@@ -3256,8 +3256,8 @@ export const HeuristicsSampleData = {
                       can cater to both inexperienced and experienced users.
                     </div>
                   </div>
-                  <img class="x0fh5-g613a-t-o8-qvl-1-C61RwL" src="/images/img/0-fh5g613aet-o8qvl-1@1x.png" />
-                  <img class="ux-tactic--dit-data-1-C61RwL" src="/images/img/ux-tactic-20-let-users-directly-edit-data-1@1x.png" />
+                  <img alt="" class="x0fh5-g613a-t-o8-qvl-1-C61RwL" src="/images/img/0-fh5g613aet-o8qvl-1@1x.png" />
+                  <img alt="" class="ux-tactic--dit-data-1-C61RwL" src="/images/img/ux-tactic-20-let-users-directly-edit-data-1@1x.png" />
                   <div class="section-header-qr8e7q">
                     <div class="five-ways---your-work-3Bxx2b valign-text-middle border-class-1 poppins-semi-bold-black-24px">
                       Let Users Directly Edit Data
@@ -3271,7 +3271,7 @@ export const HeuristicsSampleData = {
                     class="ux-tactic--unctions-1-C61RwL"
                     src="/images/img/ux-tactic-31-offer-keyboard-shortcuts-for-repetitive-functions-1@1x.png"
                   />
-                  <img class="ux-tactic--elements-1-C61RwL" src="/images/img/ux-tactic-19-let-users-drag-and-drop-elements-1@1x.png" />
+                  <img alt="" class="ux-tactic--elements-1-C61RwL" src="/images/img/ux-tactic-19-let-users-drag-and-drop-elements-1@1x.png" />
                 </div>
               </div>
             </body>
@@ -3603,7 +3603,7 @@ export const HeuristicsSampleData = {
                       >
                     </div>
                   </div>
-                  <img class="img22-1-C61RwL" src="/images/img/img22-1@1x.jpg" />
+                  <img alt="" class="img22-1-C61RwL" src="/images/img/img22-1@1x.jpg" />
                   <div class="text-quote-C61RwL">
                     <div class="quote-DGgCa2 valign-text-middle border-class-1">
                       <span>
@@ -3615,7 +3615,7 @@ export const HeuristicsSampleData = {
                       </span>
                     </div>
                   </div>
-                  <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="/images/img/line-4-1@1x.svg" /></div>
+                  <div class="divider-dotted-C61RwL"><img alt="" class="line-4-xv1xHo" src="/images/img/line-4-1@1x.svg" /></div>
                   <div class="welcome-C61RwL">
                     <div class="welcome-0O6yUh valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
                       8. Aesthetic &amp; Minimalism
@@ -3630,9 +3630,9 @@ export const HeuristicsSampleData = {
                       </span>
                     </div>
                   </div>
-                  <img class="heuristic--ample-80-1-C61RwL" src="/images/img/heuristic-example-80-1@1x.jpg" />
-                  <img class="x1w-as-pgdc--t-xe-ca-1-C61RwL" src="/images/img/1-waspgdcm0dazlypx-txeca-1@1x.jpg" />
-                  <img class="x1v8x5u-fvk--ywo-ffa-1-C61RwL" src="/images/img/1-v8x5ufvkkx54xi3qywoffa-1@1x.svg" />
+                  <img alt="" class="heuristic--ample-80-1-C61RwL" src="/images/img/heuristic-example-80-1@1x.jpg" />
+                  <img alt="" class="x1w-as-pgdc--t-xe-ca-1-C61RwL" src="/images/img/1-waspgdcm0dazlypx-txeca-1@1x.jpg" />
+                  <img alt="" class="x1v8x5u-fvk--ywo-ffa-1-C61RwL" src="/images/img/1-v8x5ufvkkx54xi3qywoffa-1@1x.svg" />
                   <div class="section-header-VMr6Om"></div>
                 </div>
               </div>
@@ -3945,8 +3945,8 @@ export const HeuristicsSampleData = {
                       </div>
                     </div>
                   </div>
-                  <div class="next-triple-chevron-C61RwL"><img class="vector-Hx8FI2" src="/images/img/vector-6@2x.svg" /></div>
-                  <img class="x1ls-o-qu-h-e-x6-t2g-1-C61RwL" src="/images/img/1-lsoquhbkhke2gjbe-x6t2g-1@1x.jpg" />
+                  <div class="next-triple-chevron-C61RwL"><img alt="" class="vector-Hx8FI2" src="/images/img/vector-6@2x.svg" /></div>
+                  <img alt="" class="x1ls-o-qu-h-e-x6-t2g-1-C61RwL" src="/images/img/1-lsoquhbkhke2gjbe-x6t2g-1@1x.jpg" />
                   <div class="text-body-paragraph-mzXdH9">
                     <div class="body-copy-SCxiAB border-class-1 poppins-normal-black-18px-2">
                       <span class="span1-Yh9UKS">4. Get rid of the extra mass<br /></span
@@ -3958,7 +3958,7 @@ export const HeuristicsSampleData = {
                       >
                     </div>
                   </div>
-                  <img class="shopify20a-he20fold-1-C61RwL" src="/images/img/shopify-20above-20the-20fold-1@1x.jpg" />
+                  <img alt="" class="shopify20a-he20fold-1-C61RwL" src="/images/img/shopify-20above-20the-20fold-1@1x.jpg" />
                 </div>
               </div>
             </body>
@@ -4217,8 +4217,8 @@ export const HeuristicsSampleData = {
                     <div class="welcome-Oltj0X valign-text-middle border-class-1 poppins-bold-chilean-fire-60px">
                       9. Error Recovery
                     </div>
-                    <img class="line-4-Oltj0X" src="/images/img/line-4-1@1x.svg" />
-                    <img class="line-4-YkvUY0" src="/images/img/line-4-1@1x.svg" />
+                    <img alt="" class="line-4-Oltj0X" src="/images/img/line-4-1@1x.svg" />
+                    <img alt="" class="line-4-YkvUY0" src="/images/img/line-4-1@1x.svg" />
                     <div class="body-copy-Oltj0X border-class-1 poppins-normal-black-18px">
                       Good designs should aim to prevent errors from ever occurring in the first place, but sometimes this goal
                       just isn’t realistic. To best meet the needs of users, designs must also provide ways for users to overcome
@@ -4227,7 +4227,7 @@ export const HeuristicsSampleData = {
                       diagnose the error for the user by telling them in plain, easy to understand language what went wrong.
                       Third, the user should be given clear directions on how to recover from the error.
                     </div>
-                    <img class="frame-Oltj0X" src="/images/img/frame@1x.png" />
+                    <img alt="" class="frame-Oltj0X" src="/images/img/frame@1x.png" />
                     <div class="body-copy-YkvUY0 border-class-1 poppins-normal-black-18px-2">
                       <span class="span1-Atnf6P">Recognize<br /></span
                       ><span class="span2-Atnf6P"
@@ -4259,9 +4259,9 @@ export const HeuristicsSampleData = {
                         interactions.</span
                       >
                     </div>
-                    <img class="x0tv-b9-eq--bbvygw-i-1-Oltj0X" src="/images/img/0--tvb9eqnnbbvygwi-1@1x.jpg" />
-                    <img class="x0lw-tf6-an-t3-qq-cy-1-Oltj0X" src="/images/img/0-lwtf6anphxt3qqcy-1@1x.svg" />
-                    <img class="x0cc0f7-vg9hp-to-af-1-Oltj0X" src="/images/img/0-cc0f7vg9--hptoaf-1@1x.svg" />
+                    <img alt="" class="x0tv-b9-eq--bbvygw-i-1-Oltj0X" src="/images/img/0--tvb9eqnnbbvygwi-1@1x.jpg" />
+                    <img alt="" class="x0lw-tf6-an-t3-qq-cy-1-Oltj0X" src="/images/img/0-lwtf6anphxt3qqcy-1@1x.svg" />
+                    <img alt="" class="x0cc0f7-vg9hp-to-af-1-Oltj0X" src="/images/img/0-cc0f7vg9--hptoaf-1@1x.svg" />
                     <div class="text-image-subtext-Oltj0X">
                       <div class="the-visibi--for-users-tlgKvU border-class-1 poppins-normal-black-14px">
                         A check needs to be done if exception handling is done across the application so that relevant messages
@@ -4579,8 +4579,8 @@ export const HeuristicsSampleData = {
                       10. Help &amp; Documentation
                     </div>
                   </div>
-                  <div class="divider-dotted-C61RwL"><img class="line-4-xv1xHo" src="/images/img/line-4-1@1x.svg" /></div>
-                  <div class="divider-dotted-VMr6Om"><img class="line-4-OrBG3r" src="/images/img/line-4-1@1x.svg" /></div>
+                  <div class="divider-dotted-C61RwL"><img alt="" class="line-4-xv1xHo" src="/images/img/line-4-1@1x.svg" /></div>
+                  <div class="divider-dotted-VMr6Om"><img alt="" class="line-4-OrBG3r" src="/images/img/line-4-1@1x.svg" /></div>
                   <div class="text-body-paragraph-C61RwL">
                     <div class="body-copy-jdAx62 border-class-1 poppins-normal-black-18px">
                       Websites and applications can offer two types of help: proactive and reactive. Proactive help is provided
@@ -4590,7 +4590,7 @@ export const HeuristicsSampleData = {
                       it.&nbsp;&nbsp;(Even though some users may consume such materials proactively, it is rare that they do so.)
                     </div>
                   </div>
-                  <img class="heuristic--le-73-82-1-C61RwL" src="/images/img/heuristic-example-73-82-1@1x.jpg" />
+                  <img alt="" class="heuristic--le-73-82-1-C61RwL" src="/images/img/heuristic-example-73-82-1@1x.jpg" />
                   <div class="text-body-paragraph-VMr6Om">
                     <div class="body-copy-SuXUfK border-class-1 poppins-normal-black-18px">
                       Proactive Help<br /><br />The goal of proactive help is to familiarize users with an interface. Proactive
@@ -4617,9 +4617,9 @@ export const HeuristicsSampleData = {
                       overlay highlighting interface elements.
                     </div>
                   </div>
-                  <img class="oreilly-1-C61RwL" src="/images/img/oreilly-1@1x.png" />
-                  <img class="helpasset-4-1-C61RwL" src="/images/img/helpasset-4-1@1x.jpg" />
-                  <img class="asana-1-C61RwL" src="/images/img/asana-1@1x.svg" />
+                  <img alt="" class="oreilly-1-C61RwL" src="/images/img/oreilly-1@1x.png" />
+                  <img alt="" class="helpasset-4-1-C61RwL" src="/images/img/helpasset-4-1@1x.jpg" />
+                  <img alt="" class="asana-1-C61RwL" src="/images/img/asana-1@1x.svg" />
                   <div class="rectangle-62-C61RwL"></div>
                 </div>
               </div>
@@ -4841,7 +4841,7 @@ export const HeuristicsSampleData = {
                       information when it is not related to your immediate goals.
                     </div>
                   </div>
-                  <img class="addevent-1-C61RwL" src="/images/img/addevent-1@1x.svg" />
+                  <img alt="" class="addevent-1-C61RwL" src="/images/img/addevent-1@1x.svg" />
                   <div class="text-image-subtext-C61RwL">
                     <div class="the-visibi--for-users-KvLq2Y border-class-1 poppins-normal-black-14px">
                       Microsoft Word recognized that the user was working on a resume and provided a tip to See resume suggestions
@@ -4910,7 +4910,7 @@ export const HeuristicsSampleData = {
                       >
                     </div>
                   </div>
-                  <img class="mind-1-C61RwL" src="/images/img/mind-1@1x.svg" />
+                  <img alt="" class="mind-1-C61RwL" src="/images/img/mind-1@1x.svg" />
                   <div class="conclusion-C61RwL">
                     <div class="message-box-scenario-uxVav3">
                       <div class="rectangle-89-l8o00t"></div>
@@ -4933,8 +4933,8 @@ export const HeuristicsSampleData = {
                       </div>
                     </div>
                   </div>
-                  <img class="word-1-C61RwL" src="/images/img/word-1@1x.svg" />
-                  <img class="dovetail-1-C61RwL" src="/images/img/dovetail-1@1x.svg" />
+                  <img alt="" class="word-1-C61RwL" src="/images/img/word-1@1x.svg" />
+                  <img alt="" class="dovetail-1-C61RwL" src="/images/img/dovetail-1@1x.svg" />
                   <div class="section-header-C61RwL">
                     <div class="guidance-f-ctive-help-X1rVr0 valign-text-middle border-class-1 poppins-semi-bold-black-24px">
                       Guidance for Providing Proactive Help

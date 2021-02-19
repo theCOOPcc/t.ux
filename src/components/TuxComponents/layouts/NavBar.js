@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { tux_blue, tux_yellow, tux_red, tux_grey, tux_white, tux_black } from '../utilities/Colors';
-import { nav_border } from '../utilities/Borders';
+import { nav_border, Flex, tux_blue, tux_yellow, 
+  tux_red, tux_grey, tux_white, tux_black } from '../utilities';
 
 const Header = styled.header`
   max-width: 1440px;
@@ -19,8 +19,7 @@ const Logo = styled.img`
 const Nav = styled.nav`
   max-width: 1440px;
   grid-column: 1/span all;
-  display: flex;
-  align-items: center;
+  ${Flex({ai:'center'})};
   padding: 0 40px;
   border-bottom: ${nav_border};
 `;
