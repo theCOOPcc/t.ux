@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { SessionContext } from '../../contexts/SessionContext';
-import * as U from '../TuxComponents/UniversalComponents';
+import styled, { css } from 'styled-components';
+import {Button280} from '../TuxComponents/elements';
+import { tux_yellow, Flex, present_text, future_text, text_white, text_black, solid_border } from '../TuxComponents/utilities';
 
 const SideBarNav = () => {
   const {
@@ -21,60 +23,122 @@ const SideBarNav = () => {
   const { sections } = sessionData;
   
   return (
-    <U.SideBarParent>
-      <U.SideBar>
-        <U.ColorBlock SideBarYellow></U.ColorBlock>
-        <U.SideBarTextBox>
+    <SideBarParent>
+      <SideBar>
+        <ColorBlock></ColorBlock>
+        <SideBarTextBox>
           {sections.map((section, index) =>
             index === 0 ? (
-              <U.SideBarText
+              <SideBarText
                 past={currentSectionIndex < index ? true : false}
                 present={currentSectionIndex === index}
                 key={index}
                 onClick={() => handleJumpToSection(index)}
               >
                 {section.name}
-              </U.SideBarText>
+              </SideBarText>
             ) : (
-              <U.SideBarText
+              <SideBarText
                 past={currentSectionIndex < index ? true : false}
                 present={currentSectionIndex === index}
                 key={index}
                 onClick={() => handleJumpToSection(index)}
               >
                 {index}. {section.name}
-              </U.SideBarText>
+              </SideBarText>
             )
           )}
-        </U.SideBarTextBox>
+        </SideBarTextBox>
 
         {started &&
         currentSectionIndex === sections.length - 1 &&
         currentModuleIndex === currentSection.modules.length - 1 ? (
-          <U.WideBtn enable onClick={() => setStarted(false)}>
+          <Button280 onClick={() => setStarted(false)}>
             Next
-          </U.WideBtn>
+          </Button280>
         ) : started && currentSectionIndex <= sections.length - 1 ? (
-          <U.WideBtn enable onClick={() => handleCurrentModule()}>
+          <Button280 onClick={() => handleCurrentModule()}>
             Next
-          </U.WideBtn>
+          </Button280>
         ) : (
           ''
         )}
 
-        {/* if started is now false and !finished then show Next button , which will change finished to true */}
+        {/* if started is now false and !finished then show Next Button280 , which will change finished to true */}
         {started === false && finished === null && (
-          <U.WideBtn enable onClick={() => setFinished(true)}>
+          <Button280 onClick={() => setFinished(true)}>
             Next
-          </U.WideBtn>
+          </Button280>
         )}
-        {/* if started is false and finished equals false then show end button */}
+        {/* if started is false and finished equals false then show end Button280 */}
         {started === false && finished === true && (
-          <U.WideBtn enable>End</U.WideBtn>
+          <Button280>End</Button280>
         )}
-      </U.SideBar>
-    </U.SideBarParent>
+      </SideBar>
+    </SideBarParent>
   );
 };
 
 export default SideBarNav;
+
+
+/*---------- 300px Sidebar Parent Grid ----------*/
+const SideBarParent = styled.article`
+  height: 90vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 100px;
+  border-radius: 5px 5px 0 0;
+`;
+
+/*---------- The SideBar Itself ----------*/
+const SideBar = styled.article`
+  grid-row: 1 / span 1;
+  background-color: ${text_white};
+  height: calc(100vh - 159px);
+  ${Flex({ai:'center',fd:'column'})};
+  border: var(--solid-border);
+  border-radius: 5px 5px 0 0;
+`;
+
+const SideBarTextBox = styled.section`
+  height: 100%;
+  width: 100%;
+  padding: 20px 25px;
+`;
+
+const SideBarText = styled.button`
+  background: transparent;
+  font: 500 16px 'Poppins', sans-serif;
+  line-height: 24px;
+  text-align: left;
+  color: ${text_black};
+  /* padding: 0 20px; */
+  border: none;
+  border-bottom: ${solid_border};
+  width: 239px;
+  height: 50px;
+  margin: 0 auto;
+
+  ${(props) =>
+    props.past &&
+    css`
+      color: ${future_text};
+      font-weight: 600;
+    `}
+
+  ${(props) =>
+    props.present &&
+    css`
+      color: ${present_text};
+      font-weight: 700;
+    `}
+`;
+
+const ColorBlock = styled.div`
+  height: 5px;
+  background-color: ${tux_yellow};
+  height: 10px;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+`;
