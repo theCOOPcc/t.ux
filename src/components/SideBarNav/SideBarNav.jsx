@@ -4,6 +4,10 @@ import styled, { css } from 'styled-components';
 import {Button280} from '../TuxComponents/elements';
 import { tux_yellow, Flex, present_text, future_text, text_white, text_black, solid_border } from '../TuxComponents/utilities';
 
+// TODO: Talk to Dan. Past/Future color still crazy. I'm confused 
+// on context and whether I need handleJumpToModule which I'm pretty sure
+// I do. Also can't quite work out the index numbering and they are doubling??
+
 const SideBarNav = () => {
   const {
     sessionData,
@@ -30,7 +34,7 @@ const SideBarNav = () => {
           {sections.map((section, index) =>
             index === 0 ? (
               <SideBarText
-                past={currentSectionIndex < index ? true : false}
+                past={index < currentSectionIndex ? true : false}
                 present={currentSectionIndex === index}
                 key={index}
                 onClick={() => handleJumpToSection(index)}
@@ -39,12 +43,29 @@ const SideBarNav = () => {
               </SideBarText>
             ) : (
               <SideBarText
-                past={currentSectionIndex < index ? true : false}
-                present={currentSectionIndex === index}
-                key={index}
-                onClick={() => handleJumpToSection(index)}
+              past={ index < currentSectionIndex ? true : false}
+              present={currentSectionIndex === index}
+              key={index}
+              onClick={() => handleJumpToSection(index)}
               >
                 {index}. {section.name}
+                {section.modules.map((module,idx) => 
+                  module.type === 'display' ?
+                    <SubText
+                    past={((idx < currentModuleIndex && index === currentSectionIndex)|| index < currentSectionIndex ? true : false) ? true : false}
+                    present={currentSectionIndex === index && currentModuleIndex === idx}
+                    key={idx}
+                    >
+                      Learning Material </SubText>
+                  :
+                    <SubText
+                    past={((idx < currentModuleIndex && index === currentSectionIndex) || index < currentSectionIndex ? true : false) ? true : false}
+                    present={currentSectionIndex === index && currentModuleIndex === idx}
+                    key={idx}
+                    >
+                      Question 
+                    </SubText>
+                )}
               </SideBarText>
             )
           )}
@@ -105,6 +126,7 @@ const SideBarTextBox = styled.section`
   height: 100%;
   width: 100%;
   padding: 20px 25px;
+  overflow: scroll;
 `;
 
 const SideBarText = styled.button`
@@ -112,18 +134,20 @@ const SideBarText = styled.button`
   font: 500 16px 'Poppins', sans-serif;
   line-height: 24px;
   text-align: left;
-  color: ${text_black};
-  /* padding: 0 20px; */
+  color: ${future_text};
+  /* color: ${text_black}; */
   border: none;
   border-bottom: ${solid_border};
   width: 239px;
-  height: 50px;
+  min-height: 50px;
+  height: auto;
   margin: 0 auto;
 
   ${(props) =>
     props.past &&
     css`
-      color: ${future_text};
+      color: ${text_black};
+      /* color: ${future_text} */
       font-weight: 600;
     `}
 
@@ -133,6 +157,10 @@ const SideBarText = styled.button`
       color: ${present_text};
       font-weight: 700;
     `}
+`;
+
+const SubText = styled(SideBarText)`
+  margin-left: 61px;
 `;
 
 const ColorBlock = styled.div`
