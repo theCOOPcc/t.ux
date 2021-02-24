@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
-import { FlexCenter, Flex } from './utilities';
+import styled from 'styled-components';
+// import { Link } from 'react-router-dom';
+import { Flex } from './utilities';
 
 const Main = () => {
     return ( 
