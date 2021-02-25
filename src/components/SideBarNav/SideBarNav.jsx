@@ -4,9 +4,6 @@ import styled, { css } from 'styled-components';
 import {Button280} from '../TuxComponents/elements';
 import { tux_yellow, Flex, present_text, future_text, text_white, text_black, solid_border } from '../TuxComponents/utilities';
 
-// TODO: Talk to Dan. Past/Future color still crazy. I'm confused 
-// on context and whether I need handleJumpToModule which I'm pretty sure
-// I do. Also can't quite work out the index numbering and they are doubling??
 
 const SideBarNav = () => {
   const {
@@ -52,14 +49,14 @@ const SideBarNav = () => {
                 {section.modules.map((module,idx) => 
                   module.type === 'display' ?
                     <SubText
-                    past={((idx < currentModuleIndex && index === currentSectionIndex)|| index < currentSectionIndex ? true : false) ? true : false}
+                    past={(idx < currentModuleIndex && index === currentSectionIndex)|| index < currentSectionIndex ? true : false}
                     present={currentSectionIndex === index && currentModuleIndex === idx}
                     key={idx}
                     >
                       Learning Material </SubText>
                   :
                     <SubText
-                    past={((idx < currentModuleIndex && index === currentSectionIndex) || index < currentSectionIndex ? true : false) ? true : false}
+                    past={(idx < currentModuleIndex && index === currentSectionIndex)|| index < currentSectionIndex ? true : false}
                     present={currentSectionIndex === index && currentModuleIndex === idx}
                     key={idx}
                     >
