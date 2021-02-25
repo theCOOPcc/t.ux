@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { SessionContext } from '../../contexts/SessionContext';
-import ProgressBar from '../../components/ProgressBar/ProgressBar';
+import ProgressBar from '../../components/TuxComponents/layouts/ProgressBar';
 import * as U from '../../components/TuxComponents/UniversalComponents';
 
 const ActivityHeader = () => {
