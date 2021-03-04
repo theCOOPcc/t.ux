@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import * as U from '../../components/TuxComponents/UniversalComponents'
 import * as L from '../../components/TuxComponents/LoginComponents'
+import styled from 'styled-components';
+import { Button280 } from '../TuxComponents/elements'
+
 
 class PasswordResetRequest extends Component {
     state = { 
@@ -23,12 +26,12 @@ class PasswordResetRequest extends Component {
                     <U.Normal>No problem, we'll send you an email<br/> with a link to reset your password.</U.Normal>
                     <form>
                         <U.Normal>Username or email</U.Normal>
-                        <U.SmallInput onChange={this.handleChange} type='text'></U.SmallInput>
+                        <SmallInput onChange={this.handleChange} type='text'></SmallInput>
                         <br></br>
                         <br></br>
-                        <U.WideBtn greyed extraWide
+                        <Button280 wide350
                             // onSubmit={this.handleSubmit}
-                            >Reset Password</U.WideBtn>
+                            >Reset Password</Button280>
                     </form>
                     {/* TODO: We need a link and a route set up down the road for a password reset link that emails 
                     a user the reset link upon form submission */}
@@ -36,9 +39,9 @@ class PasswordResetRequest extends Component {
                 </L.LoginBox>
                 <U.FlexBox signUp>
                     <U.Normal>Need an Account?</U.Normal>
-                    <U.LinkTo
+                    <LinkTo
                       to="/signup"
-                    >Sign Up</U.LinkTo>
+                    >Sign Up</LinkTo>
                 </U.FlexBox>
             </U.FlexBox>
         </U.FlexBox>
@@ -48,3 +51,16 @@ class PasswordResetRequest extends Component {
 }
  
 export default PasswordResetRequest;
+
+const LinkTo = styled(Link)`
+  color: var(--link-text);
+`;
+
+const SmallInput = styled.input`
+  margin: 0 10px;
+  width: 343px;
+  height: 50px;
+  border: var(--input-border);
+  border-radius: 5px;
+  font-size: 24px;
+`;

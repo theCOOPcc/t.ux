@@ -76,9 +76,9 @@ class Login extends Component {
                             <U.Checkbox></U.Checkbox>
                             <U.Normal>Stay signed in</U.Normal>
                             </U.> 
-                            <U.LinkTo
+                            <LinkTo
                                 to="/passwordresetrequest"
-                            >Forgot Password?</U.LinkTo>*/}
+                            >Forgot Password?</LinkTo>*/}
                         {/* </OutsideFlex> */}
                         <Button280 wide350
                             disabled={

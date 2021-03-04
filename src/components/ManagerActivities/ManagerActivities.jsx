@@ -67,7 +67,7 @@ const ManagerActivities = () => {
                   <MgrButton onClick={() => setIsOpen(!isOpen)}>
                     Assign
                   </MgrButton>
-                  {/* <U.NakedBtn preview>Preview</U.NakedBtn> */}
+                  {/* <NakedBtn preview>Preview</NakedBtn> */}
               <hr></hr>
             </Box>
           ))}
@@ -90,22 +90,15 @@ const OutsideBox = styled.article`
     padding-bottom: 20px;
 `;
 
-// const FlexBox = styled.div`
-//     ${Flex({fd:'column',ai:'center',jc:'center'})};
-//     width: 100%;
-
-//     /* ${props => props.space && css`
-//         justify-content: space-between;
-//     `} */
-// `;
-
-// const FlexCenter = styled.div`
-//     ${Flex({jc:'center',ai:'center'})};
-
-//     ${props => props.space && css`
-//         align-items: space-between;
-//     `}
-// `;
+const NakedBtn = styled.button`
+  border: none;
+  background-color: transparent;
+  align-items: center;
+  text-align: center;
+      font-size: 12px;
+      line-height: 18px;
+      margin-right: 60px;
+`;
 
 const Box = styled.div`
     ${Flex({ai:'center'})};
