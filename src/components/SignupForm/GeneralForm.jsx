@@ -1,6 +1,7 @@
 import React from "react";
 import * as U from "../TuxComponents/UniversalComponents";
 import * as L from "../TuxComponents/LoginComponents";
+import { Label, SmallInput } from './EmailForm';
 
 const GeneralForm = ({
   errors,
@@ -14,7 +15,7 @@ const GeneralForm = ({
     <L.Main>
       {/* <U.FlexBox > */}
       <U.FlexBox>
-        <L.TuxFlower src="/images/tuxFlower.png"></L.TuxFlower>
+        <L.TuxFlower src="/images/tuxFlower.png" alt="tux logo, a blue, yellow and red flower"></L.TuxFlower>
         <L.LoginBox wide flexStart>
           <U.Normal semiBold margin50 large>
             Create New Account
@@ -27,52 +28,52 @@ const GeneralForm = ({
 
           <U.FlexBox flexMargin>
             <U.FlexBox column>
-              <U.Normal semiBold alignLeft>
+              <Label>
                 First Name
-              </U.Normal>
-              <U.SmallInput
+              </Label>
+              <SmallInput
                 type="text"
                 autoComplete="off"
                 id="userData.firstName"
                 value={userData.firstName}
                 name="userData.firstName"
                 onChange={handleChange}
-              ></U.SmallInput>
+              ></SmallInput>
             </U.FlexBox>
             <U.FlexBox column>
-              <U.Normal semiBold alignLeft>
+              <Label>
                 Last Name
-              </U.Normal>
-              <U.SmallInput
+              </Label>
+              <SmallInput
                 type="text"
                 autoComplete="off"
                 id="userData.lastName"
                 value={userData.lastName}
                 name="userData.lastName"
                 onChange={handleChange}
-              ></U.SmallInput>
+              ></SmallInput>
             </U.FlexBox>
           </U.FlexBox>
 
           <U.FlexBox marginTop>
             <U.FlexBox column>
-              <U.Normal semiBold alignLeft>
+              <Label>
                 Password
-              </U.Normal>
-              <U.SmallInput
+              </Label>
+              <SmallInput
                 type="password"
                 autoComplete="off"
                 id="userData.password"
                 value={userData.password}
                 name="userData.password"
                 onChange={handleChange}
-              ></U.SmallInput>
+              ></SmallInput>
             </U.FlexBox>
             <U.FlexBox column>
-              <U.Normal semiBold alignLeft>
+              <Label>
                 Confirm Password
-              </U.Normal>
-              <U.SmallInput
+              </Label>
+              <SmallInput
                 disabled={userData.password ? false : true}
                 type="password"
                 autoComplete="off"
@@ -80,7 +81,7 @@ const GeneralForm = ({
                 value={userData.passwordConf}
                 name="userData.passwordConf"
                 onChange={handleChange}
-              ></U.SmallInput>
+              ></SmallInput>
             </U.FlexBox>
           </U.FlexBox>
           {errors.password && <U.Normal red>{errors.password}</U.Normal>}

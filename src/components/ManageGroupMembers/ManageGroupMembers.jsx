@@ -13,7 +13,7 @@ const ManageGroupMembers = () => {
     <OutisdeFlex>
       <ColorBlock></ColorBlock>
       <div style={{ margin: `20px 20px 80px 40px` }}>
-        <Heading3>Manage Group Members</Heading3>
+        <Heading2>Manage Group Members</Heading2>
 
         {!groups.length > 0 && <CreateGroup setCreateGroup={setCreateGroup} />}
         {createGroup && (
@@ -49,7 +49,8 @@ const ColorBlock = styled.div`
     width: 100%;
 `;
 
-const Heading3 = styled.h3`
+const Heading2 = styled.h2`
+    text-align:left;
     font: ${Poppins};
     font-weight: 600;
     line-height: 36px;

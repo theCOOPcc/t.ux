@@ -54,9 +54,7 @@ const SideBarNav = () => {
                 
                 {section.modules.map((module,idx) => 
                   module.type === 'display' ? 
-                 
                   <SubText
-                    
                     {...displayCount++}
                     past={(idx < currentModuleIndex && index === currentSectionIndex)|| index < currentSectionIndex ? true : false}
                     present={currentSectionIndex === index && currentModuleIndex === idx}

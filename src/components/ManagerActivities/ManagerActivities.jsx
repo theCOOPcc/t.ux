@@ -54,13 +54,13 @@ const ManagerActivities = () => {
       />
       <OutsideBox>
         <ColorBlock></ColorBlock>
-        <Heading3>
+        <Heading2>
           Activities
-        </Heading3>
+        </Heading2>
         {activities.length > 0 &&
           activities.map((activity, idx) => (
             <Box>
-                  <Icon src="/images/icons/Heuristic.svg"></Icon>
+                  <Icon src="/images/icons/Heuristic.svg" alt="checklist icon"></Icon>
                   <Text key={idx}>
                     {activity.name}
                   </Text>
@@ -113,7 +113,7 @@ const Box = styled.div`
     margin: 0 33px;
 `;
 
-const Heading3 = styled.h3`
+const Heading2 = styled.h2`
     font: ${Poppins};
     font-weight: 600;
     line-height: 36px;

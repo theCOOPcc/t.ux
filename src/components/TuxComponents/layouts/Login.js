@@ -37,19 +37,19 @@ class Login extends Component {
         return ( 
             <Main>
                 <OutsideFlex>
-                    <TuxFlower src="/images/tuxFlower.png"></TuxFlower>
+                    <TuxFlower src="/images/tuxFlower.png" alt="tux logo, a blue, yellow and red flower"></TuxFlower>
                     <LoginBox>
                         <GoogleBox
                         // this is the "href" go to google
                         href="http://localhost:3001/api/auth/google"
                         // href="https://tux-staging.herokuapp.com/api/auth/google"
                         >
-                            <GoogleG src="/images/GoogleG.png" />
+                            <GoogleG src="/images/GoogleG.png" alt="The mutlicolor Google G"/>
                             <SignIn>Sign in with Google</SignIn>
                         </GoogleBox>
                     <form autoComplete="off" onSubmit={this.handleSubmit}>
                         <Text>or:</Text>
-                        <Label>Username or Email</Label>
+                        <Label for="email">Username or Email</Label>
                         <SmallInput
                             type="text"
                             autoComplete="off"
@@ -59,7 +59,7 @@ class Login extends Component {
                             onChange={this.handleChange}
                         ></SmallInput>
                         <br/><br/>
-                        <Label>Password</Label>
+                        <Label for="password">Password</Label>
                         <SmallInput
                             type="password"
                             autoComplete="off"
@@ -106,6 +106,7 @@ const Main = styled.main`
 	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
 	background-blend-mode: normal, multiply;
 	margin: 0;
+    height: 100vh;
 	/* max-width: 1440px; */
 `;
 
@@ -123,7 +124,7 @@ const TuxFlower = styled.img`
 	width: 140px;
 	z-index: 10;
     position: absolute;
-    top: 100px;
+    top: 150px;
 	border-radius: 50%;
 `;
 
@@ -134,7 +135,7 @@ const LoginBox = styled.div`
     background-color: var(--true-white);
     box-shadow: ${common_shadow};
     border-radius: 10px;
-    margin-top: 200px;
+    /* margin-top: 90px; */
     padding: 50px 0 0;
     // check figma file to refine this
 `;
