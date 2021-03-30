@@ -25,7 +25,10 @@ router.get(
     }
   ), function (req, res) {
     console.log('AUTHENTICATED USER', req.user)
-    res.redirect('http://localhost:3000/activity/heuristics')
+    res.redirect(
+      'http://localhost:3000/activity/heuristics'
+      // 'http://tux-staging.herokuapp.com/activity/heuristics'
+      )
   }
 );
 
@@ -34,6 +37,7 @@ router.get('/logout', function (req, res) {
   req.logout();
   res.redirect(
     'http://localhost:3000'
+    // 'http://tux-staging.herokuapp.com'
     );
 });
 /*---------- Protected Routes ----------*/

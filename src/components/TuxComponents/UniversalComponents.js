@@ -1,12 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
-
-// export const Placeholder = styled.div`
-// 	width: 520px;
-// 	height: 520px;
-// 	background-color: yellow;
-
-// `;
+import { FlexCenter, Flex } from './utilities';
 
 /*---------- Main Grid ----------*/
 export const Main = styled.main`
@@ -28,8 +22,7 @@ export const InfoBar = styled.section`
   grid-row: 1 / span 1;
   justify-self: stretch;
   background-color: var(--true-white);
-  display: flex;
-  align-items: center;
+  ${Flex({ai:'center'})};
   padding: 0 40px;
   max-width: 1440px;
 `;
@@ -63,9 +56,7 @@ export const SideBar = styled.article`
   grid-row: 1 / span 1;
   background-color: var(--true-white);
   height: calc(100vh - 159px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  ${Flex({ai:'center',fd:'column'})};
   border: var(--solid-border);
   border-radius: 5px 5px 0 0;
 `;
@@ -105,9 +96,7 @@ export const SideBarText = styled.button`
 
 /*---------- FlexBox Components Generic ----------*/
 export const FlexBox = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${FlexCenter};
 
   ${(props) =>
     props.spaceBetween &&
@@ -200,6 +189,12 @@ export const FlexBox = styled.div`
       height: 100vh;
     `}
 
+  ${(props) =>
+    props.tight &&
+    css`
+      align-content: center;
+    `}
+
 	${(props) =>
     props.flexStartJC &&
     css`
@@ -225,6 +220,28 @@ export const FlexBox = styled.div`
     css`
       display: block;
     `}
+
+	${(props) =>
+    props.problemStatement &&
+    css`
+      justify-content: flex-start;
+      margin: 30px 60px;
+    `}
+
+  ${(props) =>
+    props.overview &&
+    css`
+      margin: 270px 250px;
+      background: white;
+      width: 1010px;
+      border-radius: 5px;
+    `}
+
+  ${(props) =>
+    props.overview2 &&
+    css`
+      padding: 50px;
+      `}
 `;
 
 /*---------- Buttons ----------*/
@@ -241,13 +258,13 @@ export const WideBtn = styled.button`
   background-color: var(--enable-btn);
   cursor: pointer;
 
-  &:hover {
+    &:hover {
     background: #236c69;
-  }
+    }
 
-  &:active {
+    &:active {
     box-shadow: var(--btn-active-shadow);
-  }
+    }
 
   /*	${(props) =>
     props.login &&
@@ -315,60 +332,41 @@ export const NakedBtn = styled.button`
       line-height: 18px;
       margin-right: 60px;
     `}
+  
+  ${props => props.create && css`
+    color: var(--link-text);
+    font: var(--pop-bolder);
+
+  `}
 `;
 
-/*---------- Progress Bar ----------*/
-export const ProgressContainer = styled.div`
-  height: 22px;
-  width: 268px;
-  background-color: #666666;
-  background-image: linear-gradient(
-    45deg,
-    transparent 10%,
-    rgba(255, 255, 255, 0.2) 10%,
-    transparent 20%,
-    rgba(255, 255, 255, 0.2) 20%,
-    transparent 30%,
-    rgba(255, 255, 255, 0.2) 30%,
-    transparent 40%,
-    rgba(255, 255, 255, 0.2) 40%,
-    transparent 50%,
-    rgba(255, 255, 255, 0.2) 50%,
-    transparent 60%,
-    rgba(255, 255, 255, 0.2) 60%,
-    transparent 70%,
-    rgba(255, 255, 255, 0.2) 70%,
-    transparent 80%,
-    rgba(255, 255, 255, 0.2) 80%,
-    transparent 90%,
-    rgba(255, 255, 255, 0.2) 90%,
-    transparent
-  );
-  border-radius: 5px;
-  display: flex;
-`;
-export const ProgressFiller = styled.div`
-  z-index: 1;
-  height: 100%;
-  border-radius: 5px 0 0 5px;
-  background-color: var(--tux-blue);
-`;
-export const ProgressLabel = styled.p`
-  padding: 2px;
-  font: 400 12px 'Poppins', sans-serif;
-  line-height: 24px;
-  color: #a9aaa5;
-`;
 
 /*---------- Links ----------*/
 export const LinkTo = styled(Link)`
   color: var(--link-text);
+
+  ${(props) => props.noDecor && css `
+    list-style: none;
+
+  `}
 `;
 
 /*---------- Text ----------*/
 export const Normal = styled.p`
   font: var(--pop-reg);
   line-height: 20px;
+
+  ${(props) =>
+    props.lineTwentySeven &&
+    css`
+      line-height: 27px;
+    `}
+
+  ${(props) =>
+    props.bold &&
+    css`
+      font-weight: bold;
+    `}
 
   ${(props) =>
     props.sixteen &&
@@ -464,6 +462,12 @@ export const Normal = styled.p`
       text-align: left;
       margin: 0;
     `}
+
+    ${(props) =>
+      props.overview &&
+      css`
+        margin: 0;
+      `}
 `;
 
 export const Heading1 = styled.h1`
@@ -475,6 +479,12 @@ export const Heading1 = styled.h1`
     props.margin50 &&
     css`
       margin-top: 50px;
+    `}
+
+    ${(props) =>
+    props.darkGrey &&
+    css`
+      color: #323239;
     `}
 
   ${(props) =>
@@ -494,6 +504,23 @@ export const Heading1 = styled.h1`
       margin: 0;
       padding: 0;
     `}
+
+  ${(props) =>
+    props.overview &&
+    css`
+      font-size: 35px;
+      line-height: 24px;
+      color: var(--overview-orange);
+      font-weight: bold;
+      `}
+`;
+
+export const Heading2 = styled.h2`
+  font: 700 48px 'Poppins', sans-serif;
+  line-height: 24px;
+  color: var(--extraLg-text);
+  text-align: center;
+  margin-top: 75px;
 `;
 
 export const Heading3 = styled.h3`
@@ -538,9 +565,25 @@ export const Heading3 = styled.h3`
 	${(props) =>
     props.blue &&
     css`
-      color: #1b98a0;
+      color: var(--present);
     `}
 `;
+
+export const Heading6 = styled.h6`
+  font: var(--table);
+  font-weight: 700;
+  line-height: 24px;
+`;
+
+export const ListLinks = styled.li`
+  font: var(--table);
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--present);
+`;
+
+
+/*----- End of Text -----*/
 
 /*--------------- FORMS ---------------*/
 // from Manage Group Members
@@ -551,7 +594,7 @@ export const AddStudents = styled.label`
   color: rgba(51, 51, 51, 0.75);
   margin-top: 50px;
 `;
-
+// Alexandria pulled this from FromComponents.js
 export const TextArea = styled.textarea`
   width: 580px;
   height: 100px;
@@ -559,6 +602,7 @@ export const TextArea = styled.textarea`
   text-align: left;
   padding: 10px;
 `;
+
 
 /*---------- Checkbox ----------*/
 export const checkedBox = css``;

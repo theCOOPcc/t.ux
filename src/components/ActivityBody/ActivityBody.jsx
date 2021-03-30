@@ -1,27 +1,19 @@
-import React from 'react';
-import * as U from '../../components/TuxComponents/UniversalComponents';
-import Question from '../../components/Question/Question';
-import InjectHTML from '../../components/InjectHTML/InjectHTML';
-import Overview from '../../components/Overview/Overview';
+import React, { useContext } from 'react';
+import { SessionContext } from '../../contexts/SessionContext';
 import ActivityLinks from '../ActivityLinks/ActivityLinks';
+import ActivityMain from '../ActivityMain/ActivityMain';
+import ConfirmationForm from '../ConfirmationForm/ConfirmationForm';
 
-const ActivityBody = ({ currentModule, handleAnswers, started, links }) => {
-  return !started ? (
-    <Overview />
-  ) : (
-    <U.Sub6ColGrid>
-      {/* <U.ColorBlock SubGridBlue></U.ColorBlock> */}
-      {currentModule.type === 'display' ? (
-        <div className="injectParent">
-          <InjectHTML markup={currentModule.contents} />
-        </div>
-      ) : (
-        <Question details={currentModule} handleAnswers={handleAnswers} />
-      )}
-    </U.Sub6ColGrid>
+const ActivityBody = () => {
+  const { started, finished, currentSection } = useContext(SessionContext);
+
+  return (
+    <>
+      {started === true && currentSection && <ActivityMain />}
+      {started === false && finished === null && <ConfirmationForm />}
+      {started === false && finished === true && <ActivityLinks />}
+    </>
   );
 };
 
 export default ActivityBody;
-
-// // !started  ? (

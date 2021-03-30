@@ -1,30 +1,29 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ManagerContext } from '../../contexts/ManagerContext';
+
 import * as U from '../../components/TuxComponents/UniversalComponents';
 
-const CreateGroup = ({
-  setNewGroupName,
-  newGroupName,
-  handleCreateGroup,
-  createGroup,
-  setCreateGroup,
-}) => {
+const CreateGroup = ({ createGroup, setCreateGroup }) => {
+  const { newGroupName, setNewGroupName, handleCreateGroup } = useContext(
+    ManagerContext
+  );
   const createNewGroup = () => {
     handleCreateGroup();
     setCreateGroup(!createGroup);
   };
   return (
     <>
-      <h1>Group: None</h1>
-      <label>Group Name</label>
+      <U.Heading3>Group: None</U.Heading3>
+      <label>Group Name </label>
       <input
         type="text"
         placeholder="Add group name here"
         onChange={(e) => setNewGroupName(e.target.value)}
         value={newGroupName}
       />
-      <U.WideBtn teal onClick={createNewGroup}>
+      <U.NakedBtn create onClick={createNewGroup}>
         Create Group
-      </U.WideBtn>
+      </U.NakedBtn>
     </>
   );
 };

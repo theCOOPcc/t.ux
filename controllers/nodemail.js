@@ -5,24 +5,28 @@ module.exports = {
 };
 
 function sendNodeMail(req, res) {
-  // console.log('send invite emails', req.body);
+  console.log('send invite emails', req.body);
   const { _id: groupId } = req.body;
   // const { invited } = req.body;
-  const inviteList = ['danb.dul@gmail.com'];
+  // need to update to group selected
+  const inviteList = ['corys4139@gmail.com'];
   // invited.forEach((invite) => {
   //   invite.invited === true && inviteList.push(invite.email);
   // });
   inviteList.forEach((email) => {
     sendMail(email, groupId);
   });
-  // res.status(200).json('Email sent...')
+  res.status(200).send('Email sent...')
 }
 
 function sendMail(email, groupId) {
-  const link = `localhost:3000/signup/${groupId}/${email}`;
+  const link = 
+  `localhost:3000/signup/${groupId}/${email}`
+  // `tux-staging.herokuapp.com/signup/${groupId}/${email}`;
   const subject = 'Welcome To Tux';
-  const message = `You have been invited to Tux, click on the link below to sign up. ${link}`;
-  const name = '';
+  const userName = 'Cory Spicer';
+  const managerName= 'Sarah Cooper';
+  const anotherLink = '';
   let transporter = nodemailer.createTransport({
     host: 'smtp.dreamhost.com',
     port: 465,
@@ -36,8 +40,18 @@ function sendMail(email, groupId) {
     from: 'info@thecoop.com',
     to: email,
     subject: `${subject}`,
-    text: `Hey You
-
-        ${message}`,
+    html: `<p>Hi ${userName},</p>
+      <br></br>
+      <p>Welcome to t.ux,</p>
+      <br></br>
+      <p>You've been invited by your instructor ${managerName} to take one of our activities. If it is your first time, you will need to sign up for an account with your gmail in order to gain access. If you don't have a gmail account you'll need to create one <a href=${link}>here</a>.</p>
+      <br></br>
+      <p>Click on the link below to get started:</p>
+      <a href=${anotherLink}>Another Link</a>
+      <br></br>
+      <p>Thanks,<p>
+      <br></br>
+      <p>-The t.ux team</p>
+      `,
   });
 }
