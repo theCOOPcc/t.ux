@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../InviteModal/InviteModal.css';
+// import '../InviteModal/InviteModal.css';
 
 const EmailCheckbox = ({
   user,

@@ -43,6 +43,14 @@ export const Heading3 = styled.h3`
       line-height: 36px;
     `}
 `;
+
+const TextArea = styled.textarea`
+  width: 580px;
+  height: 100px;
+  border-radius: 5px;
+  text-align: left;
+  padding: 10px;
+`;
 //  orange Hheading3or: rgba(243,119,6,1.0);
 const ConfirmationForm = () => {
   const { sections, name } = useContext(SessionContext);
@@ -57,7 +65,7 @@ const ConfirmationForm = () => {
   return (
     <>
       <Div>
-        <U.ColorBlock SubGridBlue> </U.ColorBlock>
+        <ColorBlock></ColorBlock>
         <Heading1>Congratulations!</Heading1>
         <Heading3>You've successfully completed your</Heading3>
         <Heading3 activityTitle>{name} Activity.</Heading3>
@@ -100,7 +108,7 @@ const ConfirmationForm = () => {
                 {' '}
                 Additional Questions or Comments for your instructor?
               </U.Normal>
-              <U.TextArea
+              <TextArea
                 name="comment"
                 type="textarea"
                 value={values.comment}
@@ -117,5 +125,12 @@ const ConfirmationForm = () => {
 };
 
 export default ConfirmationForm;
+
+const ColorBlock = styled.div`
+  height: 5px;
+  background-color: var(--tux-blue);
+      height: 10px;
+      width: 100%;
+`;
 
 // checkout this custom checkbox https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
