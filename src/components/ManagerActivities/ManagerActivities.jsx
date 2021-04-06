@@ -54,20 +54,20 @@ const ManagerActivities = () => {
       />
       <OutsideBox>
         <ColorBlock></ColorBlock>
-        <Heading3>
+        <Heading2>
           Activities
-        </Heading3>
+        </Heading2>
         {activities.length > 0 &&
           activities.map((activity, idx) => (
             <Box>
-                  <Icon src="/images/icons/Heuristic.svg"></Icon>
+                  <Icon src="/images/icons/Heuristic.svg" alt="checklist icon"></Icon>
                   <Text key={idx}>
                     {activity.name}
                   </Text>
                   <MgrButton onClick={() => setIsOpen(!isOpen)}>
                     Assign
                   </MgrButton>
-                  {/* <U.NakedBtn preview>Preview</U.NakedBtn> */}
+                  {/* <NakedBtn preview>Preview</NakedBtn> */}
               <hr></hr>
             </Box>
           ))}
@@ -90,22 +90,15 @@ const OutsideBox = styled.article`
     padding-bottom: 20px;
 `;
 
-// const FlexBox = styled.div`
-//     ${Flex({fd:'column',ai:'center',jc:'center'})};
-//     width: 100%;
-
-//     /* ${props => props.space && css`
-//         justify-content: space-between;
-//     `} */
-// `;
-
-// const FlexCenter = styled.div`
-//     ${Flex({jc:'center',ai:'center'})};
-
-//     ${props => props.space && css`
-//         align-items: space-between;
-//     `}
-// `;
+const NakedBtn = styled.button`
+  border: none;
+  background-color: transparent;
+  align-items: center;
+  text-align: center;
+      font-size: 12px;
+      line-height: 18px;
+      margin-right: 60px;
+`;
 
 const Box = styled.div`
     ${Flex({ai:'center'})};
@@ -113,7 +106,7 @@ const Box = styled.div`
     margin: 0 33px;
 `;
 
-const Heading3 = styled.h3`
+const Heading2 = styled.h2`
     font: ${Poppins};
     font-weight: 600;
     line-height: 36px;
