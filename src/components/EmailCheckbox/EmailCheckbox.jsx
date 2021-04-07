@@ -15,7 +15,7 @@ const EmailCheckbox = ({
     setUserIndex('');
     setIsChecked(!isChecked);
     setUserIndex(userIndex);
-    // console.log(isChecked);
+    console.log(isChecked);
   };
 
   useEffect(() => {
