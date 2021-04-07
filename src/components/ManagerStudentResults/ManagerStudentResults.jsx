@@ -9,9 +9,9 @@ const ManagerStudentResults = () => {
   return (
     <OutsideBox>
       <ColorBlock />
-      <Heading3>
+      <Heading2>
         Student Results
-      </Heading3>
+      </Heading2>
       {results ? (
         <>
           <Text>
@@ -53,7 +53,7 @@ const ColorBlock = styled.div`
     width: 100%;
 `;
 
-const Heading3 = styled.h3`
+const Heading2 = styled.h2`
     font: ${Poppins};
     font-weight: 600;
     line-height: 36px;

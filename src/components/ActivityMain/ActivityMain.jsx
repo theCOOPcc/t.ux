@@ -10,7 +10,6 @@ const ActivityMain = () => {
 
   return (
     <U.Sub6ColGrid>
-      {/* <U.ColorBlock SubGridBlue></U.ColorBlock> */}
       {currentModule.type === 'display' ? (
         <div className="injectParent">
           <InjectHTML markup={currentModule.contents} />
@@ -23,3 +22,5 @@ const ActivityMain = () => {
 };
 
 export default ActivityMain;
+
+

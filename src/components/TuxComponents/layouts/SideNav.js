@@ -22,6 +22,7 @@ const SideBarNav = () => {
   } = useContext(SessionContext);
 
   const { sections } = sessionData;
+  let displayCount, questionCount = 0;
   
   return (
     <SideBarParent>
@@ -33,6 +34,7 @@ const SideBarNav = () => {
               <SideBarText
                 past={index < currentSectionIndex ? true : false}
                 present={currentSectionIndex === index}
+                disabled={index > currentSectionIndex}
                 key={index}
                 onClick={() => handleJumpToSection(index)}
               >
@@ -40,27 +42,37 @@ const SideBarNav = () => {
               </SideBarText>
             ) : (
               <SideBarText
+              {...displayCount = 0}
+              {...questionCount = 0}
               past={ index < currentSectionIndex ? true : false}
               present={currentSectionIndex === index}
+              disabled={index > currentSectionIndex}
               key={index}
               onClick={() => handleJumpToSection(index)}
               >
                 {index}. {section.name}
+                
                 {section.modules.map((module,idx) => 
-                  module.type === 'display' ?
-                    <SubText
+                  module.type === 'display' ? 
+                 
+                  <SubText
+                    
+                    {...displayCount++}
                     past={(idx < currentModuleIndex && index === currentSectionIndex)|| index < currentSectionIndex ? true : false}
                     present={currentSectionIndex === index && currentModuleIndex === idx}
+                    disabled={idx > currentModuleIndex}
                     key={idx}
                     >
-                      Learning Material </SubText>
+                      Learning Material {displayCount} </SubText>
                   :
                     <SubText
-                    past={(idx < currentModuleIndex && index === currentSectionIndex)|| index < currentSectionIndex ? true : false}
+                    {...questionCount++}
+                    past={(idx < currentModuleIndex && index === currentSectionIndex) || index < currentSectionIndex ? true : false}
                     present={currentSectionIndex === index && currentModuleIndex === idx}
+                    disabled={idx > currentModuleIndex}
                     key={idx}
                     >
-                      Question 
+                      Question {questionCount}
                     </SubText>
                 )}
               </SideBarText>
