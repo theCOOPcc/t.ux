@@ -17,8 +17,15 @@ import SessionContextProvider from "../../contexts/SessionContext";
 import Timer from "react-compound-timer";
 import Gallery from "../Gallery/Gallery";
 
+import { GalleryDataLoader } from "../../pages/Gallery/GalleryDataLoader";
+
 // !A temporary list of activity route names and their ids. Below you will see this variable being mapped through and rendering the Activity Routes. This way when we have multiple activities the Routes will be dynamically generated, and we just have to store these properties on the activities themselves or the User object if we want to restrict the user to only seeing the activities that have been assigned to them.
 const activities = [{ name: "heuristics", id: "6009f75ea00e3f38a7c65c7d" }];
+
+const loader = new GalleryDataLoader();
+loader.load();
+const EmptyComponentList = { components: [] }
+const loadedComponents = loader.getComponents() ?? EmptyComponentList;
 
 const App = () => {
 	return (
@@ -48,7 +55,7 @@ const App = () => {
 			<Route
 				exact
 				path="/gallery"
-				render={({ history }) => <Gallery history={history} />}
+				render={({ history }) => <Gallery history={history} components={loadedComponents.components} />}
 			/>
 
 			<Route
