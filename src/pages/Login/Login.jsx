@@ -111,7 +111,6 @@ const Main = styled.main`
 
 const OutsideFlex = styled.article`
     ${Flex({jc:'center',ai:'center'})};
-
     ${(props) =>
     props.signUp && css`
       margin-top: 30px;
