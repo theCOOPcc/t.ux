@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 // import {Link} from 'react-router-dom'
+import { common_shadow, FlexCenter } from './utilities'
 
 /*---------- Main Grid ----------*/
 export const Main = styled.main`
@@ -25,14 +26,11 @@ export const TuxFlower = styled.img`
 `;
 
 export const LoginBox = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    ${FlexCenter({dir:'column'})};
     width: 425px;
     height: 510px;
     background-color: var(--true-white);
-    box-shadow: var(--common-shadow);
+    box-shadow: ${common_shadow};
     border-radius: 10px;
     margin-top: 200px;
     /* clip-path: circle(25% at 50% 0); */
@@ -72,11 +70,9 @@ export const GoogleBox = styled.a`
     height: 80px;
     border-radius: 5px;
     background: linear-gradient(360deg, #F9F9F9 0%, rgba(255, 255, 255, 0) 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    ${FlexCenter};
     margin-bottom: 10px;
-    box-shadow: var(--common-shadow);
+    box-shadow: ${common_shadow};
     text-decoration: none;
 `;
 

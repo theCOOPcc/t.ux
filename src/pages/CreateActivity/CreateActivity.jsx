@@ -3,6 +3,7 @@ import activityService from '../../services/activityService';
 import styled from 'styled-components';
 import PreQuestionForm from '../../components/PreQuestionForm/PreQuestionForm';
 import CreateQuestionForm from '../../components/CreateQuestionForm/CreateQuestionForm';
+import { Flex } from '../../components/TuxComponents/utilities'
 
 // Creates questions, answers, 
 
@@ -14,8 +15,7 @@ import CreateQuestionForm from '../../components/CreateQuestionForm/CreateQuesti
 
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${Flex({fd:'column'})};
   padding: 20px;
   align-items: center;
   width: 100%

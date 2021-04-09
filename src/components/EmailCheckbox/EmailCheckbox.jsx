@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../InviteModal/InviteModal.css';
+// import '../InviteModal/InviteModal.css';
 
 const EmailCheckbox = ({
   user,
@@ -15,7 +15,7 @@ const EmailCheckbox = ({
     setUserIndex('');
     setIsChecked(!isChecked);
     setUserIndex(userIndex);
-    // console.log(isChecked);
+    console.log(isChecked);
   };
 
   useEffect(() => {

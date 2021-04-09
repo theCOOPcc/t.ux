@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import SessionContextProvider, { SessionContext } from '../../contexts/SessionContext';
 import * as A from '../TuxComponents/ActivitiesComponents';
 
-const Answer = ({ handleResponse, answer, index, disabled }) => {
-  const [selection, setSelection] = useState(null);
+const Answer = ({  answer, index, disabled, response }) => {
 
-  const handleSelection = (answer,index) => {
-    handleResponse(answer,index);
-    setSelection({ isCorrect: answer.isCorrect });
-  };
+  const {handleResponse} = useContext(SessionContext)
+
   return (
     <A.SubmitQuestion
-      right={selection && selection.isCorrect === true}
-      wrong={selection && selection.isCorrect === false}
+
+      right={response && response.selection.isCorrect === true}
+      wrong={response && response.selection.isCorrect === false}
       medium
-      onClick={() => handleSelection(answer,index)}
+      onClick={() => handleResponse(answer, index)}
       disabled={disabled}
     >
       {answer.label}

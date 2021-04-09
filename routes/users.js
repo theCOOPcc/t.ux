@@ -3,12 +3,12 @@ const router = express.Router();
 const usersCtrl = require('../controllers/users');
 
 /*---------- Public Routes ----------*/
+router.get("/getMe", usersCtrl.currentUser);
 
 
 /*---------- Protected Routes ----------*/
-// router.use(require("../config/auth"));
+router.use(require("../config/auth"));
 router.get("/", checkAuth, usersCtrl.index);
-router.get("/getMe", checkAuth, usersCtrl.currentUser);
 router.put("/:id", checkAuth, usersCtrl.update);
 router.get("/:id", checkAuth, usersCtrl.showProfile);
 router.delete("/:id", checkAuth, usersCtrl.deleteProfile);
