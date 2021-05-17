@@ -35,7 +35,7 @@ export const AllButtons = () => (
 // ));
 
 export const Default = (args) =>
-  <Button {...args}>Karens Button</Button> 
+  <Button {...args}>Default</Button> 
   
 Default.args = {
     disabled: true,
