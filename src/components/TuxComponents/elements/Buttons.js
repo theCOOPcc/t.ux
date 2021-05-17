@@ -6,7 +6,7 @@ export const GoogleG = styled.img`
   width: 35px;
   height: 35px;
   margin: 20px;
-`;
+`; 
 
 export const GoogleBox = styled.button`
   width: 343px;
