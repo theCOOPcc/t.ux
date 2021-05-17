@@ -1,15 +1,6 @@
 import styled, { css } from 'styled-components';
-import { disable_btn, enable_btn, enable_hover, google_hover, disable_g_btn, g_focus } from '../utilities/Colors';
-import {
-  btn_active_shadow,
-  input_border,
-  pop_thick,
-  pop_bolder,
-  default_depressed,
-  default_focus,
-  common_shadow,
-  FlexCenter,
-} from "../utilities";
+import { disable_btn, enable_btn, enable_hover } from '../utilities/Colors';
+import { btn_active_shadow, input_border, pop_thick, pop_bolder } from '../utilities';
 
 // export const Primary = styled.button`
 
@@ -23,7 +14,7 @@ export const GoogleG = styled.img`
   width: 35px;
   height: 35px;
   margin: 20px;
-`;
+`; 
 
 export const GoogleBox = styled.button`
   width: 343px;
@@ -75,62 +66,6 @@ export const GoogleBox = styled.button`
     `}
 `;
 
-//KARENS BUTTON
-export const Button = styled.button`
-  width: 280px;
-  height: 50px;
-  border: none;
-  border-radius: 5px;
-  background: ${enable_btn};
-  padding: 12px 0;
-  margin: 17px 8px;
-  color: white;
-  font: 700 20px "Poppins", sans-serif;
-  cursor: pointer;
-  &:hover {
-    background: ${enable_hover};
-  }
-  &:active {
-    background: ${default_depressed};
-    box-shadow: ${btn_active_shadow};
-  }
-  // Focus
-  ${(props) =>
-    props.focus &&
-    css`
-      background-color: ${default_focus};
-      &:hover {
-        background-color: ${default_focus};
-      }
-    `}
-  // Diasbled
-    ${(props) =>
-    props.disabled &&
-    css`
-      background-color: ${disable_btn};
-      &:hover {
-        background-color: ${disable_btn};
-      }
-    `}
-    // Depressed
-    ${(props) =>
-    props.depressed &&
-    css`
-      background-color: ${default_depressed};
-    `}
-    // Large
-    ${(props) =>
-    props.large &&
-    css`
-      width: 350px;
-    `}
-    // Small
-    ${(props) =>
-    props.small &&
-    css`
-      width: 154px;
-    `}
-`;
 
 // This was the "WideBtn", 280px
 export const Button280 = styled.button`

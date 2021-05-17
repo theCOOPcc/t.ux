@@ -44,7 +44,7 @@ class Login extends Component {
                         href="http://localhost:3001/api/auth/google"
                         // href="https://tux-staging.herokuapp.com/api/auth/google"
                         >
-                            <GoogleG src="/images/google_logo.png" />
+                            <GoogleG src="/images/GoogleG.png" />
                             <SignIn>Sign in with Google</SignIn>
                         </GoogleBox>
                     <form autoComplete="off" onSubmit={this.handleSubmit}>

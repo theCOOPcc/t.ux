@@ -14,14 +14,14 @@ function signup(user) {
   .then(json => {
     if(json.token) return json;
     // console.log(json, '<-- the error')
-    throw new Error(`${json.err}`)
+    throw new Error(`${json.err}`) 
   })
   .then(({ token }) => {
     tokenService.setToken(token);
     window.location = 
-    // 'http://localhost:3000/activity/heuristics'
+    'http://localhost:3000/activity/heuristics'
     // 'http://taketux.io/activity/heuristics'
-    'http://tux-staging.herokuapp.com/activity/heuristics'
+    // 'http://tux-staging.herokuapp.com/activity/heuristics'
   })
 }
 

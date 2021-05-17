@@ -46,8 +46,8 @@ function sendMail(email, groupId) {
       <br></br>
       <p>You've been invited by your instructor ${managerName} to take one of our activities. If it is your first time, you will need to sign up for an account with your gmail in order to gain access. If you don't have a gmail account you'll need to create one <a href=${link}>here</a>.</p>
       <br></br>
-      <p> on the link below to get started:</p>
-      <a href=${anotherLink}>Already have an account? Click Here!</a>
+      <p>Click on the link below to get started:</p>
+      <a href=${anotherLink}>Another Link</a>
       <br></br>
       <p>Thanks,<p>
       <br></br>
