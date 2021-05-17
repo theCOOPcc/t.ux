@@ -47,7 +47,7 @@ Default.story = {
     design: {
       type: "figma",
       url:
-        "https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1012%3A0",
+        "https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1012%3A0", 
     },
   },
 };
