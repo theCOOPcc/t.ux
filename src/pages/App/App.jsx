@@ -75,7 +75,7 @@ const App = () => {
 										<Activity />
 									</SessionContextProvider>
 								)}
-							</Timer>
+							</Timer> 
 						)}
 					/>
 				))}
