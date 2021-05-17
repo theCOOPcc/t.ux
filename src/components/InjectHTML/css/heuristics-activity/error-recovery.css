@@ -1,0 +1,372 @@
+/* screen - error-recovery */
+
+.border-class-1 {
+
+}
+.border-class-2 {
+  border: 1px solid var(--alto);
+}
+.border-class-3 {
+  border: 1px solid var(--mountain-mist);
+}
+.error-recovery {
+  background-color: var(--white);
+  height: 3016px;
+  overflow: hidden;
+  position: relative;
+  width: 1042px;
+}
+.error-recovery .body-copy-Oltj0X {
+  background-color: transparent;
+  height: auto;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 465px;
+  width: 903px;
+}
+.error-recovery .body-copy-YkvUY0 {
+  background-color: transparent;
+  height: auto;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 732px;
+  width: 903px;
+}
+.error-recovery .body-copy-aHUrjj {
+  background-color: transparent;
+  height: auto;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 1337px;
+  width: 903px;
+}
+.error-recovery .body-copy-aJiKBD {
+  background-color: transparent;
+  height: auto;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 2024px;
+  width: 903px;
+}
+.error-recovery .divider-dotted-Oltj0X {
+  background-color: transparent;
+  height: 0px;
+  left: 10px;
+  position: absolute;
+  top: 116px;
+  width: 929px;
+}
+.error-recovery .error-recovery-C61RwL {
+  background-color: transparent;
+  height: 96px;
+  left: 46px;
+  position: absolute;
+  top: 47px;
+  width: 927px;
+}
+.error-recovery .frame-Oltj0X {
+  background-color: transparent;
+  height: 268px;
+  left: 307px;
+  position: absolute;
+  top: 154px;
+  width: 268px;
+}
+.error-recovery .line-4-Oltj0X {
+  background-color: transparent;
+  height: 2px;
+  left: 10px;
+  position: absolute;
+  top: 115px;
+  width: 929px;
+}
+.error-recovery .line-4-YkvUY0 {
+  background-color: transparent;
+  height: 2px;
+  left: 10px;
+  position: absolute;
+  top: 681px;
+  width: 929px;
+}
+.error-recovery .message-box-scenario-Oltj0X {
+  background-color: var(--aquamarine-2);
+  height: 207px;
+  left: 9px;
+  position: absolute;
+  top: 2620px;
+  width: 932px;
+}
+.error-recovery .rectangle-48-C61RwL {
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0px 4px 9px rgba(0,0,0,0.25);;
+  height: 3016px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1042px;
+}
+.error-recovery .rectangle-61-C61RwL {
+  background-color: var(--aquamarine);
+  height: 9px;
+  left: -4px;
+  position: absolute;
+  top: 0px;
+  width: 1042px;
+}
+.error-recovery .rectangle-89-MoibeY {
+  background-color: var(--aquamarine);
+  height: 14px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 932px;
+}
+.error-recovery .span1-7VYIGS {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+.error-recovery .span1-Atnf6P {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+.error-recovery .span1-eysx3n {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+.error-recovery .span1-zOk0Er {
+  color: rgba(102,102,102,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+}
+.error-recovery .span2-7VYIGS {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.error-recovery .span2-Atnf6P {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.error-recovery .span2-eysx3n {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.error-recovery .span2-zOk0Er {
+  color: rgba(102,102,102,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+}
+.error-recovery .text-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 554px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 117px;
+  width: 256px;
+}
+.error-recovery .text-body-paragraph-Oltj0X {
+  background-color: transparent;
+  height: 181px;
+  left: 24px;
+  position: absolute;
+  top: 1304px;
+  width: 901px;
+}
+.error-recovery .text-image-subtext-Oltj0X {
+  background-color: transparent;
+  height: 82px;
+  left: 127px;
+  position: absolute;
+  top: 1917px;
+  width: 661px;
+}
+.error-recovery .the-visibi--for-users-MoibeY {
+  background-color: transparent;
+  height: 152px;
+  left: 36px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 21px;
+  width: 845px;
+}
+.error-recovery .the-visibi--for-users-tlgKvU {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 661px;
+}
+.error-recovery .vector-Oltj0X {
+  background-color: transparent;
+  height: 37px;
+  left: 894px;
+  position: absolute;
+  top: 2897px;
+  width: 61px;
+}
+.error-recovery .welcome-Oltj0X {
+  background-color: transparent;
+  height: 96px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 915px;
+}
+.error-recovery .x-back-Oltj0X {
+  background-color: transparent;
+  height: 24px;
+  left: -29px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: -30px;
+  white-space: nowrap;
+  width: 52px;
+}
+.error-recovery .x0cc0f7-vg9hp-to-af-1-Oltj0X {
+  background-color: transparent;
+  height: 371px;
+  left: 145px;
+  position: absolute;
+  top: 1532px;
+  width: 624px;
+}
+.error-recovery .x0lw-tf6-an-t3-qq-cy-1-Oltj0X {
+  background-color: transparent;
+  height: 381px;
+  left: 99px;
+  position: absolute;
+  top: 891px;
+  width: 716px;
+}
+.error-recovery .x0tv-b9-eq--bbvygw-i-1-Oltj0X {
+  background-color: transparent;
+  height: 274px;
+  left: 161px;
+  position: absolute;
+  top: 2296px;
+  width: 592px;
+}
+.helveticaneue-bold-mine-shaft-16px {
+  color: var(--mine-shaft);
+  font-family: 'Helvetica Neue-Bold', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-bold-chilean-fire-60px {
+  color: var(--chilean-fire);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-medium-black-16px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.poppins-normal-black-14px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.poppins-normal-black-18px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.poppins-normal-black-18px-2 {
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 18px;
+}
+.poppins-normal-granite-gray-24px {
+  color: var(--granite-gray);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 24px;
+}
+.poppins-normal-white-16px {
+  color: transparent;
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 16px;
+}
+.poppins-semi-bold-black-24px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+.proximanova-bold-black-40px {
+  color: var(--black);
+  font-family: 'Proxima Nova-Bold', Helvetica, Arial, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+:root {
+  --alto: rgba(221,221,221,1.0);
+  --aquamarine: rgba(120,214,218,1.0);
+  --aquamarine-2: rgba(120,214,218,0.2);
+  --black: rgba(0,0,0,1.0);
+  --chilean-fire: rgba(243,119,6,1.0);
+  --granite-gray: rgba(102,102,102,1.0);
+  --mine-shaft: rgba(51,51,51,1.0);
+  --mountain-mist: rgba(153,153,153,1.0);
+  --white: rgba(255,255,255,1.0);
+}
