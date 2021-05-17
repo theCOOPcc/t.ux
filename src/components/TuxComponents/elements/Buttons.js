@@ -21,7 +21,7 @@ export const GoogleBox = styled.button`
   width: 343px;
   height: 80px;
   border-radius: 5px;
-  background: linear-gradient(360deg, #f9f9f9 0%, rgba(255, 255, 255, 0) 100%);
+  background: #ffffff;
   ${FlexCenter}
   margin-bottom: 10px;
   box-shadow: ${common_shadow};
@@ -31,7 +31,7 @@ export const GoogleBox = styled.button`
   margin-top: 15px;
   &:hover {
     background: ${google_hover};
-  }
+  };
   &:active {
     background: linear-gradient(
       360deg,
@@ -63,11 +63,7 @@ export const GoogleBox = styled.button`
     ${(props) =>
     props.depressed &&
     css`
-      background: linear-gradient(
-        360deg,
-        #f9f9f9 0%,
-        rgba(255, 255, 255, 0) 100%
-      );
+       background: linear-gradient(360deg, #F9F9F9 0%, rgba(255, 255, 255, 0) 100%);
     `}
 `;
 
