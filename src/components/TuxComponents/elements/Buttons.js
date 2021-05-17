@@ -11,6 +11,13 @@ import {
   FlexCenter,
 } from "../utilities";
 
+// export const Primary = styled.button`
+
+// `;
+// export const Secondary = styled.button`
+
+// `;
+
 export const GoogleG = styled.img`
   width: 35px;
   height: 35px;
