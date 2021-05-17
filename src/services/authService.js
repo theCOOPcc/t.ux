@@ -14,7 +14,7 @@ function signup(user) {
   .then(json => {
     if(json.token) return json;
     // console.log(json, '<-- the error')
-    throw new Error(`${json.err}`)
+    throw new Error(`${json.err}`) 
   })
   .then(({ token }) => {
     tokenService.setToken(token);
