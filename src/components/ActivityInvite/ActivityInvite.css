@@ -1,0 +1,97 @@
+/* Invite Modal */
+.inviteModal {
+  background-color: rgba(233, 233, 233, 0.3);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #999;
+  /* overflow: auto; */
+  border-radius: 5px;
+  padding: 20px;
+}
+.inviteModalOverlay {
+  height: 785px;
+}
+.group-email-box {
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  width: 387px;
+  height: 175px;
+  overflow: hidden;
+  margin: 0 auto;
+  border: var(--login-border);
+  border-radius: 5px;
+  justify-content: center;
+  /* padding: 40px 20px; */
+}
+/* .studentEmail {
+  font: var(--pop-bolder);
+  font-size: 16px;
+  line-height: 24px;
+} */
+.GroupInviteLabel {
+  font: var(--pop-bolder);
+  font-size: 16px;
+  line-height: 32px;
+  color: #333;
+  padding: 0 20px;
+}
+
+.GroupInviteCheckbox {
+  background-color: rgba(0,0,0,.5);
+  text-align: right;
+}
+
+.selectGroup {
+  margin: 15px;
+}
+
+.send-invite {
+  width: 390px;
+  height: 50px;
+  color: var(--true-white);
+  font: var(--pop-bolder);
+  background: var(--enable-btn);
+  border: 1px solid #3C8582;
+  margin: 35px 0 15px;
+  border-radius: 5px;
+}
+.send-invite:hover {
+  background: #236C69;
+}
+.or {
+  font: var(--pop-bolder);
+  color: var(--tux-grey);
+  margin: 0;
+}
+.copy-link {
+  background: linear-gradient(360deg, #F9F9F9 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 5px;
+  width: 390px;
+  height: 54px;
+  opacity: 0.8;
+  border: 1px solid #DDDDDD;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--tux-grey);
+  font: var(--pop-bolder);	
+  /* padding: 15px 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.copy-link:active {
+  border: none;
+} 
+
+.copy {
+  margin: 0 10px;
+}

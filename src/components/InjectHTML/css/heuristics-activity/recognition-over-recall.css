@@ -1,0 +1,542 @@
+/* screen - recognition-over-recall */
+
+.border-class-1 {
+
+}
+.border-class-2 {
+  border: 1px solid var(--alto);
+}
+.border-class-3 {
+  border: 1px solid var(--mountain-mist);
+}
+.helveticaneue-bold-mine-shaft-16px {
+  color: var(--mine-shaft);
+  font-family: 'Helvetica Neue-Bold', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-bold-chilean-fire-60px {
+  color: var(--chilean-fire);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+}
+.poppins-medium-black-16px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+.poppins-normal-black-14px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+.poppins-normal-black-18px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.poppins-normal-black-18px-2 {
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 18px;
+}
+.poppins-normal-granite-gray-24px {
+  color: var(--granite-gray);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 24px;
+}
+.poppins-normal-white-16px {
+  color: transparent;
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 16px;
+}
+.poppins-semi-bold-black-24px {
+  color: var(--black);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+.proximanova-bold-black-40px {
+  color: var(--black);
+  font-family: 'Proxima Nova-Bold', Helvetica, Arial, serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+.recognition-over-recall {
+  background-color: var(--white);
+  height: 3266px;
+  overflow: hidden;
+  position: relative;
+  width: 1042px;
+}
+.recognition-over-recall .best5406-1-C61RwL {
+  background-color: transparent;
+  height: 331px;
+  left: 216px;
+  position: absolute;
+  top: 198px;
+  width: 632px;
+}
+.recognition-over-recall .body-copy-8ROB5j {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 903px;
+}
+.recognition-over-recall .body-copy-SCxiAB {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 903px;
+}
+.recognition-over-recall .body-copy-SuXUfK {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 903px;
+}
+.recognition-over-recall .body-copy-aD3clP {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 903px;
+}
+.recognition-over-recall .body-copy-jdAx62 {
+  background-color: transparent;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 903px;
+}
+.recognition-over-recall .conclusion-C61RwL {
+  background-color: transparent;
+  height: 290px;
+  left: 56px;
+  position: absolute;
+  top: 2874px;
+  width: 932px;
+}
+.recognition-over-recall .divider-dotted-C61RwL {
+  background-color: transparent;
+  height: 0px;
+  left: 61px;
+  position: absolute;
+  top: 169px;
+  width: 929px;
+}
+.recognition-over-recall .divider-dotted-VMr6Om {
+  background-color: transparent;
+  height: 0px;
+  left: 61px;
+  position: absolute;
+  top: 806px;
+  width: 929px;
+}
+.recognition-over-recall .divider-dotted-mzXdH9 {
+  background-color: transparent;
+  height: 0px;
+  left: 61px;
+  position: absolute;
+  top: 1520px;
+  width: 929px;
+}
+.recognition-over-recall .five-ways---your-work-C44tDP {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 1110px;
+}
+.recognition-over-recall .five-ways---your-work-IYShxb {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 1110px;
+}
+.recognition-over-recall .five-ways---your-work-X1rVr0 {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 1193px;
+}
+.recognition-over-recall .five-ways---your-work-tO655I {
+  background-color: transparent;
+  height: 24px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  white-space: nowrap;
+  width: 1110px;
+}
+.recognition-over-recall .image-caption-C61RwL {
+  background-color: transparent;
+  height: 82px;
+  left: 192px;
+  position: absolute;
+  top: 2473px;
+  width: 661px;
+}
+.recognition-over-recall .image-caption-VMr6Om {
+  background-color: transparent;
+  height: 82px;
+  left: 195px;
+  position: absolute;
+  top: 2720px;
+  width: 661px;
+}
+.recognition-over-recall .line-4-C61RwL {
+  background-color: transparent;
+  height: 2px;
+  left: 61px;
+  position: absolute;
+  top: 2818px;
+  width: 929px;
+}
+.recognition-over-recall .line-4-OrBG3r {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: -1px;
+  width: 929px;
+}
+.recognition-over-recall .line-4-qa0SLk {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: -96px;
+  width: 929px;
+}
+.recognition-over-recall .line-4-xv1xHo {
+  background-color: transparent;
+  height: 2px;
+  left: 0px;
+  position: absolute;
+  top: -1px;
+  width: 929px;
+}
+.recognition-over-recall .message-box-scenario-uxVav3 {
+  background-color: var(--aquamarine-2);
+  height: 290px;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 932px;
+}
+.recognition-over-recall .next-triple-chevron-C61RwL {
+  background-color: transparent;
+  height: 31px;
+  left: 945px;
+  position: absolute;
+  top: 3196px;
+  width: 54px;
+}
+.recognition-over-recall .rectangle-48-C61RwL {
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 0px 4px 9px rgba(0,0,0,0.25);;
+  height: 3266px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1042px;
+}
+.recognition-over-recall .rectangle-61-C61RwL {
+  background-color: var(--aquamarine);
+  height: 9px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1042px;
+}
+.recognition-over-recall .rectangle-89-l8o00t {
+  background-color: var(--aquamarine);
+  height: 20px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 932px;
+}
+.recognition-over-recall .section-header-C61RwL {
+  background-color: transparent;
+  height: 26px;
+  left: 71px;
+  position: absolute;
+  top: 1864px;
+  width: 1193px;
+}
+.recognition-over-recall .section-header-QxM5SU {
+  background-color: transparent;
+  height: 26px;
+  left: 71px;
+  position: absolute;
+  top: 850px;
+  width: 1111px;
+}
+.recognition-over-recall .section-header-VMr6Om {
+  background-color: transparent;
+  height: 26px;
+  left: 71px;
+  position: absolute;
+  top: 1484px;
+  width: 1111px;
+}
+.recognition-over-recall .section-header-mzXdH9 {
+  background-color: transparent;
+  height: 26px;
+  left: 71px;
+  position: absolute;
+  top: 1137px;
+  width: 1111px;
+}
+.recognition-over-recall .span1-SQKVtq {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.recognition-over-recall .span1-mWojpO {
+  color: rgba(102,102,102,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.00px;
+}
+.recognition-over-recall .span1-sx37NZ {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 700;
+}
+.recognition-over-recall .span2-SQKVtq {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.recognition-over-recall .span2-mWojpO {
+  color: rgba(102,102,102,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.00px;
+}
+.recognition-over-recall .span2-sx37NZ {
+  color: rgba(0,0,0,1.0);
+  font-family: 'Poppins', Helvetica, Arial, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+.recognition-over-recall .text-C61RwL {
+  background-color: transparent;
+  height: 20px;
+  left: 554px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 117px;
+  width: 256px;
+}
+.recognition-over-recall .text-body-paragraph-2P4qUJ {
+  background-color: transparent;
+  height: 223px;
+  left: 71px;
+  position: absolute;
+  top: 583px;
+  width: 903px;
+}
+.recognition-over-recall .text-body-paragraph-C61RwL {
+  background-color: transparent;
+  height: 223px;
+  left: 71px;
+  position: absolute;
+  top: 895px;
+  width: 903px;
+}
+.recognition-over-recall .text-body-paragraph-QxM5SU {
+  background-color: transparent;
+  height: 148px;
+  left: 71px;
+  position: absolute;
+  top: 1899px;
+  width: 903px;
+}
+.recognition-over-recall .text-body-paragraph-VMr6Om {
+  background-color: transparent;
+  height: 263px;
+  left: 71px;
+  position: absolute;
+  top: 1186px;
+  width: 903px;
+}
+.recognition-over-recall .text-body-paragraph-mzXdH9 {
+  background-color: transparent;
+  height: 263px;
+  left: 71px;
+  position: absolute;
+  top: 1533px;
+  width: 903px;
+}
+.recognition-over-recall .the-visibi--for-users-jD5qyr {
+  background-color: transparent;
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 14px;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 661px;
+}
+.recognition-over-recall .the-visibi--for-users-l8o00t {
+  background-color: transparent;
+  height: 213px;
+  left: 36px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 29px;
+  width: 845px;
+}
+.recognition-over-recall .the-visibi--for-users-mWuPKx {
+  background-color: transparent;
+  color: var(--black);
+  font-family: "Poppins", Helvetica, Arial, serif;
+  font-size: 14px;
+  height: auto;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 661px;
+}
+.recognition-over-recall .vector-Hx8FI2 {
+  background-color: transparent;
+  height: 37px;
+  left: -4px;
+  position: absolute;
+  top: -3px;
+  width: 61px;
+}
+.recognition-over-recall .welcome-0O6yUh {
+  background-color: transparent;
+  height: 96px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  width: 915px;
+}
+.recognition-over-recall .welcome-C61RwL {
+  background-color: transparent;
+  height: 96px;
+  left: 46px;
+  position: absolute;
+  top: 54px;
+  width: 915px;
+}
+.recognition-over-recall .x-back-C61RwL {
+  background-color: transparent;
+  height: 24px;
+  left: 21px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 22px;
+  white-space: nowrap;
+  width: 52px;
+}
+.recognition-over-recall .x2014-05-12-bing1-1-C61RwL {
+  background-color: transparent;
+  height: 409px;
+  left: 198px;
+  position: absolute;
+  top: 2023px;
+  width: 646px;
+}
+.recognition-over-recall .x2014-5-12-amazon-2-1-C61RwL {
+  background-color: transparent;
+  height: 101px;
+  left: 89px;
+  position: absolute;
+  top: 2578px;
+  width: 871px;
+}
+:root {
+  --alto: rgba(221,221,221,1.0);
+  --aquamarine: rgba(120,214,218,1.0);
+  --aquamarine-2: rgba(120,214,218,0.2);
+  --black: rgba(0,0,0,1.0);
+  --chilean-fire: rgba(243,119,6,1.0);
+  --granite-gray: rgba(102,102,102,1.0);
+  --mine-shaft: rgba(51,51,51,1.0);
+  --mountain-mist: rgba(153,153,153,1.0);
+  --white: rgba(255,255,255,1.0);
+}
