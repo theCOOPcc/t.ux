@@ -52,18 +52,24 @@ Default.story = {
   },
 };
 export const Google = (args) => (
+    <>
   <GoogleBox {...args}>
     <GoogleG src='/images/google_logo.png' />
     Sign in with Google
   </GoogleBox>
+  <GoogleBox disabled="true" >
+    <GoogleG src='/images/disabled_g.png' /> 
+    Sign in with Google
+  </GoogleBox>
+  </>
 );
 
 Google.args = {
-  disabled: false,
   depressed: false,
   focus: false,
   hover: false,
 };
+
 
 Google.story = {
   parameters: {
