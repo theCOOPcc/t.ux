@@ -58,7 +58,7 @@ export const Google = (args) => (
     Sign in with Google
   </GoogleBox>
   <GoogleBox disabled="true" >
-    <GoogleG src='/images/disabled_g.png' />
+    <GoogleG src='/images/disabled_g.png' /> 
     Sign in with Google
   </GoogleBox>
   </>
