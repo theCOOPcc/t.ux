@@ -84,6 +84,6 @@ export const BtnLogin = () => <LoginBtn>LoginBtn</LoginBtn>;
 
 export const BtnMed = () => <MedBtn>MedBtn</MedBtn>;
 
-export const Btndisabled = () => <DisabledBtn>DisabledBtn</DisabledBtn>;
+export const Btndisabled = () => <DisabledBtn>DisabledBtn</DisabledBtn>;  
 
 
