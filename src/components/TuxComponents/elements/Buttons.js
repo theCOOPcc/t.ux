@@ -1,3 +1,5 @@
+import styled, { css } from 'styled-components';
+import React, { useState } from 'react'
 import styled, { css } from "styled-components";
 import {
   primary_default,
@@ -16,8 +18,9 @@ import {
   small_nav_default,
   small_nav_hover,
   small_nav_pressed,
-  small_nav_disabled,
+  small_nav_disabled, tux_grey, tux_red
 } from "../utilities/Colors";
+
 import {
   btn_active_shadow,
   input_border,
@@ -65,8 +68,8 @@ export const PrimaryButton = styled.button`
       &:hover {
         background-color: ${primary_hover};
       }
-    `}
-  // Diasbled
+  `}
+  // Disabled
     ${(props) =>
     props.disabled &&
     css`
@@ -212,7 +215,7 @@ export const GoogleBox = styled.button`
         background-color: ${g_focus};
       }
     `}
-  // Diasbled
+  // Disabled
   ${(props) =>
     props.disabled &&
     css`
@@ -232,6 +235,70 @@ export const GoogleBox = styled.button`
       );
     `}
 `;
+
+export const CopyLinkDiv = styled.div`
+	width: 408.76px;
+	height: 90px;
+	display: flex;
+	flex-direction: column;
+	${(props) =>
+		props.depressed &&
+		css`
+			width: 390px;
+		`}
+`;
+
+export const CopyLinkImg = styled.img`
+	width: 28px;
+	height: 28.64px;
+	margin: 13px;
+`;
+
+export const CopyLinkP = styled.p`
+	color: ${tux_red};
+	font: 600 18px "Poppins", sans-serif;
+	line-height: 27px;
+	text-align: center;
+  margin: 6px;
+`;
+
+export const CopyLinkBtn = styled.button`
+	width: 100%;
+	height: 54px;
+	border: none;
+	border-radius: 5px;
+	background: #ffffff;
+	padding: 12px 0;
+	margin: 17px 8px;
+	${FlexCenter};
+	margin-bottom: 10px;
+	box-shadow: ${common_shadow};
+	color: ${tux_grey};
+	font: 700 18px "Poppins", sans-serif;
+	cursor: pointer;
+	${(props) =>
+		props.depressed &&
+		css`
+			width: 390px;
+		`}
+`;
+
+export const CopyLinkButton = ({...args}) => {
+	const [clicked, setClicked] = useState(false);
+
+	return (
+		<CopyLinkDiv {...args}>
+			<CopyLinkBtn
+				onClick={() => {
+					setClicked(!clicked);
+				}}>
+				Copy Link 
+        <CopyLinkImg src="/images/CopyLink.png" />
+			</CopyLinkBtn>
+			{clicked ? <CopyLinkP>link copied to clipboard</CopyLinkP> : <p></p>}
+		</CopyLinkDiv>
+	);
+}; 
 
 //Button Nav Small
 
