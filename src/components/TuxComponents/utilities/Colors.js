@@ -36,8 +36,9 @@ export const default_focus = "#1C3C3B";
 export const default_depressed = "#6DA4A1";
 
 export const google_hover = "#E5E5E5";
-export const g_focus = "#4285F4";
+export const g_focus = "#ffffff";
 export const disable_g_btn = "#D3D3D3";
+export const g_focus_box = "#b4c8e9";
 
 
 // Input Colors

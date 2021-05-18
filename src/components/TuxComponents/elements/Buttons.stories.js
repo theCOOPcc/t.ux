@@ -77,6 +77,24 @@ export const CopyLink = (args) => (
 
 CopyLink.args = {
 	depressed: false,
+
+export const OAuthButton = (args) => (
+    <>
+  <GoogleBox {...args}>
+    <GoogleG src='/images/google_logo.png' />
+    Sign in with Google
+  </GoogleBox>
+  <GoogleBox disabled="true" >
+    <GoogleG src='/images/disabled_g.png' /> 
+    Sign in with Google
+  </GoogleBox>
+  </>
+);
+
+OAuthButton.args = {
+  depressed: false,
+  focus: false,
+  hover: false,
 };
 CopyLink.story = {
 	parameters: {
@@ -115,6 +133,15 @@ Google.story = {
 				"https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1012%3A0",
 		},
 	},
+
+OAuthButton.story = {
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1012%3A0",
+    },
+  },
 };
 
 export const Primary = (args) => (
