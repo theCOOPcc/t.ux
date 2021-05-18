@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button280, Button350, LoginBtn, MedBtn, DisabledBtn, Button, GoogleBox, GoogleG, PrimaryButton, SecondaryButton  } from "./Buttons";
+import { Button280, Button350, LoginBtn, MedBtn, DisabledBtn, Button, GoogleBox, GoogleG, PrimaryButton, SecondaryButton, CopyLinkBox, CopyLinkImg  } from "./Buttons";
 import { withDesign } from "storybook-addon-designs";
 
 export default {
@@ -22,6 +22,7 @@ export const AllButtons = () => (
     <LoginBtn>Login Button</LoginBtn>
     <MedBtn>MedBtn</MedBtn>
     <DisabledBtn>DisabledBtn</DisabledBtn>
+    <CopyLinkBox>Copy Link <CopyLinkImg src='/images/CopyLink.png' /></CopyLinkBox>
   </>
 );
 
@@ -35,6 +36,8 @@ export const AllButtons = () => (
 //     <Button {...args}>Karens Button</Button>
 //   </WithFigma>
 // ));
+
+
 
 export const Default = (args) =>
   <Button {...args}>Default Button 1</Button> 
@@ -53,6 +56,28 @@ Default.story = {
     },
   },
 };
+
+export const CopyLink = (args) => (
+	<CopyLinkBox {...args}>
+		Copy Link <CopyLinkImg src="/images/CopyLink.png" />
+	</CopyLinkBox>
+);
+
+CopyLink.args = {
+	disabled: false,
+	depressed: false,
+	focus: false,
+};
+CopyLink.story = {
+	parameters: {
+		design: {
+			type: "figma",
+			url:
+				"https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1012%3A0",
+		},
+	},
+};
+
 export const Google = (args) => (
     <>
   <GoogleBox {...args}>
@@ -120,6 +145,7 @@ Secondary.story = {
   }
 };
 
+// These will probably be taken out--just displaying for demo and we aren't using them. 
 
 export const Btn280 = () => <Button280>Button280</Button280>;
 

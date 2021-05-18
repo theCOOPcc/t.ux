@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { primary_default, disable_btn, enable_btn, enable_hover, google_hover, disable_g_btn, g_focus, primary_text, primary_hover, pressed_btn, secondary_default, secondary_hover } from '../utilities/Colors';
+import { primary_default, disable_btn, enable_btn, enable_hover, google_hover, disable_g_btn, g_focus, primary_text, primary_hover, pressed_btn, secondary_default, secondary_hover, tux_grey, tux_red } from '../utilities/Colors';
 import {
   btn_active_shadow,
   input_border,
@@ -48,7 +48,7 @@ export const PrimaryButton = styled.button`
         background-color: ${primary_hover};
       }
   `}
-  // Diasbled
+  // Disabled
     ${(props) =>
     props.disabled &&
     css`
@@ -182,7 +182,7 @@ export const GoogleBox = styled.button`
         background-color: ${g_focus};
       }
     `}
-  // Diasbled
+  // Disabled
   ${(props) =>
     props.disabled &&
     css`
@@ -197,6 +197,41 @@ export const GoogleBox = styled.button`
     css`
        background: linear-gradient(360deg, #F9F9F9 0%, rgba(255, 255, 255, 0) 100%);
     `}
+`;
+
+export const CopyLinkImg = styled.img`
+	width: 28px;
+	height: 28.64px;
+	margin: 13px;
+`;
+
+export const CopyLinkP = styled.p`
+  color: ${tux_red};
+`;
+
+export const CopyLinkBox = styled.button`
+	width: 408.76px;
+	height: 54px;
+	border: none;
+	border-radius: 5px;
+	background: #ffffff;
+	padding: 12px 0;
+	margin: 17px 8px;
+	${FlexCenter};
+	margin-bottom: 10px;
+	box-shadow: ${common_shadow};
+	color: ${tux_grey};
+	font: 700 18px "Poppins", sans-serif;
+	cursor: pointer;
+	&:active {
+		background: ${pressed_btn};
+		color: white;
+	}
+	${(props) =>
+		props.depressed &&
+		css`
+			width: 390px;
+		`}
 `;
 
 //KARENS BUTTON
