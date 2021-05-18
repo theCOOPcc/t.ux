@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { disable_btn, enable_btn, enable_hover, google_hover, disable_g_btn, g_focus } from '../utilities/Colors';
+import { primary_default, disable_btn, enable_btn, enable_hover, google_hover, disable_g_btn, g_focus, primary_text, primary_hover, pressed_btn, secondary_default, secondary_hover } from '../utilities/Colors';
 import {
   btn_active_shadow,
   input_border,
@@ -11,13 +11,137 @@ import {
   FlexCenter,
 } from "../utilities";
 
-// export const Primary = styled.button`
+// Primary Button
+export const PrimaryButton = styled.button`
+  width: 280px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background: ${primary_default};
+  padding: 12px 0;
+  margin: 17px 8px;
+  color: ${primary_text};
+  font: 700 20px "Poppins", sans-serif;
+  cursor: pointer;
+  &:hover {
+    background: ${primary_hover};
+  }
+  &:active {
+    background: ${pressed_btn};
+    color: white;
+  }
+  // Focus
+  ${(props) =>
+    props.focus &&
+    css`
+      background-color: ${primary_default};
+      &:hover {
+        background-color: ${primary_hover};
+      }
+  `}
+  // Hover
+  ${(props) =>
+    props.hover &&
+    css`
+      background-color: ${primary_hover};
+      &:hover {
+        background-color: ${primary_hover};
+      }
+  `}
+  // Diasbled
+    ${(props) =>
+    props.disabled &&
+    css`
+      background-color: ${disable_btn};
+      &:hover {
+        background-color: ${disable_btn};
+      }
+    `}
+  // Depressed
+    ${(props) =>
+    props.depressed &&
+    css`
+      background-color: ${pressed_btn};
+      color: white;
+    `}
+    // Large
+    ${(props) =>
+    props.large &&
+    css`
+      width: 343px;
+    `}
+    // Small
+    ${(props) =>
+    props.small &&
+    css`
+      width: 154px;
+    `}
+`;
 
-// `;
-
-// export const Secondary = styled.button`
-
-// `;
+// Secondary Button
+export const SecondaryButton = styled.button`
+  width: 280px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background: ${secondary_default};
+  padding: 12px 0;
+  margin: 17px 8px;
+  color: white;
+  font: 700 20px "Poppins", sans-serif;
+  cursor: pointer;
+  &:hover {
+    background: ${secondary_hover};
+  }
+  &:active {
+    background: ${pressed_btn};
+  }
+  // Focus
+  ${(props) =>
+    props.focus &&
+    css`
+      background-color: ${secondary_default};
+      &:hover {
+        background-color: ${secondary_hover};
+      }
+  `}
+    // Hover
+    ${(props) =>
+    props.hover &&
+    css`
+      background-color: ${secondary_hover};
+      &:hover {
+        background-color: ${secondary_hover};
+      }
+  `}
+  // Diasbled
+    ${(props) =>
+    props.disabled &&
+    css`
+      background-color: ${disable_btn};
+      &:hover {
+        background-color: ${disable_btn};
+      }
+    `}
+  // Depressed
+    ${(props) =>
+    props.depressed &&
+    css`
+      background-color: ${pressed_btn};
+    `}
+    // Large
+    ${(props) =>
+    props.large &&
+    css`
+      width: 343px;
+    `}
+    // Small
+    ${(props) =>
+    props.small &&
+    css`
+      width: 154px;
+    `}
+`;
 
 export const GoogleG = styled.img`
   width: 35px;
