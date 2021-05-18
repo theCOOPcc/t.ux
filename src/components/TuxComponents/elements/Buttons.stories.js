@@ -72,7 +72,7 @@ export const CopyLink = (args) => (
 
 CopyLink.args = {
 	depressed: false,
-
+}
 export const SmallNavButtons = (args) => {
   return (<BtnNavSml {...args}>
       <Arrow src='/images/arrow.svg' />
@@ -114,53 +114,16 @@ OAuthButton.args = {
   hover: false,
 
 };
-CopyLink.story = {
-	parameters: {
-		design: {
-			type: "figma",
-			url:
-				"https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1012%3A0",
-		},
-	},
-};
-
-export const Google = (args) => (
-	<>
-		<GoogleBox {...args}>
-			<GoogleG src="/images/google_logo.png" />
-			Sign in with Google
-		</GoogleBox>
-		<GoogleBox disabled="true">
-			<GoogleG src="/images/disabled_g.png" />
-			Sign in with Google
-		</GoogleBox>
-	</>
-);
-
-Google.args = {
-	depressed: false,
-	focus: false,
-	hover: false,
-};
-
-Google.story = {
-	parameters: {
-		design: {
-			type: "figma",
-			url:
-				"https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1012%3A0",
-		},
-	},
-
 OAuthButton.story = {
-  parameters: {
-    design: {
-      type: "figma",
-      url:
-        "https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1012%3A0",
-    },
-  },
+	parameters: {
+		design: {
+			type: "figma",
+			url:
+				"https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1012%3A0",
+		},
+	},
 };
+
 
 export const Primary = (args) => (
 	<PrimaryButton {...args}>Primary</PrimaryButton>
