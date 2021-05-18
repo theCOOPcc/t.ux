@@ -53,7 +53,7 @@ Default.story = {
     },
   },
 };
-export const Google = (args) => (
+export const OAuthButton = (args) => (
     <>
   <GoogleBox {...args}>
     <GoogleG src='/images/google_logo.png' />
@@ -66,14 +66,14 @@ export const Google = (args) => (
   </>
 );
 
-Google.args = {
+OAuthButton.args = {
   depressed: false,
   focus: false,
   hover: false,
 };
 
 
-Google.story = {
+OAuthButton.story = {
   parameters: {
     design: {
       type: "figma",
