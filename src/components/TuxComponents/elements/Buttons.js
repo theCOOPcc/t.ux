@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import React, { useState } from 'react'
 import { primary_default, disable_btn, enable_btn, enable_hover, google_hover, disable_g_btn, g_focus, primary_text, primary_hover, pressed_btn, secondary_default, secondary_hover, tux_grey, tux_red } from '../utilities/Colors';
 import {
   btn_active_shadow,
@@ -199,6 +200,18 @@ export const GoogleBox = styled.button`
     `}
 `;
 
+export const CopyLinkDiv = styled.div`
+	width: 408.76px;
+	height: 90px;
+	display: flex;
+	flex-direction: column;
+	${(props) =>
+		props.depressed &&
+		css`
+			width: 390px;
+		`}
+`;
+
 export const CopyLinkImg = styled.img`
 	width: 28px;
 	height: 28.64px;
@@ -206,11 +219,15 @@ export const CopyLinkImg = styled.img`
 `;
 
 export const CopyLinkP = styled.p`
-  color: ${tux_red};
+	color: ${tux_red};
+	font: 600 18px "Poppins", sans-serif;
+	line-height: 27px;
+	text-align: center;
+  margin: 6px;
 `;
 
-export const CopyLinkBox = styled.button`
-	width: 408.76px;
+export const CopyLinkBtn = styled.button`
+	width: 100%;
 	height: 54px;
 	border: none;
 	border-radius: 5px;
@@ -223,16 +240,29 @@ export const CopyLinkBox = styled.button`
 	color: ${tux_grey};
 	font: 700 18px "Poppins", sans-serif;
 	cursor: pointer;
-	&:active {
-		background: ${pressed_btn};
-		color: white;
-	}
 	${(props) =>
 		props.depressed &&
 		css`
 			width: 390px;
 		`}
 `;
+
+export const CopyLinkButton = ({...args}) => {
+	const [clicked, setClicked] = useState(false);
+
+	return (
+		<CopyLinkDiv {...args}>
+			<CopyLinkBtn
+				onClick={() => {
+					setClicked(!clicked);
+				}}>
+				Copy Link 
+        <CopyLinkImg src="/images/CopyLink.png" />
+			</CopyLinkBtn>
+			{clicked ? <CopyLinkP>link copied to clipboard</CopyLinkP> : <p></p>}
+		</CopyLinkDiv>
+	);
+}; 
 
 //KARENS BUTTON
 export const Button = styled.button`
