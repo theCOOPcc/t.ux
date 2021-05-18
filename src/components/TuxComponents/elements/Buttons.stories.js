@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button280, Button350, LoginBtn, MedBtn, DisabledBtn, Button, GoogleBox, GoogleG  } from "./Buttons";
+import { Button280, Button350, LoginBtn, MedBtn, DisabledBtn, Button, GoogleBox, GoogleG, PrimaryButton, SecondaryButton  } from "./Buttons";
 import { withDesign } from "storybook-addon-designs";
 
 export default {
@@ -10,6 +10,8 @@ export default {
 
 export const AllButtons = () => (
   <>
+   <PrimaryButton>Primary</ PrimaryButton>
+    <SecondaryButton>Secondary</SecondaryButton>
     <GoogleBox>
         <GoogleG src='/images/google_logo.png' />
         Sign with Google
@@ -79,6 +81,43 @@ Google.story = {
         "https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1012%3A0",
     },
   },
+};
+
+export const Primary = (args) => (
+  <PrimaryButton {...args}>Primary</ PrimaryButton>
+);
+Primary.args = {
+  depressed: false,
+  focus: false,
+  hover: false,
+  small: false,
+  large: false,
+};
+Primary.story = {
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1424%3A0",
+    }
+  }
+};
+export const Secondary = (args) => (
+  <SecondaryButton {...args}>Secondary</ SecondaryButton>
+);
+Secondary.args = {
+  depressed: false,
+  focus: false,
+  hover: false,
+  small: false,
+  large: false,
+};
+Secondary.story = {
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1424%3A0",
+    }
+  }
 };
 
 
