@@ -221,6 +221,13 @@ export const TextBtn = styled.button`
     height: 18px;
     border: 1px solid rgba(60, 133, 130, 0.5);
   }
+  &:active {
+   text-align: justify;
+    color: #323239;
+  }
+  &:disabled {
+    color: #CCCCCC;
+  }
 `;
 
 // Tylers 'Link Button'
@@ -243,6 +250,7 @@ export const LinkBtn = styled.a`
   color: #518E90;
     &:hover {
      color: #A9CBCD;
+     cursor: pointer;
     }
     &:disabled {
       text-decoration-line: none;

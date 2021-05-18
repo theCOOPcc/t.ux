@@ -20,6 +20,8 @@ export const AllButtons = () => (
     <LoginBtn>Login Button</LoginBtn>
     <MedBtn>MedBtn</MedBtn>
     <DisabledBtn>DisabledBtn</DisabledBtn>
+    <TextBtn>TextBtn</TextBtn>
+    <LinkBtn>LinkBtn</LinkBtn>
   </>
 );
 
@@ -92,6 +94,6 @@ export const BtnMed = () => <MedBtn>MedBtn</MedBtn>;
 
 export const Btndisabled = () => <DisabledBtn>DisabledBtn</DisabledBtn>;  
 
-export const TxtBtn = () => <TextBtn>Label</TextBtn>
+export const TxtBtn = () => <TextBtn>Label</TextBtn>;
 
-
+export const LnkBtn = () => <LinkBtn>Link</LinkBtn>;
