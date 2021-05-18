@@ -14,9 +14,11 @@ import {
 	CopyLinkBtn,
 	CopyLinkImg,
 	CopyLinkDiv,
-	CopyLinkP,
+	CopyLinkP, BtnNavSml, Arrow
 } from "./Buttons";
 import { withDesign } from "storybook-addon-designs";
+
+
 
 export default {
 	title: "All Buttons",
@@ -26,6 +28,9 @@ export default {
 
 export const AllButtons = () => (
 	<>
+     <BtnNavSml>
+      <Arrow src='/images/arrow.svg' />
+    </BtnNavSml>
 		<PrimaryButton>Primary</PrimaryButton>
 		<SecondaryButton>Secondary</SecondaryButton>
 		<GoogleBox>
@@ -41,16 +46,6 @@ export const AllButtons = () => (
     <CopyLinkButton />
 	</>
 );
-
-// storiesOf("Default").add("With Figma", (args) => (
-//   <WithFigma
-//     url={
-//       "https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=228%3A12"
-//     }
-//   >
-//     <Button {...args}>Karens Button</Button>
-//   </WithFigma>
-// ));
 
 export const Default = (args) => <Button {...args}>Default Button 1</Button>;
 
@@ -69,7 +64,6 @@ Default.story = {
 	},
 };
 
-
 export const CopyLink = (args) => (
   <>
 	<CopyLinkButton {...args} />
@@ -78,6 +72,28 @@ export const CopyLink = (args) => (
 
 CopyLink.args = {
 	depressed: false,
+
+export const SmallNavButtons = (args) => {
+  return (<BtnNavSml {...args}>
+      <Arrow src='/images/arrow.svg' />
+    </BtnNavSml>
+  )
+};
+SmallNavButtons.args = {
+  depressed: false,
+  focus: false,
+  hover: false,
+  disabled: false,
+};
+SmallNavButtons.story = {
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1424%3A0",
+    },
+  },
+};
 
 export const OAuthButton = (args) => (
     <>
@@ -185,14 +201,3 @@ Secondary.story = {
 	},
 };
 
-// These will probably be taken out--just displaying for demo and we aren't using them.
-
-export const Btn280 = () => <Button280>Button280</Button280>;
-
-export const Btn350 = () => <Button350>Button350</Button350>;
-
-export const BtnLogin = () => <LoginBtn>LoginBtn</LoginBtn>;
-
-export const BtnMed = () => <MedBtn>MedBtn</MedBtn>;
-
-export const Btndisabled = () => <DisabledBtn>DisabledBtn</DisabledBtn>;
