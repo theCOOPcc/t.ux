@@ -39,8 +39,10 @@ export const google_hover = "#E5E5E5";
 export const g_focus = "#ffffff";
 export const disable_g_btn = "#D3D3D3";
 export const g_focus_box = "#b4c8e9";
-
-
+export const small_nav_default = "#3c8582";
+export const small_nav_hover = "#6DA4A1";
+export const small_nav_pressed = "#1C3C3B";
+export const small_nav_disabled = "#DDDDDD";
 // Input Colors
 export const background_input = "#eee";
 // Other Colors

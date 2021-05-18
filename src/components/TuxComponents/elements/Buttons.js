@@ -1,5 +1,23 @@
-import styled, { css } from 'styled-components';
-import { primary_default, disable_btn, enable_btn, enable_hover, google_hover, disable_g_btn, g_focus, primary_text, primary_hover, pressed_btn, secondary_default, secondary_hover, g_focus_box } from '../utilities/Colors';
+import styled, { css } from "styled-components";
+import {
+  primary_default,
+  disable_btn,
+  enable_btn,
+  enable_hover,
+  google_hover,
+  disable_g_btn,
+  g_focus,
+  primary_text,
+  primary_hover,
+  pressed_btn,
+  secondary_default,
+  secondary_hover,
+  g_focus_box,
+  small_nav_default,
+  small_nav_hover,
+  small_nav_pressed,
+  small_nav_disabled,
+} from "../utilities/Colors";
 import {
   btn_active_shadow,
   input_border,
@@ -38,7 +56,7 @@ export const PrimaryButton = styled.button`
       &:hover {
         background-color: ${primary_hover};
       }
-  `}
+    `}
   // Hover
   ${(props) =>
     props.hover &&
@@ -47,7 +65,7 @@ export const PrimaryButton = styled.button`
       &:hover {
         background-color: ${primary_hover};
       }
-  `}
+    `}
   // Diasbled
     ${(props) =>
     props.disabled &&
@@ -104,8 +122,8 @@ export const SecondaryButton = styled.button`
       &:hover {
         background-color: ${secondary_hover};
       }
-  `}
-    // Hover
+    `}
+  // Hover
     ${(props) =>
     props.hover &&
     css`
@@ -113,7 +131,7 @@ export const SecondaryButton = styled.button`
       &:hover {
         background-color: ${secondary_hover};
       }
-  `}
+    `}
   // Diasbled
     ${(props) =>
     props.disabled &&
@@ -149,6 +167,7 @@ export const GoogleG = styled.img`
   margin: 20px;
 `;
 
+//OAuth Button
 export const GoogleBox = styled.button`
   width: 343px;
   height: 80px;
@@ -214,6 +233,67 @@ export const GoogleBox = styled.button`
     `}
 `;
 
+//Button Nav Small
+
+export const Arrow = styled.img`
+  width: 7.52px;
+  height: 7.96px;
+`;
+
+export const BtnNavSml = styled.button`
+  ${FlexCenter}
+  width: 22px;
+  color: white;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background: ${small_nav_default};
+  font: 700 20px "Poppins", sans-serif;
+  cursor: pointer;
+  &:hover {
+    background: ${small_nav_hover};
+  }
+  &:active {
+    background: ${pressed_btn};
+    color: white;
+  }
+  // Focus
+  ${(props) =>
+    props.focus &&
+    css`
+      background-color: ${small_nav_default};
+      box-shadow: 0 0 0 4px ${g_focus_box};
+      &:hover {
+        background-color: ${small_nav_hover};
+      }
+    `}
+  // Hover
+  ${(props) =>
+    props.hover &&
+    css`
+      background-color: ${small_nav_hover};
+      &:hover {
+        background-color: ${small_nav_hover};
+      }
+    `}
+  // Diasbled
+    ${(props) =>
+    props.disabled &&
+    css`
+      background-color: ${small_nav_disabled};
+      &:hover {
+        background-color: ${small_nav_disabled};
+      }
+    `}
+  // Depressed
+    ${(props) =>
+    props.depressed &&
+    css`
+      background-color: ${small_nav_pressed};
+      color: white;
+    `}
+`;
+
 //KARENS BUTTON
 export const Button = styled.button`
   width: 280px;
@@ -273,75 +353,84 @@ export const Button = styled.button`
 
 // This was the "WideBtn", 280px
 export const Button280 = styled.button`
-    border: none;
-    border-radius: 5px;
-    width: 280px;
-    padding: 12px 0;
-    margin: 17px 8px;
-    font: ${pop_bolder};
-    background: ${enable_btn};
-    color: white;
-    cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  width: 280px;
+  padding: 12px 0;
+  margin: 17px 8px;
+  font: ${pop_bolder};
+  background: ${enable_btn};
+  color: white;
+  cursor: pointer;
 
-        &:hover {
-            background: ${enable_hover};
-        }
-        &:active {
-            box-shadow: ${btn_active_shadow};
-        }
+  &:hover {
+    background: ${enable_hover};
+  }
+  &:active {
+    box-shadow: ${btn_active_shadow};
+  }
 
-    /* Disabled */
-    ${props => props.disabled && css`
-		background-color: ${disable_btn};
-		border: ${input_border};
-	
-		&:hover {
-			background-color: ${disable_btn};
-		}
-    `}    
+  /* Disabled */
+  ${(props) =>
+    props.disabled &&
+    css`
+      background-color: ${disable_btn};
+      border: ${input_border};
 
-    /* Extra Wide 350px*/
-    ${props => props.wide350 && css`
-        width: 350px;
+      &:hover {
+        background-color: ${disable_btn};
+      }
     `}
 
-    ${props => props.login && css`
-        width: 343px;
+  /* Extra Wide 350px*/
+    ${(props) =>
+    props.wide350 &&
+    css`
+      width: 350px;
     `}
 
-    ${props => props.medium && css`
-        width: 224px;
-        font: var(--pop-thick);
-        font-size: 14px;
-        margin: 
+    ${(props) =>
+    props.login &&
+    css`
+      width: 343px;
+    `}
+
+    ${(props) =>
+    props.medium &&
+    css`
+      width: 224px;
+      font: var(--pop-thick);
+      font-size: 14px;
+      margin: ;
     `}
 `;
 
 export const Button350 = styled(Button280)`
-    width: 350px;
+  width: 350px;
 
-    ${props => props.auto && css`
-        margin-left: auto;
+  ${(props) =>
+    props.auto &&
+    css`
+      margin-left: auto;
     `}
 `;
 
 export const LoginBtn = styled(Button280)`
-    width: 343px;
+  width: 343px;
 `;
 
 export const MedBtn = styled(Button280)`
-    width: 224px;
-    font: ${pop_thick};
-    font-size: 14px;
+  width: 224px;
+  font: ${pop_thick};
+  font-size: 14px;
 `;
 
 // Disabled button extention
 export const DisabledBtn = styled(Button280)`
-    background-color: ${disable_btn};
-		border: ${input_border};
-	
-		&:hover {
-			background-color: ${disable_btn};
-		}
-`;
+  background-color: ${disable_btn};
+  border: ${input_border};
 
+  &:hover {
+    background-color: ${disable_btn};
+  }
+`;

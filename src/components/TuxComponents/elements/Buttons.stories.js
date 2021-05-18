@@ -1,6 +1,8 @@
 import React from 'react';
-import { Button280, Button350, LoginBtn, MedBtn, DisabledBtn, Button, GoogleBox, GoogleG, PrimaryButton, SecondaryButton  } from "./Buttons";
+import { Button280, Button350, LoginBtn, MedBtn, DisabledBtn, Button, GoogleBox, GoogleG, PrimaryButton, SecondaryButton, BtnNavSml, Arrow  } from "./Buttons";
 import { withDesign } from "storybook-addon-designs";
+
+
 
 export default {
   title: "All Buttons",
@@ -10,11 +12,14 @@ export default {
 
 export const AllButtons = () => (
   <>
-   <PrimaryButton>Primary</ PrimaryButton>
+    <BtnNavSml>
+      <Arrow src='/images/arrow.svg' />
+    </BtnNavSml>
+    <PrimaryButton>Primary</PrimaryButton>
     <SecondaryButton>Secondary</SecondaryButton>
     <GoogleBox>
-        <GoogleG src='/images/google_logo.png' />
-        Sign with Google
+      <GoogleG src='/images/google_logo.png' />
+      Sign with Google
     </GoogleBox>
     <Button>Default Button</Button>
     <Button280>Button280</Button280>
@@ -25,16 +30,6 @@ export const AllButtons = () => (
   </>
 );
 
-
-// storiesOf("Default").add("With Figma", (args) => (
-//   <WithFigma
-//     url={
-//       "https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=228%3A12"
-//     }
-//   >
-//     <Button {...args}>Karens Button</Button>
-//   </WithFigma>
-// ));
 
 export const Default = (args) =>
   <Button {...args}>Default Button 1</Button> 
@@ -50,6 +45,27 @@ Default.story = {
       type: "figma",
       url:
         "https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1012%3A0",
+    },
+  },
+};
+export const SmallNavButtons = (args) => {
+  return (<BtnNavSml {...args}>
+      <Arrow src='/images/arrow.svg' />
+    </BtnNavSml>
+  )
+};
+SmallNavButtons.args = {
+  depressed: false,
+  focus: false,
+  hover: false,
+  disabled: false,
+};
+SmallNavButtons.story = {
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1424%3A0",
     },
   },
 };
@@ -121,14 +137,7 @@ Secondary.story = {
 };
 
 
-export const Btn280 = () => <Button280>Button280</Button280>;
 
-export const Btn350 = () => <Button350>Button350</Button350>
 
-export const BtnLogin = () => <LoginBtn>LoginBtn</LoginBtn>;
-
-export const BtnMed = () => <MedBtn>MedBtn</MedBtn>;
-
-export const Btndisabled = () => <DisabledBtn>DisabledBtn</DisabledBtn>;  
 
 
