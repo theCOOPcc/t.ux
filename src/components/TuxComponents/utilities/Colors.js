@@ -18,7 +18,7 @@ export const text_white = "#fff";
 //default button color
 export const enable_btn = "#3c8582";
 export const enable_hover = "#236c69";
-export const google_hover = "#E5E5E5";
+export const google_hover = "#E5E5E5"; 
 //default focus color
 export const default_focus = "#1C3C3B";
 export const g_focus = "#4285F4";
