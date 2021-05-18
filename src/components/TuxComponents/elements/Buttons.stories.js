@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button280, Button350, LoginBtn, MedBtn, DisabledBtn, Button, GoogleBox, GoogleG  } from "./Buttons";
+import { Button280, Button350, LoginBtn, MedBtn, DisabledBtn, Button, GoogleBox, GoogleG, TextBtn, LinkBtn  } from "./Buttons";
 import { withDesign } from "storybook-addon-designs";
 
 export default {
@@ -91,5 +91,7 @@ export const BtnLogin = () => <LoginBtn>LoginBtn</LoginBtn>;
 export const BtnMed = () => <MedBtn>MedBtn</MedBtn>;
 
 export const Btndisabled = () => <DisabledBtn>DisabledBtn</DisabledBtn>;  
+
+export const TxtBtn = () => <TextBtn>Label</TextBtn>
 
 

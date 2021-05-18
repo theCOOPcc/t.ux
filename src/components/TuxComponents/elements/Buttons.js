@@ -178,6 +178,84 @@ export const Button280 = styled.button`
     `}
 `;
 
+// Tylers 'Text Button'
+
+export const TextBtn = styled.button`
+/* positioning */
+
+  position: absolute;
+  border: none;
+  background: none;
+  left: 12%;
+  right: 12%;
+  top: 12.48%;
+  bottom: 12.61%;
+  width: 71px;
+  height: 18px;
+  
+
+/* Fonts */
+  font: Poppins;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  
+/* Color */
+  color: #222222;
+
+
+  display: flex;
+  align-items:center;
+  text-align: center;
+  justify-content:center;
+
+  &:hover {
+    text-decoration-line: underline;
+    cursor: pointer;
+  }
+
+  &:focus{
+    outline: none;
+    width: 71px;
+    height: 18px;
+    border: 1px solid rgba(60, 133, 130, 0.5);
+  }
+`;
+
+// Tylers 'Link Button'
+
+export const LinkBtn = styled.a`
+  position: static;
+  width: 225px;
+  height: 24px;
+  left: 4px;
+  top: 4px;
+  font-family: Poppins;
+  font-style:normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #518E90;
+    &:hover {
+     color: #A9CBCD;
+    }
+    &:disabled {
+      text-decoration-line: none;
+      color: #888888;
+    }
+    &:focus {
+      color: #A9CBCD;
+    }
+    &:active {
+      color: rgba(5, 0, 255, 0.75);
+    }
+`;
+
 export const Button350 = styled(Button280)`
     width: 350px;
 
