@@ -1,6 +1,6 @@
 import React from 'react';
 // see comment on line 11
-import ImageTile from '../../components/ImageTile/ImageTile';
+import {ImageTile} from '../../components/ImageTile/ImageTile';
 
 function dynamicallyRenderComponent(kind, props) {
     // import(kind).then((widget) => {

@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
-import { disable_btn, enable_btn, enable_hover, google_hover, disable_g_btn, g_focus } from '../utilities/Colors';
+import React, { useState } from 'react'
+import { primary_default, disable_btn, enable_btn, enable_hover, google_hover, disable_g_btn, g_focus, primary_text, primary_hover, pressed_btn, secondary_default, secondary_hover, tux_grey, tux_red } from '../utilities/Colors';
 import {
   btn_active_shadow,
   input_border,
@@ -10,6 +11,138 @@ import {
   common_shadow,
   FlexCenter,
 } from "../utilities";
+
+// Primary Button
+export const PrimaryButton = styled.button`
+  width: 280px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background: ${primary_default};
+  padding: 12px 0;
+  margin: 17px 8px;
+  color: ${primary_text};
+  font: 700 20px "Poppins", sans-serif;
+  cursor: pointer;
+  &:hover {
+    background: ${primary_hover};
+  }
+  &:active {
+    background: ${pressed_btn};
+    color: white;
+  }
+  // Focus
+  ${(props) =>
+    props.focus &&
+    css`
+      background-color: ${primary_default};
+      &:hover {
+        background-color: ${primary_hover};
+      }
+  `}
+  // Hover
+  ${(props) =>
+    props.hover &&
+    css`
+      background-color: ${primary_hover};
+      &:hover {
+        background-color: ${primary_hover};
+      }
+  `}
+  // Disabled
+    ${(props) =>
+    props.disabled &&
+    css`
+      background-color: ${disable_btn};
+      &:hover {
+        background-color: ${disable_btn};
+      }
+    `}
+  // Depressed
+    ${(props) =>
+    props.depressed &&
+    css`
+      background-color: ${pressed_btn};
+      color: white;
+    `}
+    // Large
+    ${(props) =>
+    props.large &&
+    css`
+      width: 343px;
+    `}
+    // Small
+    ${(props) =>
+    props.small &&
+    css`
+      width: 154px;
+    `}
+`;
+
+// Secondary Button
+export const SecondaryButton = styled.button`
+  width: 280px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background: ${secondary_default};
+  padding: 12px 0;
+  margin: 17px 8px;
+  color: white;
+  font: 700 20px "Poppins", sans-serif;
+  cursor: pointer;
+  &:hover {
+    background: ${secondary_hover};
+  }
+  &:active {
+    background: ${pressed_btn};
+  }
+  // Focus
+  ${(props) =>
+    props.focus &&
+    css`
+      background-color: ${secondary_default};
+      &:hover {
+        background-color: ${secondary_hover};
+      }
+  `}
+    // Hover
+    ${(props) =>
+    props.hover &&
+    css`
+      background-color: ${secondary_hover};
+      &:hover {
+        background-color: ${secondary_hover};
+      }
+  `}
+  // Diasbled
+    ${(props) =>
+    props.disabled &&
+    css`
+      background-color: ${disable_btn};
+      &:hover {
+        background-color: ${disable_btn};
+      }
+    `}
+  // Depressed
+    ${(props) =>
+    props.depressed &&
+    css`
+      background-color: ${pressed_btn};
+    `}
+    // Large
+    ${(props) =>
+    props.large &&
+    css`
+      width: 343px;
+    `}
+    // Small
+    ${(props) =>
+    props.small &&
+    css`
+      width: 154px;
+    `}
+`;
 
 export const GoogleG = styled.img`
   width: 35px;
@@ -50,7 +183,7 @@ export const GoogleBox = styled.button`
         background-color: ${g_focus};
       }
     `}
-  // Diasbled
+  // Disabled
   ${(props) =>
     props.disabled &&
     css`
@@ -66,6 +199,70 @@ export const GoogleBox = styled.button`
        background: linear-gradient(360deg, #F9F9F9 0%, rgba(255, 255, 255, 0) 100%);
     `}
 `;
+
+export const CopyLinkDiv = styled.div`
+	width: 408.76px;
+	height: 90px;
+	display: flex;
+	flex-direction: column;
+	${(props) =>
+		props.depressed &&
+		css`
+			width: 390px;
+		`}
+`;
+
+export const CopyLinkImg = styled.img`
+	width: 28px;
+	height: 28.64px;
+	margin: 13px;
+`;
+
+export const CopyLinkP = styled.p`
+	color: ${tux_red};
+	font: 600 18px "Poppins", sans-serif;
+	line-height: 27px;
+	text-align: center;
+  margin: 6px;
+`;
+
+export const CopyLinkBtn = styled.button`
+	width: 100%;
+	height: 54px;
+	border: none;
+	border-radius: 5px;
+	background: #ffffff;
+	padding: 12px 0;
+	margin: 17px 8px;
+	${FlexCenter};
+	margin-bottom: 10px;
+	box-shadow: ${common_shadow};
+	color: ${tux_grey};
+	font: 700 18px "Poppins", sans-serif;
+	cursor: pointer;
+	${(props) =>
+		props.depressed &&
+		css`
+			width: 390px;
+		`}
+`;
+
+export const CopyLinkButton = ({...args}) => {
+	const [clicked, setClicked] = useState(false);
+
+	return (
+		<CopyLinkDiv {...args}>
+			<CopyLinkBtn
+				onClick={() => {
+					setClicked(!clicked);
+				}}>
+				Copy Link 
+        <CopyLinkImg src="/images/CopyLink.png" />
+			</CopyLinkBtn>
+			{clicked ? <CopyLinkP>link copied to clipboard</CopyLinkP> : <p></p>}
+		</CopyLinkDiv>
+	);
+}; 
 
 //KARENS BUTTON
 export const Button = styled.button`
