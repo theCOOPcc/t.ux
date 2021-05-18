@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { primary_default, disable_btn, enable_btn, enable_hover, google_hover, disable_g_btn, g_focus, primary_text, primary_hover, pressed_btn, secondary_default, secondary_hover } from '../utilities/Colors';
+import { primary_default, disable_btn, enable_btn, enable_hover, google_hover, disable_g_btn, g_focus, primary_text, primary_hover, pressed_btn, secondary_default, secondary_hover, g_focus_box } from '../utilities/Colors';
 import {
   btn_active_shadow,
   input_border,
@@ -153,6 +153,7 @@ export const GoogleBox = styled.button`
   width: 343px;
   height: 80px;
   border-radius: 5px;
+  border: none;
   background: #ffffff;
   ${FlexCenter}
   margin-bottom: 10px;
@@ -163,7 +164,7 @@ export const GoogleBox = styled.button`
   margin-top: 15px;
   &:hover {
     background: ${google_hover};
-  };
+  }
   &:active {
     background: linear-gradient(
       360deg,
@@ -173,11 +174,21 @@ export const GoogleBox = styled.button`
 
     box-shadow: ${btn_active_shadow};
   }
+  ${(props) =>
+    props.hover &&
+    css`
+      background-color: ${google_hover};
+      color: black;
+      &:hover {
+        background-color: ${google_hover};
+      }
+    `}
   // Focus
   ${(props) =>
     props.focus &&
     css`
       background-color: ${g_focus};
+      box-shadow: 0 0 0 6px ${g_focus_box};
       &:hover {
         background-color: ${g_focus};
       }
@@ -195,7 +206,11 @@ export const GoogleBox = styled.button`
     ${(props) =>
     props.depressed &&
     css`
-       background: linear-gradient(360deg, #F9F9F9 0%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(
+        360deg,
+        #f9f9f9 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
     `}
 `;
 
