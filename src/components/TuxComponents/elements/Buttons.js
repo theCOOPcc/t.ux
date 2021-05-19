@@ -250,7 +250,7 @@ export const LinkBtn = styled.a`
   color: #518E90;
     &:hover {
      color: #A9CBCD;
-     cursor: pointer;
+     cursor: pointer;  
     }
     &:disabled {
       text-decoration-line: none;

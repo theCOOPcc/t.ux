@@ -36,23 +36,7 @@ export const AllButtons = () => (
 //   </WithFigma>
 // ));
 
-export const Default = (args) =>
-  <Button {...args}>Default Button 1</Button> 
-  
-Default.args = {
-    disabled: true,
-    depressed: true,
-    focus: false,
-};
-Default.story = {
-  parameters: {
-    design: {
-      type: "figma",
-      url:
-        "https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1012%3A0",
-    },
-  },
-};
+
 export const Google = (args) => (
     <>
   <GoogleBox {...args}>
@@ -75,7 +59,7 @@ Google.args = {
 
 Google.story = {
   parameters: {
-    design: {
+    design: { 
       type: "figma",
       url:
         "https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1012%3A0",
@@ -94,6 +78,6 @@ export const BtnMed = () => <MedBtn>MedBtn</MedBtn>;
 
 export const Btndisabled = () => <DisabledBtn>DisabledBtn</DisabledBtn>;  
 
-export const TxtBtn = () => <TextBtn>Label</TextBtn>;
+export const TxtBtn = () => <TextBtn>Label</TextBtn>;  
 
 export const LnkBtn = () => <LinkBtn>Link</LinkBtn>;
