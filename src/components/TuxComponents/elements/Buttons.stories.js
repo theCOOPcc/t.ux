@@ -19,20 +19,26 @@ export default {
 };
 
 export const AllButtons = () => (
-  <>
+  <div style={{ display: "flex", flexDirection: "column" }}>
     <BtnNavSml>
       <Arrow src='/images/arrow.svg' />
     </BtnNavSml>
+    <br />
     <PrimaryButton>Primary</PrimaryButton>
+    <br />
     <SecondaryButton>Secondary</SecondaryButton>
+    <br />
     <GoogleBox>
       <GoogleG src='/images/google_logo.png' />
       Sign with Google
     </GoogleBox>
+    <br />
     <LinkBtn>This is what all links should look like.</LinkBtn>
+    <br />
     <TextBtn>Label</TextBtn>
+    <br />
     <CopyLinkButton />
-  </>
+  </div>
 );
 
 
