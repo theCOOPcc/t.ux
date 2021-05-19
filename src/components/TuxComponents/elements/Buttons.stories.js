@@ -14,7 +14,7 @@ import {
 	CopyLinkBtn,
 	CopyLinkImg,
 	CopyLinkDiv,
-	CopyLinkP, BtnNavSml, Arrow
+	CopyLinkP, BtnNavSml, Arrow,LinkBtn,TextBtn
 } from "./Buttons";
 import { withDesign } from "storybook-addon-designs";
 
@@ -43,6 +43,8 @@ export const AllButtons = () => (
 		<LoginBtn>Login Button</LoginBtn>
 		<MedBtn>MedBtn</MedBtn>
 		<DisabledBtn>DisabledBtn</DisabledBtn>
+    <LinkBtn>This is what all links should look like.</LinkBtn>
+    <TextBtn>Label</TextBtn>
     <CopyLinkButton />
 	</>
 );
@@ -164,3 +166,40 @@ Secondary.story = {
 	},
 };
 
+export const TextButton = (args) => (
+  <TextBtn {...args}>Label</TextBtn>
+);
+TextButton.args = {
+  disabled: false,
+	focus: false,
+	hover: false,
+  depressed: false,
+};
+TextButton.story = {
+  parameters: {
+		design: {
+			type: "figma",
+			url:
+				"https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1424%3A0",
+		},
+	},
+}
+
+export const LinkButton = (args) => (
+  <LinkBtn {...args}>This is what all links should look like.</LinkBtn>
+);
+LinkButton.args = {
+  disabled: false,
+  focus: false,
+	hover: false,
+  depressed: false,
+};
+LinkButton.story = {
+  parameters: {
+		design: {
+			type: "figma",
+			url:
+				"https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=1424%3A0",
+		},
+	},
+}

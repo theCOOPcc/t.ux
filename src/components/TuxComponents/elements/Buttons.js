@@ -417,6 +417,8 @@ export const Button = styled.button`
     `}
 `;
 
+
+
 // This was the "WideBtn", 280px
 export const Button280 = styled.button`
   border: none;
@@ -499,4 +501,102 @@ export const DisabledBtn = styled(Button280)`
   &:hover {
     background-color: ${disable_btn};
   }
+`;
+
+export const TextBtn = styled.button`
+/* positioning */
+
+  position: absolute;
+  border: none;
+  background: none;
+  left: 12%;
+  right: 12%;
+  top: 12.48%;
+  bottom: 12.61%;
+  width: 71px;
+  height: 18px;
+  
+
+/* Fonts */
+  font: Poppins;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  
+/* Color */
+  color: #222222;
+
+
+  display: flex;
+  align-items:center;
+  text-align: center;
+  justify-content:center;
+${(props) => 
+  props.hover && css`
+    text-decoration-line: underline;
+    cursor: pointer;
+  `
+}
+ ${(props) =>
+  props.focus && css`
+    outline: none;
+    width: 71px;
+    height: 18px;
+    border: 1px solid rgba(60, 133, 130, 0.5);
+  `
+ }
+  ${(props) => 
+    props.depressed && css`
+    text-align: justify;
+    color: #323239;
+    `
+  }
+  ${(props) => 
+    props.disabled && css`
+      color: #CCCCCC;
+    `
+  }
+
+`;
+
+export const LinkBtn = styled.a`
+  position: static;
+  width: 225px;
+  height: 24px;
+  left: 4px;
+  top: 4px;
+  font-family: Poppins;
+  font-style:normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #518E90;
+    ${(props) => 
+      props.hover &&
+      css`
+      color: #A9CBCD
+      cursor: pointer;
+      `
+      } 
+      ${(props) =>
+    props.disabled && css`
+    text-decoration-line: none;
+    color: #888888;
+    ` 
+      }
+    ${(props) =>
+    props.focus &&
+    css`
+      color: #A9CBCD
+    `}
+    ${(props) => 
+      props.depressed && css`
+       color: rgba(5, 0, 255, 0.75);
+      `
+    }
 `;
