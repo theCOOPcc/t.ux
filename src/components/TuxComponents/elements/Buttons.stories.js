@@ -80,10 +80,10 @@ export const OAuthButton = (args) => (
       <GoogleG src='/images/google_logo.png' />
       Sign in with Google
     </GoogleBox>
-    {/* <GoogleBox disabled='true'>
+    <GoogleBox disabled='true'>
       <GoogleG src='/images/disabled_g.png' />
       Sign in with Google
-    </GoogleBox> */}
+    </GoogleBox>
   </>
 );
 
