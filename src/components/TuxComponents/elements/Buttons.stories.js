@@ -53,7 +53,7 @@ CopyLink.args = {
 };
 export const SmallNavButtons = (args) => {
   return (
-    <BtnNavSml {...args}>
+    <BtnNavSml {...args} className='BtnNavSmall'>
       <Arrow src='/images/arrow.svg' />
     </BtnNavSml>
   );
@@ -76,7 +76,7 @@ SmallNavButtons.story = {
 
 export const OAuthButton = (args) => (
   <>
-    <GoogleBox {...args}>
+    <GoogleBox {...args} className='first'>
       <GoogleG src='/images/google_logo.png' />
       Sign in with Google
     </GoogleBox>

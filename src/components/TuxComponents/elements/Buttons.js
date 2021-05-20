@@ -288,11 +288,12 @@ export const CopyLinkButton = ({...args}) => {
 	return (
 		<CopyLinkDiv {...args}>
 			<CopyLinkBtn
+        className="copyLinkBtnTest"
 				onClick={() => {
 					setClicked(!clicked);
 				}}>
 				Copy Link 
-        <CopyLinkImg src="/images/CopyLink.png" />
+        <CopyLinkImg className="copyLinkBtnTestImg" src="/images/CopyLink.png" />
 			</CopyLinkBtn>
 			{clicked ? <CopyLinkP>link copied to clipboard</CopyLinkP> : <p></p>}
 		</CopyLinkDiv>
