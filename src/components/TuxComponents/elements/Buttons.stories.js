@@ -35,7 +35,7 @@ export const AllButtons = () => (
     <br />
     <LinkBtn>This is what all links should look like.</LinkBtn>
     <br />
-    <TextBtn>Label</TextBtn>
+    <TextBtn>Text Button</TextBtn>
     <br />
     <CopyLinkButton />
   </div>
@@ -141,7 +141,7 @@ Secondary.story = {
   },
 };
 
-export const TextButton = (args) => <TextBtn {...args}>Label</TextBtn>;
+export const TextButton = (args) => <TextBtn className='text-button' {...args}>Text Button</TextBtn>;
 TextButton.args = {
   disabled: false,
   focus: false,
@@ -159,7 +159,7 @@ TextButton.story = {
 };
 
 export const LinkButton = (args) => (
-  <LinkBtn {...args}>This is what all links should look like.</LinkBtn>
+  <LinkBtn className='link-button' {...args}>This is what all links should look like.</LinkBtn>
 );
 LinkButton.args = {
   disabled: false,
