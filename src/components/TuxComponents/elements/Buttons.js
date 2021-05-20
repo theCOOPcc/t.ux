@@ -532,6 +532,7 @@ export const TextBtn = styled.button`
   align-items:center;
   text-align: center;
   justify-content:center;
+  
 ${(props) => 
   props.hover && css`
     text-decoration-line: underline;
