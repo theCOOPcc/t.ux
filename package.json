@@ -78,6 +78,9 @@
     "@storybook/node-logger": "^6.2.9",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.9",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
+    "enzyme": "^3.11.0",
+    "react-test-renderer": "^17.0.2",
     "storybook-addon-designs": "^6.0.0",
     "storybook-figma": "^0.1.2"
   }
