@@ -2,8 +2,9 @@ import React from 'react'
 import {shallow} from 'enzyme'
 import {TextButton} from '../components/TuxComponents/elements/Buttons.stories.js'
 
-it('Should have Label inside text', () => {
+it('Should have "Text Button" as text', () => {
   const wrapper = shallow(<TextButton />);
-  const buttonText = wrapper.find('.first').text()
-  expect(buttonText).toBe("Text Button");
-});
+  console.log(wrapper.debug())
+  const buttonText = wrapper.find('.text-button').text()
+  expect(buttonText).toBe('Text Button');
+});  
