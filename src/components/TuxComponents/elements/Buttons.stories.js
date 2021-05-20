@@ -103,7 +103,7 @@ OAuthButton.story = {
 };
 
 export const Primary = (args) => (
-  <PrimaryButton {...args}>Primary</PrimaryButton>
+  <PrimaryButton {...args} className='primaryBtnTest'>Primary</PrimaryButton>
 );
 Primary.args = {
   depressed: false,
