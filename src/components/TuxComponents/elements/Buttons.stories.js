@@ -76,14 +76,14 @@ SmallNavButtons.story = {
 
 export const OAuthButton = (args) => (
   <>
-    <GoogleBox {...args}>
+    <GoogleBox {...args} className='first'>
       <GoogleG src='/images/google_logo.png' />
       Sign in with Google
     </GoogleBox>
-    <GoogleBox disabled='true'>
+    {/* <GoogleBox disabled='true'>
       <GoogleG src='/images/disabled_g.png' />
       Sign in with Google
-    </GoogleBox>
+    </GoogleBox> */}
   </>
 );
 
