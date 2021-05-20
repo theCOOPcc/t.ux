@@ -53,7 +53,7 @@ CopyLink.args = {
 };
 export const SmallNavButtons = (args) => {
   return (
-    <BtnNavSml {...args}>
+    <BtnNavSml {...args} className='BtnNavSmall'>
       <Arrow src='/images/arrow.svg' />
     </BtnNavSml>
   );
