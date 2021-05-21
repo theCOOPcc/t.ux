@@ -122,7 +122,9 @@ Primary.story = {
   },
 };
 export const Secondary = (args) => (
-  <SecondaryButton {...args}>Secondary</SecondaryButton>
+  <SecondaryButton {...args} className='secondaryBtnTest'>
+    Secondary
+  </SecondaryButton>
 );
 Secondary.args = {
   depressed: false,
