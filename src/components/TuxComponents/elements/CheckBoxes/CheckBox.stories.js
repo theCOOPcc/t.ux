@@ -9,13 +9,17 @@ export default {
 
 
 export const AllCheckBoxes = (args) => (
-<>        
+<div style={{display: 'flex'}}>        
   <Label {...args} >
     <HiddenCheckboxInput type='checkbox' />
     <CustomCheckboxInput {...args}  />
     Label
   </Label>
-</>
+  <Label {...args} >
+    <HiddenCheckboxInput type='checkbox' />
+    <CustomCheckboxInput {...args}  />
+  </Label>
+</div>
 )
 
 AllCheckBoxes.args = {
