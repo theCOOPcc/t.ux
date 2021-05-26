@@ -81,4 +81,9 @@ export const CustomCheckboxInput = styled.span`
       background-image: url('/images/Good-Check.svg');
       background-position: center;
     `}
+
+    ${props => props.intermediate && css`
+      background-image: url('/images/intermediate-symbol.svg');
+      background-position: center;
+    `}
 `;
