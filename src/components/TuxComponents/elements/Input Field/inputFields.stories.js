@@ -40,7 +40,6 @@ export const InputFields = (args) => (
 
 InputFields.args = {
   disabled: false,
-  depressed: false,
   focus: false,
   hover: false,
   active: false,
