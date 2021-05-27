@@ -18,16 +18,16 @@ export const ErrorMessage = styled.p`
 `;
 
 export const Error = styled.img`
-  width: 35px;
-  height: 35px;
+  width: 24px;
+  height: 24px;
   margin: 20px;
   border: none;
   ${(props) =>
     props.error &&
     css`
     position: absolute;
-        margin-left: 201px;
-        top: -18px;
+        margin-left: 240px;
+        top: -5px;
       }
     `}
 `;
@@ -40,7 +40,7 @@ export const Input = styled.input`
   height: 48px;
   background: #f0f0f0;
   border-radius: 10px 10px 0px 0px;
-  padding-left: 12px;
+  padding: 20px 0 0 12px;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -48,15 +48,15 @@ export const Input = styled.input`
   ${(props) =>
     props.focus &&
     css`
+      caret-color: #54989b;
       border: 2px solid #54989b;
       transition: 0.3s ease all;
       border-top: none;
       border-left: none;
       border-right: none;
-      ::placeholder {
+      /* ::placeholder {
         position: relative;
-        top: 12px;
-      }
+      } */
     `}
   ${(props) =>
     props.hover &&
@@ -89,20 +89,19 @@ export const Input = styled.input`
       font-size: 14px;
       line-height: 21px;
       color: #565656;
-      ::placeholder {
-        position: relative;
-        top: 12px;
-        transition: 0.3s ease all;
-      }
+      /* ::placeholder {
+        position: relative;        transition: 0.3s ease all;
+      } */
     `}
     ${(props) =>
     props.error &&
     css`
-      ::placeholder {
+      /* ::placeholder {
         position: relative;
         top: 12px;
         transition: 0.3s ease all;
-      }
+      } */
+      caret-color: #e6211e;
     `}
 `;
 

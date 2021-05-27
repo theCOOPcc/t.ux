@@ -10,11 +10,7 @@ export default {
 export const InputFields = (args) => (
   <Wrapper {...args}>
     {args.error && (
-      <>
-        <Label {...args}>
           <Error {...args} src='/images/ErrorIcon.png' />
-        </Label>
-      </>
     )}
     <Input
       {...args}
