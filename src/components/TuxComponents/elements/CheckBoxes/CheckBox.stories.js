@@ -1,24 +1,39 @@
-import {Label, CheckboxContainer, StyledCheckbox, FieldSet, HiddenCheckboxInput, CustomCheckboxInput} from './CheckBoxes.js'
+import {CheckboxWrapper, CheckboxContainer, StyledCheckbox, FieldSet, HiddenCheckboxInput, CustomCheckboxInput, TestCustomCheckbox} from './CheckBoxes.js'
 import React from 'react';
 import { withDesign } from "storybook-addon-designs";
 export default {
-  title: "CheckBox",
-  component: Label,
+  title: "Checkboxes",
   decorators: [withDesign], 
 };
 
 
 export const AllCheckBoxes = (args) => (
 <div style={{display: 'flex'}}>        
-  <Label {...args} >
+  {/* <CheckboxWrapper {...args} >
     <HiddenCheckboxInput type='checkbox' />
     <CustomCheckboxInput {...args}  />
     Label
-  </Label>
-  <Label {...args} >
+  </CheckboxWrapper>
+
+  <CheckboxWrapper {...args} >
     <HiddenCheckboxInput type='checkbox' />
     <CustomCheckboxInput {...args}  />
-  </Label>
+  </CheckboxWrapper> */}
+
+  {/* div
+      input
+      label
+  */}
+  <CheckboxWrapper {...args}>
+    <HiddenCheckboxInput type='checkbox'/>
+    <TestCustomCheckbox  {...args} />
+  Label
+  </CheckboxWrapper>
+  <CheckboxWrapper {...args}>
+    <HiddenCheckboxInput type='checkbox'/>
+    <TestCustomCheckbox  {...args} />
+
+  </CheckboxWrapper>
 </div>
 )
 
