@@ -15,10 +15,10 @@ export const AllRadioButtons = (args) => (
     </RadioButtonWrapper>
 
 
-    <RadioButtonWrapper {...args} >
+    {/* <RadioButtonWrapper {...args} >
     <HiddenRadioButtonInput type='radio' {...args} />
     <TestCustomRadio {...args} />
-    </RadioButtonWrapper>
+    </RadioButtonWrapper> */}
   </div>
 )
 
@@ -28,7 +28,6 @@ AllRadioButtons.args = {
   checked: false,
   disabled: false,
   error: false,
-  intermediate: false
 }
 
 AllRadioButtons.story = {
