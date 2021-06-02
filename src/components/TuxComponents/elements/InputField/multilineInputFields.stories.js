@@ -1,18 +1,17 @@
 import React from "react";
-import { Input, Wrapper, Label, Error, ErrorMessage } from "./inputFields";
+import { Input, Wrapper, Label, Error, ErrorMessage } from "./mulilineInputFields";
 import { withDesign } from "storybook-addon-designs";
 
 export default {
-  title: "Input Fields with Label",
+  title: "Multiline Input Fields",
   decorators: [withDesign],
 };
 
-export const InputFieldswithLabel = (args) => (
+export const MultilineInputFields = (args) => (
   <Wrapper {...args}>
-    {args.error && (
-          <Error {...args} src='/images/ErrorIcon.png' />
-    )}
+    {args.error && <Error {...args} src='/images/ErrorIcon.png' />}
     <Input
+      className='multilineInputFields'
       {...args}
       placeholder={
         args.focus === true
@@ -26,22 +25,18 @@ export const InputFieldswithLabel = (args) => (
     />
 
     <Label {...args}>Label</Label>
-    {args.error &&
-    (<ErrorMessage>Error Message</ErrorMessage>)
-    }
+    {args.error && <ErrorMessage>Error Message</ErrorMessage>}
   </Wrapper>
 );
 
-
-
-InputFieldswithLabel.args = {
+MultilineInputFields.args = {
   disabled: false,
   focus: false,
   hover: false,
   active: false,
   error: false,
 };
-InputFieldswithLabel.story = {
+MultilineInputFields.story = {
   parameters: {
     design: {
       type: "figma",

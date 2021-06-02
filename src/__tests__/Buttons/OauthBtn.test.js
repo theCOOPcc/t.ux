@@ -1,6 +1,6 @@
 import React from 'react';  
 import { shallow } from 'enzyme'
-import  { OAuthButton }  from '../components/TuxComponents/elements/Buttons.stories.js'
+import { OAuthButton } from "../../components/TuxComponents/elements/Buttons/Buttons.stories.js";
 
 
 it('should have "Sign in with Google as text"', () => {

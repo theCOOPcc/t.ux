@@ -1,41 +1,49 @@
 import React from "react";
-import { Input, Wrapper, Label, Error, ErrorMessage } from "./mulilineInputFields";
+import { Input, Wrapper, Label, DropDownArrow, ErrorMessage } from "./dropdownMenuFields";
 import { withDesign } from "storybook-addon-designs";
 
 export default {
-  title: "Multiline Input Fields",
+  title: "Dropdown Menu Input Fields",
   decorators: [withDesign],
 };
 
-export const MultilineInputFields = (args) => (
+export const DropdownMenuInputFields = (args) => (
   <Wrapper {...args}>
-    {args.error && <Error {...args} src='/images/ErrorIcon.png' />}
-    <Input
+    <DropDownArrow
       {...args}
-      placeholder={
-        args.focus === true
+      src={
+        args.disabled ? "/images/disabledDropdown.png" : "/images/dropdown.png"
+      }
+    />
+    <Input
+      className='dropdownMenuInputFields'
+      aria-label='Select an option'
+      {...args}
+    >
+      <option default>
+        {args.focus === true
           ? "Input Text"
           : args.active === true
           ? "Input Text"
           : args.error === true
           ? "Wrong Input"
-          : null
-      }
-    />
-
+          : ""}
+      </option>
+      <option>Alpha</option>
+    </Input>
     <Label {...args}>Label</Label>
     {args.error && <ErrorMessage>Error Message</ErrorMessage>}
   </Wrapper>
 );
 
-MultilineInputFields.args = {
+DropdownMenuInputFields.args = {
   disabled: false,
   focus: false,
   hover: false,
   active: false,
   error: false,
 };
-MultilineInputFields.story = {
+DropdownMenuInputFields.story = {
   parameters: {
     design: {
       type: "figma",
