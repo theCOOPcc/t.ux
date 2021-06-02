@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Flex, pop_semiBold, pop_thick, success, tux_red } from '../../utilities';
+import { Flex, pop_semiBold, pop_thick, success, tux_red } from '../../../utilities';
 
 export const AnswerCardBox = styled.div`
     width: 240px;
