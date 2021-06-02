@@ -3,11 +3,11 @@ import { Input, Wrapper, Label, Error, ErrorMessage } from "./inputFieldsWithLab
 import { withDesign } from "storybook-addon-designs";
 
 export default {
-  title: "Input Fields with Label",
+  title: "Input Fields With Label",
   decorators: [withDesign],
 };
 
-export const InputFieldswithLabel = (args) => (
+export const InputFieldsWithLabel = (args) => (
   <Wrapper {...args}>
     {args.error && <Error {...args} src='/images/ErrorIcon.png' />}
     <Input
@@ -31,14 +31,14 @@ export const InputFieldswithLabel = (args) => (
 
 
 
-InputFieldswithLabel.args = {
+InputFieldsWithLabel.args = {
   disabled: false,
   focus: false,
   hover: false,
   active: false,
   error: false,
 };
-InputFieldswithLabel.story = {
+InputFieldsWithLabel.story = {
   parameters: {
     design: {
       type: "figma",
