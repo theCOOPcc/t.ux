@@ -7,7 +7,7 @@ export default {
   decorators: [withDesign],
 };
 
-export const InputFields = (args) => (
+export const InputFieldswithLabel = (args) => (
   <Wrapper {...args}>
     {args.error && (
           <Error {...args} src='/images/ErrorIcon.png' />
@@ -34,14 +34,14 @@ export const InputFields = (args) => (
 
 
 
-InputFields.args = {
+InputFieldswithLabel.args = {
   disabled: false,
   focus: false,
   hover: false,
   active: false,
-  error: false
+  error: false,
 };
-InputFields.story = {
+InputFieldswithLabel.story = {
   parameters: {
     design: {
       type: "figma",
