@@ -7,12 +7,27 @@ export const Wrapper = styled.div`
 
 export const ErrorMessage = styled.p`
   position: absolute;
+  color: #888888;
   top: 43px;
   left: 15px;
-  color: #e6211e;
   font: ${pop_reg};
   font-size: 10px;
   line-height: 15px;
+  ${(props) =>
+    props.error &&
+    css`
+      color: #e6211e;
+    `}
+  ${(props) =>
+    props.focus &&
+    css`
+      color: #54989b;
+    `}
+    ${(props) =>
+    props.disabled &&
+    css`
+      color: rgba(136, 136, 136, 0.5);
+    `}
 `;
 
 export const Error = styled.img`
@@ -23,23 +38,23 @@ export const Error = styled.img`
   ${(props) =>
     props.error &&
     css`
-    position: absolute;
-        margin-left: 240px;
-        top: -5px;
-      }
+      position: absolute;
+      margin-left: 240px;
+      top: -5px;
     `}
 `;
 
 export const Input = styled.input`
   box-sizing: border-box;
+  font: ${pop_reg};
   font-size: 14px;
   line-height: 21px;
   width: 280px;
   height: 48px;
   background: #f0f0f0;
-  border: none;
   border-radius: 10px 10px 0px 0px;
-  padding: 20px 0 0 12px;
+  padding: 12px;
+  border: none;
   border-bottom: 1px solid #888888;
   ${(props) =>
     props.focus &&
@@ -68,7 +83,7 @@ export const Input = styled.input`
     css`
       border: none;
       border-bottom: 2px solid #222222;
-      font: ${pop_reg};
+      font-family: ${pop_reg};
       font-size: 14px;
       line-height: 21px;
       color: #565656;
@@ -77,64 +92,5 @@ export const Input = styled.input`
     props.error &&
     css`
       caret-color: #e6211e;
-    `}
-`;
-
-export const Label = styled.label`
-  font: ${pop_reg};
-  font-size: 14px;
-  line-height: 21px;
-  color: #565656;
-  position: absolute;
-  pointer-events: none;
-  margin-left: 12px;
-  margin-bottom: 12px;
-  left: 15px;
-  top: 20px;
-  transition: 0.3s ease all;
-
-  //FOCUS
-  ${(props) =>
-    props.focus &&
-    css`
-      top: 6px;
-      left: 5px;
-      font-size: 10px;
-      line-height: 15px;
-      opacity: 0.6;
-      color: #54989b;
-    `}
-  //DISABLED
-  ${(props) =>
-    props.disabled &&
-    css`
-      line-height: 21px;
-      color: rgba(136, 136, 136, 0.5);
-    `}
-    ${(props) =>
-    props.hover &&
-    css`
-      color: #222222;
-    `}
-    //ACTIVE
-  ${(props) =>
-    props.active &&
-    css`
-      top: 6px;
-      left: 5px;
-      font-size: 10px;
-      line-height: 15px;
-      opacity: 0.6;
-      color: #222222;
-    `}
-    //ERROR
-    ${(props) =>
-    props.error &&
-    css`
-      top: 6px;
-      left: 5px;
-      font-size: 10px;
-      line-height: 15px;
-      color: #e6211e;
     `}
 `;
