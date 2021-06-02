@@ -14,7 +14,6 @@ import { withDesign } from "storybook-addon-designs";
 
 export default {
   title: "All Buttons",
-  component: GoogleBox,
   decorators: [withDesign], 
 };
 

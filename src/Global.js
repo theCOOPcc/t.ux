@@ -19,6 +19,10 @@ const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
+
+    button, a {
+        cursor: pointer;
+    }
 `;
 
 export default GlobalStyle;

@@ -5,6 +5,8 @@ export const tux_red = "#EA4A46";
 export const tux_grey = "#323239";
 export const tux_white = "#f1f2eb";
 export const tux_black = "#17171e";
+
+export const success = 'rgba(120, 192, 119, 1)';
 //  Text Element Colors
 export const link_text = "#538284";
 export const grey_text = "#666666";
