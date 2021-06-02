@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { Secondary } from "../components/TuxComponents/elements/Buttons.stories.js";
+import { Secondary } from "../../components/TuxComponents/elements/Buttons/Buttons.stories.js";
 
 const wrapper = shallow(<Secondary />);
 

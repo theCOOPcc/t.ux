@@ -1,41 +1,44 @@
 import React from "react";
-import { Input, Wrapper, Label, DropDownArrow, ErrorMessage } from "./dropdownMenuFields";
+import { Input, Wrapper, Label, Error, ErrorMessage } from "./inputFieldsWithLabel";
 import { withDesign } from "storybook-addon-designs";
 
 export default {
-  title: "Dropdown Menu Input Fields",
+  title: "Input Fields with Label",
   decorators: [withDesign],
 };
 
-export const DropdownMenuInputFields = (args) => (
+export const InputFieldswithLabel = (args) => (
   <Wrapper {...args}>
-    <DropDownArrow {...args} src={args.disabled ? '/images/disabledDropdown.png' : '/images/dropdown.png' } />
-    <Input aria-label='Select an option'
+    {args.error && <Error {...args} src='/images/ErrorIcon.png' />}
+    <Input
+      className='inputFieldsWithLabel'
       {...args}
-    >
-        <option default>{args.focus === true
+      placeholder={
+        args.focus === true
           ? "Input Text"
           : args.active === true
           ? "Input Text"
           : args.error === true
           ? "Wrong Input"
-          : ""
-        }</option>
-        <option>Alpha</option>
-    </Input>
+          : null
+      }
+    />
+
     <Label {...args}>Label</Label>
     {args.error && <ErrorMessage>Error Message</ErrorMessage>}
   </Wrapper>
 );
 
-DropdownMenuInputFields.args = {
+
+
+InputFieldswithLabel.args = {
   disabled: false,
   focus: false,
   hover: false,
   active: false,
   error: false,
 };
-DropdownMenuInputFields.story = {
+InputFieldswithLabel.story = {
   parameters: {
     design: {
       type: "figma",

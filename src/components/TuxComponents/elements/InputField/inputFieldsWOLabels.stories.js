@@ -11,6 +11,7 @@ export const InputFieldsWithoutLabel = (args) => (
   <Wrapper {...args}>
     {args.error && <Error {...args} src='/images/ErrorIcon.png' />}
     <Input
+      className='inputFieldsWithoutLabel'
       {...args}
       placeholder={
         args.hover === true
@@ -22,11 +23,9 @@ export const InputFieldsWithoutLabel = (args) => (
           : "Placeholder Text"
       }
     />
-      <ErrorMessage {...args}>
-        { args.error === true
-          ? "Error Message"
-          : "Help Text"}
-      </ErrorMessage>
+    <ErrorMessage {...args}>
+      {args.error === true ? "Error Message" : "Help Text"}
+    </ErrorMessage>
   </Wrapper>
 );
 
