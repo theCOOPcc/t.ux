@@ -7,7 +7,7 @@ export default {
   decorators: [withDesign],
 };
 
-export const dropdownFields = (args) => (
+export const DropdownMenuInputFields = (args) => (
   <Wrapper {...args}>
     <DropDownArrow {...args} src={args.disabled ? '/images/disabledDropdown.png' : '/images/dropdown.png' } />
     <Input aria-label='Select an option'
@@ -28,14 +28,14 @@ export const dropdownFields = (args) => (
   </Wrapper>
 );
 
-dropdownFields.args = {
+DropdownMenuInputFields.args = {
   disabled: false,
   focus: false,
   hover: false,
   active: false,
   error: false,
 };
-dropdownFields.story = {
+DropdownMenuInputFields.story = {
   parameters: {
     design: {
       type: "figma",
