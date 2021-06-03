@@ -3,7 +3,6 @@ import styled, {css} from 'styled-components'
 
 export const RadioButtonWrapper = styled.div`
   display: flex;
-  /* position: absolute; */
   text-align: center;
   align-items: center;
   font-family: "Poppins";
@@ -41,7 +40,6 @@ export const RadioButtonWrapper = styled.div`
 
 
 export const HiddenRadioButtonInput = styled.input`
-  /* display: none; */
   opacity: 0;
   /* this centered the label and radio button */
   width: 0;
