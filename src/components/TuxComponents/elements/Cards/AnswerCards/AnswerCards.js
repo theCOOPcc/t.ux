@@ -2,15 +2,26 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Flex, pop_semiBold, pop_thick, success, tux_red } from '../../../utilities';
 
-export const AnswerCardBox = styled.div`
+export const AnswerCardBox = styled.button`
     width: 240px;
     height: 250px;
     border-radius: 10px;
     margin: 5px 7px;
     position: relative;
     border: 1px solid rgba(187, 187, 187, 1);
+    background: #FAFAFA;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 4px 4px 3px rgba(0,0,0,.25);
+    }
     ${props => props.incorrect && css`
         border: 1px solid ${tux_red};
+    `}
+    ${props => props.hover && css`
+        box-shadow: 4px 4px 3px rgba(0,0,0,.25);
+    `}
+    ${props => props.focus && css`
+        border: 5px solid lightblue;
     `}
     
     img {
@@ -34,7 +45,9 @@ export const Icon = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
+    &:hover {
+        background: #3D3D3D;
+    }
     ${props => props.correct && css`
         background: ${success};
     `}
@@ -61,7 +74,7 @@ export const CardText = styled.p`
     left: 61.53px;
 `;
 
-export const FourAnswerCardGroup = styled.div`
+export const CardGroup = styled.div`
     ${Flex};
     flex-flow: row wrap;
     max-width: 600px;

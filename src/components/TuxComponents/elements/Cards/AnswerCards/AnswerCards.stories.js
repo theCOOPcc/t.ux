@@ -4,9 +4,9 @@ import {
   Icon,
   IconText,
   CardText,
-  FourAnswerCardGroup,
+  CardGroup,
 } from "./AnswerCards";
-import { fourAnswerOptions, twoAnswerOptions } from './data';
+import { fourAnswerOptions, twoAnswerOptions, oneAnswerOption } from './data';
 import { withDesign } from "storybook-addon-designs";
 
 export default {
@@ -16,7 +16,7 @@ export default {
 
 export const AnswerCards = () => (
   <>
-    <FourAnswerCardGroup>
+    <CardGroup>
       {fourAnswerOptions.map(answer => (
           <AnswerCardBox>
           <img src={answer.image} alt={answer.altText} />
@@ -29,11 +29,11 @@ export const AnswerCards = () => (
         </AnswerCardBox>
       ))}
       
-    </FourAnswerCardGroup>
+    </CardGroup>
 
     <hr /><hr/>
 
-    <FourAnswerCardGroup>
+    <CardGroup>
       {twoAnswerOptions.map(answer => (
           <AnswerCardBox>
           <img src={answer.image} alt={answer.altText} />
@@ -45,20 +45,24 @@ export const AnswerCards = () => (
           </div>
         </AnswerCardBox>
       ))}
-    </FourAnswerCardGroup>
+    </CardGroup>
   </>
 );
 
 export const AnswerCard = (args) => (
-  <AnswerCardBox {...args}>
-    <img src="https://picsum.photos/200" alt="random pic" />
+  <CardGroup>
+  {oneAnswerOption.map(answer => (
+    <AnswerCardBox {...args}>
+    <img src={answer.image} alt={answer.altText} />
     <div style={{ display: "flex" }}>
       <Icon {...args}>
-        <IconText>A</IconText>
+        <IconText>{answer.iconText}</IconText>
       </Icon>
-      <CardText>Calendar</CardText>
+      <CardText>{answer.cardText}</CardText>
     </div>
   </AnswerCardBox>
+))}
+</CardGroup>
 );
 
 AnswerCard.args = {
