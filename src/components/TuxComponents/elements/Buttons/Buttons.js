@@ -527,8 +527,6 @@ export const TextBtn = styled.button`
   
 /* Color */
   color: #222222;
-
-
   display: flex;
   align-items:center;
   text-align: center;

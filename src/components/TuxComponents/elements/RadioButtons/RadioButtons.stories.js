@@ -13,12 +13,6 @@ export const AllRadioButtons = (args) => (
     <TestCustomRadio {...args} />
     Label
     </RadioButtonWrapper>
-
-
-    {/* <RadioButtonWrapper {...args} >
-    <HiddenRadioButtonInput type='radio' {...args} />
-    <TestCustomRadio {...args} />
-    </RadioButtonWrapper> */}
   </div>
 )
 
