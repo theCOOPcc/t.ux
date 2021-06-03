@@ -61,8 +61,9 @@ export const ContentCards = () => (
   </div>
 );
 
-export const ScenarioCard = (args) => {
-  scenarioCardContent.map(card => 
+export const ScenarioCard = (args) => (
+  <>
+  {scenarioCardContent.map(card => 
     <div style={{ margin: "20px" }}>
     <ScenarioTopBar />
     <ScenarioBox>
@@ -79,8 +80,9 @@ export const ScenarioCard = (args) => {
       )}
     </ScenarioBox>
   </div>
-    )  
-}
+    )  }
+    </>
+);
 
 ScenarioCard.story = {
   parameters: {
@@ -93,23 +95,22 @@ ScenarioCard.story = {
 };
 
 export const BulletTextCard = (args) => (
-  <BulletTextCardOuter>
-    <BulletTextTopBar />
-    <BulletTextBox>
-      <BulletTextHeader>Lesson Objectives</BulletTextHeader>
-      <BulletList>
-        <BulletTextListItem>
-          At the end of this Activity you will be able to:
-        </BulletTextListItem>
-        <BulletTextListItem>
-          Define the 10 Usability Heuristics
-        </BulletTextListItem>
-        <BulletTextListItem>
-          Identify Heuristics as they pertan to Digital Interaces.
-        </BulletTextListItem>
-      </BulletList>
-    </BulletTextBox>
-  </BulletTextCardOuter>
+  <>
+  {bulletedCardContent.map((card) => (
+    <div style={{ margin: "20px" }}>
+      <BulletTextTopBar />
+      <BulletTextBox>
+        <BulletTextHeader>{card.header}</BulletTextHeader>
+        <BulletTextSubHeader>{card.subHeader}</BulletTextSubHeader>
+        {card.listItems.map((item) => (
+          <ul>
+            <BulletTextListItem>{item}</BulletTextListItem>
+          </ul>
+        ))}
+      </BulletTextBox>
+    </div>
+  ))}
+  </>
 );
 
 BulletTextCard.story = {
