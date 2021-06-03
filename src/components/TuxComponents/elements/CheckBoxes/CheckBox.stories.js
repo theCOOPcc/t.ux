@@ -9,7 +9,6 @@ export default {
 
 export const AllCheckBoxes = (args) => (
 <div style={{display: 'flex'}}>        
-
   <CheckboxWrapper {...args}>
     <HiddenCheckboxInput type='checkbox'/>
     <TestCustomCheckbox  {...args} />
@@ -18,7 +17,6 @@ export const AllCheckBoxes = (args) => (
   <CheckboxWrapper {...args}>
     <HiddenCheckboxInput type='checkbox'/>
     <TestCustomCheckbox  {...args} />
-
   </CheckboxWrapper>
 </div>
 )
