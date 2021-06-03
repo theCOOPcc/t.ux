@@ -73,4 +73,20 @@ export const TestCustomRadio = styled.label`
     css`
       border: 1px solid #cccccc;
     `}
+
+    ${props => props.checked && css`
+   &::before {
+    content: "";
+    display: inline-block;
+    outline: none;
+    border: none;
+   }
+   &::after {
+        content: "";
+        background: #1B9BA0;
+        border-radius: 50%;
+        border: 5px solid transparent
+  `}
   `
+
+  
