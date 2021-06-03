@@ -1,6 +1,6 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import {TextButton} from '../components/TuxComponents/elements/Buttons.stories.js'
+import { TextButton } from "../../components/TuxComponents/elements/Buttons/Buttons.stories.js";
 
 it('Should have "Text Button" as text', () => {
   const wrapper = shallow(<TextButton />);

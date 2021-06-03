@@ -14,7 +14,6 @@ import { withDesign } from "storybook-addon-designs";
 
 export default {
   title: "All Buttons",
-  component: GoogleBox,
   decorators: [withDesign], 
 };
 
@@ -43,21 +42,16 @@ export const AllButtons = () => (
 
 
 export const CopyLink = (args) => (
-  <>
     <CopyLinkButton {...args} />
-  </>
 );
-
 CopyLink.args = {
   depressed: false,
 };
-export const SmallNavButtons = (args) => {
-  return (
+export const SmallNavButtons = (args) => (
     <BtnNavSml {...args} className='BtnNavSmall'>
       <Arrow src='/images/arrow.svg' />
     </BtnNavSml>
-  );
-};
+);
 SmallNavButtons.args = {
   depressed: false,
   focus: false,
@@ -75,19 +69,14 @@ SmallNavButtons.story = {
 };
 
 export const OAuthButton = (args) => (
-  <>
     <GoogleBox {...args} className='first'>
-      <GoogleG src='/images/google_logo.png' />
+      <GoogleG src={args.disabled ? '/images/disabled_g.png' : '/images/google_logo.png'} />
       Sign in with Google
     </GoogleBox>
-    <GoogleBox disabled='true'>
-      <GoogleG src='/images/disabled_g.png' />
-      Sign in with Google
-    </GoogleBox>
-  </>
 );
 
 OAuthButton.args = {
+  disabled: false,
   depressed: false,
   focus: false,
   hover: false,
@@ -103,7 +92,7 @@ OAuthButton.story = {
 };
 
 export const Primary = (args) => (
-  <PrimaryButton {...args}>Primary</PrimaryButton>
+  <PrimaryButton {...args} className='primaryBtnTest'>Primary</PrimaryButton>
 );
 Primary.args = {
   depressed: false,
@@ -122,7 +111,9 @@ Primary.story = {
   },
 };
 export const Secondary = (args) => (
-  <SecondaryButton {...args}>Secondary</SecondaryButton>
+  <SecondaryButton {...args} className='secondaryBtnTest'>
+    Secondary
+  </SecondaryButton>
 );
 Secondary.args = {
   depressed: false,

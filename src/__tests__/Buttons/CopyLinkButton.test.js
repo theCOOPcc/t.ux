@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { CopyLinkButton } from "../components/TuxComponents/elements/Buttons.js";
+import { CopyLinkButton } from "../../components/TuxComponents/elements/Buttons/Buttons.js";
 
 const wrapper = shallow(<CopyLinkButton />)
 console.log(wrapper.debug())

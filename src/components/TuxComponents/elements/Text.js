@@ -9,3 +9,5 @@ export const answer_btn = '500 14px "Poppins", sans-serif';
 export const table_text = '16px "Poppins", sans-serif';
 
 export const Poppins = '"Poppins", sans-serif';
+
+// TODO: This file is obsolete. Any use of variables from this file need to be replaced with those in utilities/Type.js

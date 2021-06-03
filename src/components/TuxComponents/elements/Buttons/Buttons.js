@@ -18,7 +18,7 @@ import {
   small_nav_hover,
   small_nav_pressed,
   small_nav_disabled, tux_grey, tux_red
-} from "../utilities/Colors";
+} from "../../utilities/Colors";
 
 import {
   btn_active_shadow,
@@ -29,7 +29,7 @@ import {
   default_focus,
   common_shadow,
   FlexCenter,
-} from "../utilities";
+} from "../../utilities";
 
 // Primary Button
 export const PrimaryButton = styled.button`
@@ -527,8 +527,6 @@ export const TextBtn = styled.button`
   
 /* Color */
   color: #222222;
-
-
   display: flex;
   align-items:center;
   text-align: center;

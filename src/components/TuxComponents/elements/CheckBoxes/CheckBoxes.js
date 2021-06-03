@@ -1,9 +1,8 @@
 import styled, { css } from "styled-components";
-import React from "react";
+
 
 export const CheckboxWrapper = styled.div`
   display: flex;
-  /* position: absolute; */
   left: 42.47%;
   right: -2.74%;
   top: -10%;
@@ -38,7 +37,6 @@ export const CheckboxWrapper = styled.div`
 `;
 
 export const HiddenCheckboxInput = styled.input`
-  /* display: none; */
   opacity: 0;
   width: 0;
 `;
