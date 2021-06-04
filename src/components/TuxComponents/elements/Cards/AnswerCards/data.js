@@ -46,5 +46,15 @@ module.exports = {
             altText: 'cat drawing',
             credit: 'https://robohash.org/',
         },
+    ],
+
+    oneAnswerOption: [
+        {
+            image: 'https://robohash.org/chicken.png',
+            iconText: 'A',
+            cardText: 'Robot',
+            altText: 'robot drawing',
+            credit: 'https://robohash.org/',
+        },
     ]
 }

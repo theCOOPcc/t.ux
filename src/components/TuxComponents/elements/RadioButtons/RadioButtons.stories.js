@@ -6,7 +6,7 @@ export default {
   decorators: [withDesign], 
 };
 
-export const AllRadioButtons = (args) => (
+export const RadioButtons = (args) => (
   <div style={{display: 'flex'}}>
     <RadioButtonWrapper {...args} >
     <HiddenRadioButtonInput type='radio' {...args} />
@@ -16,7 +16,7 @@ export const AllRadioButtons = (args) => (
   </div>
 )
 
-AllRadioButtons.args = {
+RadioButtons.args = {
   hover: false,
   focus: false,
   checked: false,
@@ -24,7 +24,7 @@ AllRadioButtons.args = {
   error: false,
 }
 
-AllRadioButtons.story = {
+RadioButtons.story = {
   parameters: {
     design: {
       type: "figma",
