@@ -68,7 +68,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://tux-staging.herokuapp.com",
+  "proxy": "http://thecoop-tux.herokuapp.com",
   "devDependencies": {
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
