@@ -10,7 +10,7 @@ export default {
   decorators: [withDesign],
 };
 
-export const AnswerCards = () => (
+export const AnswerCards = (args) => (
   <>
     <AnswerCard className="answerCard" />
     <TwoAnswerCards />
@@ -22,7 +22,7 @@ export const AnswerCardControls = (args) => (
   <AnswerCard {...args}/>
 )
 
-AnswerCard.args = {
+AnswerCardControls.args = {
   correct: false,
   incorrect: false,
   hover: false,
