@@ -1,6 +1,54 @@
-import React from 'react';
 import styled, { css } from 'styled-components';
 import { Flex, pop_semiBold, pop_thick, success, tux_red } from '../../../utilities';
+import { oneAnswerOption, twoAnswerOptions, fourAnswerOptions } from './data';
+
+export const AnswerCard = (args) => (
+    <CardGroup>
+      {oneAnswerOption.map((answer, idx) => (
+        <AnswerCardBox {...args} key={idx} className="answerCard">
+          <img src={answer.image} alt={answer.altText} />
+          <div style={{ display: "flex" }}>
+            <Icon {...args}>
+              <IconText>{answer.iconText}</IconText>
+            </Icon>
+            <CardText>{answer.cardText}</CardText>
+          </div>
+        </AnswerCardBox>
+      ))}
+    </CardGroup>
+  );
+
+export const FourAnswerCards = (args) => (
+  <CardGroup>
+  {fourAnswerOptions.map((answer, idx) => (
+    <AnswerCardBox key={idx}>
+      <img src={answer.image} alt={answer.altText} />
+      <div style={{ display: "flex" }}>
+        <Icon>
+          <IconText>{answer.iconText}</IconText>
+        </Icon>
+        <CardText>{answer.cardText}</CardText>
+      </div>
+    </AnswerCardBox>
+  ))}
+</CardGroup>
+);
+
+export const TwoAnswerCards = (args) => (
+    <CardGroup>
+    {twoAnswerOptions.map((answer, idx) => (
+        <AnswerCardBox key={idx}>
+        <img src={answer.image} alt={answer.altText} />
+        <div style={{ display: "flex" }}>
+            <Icon>
+            <IconText>{answer.iconText}</IconText>
+            </Icon>
+            <CardText>{answer.cardText}</CardText>
+        </div>
+        </AnswerCardBox>
+    ))}
+    </CardGroup>
+);
 
 export const AnswerCardBox = styled.button`
     width: 240px;
