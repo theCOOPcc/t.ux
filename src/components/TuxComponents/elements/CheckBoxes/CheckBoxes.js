@@ -13,6 +13,7 @@ export const CheckboxWrapper = styled.div`
   color: #333333;
   margin: 0 10px;
   cursor: pointer;
+  
   ${(props) =>
     props.focus &&
     css`
@@ -48,7 +49,7 @@ export const TestCustomCheckbox = styled.label`
   border: 1px solid #999999;
   box-sizing: border-box;
   border-radius: 5px;
-  margin: 5px;
+  margin: 4px;
   cursor: pointer;
   /* Fixes spacing between label text and the checkbox */
   /* margin-right: 10px; */
