@@ -3,10 +3,6 @@ import styled, { css } from "styled-components";
 
 export const CheckboxWrapper = styled.div`
   display: flex;
-  left: 42.47%;
-  right: -2.74%;
-  top: -10%;
-  bottom: -10%;
   text-align: center;
   align-items: center;
   font-family: "Poppins";
@@ -15,19 +11,17 @@ export const CheckboxWrapper = styled.div`
   font-size: 16px;
   line-height: 24px;
   color: #333333;
-  width: auto;
   margin: 0 10px;
   cursor: pointer;
+  margin-right: 5px;
   ${(props) =>
     props.focus &&
     css`
-      left: 0%;
-      right: 0%;
-      top: 0%;
-      bottom: 0%;
       border: 3px solid #000000;
       box-sizing: border-box;
       border-radius: 5px;
+      padding: 0 3px;
+      margin-right: 5px;
     `}
   ${(props) =>
     props.disabled &&
@@ -39,6 +33,7 @@ export const CheckboxWrapper = styled.div`
 export const HiddenCheckboxInput = styled.input`
   opacity: 0;
   width: 0;
+  margin: 0;
 `;
 
 
@@ -48,15 +43,16 @@ export const TestCustomCheckbox = styled.label`
   justify-content: center;
   align-items: center;
   text-align: center;
-  
+  padding-right: 4px;
   height: 20px;
   width: 20px;
   border: 1px solid #999999;
   box-sizing: border-box;
   border-radius: 5px;
-  margin: 5px;
+  margin: 3px;
   cursor: pointer;
-
+  /* Fixes spacing between label text and the checkbox */
+  margin-right: 10px;
   ${(props) =>
     props.hover &&
     css`
