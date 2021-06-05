@@ -11,13 +11,13 @@ export const RadioButtonWrapper = styled.div`
   line-height: 24px;
   color: #333333;
   /* margin: 0 10px; */
+  padding: 2px;
   ${(props) =>
     props.focus &&
     css`
       border: 3px solid #000000;
       box-sizing: border-box;
       border-radius: 5px;
-      padding: 0 3px;
     `}
 
     ${(props) =>
