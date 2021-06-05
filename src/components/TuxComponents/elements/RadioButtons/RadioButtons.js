@@ -11,7 +11,8 @@ export const RadioButtonWrapper = styled.div`
   line-height: 24px;
   color: #333333;
   /* margin: 0 10px; */
-  padding: 2px;
+  /* The left and right focus state border */
+  padding: 0 4px;
   ${(props) =>
     props.focus &&
     css`
@@ -53,6 +54,7 @@ export const TestCustomRadio = styled.label`
   border: 1px solid #999999;
   box-sizing: border-box;
   border-radius: 50%;
+  /* From the radio input to the label text  */
   margin-right: 5px;
   cursor: pointer;
   
