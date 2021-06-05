@@ -10,18 +10,14 @@ export const RadioButtonWrapper = styled.div`
   font-size: 16px;
   line-height: 24px;
   color: #333333;
-  margin: 0 10px;
+  /* margin: 0 10px; */
   ${(props) =>
     props.focus &&
     css`
-    left: 0%;
-      right: 0%;
-      top: 0%;
-      bottom: 0%;
       border: 3px solid #000000;
       box-sizing: border-box;
       border-radius: 5px;
-      padding-right: 5px;
+      padding: 0 3px;
     `}
 
     ${(props) =>
@@ -42,6 +38,8 @@ export const HiddenRadioButtonInput = styled.input`
   opacity: 0;
   /* this centered the label and radio button */
   width: 0;
+  padding: 0;
+  margin: 0;
 `;
 
 
