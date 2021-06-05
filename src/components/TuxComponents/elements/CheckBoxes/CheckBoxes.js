@@ -13,15 +13,14 @@ export const CheckboxWrapper = styled.div`
   color: #333333;
   margin: 0 10px;
   cursor: pointer;
-  margin-right: 5px;
   ${(props) =>
     props.focus &&
     css`
       border: 3px solid #000000;
       box-sizing: border-box;
       border-radius: 5px;
-      padding: 0 3px;
-      margin-right: 5px;
+      /* For the distance between label and border */
+      /* padding-right: 5px; */
     `}
   ${(props) =>
     props.disabled &&
@@ -34,6 +33,7 @@ export const HiddenCheckboxInput = styled.input`
   opacity: 0;
   width: 0;
   margin: 0;
+  padding: 0;
 `;
 
 
@@ -43,16 +43,15 @@ export const TestCustomCheckbox = styled.label`
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-right: 4px;
   height: 20px;
   width: 20px;
   border: 1px solid #999999;
   box-sizing: border-box;
   border-radius: 5px;
-  margin: 3px;
+  margin: 5px;
   cursor: pointer;
   /* Fixes spacing between label text and the checkbox */
-  margin-right: 10px;
+  /* margin-right: 10px; */
   ${(props) =>
     props.hover &&
     css`

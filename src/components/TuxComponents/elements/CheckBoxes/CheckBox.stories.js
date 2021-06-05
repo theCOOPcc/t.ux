@@ -9,9 +9,9 @@ export default {
 
 export const Checkboxes = (args) => (
 <div style={{display: 'flex'}}>        
-  <CheckboxWrapper {...args}>
+  <CheckboxWrapper style={{paddingRight: '3px'}} {...args}>
     <HiddenCheckboxInput type='checkbox'/>
-    <TestCustomCheckbox  {...args} />
+    <TestCustomCheckbox style={{marginRight:'10px'}}  {...args} />
   Label
   </CheckboxWrapper>
   <CheckboxWrapper {...args}>
