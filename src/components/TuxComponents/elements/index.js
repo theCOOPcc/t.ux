@@ -1,4 +1,4 @@
-export * from './Buttons/Buttons.js';
+export * from './Buttons/Buttons';
 export * from './Cards';
 export * from './Headings';
 export * from './Inputs';
