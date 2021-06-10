@@ -2,15 +2,18 @@ import React from 'react'
 import styled, { css } from "styled-components";
 
 
-export const  XMarker = styled.button`
-/* Position absolute and right 20px was breakthrough that enabled me to Center the text and move the X to the right */
+export const AlertIcon = styled.img`
 position: absolute;
-right: 14px;
-background: none;
-border: none;
-/* width: 13.71px; */
-/* height: 13.71px; */
-font-size: 10px;
+left: 20px;
+width: 15px
+`
+
+
+export const  XMarker = styled.img`
+
+position: absolute;
+right: 20px;
+width: 9px;
 `
 
 export const DefaultAlert = styled.button`
@@ -36,6 +39,8 @@ export const SuccessAlert = styled.button`
   background: rgba(120, 192, 119, 0.2);
   box-sizing: border-box;
   border-radius: 2px;
+  /* background-image: url('/images/success.svg'); */
+  
 `
 export const WarningAlert = styled.button`
   display: flex;

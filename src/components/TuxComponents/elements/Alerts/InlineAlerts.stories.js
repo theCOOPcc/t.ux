@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {DefaultAlert, SuccessAlert, WarningAlert, ErrorAlert, XMarker} from './InlineAlerts.js'
+import {DefaultAlert, SuccessAlert, WarningAlert, ErrorAlert, XMarker, AlertIcon} from './InlineAlerts.js'
 import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Alerts",
@@ -12,10 +12,11 @@ export default {
 export const AlertDefault = () => (
   <>
     <DefaultAlert>
+     <AlertIcon src='/images/DefaultIcon.svg' />
       <p style={{color: 'rgba(51, 51, 51, 0.75)'}}>
       <strong>Default Message - </strong> subtext here
       </p>
-      <XMarker style={{color: '#222222'}}>X</XMarker>
+      <XMarker src='/images/AlertXs.svg' />
     </DefaultAlert> 
     </>
 )
@@ -23,29 +24,32 @@ export const AlertDefault = () => (
 export const AlertSuccess = () => (
   <>
   <SuccessAlert>
+  <AlertIcon src='/images/success.svg' alt="" />
     <p style={{color: 'rgba(51, 51, 51, 0.75)'}}>
      <strong>Default Message </strong>  - subtext here
     </p>
-    <XMarker style={{color: '#222222'}}>X</XMarker>
+    <XMarker src='/images/AlertXs.svg' />
   </SuccessAlert>
   </>
 )
 
 export const AlertWarning = () => (
   <WarningAlert>
+    <AlertIcon src='/images/warning icon.svg' />
    <p style={{color: 'rgba(51, 51, 51, 0.75)'}}>
      <strong>Default Message - </strong> subtext here
    </p>
-   <XMarker style={{color: '#222222'}}>X</XMarker> 
+   <XMarker src='/images/AlertXs.svg' />
   </WarningAlert>
 )
 
 export const AlertError = () => (
   <ErrorAlert>
+    <AlertIcon src='/images/error.svg' />
     <p style={{color: 'rgba(51, 51, 51, 0.75)'}}>
     <strong>Default Message - </strong> subtext here
     </p>
-    <XMarker style={{color: '#222222'}}>X</XMarker>
+    <XMarker src='/images/AlertXs.svg' />
   </ErrorAlert>
 )
 
