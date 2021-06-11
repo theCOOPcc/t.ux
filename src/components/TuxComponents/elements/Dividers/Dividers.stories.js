@@ -9,8 +9,8 @@ export default {
 
 export const Dividers = () => (
     <div>
-        <DottedDivider/>
-        <SolidDivider/>
+        <DottedDivider className="dottedDivider"/>
+        <SolidDivider className="solidDivider"/>
     </div>
 )
 
