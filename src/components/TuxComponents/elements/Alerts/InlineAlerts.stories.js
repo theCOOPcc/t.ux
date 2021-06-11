@@ -1,59 +1,70 @@
-import React from 'react'
-import styled from 'styled-components'
-import {DefaultAlert, SuccessAlert, WarningAlert, ErrorAlert, XMarker, AlertIcon} from './InlineAlerts.js'
+import React from "react";
+import {
+  DefaultAlert,
+  SuccessAlert,
+  WarningAlert,
+  ErrorAlert,
+  XMarker,
+  AlertIcon,
+  ImgButton,
+} from "./InlineAlerts.js";
 import { withDesign } from "storybook-addon-designs";
 export default {
-  title: "Alerts",
-  decorators: [withDesign], 
+  title: "Inline Alerts",
+  decorators: [withDesign],
 };
-
-
 
 export const AlertDefault = () => (
   <>
-    <DefaultAlert>
-     <AlertIcon src='/images/DefaultIcon.svg' />
-      <p style={{color: 'rgba(51, 51, 51, 0.75)'}}>
-      <strong>Default Message - </strong> subtext here
+    <DefaultAlert >
+      <AlertIcon className='default-alert' style={{ width: "12px" }} src="/images/DefaultIcon.svg" />
+      <p style={{ color: "rgba(51, 51, 51, 0.75)" }}>
+        <strong>Default Message - </strong> subtext here
       </p>
-      <XMarker src='/images/AlertXs.svg' />
-    </DefaultAlert> 
-    </>
-)
+      <ImgButton type="">
+        <XMarker src="/images/AlertXs.svg" />
+      </ImgButton>
+    </DefaultAlert>
+  </>
+);
 
 export const AlertSuccess = () => (
   <>
-  <SuccessAlert>
-  <AlertIcon src='/images/success.svg' alt="" />
-    <p style={{color: 'rgba(51, 51, 51, 0.75)'}}>
-     <strong>Default Message </strong>  - subtext here
-    </p>
-    <XMarker src='/images/AlertXs.svg' />
-  </SuccessAlert>
+    <SuccessAlert>
+      <AlertIcon className='success-alert' src="/images/success.svg" alt="" />
+      <p style={{ color: "rgba(51, 51, 51, 0.75)" }}>
+        <strong>Default Message </strong> - subtext here
+      </p>
+      <ImgButton type="">
+        <XMarker src="/images/AlertXs.svg" />
+      </ImgButton>
+    </SuccessAlert>
   </>
-)
+);
 
 export const AlertWarning = () => (
   <WarningAlert>
-    <AlertIcon src='/images/warning icon.svg' />
-   <p style={{color: 'rgba(51, 51, 51, 0.75)'}}>
-     <strong>Default Message - </strong> subtext here
-   </p>
-   <XMarker src='/images/AlertXs.svg' />
+    <AlertIcon className='warning-alert' src="/images/warning icon.svg" />
+    <p style={{ color: "rgba(51, 51, 51, 0.75)" }}>
+      <strong>Default Message - </strong> subtext here
+    </p>
+    <ImgButton type="">
+      <XMarker src="/images/AlertXs.svg" />
+    </ImgButton>
   </WarningAlert>
-)
+);
 
 export const AlertError = () => (
   <ErrorAlert>
-    <AlertIcon src='/images/error.svg' />
-    <p style={{color: 'rgba(51, 51, 51, 0.75)'}}>
-    <strong>Default Message - </strong> subtext here
+    <AlertIcon className='error-alert' src="/images/error.svg" />
+    <p style={{ color: "rgba(51, 51, 51, 0.75)" }}>
+      <strong>Default Message - </strong> subtext here
     </p>
-    <XMarker src='/images/AlertXs.svg' />
+    <ImgButton type="">
+      <XMarker src="/images/AlertXs.svg" />
+    </ImgButton>
   </ErrorAlert>
-)
-
-
+);
 
 AlertDefault.story = {
   parameters: {
@@ -63,4 +74,4 @@ AlertDefault.story = {
         "https://www.figma.com/file/WKazrI05IMxIcso2Cn5obC/Tux-Design-Library?node-id=247%3A6",
     },
   },
-}
+};
