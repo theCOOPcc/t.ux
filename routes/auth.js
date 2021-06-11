@@ -20,14 +20,14 @@ router.get(
         // successRedirect: 
         // "http://localhost:3000/activity/heuristics",
         // "http://taketux.io/activity/heuristics",
-        // "https://tux-staging.herokuapp.com/activity/heuristics/",
+        // "https://thecoop-tux.herokuapp.com/activity/heuristics/",
         failureRedirect: "/login",
     }
   ), function (req, res) {
     console.log('AUTHENTICATED USER', req.user)
     res.redirect(
-      // 'http://localhost:3000/activity/heuristics'
-      'http://tux-staging.herokuapp.com/activity/heuristics'
+      'http://localhost:3000/activity/heuristics'
+      // 'http://thecoop-tux.herokuapp.com/activity/heuristics'
       )
   }
 );
@@ -36,8 +36,8 @@ router.get('/logout', function (req, res) {
   console.log('logging out', req.user)
   req.logout();
   res.redirect(
-    // 'http://localhost:3000'
-    'http://tux-staging.herokuapp.com'
+    'http://localhost:3000'
+    // 'http://thecoop-tux.herokuapp.com'
     );
 });
 /*---------- Protected Routes ----------*/
