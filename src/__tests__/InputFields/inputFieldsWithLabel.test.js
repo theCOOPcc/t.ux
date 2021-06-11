@@ -1,8 +1,8 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { InputFieldswithLabel } from "../../components/TuxComponents/elements/InputField/inputFieldsWithLabel.stories";
+import { InputFieldsWithLabel } from "../../components/TuxComponents/elements/InputField/inputFieldsWithLabel.stories";
 
-const wrapper = shallow(<InputFieldswithLabel />);
+const wrapper = shallow(<InputFieldsWithLabel />);
 console.log(wrapper.debug());
 
 it("should render", () => {
