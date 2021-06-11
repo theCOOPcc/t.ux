@@ -17,7 +17,6 @@ export const ToggleLabel = styled.label`
   height: 25px;
   cursor: pointer;
   &::after {
-    content: "";
     display: block;
     border-radius: 50%;
     width: 17px;
@@ -38,7 +37,7 @@ export const Toggle = styled.input`
   width: 60px;
   height: 25px;
   &:checked + ${ToggleLabel} {
-    background: #4fbe79;
+    background: ${success};
     &::after {
       display: block;
       position: absolute;
