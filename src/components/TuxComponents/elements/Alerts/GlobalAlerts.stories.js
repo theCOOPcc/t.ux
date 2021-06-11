@@ -9,7 +9,7 @@ export default {
 export const GlobalDeny = () => (
   <>
     <GlobalFailure>
-    <ExclaimIcon className='success-icon' src="/images/failure.svg" />
+    <ExclaimIcon className='failure-icon' />
     <p>
       <strong>Unfortunately</strong> - subtitle goes here
     </p>
@@ -23,7 +23,7 @@ export const GlobalDeny = () => (
 export const GlobalConfirm = () => (
   <>
   <GlobalSuccess>
-    <ExclaimIcon className='failure-icon' src="/images/GreenExclaimation.svg" />
+    <ExclaimIcon className='success-icon'  src="/images/GreenExclaimation.svg" />
     <p>
       <strong>Congratulations!</strong> - subtitle goes here
     </p>
