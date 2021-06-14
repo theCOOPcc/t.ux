@@ -42,7 +42,7 @@ class Login extends Component {
                 alt='tux logo, a blue, yellow and red flower'
               ></TuxFlower>
               <LoginBox>
-                <GoogleBox
+                <GoogleBox className='loginLink'
                   // this is the "href" go to google
                   href='http://localhost:3001/api/auth/google'
                 //   href="https://thecoop-tux.herokuapp.com/api/auth/google"
@@ -51,7 +51,7 @@ class Login extends Component {
                     src='/images/GoogleG.png'
                     alt='The mutlicolor Google G'
                   />
-                  <SignIn>Sign in with Google</SignIn>
+                  <SignIn className='login'>Sign in with Google</SignIn>
                 </GoogleBox>
                 <form autoComplete='off' onSubmit={this.handleSubmit}>
                   <Text>or:</Text>
