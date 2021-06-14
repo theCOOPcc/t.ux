@@ -33,16 +33,16 @@ module.exports = {
 
     twoAnswerOptions: [
         {
-            image: 'https://robohash.org/theCOOP.png',
+            image: 'https://picsum.photos/330/150',
             iconText: 'A',
-            cardText: 'Robot',
+            cardText: 'Answer A',
             altText: 'robot drawing',
             credit: 'https://robohash.org/',
         },
         {
-            image: 'https://robohash.org/theCOOP.png/?set=set4',
+            image: 'https://picsum.photos/330/150',
             iconText: 'B',
-            cardText: 'Cat',
+            cardText: 'Answer B',
             altText: 'cat drawing',
             credit: 'https://robohash.org/',
         },
@@ -50,7 +50,7 @@ module.exports = {
 
     oneAnswerOption: [
         {
-            image: 'https://robohash.org/chicken.png',
+            image: 'https://picsum.photos/330/150',
             iconText: 'A',
             cardText: 'Robot',
             altText: 'robot drawing',
