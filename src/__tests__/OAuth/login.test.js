@@ -11,7 +11,7 @@ it("should render", () => {
 
 it('Should have "Sign in with Google" as text', () => {
   const pText = wrapper.find(".login").text();
-  expect(pText).toBe("Sign in with Google");
+  expect(pText).toBe("Sign in with Google");  
 });
 
 it("Should redirect to google login", () => {
