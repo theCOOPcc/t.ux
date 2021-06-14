@@ -37,7 +37,7 @@ export const FourAnswerCards = (args) => (
 export const TwoAnswerCards = (args) => (
     <CardGroup>
     {twoAnswerOptions.map((answer, idx) => (
-        <AnswerCardBox key={idx}>
+        <WideAnswerCardBox key={idx}>
         <img src={answer.image} alt={answer.altText} />
         <div style={{ display: "flex" }}>
             <Icon>
@@ -45,7 +45,7 @@ export const TwoAnswerCards = (args) => (
             </Icon>
             <CardText>{answer.cardText}</CardText>
         </div>
-        </AnswerCardBox>
+        </WideAnswerCardBox>
     ))}
     </CardGroup>
 );
@@ -80,6 +80,16 @@ export const AnswerCardBox = styled.button`
         top: 12px;
         left: 14px;
     }
+`;
+
+export const WideAnswerCardBox = styled(AnswerCardBox)`
+  width: 360px;
+  height: 250px;
+
+  img {
+    width: 330px;
+    height: 150px;
+  }
 `;
 
 export const Icon = styled.div`
@@ -124,7 +134,7 @@ export const CardText = styled.p`
 
 export const CardGroup = styled.div`
     ${Flex};
-    flex-flow: row wrap;
-    max-width: 600px;
+    /* flex-flow: row wrap; */
+    max-width: 1000px;
     margin-bottom: 25px;
 `;
