@@ -1,18 +1,18 @@
 import styled, { css } from 'styled-components';
-import { Flex, pop_semiBold, pop_thick, success, tux_red } from '../../../utilities';
+import { Flex, grey_text, pop_black, pop_bolder, pop_semiBold, pop_thick, success, text_black, tux_red } from '../../../utilities';
 import { oneAnswerOption, twoAnswerOptions, fourAnswerOptions } from './data';
 
 export const AnswerCard = (args) => (
     <CardGroup>
       {oneAnswerOption.map((answer, idx) => (
         <AnswerCardBox {...args} key={idx} className="answerCard">
-          <img src={answer.image} alt={answer.altText} />
-          <div style={{ display: "flex" }}>
             <Icon {...args}>
               <IconText>{answer.iconText}</IconText>
             </Icon>
+          <img src={answer.image} alt={answer.altText} />
+          {/* <div style={{ display: "flex" }}> */}
             <CardText>{answer.cardText}</CardText>
-          </div>
+          {/* </div> */}
         </AnswerCardBox>
       ))}
     </CardGroup>
@@ -22,13 +22,13 @@ export const FourAnswerCards = (args) => (
   <CardGroup>
   {fourAnswerOptions.map((answer, idx) => (
     <AnswerCardBox key={idx}>
-      <img src={answer.image} alt={answer.altText} />
-      <div style={{ display: "flex" }}>
         <Icon>
           <IconText>{answer.iconText}</IconText>
         </Icon>
+      <img src={answer.image} alt={answer.altText} />
+      {/* <div style={{ display: "flex" }}> */}
         <CardText>{answer.cardText}</CardText>
-      </div>
+      {/* </div> */}
     </AnswerCardBox>
   ))}
 </CardGroup>
@@ -38,27 +38,28 @@ export const TwoAnswerCards = (args) => (
     <CardGroup>
     {twoAnswerOptions.map((answer, idx) => (
         <WideAnswerCardBox key={idx}>
-        <img src={answer.image} alt={answer.altText} />
-        <div style={{ display: "flex" }}>
             <Icon>
             <IconText>{answer.iconText}</IconText>
             </Icon>
+        <img src={answer.image} alt={answer.altText} />
+        {/* <div style={{ display: "flex" }}> */}
             <CardText>{answer.cardText}</CardText>
-        </div>
+        {/* </div> */}
         </WideAnswerCardBox>
     ))}
     </CardGroup>
 );
 
 export const AnswerCardBox = styled.button`
-    width: 240px;
-    height: 250px;
+    width: 165px;
+    height: 215px;
     border-radius: 10px;
     margin: 5px 7px;
     position: relative;
     border: 1px solid rgba(187, 187, 187, 1);
     background: #FAFAFA;
     cursor: pointer;
+    position: relative;
     &:hover {
         box-shadow: 4px 4px 3px rgba(0,0,0,.25);
     }
@@ -73,36 +74,42 @@ export const AnswerCardBox = styled.button`
     `}
     
     img {
-        width: 212px;
-        height: 170px;
+        width: 160px;
+        height: 150px;
         border-radius: 10px;
         position: absolute;
-        top: 12px;
-        left: 14px;
+    top: 0;
+    left: 1.5px;
     }
 `;
 
 export const WideAnswerCardBox = styled(AnswerCardBox)`
-  width: 360px;
-  height: 250px;
+  width: 340px;
+  height: 215px;
+  position: relative;
 
   img {
     width: 330px;
     height: 150px;
+    position: absolute;
+    top: 5px;
+    left: 2.5px;
   }
 `;
 
 export const Icon = styled.div`
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    background: rgba(51, 51, 51, 0.75);
-    position: absolute;
-    top: 195px;
-    left: 11.53px;
+    border: 4px solid #666;
+    background: #fafcfe;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    z-index: 20;
     &:hover {
         background: #3D3D3D;
     }
@@ -119,17 +126,18 @@ export const Icon = styled.div`
 `;
 
 export const IconText = styled.p`
-    font: ${pop_semiBold};
-    color: rgba(255,255,255,1);
+    font: ${pop_black};
+    color: #666;
 `;
 
 export const CardText = styled.p`
-    font: ${pop_thick};
-    line-height: 27px;
-    color: black;
+    font: ${pop_bolder};
+    line-height: 20px;
+    font-size: 16px;
+    color: ${text_black};
     position: absolute;
-    top: 185px;
-    left: 61.53px;
+    top: 158px;
+    left: 5px;
 `;
 
 export const CardGroup = styled.div`
