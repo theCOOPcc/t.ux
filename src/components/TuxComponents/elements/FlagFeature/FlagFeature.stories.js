@@ -23,7 +23,9 @@ export const FlagFeature = (args) => (
           args.active === true
             ? selectedFlag
             : args.hover === true
-            ? hoverFlag
+            ? hoverFlag 
+            : args.selected === true
+            ? selectedFlag
             : defaultFlag
         }
         alt="Flag icon"
@@ -45,6 +47,7 @@ export const FlagFeature = (args) => (
 FlagFeature.args = {
   hover: false,
   active: false,
+  selected: false,
 };
 
 FlagFeature.story = {

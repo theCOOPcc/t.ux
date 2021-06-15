@@ -66,6 +66,10 @@ export const FlagText = styled.p`
         color: ${orange_text};
         border: none;
     `};
+    ${(props) => props.selected && css`
+        color: ${orange_text};
+        border: none;
+    `};
 `;
 
 export const SelectedMenu = styled.div`
