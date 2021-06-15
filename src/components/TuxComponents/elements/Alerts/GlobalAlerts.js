@@ -10,7 +10,7 @@ width: 12px;
 
 export const XMarker = styled.img`
 position: absolute;
-right: 20px;
+right: 45px;
 width: 12px;
 align-items: center;
 justify-content: center;
@@ -18,7 +18,7 @@ justify-content: center;
 
 export const ExclaimIcon = styled.img`
   position: absolute;
-  left: 30px;
+  left: 50px;
   width: 20px;
 `
 export const ImgButton = styled.button`
@@ -41,7 +41,7 @@ export const GlobalSuccess = styled.div`
   align-items: center;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 521px;
+  width: 500px;
   height: 94px;
   border-left: 4px solid #78C077;
   box-sizing: border-box;
@@ -53,7 +53,7 @@ export const GlobalFailure = styled.div`
   align-items: center;
   background: #FFFFFF;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  width: 521px;
+  width: 500px;
   height: 94px;
   border-left: 4px solid #E6211E;
   box-sizing: border-box;
