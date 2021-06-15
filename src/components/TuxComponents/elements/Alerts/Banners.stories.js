@@ -15,7 +15,7 @@ export default {
 export const InfoBanner = () => (
   <div style={{width: '656px'}}>
     <DefaultAlert >
-      <AlertIcon className='default-alert' style={{ width: "12px" }} src="/images/DefaultIcon.svg" />
+      <AlertIcon className='default-banner' style={{ width: "12px" }} src="/images/DefaultIcon.svg" />
       <p style={{ color: "rgba(51, 51, 51, 0.75)" }}>
         <strong>Default Message - </strong> subtext here
       </p>
@@ -26,7 +26,7 @@ export const InfoBanner = () => (
 export const ErrorBanner = () => (
   <div style={{width:'656px'}}>
   <ErrorAlert>
-    <AlertIcon className='error-alert' src="/images/error.svg" />
+    <AlertIcon className='error-banner' src="/images/error.svg" />
     <p style={{ color: "rgba(51, 51, 51, 0.75)" }}>
       <strong>Default Message - </strong> subtext here
     </p>
@@ -36,8 +36,8 @@ export const ErrorBanner = () => (
 
 export const WarningBanner = () => (
   <div style={{width: '656px'}}>
-  <WarningAlert>
-    <AlertIcon className='warning-alert' src="/images/warning icon.svg" />
+  <WarningAlert >
+    <AlertIcon className='warning-banner' src="/images/warning icon.svg" />
     <p style={{ color: "rgba(51, 51, 51, 0.75)" }}>
       <strong>Default Message - </strong> subtext here
     </p>

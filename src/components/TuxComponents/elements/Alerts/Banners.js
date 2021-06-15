@@ -6,12 +6,6 @@ position: absolute;
 left: 20px;
 width: 12px;
 `
-
-
-
-
-
-
 export const DefaultAlert = styled.button`
   /* position: fixed; */
   display: flex;
