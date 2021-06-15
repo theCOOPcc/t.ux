@@ -16,9 +16,21 @@ export const FlagBox = styled.div`
     &:hover {
         border: 1px solid ${orange_text};
         border-bottom: none;
+        border-radius: 5px 5px 5px 5px;
+    }
+    &:active {
+        border: 1px solid ${orange_text};
+        /* border-bottom: none; */
         border-radius: 5px 5px 0px 0px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     ${props => props.hover && css`
+        border: 1px solid ${orange_text};
+        /* border-bottom: none; */
+        border-radius: 5px 5px 5px 5px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    `}
+    ${props => props.active && css`
         border: 1px solid ${orange_text};
         border-bottom: none;
         border-radius: 5px 5px 0px 0px;
@@ -61,6 +73,7 @@ export const SelectedMenu = styled.div`
     height: 290px;
     background: #fff;
     border: 1px solid ${orange_text};
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px 0 5px 5px;
     display: flex;
     flex-direction: column;

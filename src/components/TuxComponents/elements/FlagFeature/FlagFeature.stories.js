@@ -20,7 +20,7 @@ export const FlagFeature = (args) => (
     <FlagBox {...args}>
       <img
         src={
-          args.selected === true
+          args.active === true
             ? selectedFlag
             : args.hover === true
             ? hoverFlag
@@ -30,7 +30,7 @@ export const FlagFeature = (args) => (
       />
       <FlagText {...args}>Flag</FlagText>
     </FlagBox>
-    {args.hover === true ? (
+    {args.active === true ? (
       <SelectedMenu {...args}>
         <p>Reason for Flagging This Question:</p>
         <Option type='first'>Trouble understanding the question</Option>
