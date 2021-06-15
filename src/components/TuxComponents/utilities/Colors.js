@@ -52,3 +52,10 @@ export const background_input = "#eee";
 export const notification = "#36c5f0";
 export const warning = "#ecb22e";
 export const alert = "#ff0000";
+
+// Lozenge Background Colors
+export const complete = "#78C077";
+export const in_progress  = "#f37806";
+export const not_started_hover = "#333333"
+
+
