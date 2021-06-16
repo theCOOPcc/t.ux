@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 
-
 export const CheckboxWrapper = styled.div`
   display: flex;
   text-align: center;
@@ -13,7 +12,7 @@ export const CheckboxWrapper = styled.div`
   color: #333333;
   margin: 0 10px;
   cursor: pointer;
-  
+
   ${(props) =>
     props.focus &&
     css`
@@ -36,8 +35,6 @@ export const HiddenCheckboxInput = styled.input`
   margin: 0;
   padding: 0;
 `;
-
-
 
 export const TestCustomCheckbox = styled.label`
   display: flex;
