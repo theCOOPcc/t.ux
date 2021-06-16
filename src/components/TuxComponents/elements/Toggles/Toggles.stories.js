@@ -1,5 +1,5 @@
 import React from "react";
-import {ToggleWrapper, ToggleBackground, ToggleCheckBoxInput, ToggleBall} from "./Toggles";
+import {ToggleWrapper, ToggleBackground, ToggleCheckBoxInput, ToggleBall, ToggleLabel} from "./Toggles";
 import { withDesign } from "storybook-addon-designs";
 
 export default {
@@ -12,6 +12,7 @@ export default {
        <ToggleBackground {...args}>
          <ToggleCheckBoxInput type="checkbox"/>
          <ToggleBall {...args}></ToggleBall>
+         <ToggleLabel {...args}>Label</ToggleLabel>
        </ToggleBackground>
      </ToggleWrapper>
   )

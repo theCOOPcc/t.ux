@@ -2,7 +2,20 @@ import styled, { css } from "styled-components";
 import { success } from "../../utilities/Colors";
 
 export const ToggleWrapper = styled.div`
-  position: relative;
+  ${(props) =>
+    props.focus &&
+    css`
+      position: absolute;
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+      width: 84px;
+      height: 36px;
+      border-radius: 38px;
+      border: 4px solid #000000;
+      box-sizing: border-box;
+    `}
 `;
 export const ToggleBackground = styled.div`
   position: absolute;
@@ -20,9 +33,19 @@ export const ToggleBackground = styled.div`
     css`
       background: ${success};
     `}
-  ${(props) => props.hover && css`
-    background: #989898;
-  `}
+  ${(props) =>
+    props.hover &&
+    css`
+      background: #989898;
+    `}
+  ${(props) =>
+    props.focus &&
+    css`
+      width: 71px;
+      left: 3%;
+      top: 5%;
+      background: #989898;
+    `}
 `;
 
 export const ToggleBall = styled.div`
@@ -48,8 +71,25 @@ export const ToggleBall = styled.div`
     `}
 `;
 
+export const ToggleLabel = styled.p`
+  position: absolute;
+  left: 140%;
+  right: 0%;
+  top: -15%;
+  bottom: 0%;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #333333;
+`;
+
 export const ToggleCheckBoxInput = styled.input`
   opacity: 0;
   width: 0;
   height: 0;
+  margin: 0;
 `;
