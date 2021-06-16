@@ -31,7 +31,11 @@ export const ModalInfo = () => (
         <p>Label button with clear action</p>
       </ModalGreenButton>
     </ModalAlert>
+  </>
+);
 
+export const ModalWarn = () => (
+  <>
     <ModalWarning className='modal-warning'>
       <WarningMark src="./images/yellowWarning.svg" />
       <h3 style={{ marginLeft: "72px" }}>Remove student from my list</h3>
@@ -46,4 +50,5 @@ export const ModalInfo = () => (
       <ModalDeleteButton>Delete</ModalDeleteButton>
     </ModalWarning>
   </>
-);
+
+)
