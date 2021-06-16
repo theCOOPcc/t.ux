@@ -10,18 +10,17 @@ export const ModalAlert = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 18px;
   line-height: 27px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 `
 
-export const ModalGreen = styled.button`
+export const ModalGreenButton = styled.button`
 display: flex;
-box-sizing: border-box;
-align-items: center;
-justify-content: center;
 position: absolute;
 bottom: 0;
 right: 0;
+box-sizing: border-box;
 border: none;
+align-items: center;
+justify-content: center;
 color: #F1F2EB;
 width: 50%;
 height: 60px;
@@ -33,7 +32,7 @@ line-height: 27px;
   cursor: pointer;
 }
 `
-export const ModalWhite = styled.button`
+export const ModalWhiteButton = styled.button`
 display: flex;
 box-sizing: border-box;
 align-items: center;
@@ -64,7 +63,6 @@ export const ModalWarning = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 18px;
   line-height: 27px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 `
 export const WarningMark = styled.img`
 position: absolute;
@@ -75,7 +73,7 @@ align-items: center;
 justify-content: center;
 `
 
-export const ModalDelete = styled.button`
+export const ModalDeleteButton = styled.button`
 display: flex;
 box-sizing: border-box;
 align-items: center;
@@ -96,7 +94,7 @@ line-height: 27px;
   cursor: pointer;
 }
 `
-export const ModalCancel = styled.button`
+export const ModalCancelButton = styled.button`
 display: flex;
 box-sizing: border-box;
 align-items: center;

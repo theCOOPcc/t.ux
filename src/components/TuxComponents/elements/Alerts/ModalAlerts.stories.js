@@ -1,5 +1,13 @@
-import React from 'react'
-import { ModalAlert, ModalGreen, ModalWhite, ModalWarning, WarningMark, ModalDelete, ModalCancel } from './ModalAlerts'
+import React from "react";
+import {
+  ModalAlert,
+  ModalGreenButton,
+  ModalWhiteButton,
+  ModalWarning,
+  WarningMark,
+  ModalDeleteButton,
+  ModalCancelButton,
+} from "./ModalAlerts";
 import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Modal Alert",
@@ -8,37 +16,34 @@ export default {
 
 export const ModalInfo = () => (
   <>
-  <ModalAlert>
-    <h3 style={{marginLeft: '20px'}}>Title goes here</h3>
-    <div style={{width: '500px', marginLeft:'20px'}}>
-    <p>A modal dialog displays content that requires user interaction, in a layer above the page.</p>
-    </div>
-    <ModalWhite>
-    <p>
-    Label button with clear action
-    </p>
-    </ModalWhite>
-  <ModalGreen>
-    <p>
-    Label button with clear action
-    </p>
-  </ModalGreen>
-  </ModalAlert>
+    <ModalAlert className='modal-alert'>
+      <h3 style={{ marginLeft: "20px" }}>Title goes here</h3>
+      <div style={{ width: "500px", marginLeft: "20px" }}>
+        <p>
+          A modal dialog displays content that requires user interaction, in a
+          layer above the page.
+        </p>
+      </div>
+      <ModalWhiteButton>
+        <p>Label button with clear action</p>
+      </ModalWhiteButton>
+      <ModalGreenButton>
+        <p>Label button with clear action</p>
+      </ModalGreenButton>
+    </ModalAlert>
 
-  <ModalWarning>
-    <WarningMark src='./images/yellowWarning.svg' />
-    <h3 style={{marginLeft: '72px'}}>Remove student from my list</h3>
-    <div style={{marginLeft: '72px', marginRight: '31px'}}>
-      <p >T.ux will permanently delete all related information regarding this user.This can't be undone</p>
-      
-    </div>
-    <ModalCancel>
-      Cancel
-    </ModalCancel>
+    <ModalWarning className='modal-warning'>
+      <WarningMark src="./images/yellowWarning.svg" />
+      <h3 style={{ marginLeft: "72px" }}>Remove student from my list</h3>
+      <div style={{ marginLeft: "72px", marginRight: "31px" }}>
+        <p>
+          T.ux will permanently delete all related information regarding this
+          user.This can't be undone
+        </p>
+      </div>
+      <ModalCancelButton>Cancel</ModalCancelButton>
 
-    <ModalDelete>
-      Delete
-    </ModalDelete>
-  </ModalWarning>
+      <ModalDeleteButton>Delete</ModalDeleteButton>
+    </ModalWarning>
   </>
-)
+);
