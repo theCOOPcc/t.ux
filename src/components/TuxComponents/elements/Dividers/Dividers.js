@@ -1,3 +1,7 @@
+
+import styled, { css } from 'styled-components';
+import React from 'react';
+import {dashed_border} from '../../utilities/Borders';
 import styled, { css } from "styled-components";
 import React from "react";
 import { dashed_border } from "../../utilities/Borders";
@@ -23,3 +27,4 @@ export const SolidDivider = styled.hr`
   height: 8px;
   background: #c4c4c4;
 `;
+
