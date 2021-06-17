@@ -17,6 +17,10 @@ export const future_text = "#999999";
 export const text_black = "#000";
 export const text_white = "#fff";
 
+// Flag Feature
+export const hoverOption = "#FEF0E2";
+export const selectOption = "#FEDEC1";
+
 // ********* Button Element Colors *********
 
 export const disable_btn = "#ccc";

@@ -43,15 +43,16 @@ class Login extends Component {
               ></TuxFlower>
               <LoginBox>
                 <GoogleBox
+                  className='loginLink'
                   // this is the "href" go to google
                   href='http://localhost:3001/api/auth/google'
-                //   href="https://thecoop-tux.herokuapp.com/api/auth/google"
+                  //   href="https://thecoop-tux.herokuapp.com/api/auth/google"
                 >
                   <GoogleG
                     src='/images/GoogleG.png'
                     alt='The mutlicolor Google G'
                   />
-                  <SignIn>Sign in with Google</SignIn>
+                  <SignIn className='login'>Sign in with Google</SignIn>
                 </GoogleBox>
                 <form autoComplete='off' onSubmit={this.handleSubmit}>
                   <Text>or:</Text>
