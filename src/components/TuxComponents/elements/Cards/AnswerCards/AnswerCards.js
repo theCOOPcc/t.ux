@@ -5,14 +5,10 @@ import { oneAnswerOption, twoAnswerOptions, fourAnswerOptions } from './data';
 export const AnswerCard = (args) => (
     <CardGroup>
       {oneAnswerOption.map((answer, idx) => (
-        <AnswerCardBox {...args} key={idx} className="answerCard">
-            <Icon {...args}>
-              <IconText>{answer.iconText}</IconText>
-            </Icon>
-          <img src={answer.image} alt={answer.altText} />
-          {/* <div style={{ display: "flex" }}> */}
+        <AnswerCardBox key={idx} className="answerCard">
+            <Icon ><IconText>{answer.iconText}</IconText></Icon>
+          <Image src={answer.image} alt={answer.altText} />
             <CardText>{answer.cardText}</CardText>
-          {/* </div> */}
         </AnswerCardBox>
       ))}
     </CardGroup>
@@ -25,10 +21,8 @@ export const FourAnswerCards = (args) => (
         <Icon>
           <IconText>{answer.iconText}</IconText>
         </Icon>
-      <img src={answer.image} alt={answer.altText} />
-      {/* <div style={{ display: "flex" }}> */}
+      <WideImage src={answer.image} alt={answer.altText} />
         <CardText>{answer.cardText}</CardText>
-      {/* </div> */}
     </AnswerCardBox>
   ))}
 </CardGroup>
@@ -41,10 +35,8 @@ export const TwoAnswerCards = (args) => (
             <Icon>
             <IconText>{answer.iconText}</IconText>
             </Icon>
-        <img src={answer.image} alt={answer.altText} />
-        {/* <div style={{ display: "flex" }}> */}
+        <WideImage src={answer.image} alt={answer.altText} />
             <CardText>{answer.cardText}</CardText>
-        {/* </div> */}
         </WideAnswerCardBox>
     ))}
     </CardGroup>
@@ -73,28 +65,29 @@ export const AnswerCardBox = styled.button`
         border: 5px solid lightblue;
     `}
     
-    img {
-        width: 160px;
-        height: 150px;
-        border-radius: 10px;
-        position: absolute;
-    top: 0;
-    left: 1.5px;
-    }
+    
+`;
+
+export const Image = styled.img`
+  width: 160px;
+  height: 150px;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 1.5px;
 `;
 
 export const WideAnswerCardBox = styled(AnswerCardBox)`
   width: 340px;
   height: 215px;
   position: relative;
+`;
 
-  img {
+export const WideImage = styled(Image)`
     width: 330px;
     height: 150px;
-    position: absolute;
     top: 5px;
     left: 2.5px;
-  }
 `;
 
 export const Icon = styled.div`
@@ -103,9 +96,7 @@ export const Icon = styled.div`
     border-radius: 50%;
     border: 4px solid #666;
     background: #fafcfe;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    ${Flex({ai:'center', jc:'center'})};
     position: absolute;
     left: -15px;
     top: -15px;
@@ -114,15 +105,14 @@ export const Icon = styled.div`
         background: #3D3D3D;
     }
     ${props => props.correct && css`
-        background: ${success};
+        border: none;
     `}
     ${props => props.incorrect && css`
-        background: ${tux_red};
+        border: none;
     `}
     ${props => props.hover && css`
         background: #3D3D3D;
     `}
-
 `;
 
 export const IconText = styled.p`
