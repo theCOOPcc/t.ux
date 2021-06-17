@@ -51,10 +51,8 @@ export const ToggleBackground = styled.div`
 export const ToggleBall = styled.div`
   width: 17px;
   height: 17px;
-  top: 4px;
-  left: 7px;
   position: absolute;
-  left: 9.86%;
+  left: 9%;
   right: 66.2%;
   top: 16%;
   bottom: 10%;
