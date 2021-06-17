@@ -23,6 +23,7 @@ app.use(
   })
 )
 
+
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -33,7 +34,7 @@ const groupRouter = require('./routes/groups');
 const managerRouter = require('./routes/managers');
 const nodemailRouter = require('./routes/nodemail')
 
-// app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.use('/api/auth', authRouter);
