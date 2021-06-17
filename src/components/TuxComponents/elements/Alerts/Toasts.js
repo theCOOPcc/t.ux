@@ -12,6 +12,7 @@ export const SuccessToast = styled.div`
   line-height: 24px;
   font-size: 16px;
   background: rgba(120, 192, 119, 0.25);
+  border: 1px solid #78C077;
   border-left: 5px solid #78C077;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -51,7 +52,8 @@ export const ErrorToast = styled.div`
   height: 129px;
   line-height: 24px;
   background: rgba(234, 74, 70, 0.25);
-  border-left: 5px solid #E6211E;;
+  border: 1px solid #E6211E;
+  border-left: 5px solid #E6211E;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `

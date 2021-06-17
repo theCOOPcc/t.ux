@@ -8,7 +8,7 @@ export default {
 
 export const ToastSuccess = () => (
   <SuccessToast>
-    <MessageHead>
+    <MessageHead className='toast-success'>
     <strong>Success Message</strong>  
     </MessageHead>
    
@@ -23,7 +23,7 @@ export const ToastSuccess = () => (
 export const ToastError = () => (
   <ErrorToast>
     <AlertMark src="/images/error.svg" />
-    <MessageHead style={{marginLeft: '10px'}}>Error Message</MessageHead>
+    <MessageHead className='toast-error' style={{marginLeft: '10px'}}>Error Message</MessageHead>
     <MessageSub>Your subtitle text goes here </MessageSub>
     <XMarker src="/images/AlertXs.svg"/>
   </ErrorToast>
