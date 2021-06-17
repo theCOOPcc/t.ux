@@ -1,10 +1,7 @@
-
 import styled, { css } from 'styled-components';
 import React from 'react';
 import {dashed_border} from '../../utilities/Borders';
-import styled, { css } from "styled-components";
-import React from "react";
-import { dashed_border } from "../../utilities/Borders";
+
 
 // Dotted Divider
 export const DottedDivider = styled.hr`

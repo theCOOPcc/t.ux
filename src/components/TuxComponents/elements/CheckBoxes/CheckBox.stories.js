@@ -21,17 +21,6 @@ export const Checkboxes = (args) => (
 </div>
 )
 
-
-export const Toggle = (args) => (
-  <>
-    <CheckboxWrapper {...args}>
-      <TestCustomToggle {...args}>
-      <HiddenToggleInput type='checkbox'/>
-        <ToggleBall {...args} />
-      </TestCustomToggle>
-    </CheckboxWrapper>
-  </>
-)
 Checkboxes.args = {
   hover: false,
   focus: false,
@@ -51,11 +40,3 @@ Checkboxes.story = {
   },
 };
 
-Toggle.args = {
-  hover: false,
-  focus: false,
-  checked: false,
-  disabled: false,
-  error: false,
-  intermediate: false,
-};
