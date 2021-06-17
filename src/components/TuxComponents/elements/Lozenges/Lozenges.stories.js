@@ -1,5 +1,5 @@
 import React from 'react'
-import { CompleteLozenge, InProgress, NotStarted } from './Lozenges'
+import { Lozenge } from './Lozenges'
 import { withDesign } from "storybook-addon-designs";
 
 export default {
@@ -7,20 +7,16 @@ export default {
     decorators: [withDesign],
 };
 
-export const GreenProgress = () => (
-    <CompleteLozenge>
-        Complete
-    </CompleteLozenge>
-)
 
-export const OrangeProgress = () => (
-    <InProgress>
-        In Progress
-    </InProgress>
-)
+export const LozengeTest = (args) => (
+    <Lozenge {...args} className='lozengesTest'>
+    {args.complete===true ? 'Complete' : args.progress===true ? 'In Progress' : args.notStarted===true ? '- Not Yet Started -' : ''}
 
-export const TransparentProgress = () => (
-    <NotStarted>
-        - Not Yet Started - 
-    </NotStarted>
-)
+    </Lozenge>
+);
+
+LozengeTest.args = {
+    complete: false,
+    progress: false,
+    notStarted: false
+};
