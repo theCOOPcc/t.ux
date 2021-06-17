@@ -1,5 +1,5 @@
 import React from 'react'
-import {WideBannerLite,WideBannerGreen,WideBannerRed,AlertMark, MessageHead, MessageSub} from './Banners-Wide'
+import {WideBannerLite,WideBannerGreen,WideBannerRed,AlertMark, MessageHead, MessageSub, XMarker} from './Banners-Wide'
 import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Banners-Wide",

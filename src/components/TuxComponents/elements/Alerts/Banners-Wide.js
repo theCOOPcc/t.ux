@@ -70,3 +70,15 @@ export const MessageSub = styled.div`
   font-size: 16px;
   line-height: 24px;
 `
+
+export const XMarker = styled.img`
+position: absolute;
+left: 86.49%;
+right: 9.12%;
+top: 14.69%;
+bottom: 76.22%;
+width: 13px;
+align-items: center;
+justify-content: center;
+background: #888888;
+`
