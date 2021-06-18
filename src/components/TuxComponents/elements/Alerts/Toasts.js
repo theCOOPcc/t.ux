@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 export const SuccessToast = styled.div`
   position: relative;
   display: flex;
@@ -18,19 +17,19 @@ export const SuccessToast = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
 export const MessageHead = styled.div`
-position: absolute;
-left: 23.31%;
-/* margin-left: 10px; */
-right: 26.69%;
-top: 14.69%;
-bottom: 68.53%;
-width: 148px;
-height: 24px;
-font: "Poppins", sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 16px;
-line-height: 24px;
+  position: absolute;
+  left: 23.31%;
+  /* margin-left: 10px; */
+  right: 26.69%;
+  top: 14.69%;
+  bottom: 68.53%;
+  width: 148px;
+  height: 24px;
+  font: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
 `
 
 export const MessageSub = styled.div`
@@ -57,7 +56,6 @@ export const ErrorToast = styled.div`
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
-
 
 export const XMarker = styled.img`
 position: absolute;
