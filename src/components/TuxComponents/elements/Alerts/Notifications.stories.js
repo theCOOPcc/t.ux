@@ -9,9 +9,9 @@ export default {
 export const PanelNote = () => (
   <>
   <NotificationPanel>
+    <NumberMark>1</NumberMark>
    <BellMark src='./images/bell-icon.svg' />
    <Notification>
-    <NumberMark src='./images/numbernotification.svg' />
     <RectangleMark src='./images/rectangle-12.png' />
      <XMarker src="/images/AlertXs.svg" />
       <MessageHead>

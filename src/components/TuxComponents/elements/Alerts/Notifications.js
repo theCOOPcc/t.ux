@@ -81,13 +81,19 @@ width: 20px;
 align-items: center;
 justify-content: center;
 `
-export const NumberMark = styled.img`
+export const NumberMark = styled.div`
 position: absolute;
-top: -53px;
+color: white;
+display: flex;
 right: -10px;
-width: 18px;
+top: -50px;
+border-radius: 50%;
+height: 20px;
+width: 20px;
 align-items: center;
 justify-content: center;
+background: #366062;
+z-index: 1;
 `
 export const RectangleMark = styled.img`
 position: absolute;
