@@ -115,3 +115,44 @@ justify-content: center;
 background: transparent;
 border: none;
 `
+
+export const PanelExtend = styled.div`
+display: flex;
+flex-direction: column;
+position: relative;
+width: 396px;
+height: 747px;
+left: 57px;
+top: 10px;
+background: #EFEDED;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+`
+
+export const ExtendNotification = styled.div`
+  position: relative;
+  display: flex;
+  width: 97.5%;
+  height: 127px;
+  right: 2px;
+  left:2px;
+  top: 37px;
+  background: #FFFFFF;
+  border-left: 3px solid #FFE45C;
+  margin-top: 1px;
+`
+
+export const Header = styled.div`
+position: absolute;
+display: flex; 
+top: 9px;
+justify-content: center;
+align-items: center;
+text-align: center;
+width: 58px;
+height: 27px;
+font-weight: bold;
+font-size: 18px;
+line-height: 27px;
+display: flex;
+`
