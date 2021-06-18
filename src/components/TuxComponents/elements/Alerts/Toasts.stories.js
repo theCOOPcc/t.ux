@@ -1,5 +1,5 @@
 import React from 'react'
-import {SuccessToast, AlertMark, ErrorToast, XMarker} from './Toasts'
+import {SuccessToast, AlertMark, ErrorToast, XMarker, MessageHead, MessageSub} from './Toasts'
 import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Toast Alert",
@@ -8,9 +8,14 @@ export default {
 
 export const ToastSuccess = () => (
   <SuccessToast>
+    <MessageHead className='toast-success'>
+    <strong>Success Message</strong>  
+    </MessageHead>
+   
     <AlertMark src="/images/success.svg" />
-    <h3>Success Message</h3>
-    <p>Your subtitle goes here </p>
+    <MessageSub>
+      Your subtitle text goes here
+    </MessageSub>
     <XMarker src="/images/AlertXs.svg"/>
   </SuccessToast>
 )
@@ -18,8 +23,8 @@ export const ToastSuccess = () => (
 export const ToastError = () => (
   <ErrorToast>
     <AlertMark src="/images/error.svg" />
-    <h3>Error Message</h3>
-    <p>Your subtitle goes here </p>
+    <MessageHead className='toast-error' style={{marginLeft: '10px'}}>Error Message</MessageHead>
+    <MessageSub>Your subtitle text goes here </MessageSub>
     <XMarker src="/images/AlertXs.svg"/>
   </ErrorToast>
 )
