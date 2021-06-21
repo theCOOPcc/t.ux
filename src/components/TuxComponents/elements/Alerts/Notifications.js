@@ -142,10 +142,10 @@ export const ExtendNotification = styled.div`
   margin-top: 1px;
 `
 
-export const Header = styled.div`
+export const LeftHeader = styled.div`
 position: absolute;
 display: flex; 
-top: 9px;
+top: 11px;
 justify-content: center;
 align-items: center;
 text-align: center;
@@ -155,4 +155,17 @@ font-weight: bold;
 font-size: 18px;
 line-height: 27px;
 display: flex;
+`
+export const RightHeader = styled.div`
+position: absolute;
+  width: 90px;
+  height: 25px;
+  right: 0px;
+  top: 13px;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: #4285F4;
+
 `

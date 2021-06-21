@@ -1,5 +1,5 @@
 import React from 'react'
-import { NotificationPanel, AlertButton, Notification, MessageHead, MessageSub, XMarker, BellMark, NumberMark, RectangleMark,ExtendNotification, PanelExtend, Header } from './Notifications';
+import { NotificationPanel, AlertButton, Notification, MessageHead, MessageSub, XMarker, BellMark, NumberMark, RectangleMark,ExtendNotification, PanelExtend, LeftHeader, RightHeader } from './Notifications';
 import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Notifications",
@@ -60,9 +60,12 @@ export const PanelNote = () => (
 
 export const ExtendedPanel = () => (
   <PanelExtend>
-    <Header>
+    <LeftHeader>
       Today
-    </Header>
+    </LeftHeader>
+    <RightHeader>
+      Dismiss all
+    </RightHeader>
     <ExtendNotification>
     <XMarker src="/images/AlertXs.svg" />
     <MessageHead>
