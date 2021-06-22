@@ -8,7 +8,7 @@ export default {
 
 export const PanelNote = () => (
   <>
-  <NotificationPanel>
+  <NotificationPanel className='panel-note'>
     <NumberMark>1</NumberMark>
    <BellMark src='./images/bell-icon.svg' />
    <Notification>
@@ -59,7 +59,7 @@ export const PanelNote = () => (
 )
 
 export const ExtendedPanel = () => (
-  <PanelExtend>
+  <PanelExtend className='extended-panel'>
     <LeftHeader>
       Today
     </LeftHeader>
