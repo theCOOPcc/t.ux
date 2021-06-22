@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const AlertIcon = styled.img`
 position: absolute;
 left: 20px;
-width: 12px;
+width: 20px;
 `
 export const DefaultAlert = styled.button`
   /* position: fixed; */

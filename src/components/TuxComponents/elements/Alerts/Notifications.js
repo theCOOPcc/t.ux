@@ -81,13 +81,19 @@ width: 20px;
 align-items: center;
 justify-content: center;
 `
-export const NumberMark = styled.img`
+export const NumberMark = styled.div`
 position: absolute;
-top: -53px;
+color: white;
+display: flex;
 right: -10px;
-width: 18px;
+top: -50px;
+border-radius: 50%;
+height: 20px;
+width: 20px;
 align-items: center;
 justify-content: center;
+background: #366062;
+z-index: 1;
 `
 export const RectangleMark = styled.img`
 position: absolute;
@@ -108,4 +114,58 @@ align-items: center;
 justify-content: center;
 background: transparent;
 border: none;
+`
+
+export const PanelExtend = styled.div`
+display: flex;
+flex-direction: column;
+position: relative;
+width: 396px;
+height: 747px;
+left: 57px;
+top: 10px;
+background: #EFEDED;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 5px;
+`
+
+export const ExtendNotification = styled.div`
+  position: relative;
+  display: flex;
+  width: 97.5%;
+  height: 127px;
+  right: 2px;
+  left:2px;
+  top: 37px;
+  background: #FFFFFF;
+  border-left: 3px solid #FFE45C;
+  margin-top: 1px;
+`
+
+export const LeftHeader = styled.div`
+position: absolute;
+display: flex; 
+top: 11px;
+justify-content: center;
+align-items: center;
+text-align: center;
+width: 58px;
+height: 27px;
+font-weight: bold;
+font-size: 18px;
+line-height: 27px;
+display: flex;
+`
+export const RightHeader = styled.div`
+position: absolute;
+  width: 90px;
+  height: 25px;
+  right: 0px;
+  top: 13px;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: #4285F4;
+
 `

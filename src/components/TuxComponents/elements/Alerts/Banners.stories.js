@@ -15,7 +15,7 @@ export default {
 export const InfoBanner = () => (
   <div style={{width: '656px'}}>
     <DefaultAlert >
-      <AlertIcon className='default-banner' style={{ width: "12px" }} src="/images/DefaultIcon.svg" />
+      <AlertIcon className='default-banner' style={{ width: "20px" }} src="/images/DefaultIcon.svg" />
       <p style={{ color: "rgba(51, 51, 51, 0.75)" }}>
         <strong>Default Message - </strong> subtext here
       </p>
