@@ -1,6 +1,11 @@
 import styled, { css } from "styled-components";
 
 export const CreatePageBtn = styled.button`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   border: 3px dashed #666666;
   box-sizing: border-box;
   border-radius: 10px;
@@ -19,3 +24,13 @@ export const CreatePageBtn = styled.button`
       border: 3px solid #666666;
     `}
 `;
+
+export const ButtonHead = styled.div`
+  position: absolute;
+  top: 49px;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+  text-align: center;
+  letter-spacing: -0.02em;
+`
