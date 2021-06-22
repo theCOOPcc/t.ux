@@ -156,7 +156,7 @@ font-size: 18px;
 line-height: 27px;
 display: flex;
 `
-export const RightHeader = styled.div`
+export const RightHeader = styled.a`
 position: absolute;
   width: 90px;
   height: 25px;
@@ -167,5 +167,22 @@ position: absolute;
   line-height: 24px;
   text-decoration-line: underline;
   color: #4285F4;
+  cursor: pointer;
+`
 
+export const BottomRight = styled.img`
+  position: absolute;
+  bottom: 24px;
+  right: 22px;
+`
+
+export const BottomLeft = styled.a`
+position: absolute;
+  bottom: 22px;
+  font-size: 18px;
+  line-height: 27px;
+  left: 22px;
+  text-decoration-line: underline;
+  cursor: pointer;
+  color: #4285F4;
 `
