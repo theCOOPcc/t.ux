@@ -1,6 +1,6 @@
 import React from 'react'
-import { withDesign } from "storybook-addon-designs";
 import { CreatePageBtn, ButtonHead } from './CreatePageButton';
+import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Activity Wizard",
   decorators: [withDesign],
