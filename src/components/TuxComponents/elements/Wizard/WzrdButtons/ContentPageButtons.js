@@ -1,8 +1,8 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 
 export const ContentBtn = styled.button`
-position: relative;
-  height:218px;
+  position: relative;
+  height: 218px;
   display: flex;
   width: 297px;
   border: 3px solid #323239;
@@ -12,7 +12,17 @@ position: relative;
   align-items: center;
   text-align: center;
   background: transparent;
-`
+  ${(props) =>
+    props.hover &&
+    css`
+      background: rgba(136, 136, 136, 0.5);
+    `}
+  ${(props) =>
+    props.pressed &&
+    css`
+      background: rgba(136, 136, 136, 0.5);
+    `}
+`;
 
 export const ButtonHead = styled.div`
   position: absolute;
@@ -24,4 +34,40 @@ export const ButtonHead = styled.div`
   align-items: center;
   text-align: center;
   letter-spacing: -0.02em;
-`
+  ${(props) =>
+    props.hover &&
+    css`
+      filter: blur(4px);
+    `}
+  ${(props) =>
+    props.pressed &&
+    css`
+      filter: blur(4px);
+    `}
+`;
+
+export const PlaceholderImg = styled.img`
+  ${(props) =>
+    props.hover &&
+    css`
+      filter: blur(4px);
+    `}
+  ${(props) =>
+    props.pressed &&
+    css`
+      filter: blur(4px);
+    `}
+`;
+
+export const ToolbarImg = styled.img`
+  ${(props) =>
+    props.hover &&
+    css`
+      position: absolute;
+      width: 96px;
+      flex: none;
+      height: 33px;
+      top: 8px;
+      z-index: 1;
+    `}
+`;

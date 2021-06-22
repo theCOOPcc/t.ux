@@ -1,5 +1,5 @@
 import React from 'react'
-import { ContentBtn, ButtonHead } from './ContentPageButtons';
+import { ContentBtn, ButtonHead, PlaceholderImg, ToolbarImg } from './ContentPageButtons';
 import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Activity Wizard",
@@ -7,8 +7,13 @@ export default {
 };
 
 export const ContentPageBtn = (args) => (
-  <ContentBtn>
-      <ButtonHead>Name of the page here</ButtonHead>
-    <img src='./images/imageplaceholder.svg' /> 
+  <ContentBtn {...args} >
+      <ButtonHead {...args} >Name of the page here</ButtonHead>
+    <PlaceholderImg {...args} src='./images/imageplaceholder.svg' /> 
   </ContentBtn>
 )
+
+ContentPageBtn.args = {
+  pressed: false,
+  hover: false,
+};
