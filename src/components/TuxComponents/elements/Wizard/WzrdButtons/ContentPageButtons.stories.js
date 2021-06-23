@@ -8,7 +8,9 @@ export default {
 
 export const ContentPageBtn = (args) => (
   <ContentBtn {...args} >
-      <ButtonHead {...args} >Name of the page here</ButtonHead>
+      <ButtonHead {...args} >
+        Name of the page here
+        </ButtonHead>
     <PlaceholderImg {...args} src='./images/imageplaceholder.svg' /> 
   </ContentBtn>
 )
