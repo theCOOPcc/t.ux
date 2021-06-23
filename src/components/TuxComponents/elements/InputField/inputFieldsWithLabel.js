@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { pop_reg } from "../../utilities/Type";
-import { tux_cherry, medium_grey, tux_primary, success_grey, dark_grey, text_black, white } from '../../utilities/Colors'
+import { tux_red, medium_grey, tux_primart, success_grey, dark_grey, text_black, white } from '../../utilities/Colors'
 
 
 export const Wrapper = styled.div`
@@ -11,7 +11,7 @@ export const ErrorMessage = styled.p`
   position: absolute;
   top: 43px;
   left: 15px;
-  color: ${tux_cherry};
+  color: ${tux_red};
   font: ${pop_reg};
   font-size: 10px;
   line-height: 15px;
@@ -45,8 +45,8 @@ export const Input = styled.input`
   ${(props) =>
     props.focus &&
     css`
-      caret-color: ${tux_primary};
-      border: 1px solid ${tux_primary};
+      caret-color: ${tux_primart};
+      border: 1px solid ${tux_primart};
       transition: 0.3s ease all;
     `}
   ${(props) =>
@@ -71,8 +71,8 @@ export const Input = styled.input`
     ${(props) =>
     props.error &&
     css`
-      caret-color: ${tux_cherry};
-      border: 1px solid ${tux_cherry};
+      caret-color: ${tux_red};
+      border: 1px solid ${tux_red};
     `}
 `;
 
@@ -98,7 +98,7 @@ export const Label = styled.label`
       font-size: 10px;
       line-height: 15px;
       padding: 2px;
-      color: ${tux_primary};
+      color: ${tux_primart};
     `}
   //DISABLED
   ${(props) =>
@@ -132,6 +132,6 @@ export const Label = styled.label`
       background-color: ${white};
       font-size: 10px;
       line-height: 15px;
-      color: ${tux_cherry};
+      color: ${tux_red};
     `}
 `;
