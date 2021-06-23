@@ -1,5 +1,5 @@
 import React from 'react'
-import { PreviewBtn, Wrapper } from './PreviewButton';
+import { PreviewBtn, Wrapper,ButtonText } from './PreviewButton';
 import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Activity Wizard",
@@ -9,8 +9,9 @@ export default {
 
 export const PreviewButton = (args) => (
   <Wrapper {...args}>
-    <PreviewBtn {...args} src='./images/PreviewEye.svg' />
+    <ButtonText>
   Preview
+    </ButtonText>
   </Wrapper>
   
 )

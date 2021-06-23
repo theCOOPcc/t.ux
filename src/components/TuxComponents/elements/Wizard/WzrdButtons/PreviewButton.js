@@ -1,39 +1,50 @@
 import styled, { css } from "styled-components";
 
-export const PreviewBtn = styled.img`
-  width: 20px;
-  height: 11.2px;
-  display: flex;
-  margin-right: 9px;
-  align-items: center;
-  text-align: right;
-  ${(props) =>
-    props.hover &&
-    css`
-      color: teal;
-    `}
-`;
 
 export const Wrapper = styled.div`
   display: flex;
-  text-align: center;
-  align-items: center;
-  color: #78d6da;
+  background: #ffffff;
+  background-image: url(./images/Preview-Eye.svg);
+  background-repeat: no-repeat;
+  background-position: 14px;
+  position: absolute;
+  width: 115px;
+  height: 38px;
+  left: 20px;
+  top: 20px;
+  border: 1px solid #366062;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: #366062;
   ${(props) =>
     props.pressed &&
     css`
-      background: #ffffff;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 5px;
-      justify-content: center;
-      align-items: center;
-      width: 115px;
-      height: 38px;
+     box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25);
     `}
-    ${(props) =>
+  ${(props) =>
     props.hover &&
     css`
-      color: teal;
+    display: flex;
+      background: #366062;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      color: white;
+      background-image: url(./images/Preview-White-Eye.svg);
+      background-repeat: no-repeat;
+      background-position: 14px;
     `}
-  
 `;
+
+
+export const ButtonText = styled.div`
+display: flex;
+width: 66px;
+height: 18px;
+justify-content: center;
+align-items: center;
+text-align: center;
+position: absolute;
+left: 40px;
+top: 9px;
+font-size: 16px;
+  line-height: 24px;
+`
