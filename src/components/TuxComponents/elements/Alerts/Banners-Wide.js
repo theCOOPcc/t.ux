@@ -73,12 +73,9 @@ export const MessageSub = styled.div`
 
 export const XMarker = styled.img`
 position: absolute;
-left: 86.49%;
-right: 9.12%;
-top: 14.69%;
-bottom: 76.22%;
+right: 20px;
+top: 20px;
 width: 13px;
-align-items: center;
-justify-content: center;
-background: #888888;
+
+/* background: #888888; */
 `
