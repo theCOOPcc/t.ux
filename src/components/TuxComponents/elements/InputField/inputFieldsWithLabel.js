@@ -92,12 +92,12 @@ export const Label = styled.label`
   ${(props) =>
     props.focus &&
     css`
-      top: -8.5px;
+      top: -7px;
       left: 5px;
       background-color: ${white};
       font-size: 10px;
       line-height: 15px;
-      padding: 2px;
+      padding: 0px 5px 0 5px;
       color: ${tux_primart};
     `}
   //DISABLED
@@ -119,6 +119,7 @@ export const Label = styled.label`
       top: -7px;
       left: 5px;
       background-color: ${white};
+      padding: 0px 5px 0 5px;
       font-size: 10px;
       line-height: 15px;
       color: ${dark_grey};
@@ -130,6 +131,7 @@ export const Label = styled.label`
       top: -7px;
       left: 5px;
       background-color: ${white};
+      padding: 0px 5px 0 5px;
       font-size: 10px;
       line-height: 15px;
       color: ${tux_red};
