@@ -20,6 +20,8 @@ export const InputFieldsWithoutLabel = (args) => (
           ? "Input Text"
           : args.error === true
           ? "Wrong Input"
+          : args.disabled === true 
+          ? "Label"
           : "Placeholder Text"
       }
     />
