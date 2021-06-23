@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { pop_reg } from "../../utilities/Type";
+import { tux_cherry, tux_primary, success_grey, dark_grey, grey_text, text_black } from '../../utilities/Colors'
 
 export const Wrapper = styled.div`
   position: relative;
@@ -7,26 +8,31 @@ export const Wrapper = styled.div`
 
 export const ErrorMessage = styled.p`
   position: absolute;
-  color: #888888;
+  color: ${grey_text};
   top: 43px;
   left: 15px;
   font: ${pop_reg};
   font-size: 10px;
   line-height: 15px;
   ${(props) =>
+    props.hover &&
+    css`
+      color: ${grey_text};
+    `}
+  ${(props) =>
     props.error &&
     css`
-      color: #e6211e;
+      color: ${tux_cherry};
     `}
   ${(props) =>
     props.focus &&
     css`
-      color: #54989b;
+      color: ${tux_primary};
     `}
     ${(props) =>
     props.disabled &&
     css`
-      color: rgba(136, 136, 136, 0.5);
+      color: ${success_grey};
     `}
 `;
 
@@ -40,7 +46,7 @@ export const Error = styled.img`
     css`
       position: absolute;
       margin-left: 240px;
-      top: -5px;
+      top: -8px;
     `}
 `;
 
@@ -51,46 +57,46 @@ export const Input = styled.input`
   line-height: 21px;
   width: 280px;
   height: 48px;
-  background: #f0f0f0;
-  border-radius: 10px 10px 0px 0px;
+  color: ${grey_text};
+  border-radius: 10px;
   padding: 12px;
-  border: none;
-  border-bottom: 1px solid #888888;
+  border: 1px solid ${grey_text};
+  ::placeholder {
+    color: ${grey_text}
+  }
   ${(props) =>
     props.focus &&
     css`
-      caret-color: #54989b;
-      border: none;
-      border-bottom: 2px solid #54989b;
+      caret-color: ${tux_primary};
+      border: 1px solid ${tux_primary};
       transition: 0.3s ease all;
     `}
   ${(props) =>
     props.hover &&
     css`
-      background: rgba(136, 136, 136, 0.25);
-      border: none;
-      border-bottom: 1px solid #888888;
+      border: 1px solid ${text_black};
     `}
   ${(props) =>
     props.disabled &&
     css`
-      background: rgba(240, 240, 240, 0.75);
-      border: none;
-      border-bottom: 1px solid rgba(136, 136, 136, 0.5);
+      border: 1px solid ${success_grey};
+      ::placeholder {
+        color: ${success_grey};
+      }
     `}
   ${(props) =>
     props.active &&
     css`
-      border: none;
-      border-bottom: 2px solid #222222;
+      border: 1px solid ${dark_grey};
       font-family: ${pop_reg};
       font-size: 14px;
       line-height: 21px;
-      color: #565656;
+      color: ${dark_grey};
     `}
     ${(props) =>
     props.error &&
     css`
-      caret-color: #e6211e;
+      caret-color: ${tux_cherry};
+      border: 1px solid ${tux_cherry};
     `}
 `;
