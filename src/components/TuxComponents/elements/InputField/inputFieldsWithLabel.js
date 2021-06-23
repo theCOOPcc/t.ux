@@ -36,38 +36,33 @@ export const Input = styled.input`
   line-height: 21px;
   width: 280px;
   height: 48px;
-  background: #f0f0f0;
-  border: none;
-  border-radius: 10px 10px 0px 0px;
+  background: white;
+  border: 1px solid #888888;
+  border-radius: 10px;
   padding: 20px 0 0 12px;
-  border-bottom: 1px solid #888888;
+  /* border-bottom: 1px solid #888888; */
   ${(props) =>
     props.focus &&
     css`
-      caret-color: #54989b;
-      border: none;
-      border-bottom: 2px solid #54989b;
+      caret-color: #366062;
+      border: 1px solid #366062;
       transition: 0.3s ease all;
     `}
   ${(props) =>
     props.hover &&
     css`
-      background: rgba(136, 136, 136, 0.25);
-      border: none;
-      border-bottom: 1px solid #888888;
+      border: 1px solid #000000;
     `}
   ${(props) =>
     props.disabled &&
     css`
-      background: rgba(240, 240, 240, 0.75);
-      border: none;
-      border-bottom: 1px solid rgba(136, 136, 136, 0.5);
+      /* background: rgba(240, 240, 240, 0.75); */
+      border: 1px solid rgba(136, 136, 136, 0.5);
     `}
   ${(props) =>
     props.active &&
     css`
-      border: none;
-      border-bottom: 2px solid #222222;
+      border: 1px solid #444444;
       font: ${pop_reg};
       font-size: 14px;
       line-height: 21px;
@@ -76,7 +71,8 @@ export const Input = styled.input`
     ${(props) =>
     props.error &&
     css`
-      caret-color: #e6211e;
+      caret-color: #EA4A46;
+      border: 1px solid #EA4A46;
     `}
 `;
 
@@ -89,20 +85,22 @@ export const Label = styled.label`
   pointer-events: none;
   margin-left: 12px;
   margin-bottom: 12px;
-  left: 15px;
-  top: 20px;
+  left: 12px;
+  top: 15px;
   transition: 0.3s ease all;
 
   //FOCUS
   ${(props) =>
     props.focus &&
     css`
-      top: 6px;
+      top: -8.5px;
       left: 5px;
+      background-color: white;
       font-size: 10px;
       line-height: 15px;
-      opacity: 0.6;
-      color: #54989b;
+      /* opacity: 0.6; */
+      padding: 2px;
+      color: #366062;
     `}
   //DISABLED
   ${(props) =>
@@ -114,25 +112,26 @@ export const Label = styled.label`
     ${(props) =>
     props.hover &&
     css`
-      color: #222222;
+      color: #666666;
     `}
     //ACTIVE
   ${(props) =>
     props.active &&
     css`
-      top: 6px;
+      top: -7px;
       left: 5px;
+      background-color: white;
       font-size: 10px;
       line-height: 15px;
-      opacity: 0.6;
       color: #222222;
     `}
     //ERROR
     ${(props) =>
     props.error &&
     css`
-      top: 6px;
+      top: -7px;
       left: 5px;
+      background-color: white;
       font-size: 10px;
       line-height: 15px;
       color: #e6211e;
