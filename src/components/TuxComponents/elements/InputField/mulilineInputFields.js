@@ -1,18 +1,33 @@
 import styled, { css } from "styled-components";
 import { pop_reg } from "../../utilities/Type";
-
+import { tux_red, medium_grey, tux_primart, success_grey, dark_grey, text_black, white } from '../../utilities/Colors'
 export const Wrapper = styled.div`
   position: relative;
 `;
 
 export const ErrorMessage = styled.p`
   position: absolute;
-  top: 150px;
+  top: 260px;
   left: 15px;
-  color: #e6211e;
+  color: ${tux_red};
   font: ${pop_reg};
   font-size: 10px;
   line-height: 15px;
+  ${(props) =>
+    props.medium &&
+    css`
+      top: 160px;
+    `}
+    ${(props) =>
+    props.narrow &&
+    css`
+      top: 125px;
+    `}
+    ${(props) =>
+    props.wide &&
+    css`
+      top: 57px;
+    `}
 `;
 
 export const Error = styled.img`
@@ -23,10 +38,24 @@ export const Error = styled.img`
   ${(props) =>
     props.error &&
     css`
-    position: absolute;
-        margin-left: 464px;
-        top: -5px;
+      position: absolute;
+      margin-left: 909px;
+      top: -13px;
       }
+    `}
+    ${(props) =>
+    props.narrow &&
+    css`
+      position: absolute;
+      margin-left: 209px;
+      top: -13px;
+    `}
+    ${(props) =>
+    props.wide &&
+    css`
+      position: absolute;
+      margin-left: 810px;
+      top: -13px;
     `}
 `;
 
@@ -36,52 +65,58 @@ export const Input = styled.textarea`
   box-sizing: border-box;
   font-size: 14px;
   line-height: 21px;
-  width: 500px;
-  height: 48px;
-  background: #f0f0f0;
-  border-radius: 10px 10px 0px 0px;
-  padding: 20px 0 0 12px;
-  border: none;
-  border-bottom: 1px solid #888888;
+  width: 941px;
+  height: 266px;
+  border-radius: 10px;
+  padding: 5px 0 0 12px;
+  border: 1px solid ${medium_grey};
   ${(props) =>
     props.focus &&
     css`
-      caret-color: #54989b;
-      height: 150px;
-      border: none;
-      border-bottom: 2px solid #54989b;
+      caret-color: ${tux_primart};
+      border: 1px solid ${tux_primart};
       transition: 0.3s ease all;
     `}
   ${(props) =>
     props.hover &&
     css`
-      background: rgba(136, 136, 136, 0.25);
-      border: none;
-      border-bottom: 1px solid #888888;
+      border: 1px solid ${text_black};
     `}
   ${(props) =>
     props.disabled &&
     css`
-      background: rgba(240, 240, 240, 0.75);
-      border: none;
-      border-bottom: 1px solid rgba(136, 136, 136, 0.5);
+      border: 1px solid ${success_grey};
+      background-color: ${white};
     `}
   ${(props) =>
     props.active &&
     css`
-      height: 150px;
-      border: none;
-      border-bottom: 2px solid #222222;
+      border: 1px solid ${dark_grey};
       line-height: 21px;
-      color: #565656;
+      color: ${dark_grey};
     `}
     ${(props) =>
     props.error &&
     css`
-      height: 150px;
-      caret-color: #e6211e;
-      border: none;
-      border-bottom: 2px solid #e6211e;
+      caret-color: ${tux_red};
+      border: 1px solid ${tux_red};
+    `}
+    ${(props) =>
+    props.medium &&
+    css`
+      height: 167px;
+    `}
+    ${(props) =>
+    props.narrow &&
+    css`
+      height: 132px;
+      width: 240px;
+    `}
+    ${(props) =>
+    props.wide &&
+    css`
+      height: 63px;
+      width: 842px;
     `}
 `;
 
@@ -89,7 +124,7 @@ export const Label = styled.label`
   font: ${pop_reg};
   font-size: 14px;
   line-height: 21px;
-  color: #565656;
+  color: ${medium_grey};
   position: absolute;
   pointer-events: none;
   margin-left: 12px;
@@ -97,49 +132,52 @@ export const Label = styled.label`
   left: 15px;
   top: 20px;
   transition: 0.3s ease all;
-
   //FOCUS
   ${(props) =>
     props.focus &&
     css`
-      top: 6px;
+      top: -7px;
       left: 5px;
       font-size: 10px;
       line-height: 15px;
-      opacity: 0.6;
-      color: #54989b;
+      padding: 0px 5px 0 5px;
+      color: ${tux_primart};
+      background-color: ${white};
     `}
   //DISABLED
   ${(props) =>
     props.disabled &&
     css`
       line-height: 21px;
-      color: rgba(136, 136, 136, 0.5);
+      color: ${success_grey};
     `}
     ${(props) =>
     props.hover &&
     css`
-      color: #222222;
+      color: ${medium_grey};
     `}
     //ACTIVE
   ${(props) =>
     props.active &&
     css`
-      top: 6px;
+      top: -7px;
       left: 5px;
       font-size: 10px;
       line-height: 15px;
-      opacity: 0.6;
-      color: #222222;
+      color: ${dark_grey};
+      padding: 0px 5px 0 5px;
+      background-color: ${white};
     `}
     //ERROR
     ${(props) =>
     props.error &&
     css`
-      top: 6px;
+      top: -7px;
       left: 5px;
       font-size: 10px;
       line-height: 15px;
-      color: #e6211e;
+      color: ${tux_red};
+      background-color: ${white};
+      padding: 0px 5px 0 5px;
     `}
 `;
