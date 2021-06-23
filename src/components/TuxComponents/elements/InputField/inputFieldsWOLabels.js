@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { pop_reg } from "../../utilities/Type";
-import { tux_cherry, tux_primary, success_grey, dark_grey, grey_text, text_black } from '../../utilities/Colors'
+import {tux_red, tux_primart, success_grey, dark_grey, grey_text, text_black, white } from '../../utilities/Colors'
 
 export const Wrapper = styled.div`
   position: relative;
@@ -22,12 +22,12 @@ export const ErrorMessage = styled.p`
   ${(props) =>
     props.error &&
     css`
-      color: ${tux_cherry};
+      color: ${tux_red};
     `}
   ${(props) =>
     props.focus &&
     css`
-      color: ${tux_primary};
+      color: ${tux_primart};
     `}
     ${(props) =>
     props.disabled &&
@@ -67,8 +67,8 @@ export const Input = styled.input`
   ${(props) =>
     props.focus &&
     css`
-      caret-color: ${tux_primary};
-      border: 1px solid ${tux_primary};
+      caret-color: ${tux_primart};
+      border: 1px solid ${tux_primart};
       transition: 0.3s ease all;
     `}
   ${(props) =>
@@ -80,6 +80,7 @@ export const Input = styled.input`
     props.disabled &&
     css`
       border: 1px solid ${success_grey};
+      background: ${white};
       ::placeholder {
         color: ${success_grey};
       }
@@ -96,7 +97,7 @@ export const Input = styled.input`
     ${(props) =>
     props.error &&
     css`
-      caret-color: ${tux_cherry};
-      border: 1px solid ${tux_cherry};
+      caret-color: ${tux_red};
+      border: 1px solid ${tux_red};
     `}
 `;
