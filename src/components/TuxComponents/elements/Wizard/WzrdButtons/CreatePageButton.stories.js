@@ -1,5 +1,5 @@
 import React from 'react'
-import { CreatePageBtn, ButtonHead } from './CreatePageButton';
+import { CreatePageBtn, ButtonHead, PlusSign } from './CreatePageButton';
 import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Activity Wizard",
@@ -8,7 +8,7 @@ export default {
 
 
 export const CreatePage = (args) => (
-  <CreatePageBtn {...args} >
+  <CreatePageBtn {...args}  >
     <ButtonHead>
     Click here to Create A Page
     </ButtonHead>
