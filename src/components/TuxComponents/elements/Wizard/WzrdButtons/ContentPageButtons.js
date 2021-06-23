@@ -19,12 +19,14 @@ export const ContentBtn = styled.button`
       background-image: url(./images/page_button_toolbar.svg);
       background-repeat: no-repeat;
       background-position: right 7px top 6px;
+      border: 3px solid rgba(136, 136, 136, 0.5);
       
     `}
   ${(props) =>
     props.pressed &&
     css`
       background: rgba(136, 136, 136, 0.5);
+      border: 3px solid rgba(136, 136, 136, 0.5);
     `}
 `;
 
