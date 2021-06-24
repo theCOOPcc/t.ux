@@ -27,7 +27,7 @@ export const BannerWideSuccess = () => (
 export const BannerWideError = () => (
   <WideBannerRed>
     <XMarker src='./images/AlertXs.svg' />
-    <AlertMark className='wide-default' src='./images/error.svg' />
+    <AlertMark className='wide-error' src='./images/error.svg' />
     <MessageHead>Error banner</MessageHead>
     <MessageSub>Body Text</MessageSub>
   </WideBannerRed>

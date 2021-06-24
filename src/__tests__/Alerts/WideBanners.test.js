@@ -1,6 +1,6 @@
 import React from 'react'
 import {shallow} from 'enzyme'
-import {BannerWideSuccess, BannerWideError} from '../../components/TuxComponents/elements/Alerts/Banners-Wide.stories'
+import {BannerWideSuccess, BannerWideError,BannerWideDefault} from '../../components/TuxComponents/elements/Alerts/Banners-Wide.stories'
 
 it('should render', () => {
   const wrapper = shallow(<BannerWideSuccess />);
@@ -11,4 +11,9 @@ it('should render', () => {
   const wrapper = shallow(<BannerWideError />);
   console.log(wrapper.debug())
   expect(wrapper.find('.wide-error')).toHaveLength(1)
+});
+it('should render', () => {
+  const wrapper = shallow(<BannerWideDefault />);
+  console.log(wrapper.debug())
+  expect(wrapper.find('.wide-default')).toHaveLength(1)
 });
