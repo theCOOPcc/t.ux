@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 const Container = styled.div`
   position: relative;
+  display: inline-block;
 `
 
 const Arrow = styled.div`
@@ -10,6 +11,8 @@ const Arrow = styled.div`
   ${(props) =>
     props.direction === 'left' &&
     css`
+      right: 100%;
+      top: 50%;
       border-top: 6px solid transparent;
       border-bottom: 6px solid transparent;
       border-right: 10px solid black;
@@ -18,6 +21,8 @@ const Arrow = styled.div`
   ${(props) =>
     props.direction === 'right' &&
     css`
+      left: 100%;
+      top: 50%;
       border-top: 6px solid transparent;
       border-bottom: 6px solid transparent;
       border-left: 10px solid black;
@@ -27,7 +32,7 @@ const Arrow = styled.div`
     props.direction === 'bottom' &&
     css`
       left: 50%;
-      top: -10px;
+      bottom: 100%;
       border-left: 6px solid transparent;
       border-right: 6px solid transparent;
       border-bottom: 10px solid black;
@@ -37,7 +42,7 @@ const Arrow = styled.div`
     props.direction === 'top' &&
     css`
       left: 50%;
-      top: 30px;
+      top: 100%;
       border-left: 6px solid transparent;
       border-right: 6px solid transparent;
       border-top: 10px solid black;
@@ -61,25 +66,27 @@ const Box = styled.div`
   ${(props) =>
     props.direction === 'left' &&
     css`
-      left: 100%;
+      left: calc(100% + 12px);
+      top: -100%;
     `
   }
   ${(props) =>
     props.direction === 'right' &&
     css`
-
+      right: calc(100% + 12px);
+      top: -100%;
     `
   }
   ${(props) =>
     props.direction === 'bottom' &&
     css`
-      top: calc(100% + 10px)
+      top: calc(100% + 10px);
     `
   }
   ${(props) =>
     props.direction === 'top' &&
     css`
-      top: -45px;
+      bottom: calc(100% + 10px);
     `
   }
 `
