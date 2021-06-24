@@ -9,7 +9,7 @@ export default {
 
 export const DropdownMenu = (args) => (
   <StyledUl>
-        <DropDownLi>
+        <DropDownLi className="DropdownMenu">
           <Input placeholder="Input Text"/>
           <Label>Label</Label>
             <DropDownArrow {...args} src={
