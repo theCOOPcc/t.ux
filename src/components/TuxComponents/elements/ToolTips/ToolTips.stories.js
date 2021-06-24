@@ -1,4 +1,4 @@
-import { ToolTip, Arrow, Box } from './ToolTips.js'
+import { ToolTip } from './ToolTips.js'
 import React from 'react';
 import { withDesign } from "storybook-addon-designs";
 
@@ -8,54 +8,23 @@ export default {
 };
 
 export const ToolTips = (args) => (
-  //toggle display
-  // <div style={{float: 'left'}}>     
-  //   <ToolTip {...args}>
-  //     <Box className="test-class">
-  //       This is a tooltip
-  //     </Box>
-  //     <Arrow {...args} />
-  //   </ToolTip>
-  // </div>
-
-  //sequential display
-  <div style={{float: 'left'}}>
-    <ToolTip top={true}>
-      <Box className="test-class">
-        This is a tooltip
-      </Box>
-      <Arrow top={true} />
-    </ToolTip>
-    <br/>
-    <ToolTip left={true}>
-      <Box>
-        This is a tooltip
-      </Box>
-      <Arrow left={true} />
-    </ToolTip>
-    <br/>
-    <ToolTip bottom={true}>
-      <Box>
-        This is a tooltip
-      </Box>
-      <Arrow bottom={true} />
-    </ToolTip>
-    <br/>
-    <ToolTip right={true}>
-      <Box>
-        This is a tooltip
-      </Box>
-      <Arrow right={true} />
+  <div style={{margin: '50px'}}>
+    <ToolTip
+      text='this is a tooltip'
+      direction={args.bottom ? 'bottom' : args.top ? 'top' : args.left ? 'left' : args.right ? 'right' : null }
+      className='test-class'
+    >
+      <button>Hover me!</button>
     </ToolTip>
   </div>
 )
 
-// ToolTips.args = {
-//   top: false,
-//   bottom: true,
-//   left: false,
-//   right: false
-// };
+ToolTips.args = {
+  top: false,
+  bottom: true,
+  left: false,
+  right: false
+};
 
 ToolTips.story = {
   parameters: {
