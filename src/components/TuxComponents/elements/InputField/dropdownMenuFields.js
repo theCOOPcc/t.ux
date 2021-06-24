@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { pop_reg } from "../../utilities/Type";
+import { tux_red, dark_grey, tux_primart, medium_grey, success_grey} from '../../utilities/Colors'
 
 export const Wrapper = styled.div`
   position: relative;
@@ -9,7 +10,7 @@ export const ErrorMessage = styled.p`
   position: absolute;
   top: 43px;
   left: 15px;
-  color: #e6211e;
+  color: ${tux_red};
   font: ${pop_reg};
   font-size: 10px;
   line-height: 15px;
@@ -33,45 +34,36 @@ export const Input = styled.select`
   line-height: 21px;
   width: 280px;
   height: 48px;
-  background: #f0f0f0;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 10px;
   padding: 20px 0 0 12px;
-  border: none;
-  border-bottom: 1px solid #888888;
+  border: 1px solid ${medium_grey};
   ${(props) =>
     props.focus &&
     css`
-      caret-color: #54989b;
-      border: none;
-      border-bottom: 2px solid #54989b;
+      caret-color: ${tux_primart};
+      border: 1px solid ${tux_primart};
     `}
   ${(props) =>
     props.hover &&
     css`
-      background: rgba(136, 136, 136, 0.25);
-      border: none;
-      border-bottom: 1px solid #888888;
+      border: 1px solid ${dark_grey};
     `}
   ${(props) =>
     props.disabled &&
     css`
-      background: rgba(240, 240, 240, 0.75);
-      border: none;
-      border-bottom: 1px solid rgba(136, 136, 136, 0.5);
+      border: 1px solid ${success_grey};
     `}
   ${(props) =>
     props.active &&
     css`
-      border: none;
-      border-bottom: 2px solid #222222;
-      color: #565656;
+      border: 1px solid ${dark_grey};
+      color: ${dark_grey};
     `}
     ${(props) =>
     props.error &&
     css`
-      caret-color: #e6211e;
-      border: none;
-      border-bottom: 2px solid #e6211e;
+      caret-color: ${tux_red};
+      border: 1px solid ${tux_red};
     `}
 `;
 
@@ -79,13 +71,13 @@ export const Label = styled.label`
   font: ${pop_reg};
   font-size: 14px;
   line-height: 21px;
-  color: #565656;
+  color: ${medium_grey};
   position: absolute;
   pointer-events: none;
   margin-left: 12px;
-  margin-bottom: 12px;
-  left: 15px;
-  top: 20px;
+  margin-bottom: 13px;
+  left: 12px;
+  top: 15px;
   transition: 0.3s ease all;
   //FOCUS
   ${(props) =>
@@ -96,7 +88,7 @@ export const Label = styled.label`
       font-size: 10px;
       line-height: 15px;
       opacity: 0.6;
-      color: #54989b;
+      color: ${tux_primart};
     `}
   //DISABLED
   ${(props) =>
@@ -104,12 +96,12 @@ export const Label = styled.label`
     css`
       font-size: 14px;
       line-height: 21px;
-      color: rgba(136, 136, 136, 0.5);
+      color: ${success_grey};
     `}
     ${(props) =>
     props.hover &&
     css`
-      color: #222222;
+      color: ${dark_grey};
     `}
     //ACTIVE
   ${(props) =>
@@ -120,7 +112,7 @@ export const Label = styled.label`
       font-size: 10px;
       line-height: 15px;
       opacity: 0.6;
-      color: #222222;
+      color: ${medium_grey};
     `}
     //ERROR
     ${(props) =>
@@ -130,6 +122,6 @@ export const Label = styled.label`
       left: 5px;
       font-size: 10px;
       line-height: 15px;
-      color: #e6211e;
+      color: ${tux_red};
     `}
 `;

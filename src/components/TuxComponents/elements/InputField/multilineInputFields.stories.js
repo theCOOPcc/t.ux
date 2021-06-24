@@ -25,7 +25,7 @@ export const MultilineInputFields = (args) => (
     />
 
     <Label {...args}>Label</Label>
-    {args.error && <ErrorMessage>Error Message</ErrorMessage>}
+    {args.error && <ErrorMessage {...args}>Error Message</ErrorMessage>}
   </Wrapper>
 );
 
@@ -35,6 +35,9 @@ MultilineInputFields.args = {
   hover: false,
   active: false,
   error: false,
+  medium: false,
+  narrow: false,
+  wide: false
 };
 MultilineInputFields.story = {
   parameters: {
