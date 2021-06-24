@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { medium_grey, pop_reg } from "../../utilities";
+import { dark_grey, medium_grey, pop_reg, pop_semiBold, tux_primart } from "../../utilities";
 
 export const StyledUl = styled.ul`
   list-style-type: none;
@@ -46,13 +46,11 @@ export const SubA = styled.a`
   font-size: 14px;
   &:hover {
     background-color: rgba(120, 214, 218, 0.15);
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 600;
+    font: ${pop_semiBold};
     font-size: 14px;
     line-height: 21px;
-    color: #366062 !important;
-    border: 1px solid #444444;
+    color: ${tux_primart} !important;
+    border: 1px solid ${dark_grey};
   }
 `;
 
