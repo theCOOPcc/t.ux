@@ -8,6 +8,7 @@ export default {
 
 export const BannerWideDefault = () => (
   <WideBannerLite>
+    <XMarker src='./images/AlertXs.svg' />
     <AlertMark className='wide-default' src='./images/Primary_fill.svg' />
     <MessageHead>Default banner</MessageHead>
     <MessageSub>Body Text</MessageSub>
@@ -16,6 +17,7 @@ export const BannerWideDefault = () => (
 
 export const BannerWideSuccess = () => (
   <WideBannerGreen>
+    <XMarker src='./images/AlertXs.svg' />
     <AlertMark className='wide-success' src='./images/success.svg' />
     <MessageHead>Success banner</MessageHead>
     <MessageSub>Body Text</MessageSub>
@@ -24,6 +26,7 @@ export const BannerWideSuccess = () => (
 
 export const BannerWideError = () => (
   <WideBannerRed>
+    <XMarker src='./images/AlertXs.svg' />
     <AlertMark className='wide-default' src='./images/error.svg' />
     <MessageHead>Error banner</MessageHead>
     <MessageSub>Body Text</MessageSub>

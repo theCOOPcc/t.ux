@@ -1,7 +1,6 @@
 import React from 'react'
 import {
   DefaultAlert,
-  SuccessAlert,
   WarningAlert,
   ErrorAlert,
   AlertIcon,
