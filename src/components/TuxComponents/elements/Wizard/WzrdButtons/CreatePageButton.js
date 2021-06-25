@@ -6,7 +6,7 @@ export const CreatePageBtn = styled.button`
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 3px dashed #666666;
+  border: 2px dotted #666666;
   box-sizing: border-box;
   border-radius: 10px;
   width: 297px;
@@ -41,5 +41,4 @@ export const ButtonHead = styled.div`
   /* or 22px */
   text-align: center;
   letter-spacing: -0.02em;
-  
 `

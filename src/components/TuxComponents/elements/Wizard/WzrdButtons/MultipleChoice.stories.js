@@ -1,18 +1,26 @@
 import React from 'react'
-import {MultChoiceFooter, MultChoiceMed, MultChoiceUpload} from './MultipleChoice'
+import {MultChoiceMed, MultChoiceUpload, CloudImg, AnswerField, TextHead} from './MultipleChoice'
 import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Activity Wizard",
   decorators: [withDesign],
 };
 
-export const MultipleChoiceMed = () => (
+export const MultipleChoiceMed = (args) => (
   <MultChoiceMed>
-    <MultChoiceUpload>
+    <MultChoiceUpload {...args}>
+      <TextHead {...args}>Upload Image Here</TextHead>
+   
+    
     </MultChoiceUpload>
-    <MultChoiceFooter>
-      Write answers here 
-
-    </MultChoiceFooter>
+    <AnswerField placeholder='Write Anwswer Here ' type='text' />
+    
   </MultChoiceMed>
+  
 )
+
+
+MultipleChoiceMed.args = {
+  pressed: false,
+  hover: false,
+};
