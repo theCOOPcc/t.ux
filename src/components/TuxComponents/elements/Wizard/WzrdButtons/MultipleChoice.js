@@ -10,8 +10,18 @@ export const MultChoiceMed = styled.div`
   box-sizing: border-box;
   border-radius: 5px;
 `;
+export const MultChoiceSm = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+`;
 
-export const MultChoiceUpload = styled.div`
+export const MultChoiceUploadMed = styled.div`
   position: relative;
   background: rgba(136, 136, 136, 0.25);
   background-image: url(./images/CloudDL.svg);
@@ -44,7 +54,47 @@ export const MultChoiceUpload = styled.div`
       background-image: url(./images/PressedCloud.svg);
       background-repeat: no-repeat;
       background-position: 137.08px;
-      box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25)
+      box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25);
+    `}
+`;
+export const MultChoiceUploadSm = styled.div`
+  position: relative;
+  background: rgba(136, 136, 136, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url(./images/CloudDL.svg);
+  background-repeat: no-repeat;
+  background-position: 57.08px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 160px;
+  height: 150px;
+  color: #666666;
+  border: 2px dashed #222222;
+  box-sizing: border-box;
+  border-radius: 5px;
+  ${(props) =>
+    props.hover &&
+    css`
+      background: #888888;
+      border: 2px solid #888888;
+      background-image: url(./images/CloudDL.svg);
+      background-repeat: no-repeat;
+      background-position: 57.08px;
+      color: #444444;
+    `}
+  ${(props) =>
+    props.pressed &&
+    css`
+      color: #222222;
+      background: rgba(136, 136, 136, 0.5);
+      border: 2px solid #888888;
+      background-image: url(./images/PressedCloud.svg);
+      background-repeat: no-repeat;
+      background-position: 57.08px;
+      box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25);
     `}
 `;
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import {MultChoiceMed, MultChoiceUpload, CloudImg, AnswerField, TextHead} from './MultipleChoice'
+import {MultChoiceMed, MultChoiceUploadMed, MultChoiceUploadSm, CloudImg, AnswerField, TextHead, MultChoiceSm} from './MultipleChoice'
 import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Activity Wizard",
@@ -8,19 +8,34 @@ export default {
 
 export const MultipleChoiceMed = (args) => (
   <MultChoiceMed>
-    <MultChoiceUpload {...args}>
+    <MultChoiceUploadMed {...args}>
       <TextHead {...args}>Upload Image Here</TextHead>
    
     
-    </MultChoiceUpload>
+    </MultChoiceUploadMed>
     <AnswerField placeholder='Write Anwswer Here ' type='text' />
     
   </MultChoiceMed>
-  
+)
+
+export const MultipleChoiceSmall = (args) => (
+  <MultChoiceSm>
+    <MultChoiceUploadSm {...args}>
+      <TextHead {...args}>Upload Image Here</TextHead>
+   
+    
+    </MultChoiceUploadSm>
+    <AnswerField placeholder='Write Anwswer Here ' type='text' />
+    
+  </MultChoiceSm>
 )
 
 
 MultipleChoiceMed.args = {
+  pressed: false,
+  hover: false,
+};
+MultipleChoiceSmall.args = {
   pressed: false,
   hover: false,
 };
