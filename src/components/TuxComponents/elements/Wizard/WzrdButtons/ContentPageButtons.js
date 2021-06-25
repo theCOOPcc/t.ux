@@ -79,6 +79,5 @@ export const ToolbarImg = styled.img`
       height: 33px;
       top: 8px;
       z-index: 1;
-      
     `}
 `;
