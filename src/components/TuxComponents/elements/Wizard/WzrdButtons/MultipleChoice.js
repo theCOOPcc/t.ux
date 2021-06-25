@@ -44,6 +44,7 @@ export const MultChoiceUpload = styled.div`
       background-image: url(./images/PressedCloud.svg);
       background-repeat: no-repeat;
       background-position: 137.08px;
+      box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25)
     `}
 `;
 
