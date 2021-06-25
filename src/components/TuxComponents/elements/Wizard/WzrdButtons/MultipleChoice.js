@@ -31,7 +31,7 @@ export const MultChoiceUpload = styled.div`
     props.hover &&
     css`
       background: #888888;
-      border: none;
+      border: 2px solid #888888;
       background-image: url(./images/CloudDL.svg);
       background-repeat: no-repeat;
       background-position: 137.08px;
@@ -40,7 +40,7 @@ export const MultChoiceUpload = styled.div`
     props.pressed &&
     css`
       background: rgba(136, 136, 136, 0.5);
-      border: 2px dashed #888888;
+      border: 2px solid #888888;
       background-image: url(./images/PressedCloud.svg);
       background-repeat: no-repeat;
       background-position: 137.08px;
