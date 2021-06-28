@@ -3,7 +3,8 @@ import { useState } from 'react';
 
 const Container = styled.div`
   position: relative;
-  display: inline-block;
+  justify-content: center;
+  display: flex;
 `
 
 const Arrow = styled.div`
@@ -31,7 +32,7 @@ const Arrow = styled.div`
   ${(props) =>
     props.direction === 'bottom' &&
     css`
-      left: 50%;
+      left: 47%;
       bottom: 100%;
       border-left: 6px solid transparent;
       border-right: 6px solid transparent;
@@ -41,7 +42,7 @@ const Arrow = styled.div`
   ${(props) =>
     props.direction === 'top' &&
     css`
-      left: 50%;
+      left: 47%;
       top: 100%;
       border-left: 6px solid transparent;
       border-right: 6px solid transparent;
@@ -57,7 +58,6 @@ const Box = styled.div`
   padding: 8px;
   border-radius: 3px;
   display: none;
-  width: 100px;
   ${(props) =>
     props.visible &&
     css`
