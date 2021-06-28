@@ -9,7 +9,7 @@ const Container = styled.div`
 const Arrow = styled.div`
   position: absolute;
   ${(props) =>
-    props.direction === 'left' &&
+    props.direction === 'right' &&
     css`
       right: 100%;
       top: 50%;
@@ -19,7 +19,7 @@ const Arrow = styled.div`
     `
   }
   ${(props) =>
-    props.direction === 'right' &&
+    props.direction === 'left' &&
     css`
       left: 100%;
       top: 50%;
@@ -57,6 +57,7 @@ const Box = styled.div`
   padding: 8px;
   border-radius: 3px;
   display: none;
+  width: 100px;
   ${(props) =>
     props.visible &&
     css`
@@ -64,17 +65,17 @@ const Box = styled.div`
     `
   }
   ${(props) =>
-    props.direction === 'left' &&
+    props.direction === 'right' &&
     css`
       left: calc(100% + 12px);
-      top: -100%;
+      top: -50%;
     `
   }
   ${(props) =>
-    props.direction === 'right' &&
+    props.direction === 'left' &&
     css`
       right: calc(100% + 12px);
-      top: -100%;
+      top: -50%;
     `
   }
   ${(props) =>
@@ -96,7 +97,7 @@ export const ToolTip = ({ children, text, direction }) => {
 
   return(
     <Container>
-      <Box className="test-class" visible={show} direction={direction}>
+      <Box visible={show} direction={direction}>
         {text}
         <Arrow direction={direction} />
       </Box>
