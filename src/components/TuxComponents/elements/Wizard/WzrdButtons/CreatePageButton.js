@@ -24,6 +24,7 @@ border-radius: 10px;
       background-image: url(./images/PlusSignHover.svg);
       background-repeat: no-repeat;
       background-position: right 130px top 110px;
+      box-shadow: 0px 4px 8px rgba(34, 34, 34, 0.25);
     `}
   ${(props) =>
     props.pressed &&
