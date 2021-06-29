@@ -3,64 +3,62 @@ import styled, {css} from 'styled-components'
 export const ContentBtn = styled.button`
   position: relative;
   left: 30px;
-  width: 290px;
-  height: 150px;
+  width: 295px;
+  height: auto;
   display: flex;
+  margin: 0;
+  padding: 0;
   flex-direction: column;
   box-sizing: border-box;
-  border-radius: 10px;
   border: none;
   background: transparent;
+  border-radius: 5px;
   ${(props) =>
     props.hover &&
     css`
       background:url(./images/page_button_toolbar.svg);
       background-repeat: no-repeat, no-repeat;
-      background-position: right 10px top 8px;
+      background-position: right 8px top 8px;
     `}
   ${(props) =>
     props.pressed &&
     css`
-     /* box-shadow: 0px 25px 30px rgba(34, 34, 34, 0.25); */
+     box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25);
     `}
   `
-export const ContentBtnSmall = styled.button`
+export const ContentBtnSmall = styled.div`
   position: relative;
-  left: 30px;
-  height: 160px;
-  width: 275px;
+  left: 95px;
+  height: 150px;
+  width: 160px;
   display: flex;
   flex-direction: column;
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
   border-radius: 10px;
   border: none;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   background: transparent;
   ${(props) =>
     props.hover &&
     css`
       background:url(./images/page_button_toolbar.svg);
       background-repeat: no-repeat, no-repeat;
-      background-position: right 65px top 12px;
-      background-size: 85px;
+      background-position: right 8px top 12px;
+      background-size: 90px;
     `}
-  /* ${(props) =>
+  ${(props) =>
     props.pressed &&
     css`
-     box-shadow: inset 0px 25px 30px rgba(34, 34, 34, 0.25);
-    `} */
+     box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25);
+    `}
   `
 
 export const PlaceholderImg = styled.img`
 position: relative;
+margin: 0;
+display: block;
 width: 100%;
-height: 100%;
 border-radius: 5px;
-border: 2px solid #222222;
+border: 3px solid #222222;
   ${(props) =>
     props.hover &&
     css`
@@ -70,12 +68,13 @@ border: 2px solid #222222;
   ${(props) =>
     props.pressed &&
     css`
-      box-shadow: inset 0px 10px 20px rgba(34, 34, 34, 0.25);
+      box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25);
+      z-index: -10;
     `}
 `;
 export const PlaceholderImgSM = styled.img`
 position: relative;
-width: 164px;
+width: 100%;
 height: 150px;
 border-radius: 5px;
   ${(props) =>
@@ -89,8 +88,25 @@ border-radius: 5px;
     css`
       box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25);
       opacity: 1;
+      z-index: -10;
     `}
 `;
+
+
+export const AnswerField = styled.input`
+position: absolute;
+left:  65px;
+  width: 250px;
+  height: 48px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-top:15px;
+  align-items: center;
+  justify-content: center;
+`;
+
+
 
 // export const ToolbarImg = styled.img`
 // opacity: 0;
@@ -115,17 +131,3 @@ border-radius: 5px;
 //       z-index: 1;
 //     `}
 // `;
-
-export const AnswerField = styled.input`
-position: absolute;
-left:  65px;
-  width: 250px;
-  height: 48px;
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 10px;
-  margin-top: 5px;
-  align-items: center;
-  justify-content: center;
-`;
-
