@@ -6,12 +6,14 @@ export const CreatePageBtn = styled.button`
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 2px dotted #666666;
+  border: 3px dashed #666666;
   box-sizing: border-box;
   border-radius: 10px;
   width: 297px;
   height: 218px;
+  background: transparent;
   background-image: url(./images/PlusSignDefault.svg);
+border-radius: 10px;
   background-repeat: no-repeat;
   background-position: right 130px top 110px;
   ${(props) =>

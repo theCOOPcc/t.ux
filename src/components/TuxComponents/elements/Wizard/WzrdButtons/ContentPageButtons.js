@@ -5,7 +5,7 @@ export const ContentBtn = styled.button`
   height: 218px;
   display: flex;
   width: 297px;
-  border: 3px solid #323239;
+  border: 3px solid #666666;
   box-sizing: border-box;
   border-radius: 10px;
   justify-content: center;
@@ -17,6 +17,7 @@ export const ContentBtn = styled.button`
     css`
       background: rgba(136, 136, 136, 0.5);
       background-image: url(./images/page_button_toolbar.svg);
+      
       background-repeat: no-repeat;
       background-position: right 7px top 6px;
       border: 3px solid rgba(136, 136, 136, 0.5);

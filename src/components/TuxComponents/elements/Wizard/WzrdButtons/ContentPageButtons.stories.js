@@ -14,7 +14,7 @@ export const ContentPageBtn = (args) => (
     <PlaceholderImg {...args} src='./images/imageplaceholder.svg' /> 
   </ContentBtn>
 )
-
+  
 ContentPageBtn.args = {
   pressed: false,
   hover: false,
