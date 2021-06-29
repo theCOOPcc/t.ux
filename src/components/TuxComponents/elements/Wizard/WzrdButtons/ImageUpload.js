@@ -3,8 +3,32 @@ import styled, {css} from 'styled-components'
 export const ContentBtn = styled.button`
   position: relative;
   left: 30px;
-  height: auto;
-  width: auto;
+  width: 290px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  ${(props) =>
+    props.hover &&
+    css`
+      background:url(./images/page_button_toolbar.svg);
+      background-repeat: no-repeat, no-repeat;
+      background-position: right 10px top 8px;
+    `}
+  ${(props) =>
+    props.pressed &&
+    css`
+     /* box-shadow: 0px 25px 30px rgba(34, 34, 34, 0.25); */
+    `}
+  `
+export const ContentBtnSmall = styled.button`
+  position: relative;
+  left: 30px;
+  height: 160px;
+  width: 275px;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -21,30 +45,50 @@ export const ContentBtn = styled.button`
     css`
       background:url(./images/page_button_toolbar.svg);
       background-repeat: no-repeat, no-repeat;
-      background-position: right 10px top 8px;
+      background-position: right 65px top 12px;
+      background-size: 85px;
+    `}
+  /* ${(props) =>
+    props.pressed &&
+    css`
+     box-shadow: inset 0px 25px 30px rgba(34, 34, 34, 0.25);
+    `} */
+  `
+
+export const PlaceholderImg = styled.img`
+position: relative;
+width: 100%;
+height: 100%;
+border-radius: 5px;
+border: 2px solid #222222;
+  ${(props) =>
+    props.hover &&
+    css`
+      filter: blur(2px);
+      z-index: -10;
     `}
   ${(props) =>
     props.pressed &&
     css`
-     box-shadow: inset 0px 25px 30px rgba(34, 34, 34, 0.25);
+      box-shadow: inset 0px 10px 20px rgba(34, 34, 34, 0.25);
     `}
-  `
-
-export const PlaceholderImg = styled.img`
-width: 100%;
-height: 100%;
-border: 2px solid #222222;
+`;
+export const PlaceholderImgSM = styled.img`
+position: relative;
+width: 164px;
+height: 150px;
 border-radius: 5px;
   ${(props) =>
     props.hover &&
     css`
-      filter: blur(3px);
+      filter: blur(2px);
       z-index: -10;
     `}
   ${(props) =>
     props.pressed &&
     css`
       box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25);
+      opacity: 1;
     `}
 `;
 
@@ -73,11 +117,15 @@ border-radius: 5px;
 // `;
 
 export const AnswerField = styled.input`
-  width: 280px;
+position: absolute;
+left:  65px;
+  width: 250px;
   height: 48px;
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 10px;
   margin-top: 5px;
+  align-items: center;
+  justify-content: center;
 `;
 

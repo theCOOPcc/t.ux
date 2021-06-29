@@ -29,7 +29,7 @@ border-radius: 10px;
   ${(props) =>
     props.pressed &&
     css`
-      border: 3px solid #666666;
+      border: 3px solid #222222;
       background-image: url(./images/PlusSignPressed.svg);
       background-repeat: no-repeat;
       background-position: right 130px top 110px;

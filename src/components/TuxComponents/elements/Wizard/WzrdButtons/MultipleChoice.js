@@ -47,6 +47,7 @@ export const MultChoiceUploadMed = styled.div`
       background-image: url(./images/CloudDL.svg);
       background-repeat: no-repeat;
       background-position: 137.08px 45px;
+      box-shadow: 0px 4px 8px rgba(34, 34, 34, 0.25);
     `}
   ${(props) =>
     props.pressed &&
@@ -68,7 +69,7 @@ export const MultChoiceUploadSm = styled.div`
   text-align: center;
   background-image: url(./images/CloudDL.svg);
   background-repeat: no-repeat;
-  background-position: 57.08px;
+  background-position: 57px 40px;
   box-sizing: border-box;
   border-radius: 5px;
   width: 160px;
@@ -84,8 +85,9 @@ export const MultChoiceUploadSm = styled.div`
       border: 2px solid #888888;
       background-image: url(./images/CloudDL.svg);
       background-repeat: no-repeat;
-      background-position: 57.08px;
+      background-position: 57px 40px;
       color: #444444;
+      box-shadow:  0px 4px 8px rgba(34, 34, 34, 0.25);
     `}
   ${(props) =>
     props.pressed &&
@@ -95,7 +97,7 @@ export const MultChoiceUploadSm = styled.div`
       border: 2px solid #888888;
       background-image: url(./images/PressedCloud.svg);
       background-repeat: no-repeat;
-      background-position: 57.08px;
+      background-position: 57px 40px;
       box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25);
     `}
 `;

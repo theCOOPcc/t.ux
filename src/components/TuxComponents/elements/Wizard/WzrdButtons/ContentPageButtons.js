@@ -67,18 +67,15 @@ export const PlaceholderImg = styled.img`
 `;
 
 export const ToolbarImg = styled.img`
-&:hover {
-  background: url('./images/page_button_toolbar.svg');
-}
   ${(props) =>
     props.hover &&
     css`
-      opacity: 1;
+      /* opacity: 0; */
       position: absolute;
       width: 96px;
       flex: none;
       height: 33px;
       top: 8px;
-      z-index: 1;
+      /* z-index: 1; */
     `}
 `;
