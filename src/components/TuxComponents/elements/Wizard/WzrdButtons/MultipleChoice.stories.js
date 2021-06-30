@@ -10,8 +10,6 @@ export const MultipleChoiceMed = (args) => (
   <MultChoiceMed>
     <MultChoiceUploadMed {...args}>
       <TextHead {...args}>Upload Image Here</TextHead>
-   
-    
     </MultChoiceUploadMed>
     <AnswerField placeholder='Write Anwswer Here ' type='text' />
     

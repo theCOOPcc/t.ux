@@ -26,8 +26,10 @@ export const ContentBtn = styled.button`
      box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25);
     `}
   `
-export const ContentBtnSmall = styled.div`
+export const ContentBtnSmall = styled.button`
   position: relative;
+  margin: 0;
+  padding: 0;
   left: 95px;
   height: 150px;
   width: 160px;

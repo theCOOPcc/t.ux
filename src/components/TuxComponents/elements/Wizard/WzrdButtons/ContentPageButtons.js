@@ -17,7 +17,6 @@ export const ContentBtn = styled.button`
     css`
       background: rgba(136, 136, 136, 0.5);
       background-image: url(./images/page_button_toolbar.svg);
-      
       background-repeat: no-repeat;
       background-position: right 7px top 6px;
       border: 3px solid rgba(136, 136, 136, 0.5);
@@ -31,8 +30,9 @@ export const ContentBtn = styled.button`
     `}
 `;
 
-export const ButtonHead = styled.div`
+export const ButtonHead = styled.p`
   position: absolute;
+  margin: 0;
   top: 20px;
   font-size: 16px;
   line-height: 140%;

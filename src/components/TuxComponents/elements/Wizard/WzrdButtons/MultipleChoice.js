@@ -6,7 +6,7 @@ export const MultChoiceMed = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* background: transparent; */
+  background: transparent;
   border: none;
   box-sizing: border-box;
   border-radius: 5px;
@@ -23,7 +23,7 @@ export const MultChoiceSm = styled.div`
   border-radius: 5px;
 `;
 
-export const MultChoiceUploadMed = styled.div`
+export const MultChoiceUploadMed = styled.button`
   position: relative;
   background: rgba(136, 136, 136, 0.25);
   background-image: url(./images/CloudDL.svg);
@@ -60,7 +60,7 @@ export const MultChoiceUploadMed = styled.div`
       box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25);
     `}
 `;
-export const MultChoiceUploadSm = styled.div`
+export const MultChoiceUploadSm = styled.button`
   position: relative;
   background: rgba(136, 136, 136, 0.25);
   display: flex;
@@ -102,14 +102,6 @@ export const MultChoiceUploadSm = styled.div`
     `}
 `;
 
-export const MultChoiceFooter = styled.div`
-  position: absolute;
-  height: 24px;
-  left: 0px;
-  right: 0px;
-  bottom: 11px;
-  text-align: center;
-`;
 
 export const CloudImg = styled.img`
   position: absolute;
@@ -124,7 +116,8 @@ export const AnswerField = styled.input`
   margin-top: 5px;
 `;
 
-export const TextHead = styled.div`
+export const TextHead = styled.p`
+  margin: 0;
   position: absolute;
   display: flex;
   justify-content: center;

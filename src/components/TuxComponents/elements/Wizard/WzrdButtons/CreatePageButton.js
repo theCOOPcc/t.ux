@@ -36,7 +36,7 @@ border-radius: 10px;
     `}
 `;
 
-export const ButtonHead = styled.div`
+export const ButtonHead = styled.p`
   position: absolute;
   top: 49px;
   font-size: 16px;

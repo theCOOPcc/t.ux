@@ -1,5 +1,7 @@
 import React from 'react'
 import { PlaceholderImg, PlaceholderImgSM, ToolbarImg, ContentBtn, AnswerField,ContentBtnSmall } from './ImageUpload';
+import ImageUpload from '../../../../../images/ActivityWizardImgs/imageplaceholder.svg'
+import ImageUploadSmall from '../../../../../images/ActivityWizardImgs/ImageSmall.svg'
 import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Activity Wizard",
@@ -9,7 +11,7 @@ export default {
 export const PlaceholderImage = (args) => (
   <div>
     <ContentBtn {...args}>
-    <PlaceholderImg {...args} src='./images/imageplaceholder.svg' /> 
+    <PlaceholderImg {...args} src={ImageUpload} /> 
     </ContentBtn>
   <AnswerField placeholder='Write Answer Here ' type='text' />
   </div>
@@ -18,7 +20,7 @@ export const PlaceholderImage = (args) => (
 export const PlaceholderImageSm = (args) => (
   <>
   <ContentBtnSmall {...args}>
-  <PlaceholderImgSM {...args} src='./images/ImageSmall.svg' /> 
+  <PlaceholderImgSM {...args} src={ImageUploadSmall} /> 
   </ContentBtnSmall>
   <AnswerField placeholder='Write Answer Here ' type='text' />
   </>
