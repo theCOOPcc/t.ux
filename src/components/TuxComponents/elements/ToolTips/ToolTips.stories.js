@@ -8,7 +8,7 @@ export default {
 };
 
 export const ToolTips = (args) => (
-  <div style={{margin: '50px'}}>
+  <div style={{margin: '50px 150px 50px'}}>
     <ToolTip
       text='this is a tooltip'
       direction={args.bottom ? 'bottom' : args.top ? 'top' : args.left ? 'left' : args.right ? 'right' : null }
