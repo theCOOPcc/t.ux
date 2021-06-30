@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
-
+import WhiteCloud from '../../../../../images/ActivityWizardImgs/CloudDL.svg'
+import GreyCloud from '../../../../../images/ActivityWizardImgs/PressedCloud.svg'
+// import CloudHover from '../../../../../images/ActivityWizardImgs/CloudHover.svg'
 export const MultChoiceMed = styled.div`
   display: flex;
   position: relative;
@@ -26,7 +28,7 @@ export const MultChoiceSm = styled.div`
 export const MultChoiceUploadMed = styled.button`
   position: relative;
   background: rgba(136, 136, 136, 0.25);
-  background-image: url(./images/CloudDL.svg);
+  background-image: url(${WhiteCloud});
   background-repeat: no-repeat;
   background-position: 137.08px 45px;
   box-sizing: border-box;
@@ -44,7 +46,7 @@ export const MultChoiceUploadMed = styled.button`
     css`
       background: #888888;
       border: 2px solid #888888;
-      background-image: url(./images/CloudDL.svg);
+      background-image: url(${WhiteCloud});
       background-repeat: no-repeat;
       background-position: 137.08px 45px;
       box-shadow: 0px 4px 8px rgba(34, 34, 34, 0.25);
@@ -54,7 +56,7 @@ export const MultChoiceUploadMed = styled.button`
     css`
       background: rgba(136, 136, 136, 0.5);
       border: 2px solid #888888;
-      background-image: url(./images/PressedCloud.svg);
+      background-image: url(${GreyCloud});
       background-repeat: no-repeat;
       background-position: 137.08px 45px;
       box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25);
@@ -67,7 +69,7 @@ export const MultChoiceUploadSm = styled.button`
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url(./images/CloudDL.svg);
+  background-image: url(${WhiteCloud});
   background-repeat: no-repeat;
   background-position: 57px 40px;
   box-sizing: border-box;
@@ -83,7 +85,7 @@ export const MultChoiceUploadSm = styled.button`
     css`
       background: #888888;
       border: 2px solid #888888;
-      background-image: url(./images/CloudDL.svg);
+      background-image: url(${WhiteCloud});
       background-repeat: no-repeat;
       background-position: 57px 40px;
       color: #444444;
@@ -95,7 +97,7 @@ export const MultChoiceUploadSm = styled.button`
       color: #222222;
       background: rgba(136, 136, 136, 0.5);
       border: 2px solid #888888;
-      background-image: url(./images/PressedCloud.svg);
+      background-image: url(${GreyCloud});
       background-repeat: no-repeat;
       background-position: 57px 40px;
       box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25);

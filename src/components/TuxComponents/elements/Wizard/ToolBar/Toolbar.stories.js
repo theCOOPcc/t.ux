@@ -6,7 +6,7 @@ import Download from '../../../../../images/ActivityWizardImgs/Download.svg'
 
 import { withDesign } from "storybook-addon-designs";
 export default {
-  title: "Toolbar",
+  title: "Activity Wizard",
   decorators: [withDesign],
 };
 

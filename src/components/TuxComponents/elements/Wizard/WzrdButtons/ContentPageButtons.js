@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Toolbar } from "../ToolBar/Toolbar.stories";
 
 export const ContentBtn = styled.button`
   position: relative;
@@ -17,10 +18,9 @@ export const ContentBtn = styled.button`
     css`
       background: rgba(136, 136, 136, 0.5);
       background-image: url(./images/page_button_toolbar.svg);
-      background-repeat: no-repeat;
+      background-repeat: no-repeat, no-repeat;
       background-position: right 7px top 6px;
       border: 3px solid rgba(136, 136, 136, 0.5);
-      
     `}
   ${(props) =>
     props.pressed &&
@@ -58,24 +58,14 @@ export const PlaceholderImg = styled.img`
     props.hover &&
     css`
       filter: blur(4px);
+      z-index: -10;
     `}
   ${(props) =>
     props.pressed &&
     css`
       filter: blur(4px);
+
     `}
 `;
 
-export const ToolbarImg = styled.img`
-  ${(props) =>
-    props.hover &&
-    css`
-      /* opacity: 0; */
-      position: absolute;
-      width: 96px;
-      flex: none;
-      height: 33px;
-      top: 8px;
-      /* z-index: 1; */
-    `}
-`;
+

@@ -17,7 +17,7 @@ export const MultipleChoiceMed = (args) => (
 )
 
 export const MultipleChoiceSmall = (args) => (
-  <MultChoiceSm>
+  <MultChoiceSm {...args}>
     <MultChoiceUploadSm {...args}>
       <TextHead {...args}>Upload Image Here</TextHead>
    

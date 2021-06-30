@@ -110,26 +110,3 @@ left:  65px;
 
 
 
-// export const ToolbarImg = styled.img`
-// opacity: 0;
-// width: 0;
-// height: 0;
-// &:hover {
-//   opacity: 1;
-//   width: 96px;
-//   height: 33px;
-//   display: inline-block;
-//   background: url('./images/page_button_toolbar.svg');
-// }
-//   ${(props) =>
-//     props.hover &&
-//     css`
-//       opacity: 1;
-//       position: absolute;
-//       width: 96px;
-//       flex: none;
-//       height: 33px;
-//       top: 8px;
-//       z-index: 1;
-//     `}
-// `;
