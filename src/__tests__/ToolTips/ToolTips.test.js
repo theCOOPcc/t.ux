@@ -7,5 +7,5 @@ it('should render', () => {
 })
 it('should have text', () => {
   const text = wrapper.find('.test-class').text()
-  expect(text).toBe('This is a tooltip')
+  expect(text).toBe('<ToolTip />')
 })
