@@ -13,12 +13,20 @@ const Container = styled.div`
 
 const Display = styled.input`
   grid-area: 1 / 1 / 3 / 4;;
-  background: black;
-  border: none;
+  background: #666666;
   color: white;
+  border-right: 3px solid black;
   border-radius: 5px 0px 0px 5px;
   font-size: 20px;
   text-align: center;
+
+  &:hover{
+    background: #595959;
+  }
+
+  &:focus {
+    background: #404040;
+  }
 `
 
 const UpBtn = styled.button`
@@ -31,6 +39,10 @@ const UpBtn = styled.button`
   &:hover {
     background: #4d4d4d;
   }
+
+  &:focus div {
+    border-bottom: 10px solid #009999;
+  }
 `
 
 const DownBtn = styled.button`
@@ -42,6 +54,10 @@ const DownBtn = styled.button`
 
   &:hover {
     background: #4d4d4d;
+  }
+  
+  &:focus div {
+    border-top: 10px solid #009999;
   }
 `
 
