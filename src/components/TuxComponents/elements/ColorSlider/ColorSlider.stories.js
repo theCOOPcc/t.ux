@@ -1,24 +1,22 @@
 import React from 'react';
 import { withDesign } from "storybook-addon-designs";
-import { HuePicker } from 'react-color';
-import { SliderWrapper } from './ColorSlider'
+import { SliderWrapper, ColorPicker, LuminositySlider } from './ColorSlider'
 
 export default {
-  title: "ColorSlider",
-  decorators: [withDesign], 
-};
-
+    title: "ColorSlider",
+    decorators: [withDesign],
+  };
 
 
 export const ColorSlider = (args) => (
-    <SliderWrapper>
-    <HuePicker />
+    <SliderWrapper >
+    <ColorPicker type="color" id="color"/>
+    <LuminositySlider type="range" min="0" max="255" step="1" className="luminosity"/>
     </SliderWrapper>
 );
 
 
 ColorSlider.args = {
-    hover: false,
   };
   
 ColorSlider.story = {
