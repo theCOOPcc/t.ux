@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 
 const Container = styled.div`
@@ -29,13 +29,16 @@ const Display = styled.input`
   }
 `
 
-const UpBtn = styled.button`
+const UpCtn = styled.div`
   grid-area: 1 / 4 / 2 / 5;
+`
+
+const UpBtn = styled.button`
+  height: 100%;
+  width: 100%;
   background: #262626;
-  border: none;
   border-radius: 0px 5px 0px 0px;
   transition-duration: 0.2s;
-
   &:hover {
     background: #4d4d4d;
   }
@@ -45,10 +48,14 @@ const UpBtn = styled.button`
   }
 `
 
-const DownBtn = styled.button`
+const DownCtn = styled.div`
   grid-area: 2 / 4 / 3 / 5;
+`
+
+const DownBtn = styled.button`
+  height: 100%;
+  width: 100%;
   background: #262626;
-  border: none;
   border-radius: 0px 0px 5px 0px;
   transition-duration: 0.2s;
 
@@ -78,16 +85,54 @@ const DownArrow = styled.div`
 `
 
 export const TextSizeBox = () => {
+  const [size, setSize] = useState(12)
+
+  function handleChange(e) {
+    console.log(e.target)
+    let newNum = parseInt(e.target.value, 10)
+    if(newNum) {
+      setSize(newNum)
+    }
+  }
+
+  function handleUpClick(e) {
+    e.preventDefault()
+    setSize(size+1)
+  }
+
+  function handleDownClick(e) {
+    e.preventDefault()
+    setSize(size-1)
+  }
 
   return(
     <Container>
-      <Display />
-      <UpBtn>
-        <UpArrow />
-      </UpBtn>
-      <DownBtn>
-        <DownArrow />
-      </DownBtn>
+      <Display
+        value={size}
+        onChange={handleChange}
+      />
+      <UpCtn>
+        {size >= 999 ? 
+          <UpBtn onClick={handleUpClick} disabled>
+            <UpArrow />
+          </UpBtn>
+          :
+          <UpBtn onClick={handleUpClick}>
+            <UpArrow />
+          </UpBtn>
+        }
+      </UpCtn>
+      <DownCtn>
+        {size <= 1 ?
+          <DownBtn onClick={handleDownClick} disabled>
+            <DownArrow />
+          </DownBtn>
+          :
+          <DownBtn onClick={handleDownClick}>
+            <DownArrow />
+          </DownBtn>
+        }
+      </DownCtn>
     </Container>
   )
 }
