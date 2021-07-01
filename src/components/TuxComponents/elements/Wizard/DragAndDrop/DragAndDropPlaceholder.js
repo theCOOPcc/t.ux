@@ -1,12 +1,16 @@
 import styled, {css} from 'styled-components' 
 
 export const ComponentWrapper = styled.div`
-position: relative;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
 width: 500px;
 height: 300px;
 border: 2px dashed rgba(136, 136, 136, 0.5);
 box-sizing: border-box;
 border-radius: 5px;
+/* background: rgba(51, 51, 51, 0.5); */
 ${props => props.hover && css`
       background:url(./images/page_button_toolbar.svg);
       background-repeat: no-repeat, no-repeat;
@@ -14,21 +18,29 @@ ${props => props.hover && css`
   `}
 `
 
-export const PlaceholderImage = styled.img`
-  position: absolute;
-  display: block;
-  left: 100px;
+export const ImageContainer = styled.div`
+  display: flex;
+  width: auto;
+  background-color: #666666; 
+  z-index: -10;
+  /* left: 100px;
   right: 100px;
-  top: 50px;
-  bottom: 108px;
-  width: 300px;
+  top: 50px; */
+  /* bottom: 108px; */
+  /* opacity: 0.9; */
+`
+
+export const PlaceholderImage = styled.img`
+width: 300px;
   ${props => props.hover && css`
       z-index: -10;
+      opacity: 0.25;
   `}
   ${props => props.pressed && css`
-  background: rgba(51, 51, 51, 0.5);
+  /* background: rgba(51, 51, 51, 0.5); */
+  z-index: -10;
+      opacity: 0.25;
   `}
-
 `
 
 export const AnswerField = styled.input`
@@ -45,14 +57,14 @@ left:  140px;
 `;
 
 export const FileMessage = styled.p`
-  margin: 0;
+  margin-top: 11px;
   padding: 0;
   color: #888888;
   position: absolute;
   width: 109px;
   height: 13px;
-  left: 205px;
-  top: 220px;
+  left: 215px;
+  top: 260px;
   font-weight: 500;
   font-size: 10px;
   line-height: 12.5px;

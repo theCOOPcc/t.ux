@@ -1,6 +1,6 @@
 import React from 'react'
-import { ComponentWrapper, PlaceholderImage, AnswerField, FileMessage } from './DragAndDropPlaceholder';
-import ImageUpload from '../../../../../images/ActivityWizardImgs/imageplaceholder.svg'
+import { ComponentWrapper, PlaceholderImage, AnswerField, FileMessage,ImageContainer } from './DragAndDropPlaceholder';
+import ImageUpload from '../../../../../images/ActivityWizardImgs/imageplaceholderSquared.svg'
 import ImageUploadDark from '../../../../../images/ActivityWizardImgs/ImagePlaceholderDark.svg'
 import { withDesign } from "storybook-addon-designs";
 export default {
@@ -11,10 +11,9 @@ export default {
 export const ImagePlaceholder = (args) => (
   <>
   <ComponentWrapper {...args}>
-    <PlaceholderImage {...args} src={
-      
-    ImageUpload
-  } />
+    <ImageContainer {...args}>
+    <PlaceholderImage {...args} src={ImageUpload} />
+    </ImageContainer>
   <FileMessage>Imagenamehere.jpg</FileMessage>
   </ComponentWrapper>
   <AnswerField placeholder='Add Alt Text Here'></AnswerField>

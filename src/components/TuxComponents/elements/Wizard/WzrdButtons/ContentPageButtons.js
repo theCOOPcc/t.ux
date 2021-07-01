@@ -41,6 +41,7 @@ export const ButtonHead = styled.p`
   align-items: center;
   text-align: center;
   letter-spacing: -0.02em;
+  z-index: -10;
   ${(props) =>
     props.hover &&
     css`
