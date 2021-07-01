@@ -7,14 +7,9 @@ export default {
   decorators: [withDesign],
 };
 
-export const TextSizeBoxes = (args) => (
-  <TextSizeBox />
+export const TextSizeBoxes = () => (
+  <TextSizeBox className="test-class"/>
 )
-
-// TextSizeBoxes.args = {
-
-// }
-
 
 TextSizeBoxes.story = {
   parameters: {
