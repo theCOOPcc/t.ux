@@ -11,7 +11,7 @@ const ActivityBody = () => {
     <>
       {started === true && currentSection && <ActivityMain />}
       {started === false && finished === null && <ConfirmationForm />}
-      {started === false && finished === true && <ActivityLinks />}  
+      {/* {started === false && finished === true && <ActivityLinks />}   */}
     </>
   );
 };
