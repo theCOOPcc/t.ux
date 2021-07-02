@@ -33,7 +33,7 @@ export const SearchFilesBtn = styled.button`
   width: 166px;
   height: 50px;
   position: absolute;
-  left: 164.5px;
+  left: 162px;
   bottom:45px;
   background: #ffffff;
   border: 1px solid #3c8582;
@@ -99,7 +99,7 @@ export const MaxMessage = styled.p`
   position: absolute;
   width: 188px;
   height: 15px;
-  left: 198px;
+  left: 193px;
   bottom: 26px;
   font-weight: 500;
   font-size: 10px;
@@ -107,12 +107,12 @@ export const MaxMessage = styled.p`
 `;
 export const OrMessage = styled.p`
    margin: 0;
+   padding: 0;
   color: #666666;
   position: absolute;
-  text-align: center;
   width: 188px;
   height: 15px;
-  left: 148px;
+  left: 243px;
   bottom: 113px;
   font-weight: 700;
   font-size: 12px;
