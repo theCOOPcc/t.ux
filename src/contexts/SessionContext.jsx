@@ -108,7 +108,7 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
 
   const buildInitialSessionObject = (activityData) => {
     // const { _id, firstName, lastName } = user;
-    const { name, sections } = activityData;
+    const { name, sections, topic } = activityData;
     const initialSections = buildInitialSections(sections);
 
     const session = {
@@ -118,6 +118,7 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
       activityName: name,
       totalSessionTime: null,
       sections: initialSections,
+      topic: topic,
     };
     return session;
   };
