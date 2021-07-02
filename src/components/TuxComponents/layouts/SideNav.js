@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { SessionContext } from '../../contexts/SessionContext';
+import { SessionContext } from '../../../contexts/SessionContext';
 import styled, { css } from 'styled-components';
-import {Button280} from '../TuxComponents/elements';
-import { tux_yellow, Flex, present_text, future_text, text_white, text_black, solid_border } from '../TuxComponents/utilities';
+import {Button280} from '../elements';
+import { tux_yellow, Flex, present_text, future_text, text_white, text_black, solid_border } from '../utilities';
 
 
 const SideBarNav = () => {

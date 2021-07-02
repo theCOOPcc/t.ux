@@ -4,7 +4,7 @@ import {SessionContext} from '../../contexts/SessionContext'
 import * as U from '../../components/TuxComponents/UniversalComponents';
 import ActivityHeader from '../../components/ActivityHeader/ActivityHeader';
 import ActivityBody from '../../components/ActivityBody/ActivityBody';
-import SideBarNav from '../../components/SideBarNav/SideBarNav';
+import SideNav from '../../components/TuxComponents/layouts/SideNav';
 import Overview from '../../components/Overview/Overview';
 
 const Activity = () => {
@@ -19,7 +19,7 @@ const Activity = () => {
         <>
           <ActivityHeader />
           <ActivityBody />
-          <SideBarNav />
+          <SideNav />
         </>
       )}
     </U.Main>
