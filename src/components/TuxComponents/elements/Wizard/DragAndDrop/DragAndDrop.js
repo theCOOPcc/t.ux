@@ -33,7 +33,7 @@ export const SearchFilesBtn = styled.button`
   width: 166px;
   height: 50px;
   position: absolute;
-  left: 162px;
+  left: 167.5px;
   bottom:45px;
   background: #ffffff;
   border: 1px solid #3c8582;
