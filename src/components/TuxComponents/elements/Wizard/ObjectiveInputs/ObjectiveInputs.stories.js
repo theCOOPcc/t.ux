@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import {ComponentWrapper, ObjectInput1, ObjectInput2, ObjectInput3, BulletPoint1, BulletPoint2,BulletPoint3, CharCount1, CharCount2, CharCount3, InputWrapper1, InputWrapper2, InputWrapper3} from './ObjectiveInputs'
-import { withDesign } from "storybook-addon-designs";
+import {ComponentWrapper, ObjectInput1, ObjectInput2, ObjectInput3, BulletPoint1, BulletPoint2,BulletPoint3, CharCount1, CharCount2, CharCount3, InputWrapper1, InputWrapper2, InputWrapper3, TextHead, TextSub} from './ObjectiveInputs'
 import BulletPoint from '../../../../../images/ActivityWizardImgs/BulletPoint.svg'
+import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Activity Wizard",
   decorators: [withDesign],
@@ -48,6 +48,8 @@ export const ObjInputs = () => {
   
   return (
   <ComponentWrapper>
+    <TextHead>Objectives</TextHead>
+    <TextSub>At the end of this activity you will be able to:</TextSub>
     <BulletPoint1 src={BulletPoint} />
     <BulletPoint2 src={BulletPoint} />
     <BulletPoint3 src={BulletPoint} />
