@@ -1,25 +1,25 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from 'react';
 import { withDesign } from "storybook-addon-designs";
-import { SliderWrapper, ColorPicker, LuminositySlider } from './ColorSlider'
-
+import { ColorPicker,  SliderWrapper } from './ColorSlider'
 export default {
-    title: "ColorSlider",
+    title: "ColorSliderLib",
     decorators: [withDesign],
   };
 
 
-export const ColorSlider = (args) => (
-    <SliderWrapper >
-    <ColorPicker type="color" id="color"/>
-    <LuminositySlider type="range" min="0" max="255" step="1" className="luminosity"/>
-    </SliderWrapper>
+export const ColorSliderLib = (args) => (
+    
+    <SliderWrapper>
+    <ColorPicker/>
+    </SliderWrapper>  
 );
 
 
-ColorSlider.args = {
+ColorSliderLib.args = {
   };
   
-ColorSlider.story = {
+ColorSliderLib.story = {
 parameters: {
     design: {
     type: "figma",
