@@ -18,9 +18,9 @@ export const DragBox = styled.div`
   position: relative;
   border: 2px dashed rgba(136, 136, 136, 0.5);
   border-radius: 5px;
-  background-image: url(./images/CloudDL.svg);
-  background-repeat: no-repeat;
-  background-position: 57px 40px;
+  /* background-image: url(./images/CloudDL.svg); */
+  /* background-repeat: no-repeat;
+  background-position: 57px 40px; */
 `;
 
 export const SearchFilesBtn = styled.button`
@@ -33,10 +33,8 @@ export const SearchFilesBtn = styled.button`
   width: 166px;
   height: 50px;
   position: absolute;
-  left: 33.5%;
-  right: 40%;
-  top: 57.26%;
-  bottom: 28.77%;
+  left: 164.5px;
+  bottom:45px;
   background: #ffffff;
   border: 1px solid #3c8582;
   box-sizing: border-box;
@@ -62,9 +60,9 @@ export const SmallTextField = styled.input`
 
 export const ImportCloud = styled.img`
   position: absolute;
-  left: 233px;
-  top: 60px;
-  width: 45px;
+  left: 225px;
+  top: 78.33px;
+  width: 50px;
   color: #b5c8ce;
 `;
 
@@ -76,7 +74,7 @@ export const CenterMessage = styled.p`
   width: 244px;
   height: 27px;
   left: 128px;
-  top: 110px;
+  top: 126px;
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
@@ -89,20 +87,20 @@ export const SubMessage = styled.p`
   width: 188px;
   height: 15px;
   left: 148px;
-  top: 135px;
+  top: 156px;
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
 `;
 export const MaxMessage = styled.p`
   margin: 0;
+  padding: 0;
   color: #888888;
   position: absolute;
-  text-align: center;
   width: 188px;
   height: 15px;
-  left: 148px;
-  top: 235px;
+  left: 198px;
+  bottom: 26px;
   font-weight: 500;
   font-size: 10px;
   line-height: 12.5px;
@@ -115,7 +113,7 @@ export const OrMessage = styled.p`
   width: 188px;
   height: 15px;
   left: 148px;
-  top: 150px;
+  bottom: 113px;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
