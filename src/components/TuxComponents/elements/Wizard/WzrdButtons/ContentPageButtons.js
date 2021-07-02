@@ -1,11 +1,12 @@
 import styled, { css } from "styled-components";
+import { Toolbar } from "../ToolBar/Toolbar.stories";
 
 export const ContentBtn = styled.button`
   position: relative;
   height: 218px;
   display: flex;
   width: 297px;
-  border: 3px solid #323239;
+  border: 3px solid #666666;
   box-sizing: border-box;
   border-radius: 10px;
   justify-content: center;
@@ -17,10 +18,9 @@ export const ContentBtn = styled.button`
     css`
       background: rgba(136, 136, 136, 0.5);
       background-image: url(./images/page_button_toolbar.svg);
-      background-repeat: no-repeat;
+      background-repeat: no-repeat, no-repeat;
       background-position: right 7px top 6px;
       border: 3px solid rgba(136, 136, 136, 0.5);
-      
     `}
   ${(props) =>
     props.pressed &&
@@ -30,8 +30,9 @@ export const ContentBtn = styled.button`
     `}
 `;
 
-export const ButtonHead = styled.div`
+export const ButtonHead = styled.p`
   position: absolute;
+  margin: 0;
   top: 20px;
   font-size: 16px;
   line-height: 140%;
@@ -40,6 +41,7 @@ export const ButtonHead = styled.div`
   align-items: center;
   text-align: center;
   letter-spacing: -0.02em;
+  z-index: -10;
   ${(props) =>
     props.hover &&
     css`
@@ -57,28 +59,14 @@ export const PlaceholderImg = styled.img`
     props.hover &&
     css`
       filter: blur(4px);
+      z-index: -10;
     `}
   ${(props) =>
     props.pressed &&
     css`
       filter: blur(4px);
+
     `}
 `;
 
-export const ToolbarImg = styled.img`
-&:hover {
-  background: url('./images/page_button_toolbar.svg');
-}
-  ${(props) =>
-    props.hover &&
-    css`
-      opacity: 1;
-      position: absolute;
-      width: 96px;
-      flex: none;
-      height: 33px;
-      top: 8px;
-      z-index: 1;
-      
-    `}
-`;
+
