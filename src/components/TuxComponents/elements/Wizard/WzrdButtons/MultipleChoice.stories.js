@@ -11,7 +11,7 @@ export const MultipleChoiceMed = (args) => (
     <MultChoiceUploadMed {...args}>
       <TextHead {...args}>Upload Image Here</TextHead>
     </MultChoiceUploadMed>
-    <AnswerField placeholder='Write Anwswer Here ' type='text' />
+    <AnswerField placeholder='Write Answer Here ' type='text' />
     
   </MultChoiceMed>
 )
@@ -20,10 +20,8 @@ export const MultipleChoiceSmall = (args) => (
   <MultChoiceSm className='multiple-choice-Sm-btn' {...args}>
     <MultChoiceUploadSm {...args}>
       <TextHead {...args}>Upload Image Here</TextHead>
-   
-    
     </MultChoiceUploadSm>
-    <AnswerField placeholder='Write Anwswer Here ' type='text' />
+    <AnswerField placeholder='Write Answer Here ' type='text' />
     
   </MultChoiceSm>
 )
