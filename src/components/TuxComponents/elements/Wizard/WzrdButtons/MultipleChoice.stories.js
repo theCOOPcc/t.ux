@@ -7,7 +7,7 @@ export default {
 };
 
 export const MultipleChoiceMed = (args) => (
-  <MultChoiceMed>
+  <MultChoiceMed className='multiple-choice-med-btn'>
     <MultChoiceUploadMed {...args}>
       <TextHead {...args}>Upload Image Here</TextHead>
     </MultChoiceUploadMed>
@@ -17,7 +17,7 @@ export const MultipleChoiceMed = (args) => (
 )
 
 export const MultipleChoiceSmall = (args) => (
-  <MultChoiceSm {...args}>
+  <MultChoiceSm className='multiple-choice-Sm-btn' {...args}>
     <MultChoiceUploadSm {...args}>
       <TextHead {...args}>Upload Image Here</TextHead>
    

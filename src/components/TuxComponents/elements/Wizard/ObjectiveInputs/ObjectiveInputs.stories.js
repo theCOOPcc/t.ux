@@ -47,7 +47,7 @@ export const ObjInputs = () => {
   }
   
   return (
-  <ComponentWrapper>
+  <ComponentWrapper className='objective-inputs'>
     <TextHead>Objectives</TextHead>
     <TextSub>At the end of this activity you will be able to:</TextSub>
     <BulletPoint1 src={BulletPoint} />

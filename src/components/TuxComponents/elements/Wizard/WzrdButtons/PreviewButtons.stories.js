@@ -9,7 +9,7 @@ export default {
 
 export const PreviewButton = (args) => (
   <Wrapper {...args}>
-    <ButtonText>
+    <ButtonText className='preview-btn'>
   Preview
     </ButtonText>
   </Wrapper>
