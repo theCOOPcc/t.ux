@@ -1,7 +1,7 @@
 // Tux Colors
 export const tux_blue = "#78D6DA";
 export const tux_yellow = "#f0eb7e";
-export const tux_red = "#EA4A46";
+export const tux_red = "#E6211E";
 export const tux_grey = "#323239";
 export const tux_white = "#f1f2eb";
 export const tux_black = "#17171e";
@@ -51,6 +51,11 @@ export const small_nav_pressed = "#1C3C3B";
 export const small_nav_disabled = "#DDDDDD";
 // Input Colors
 export const background_input = "#eee";
+export const tux_primart = "#366062";
+export const success_grey = "rgba(136, 136, 136, 0.5)";
+export const dark_grey = "#444444";
+export const medium_grey = "#666666";
+export const white = "white";
 // Other Colors
 // Alerts/Notifications/Feedback
 export const notification = "#36c5f0";

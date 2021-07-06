@@ -26,7 +26,7 @@ export const DropdownMenuInputFields = (args) => (
           : args.active === true
           ? "Input Text"
           : args.error === true
-          ? "Wrong Input"
+          ? "Wrong option"
           : ""}
       </option>
       <option>Alpha</option>

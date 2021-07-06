@@ -3,7 +3,23 @@ import styled, { css } from 'styled-components';
 import { Flex, tux_blue } from '../../utilities';
 
 
-
+export const ProgressBar = ({completed}) => (
+  <>
+    <ProgressContainer className = "ProgressBar"> 
+     <ProgressFiller style={{width:`${completed}`}}></ProgressFiller>
+     <ProgressLabel>
+       {
+       completed === 0 ?
+       'Starting' :
+       `${completed}%`
+       
+       }
+      </ProgressLabel>  
+      
+    </ProgressContainer>
+    
+  </>
+)
 
 /*---------- Progress Bar ----------*/
 export const ProgressContainer = styled.div`
