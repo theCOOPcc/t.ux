@@ -61,6 +61,7 @@ export const CreateButton = styled.button`
 
 export const ModalInput = styled.input`
   position: absolute;
+  padding-left: 12px;
   top: 155px;
   left: 118px;
   width: 280px;
