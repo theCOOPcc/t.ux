@@ -1,4 +1,5 @@
 import styled, {css} from 'styled-components'
+import { pop_thick, pop_reg,pop_bolder } from '../../../utilities/Type'
 
 
 export const ModalWrapper = styled.div`
@@ -14,12 +15,12 @@ export const ModalWrapper = styled.div`
 `
 
 export const ModalHeader = styled.p`
-position: absolute;
+  position: absolute;
   width: 176px;
   height: 54px;
   top: 54px;
   left: 170px;
-  font-weight: 500;
+  font: ${pop_thick};
   font-size: 36px;
   line-height: 54px;
   padding: 0;
@@ -34,7 +35,7 @@ export const ModalSubHeader = styled.p`
   top: 108px;
   width: 359px;
   height: 27px;
-  font-size: 18px;
+  font: ${pop_reg};
   line-height: 27px;
   padding: 0;
   margin: 0;
@@ -45,7 +46,7 @@ export const CreateButton = styled.button`
   position: absolute;
   bottom: 40px;
   left:181px;
-  font-weight: 700;
+  font: ${pop_bolder};
   font-size: 20px;
   line-height: 27px;
   width: 154px;
