@@ -54,6 +54,7 @@ export const CreateButton = styled.button`
   background: #78D6DA;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
   /* color: #274D4F; */
 `
 
@@ -74,4 +75,5 @@ export const DropDownArrow = styled.img`
   right: 133.02px;
   width: 13.98px;
   height: 8.9px;
+  cursor: pointer;
 `

@@ -52,5 +52,6 @@ export const CreateButton = styled.button`
   background: #78D6DA;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
   /* color: #274D4F; */
 `
