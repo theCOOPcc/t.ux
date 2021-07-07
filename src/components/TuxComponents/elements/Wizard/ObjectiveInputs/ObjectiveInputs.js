@@ -1,4 +1,6 @@
 import styled, {css} from 'styled-components'
+import { pop_reg} from '../../../utilities/Type'
+import { tux_red } from '../../../utilities/Colors'
 
 export const ComponentWrapper = styled.div`
   position: relative;
@@ -13,31 +15,79 @@ export const ComponentWrapper = styled.div`
   border-top: 11px solid #999999;
 `
 
-export const ObjectInput1 = styled.input`
+export const ErrorMessage = styled.p`
+  position: absolute;
+  top: 53px;
+  left: 15px;
+  color: ${tux_red};
+  font: ${pop_reg};
+  font-size: 10px;
+  line-height: 15px;
+`;
+
+export const Error = styled.img`
+  width: 24px;
+  height: 24px;
+  margin: 20px;
+  border: none;
+  ${(props) =>
+    props.error &&
+    css`
+    position: absolute;
+      right: 22px;
+      top: 11px;
+      }
+    `}
+`;
+
+export const ObjectInput1 = styled.textarea`
 
   width: 842px;
   height: 63px;
   padding-left: 15px;
+  font: ${pop_reg};
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
   border: 1px solid #666666;
   box-sizing: border-box;
   border-radius: 10px;
   background: rgba(221, 221, 221, 0.3);
 `
-export const ObjectInput2 = styled.input`
+export const ObjectInput2 = styled.textarea`
 
   width: 842px;
   height: 63px;
   padding-left: 15px;
+  font: ${pop_reg};
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
   border: 1px solid #666666;
   box-sizing: border-box;
   border-radius: 10px;
   background: rgba(221, 221, 221, 0.3);
+  ${props => props.error && css`
+      caret-color: ${tux_red};
+      border: 1px solid ${tux_red};
+      transition: 0.3s ease all;
+  `}
 `
-export const ObjectInput3 = styled.input`
+export const ObjectInput3 = styled.textarea`
  
   width: 842px;
   height: 63px;
   padding-left: 15px;
+  font: ${pop_reg};
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
   border: 1px solid #666666;
   box-sizing: border-box;
   border-radius: 10px;

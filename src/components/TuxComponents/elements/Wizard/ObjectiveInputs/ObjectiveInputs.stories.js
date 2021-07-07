@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {ComponentWrapper, ObjectInput1, ObjectInput2, ObjectInput3, BulletPoint1, BulletPoint2,BulletPoint3, CharCount1, CharCount2, CharCount3, InputWrapper1, InputWrapper2, InputWrapper3, TextHead, TextSub} from './ObjectiveInputs'
+import {ComponentWrapper, ObjectInput1, ObjectInput2, ObjectInput3, BulletPoint1, BulletPoint2,BulletPoint3, CharCount1, CharCount2, CharCount3, InputWrapper1, InputWrapper2, InputWrapper3, TextHead, TextSub, Error, ErrorMessage} from './ObjectiveInputs'
 import BulletPoint from '../../../../../images/ActivityWizardImgs/BulletPoint.svg'
 import { withDesign } from "storybook-addon-designs";
 export default {
@@ -9,7 +9,7 @@ export default {
 
 
 
-export const ObjInputs = () => { 
+export const ObjInputs = (args) => { 
   const [charCount1, setCharCount1] = useState(0);
   const [charCount2, setCharCount2] = useState(0);
   const [charCount3, setCharCount3] = useState(0);
@@ -25,6 +25,11 @@ export const ObjInputs = () => {
     let counter = e.target.dataset.counter;
 
     if (charCount <= 200) {
+      if(charCount >= 118) {
+        e.target.style.paddingTop = '10px'
+      } else {
+        e.target.style.paddingTop = '20px'
+      }
       if(counter === '1') {
         setCharCount1(charCount)
         setPrevInputValue1(currentValue)
@@ -55,19 +60,29 @@ export const ObjInputs = () => {
     <BulletPoint3 src={BulletPoint} />
 
     <InputWrapper1>
+    {args.error && <Error {...args} src='/images/ErrorIcon.png' />}
     <ObjectInput1 data-counter='1' onChange={handleOnChange} placeholder='Objective 1' />
 
     <CharCount1 maxlength='200' >{charCount1}/200</CharCount1>
+    {args.error && <ErrorMessage>Max Reached</ErrorMessage>}
     </InputWrapper1>
 
     <InputWrapper2>
+    {args.error && <Error {...args} src='/images/ErrorIcon.png' />}
     <ObjectInput2 data-counter='2' onChange={handleOnChange} placeholder='Objective 2' />
     <CharCount2 maxlength='200' >{charCount2}/200</CharCount2>
+    {args.error && <ErrorMessage>Max Reached</ErrorMessage>}
     </InputWrapper2>
 
     <InputWrapper3>
+    {args.error && <Error {...args} src='/images/ErrorIcon.png' />}
     <ObjectInput3 data-counter='3' onChange={handleOnChange} placeholder='Objective 3' />
     <CharCount3 maxlength='200' >{charCount3}/200</CharCount3>
+    {args.error && <ErrorMessage>Max Reached</ErrorMessage>}
     </InputWrapper3>
   </ComponentWrapper>
 )}
+
+ObjInputs.args = {
+  error: false,
+}
