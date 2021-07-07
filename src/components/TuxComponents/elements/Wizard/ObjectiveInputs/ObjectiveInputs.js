@@ -17,7 +17,7 @@ export const ObjectInput1 = styled.input`
 
   width: 842px;
   height: 63px;
-  
+  padding-left: 15px;
   border: 1px solid #666666;
   box-sizing: border-box;
   border-radius: 10px;
@@ -27,7 +27,7 @@ export const ObjectInput2 = styled.input`
 
   width: 842px;
   height: 63px;
- 
+  padding-left: 15px;
   border: 1px solid #666666;
   box-sizing: border-box;
   border-radius: 10px;
@@ -37,6 +37,7 @@ export const ObjectInput3 = styled.input`
  
   width: 842px;
   height: 63px;
+  padding-left: 15px;
   border: 1px solid #666666;
   box-sizing: border-box;
   border-radius: 10px;

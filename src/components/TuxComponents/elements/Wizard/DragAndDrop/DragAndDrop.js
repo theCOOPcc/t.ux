@@ -51,6 +51,7 @@ export const SearchFilesBtn = styled.button`
 
 export const SmallTextField = styled.input`
 /* padding-right: 5px; */
+padding-left: 12px;
   margin-top: 10px;
   width: 280px;
   height: 48px;
