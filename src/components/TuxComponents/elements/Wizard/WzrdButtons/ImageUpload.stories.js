@@ -10,7 +10,7 @@ export default {
 
 export const PlaceholderImage = (args) => (
   <div>
-    <ContentBtn {...args}>
+    <ContentBtn className='placeholder-img' {...args}>
     <PlaceholderImg {...args} src={ImageUpload} /> 
     </ContentBtn>
   <AnswerField placeholder='Write Answer Here ' type='text' />
@@ -19,7 +19,7 @@ export const PlaceholderImage = (args) => (
 
 export const PlaceholderImageSm = (args) => (
   <>
-  <ContentBtnSmall {...args}>
+  <ContentBtnSmall className='placeholder-img-sm' {...args}>
   <PlaceholderImgSM {...args} src={ImageUploadSmall} /> 
   </ContentBtnSmall>
   <AnswerField placeholder='Write Answer Here ' type='text' />

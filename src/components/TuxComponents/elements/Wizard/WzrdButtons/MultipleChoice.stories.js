@@ -7,23 +7,21 @@ export default {
 };
 
 export const MultipleChoiceMed = (args) => (
-  <MultChoiceMed>
+  <MultChoiceMed className='multiple-choice-med-btn'>
     <MultChoiceUploadMed {...args}>
       <TextHead {...args}>Upload Image Here</TextHead>
     </MultChoiceUploadMed>
-    <AnswerField placeholder='Write Anwswer Here ' type='text' />
+    <AnswerField placeholder='Write Answer Here ' type='text' />
     
   </MultChoiceMed>
 )
 
 export const MultipleChoiceSmall = (args) => (
-  <MultChoiceSm {...args}>
+  <MultChoiceSm className='multiple-choice-Sm-btn' {...args}>
     <MultChoiceUploadSm {...args}>
       <TextHead {...args}>Upload Image Here</TextHead>
-   
-    
     </MultChoiceUploadSm>
-    <AnswerField placeholder='Write Anwswer Here ' type='text' />
+    <AnswerField placeholder='Write Answer Here ' type='text' />
     
   </MultChoiceSm>
 )

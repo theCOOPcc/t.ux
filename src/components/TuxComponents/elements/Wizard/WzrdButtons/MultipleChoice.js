@@ -30,7 +30,7 @@ export const MultChoiceUploadMed = styled.button`
   background: rgba(136, 136, 136, 0.25);
   background-image: url(${WhiteCloud});
   background-repeat: no-repeat;
-  background-position: 137.08px 45px;
+  background-position: 137.08px 47.33px;
   box-sizing: border-box;
   /* align-items: center;
   justify-content: center; */
@@ -48,7 +48,7 @@ export const MultChoiceUploadMed = styled.button`
       border: 2px solid #888888;
       background-image: url(${WhiteCloud});
       background-repeat: no-repeat;
-      background-position: 137.08px 45px;
+      background-position: 137.08px 47.33px;
       box-shadow: 0px 4px 8px rgba(34, 34, 34, 0.25);
     `}
   ${(props) =>
@@ -58,7 +58,7 @@ export const MultChoiceUploadMed = styled.button`
       border: 2px solid #888888;
       background-image: url(${GreyCloud});
       background-repeat: no-repeat;
-      background-position: 137.08px 45px;
+      background-position: 137.08px 47.33px;
       box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25);
     `}
 `;
@@ -71,7 +71,7 @@ export const MultChoiceUploadSm = styled.button`
   text-align: center;
   background-image: url(${WhiteCloud});
   background-repeat: no-repeat;
-  background-position: 57px 40px;
+  background-position: 57px 47.33px;
   box-sizing: border-box;
   border-radius: 5px;
   width: 160px;
@@ -87,7 +87,7 @@ export const MultChoiceUploadSm = styled.button`
       border: 2px solid #888888;
       background-image: url(${WhiteCloud});
       background-repeat: no-repeat;
-      background-position: 57px 40px;
+      background-position: 57px 47.33px;
       color: #444444;
       box-shadow:  0px 4px 8px rgba(34, 34, 34, 0.25);
     `}
@@ -99,7 +99,7 @@ export const MultChoiceUploadSm = styled.button`
       border: 2px solid #888888;
       background-image: url(${GreyCloud});
       background-repeat: no-repeat;
-      background-position: 57px 40px;
+      background-position: 57px 47.33px;
       box-shadow: inset 0px 4px 8px rgba(34, 34, 34, 0.25);
     `}
 `;
