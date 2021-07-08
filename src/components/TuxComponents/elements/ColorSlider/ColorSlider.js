@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
-// import { HuePicker } from "react-color";
-// import { AlphaPicker } from "react-color";
-// import { MaterialPicker } from "react-color";
+import { HuePicker } from "react-color";
+import { AlphaPicker } from "react-color";
+import { MaterialPicker } from "react-color";
 
 export const SliderWrapper = styled.div`
   display: flex;
@@ -56,42 +56,42 @@ export const HexInputBox = styled.div`
 `;
 
 
-// export const ColorPicker = () => {
-//   const [color, setColor] = useState({ r: "151", g: "200", b: "201", a: "1" });
-//   return (
-//     <SliderWrapper>
-//       <ColorSlider>
-//         <HuePicker
-//           color={color}
-//           onChangeComplete={(color) => {
-//             setColor(color.rgb);
-//           }}
-//         />
-//       </ColorSlider>
+export const ColorPicker = () => {
+  const [color, setColor] = useState({ r: "151", g: "200", b: "201", a: "1" });
+  return (
+    <SliderWrapper>
+      <ColorSlider>
+        <HuePicker
+          color={color}
+          onChangeComplete={(color) => {
+            setColor(color.rgb);
+          }}
+        />
+      </ColorSlider>
 
-//       <LuminositySlider>
-//       <AlphaPicker
-//         color={color}
-//         onChangeComplete={(color) => {
-//           setColor(color.rgb);
-//         }}
-//       />
-//       </LuminositySlider>
+      <LuminositySlider>
+      <AlphaPicker
+        color={color}
+        onChangeComplete={(color) => {
+          setColor(color.rgb);
+        }}
+      />
+      </LuminositySlider>
 
-//       <HexInputBox>
-//       <MaterialPicker
-//         color={color}
-//         onChangeComplete={(color) => {
-//           setColor(color.rgb);
-//         }}
-//       />
-//       </HexInputBox>
+      <HexInputBox>
+      <MaterialPicker
+        color={color}
+        onChangeComplete={(color) => {
+          setColor(color.rgb);
+        }}
+      />
+      </HexInputBox>
 
-//       <SampleBox
-//         style={{
-//           background: `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`
-//         }}
-//       />
-//     </SliderWrapper>
-//   );
-// };
+      <SampleBox
+        style={{
+          background: `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`
+        }}
+      />
+    </SliderWrapper>
+  );
+};
