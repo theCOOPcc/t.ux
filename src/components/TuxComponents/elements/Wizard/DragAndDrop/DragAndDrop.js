@@ -51,13 +51,13 @@ export const SearchFilesBtn = styled.button`
 
 export const SmallTextField = styled.input`
 /* padding-right: 5px; */
+margin-top: 10px;
+width: 280px;
+height: 48px;
+box-sizing: border-box;
+border-radius: 10px;
+border: 1px solid #666;
 padding-left: 12px;
-  margin-top: 10px;
-  width: 280px;
-  height: 48px;
-  box-sizing: border-box;
-  border-radius: 10px;
-  border: 1px solid #666;
   
 `;
 

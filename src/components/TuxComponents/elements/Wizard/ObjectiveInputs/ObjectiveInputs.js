@@ -26,18 +26,14 @@ export const ErrorMessage = styled.p`
 `;
 
 export const Error = styled.img`
+  display: none;
+  position: absolute;
+  right: 22px;
+  top: 0px;
   width: 24px;
   height: 24px;
   margin: 20px;
   border: none;
-  ${(props) =>
-    props.error &&
-    css`
-    position: absolute;
-      right: 22px;
-      top: 11px;
-      }
-    `}
 `;
 
 export const ObjectInput1 = styled.textarea`
@@ -45,11 +41,13 @@ export const ObjectInput1 = styled.textarea`
   width: 842px;
   height: 63px;
   padding-left: 15px;
+  padding-right: 60px;
   font: ${pop_reg};
   font-size: 14px;
   line-height: 21px;
   display: flex;
   padding-top: 20px;
+
   align-items: center;
   border: 1px solid #666666;
   box-sizing: border-box;
@@ -61,6 +59,7 @@ export const ObjectInput2 = styled.textarea`
   width: 842px;
   height: 63px;
   padding-left: 15px;
+  padding-right: 60px;
   font: ${pop_reg};
   font-size: 14px;
   line-height: 21px;
@@ -82,6 +81,7 @@ export const ObjectInput3 = styled.textarea`
   width: 842px;
   height: 63px;
   padding-left: 15px;
+  padding-right: 60px;
   font: ${pop_reg};
   font-size: 14px;
   line-height: 21px;
@@ -96,18 +96,18 @@ export const ObjectInput3 = styled.textarea`
 
 export const BulletPoint1 = styled.img`
 position: absolute;
-left: 33px;
-top: 182px;
+left: 30px;
+bottom: 240px;
 `
 export const BulletPoint2 = styled.img`
 position: absolute;
-left: 33px;
-top: 262px;
+left: 30px;
+bottom: 150px;
 `
 export const BulletPoint3 = styled.img`
 position: absolute;
-left: 33px;
-top: 342px;
+left: 30px;
+bottom: 60px;
 `
 
 export const CharCount1 = styled.div`
@@ -138,17 +138,17 @@ font-size: 10px;
 
 export const InputWrapper1 = styled.div`
 position: absolute;
-bottom: 185px;
+bottom: 210px;
   /* width: 60px; */
 `
 export const InputWrapper2 = styled.div`
 position: absolute;
-bottom: 104px;
+bottom: 120px;
   /* width: 60px; */
 `
 export const InputWrapper3 = styled.div`
 position: absolute;
-bottom: 25px;
+bottom: 30px;
   /* width: 60px; */
 `
 
