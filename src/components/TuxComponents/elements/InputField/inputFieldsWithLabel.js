@@ -36,12 +36,13 @@ export const Input = styled.input`
   box-sizing: border-box;
   font-size: 14px;
   line-height: 21px;
+  bottom: -5px;
   width: 280px;
   height: 48px;
   background: white;
   border: 1px solid ${medium_grey};
   border-radius: 10px;
-  padding: 20px 0 0 12px;
+  padding: 0 0 0 12px;
   ${(props) =>
     props.focus &&
     css`
