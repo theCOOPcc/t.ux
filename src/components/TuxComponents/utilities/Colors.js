@@ -66,3 +66,11 @@ export const alert = "#ff0000";
 export const complete = "#78C077";
 export const in_progress = "#f37806";
 export const not_started = "#333333";
+//Background Colors
+export const backgroundBlur = "rgba(170, 170, 170, 0.6)";
+export const pageBackground = "#E5E5E5";
+export const backgroundGradient =
+  "linear-gradient(210.65deg, #FFEE99 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, #EA4A46 -33.26%, rgba(234, 74, 70, 0) 67.74%);";
+export const mainColumn = " #FFFFFF";
+export const grey = "#DDDDDD";
+export const backButton = "#222222";
