@@ -3,15 +3,16 @@ export const tux_blue = "#78D6DA";
 export const tux_yellow = "#f0eb7e";
 export const tux_red = "#E6211E";
 export const tux_grey = "#323239";
-export const tux_white = "#f1f2eb";
+export const tux_white = "#FAFCFE";
 export const tux_black = "#17171e";
+export const tux_orange = '#F37806';
 
 export const success = 'rgba(120, 192, 119, 1)';
 //  Text Element Colors
 export const link_text = "#538284";
 export const grey_text = "#666666";
 export const intro_text = "#366062";
-export const orange_text = "#f37806";
+export const orange_text = tux_orange;
 export const present_text = "#1B9BA0";
 export const future_text = "#999999";
 export const text_black = "#000";
