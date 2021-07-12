@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { pop_reg } from "../../utilities/Type";
-import { tux_red, medium_grey, tux_primart, success_grey, dark_grey, text_black, white } from '../../utilities/Colors'
+import { tux_red, medium_grey, tux_primart, success_grey, dark_grey, text_black, true_white } from '../../utilities/Colors'
 
 
 export const Wrapper = styled.div`
@@ -95,7 +95,7 @@ export const Label = styled.label`
     css`
       top: -7px;
       left: 5px;
-      background-color: ${white};
+      background-color: ${true_white};
       font-size: 10px;
       line-height: 15px;
       padding: 0px 5px 0 5px;
@@ -119,7 +119,7 @@ export const Label = styled.label`
     css`
       top: -7px;
       left: 5px;
-      background-color: ${white};
+      background-color: ${true_white};
       padding: 0px 5px 0 5px;
       font-size: 10px;
       line-height: 15px;
@@ -131,7 +131,7 @@ export const Label = styled.label`
     css`
       top: -7px;
       left: 5px;
-      background-color: ${white};
+      background-color: ${true_white};
       padding: 0px 5px 0 5px;
       font-size: 10px;
       line-height: 15px;

@@ -1,7 +1,7 @@
 
 import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
-import { Flex, orange_text, tux_blue } from '../TuxComponents/utilities';
+import { Flex, tux_orange, tux_blue } from '../TuxComponents/utilities';
 import { Button280 } from '../TuxComponents/elements';
 import { SessionContext } from '../../contexts/SessionContext';
 
@@ -82,7 +82,7 @@ const ColorBlock = styled.div`
 `;
 
 const Heading1 = styled.h1`
-  color: ${orange_text};
+  color: ${tux_orange};
   font-size: 36px;
   line-height: 54px;
   font-weight: 500;

@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { orange_text, pop_bolder, tux_grey, answer_btn, hoverOption, selectOption } from '../../utilities';
+import { tux_orange, pop_bolder, tux_grey, answer_btn, hoverOption, selectO, tux_orangeption } from '../../utilities';
 
 export const FeatureBox = styled.div`
    
@@ -14,24 +14,24 @@ export const FlagBox = styled.div`
     border: none;
     margin-left: 257px; /*TODO: replace this with proper margin when set in tux */
     &:hover {
-        border: 1px solid ${orange_text};
+        border: 1px solid ${tux_orange};
         border-bottom: none;
         border-radius: 5px 5px 5px 5px;
     }
     &:active {
-        border: 1px solid ${orange_text};
+        border: 1px solid ${tux_orange};
         /* border-bottom: none; */
         border-radius: 5px 5px 0px 0px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     ${props => props.hover && css`
-        border: 1px solid ${orange_text};
+        border: 1px solid ${tux_orange};
         /* border-bottom: none; */
         border-radius: 5px 5px 5px 5px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     `}
     ${props => props.active && css`
-        border: 1px solid ${orange_text};
+        border: 1px solid ${tux_orange};
         border-bottom: none;
         border-radius: 5px 5px 0px 0px;
     `}
@@ -52,18 +52,18 @@ export const FlagText = styled.p`
     line-height: 21px;
     
     &:hover {
-        color: ${orange_text};
+        color: ${tux_orange};
     }
     &:active {
-        color: ${orange_text};
+        color: ${tux_orange};
         border: none;
 
     }
     ${(props) => props.hover && css`
-        color: ${orange_text};
+        color: ${tux_orange};
     `};
     ${(props) => props.active && css`
-        color: ${orange_text};
+        color: ${tux_orange};
         border: none;
     `};
 `;
@@ -72,7 +72,7 @@ export const SelectedMenu = styled.div`
     width: 351px;
     height: 290px;
     background: #fff;
-    border: 1px solid ${orange_text};
+    border: 1px solid ${tux_orange};
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px 0 5px 5px;
     display: flex;
@@ -98,8 +98,8 @@ export const Option = styled.button`
     text-align: left;
     margin: 0;
     padding-left: 20.5px;
-    border-top: ${({type}) => (type === 'first') ? `9px solid ${orange_text}` : 'none'};
-    border-bottom: ${({type}) => (type === 'last') ? `none` : `1px solid ${orange_text}`};
+    border-top: ${({type}) => (type === 'first') ? `9px solid ${tux_orange}` : 'none'};
+    border-bottom: ${({type}) => (type === 'last') ? `none` : `1px solid ${tux_orange}`};
     &:hover {
         font-weight: 600;
         background-color: ${hoverOption};

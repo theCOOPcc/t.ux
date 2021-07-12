@@ -7,7 +7,7 @@ import {
   success_grey,
   dark_grey,
   text_black,
-  white,
+  true_white,
 } from "../../utilities/Colors";
 export const Wrapper = styled.div`
   position: relative;
@@ -94,7 +94,7 @@ export const Input = styled.textarea`
     props.disabled &&
     css`
       border: 1px solid ${success_grey};
-      background-color: ${white};
+      background-color: ${true_white};
     `}
   ${(props) =>
     props.active &&
@@ -150,7 +150,7 @@ export const Label = styled.label`
       line-height: 15px;
       padding: 0px 5px 0 5px;
       color: ${tux_primart};
-      background-color: ${white};
+      background-color: ${true_white};
     `}
   //DISABLED
   ${(props) =>
@@ -174,7 +174,7 @@ export const Label = styled.label`
       line-height: 15px;
       color: ${dark_grey};
       padding: 0px 5px 0 5px;
-      background-color: ${white};
+      background-color: ${true_white};
     `}
     //ERROR
     ${(props) =>
@@ -185,7 +185,7 @@ export const Label = styled.label`
       font-size: 10px;
       line-height: 15px;
       color: ${tux_red};
-      background-color: ${white};
+      background-color: ${true_white};
       padding: 0px 5px 0 5px;
     `}
 `;
