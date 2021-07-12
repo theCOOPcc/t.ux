@@ -21,8 +21,9 @@ function signup(user) {
     window.location =
       // 'http://localhost:3000/activity/heuristics'
       // 'http://taketux.io/activity/heuristics'
-      // "http://thecoop-tux.herokuapp.com/activity/heuristics";
       "http://23carnies.com/activity/heuristics";
+      // "http://thecoop-tux.herokuapp.com/activity/heuristics";
+      // "http://23carnies.com/activity/heuristics";
   })
 }
 

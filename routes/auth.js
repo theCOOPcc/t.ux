@@ -27,8 +27,8 @@ router.get(
     console.log('AUTHENTICATED USER', req.user)
     res.redirect(
       // 'http://localhost:3000/activity/heuristics'
-      // 'http://thecoop-tux.herokuapp.com/activity/heuristics'
       "http://23carnies.com/activity/heuristics"
+      // 'http://thecoop-tux.herokuapp.com/activity/heuristics'
     );
   }
 );
