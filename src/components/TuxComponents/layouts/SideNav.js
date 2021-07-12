@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { SessionContext } from '../../../contexts/SessionContext';
 import styled, { css } from 'styled-components';
 import {Button280} from '../elements';
-import { tux_yellow, Flex, present_text, future_text, text_white, text_black, solid_border } from '../utilities';
+import { tux_yellow, Flex, present_text, future_text, true_white, text_black, solid_border } from '../utilities';
 
 
 const SideBarNav = () => {
@@ -124,7 +124,7 @@ const SideBarParent = styled.article`
 /*---------- The SideBar Itself ----------*/
 const SideBar = styled.article`
   grid-row: 1 / span 1;
-  background-color: ${text_white};
+  background-color: ${true_white};
   height: calc(100vh - 159px);
   ${Flex({ai:'center',fd:'column'})};
   border: var(--solid-border);
