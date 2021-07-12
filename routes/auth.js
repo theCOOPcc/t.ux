@@ -26,9 +26,10 @@ router.get(
   ), function (req, res) {
     console.log('AUTHENTICATED USER', req.user)
     res.redirect(
-      'http://localhost:3000/activity/heuristics'
+      // 'http://localhost:3000/activity/heuristics'
       // 'http://thecoop-tux.herokuapp.com/activity/heuristics'
-      )
+      "http://23carnies.com/activity/heuristics"
+    );
   }
 );
 
@@ -36,7 +37,8 @@ router.get('/logout', function (req, res) {
   console.log('logging out', req.user)
   req.logout();
   res.redirect(
-    'http://localhost:3000'
+    // 'http://localhost:3000'
+    'http://23carnies.com'
     // 'http://thecoop-tux.herokuapp.com'
     );
 });
