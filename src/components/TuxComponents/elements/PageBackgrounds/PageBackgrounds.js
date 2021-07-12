@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { backgroundBlur, backgroundGradient, pageBackground, mainColumn, grey, tux_blue, backButton } from '../../utilities/Colors'
+import styled from "styled-components";
+import { backgroundBlur, backgroundGradient, pageBackground, true_white, grey, tux_blue, backButton } from '../../utilities/Colors'
 import { pop_thick } from "../../utilities";
 
 
@@ -25,7 +25,7 @@ export const BackgroundGradient = styled.main`
 export const MainColumMain = styled.main`
   width: 100vw;
   height: 100vh;
-  background: ${mainColumn};
+  background: ${true_white};
   border: 1px solid ${grey};
   border-top: 9.38px solid ${tux_blue};
   box-sizing: border-box;
