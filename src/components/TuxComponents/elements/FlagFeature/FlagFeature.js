@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { tux_orange, pop_bolder, tux_grey, answer_btn, hoverOption, selectO, tux_orangeption } from '../../utilities';
+import { tux_orange, pop_bolder, tux_grey, answer_btn, hoverOption, selectOption } from '../../utilities';
 
 export const FeatureBox = styled.div`
    
