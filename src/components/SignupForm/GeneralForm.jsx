@@ -2,7 +2,7 @@ import React from "react";
 import * as U from "../TuxComponents/UniversalComponents";
 import * as L from "../TuxComponents/LoginComponents";
 import { Label, SmallInput, LinkTo } from './EmailForm';
-import { Button280 } from '../TuxComponents/elements'
+import { PrimaryButton } from '../TuxComponents/elements'
 
 
 const GeneralForm = ({
@@ -89,7 +89,7 @@ const GeneralForm = ({
           {errors.password && <U.Normal red>{errors.password}</U.Normal>}
           {errors.passwordConf && <U.Normal red>{errors.passwordConf}</U.Normal>}
           {/* //TODO: Still need to conditionally enable or disable the button. */}
-          <Button280 wide350
+          <PrimaryButton wide350
             disabled={
               userData.firstName.length > 0 && userData.lastName.length > 0 && userData.passwordConf
               ? false
@@ -98,7 +98,7 @@ const GeneralForm = ({
             onClick={handleSubmit} 
             >
             Create Account
-          </Button280>
+          </PrimaryButton>
         </L.LoginBox>
       </U.FlexBox>
       <U.FlexBox signUp>
