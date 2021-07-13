@@ -5,9 +5,21 @@ import A from '../../../../../images/icons/A.svg'
 import B from '../../../../../images/icons/B.svg'
 import C from '../../../../../images/icons/C.svg'
 import D from '../../../../../images/icons/D.svg'
-import Check from '../../../../../images/icons/answerCheckGreen.svg'
-import Xred from '../../../../../images/icons/answerXRed.svg'
 
+export const iconIMG = [
+    {
+        A: { A },
+    },
+    {
+        B: { B },
+    },
+    {
+        C: { C }
+    },
+    {
+        D: { D }
+    }
+];
 
 export const AnswerCard = (args) => (
     <CardGroup>
@@ -25,8 +37,7 @@ export const FourAnswerCards = (args) => (
     <CardGroup>
         {fourAnswerOptions.map((answer, idx) => (
             <AnswerCardBox key={idx}>
-                <Icon src={A} />
-
+                <Icon src={answer.iconIMG} />
                 <WideImage src={answer.image} alt={answer.altText} />
                 <CardText>{answer.cardText}</CardText>
             </AnswerCardBox>
@@ -38,7 +49,7 @@ export const TwoAnswerCards = (args) => (
     <CardGroup>
         {twoAnswerOptions.map((answer, idx) => (
             <WideAnswerCardBox key={idx}>
-                <Icon src={A} />
+                <Icon src={answer.iconIMG} />
                 <WideImage src={answer.image} alt={answer.altText} />
                 <CardText>{answer.cardText}</CardText>
             </WideAnswerCardBox>

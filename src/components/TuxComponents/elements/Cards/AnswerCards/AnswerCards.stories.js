@@ -1,7 +1,7 @@
 import {
   AnswerCard,
   TwoAnswerCards,
-  FourAnswerCards,CardGroup, AnswerCardBox, Icon, IconText, CardText, Image, WideImage
+  FourAnswerCards,CardGroup, AnswerCardBox, Icon, IconText, CardText, Image, WideImage, iconIMG
 } from "./AnswerCards";
 import { oneAnswerOption } from "./data";
 import { withDesign } from "storybook-addon-designs";
@@ -22,7 +22,7 @@ export const AnswerCards = (args) => (
     <CardGroup>
       {oneAnswerOption.map((answer, idx) => (
         <AnswerCardBox {...args} key={idx} className="answerCard">
-            <Icon {...args} />
+            <Icon src={A} />
             
           <Image src={answer.image} alt={answer.altText} />
           {/* <div style={{ display: "flex" }}> */}
