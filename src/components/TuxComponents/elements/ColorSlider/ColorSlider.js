@@ -22,6 +22,7 @@ export const SampleBox = styled.div`
 export const ColorSlider = styled.div`
   border: 2px solid #f6f6f6;
   position: relative;
+  width: 700px;
   left: 0px;
   right: 0px;
   top: 0%;

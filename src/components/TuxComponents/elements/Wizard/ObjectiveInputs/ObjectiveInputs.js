@@ -41,13 +41,13 @@ export const ObjectInput1 = styled.textarea`
   width: 842px;
   height: 63px;
   padding-left: 15px;
-  padding-right: 60px;
+  padding-right: 75px;
   font: ${pop_reg};
   font-size: 14px;
   line-height: 21px;
   display: flex;
   padding-top: 20px;
-
+  resize: none;
   align-items: center;
   border: 1px solid #666666;
   box-sizing: border-box;
@@ -59,34 +59,31 @@ export const ObjectInput2 = styled.textarea`
   width: 842px;
   height: 63px;
   padding-left: 15px;
-  padding-right: 60px;
+  padding-right: 75px;
   font: ${pop_reg};
   font-size: 14px;
   line-height: 21px;
   display: flex;
   padding-top: 20px;
+  resize: none;
   align-items: center;
   border: 1px solid #666666;
   box-sizing: border-box;
   border-radius: 10px;
   background: rgba(221, 221, 221, 0.3);
-  ${props => props.error && css`
-      caret-color: ${tux_red};
-      border: 1px solid ${tux_red};
-      transition: 0.3s ease all;
-  `}
 `
 export const ObjectInput3 = styled.textarea`
  
   width: 842px;
   height: 63px;
   padding-left: 15px;
-  padding-right: 60px;
+  padding-right: 75px;
   font: ${pop_reg};
   font-size: 14px;
   line-height: 21px;
   display: flex;
   padding-top: 20px;
+  resize: none;
   align-items: center;
   border: 1px solid #666666;
   box-sizing: border-box;
