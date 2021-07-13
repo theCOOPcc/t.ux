@@ -23,7 +23,7 @@ export const AnswerCards = (args) => (
       {oneAnswerOption.map((answer, idx) => (
         <AnswerCardBox {...args} key={idx} className="answerCard">
             <Icon src={A} />
-            
+    
           <Image src={answer.image} alt={answer.altText} />
           {/* <div style={{ display: "flex" }}> */}
             <CardText>{answer.cardText}</CardText>
