@@ -8,7 +8,7 @@ export default {
 };
 
 export const ContentPageBtn = (args) => (
-  <ContentBtn className='content-btn' {...args} >
+  <ContentBtn {...args} >
       <ButtonHead {...args} >
         Name of the page here
         </ButtonHead>

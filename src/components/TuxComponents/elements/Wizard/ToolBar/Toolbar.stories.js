@@ -13,7 +13,7 @@ export default {
 export const Toolbar = (args) => (
   <>
   <Wrapper>
-    <ImageButtonTrash className='toolbar' {...args}>
+    <ImageButtonTrash {...args}>
       <ButtonImageTrash {...args} src={Trash} />
     </ImageButtonTrash>
 

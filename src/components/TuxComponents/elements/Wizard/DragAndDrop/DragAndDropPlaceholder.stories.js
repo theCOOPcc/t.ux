@@ -10,7 +10,7 @@ export default {
 
 export const ImagePlaceholder = (args) => (
   <>
-  <ComponentWrapper className='image-placeholder' {...args}>
+  <ComponentWrapper {...args}>
     <ImageContainer {...args}>
     <PlaceholderImage {...args} src={ImageUpload} />
     </ImageContainer>

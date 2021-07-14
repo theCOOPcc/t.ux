@@ -8,7 +8,7 @@ export default {
 
 
 export const CreatePage = (args) => (
-  <CreatePageBtn className='create-page-btn' {...args}  >
+  <CreatePageBtn {...args}  >
     <ButtonHead>
     Click here to Create A Page
     </ButtonHead>

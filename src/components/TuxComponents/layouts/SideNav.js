@@ -124,7 +124,7 @@ const SideBarParent = styled.article`
 /*---------- The SideBar Itself ----------*/
 const SideBar = styled.article`
   grid-row: 1 / span 1;
-  background-color: ${true_white};
+  background-color: ${text_white};
   height: calc(100vh - 159px);
   ${Flex({ai:'center',fd:'column'})};
   border: var(--solid-border);

@@ -148,27 +148,3 @@ position: absolute;
 bottom: 30px;
   /* width: 60px; */
 `
-
-export const TextHead = styled.p`
-  margin: 0;
-  position: absolute;
-  top:33px;
-  width: 898px;
-  height: 63.16px;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 23px;
-  color: #666666;
-`;
-
-export const TextSub = styled.p`
-  margin: 0;
-  position: absolute;
-  top:67px;
-  width: 898px;
-  height: 63.16px;
-  font-size: 18px;
-  /* font-weight: 800; */
-  line-height: 23px;
-  color: #666666;
-`;

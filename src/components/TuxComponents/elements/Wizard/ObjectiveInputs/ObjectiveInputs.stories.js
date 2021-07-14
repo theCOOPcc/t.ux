@@ -4,6 +4,7 @@ import { tux_red, tux_black, warning } from '../../../utilities/Colors'
 import { Poppins } from '../../../utilities/Type'
 import BulletPoint from '../../../../../images/ActivityWizardImgs/BulletPoint.svg'
 import { withDesign } from "storybook-addon-designs";
+import BulletPoint from '../../../../../images/ActivityWizardImgs/BulletPoint.svg'
 export default {
   title: "Activity Wizard",
   decorators: [withDesign],

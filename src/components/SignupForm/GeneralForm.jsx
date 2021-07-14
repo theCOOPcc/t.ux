@@ -1,7 +1,8 @@
 import React from "react";
+import styled, { css } from 'styled-components';
 import * as U from "../TuxComponents/UniversalComponents";
 import * as L from "../TuxComponents/LoginComponents";
-import { Label, SmallInput, LinkTo } from './EmailForm';
+import { Label, SmallInput, LinkTo, LoginBox, TuxFlower, OuterBox, Normal } from './EmailForm';
 import { PrimaryButton } from '../TuxComponents/elements'
 
 
@@ -14,22 +15,21 @@ const GeneralForm = ({
 }) => {
   const { userData } = values;
   return (
-    <L.Main>
-      {/* <U.FlexBox > */}
-      <U.FlexBox>
-        <L.TuxFlower src="/images/tuxFlower.png" alt="tux logo, a blue, yellow and red flower"></L.TuxFlower>
-        <L.LoginBox wide flexStart>
-          <U.Normal semiBold margin50 large>
+    <Main>
+      <OuterBox>
+        <TuxFlower src="/images/tuxFlower.png" alt="tux logo, a blue, yellow and red flower"></TuxFlower>
+        <LoginBox wide flexStart>
+          <Normal semiBold margin50 large>
             Create New Account
-          </U.Normal>
-          <U.Normal center>
+          </Normal>
+          <Normal center>
             We're glad to have you onboard! Fill in
             <br />
             the information below to get started.
-          </U.Normal>
+          </Normal>
 
-          <U.FlexBox flexMargin>
-            <U.FlexBox column>
+          <OuterBox style={{margin:'40px'}}>
+            <OuterBox column>
               <Label>
                 First Name
               </Label>
@@ -41,8 +41,8 @@ const GeneralForm = ({
                 name="userData.firstName"
                 onChange={handleChange}
               ></SmallInput>
-            </U.FlexBox>
-            <U.FlexBox column>
+            </OuterBox>
+            <OuterBox column>
               <Label>
                 Last Name
               </Label>
@@ -54,11 +54,11 @@ const GeneralForm = ({
                 name="userData.lastName"
                 onChange={handleChange}
               ></SmallInput>
-            </U.FlexBox>
-          </U.FlexBox>
+            </OuterBox>
+          </OuterBox>
 
-          <U.FlexBox marginTop>
-            <U.FlexBox column>
+          <OuterBox style={{margin:'40px'}}>
+            <OuterBox column>
               <Label>
                 Password
               </Label>
@@ -70,8 +70,8 @@ const GeneralForm = ({
                 name="userData.password"
                 onChange={handleChange}
               ></SmallInput>
-            </U.FlexBox>
-            <U.FlexBox column>
+            </OuterBox>
+            <OuterBox column>
               <Label>
                 Confirm Password
               </Label>
@@ -84,12 +84,12 @@ const GeneralForm = ({
                 name="userData.passwordConf"
                 onChange={handleChange}
               ></SmallInput>
-            </U.FlexBox>
-          </U.FlexBox>
+            </OuterBox>
+          </OuterBox>
           {errors.password && <U.Normal red>{errors.password}</U.Normal>}
           {errors.passwordConf && <U.Normal red>{errors.passwordConf}</U.Normal>}
           {/* //TODO: Still need to conditionally enable or disable the button. */}
-          <PrimaryButton wide350
+          <PrimaryButton
             disabled={
               userData.firstName.length > 0 && userData.lastName.length > 0 && userData.passwordConf
               ? false
@@ -99,14 +99,22 @@ const GeneralForm = ({
             >
             Create Account
           </PrimaryButton>
-        </L.LoginBox>
-      </U.FlexBox>
-      <U.FlexBox signUp>
-        <U.Normal>Have an Account?&nbsp;</U.Normal>
+        </LoginBox>
+      </OuterBox>
+      <OuterBox signUp>
+        <Normal>Have an Account?&nbsp;</Normal>
         <LinkTo to="/login">Log In</LinkTo>
-      </U.FlexBox>
-    </L.Main>
+      </OuterBox>
+    </Main>
   );
 };
 
 export default GeneralForm;
+
+const Main = styled.main`
+	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
+	background-blend-mode: normal, multiply;
+	margin: 0 auto;
+	max-width: 1440px;
+`;
+

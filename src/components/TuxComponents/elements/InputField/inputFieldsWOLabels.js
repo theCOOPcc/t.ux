@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { pop_reg } from "../../utilities/Type";
-import {tux_red, tux_primart, success_grey, dark_grey, grey_text, text_black, true_white } from '../../utilities/Colors'
+import {tux_red, tux_primart, success_grey, dark_grey, grey_text, text_black, white } from '../../utilities/Colors'
 
 export const Wrapper = styled.div`
   position: relative;
@@ -80,7 +80,7 @@ export const Input = styled.input`
     props.disabled &&
     css`
       border: 1px solid ${success_grey};
-      background: ${true_white};
+      background: ${white};
       ::placeholder {
         color: ${success_grey};
       }

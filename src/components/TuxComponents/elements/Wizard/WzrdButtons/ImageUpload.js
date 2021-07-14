@@ -44,7 +44,7 @@ export const ContentBtnSmall = styled.button`
     css`
       background:url(./images/page_button_toolbar.svg);
       background-repeat: no-repeat, no-repeat;
-      background-position: right 6px top 8px;
+      background-position: right 8px top 12px;
       background-size: 90px;
     `}
   ${(props) =>
@@ -97,14 +97,14 @@ border-radius: 5px;
 
 export const AnswerField = styled.input`
 position: absolute;
-left:  67px;
+left:  65px;
   width: 250px;
   height: 48px;
   padding-left: 12px;
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 10px;
-  margin-top:6px;
+  margin-top:15px;
   align-items: center;
   justify-content: center;
 `;
