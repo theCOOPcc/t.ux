@@ -9,7 +9,7 @@ export default {
 };
 
 
-export const Modal = (args) => (
+export const AddPageModal = (args) => (
   <ModalWrapper>
     <ModalHeader>Add Page</ModalHeader>
     <ModalSubHeader>Which page type would you like to add?</ModalSubHeader>

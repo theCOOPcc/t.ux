@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { pop_reg, PopHeader, PopSaveBtn } from '../../../utilities/Type'
+import { pop_reg, pop_thick, pop_bolder } from '../../../utilities/Type'
 
 export const SaveModalWrapper = styled.div`
   position: relative;
@@ -19,7 +19,8 @@ export const SaveHeader = styled.p`
   padding: 0;
   width: 327px;
   height: 54px;
-  font: ${PopHeader};
+  font: ${pop_thick};
+  font-size: 36px;
   line-height: 54px;
   text-align: center;
 `
@@ -46,7 +47,8 @@ export const SaveButton = styled.button`
   left: 82px;
   width: 280px;
   height: 50px;
-  font: ${PopSaveBtn};
+  font: ${pop_bolder};
+  font-size: 20px;
   line-height: 28px;
   text-align: center;
   border: none;
@@ -61,7 +63,8 @@ export const DontSaveButton = styled.button`
   left: 73px;
   width: 280px;
   height: 50px;
-  font: ${PopSaveBtn};
+  font: ${pop_bolder};
+  font-size: 20px;
   line-height: 28px;
   text-align: center;
   border: none;

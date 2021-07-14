@@ -13,9 +13,10 @@ export const CreatePageBtn = styled.button`
   height: 218px;
   background: transparent;
   background-image: url(./images/PlusSignDefault.svg);
-border-radius: 10px;
+  border-radius: 10px;
   background-repeat: no-repeat;
   background-position: right 130px top 110px;
+  cursor: pointer;
   ${(props) =>
     props.hover &&
     css`
