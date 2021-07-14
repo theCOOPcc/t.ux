@@ -3,7 +3,7 @@ import authService from '../../../services/authService';
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom'
 import { Flex, common_shadow, pop_reg, pop_thick } from '../utilities';
-import { SmallInput, Button280 } from '../elements';
+import { SmallInput, PrimaryButton } from '../elements';
 // styled components for this Login comoponent are at the bottom
 
 class Login extends Component {
@@ -89,12 +89,11 @@ class Login extends Component {
                                 to="/passwordresetrequest"
                             >Forgot Password?</LinkTo>*/}
                   {/* </OutsideFlex> */}
-                  <Button280
-                    wide350
+                  <PrimaryButton
                     disabled={email.length > 0 && pw.length > 0 ? false : true}
                   >
                     Log In
-                  </Button280>
+                  </PrimaryButton>
                 </form>
               </LoginBox>
             </OutsideFlex>

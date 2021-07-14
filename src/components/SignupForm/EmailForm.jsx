@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import * as U from '../TuxComponents/UniversalComponents';
 import * as L from '../TuxComponents/LoginComponents';
 import styled, { css } from 'styled-components';
-import { Button280 } from '../TuxComponents/elements'
+import { PrimaryButton } from '../TuxComponents/elements'
 
 const EmailForm = ({ errors, values, handleChange, touched }) => {
   const { userData } = values
@@ -29,8 +29,7 @@ const EmailForm = ({ errors, values, handleChange, touched }) => {
             ></SmallInput>
             {errors.email && <div>{errors.email}</div>}
 
-            <Button280
-              wide350
+            <PrimaryButton
               disabled={
                 !errors.email && userData.email && userData.email.length > 0
                   ? false
@@ -42,7 +41,7 @@ const EmailForm = ({ errors, values, handleChange, touched }) => {
               onClick={handleChange}
             >
               Continue
-            </Button280>
+            </PrimaryButton>
           </L.LoginBox>
         </U.FlexBox>
       </U.FlexBox>

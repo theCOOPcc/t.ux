@@ -3,7 +3,7 @@ import { ManagerContext } from '../../contexts/ManagerContext';
 import styled from 'styled-components';
 import GroupUserTable from '../../components/GroupUserTable/GroupUserTable';
 import { Flex, } from '../TuxComponents/utilities';
-import { Button280, } from '../TuxComponents/elements';
+import { PrimaryButton, LinkBtn } from '../TuxComponents/elements';
 
 const ModifyGroup = ({ createGroup, setCreateGroup }) => {
   const {
@@ -48,12 +48,12 @@ const ModifyGroup = ({ createGroup, setCreateGroup }) => {
               leo@gmail.com, dan@gmail.com, etc.."
               />
             </FlexBox>
-            <Button280 onClick={handleAddToGroup}>
+            <PrimaryButton onClick={handleAddToGroup}>
               Add To Group
-            </Button280>
-            <a href="" onClick={() => setCreateGroup(!createGroup)}>
+            </PrimaryButton>
+            <LinkBtn href="" onClick={() => setCreateGroup(!createGroup)}>
               Create Group
-            </a>
+            </LinkBtn>
           </>
         )}
       </OuterBox>
