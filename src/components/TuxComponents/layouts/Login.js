@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom'
 import { Flex, common_shadow, pop_reg, pop_thick } from '../utilities';
 import { SmallInput, PrimaryButton } from '../elements';
-// styled components for this Login comoponent are at the bottom
 
 class Login extends Component {
     state = { 
@@ -77,18 +76,6 @@ class Login extends Component {
                     name='pw'
                     onChange={this.handleChange}
                   ></SmallInput>
-                  {/* <OutsideFlex> */}
-                  {/* These are on hold until next sprint */}
-                  {/* TODO: Make ability to stay logged in */}
-                  {/* TODO: Create password reset */}
-                  {/* <U. negMargin>
-                            <U.Checkbox></U.Checkbox>
-                            <U.Normal>Stay signed in</U.Normal>
-                            </U.> 
-                            <LinkTo
-                                to="/passwordresetrequest"
-                            >Forgot Password?</LinkTo>*/}
-                  {/* </OutsideFlex> */}
                   <PrimaryButton
                     disabled={email.length > 0 && pw.length > 0 ? false : true}
                   >

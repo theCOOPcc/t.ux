@@ -1,7 +1,5 @@
 import React from "react";
 import styled, { css } from 'styled-components';
-import * as U from "../TuxComponents/UniversalComponents";
-import * as L from "../TuxComponents/LoginComponents";
 import { Label, SmallInput, LinkTo, LoginBox, TuxFlower, OuterBox, Normal } from './EmailForm';
 import { PrimaryButton } from '../TuxComponents/elements'
 
@@ -86,8 +84,8 @@ const GeneralForm = ({
               ></SmallInput>
             </OuterBox>
           </OuterBox>
-          {errors.password && <U.Normal red>{errors.password}</U.Normal>}
-          {errors.passwordConf && <U.Normal red>{errors.passwordConf}</U.Normal>}
+          {errors.password && <Normal red>{errors.password}</Normal>}
+          {errors.passwordConf && <Normal red>{errors.passwordConf}</Normal>}
           {/* //TODO: Still need to conditionally enable or disable the button. */}
           <PrimaryButton
             disabled={

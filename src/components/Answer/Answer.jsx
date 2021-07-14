@@ -1,7 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import SessionContextProvider, { SessionContext } from '../../contexts/SessionContext';
-// import * as A from '../TuxComponents/ActivitiesComponents';
 
 const Answer = ({  answer, index, disabled, response }) => {
 
