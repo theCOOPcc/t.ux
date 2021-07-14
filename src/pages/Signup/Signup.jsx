@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import SignupForm from '../../components/SignupForm/SignupForm';
-// import './Signup.css';
-import * as U from '../../components/TuxComponents/UniversalComponents';
-
+import { Normal } from '../../components/SignupForm/EmailForm';
 class Signup extends Component {
   state = {
     message: '',
@@ -26,7 +24,7 @@ class Signup extends Component {
           groupId={groupId}
           email={email}
         />
-        <U.Normal>{this.state.message}</U.Normal>
+        <Normal>{this.state.message}</Normal>
       </main>
     );
   }
