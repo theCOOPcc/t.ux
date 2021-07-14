@@ -3,9 +3,9 @@ export const tux_blue = "#78D6DA";
 export const tux_yellow = "#f0eb7e";
 export const tux_red = "#E6211E";
 export const tux_grey = "#323239";
-export const tux_white = "#f1f2eb";
+export const tux_white = "#FAFCFE";
 export const tux_black = "#17171e";
-export const tux_orange = "#f37806";
+export const tux_orange = '#F37806';
 
 export const success = 'rgba(120, 192, 119, 1)';
 export const true_white = "#fff";

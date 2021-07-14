@@ -70,18 +70,6 @@ class Login extends Component {
                     name='pw'
                     onChange={this.handleChange}
                   ></SmallInput>
-                  {/* <OutsideFlex> */}
-                  {/* These are on hold until next sprint */}
-                  {/* TODO: Make ability to stay logged in */}
-                  {/* TODO: Create password reset */}
-                  {/* <U. negMargin>
-                            <U.Checkbox></U.Checkbox>
-                            <U.Normal>Stay signed in</U.Normal>
-                            </U.> 
-                            <LinkTo
-                                to="/passwordresetrequest"
-                            >Forgot Password?</LinkTo>*/}
-                  {/* </OutsideFlex> */}
                   <PrimaryButton
                     disabled={email.length > 0 && pw.length > 0 ? false : true}
                   >

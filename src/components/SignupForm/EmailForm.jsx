@@ -1,22 +1,22 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import * as U from '../TuxComponents/UniversalComponents';
-import * as L from '../TuxComponents/LoginComponents';
 import styled, { css } from 'styled-components';
-import { PrimaryButton } from '../TuxComponents/elements'
+import { PrimaryButton } from '../TuxComponents/elements';
+import { FlexCenter, common_shadow } from '../TuxComponents/utilities';
+
 
 const EmailForm = ({ errors, values, handleChange, touched }) => {
   const { userData } = values
   return (
-    <L.Main>
-      <U.FlexBox>
-        <U.FlexBox realtive>
-          <L.TuxFlower src="/images/TuxFlower.svg" alt="tux logo, a blue, yellow and red flower"></L.TuxFlower>
-          <L.LoginBox flexStart>
+    <Main>
+      <OuterBox>
+        <OuterBox realtive>
+          <TuxFlower src="/images/TuxFlower.svg" alt="tux logo, a blue, yellow and red flower"></TuxFlower>
+          <LoginBox flexStart>
             <Heading1 margin50>Enter an Email</Heading1>
-            <U.Normal setup>
+            <Normal>
               We'll use this email to set up your account.
-            </U.Normal>
+            </Normal>
             <Label>Email Address</Label>
             <SmallInput
               type="text"
@@ -42,18 +42,48 @@ const EmailForm = ({ errors, values, handleChange, touched }) => {
             >
               Continue
             </PrimaryButton>
-          </L.LoginBox>
-        </U.FlexBox>
-      </U.FlexBox>
-      <U.FlexBox login>
-        <U.Normal alignRight>Have an Account?&nbsp;</U.Normal>
+          </LoginBox>
+        </OuterBox>
+      </OuterBox>
+      <OuterBox login>
+        <Normal alignRight>Have an Account?&nbsp;</Normal>
         <LinkTo to="/login">Log In</LinkTo>
-      </U.FlexBox>
-    </L.Main>
+      </OuterBox>
+    </Main>
   );
 };
 
 export default EmailForm;
+
+const Main = styled.main`
+	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
+	background-blend-mode: normal, multiply;
+	margin: 0 auto;
+	max-width: 1440px;
+`;
+
+export const OuterBox = styled.div`
+  ${FlexCenter};
+  ${props => props.relative && css`
+  position: relative;
+  `}
+  ${props => props.column && css`
+  flex-direction: column;
+  `}
+  ${(props) =>
+    props.signUp &&
+    css`
+      margin-top: 730px;
+      padding-left: 550px;
+    `}
+    ${(props) =>
+    props.login &&
+    css`
+      margin-top: 625px;
+      padding-left: 160px;
+    `}
+`;
+
 
 export const Label = styled.label`
   font: var(--pop-reg);
@@ -94,3 +124,68 @@ const Heading1 = styled.h1`
   font-weight: 500;
   margin-top: 50px;
 `;
+
+export const TuxFlower = styled.img`
+	width: 140px;
+	z-index: 10;
+    position: absolute;
+    top: 100px;
+	border-radius: 50%;
+    
+    ${props => props.center && css`
+        left: 100px;
+    `}
+    ${props => props.invite && css`
+        top: 160px;
+    `}
+`;
+
+export const LoginBox = styled.div`
+    ${FlexCenter({dir:'column'})};
+    width: 425px;
+    height: 510px;
+    background-color: var(--true-white);
+    box-shadow: ${common_shadow};
+    border-radius: 10px;
+    margin-top: 200px;
+    /* clip-path: circle(25% at 50% 0); */
+
+    ${props => props.wide && css`
+      width: 785px;
+      height: 625px;
+    `}
+
+    ${props => props.flexStart && css`
+      justify-content: flex-start;
+    `}
+    
+    ${props => props.signup && css`
+        position: absolute;
+        top: 150px;
+    `}
+
+    ${props => props.general && css`
+        margin-top: 120px;
+    `}
+    ${props => props.invite && css`
+        width: 515px;
+        height: 585px;
+        margin-top: 120px;
+    `}
+`;
+
+export const Normal = styled.p`
+  font: var(--pop-reg);
+  line-height: 20px;
+  ${(props) =>
+    props.setup &&
+    css`
+      margin-bottom: 50px;
+    `}
+    ${(props) =>
+    props.center &&
+    css`
+      text-align: center;
+    `}
+
+  `;
