@@ -17,6 +17,7 @@ import styled from "styled-components";
 
 export const Slider = styled.input`
   -webkit-appearance: none;
+  /* margin-top: 10px; */
   width: 713px;
   height: 30px;
   &::-webkit-slider-runnable-track {
