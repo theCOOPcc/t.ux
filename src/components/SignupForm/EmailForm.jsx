@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import { PrimaryButton } from '../TuxComponents/elements';
 import { FlexCenter, common_shadow } from '../TuxComponents/utilities';
 
+
 const EmailForm = ({ errors, values, handleChange, touched }) => {
   const { userData } = values
   return (
@@ -29,7 +30,6 @@ const EmailForm = ({ errors, values, handleChange, touched }) => {
             {errors.email && <div>{errors.email}</div>}
 
             <PrimaryButton
-              wide350
               disabled={
                 !errors.email && userData.email && userData.email.length > 0
                   ? false

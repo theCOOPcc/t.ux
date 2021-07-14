@@ -100,6 +100,7 @@ position: absolute;
 left:  67px;
   width: 250px;
   height: 48px;
+  padding-left: 12px;
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 10px;

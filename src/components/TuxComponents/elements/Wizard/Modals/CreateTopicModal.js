@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { pop_thick, pop_reg } from '../../../utilities/Type'
 
 export const CreateTopicMod = styled.div`
 position: relative;
@@ -18,7 +19,7 @@ export const CreateTopicHeader = styled.p`
   top: 56.64px; 
   height: 54.62px;
   text-align: center;
-  font-weight: 500;
+  font:${pop_thick};
   font-size: 36px;
   line-height: 54px;
   padding: 0;
@@ -35,7 +36,7 @@ export const CreateTopicSubHeader = styled.p`
   text-align: center;
   width: 339px;
   height: 20.34px;
-  font-size: 18px;
+  font: ${pop_reg};
   line-height: 27px;
 `
 
@@ -54,4 +55,19 @@ export const CreateButton = styled.button`
   border: none;
   cursor: pointer;
   /* color: #274D4F; */
+`
+
+export const X_Button = styled.button`
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  
+`
+
+export const X_Image = styled.img`
+
 `
