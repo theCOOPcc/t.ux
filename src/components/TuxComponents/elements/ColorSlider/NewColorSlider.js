@@ -42,28 +42,28 @@ export const Slider = styled.input`
   }
     &::-webkit-slider-thumb,
      -moz-range-thumb {
-      height: 20px;
-      width: 20px;
+      height: 15px;
+      width: 15px;
+      margin-top: 3px;
       background-color: transparent;
       border-radius: 50px;
       border: 3.5px solid white;
       cursor: pointer;
       -webkit-appearance: none;
       &:hover {
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
         border-radius: 50px;
-        border: 6px double white;
+        border: 7px double white;
         cursor: pointer;
         -webkit-appearance: none;
-        margin-top: -5px;
+        margin-top: -3px;
         box-shadow: 5px 5px 5px rgba(0,0,0,.5);
       &:active {
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
         border: 4px solid white;
         box-shadow: 6px 6px 6px rgba(0,0,0,.5);
-
         }
       }
     }

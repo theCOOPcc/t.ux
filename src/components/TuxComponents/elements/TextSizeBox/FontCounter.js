@@ -1,3 +1,4 @@
+
 import styled from 'styled-components'
 import { pop_thick
  } from '../../utilities/Type'
@@ -23,31 +24,14 @@ import GreenDownArrow from '../../../../images/ActivityWizardImgs/GreenArrowDown
   background-image: url(${UpArrow});
   background-repeat: no-repeat;
   background-size: 85%;
-  background-position: 1px;
+  background-position: 1.5px;
   border: 1px solid black;
   cursor: pointer;
-  &:hover {
+  &:active {
     background-image: url(${GreenUpArrow});
   }
  `
 
- export const UpImage = styled.img`
-  position: absolute;
-  left: 3px;
-  top: 7px;
-  &:hover {
-    width: 10px;
-    height: 8px;
-    left: 4;
-    top: 6;
-  }
- `
-
- export const DownImage = styled.img`
-  position: absolute;
-  left: 3px;
-  top: 7px;
- `
  export const ArrowButtonDown = styled.button`
   position: absolute;
   top: 23px;
@@ -60,10 +44,10 @@ import GreenDownArrow from '../../../../images/ActivityWizardImgs/GreenArrowDown
   background-image: url(${DownArrow});
   background-repeat: no-repeat;
   background-size: 85%;
-  background-position: 1px;
+  background-position: 1.5px;
   border: 1px solid black;
   cursor: pointer;
-  &:hover {
+  &:active {
     background-image: url(${GreenDownArrow});
   }
 
@@ -85,8 +69,11 @@ export const CounterBox = styled.input`
   color: #FFF;
   /* border: none; */
   border-radius: 5px 0 0 5px ;
-  &:active {
+  &:focus {
     opacity: 95%;
+  }
+  &:hover {
+    opacity: 90%;
   }
 `
 
