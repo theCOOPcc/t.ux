@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { pop_reg } from "../../utilities/Type";
-import { tux_red, medium_grey, tux_primart, success_grey, dark_grey, text_black, true_white } from '../../utilities/Colors'
+import { tux_red, medium_grey, tux_primart, success_grey, dark_grey, text_black, white } from '../../utilities/Colors'
 
 
 export const Wrapper = styled.div`
@@ -36,13 +36,12 @@ export const Input = styled.input`
   box-sizing: border-box;
   font-size: 14px;
   line-height: 21px;
-  bottom: -5px;
   width: 280px;
   height: 48px;
   background: white;
   border: 1px solid ${medium_grey};
   border-radius: 10px;
-  padding: 0 0 0 12px;
+  padding: 20px 0 0 12px;
   ${(props) =>
     props.focus &&
     css`
@@ -95,7 +94,7 @@ export const Label = styled.label`
     css`
       top: -7px;
       left: 5px;
-      background-color: ${true_white};
+      background-color: ${white};
       font-size: 10px;
       line-height: 15px;
       padding: 0px 5px 0 5px;
@@ -119,7 +118,7 @@ export const Label = styled.label`
     css`
       top: -7px;
       left: 5px;
-      background-color: ${true_white};
+      background-color: ${white};
       padding: 0px 5px 0 5px;
       font-size: 10px;
       line-height: 15px;
@@ -131,7 +130,7 @@ export const Label = styled.label`
     css`
       top: -7px;
       left: 5px;
-      background-color: ${true_white};
+      background-color: ${white};
       padding: 0px 5px 0 5px;
       font-size: 10px;
       line-height: 15px;

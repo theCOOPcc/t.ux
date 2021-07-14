@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import {
     complete,
     in_progress,
-    true_white,
+    text_white,
     not_started
 } from "../../utilities/Colors";
 
@@ -23,14 +23,14 @@ export const Lozenge = styled.div`
         props.complete &&
         css`
             background: ${complete};
-            color: ${true_white};
+            color: ${text_white};
             `}
 
     ${(props) =>
         props.progress &&
         css`
             background: ${in_progress};
-            color: ${true_white};
+            color: ${text_white};
             `}
     ${(props) => 
         props.notStarted &&
