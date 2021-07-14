@@ -10,7 +10,7 @@ export default {
 };
 
 export const DragAndDrop = (args) => (
-  <ComponentWrapper>
+  <ComponentWrapper className='drag-and-drop'>
   <DragBox>
     <ImportCloud src={
       args.hover === true 
