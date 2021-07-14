@@ -1,44 +1,59 @@
 import styled, { css } from 'styled-components';
 import { Flex, grey_text, pop_black, pop_bolder, pop_semiBold, pop_thick, success, text_black, tux_red } from '../../../utilities';
 import { oneAnswerOption, twoAnswerOptions, fourAnswerOptions } from './data';
+import A from '../../../../../images/icons/A.svg'
+import B from '../../../../../images/icons/B.svg'
+import C from '../../../../../images/icons/C.svg'
+import D from '../../../../../images/icons/D.svg'
+
+export const iconIMG = [
+    {
+        A: { A },
+    },
+    {
+        B: { B },
+    },
+    {
+        C: { C }
+    },
+    {
+        D: { D }
+    }
+];
 
 export const AnswerCard = (args) => (
     <CardGroup>
-      {oneAnswerOption.map((answer, idx) => (
-        <AnswerCardBox key={idx} className="answerCard">
-            <Icon ><IconText>{answer.iconText}</IconText></Icon>
-          <Image src={answer.image} alt={answer.altText} />
-            <CardText>{answer.cardText}</CardText>
-        </AnswerCardBox>
-      ))}
+        {oneAnswerOption.map((answer, idx) => (
+            <AnswerCardBox key={idx} className="answerCard">
+                <Icon src={A} />
+                <Image src={answer.image} alt={answer.altText} />
+                <CardText>{answer.cardText}</CardText>
+            </AnswerCardBox>
+        ))}
     </CardGroup>
-  );
+);
 
 export const FourAnswerCards = (args) => (
-  <CardGroup>
-  {fourAnswerOptions.map((answer, idx) => (
-    <AnswerCardBox key={idx}>
-        <Icon>
-          <IconText>{answer.iconText}</IconText>
-        </Icon>
-      <WideImage src={answer.image} alt={answer.altText} />
-        <CardText>{answer.cardText}</CardText>
-    </AnswerCardBox>
-  ))}
-</CardGroup>
+    <CardGroup>
+        {fourAnswerOptions.map((answer, idx) => (
+            <AnswerCardBox key={idx}>
+                <Icon src={answer.iconIMG} />
+                <WideImage src={answer.image} alt={answer.altText} />
+                <CardText>{answer.cardText}</CardText>
+            </AnswerCardBox>
+        ))}
+    </CardGroup>
 );
 
 export const TwoAnswerCards = (args) => (
     <CardGroup>
-    {twoAnswerOptions.map((answer, idx) => (
-        <WideAnswerCardBox key={idx}>
-            <Icon>
-            <IconText>{answer.iconText}</IconText>
-            </Icon>
-        <WideImage src={answer.image} alt={answer.altText} />
-            <CardText>{answer.cardText}</CardText>
-        </WideAnswerCardBox>
-    ))}
+        {twoAnswerOptions.map((answer, idx) => (
+            <WideAnswerCardBox key={idx}>
+                <Icon src={answer.iconIMG} />
+                <WideImage src={answer.image} alt={answer.altText} />
+                <CardText>{answer.cardText}</CardText>
+            </WideAnswerCardBox>
+        ))}
     </CardGroup>
 );
 
@@ -90,29 +105,15 @@ export const WideImage = styled(Image)`
     left: 2.5px;
 `;
 
-export const Icon = styled.div`
+export const Icon = styled.img`
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    border: 4px solid #666;
-    background: #fafcfe;
-    ${Flex({ai:'center', jc:'center'})};
     position: absolute;
+    background: #fff;
     left: -15px;
     top: -15px;
     z-index: 20;
-    &:hover {
-        background: #3D3D3D;
-    }
-    ${props => props.correct && css`
-        border: none;
-    `}
-    ${props => props.incorrect && css`
-        border: none;
-    `}
-    ${props => props.hover && css`
-        background: #3D3D3D;
-    `}
 `;
 
 export const IconText = styled.p`

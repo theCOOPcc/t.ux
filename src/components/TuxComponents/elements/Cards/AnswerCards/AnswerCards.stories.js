@@ -1,10 +1,16 @@
 import {
   AnswerCard,
   TwoAnswerCards,
-  FourAnswerCards,CardGroup, AnswerCardBox, Icon, IconText, CardText, Image, WideImage
+  FourAnswerCards,CardGroup, AnswerCardBox, Icon, IconText, CardText, Image, WideImage, iconIMG
 } from "./AnswerCards";
 import { oneAnswerOption } from "./data";
 import { withDesign } from "storybook-addon-designs";
+import A from '../../../../../images/icons/A.svg';
+import B from '../../../../../images/icons/B.svg';
+import C from '../../../../../images/icons/C.svg';
+import D from '../../../../../images/icons/D.svg';
+import Check from '../../../../../images/icons/answerCheckGreen.svg';
+import Xred from '../../../../../images/icons/answerXRed.svg';
 
 export default {
   title: "Answer Cards",
@@ -16,9 +22,8 @@ export const AnswerCards = (args) => (
     <CardGroup>
       {oneAnswerOption.map((answer, idx) => (
         <AnswerCardBox {...args} key={idx} className="answerCard">
-            <Icon {...args}>
-              <IconText>{answer.iconText}</IconText>
-            </Icon>
+            <Icon src={A} />
+    
           <Image src={answer.image} alt={answer.altText} />
           {/* <div style={{ display: "flex" }}> */}
             <CardText>{answer.cardText}</CardText>
@@ -35,15 +40,9 @@ export const AnswerCardControls = (args) => (
   <CardGroup>
   {oneAnswerOption.map((answer, idx) => (
     <AnswerCardBox {...args} key={idx} className="answerCard">
-      {
-        args.correct ?
-        <Icon><img src="./images/icons/answerCheckGreen.svg" alt="checkmark" width="44" height="44"/></Icon>
-        : args.incorrect ?
-        <Icon><img src="/images/icons/answerXRed.svg" alt="red x" width="44" height="44"/></Icon>
-        : <Icon {...args}>
-          <IconText>{answer.iconText}</IconText>
-        </Icon>
-      }
+     <Icon 
+     src={ args.correct ? Check : args.incorrect ? Xred : args.A ? A : args.B ? B : args.C ? C : args.D ? D : A }
+     />
       <Image src={answer.image} alt={answer.altText} />
         <CardText>{answer.cardText}</CardText>
     </AnswerCardBox>
@@ -54,8 +53,10 @@ export const AnswerCardControls = (args) => (
 AnswerCardControls.args = {
   correct: false,
   incorrect: false,
-  hover: false,
-  focus: false,
+  A: false,
+  B: false,
+  C: false,
+  D: false,
 };
 
 AnswerCard.story = {
