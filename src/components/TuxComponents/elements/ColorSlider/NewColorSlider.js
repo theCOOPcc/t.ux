@@ -18,8 +18,9 @@ import styled from "styled-components";
 export const Slider = styled.input`
   -webkit-appearance: none;
   width: 713px;
-  height: 20px;
+  height: 30px;
   &::-webkit-slider-runnable-track {
+    height: 20px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     background: linear-gradient(
       to right,
@@ -47,15 +48,14 @@ export const Slider = styled.input`
       border: 3.5px solid white;
       cursor: pointer;
       -webkit-appearance: none;
-      margin-top: 0px;
       &:hover {
         height: 30px;
         width: 30px;
         border-radius: 50px;
-        border: 4px double white;
+        border: 6px double white;
         cursor: pointer;
         -webkit-appearance: none;
-        margin-top: 0px;
+        margin-top: -5px;
         box-shadow: 5px 5px 5px rgba(0,0,0,.5);
       &:active {
         height: 30px;
