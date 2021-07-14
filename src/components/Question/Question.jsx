@@ -3,8 +3,6 @@ import Feedback from '../Feedback/Feedback';
 import Answer from '../Answer/Answer';
 import styled from 'styled-components';
 import { Flex, tux_blue, common_shadow } from '../TuxComponents/utilities';
-import * as U from '../TuxComponents/UniversalComponents';
-import * as A from '../TuxComponents/ActivitiesComponents';
 import { SessionContext } from '../../contexts/SessionContext';
 
 const Question = ({ details }) => {
@@ -13,7 +11,7 @@ const Question = ({ details }) => {
   const { problemStatement, media, answers } = details.contents;
 
   return (
-    <U.Sub6ColGrid>
+    <>
       <ColorBlock></ColorBlock>
       {/* <A.ProblemStatement>{problemStatement}</A.ProblemStatement> */}
       <FlexBox dangerouslySetInnerHTML={{ __html: problemStatement }}></FlexBox>
@@ -38,7 +36,7 @@ const Question = ({ details }) => {
         </BtnBox>
       </MediaBox>
       {response && <Feedback response={response} />}
-    </U.Sub6ColGrid>
+    </>
   );
 };
 
