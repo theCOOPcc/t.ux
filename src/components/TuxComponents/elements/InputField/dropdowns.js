@@ -40,18 +40,22 @@ export const DropDownLi = styled(StyledLi)`
 `;
 
 export const SubA = styled.a`
-  color: black;
+  color: #565656;
   padding: 12px 16px;
+  background-color: #FCFCFC;
   text-decoration: none;
   display: block;
   text-align: left;
   font: ${pop_reg};
+  font-weight: 300;
+  font-style: normal;
   font-size: 14px;
+  line-height: 21px;
   &:hover {
-    background-color: rgba(120, 214, 218, 0.15);
+    background-color: #EBF9F9;
     /* font: ${pop_semiBold}; */
-    font-size: 14px;
     font-style: italic;
+    font-weight: 400;
     line-height: 21px;
     color: ${tux_primart} !important;
     border: 1px solid ${dark_grey};
