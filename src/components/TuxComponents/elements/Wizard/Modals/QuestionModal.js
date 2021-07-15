@@ -52,3 +52,17 @@ export const CreateButton = styled.button`
   cursor: pointer;
   /* color: #274D4F; */
 `
+
+export const X_Button = styled.button`
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+`
+export const X_Image = styled.img`
+
+`

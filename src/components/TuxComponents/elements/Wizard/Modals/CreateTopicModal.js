@@ -65,7 +65,7 @@ export const X_Button = styled.button`
   height: 20px;
   background: transparent;
   border: none;
-  
+  cursor: pointer;
 `
 
 export const X_Image = styled.img`

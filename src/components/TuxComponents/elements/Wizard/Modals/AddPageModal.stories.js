@@ -1,7 +1,9 @@
 import React from 'react'
-import {ModalWrapper, ModalHeader, ModalSubHeader, CreateButton, ModalInput, DropDownArrow} from './AddPageModal'
-import DownArrow from '../../../../../images/ActivityWizardImgs/DropDownArrow.svg'
-// import { DropdownMenuInputFields } from '../../InputField/dropdownMenuield.stories';
+import styled from 'styled-components'
+import {ModalWrapper, ModalHeader, ModalSubHeader, CreateButton, ModalInput, X_Button, X_Image} from './AddPageModal'
+import  { StyledUl, DropDownArrow, DropDownContent, DropDownLi, Input, Label, SubA}  from "../../InputField/dropdowns.stories";
+import XImage from '../../../../../images/icons/Grey_X.svg'
+import {DropdownMenu} from '../../InputField/dropdowns.stories'
 import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Modal",
@@ -9,12 +11,25 @@ export default {
 };
 
 
+const StyledWrapper = styled.div`
+  position: absolute;
+  top: 155px;
+  left: 118px;
+  padding: 0;
+  margin: 0;
+`
+
+
 export const AddPageModal = (args) => (
   <ModalWrapper>
+    <X_Button>
+      <X_Image src={XImage} />
+    </X_Button>
     <ModalHeader>Add Page</ModalHeader>
     <ModalSubHeader>Which page type would you like to add?</ModalSubHeader>
-  <ModalInput placeholder='Choose page type'></ModalInput>
-  <DropDownArrow src={DownArrow}></DropDownArrow>
+    <StyledWrapper >
+    <DropdownMenu {...args}></DropdownMenu>
+    </StyledWrapper>
     <CreateButton>Create</CreateButton>
   </ModalWrapper>
 )

@@ -20,6 +20,7 @@ export const Slider = styled.input`
   /* margin-top: 10px; */
   width: 713px;
   height: 30px;
+  
   &::-webkit-slider-runnable-track {
     height: 20px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -38,23 +39,23 @@ export const Slider = styled.input`
       hsl(360, 100%, 50%) 100%
     );
     border-radius: 25px;
-    border: 0px solid #000101;
+    border: 2px solid #F6F6F6;
   }
     &::-webkit-slider-thumb,
      -moz-range-thumb {
       height: 15px;
       width: 15px;
-      margin-top: 3px;
+      margin-top: 0px;
       background-color: transparent;
       border-radius: 50px;
-      border: 3.5px solid white;
+      border: 3.5px solid #f6f6f6;
       cursor: pointer;
       -webkit-appearance: none;
       &:hover {
         height: 25px;
         width: 25px;
         border-radius: 50px;
-        border: 7px double white;
+        border: 7px double  #f6f6f6;
         cursor: pointer;
         -webkit-appearance: none;
         margin-top: -3px;
@@ -62,7 +63,7 @@ export const Slider = styled.input`
       &:active {
         height: 25px;
         width: 25px;
-        border: 4px solid white;
+        border: 4px solid  #f6f6f6;
         box-shadow: 6px 6px 6px rgba(0,0,0,.5);
         }
       }
