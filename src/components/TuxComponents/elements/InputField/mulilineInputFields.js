@@ -1,6 +1,14 @@
 import styled, { css } from "styled-components";
 import { pop_reg } from "../../utilities/Type";
-import { tux_red, medium_grey, tux_primart, success_grey, dark_grey, text_black, white } from '../../utilities/Colors'
+import {
+  tux_red,
+  medium_grey,
+  tux_primart,
+  success_grey,
+  dark_grey,
+  text_black,
+  true_white,
+} from "../../utilities/Colors";
 export const Wrapper = styled.div`
   position: relative;
 `;
@@ -18,7 +26,7 @@ export const ErrorMessage = styled.p`
     css`
       top: 160px;
     `}
-    ${(props) =>
+  ${(props) =>
     props.narrow &&
     css`
       top: 125px;
@@ -43,7 +51,7 @@ export const Error = styled.img`
       top: -13px;
       }
     `}
-    ${(props) =>
+  ${(props) =>
     props.narrow &&
     css`
       position: absolute;
@@ -86,7 +94,7 @@ export const Input = styled.textarea`
     props.disabled &&
     css`
       border: 1px solid ${success_grey};
-      background-color: ${white};
+      background-color: ${true_white};
     `}
   ${(props) =>
     props.active &&
@@ -142,7 +150,7 @@ export const Label = styled.label`
       line-height: 15px;
       padding: 0px 5px 0 5px;
       color: ${tux_primart};
-      background-color: ${white};
+      background-color: ${true_white};
     `}
   //DISABLED
   ${(props) =>
@@ -166,7 +174,7 @@ export const Label = styled.label`
       line-height: 15px;
       color: ${dark_grey};
       padding: 0px 5px 0 5px;
-      background-color: ${white};
+      background-color: ${true_white};
     `}
     //ERROR
     ${(props) =>
@@ -177,7 +185,26 @@ export const Label = styled.label`
       font-size: 10px;
       line-height: 15px;
       color: ${tux_red};
-      background-color: ${white};
+      background-color: ${true_white};
       padding: 0px 5px 0 5px;
+    `}
+`;
+
+export const CharCount1 = styled.div`
+  position: absolute;
+  left: 900px;
+  bottom: 5.16px;
+  width: 30px;
+  height: 13px;
+  font-size: 10px;
+  ${(props) =>
+    props.narrow &&
+    css`
+      left: 199px;
+    `}
+  ${(props) =>
+    props.wide &&
+    css`
+      left:800px;
     `}
 `;

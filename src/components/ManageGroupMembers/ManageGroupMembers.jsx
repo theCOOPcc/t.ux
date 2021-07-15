@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
 import { ManagerContext } from '../../contexts/ManagerContext';
-import * as U from '../../components/TuxComponents/UniversalComponents';
 import styled from 'styled-components';
 import CreateGroup from '../../components/CreateGroup/CreateGroup';
 import ModifyGroup from '../ModifyGroup/ModifyGroup';

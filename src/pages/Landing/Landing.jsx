@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button280 } from '../../components/TuxComponents/elements';
+import { PrimaryButton } from '../../components/TuxComponents/elements';
 import { Flex, pop_reg, grey_text  } from '../../components/TuxComponents/utilities';
-import * as U from '../../components/TuxComponents/UniversalComponents'
 
 
 // Going to be the TUX landing page.
@@ -17,7 +16,7 @@ const Landing = (props) => {
             A new way to help power the UX Learning Experience
           </Text>
           <a href='http://www.thecoop.cc'>
-            <Button280>More Information</Button280>
+            <PrimaryButton>More Information</PrimaryButton>
           </a>
           <br></br>
           <Text>Coming Soon!</Text>

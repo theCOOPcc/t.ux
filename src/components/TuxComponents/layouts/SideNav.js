@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { SessionContext } from '../../../contexts/SessionContext';
 import styled, { css } from 'styled-components';
-import {Button280} from '../elements';
-import { tux_yellow, Flex, present_text, future_text, text_white, text_black, solid_border } from '../utilities';
+import {PrimaryButton} from '../elements';
+import { tux_yellow, Flex, present_text, future_text, true_white, text_black, solid_border } from '../utilities';
 
 
 const SideBarNav = () => {
@@ -83,26 +83,26 @@ const SideBarNav = () => {
         {started &&
         currentSectionIndex === sections.length - 1 &&
         currentModuleIndex === currentSection.modules.length - 1 ? (
-          <Button280 onClick={() => setStarted(false)}>
+          <PrimaryButton onClick={() => setStarted(false)}>
             Next
-          </Button280>
+          </PrimaryButton>
         ) : started && currentSectionIndex <= sections.length - 1 ? (
-          <Button280 onClick={() => handleCurrentModule()}>
+          <PrimaryButton onClick={() => handleCurrentModule()}>
             Next
-          </Button280>
+          </PrimaryButton>
         ) : (
           ''
         )}
 
-        {/* if started is now false and !finished then show Next Button280 , which will change finished to true */}
+        {/* if started is now false and !finished then show Next PrimaryButton , which will change finished to true */}
         {started === false && finished === null && (
-          <Button280 onClick={() => setFinished(true)}>
+          <PrimaryButton onClick={() => setFinished(true)}>
             Next
-          </Button280>
+          </PrimaryButton>
         )}
-        {/* if started is false and finished equals false then show end Button280 */}
+        {/* if started is false and finished equals false then show end PrimaryButton */}
         {started === false && finished === true && (
-          <Button280>End</Button280>
+          <PrimaryButton>End</PrimaryButton>
         )}
       </SideBar>
     </SideBarParent>
@@ -124,7 +124,7 @@ const SideBarParent = styled.article`
 /*---------- The SideBar Itself ----------*/
 const SideBar = styled.article`
   grid-row: 1 / span 1;
-  background-color: ${text_white};
+  background-color: ${true_white};
   height: calc(100vh - 159px);
   ${Flex({ai:'center',fd:'column'})};
   border: var(--solid-border);

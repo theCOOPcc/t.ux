@@ -1,13 +1,12 @@
 import styled, { css } from 'styled-components';
 import React, { useState } from 'react'
 import {
-  primary_default,
+  tux_blue,
   disable_btn,
   enable_btn,
   enable_hover,
   google_hover,
   disable_g_btn,
-  g_focus,
   primary_text,
   primary_hover,
   pressed_btn,
@@ -17,8 +16,8 @@ import {
   small_nav_default,
   small_nav_hover,
   small_nav_pressed,
-  small_nav_disabled, tux_grey, tux_red
-} from "../../utilities/Colors";
+  small_nav_disabled, tux_grey, tux_red, true_white
+} from "../../utilities";
 
 import {
   btn_active_shadow,
@@ -37,7 +36,7 @@ export const PrimaryButton = styled.button`
   height: 50px;
   border: none;
   border-radius: 5px;
-  background: ${primary_default};
+  background: ${tux_blue};
   padding: 12px 0;
   margin: 17px 8px;
   color: ${primary_text};
@@ -54,7 +53,7 @@ export const PrimaryButton = styled.button`
   ${(props) =>
     props.focus &&
     css`
-      background-color: ${primary_default};
+      background-color: ${tux_blue};
       &:hover {
         background-color: ${primary_hover};
       }
@@ -208,10 +207,10 @@ export const GoogleBox = styled.button`
   ${(props) =>
     props.focus &&
     css`
-      background-color: ${g_focus};
+      background-color: ${true_white};
       box-shadow: 0 0 0 6px ${g_focus_box};
       &:hover {
-        background-color: ${g_focus};
+        background-color: ${true_white};
       }
     `}
   // Disabled
