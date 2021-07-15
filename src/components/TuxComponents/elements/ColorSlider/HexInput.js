@@ -14,6 +14,12 @@ export const HexBox = styled.input`
   font-size: 18px;
   padding-left: 10px;
   box-sizing: border-box;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+   opacity: 0.9;
+  }
   ${props => props.hover && css`
     opacity: 0.8;
   `}

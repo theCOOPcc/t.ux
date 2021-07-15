@@ -47,7 +47,7 @@ export const ObjInputs = (args) => {
     let error3 = document.querySelector('.error3');
 
     if (charCount1 >= 200) {
-      warning1.innerText = "Maximum Char. Reached";
+      warning1.innerText = "Maximum Character Reached";
       text1.style.borderColor= tux_red;
       counter1.style.color = tux_red;
       error1.style.display = 'block'
