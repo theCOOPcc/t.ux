@@ -8,7 +8,7 @@ export default {
 };
 
 export const CreateTopicModal = (args) => (
-  <CreateTopicMod>
+  <CreateTopicMod className='createTopic'>
     <TuxFlower src='/images/tuxFlower.png' />
     <X_Button>
       <X_Image src={XImage} />
@@ -18,3 +18,4 @@ export const CreateTopicModal = (args) => (
     <CreateButton>Create</CreateButton>
   </CreateTopicMod>
 )
+

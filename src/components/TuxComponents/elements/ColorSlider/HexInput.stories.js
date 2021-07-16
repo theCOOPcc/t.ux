@@ -7,7 +7,7 @@ export default {
 };
 
 export const Hex = (args) => (
-  <HexBox type='number' {...args}></HexBox>
+  <HexBox className='hexBox' type='number' {...args}></HexBox>
 )
 
 

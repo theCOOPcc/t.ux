@@ -85,3 +85,5 @@ export const TuxFlower = styled.img`
   background: #FFFFFF;
   box-sizing: border-box;
 `;
+
+

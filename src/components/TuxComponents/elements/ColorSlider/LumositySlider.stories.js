@@ -7,5 +7,6 @@ export default {
 };
 
 export const LumSlider = () => (
-  <Lumosity type='range' ></Lumosity>
+  <Lumosity className='lumosity' type='range' ></Lumosity>
 )
+

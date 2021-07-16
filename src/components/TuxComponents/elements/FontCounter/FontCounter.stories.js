@@ -7,7 +7,6 @@ export default {
 };
 
 
-
 export const FontCounter = () => {
   // To represent the value within the counter, in order to connect it to the up and down arrows
   const [counterBoxValue, setCounterBoxValue] = useState(0);
@@ -54,3 +53,4 @@ export const FontCounter = () => {
 
   )
 }
+

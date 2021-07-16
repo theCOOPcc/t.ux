@@ -12,7 +12,6 @@ export default {
   decorators: [withDesign],
 };
 
-
 const StyledWrapper = styled.div`
   position: absolute;
   top: 155px;
@@ -21,10 +20,8 @@ const StyledWrapper = styled.div`
   margin: 0;
 `
 
-
 export const AddPageModal = (args) => (
-  <ModalWrapper>
-
+  <ModalWrapper className='addPageModal'>
     <TuxFlower src='/images/tuxFlower.png'></TuxFlower>
 
     <X_Button>
@@ -38,3 +35,4 @@ export const AddPageModal = (args) => (
     <CreateButton>Create</CreateButton>
   </ModalWrapper>
 )
+

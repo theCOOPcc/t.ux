@@ -54,3 +54,4 @@ export const Lumosity = styled.input`
       }
     }
 `
+
