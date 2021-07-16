@@ -53,6 +53,7 @@ import GreenDownArrow from '../../../../images/ActivityWizardImgs/GreenArrowDown
 
  `
 export const CounterBox = styled.input`
+ padding-left: 10px;
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -67,6 +68,7 @@ export const CounterBox = styled.input`
   font-size: 20px;
   line-height: 24px;
   color: #FFF;
+ 
   /* border: none; */
   border-radius: 5px 0 0 5px ;
   &:focus {
