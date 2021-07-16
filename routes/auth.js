@@ -11,26 +11,27 @@ router.get(
   passport.authenticate('google', { scope: ['profile', 'email'] })
 );
 router.get(
-  '/google/oauth2callback',
-  passport.authenticate(
-    'google'
-    ,
-    {
-        // we need to dial in our redirect URLs once users have been authenticated: what page do they land on?
-        // successRedirect: 
-        // "http://localhost:3000/activity/heuristics",
-        // "http://taketux.io/activity/heuristics",
-        // "https://thecoop-tux.herokuapp.com/activity/heuristics/",
-        failureRedirect: "/login",
-    }
-  ), function (req, res) {
-    console.log('AUTHENTICATED USER', req.user)
-    res.redirect(
-      'http://localhost:3000/activity/heuristics'
-      // "http://23carnies.com/activity/heuristics"
-      // 'http://thecoop-tux.herokuapp.com/activity/heuristics'
-    );
-  }
+  '/google',
+  passport.authenticate('google', { scope: ['profile', 'email'] })
+);
+router.get(
+  "/google/oauth2callback",
+  passport.authenticate("google", {
+    // we need to dial in our redirect URLs once users have been authenticated: what page do they land on?
+    successRedirect: "/activity/heuristics",
+    // "http://localhost:3000/activity/heuristics",
+    // "http://taketux.io/activity/heuristics",
+    // "https://thecoop-tux.herokuapp.com/activity/heuristics/",
+    failureRedirect: "/login",
+  })
+  // , function (req, res) {
+  //   console.log('AUTHENTICATED USER', req.user)
+  //   res.redirect(
+  //     'http://localhost:3000/activity/heuristics'
+  //     // "http://23carnies.com/activity/heuristics"
+  //     // 'http://thecoop-tux.herokuapp.com/activity/heuristics'
+  //   );
+  // }
 );
 
 router.get('/logout', function (req, res) {
