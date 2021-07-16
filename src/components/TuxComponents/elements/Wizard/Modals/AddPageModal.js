@@ -60,27 +60,6 @@ export const CreateButton = styled.button`
   /* color: #274D4F; */
 `
 
-// export const ModalInput = styled.input`
-//   position: absolute;
-//   /* padding-left: 12px; */
-//   top: 155px;
-//   left: 118px;
-//   width: 280px;
-//   height: 48px;
-//   border: 1px solid #666666;
-//   box-sizing: border-box;
-//   border-radius: 10px;
-// `
-
-// export const DropDownArrow = styled.img`
-//   position: absolute;
-//   top: 176.34px;
-//   right: 133.02px;
-//   width: 13.98px;
-//   height: 8.9px;
-//   cursor: pointer;
-// `
-
 export const X_Button = styled.button`
   position: absolute;
   right: 22px;
