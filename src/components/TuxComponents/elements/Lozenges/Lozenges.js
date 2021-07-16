@@ -1,44 +1,37 @@
-import styled, { css } from 'styled-components';
-import {
-    complete,
-    in_progress,
-    true_white,
-    not_started
-} from "../../utilities/Colors";
-
-//Lozenge
-export const Lozenge = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    line-height: 125%;
-    width: 125px;
-    height: 24px;
-    radius: 3px;
-    border-radius: 3px;
-    font: 400 14px "Poppins", sans-serif;
-    align: center;
-    ${(props) =>
-        props.complete &&
-        css`
-            background: ${complete};
-            color: ${true_white};
-            `}
-
-    ${(props) =>
-        props.progress &&
-        css`
-            background: ${in_progress};
-            color: ${true_white};
-            `}
-    ${(props) => 
-        props.notStarted &&
-        css`
-        color: ${not_started};
-        `}
-
-`
-
-
-
+import React from "react";
+import styled, { css } from "styled-components";
+import {
+  complete,
+  in_progress,
+  true_white,
+  not_started,
+  pop_reg,
+} from "../../utilities";
+export const Lozenges = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: ${pop_reg};
+  font-size: 16px;
+  height: 24px;
+  width: 125px;
+  line-height: 24px;
+  border-radius: 3px;
+  ${(props) =>
+    props.complete &&
+    css`
+      background-color: ${complete};
+      color: ${true_white};
+    `}
+  ${(props) =>
+    props.progress &&
+    css`
+      background-color: ${in_progress};
+      color: ${true_white};
+    `}
+    ${(props) =>
+    props.notStarted &&
+    css`
+      color: ${not_started};
+    `}
+`;
