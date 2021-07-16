@@ -31,14 +31,15 @@ export const Lumosity = styled.input`
       width: 20px;
       background-color: transparent;
       border-radius: 50px;
-      border: 3.5px solid white;
+      border: 3.5px solid #f6f6f6;
       cursor: pointer;
+      z-index: 1;
       -webkit-appearance: none;
       &:hover {
         height: 30px;
         width: 30px;
         border-radius: 50px;
-        border: 6px double white;
+        border: 6px double #f6f6f6;
         cursor: pointer;
         -webkit-appearance: none;
         margin-top: -5px;
@@ -46,7 +47,7 @@ export const Lumosity = styled.input`
       &:active {
         height: 30px;
         width: 30px;
-        border: 4px solid white;
+        border: 4px solid #f6f6f6;
         box-shadow: 6px 6px 6px rgba(0,0,0,.5);
 
         }

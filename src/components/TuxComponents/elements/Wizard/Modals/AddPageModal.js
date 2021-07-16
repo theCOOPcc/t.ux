@@ -3,8 +3,6 @@ import { pop_thick, pop_reg,pop_bolder } from '../../../utilities/Type'
 
 
 export const ModalWrapper = styled.div`
-  margin: 0;
-  padding: 0;
   position: relative;
   width: 515px;
   height: 486px;
@@ -12,6 +10,8 @@ export const ModalWrapper = styled.div`
   box-sizing: border-box;
   box-shadow: 0px 4px 9px rgba(0,0,0,0.25);
   border-radius: 10px;
+  margin: 0;
+  padding: 0;
 `
 
 export const ModalHeader = styled.p`
@@ -59,23 +59,38 @@ export const CreateButton = styled.button`
   /* color: #274D4F; */
 `
 
-export const ModalInput = styled.input`
+// export const ModalInput = styled.input`
+//   position: absolute;
+//   /* padding-left: 12px; */
+//   top: 155px;
+//   left: 118px;
+//   width: 280px;
+//   height: 48px;
+//   border: 1px solid #666666;
+//   box-sizing: border-box;
+//   border-radius: 10px;
+// `
+
+// export const DropDownArrow = styled.img`
+//   position: absolute;
+//   top: 176.34px;
+//   right: 133.02px;
+//   width: 13.98px;
+//   height: 8.9px;
+//   cursor: pointer;
+// `
+
+export const X_Button = styled.button`
   position: absolute;
-  padding-left: 12px;
-  top: 155px;
-  left: 118px;
-  width: 280px;
-  height: 48px;
-  border: 1px solid #666666;
-  box-sizing: border-box;
-  border-radius: 10px;
+  right: 22px;
+  top: 22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 `
 
-export const DropDownArrow = styled.img`
-  position: absolute;
-  top: 176.34px;
-  right: 133.02px;
-  width: 13.98px;
-  height: 8.9px;
-  cursor: pointer;
+export const X_Image = styled.img`
+
 `

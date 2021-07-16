@@ -3,6 +3,11 @@ import { pop_bolder } from '../../utilities/Type'
 
 
 export const HexBox = styled.input`
+&::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
   width: 128px;
   height: 42px;
   border-radius: 5px;
@@ -17,7 +22,7 @@ export const HexBox = styled.input`
   &:hover {
     opacity: 0.8;
   }
-  &:active {
+  &:focus {
    opacity: 0.9;
   }
   ${props => props.hover && css`

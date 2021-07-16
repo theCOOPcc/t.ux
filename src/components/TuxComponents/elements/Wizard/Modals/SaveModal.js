@@ -73,3 +73,19 @@ export const DontSaveButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
 `
+
+export const X_Button = styled.button`
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  
+`
+
+export const X_Image = styled.img`
+
+`
