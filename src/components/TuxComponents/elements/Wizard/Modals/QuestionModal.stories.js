@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { QuestionHeader, QuestionModalWrapper, QuestionSubHeader,CreateButton, X_Button, X_Image } from './QuestionModal';
+import { QuestionHeader, QuestionModalWrapper, QuestionSubHeader,CreateButton, X_Button, X_Image, TuxFlower } from './QuestionModal';
 import {DropdownMenu} from '../../InputField/dropdowns.stories'
 import XImage from '../../../../../images/icons/Grey_X.svg'
 import { withDesign } from "storybook-addon-designs";
@@ -19,6 +19,7 @@ const StyledWrapper = styled.div`
 
 export const QuestionModal = () => (
   <QuestionModalWrapper>
+    <TuxFlower src='/images/tuxFlower.png' />
     <X_Button>
       <X_Image src={XImage}></X_Image>
     </X_Button>
