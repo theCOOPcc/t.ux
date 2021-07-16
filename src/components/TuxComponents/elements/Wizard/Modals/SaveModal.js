@@ -43,7 +43,7 @@ export const SaveButton = styled.button`
   position: absolute;
   padding: 0;
   margin: 0;
-  bottom: 110px;
+  top: 242px;
   left: 82px;
   width: 280px;
   height: 50px;
@@ -59,7 +59,7 @@ export const SaveButton = styled.button`
 `
 export const DontSaveButton = styled.button`
   position: absolute;
-  bottom: 40px;
+  top: 312px;
   left: 73px;
   width: 280px;
   height: 50px;
