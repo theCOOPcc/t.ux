@@ -12,7 +12,6 @@ export default {
   decorators: [withDesign],
 };
 
-
 const StyledWrapper = styled.div`
   position: absolute;
   top: 155px;
@@ -20,7 +19,6 @@ const StyledWrapper = styled.div`
   padding: 0;
   margin: 0;
 `
-
 
 export const AddPageModal = (args) => (
   <ModalWrapper className='addPageModal'>
