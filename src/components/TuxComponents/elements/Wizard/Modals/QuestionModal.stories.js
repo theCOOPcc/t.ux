@@ -18,7 +18,7 @@ const StyledWrapper = styled.div`
 `
 
 export const QuestionModal = () => (
-  <QuestionModalWrapper>
+  <QuestionModalWrapper className='questionModal'>
     <TuxFlower src='/images/tuxFlower.png' />
     <X_Button>
       <X_Image src={XImage}></X_Image>

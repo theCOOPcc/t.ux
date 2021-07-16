@@ -8,7 +8,7 @@ export default {
 };
 
 export const SaveModal = () => (
-  <SaveModalWrapper>
+  <SaveModalWrapper className='saveModal'>
     <X_Button>
       <X_Image src={XImage}/>
     </X_Button>

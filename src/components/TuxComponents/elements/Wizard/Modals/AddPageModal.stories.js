@@ -21,7 +21,7 @@ const StyledWrapper = styled.div`
 
 
 export const AddPageModal = (args) => (
-  <ModalWrapper>
+  <ModalWrapper className='addPageModal'>
     <TuxFlower src='/images/tuxFlower.png'></TuxFlower>
     <X_Button>
       <X_Image src={XImage} />
