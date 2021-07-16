@@ -3,6 +3,7 @@ import { pop_thick, pop_reg } from '../../../utilities/Type'
 
 export const CreateTopicMod = styled.div`
 position: relative;
+top: 75px;
   width: 426px;
   height: 413.7px;
   border: 1px solid #BBBBBB;
@@ -71,3 +72,14 @@ export const X_Button = styled.button`
 export const X_Image = styled.img`
 
 `
+
+export const TuxFlower = styled.img`
+	width: 132px;
+	z-index: 1;
+  position: absolute;
+  top: -85px;
+  left: 140px;
+	border-radius: 50%;
+  background: #FFFFFF;
+  box-sizing: border-box;
+`;

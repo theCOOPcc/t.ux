@@ -1,5 +1,5 @@
 import React from 'react'
-import { CreateTopicMod, CreateTopicHeader, CreateTopicSubHeader, CreateButton, X_Button, X_Image } from './CreateTopicModal';
+import { CreateTopicMod, CreateTopicHeader, CreateTopicSubHeader, CreateButton, X_Button, X_Image, TuxFlower } from './CreateTopicModal';
 import XImage from '../../../../../images/icons/Grey_X.svg'
 import { withDesign } from "storybook-addon-designs";
 export default {
@@ -9,6 +9,7 @@ export default {
 
 export const CreateTopicModal = (args) => (
   <CreateTopicMod>
+    <TuxFlower src='/images/tuxFlower.png' />
     <X_Button>
       <X_Image src={XImage} />
     </X_Button>

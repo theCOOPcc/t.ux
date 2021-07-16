@@ -4,6 +4,7 @@ import { pop_thick, pop_reg,pop_bolder } from '../../../utilities/Type'
 
 export const ModalWrapper = styled.div`
   position: relative;
+  top: 75px;
   width: 515px;
   height: 486px;
   border: 1px solid #BBBBBB;
@@ -59,27 +60,6 @@ export const CreateButton = styled.button`
   /* color: #274D4F; */
 `
 
-// export const ModalInput = styled.input`
-//   position: absolute;
-//   /* padding-left: 12px; */
-//   top: 155px;
-//   left: 118px;
-//   width: 280px;
-//   height: 48px;
-//   border: 1px solid #666666;
-//   box-sizing: border-box;
-//   border-radius: 10px;
-// `
-
-// export const DropDownArrow = styled.img`
-//   position: absolute;
-//   top: 176.34px;
-//   right: 133.02px;
-//   width: 13.98px;
-//   height: 8.9px;
-//   cursor: pointer;
-// `
-
 export const X_Button = styled.button`
   position: absolute;
   right: 22px;
@@ -94,3 +74,14 @@ export const X_Button = styled.button`
 export const X_Image = styled.img`
 
 `
+
+export const TuxFlower = styled.img`
+	width: 132px;
+	z-index: 1;
+  position: absolute;
+  top: -85px;
+  left: 188px;
+	border-radius: 50%;
+  background: #FFFFFF;
+  box-sizing: border-box;
+`;

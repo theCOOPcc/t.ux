@@ -3,6 +3,7 @@ import { pop_reg, pop_thick, pop_bolder } from '../../../utilities/Type'
 
 export const QuestionModalWrapper = styled.div`
   position: relative;
+  top: 75px;
   width: 515px;
   height: 486px;
   border: 1px solid #BBBBBB;
@@ -65,4 +66,18 @@ export const X_Button = styled.button`
 `
 export const X_Image = styled.img`
 
+
 `
+
+export const TuxFlower = styled.img`
+	width: 132px;
+	z-index: 1;
+  position: absolute;
+  top: -85px;
+  left: 188px;
+	border-radius: 50%;
+  background: #FFFFFF;
+  box-sizing: border-box;
+`;
+
+

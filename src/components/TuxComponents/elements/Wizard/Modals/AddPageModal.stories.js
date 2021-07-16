@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import {ModalWrapper, ModalHeader, ModalSubHeader, CreateButton, ModalInput, X_Button, X_Image} from './AddPageModal'
+
+import {ModalWrapper, ModalHeader, ModalSubHeader, CreateButton, ModalInput, X_Button, X_Image, TuxFlower} from './AddPageModal'
+
 import  { StyledUl, DropDownArrow, DropDownContent, DropDownLi, Input, Label, SubA}  from "../../InputField/dropdowns.stories";
 import XImage from '../../../../../images/icons/Grey_X.svg'
 import {DropdownMenu} from '../../InputField/dropdowns.stories'
@@ -22,6 +24,9 @@ const StyledWrapper = styled.div`
 
 export const AddPageModal = (args) => (
   <ModalWrapper>
+
+    <TuxFlower src='/images/tuxFlower.png'></TuxFlower>
+
     <X_Button>
       <X_Image src={XImage} />
     </X_Button>
