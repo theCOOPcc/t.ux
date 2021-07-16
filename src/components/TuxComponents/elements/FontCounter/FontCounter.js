@@ -50,7 +50,7 @@ import GreenDownArrow from '../../../../images/ActivityWizardImgs/GreenArrowDown
   &:active {
     background-image: url(${GreenDownArrow});
   }
-
+ 
  `
 export const CounterBox = styled.input`
  padding-left: 10px;
