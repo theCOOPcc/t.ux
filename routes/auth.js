@@ -11,10 +11,6 @@ router.get(
   passport.authenticate('google', { scope: ['profile', 'email'] })
 );
 router.get(
-  '/google',
-  passport.authenticate('google', { scope: ['profile', 'email'] })
-);
-router.get(
   "/google/oauth2callback",
   passport.authenticate("google", {
     // we need to dial in our redirect URLs once users have been authenticated: what page do they land on?
