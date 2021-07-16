@@ -66,6 +66,7 @@ export const X_Button = styled.button`
 `
 export const X_Image = styled.img`
 
+
 `
 
 export const TuxFlower = styled.img`
@@ -78,3 +79,5 @@ export const TuxFlower = styled.img`
   background: #FFFFFF;
   box-sizing: border-box;
 `;
+
+
