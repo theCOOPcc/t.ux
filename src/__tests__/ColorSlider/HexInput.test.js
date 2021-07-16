@@ -8,3 +8,6 @@ it('should render', () => {
   console.log(wrapper.debug())
   expect(wrapper.find('.hexBox')).toHaveLength(1)
 });
+
+
+

@@ -19,3 +19,4 @@ export const SaveModal = () => (
     <DontSaveButton>Don't Save</DontSaveButton>
   </SaveModalWrapper>
 )
+

@@ -36,3 +36,4 @@ export const QuestionModal = () => (
     <CreateButton>Create</CreateButton>
   </QuestionModalWrapper>
 )
+

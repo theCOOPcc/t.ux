@@ -13,3 +13,4 @@ export const Slider2 = () => (
   <Slider type='range' min="0" max="360" className='slider'></Slider>
   </>
 )
+

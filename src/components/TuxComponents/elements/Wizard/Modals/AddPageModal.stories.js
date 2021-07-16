@@ -35,3 +35,4 @@ export const AddPageModal = (args) => (
     <CreateButton>Create</CreateButton>
   </ModalWrapper>
 )
+

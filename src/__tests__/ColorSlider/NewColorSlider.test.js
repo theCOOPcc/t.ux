@@ -8,3 +8,4 @@ it('should render', () => {
   console.log(wrapper.debug())
   expect(wrapper.find('.slider')).toHaveLength(1)
 });
+

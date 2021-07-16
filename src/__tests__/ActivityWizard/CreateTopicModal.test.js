@@ -8,3 +8,4 @@ it('should render', () => {
   console.log(wrapper.debug())
   expect(wrapper.find('.createTopic')).toHaveLength(1)
 });
+

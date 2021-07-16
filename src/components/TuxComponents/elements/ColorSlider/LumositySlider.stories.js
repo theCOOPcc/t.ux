@@ -9,3 +9,4 @@ export default {
 export const LumSlider = () => (
   <Lumosity className='lumosity' type='range' ></Lumosity>
 )
+
