@@ -33,5 +33,6 @@ export const Lozenges = styled.div`
     props.notStarted &&
     css`
       color: ${not_started};
+      width: 130px;
     `}
 `;
