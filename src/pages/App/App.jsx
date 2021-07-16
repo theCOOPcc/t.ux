@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext";
 import { Route } from "react-router-dom";
 import Signup from "../Signup/Signup";
 import Login from "../Login/Login";
@@ -19,11 +20,12 @@ import Timer from "react-compound-timer";
 const activities = [{ name: "heuristics", id: "6009f75ea00e3f38a7c65c7d" }];
 
 const App = () => {
+	const {user, handleLogout} = useContext(UserContext)
 	return (
 		<>
 			{/* // ! Made a copy of NavBar outside of the TuxComponents folder and inside of the components folder to ensure that if we remove the TuxComponents that our Nav component doesnt disappear. */}
 			{/* // TODO: Make sure to only render the NavBar on the pages that need it. The Landing page will not need a NavBar. */}
-			<NavBar />
+			<NavBar user={user} handleLogout={handleLogout} />
 
 			{/* //TODO: The base route should direct you to the landing page and once the user is logged in redirect to the users homepage. */}
 			{/* <Route
