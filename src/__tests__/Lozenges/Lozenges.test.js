@@ -1,14 +1,14 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { LozengeTest } from "../../components/TuxComponents/elements/Lozenges/Lozenges.stories"
+import { Lozenge } from "../../components/TuxComponents/elements/Lozenges/Lozenges.stories";
 
-const wrapper = shallow(<LozengeTest/>)
+const wrapper = shallow(<Lozenge />);
 
 it('should render', () => {
     expect(wrapper.find('.lozengesTest')).toHaveLength(1)
 })
 
-xit('Should have ""  as text', () => {
+it('Should have ""  as text', () => {
     const lozengeText = wrapper.find(".lozengesTest").text();
-    expect(lozengeText).toBe("        ");
+    expect(lozengeText).toBe("");
 });
