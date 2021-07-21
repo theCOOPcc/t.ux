@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import React, { useState } from 'react'
+import styled, { css } from "styled-components";
+import React, { useState } from "react";
 import {
   tux_blue,
   disable_btn,
@@ -16,10 +16,19 @@ import {
   small_nav_default,
   small_nav_hover,
   small_nav_pressed,
-  small_nav_disabled, tux_grey, tux_red, true_white
+  small_nav_disabled,
+  tux_grey,
+  tux_red,
+  true_white,
 } from "../../utilities";
 
 import {
+  pop_semiBold,
+  Flex,
+  solid_border,
+  present_text,
+  future_text,
+  text_black,
   btn_active_shadow,
   input_border,
   pop_thick,
@@ -66,7 +75,7 @@ export const PrimaryButton = styled.button`
       &:hover {
         background-color: ${primary_hover};
       }
-  `}
+    `}
   // Disabled
     ${(props) =>
     props.disabled &&
@@ -235,69 +244,73 @@ export const GoogleBox = styled.button`
 `;
 
 export const CopyLinkDiv = styled.div`
-	width: 408.76px;
-	height: 90px;
-	display: flex;
-	flex-direction: column;
-	${(props) =>
-		props.depressed &&
-		css`
-			width: 390px;
-		`}
+  width: 408.76px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  ${(props) =>
+    props.depressed &&
+    css`
+      width: 390px;
+    `}
 `;
 
 export const CopyLinkImg = styled.img`
-	width: 28px;
-	height: 28.64px;
-	margin: 13px;
+  width: 28px;
+  height: 28.64px;
+  margin: 13px;
 `;
 
 export const CopyLinkP = styled.p`
-	color: ${tux_red};
-	font: 600 18px "Poppins", sans-serif;
-	line-height: 27px;
-	text-align: center;
+  color: ${tux_red};
+  font: 600 18px "Poppins", sans-serif;
+  line-height: 27px;
+  text-align: center;
   margin: 6px;
 `;
 
 export const CopyLinkBtn = styled.button`
-	width: 100%;
-	height: 54px;
-	border: none;
-	border-radius: 5px;
-	background: #ffffff;
-	padding: 12px 0;
-	margin: 17px 8px;
-	${FlexCenter};
-	margin-bottom: 10px;
-	box-shadow: ${common_shadow};
-	color: ${tux_grey};
-	font: 700 18px "Poppins", sans-serif;
-	cursor: pointer;
-	${(props) =>
-		props.depressed &&
-		css`
-			width: 390px;
-		`}
+  width: 100%;
+  height: 54px;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff;
+  padding: 12px 0;
+  margin: 17px 8px;
+  ${FlexCenter};
+  margin-bottom: 10px;
+  box-shadow: ${common_shadow};
+  color: ${tux_grey};
+  font: 700 18px "Poppins", sans-serif;
+  cursor: pointer;
+  ${(props) =>
+    props.depressed &&
+    css`
+      width: 390px;
+    `}
 `;
 
-export const CopyLinkButton = ({...args}) => {
-	const [clicked, setClicked] = useState(false);
+export const CopyLinkButton = ({ ...args }) => {
+  const [clicked, setClicked] = useState(false);
 
-	return (
-		<CopyLinkDiv {...args}>
-			<CopyLinkBtn
+  return (
+    <CopyLinkDiv {...args}>
+      <CopyLinkBtn
         className="copyLinkBtnTest"
-				onClick={() => {
-					setClicked(!clicked);
-				}}>
-				Copy Link 
-        <CopyLinkImg className="copyLinkBtnTestImg" src="/images/CopyLink.png" />
-			</CopyLinkBtn>
-			{clicked ? <CopyLinkP>link copied to clipboard</CopyLinkP> : <p></p>}
-		</CopyLinkDiv>
-	);
-}; 
+        onClick={() => {
+          setClicked(!clicked);
+        }}
+      >
+        Copy Link
+        <CopyLinkImg
+          className="copyLinkBtnTestImg"
+          src="/images/CopyLink.png"
+        />
+      </CopyLinkBtn>
+      {clicked ? <CopyLinkP>link copied to clipboard</CopyLinkP> : <p></p>}
+    </CopyLinkDiv>
+  );
+};
 
 //Button Nav Small
 
@@ -417,8 +430,6 @@ export const Button = styled.button`
     `}
 `;
 
-
-
 // This was the "WideBtn", 280px
 export const Button280 = styled.button`
   border: none;
@@ -504,7 +515,7 @@ export const DisabledBtn = styled(Button280)`
 `;
 
 export const TextBtn = styled.button`
-/* positioning */
+  /* positioning */
 
   position: absolute;
   border: none;
@@ -515,48 +526,46 @@ export const TextBtn = styled.button`
   bottom: 12.61%;
   width: 71px;
   height: 18px;
-  
 
-/* Fonts */
+  /* Fonts */
   font: Poppins;
   font-weight: 500;
   font-style: normal;
   font-size: 14px;
   line-height: 18px;
-  
-/* Color */
+
+  /* Color */
   color: #222222;
   display: flex;
-  align-items:center;
+  align-items: center;
   text-align: center;
-  justify-content:center;
-  
-${(props) => 
-  props.hover && css`
-    text-decoration-line: underline;
-    cursor: pointer;
-  `
-}
- ${(props) =>
-  props.focus && css`
-    outline: none;
-    width: 71px;
-    height: 18px;
-    border: 1px solid rgba(60, 133, 130, 0.5);
-  `
- }
-  ${(props) => 
-    props.depressed && css`
-    text-align: justify;
-    color: #323239;
-    `
-  }
-  ${(props) => 
-    props.disabled && css`
-      color: #CCCCCC;
-    `
-  }
+  justify-content: center;
 
+  ${(props) =>
+    props.hover &&
+    css`
+      text-decoration-line: underline;
+      cursor: pointer;
+    `}
+  ${(props) =>
+    props.focus &&
+    css`
+      outline: none;
+      width: 71px;
+      height: 18px;
+      border: 1px solid rgba(60, 133, 130, 0.5);
+    `}
+  ${(props) =>
+    props.depressed &&
+    css`
+      text-align: justify;
+      color: #323239;
+    `}
+  ${(props) =>
+    props.disabled &&
+    css`
+      color: #cccccc;
+    `}
 `;
 
 export const LinkBtn = styled.a`
@@ -566,7 +575,7 @@ export const LinkBtn = styled.a`
   left: 4px;
   top: 4px;
   font-family: Poppins;
-  font-style:normal;
+  font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
@@ -574,28 +583,105 @@ export const LinkBtn = styled.a`
   align-items: center;
   text-align: center;
   text-decoration-line: underline;
-  color: #518E90;
-    ${(props) => 
-      props.hover &&
-      css`
+  color: #518e90;
+  ${(props) =>
+    props.hover &&
+    css`
       color: #A9CBCD
       cursor: pointer;
-      `
-      } 
-      ${(props) =>
-    props.disabled && css`
-    text-decoration-line: none;
-    color: #888888;
-    ` 
-      }
+      `}
+  ${(props) =>
+    props.disabled &&
+    css`
+      text-decoration-line: none;
+      color: #888888;
+    `}
     ${(props) =>
     props.focus &&
     css`
-      color: #A9CBCD
+      color: #a9cbcd;
     `}
-    ${(props) => 
-      props.depressed && css`
-       color: rgba(5, 0, 255, 0.75);
-      `
-    }
+    ${(props) =>
+    props.depressed &&
+    css`
+      color: rgba(5, 0, 255, 0.75);
+    `}
+`;
+
+export const SideBarAllText = styled.button`
+  background: transparent;
+  position: relative;
+  font-family:  'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  color: ${future_text};
+  /* color: ${text_black}; */
+  border: none;
+  border-bottom: ${solid_border};
+  width: 191px;
+  min-height: 50px;
+  height: 40px;
+  margin: 0 auto;
+  // border: black 3px solid;
+
+  }
+
+  ${(props) =>
+    props.past &&
+    css`
+      color: ${text_black};
+      /* color: ${future_text} */
+      font-weight: 600;
+    `}
+
+  ${(props) =>
+    props.present &&
+    css`
+      color: ${present_text};
+      font-weight: 600;
+    `}
+`;
+
+export const SubText = styled(SideBarAllText)`
+ 
+  font: ${pop_semiBold}
+  font-size: 14px;
+  padding-left: 13.57px;
+  border-bottom: ${solid_border};
+  margin-left: 21px;
+  ${(props) =>
+    props.present &&
+    css`
+      background-color: rgba(243, 120, 6, 0.1);
+      color: ${text_black};
+    `}
+`;
+
+export const Dot = styled.div`
+  display: none;
+  ${(props) =>
+    props.present &&
+    css`
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background-color: #f37806;
+      display: block;
+    `}
+`;
+
+export const DotContainer = styled.div`
+// border: solid 2px black;
+  height: 50px;
+  margin-left: 1.2rem;
+
+  ${Flex({ ai: "center", jc: "center" })}
+`;
+
+export const SubContainer = styled.div`
+  width: 238.88px;
+// border: black solid 2px;
+
+  ${Flex({ ai: "center", jc: "center" })}
 `;

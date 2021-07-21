@@ -54,15 +54,19 @@ const SideBarNav = () => {
                 
                 {section.modules.map((module,idx) => 
                   module.type === 'display' ? 
+                
                  
+                 <div style={{display: "flex"}}> 
                   <SubText
                     
                     {...displayCount++}
                     past={(idx < currentModuleIndex && index === currentSectionIndex)|| index < currentSectionIndex ? true : false}
                     present={currentSectionIndex === index && currentModuleIndex === idx}
+                   
                     disabled={idx > currentModuleIndex}
                     key={idx}
-                    >
+                    > <Dot/>
+
                       Learning Material {displayCount} </SubText>
                   :
                     <SubText
@@ -74,8 +78,10 @@ const SideBarNav = () => {
                     >
                       Question {questionCount}
                     </SubText>
+                    </div>
                 )}
               </SideBarText>
+              
             )
           )}
         </SideBarTextBox>
@@ -140,17 +146,22 @@ const SideBarTextBox = styled.section`
 
 const SideBarText = styled.button`
   background: transparent;
-  font: 500 16px 'Poppins', sans-serif;
+  position: relative;
+  font-family:  'Poppins', sans-serif;
+  font-size: 16px;
   line-height: 24px;
   text-align: left;
   color: ${future_text};
   /* color: ${text_black}; */
   border: none;
-  border-bottom: ${solid_border};
-  width: 239px;
+  // border-bottom: ${solid_border};
+  width: 191px;
   min-height: 50px;
   height: auto;
   margin: 0 auto;
+  // border: black 3px solid;
+  padding: 0.5rem 1rem ;
+  }
 
   ${(props) =>
     props.past &&
@@ -164,13 +175,42 @@ const SideBarText = styled.button`
     props.present &&
     css`
       color: ${present_text};
-      font-weight: 700;
+      font-weight: 600;
     `}
 `;
 
+
+
 const SubText = styled(SideBarText)`
   margin-left: 61px;
+  font-size: 14px;
+  padding-left: 13.57px;
+  border-bottom: ${solid_border};
+  ${(props) =>
+    props.present &&
+    css`
+    background-color: rgba(243, 120, 6, 0.1);
+    color: ${text_black};
+
+   
+    `}
+  
+    
 `;
+
+const Dot = styled.div`
+height: 8px;
+ width:8px;
+ border-radius: 50%;
+ background-color:  #F37806;
+${(props) =>
+  props.present &&
+  css`
+ 
+ 
+
+ 
+  `} `;
 
 const ColorBlock = styled.div`
   height: 5px;
