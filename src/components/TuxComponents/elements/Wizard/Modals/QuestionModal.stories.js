@@ -13,13 +13,13 @@ export default {
 
 const StyledWrapper = styled.div`
   position: absolute;
-  top: 165px;
+  top: 155px;
   left: 118px;
   padding: 0;
   margin: 0;
 `
 
-export const QuestionModal = () => (
+export const QuestionModal = (args) => (
   <QuestionModalWrapper className='questionModal'>
     <TuxFlower src='/images/tuxFlower.png' />
 
@@ -31,7 +31,7 @@ export const QuestionModal = () => (
       Which question would you like to add?
     </QuestionSubHeader>
     <StyledWrapper>
-      <DropdownMenu />
+      <DropdownMenu {...args} />
     </StyledWrapper>
     <CreateButton>Create</CreateButton>
   </QuestionModalWrapper>
