@@ -20,6 +20,8 @@ const StyledWrapper = styled.div`
   margin: 0;
 `
 
+
+
 export const AddPageModal = (args) => (
   <ModalWrapper className='addPageModal'>
     <TuxFlower src='/images/tuxFlower.png'></TuxFlower>
@@ -36,3 +38,6 @@ export const AddPageModal = (args) => (
   </ModalWrapper>
 )
 
+AddPageModal.args = {
+  hover: false,
+}

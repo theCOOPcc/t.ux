@@ -2,14 +2,16 @@ import styled from 'styled-components'
 import { pop_thick, pop_reg } from '../../../utilities/Type'
 
 export const CreateTopicMod = styled.div`
-position: relative;
-top: 75px;
+  position: relative;
+  top: 75px;
   width: 426px;
   height: 413.7px;
   border: 1px solid #BBBBBB;
   box-sizing: border-box;
   box-shadow:0px 4px 9px rgba(0, 0, 0, 0.25);
   border-radius:10px ;
+  &::after {
+  }
 `
 
 export const CreateTopicHeader = styled.p`
@@ -77,7 +79,7 @@ export const TuxFlower = styled.img`
 	width: 132px;
 	z-index: 1;
   position: absolute;
-  top: -85px;
+  top: -95px;
   left: 140px;
 	border-radius: 50%;
   background: #FFFFFF;

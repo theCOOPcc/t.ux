@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { HexBox } from './HexInput';
 import { withDesign } from "storybook-addon-designs";
 export default {
@@ -6,9 +6,28 @@ export default {
   decorators: [withDesign],
 };
 
-export const Hex = (args) => (
-  <HexBox className='hexBox' type='number' {...args}></HexBox>
-)
+export const Hex = (args) => {
+   // To represent the value within the counter, in order to connect it to the up and down arrows
+   const [counterBoxValue, setCounterBoxValue] = useState(0);
+   // To restrict the char. length of the input 
+   const [prevInputValue, setPrevInputValue] = useState(0);
+
+  const handleOnChange = (e) => {
+    let currentValue = e.target.value;
+    let charCountLength = currentValue.length;
+
+    if(charCountLength <= 7) {
+      setPrevInputValue(parseInt(currentValue));
+      setCounterBoxValue(parseInt(currentValue));
+    } else {
+      e.target.value = prevInputValue;
+      setCounterBoxValue(prevInputValue)
+    }
+  }
+  
+  return (
+  <HexBox onChange={handleOnChange} className='hexBox' type='number' {...args}></HexBox>
+)}
 
 
 Hex.args = {

@@ -20,7 +20,6 @@ export const Slider = styled.input`
   /* margin-top: 10px; */
   width: 713px;
   height: 30px;
-  
   &::-webkit-slider-runnable-track {
     height: 20px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);

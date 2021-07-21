@@ -73,7 +73,7 @@ export const TuxFlower = styled.img`
 	width: 132px;
 	z-index: 1;
   position: absolute;
-  top: -85px;
+  top: -95px;
   left: 188px;
 	border-radius: 50%;
   background: #FFFFFF;
