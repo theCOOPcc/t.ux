@@ -7,12 +7,12 @@ export const ModalWrapper = styled.div`
   top: 75px;
   width: 515px;
   height: 486px;
-  border: 1px solid #BBBBBB;
   box-sizing: border-box;
   box-shadow: 0px 4px 9px rgba(0,0,0,0.25);
   border-radius: 10px;
   margin: 0;
   padding: 0;
+  border: 1px solid #BBBBBB;
 `
 
 export const ModalHeader = styled.p`
@@ -79,7 +79,7 @@ export const TuxFlower = styled.img`
 	width: 132px;
 	z-index: 1;
   position: absolute;
-  top: -85px;
+  top: -95px;
   left: 188px;
 	border-radius: 50%;
   background: #FFFFFF;
