@@ -55,7 +55,7 @@ export const SubTextList = (args) => (
     <DotContainer>
   <Dot present></Dot>
   </DotContainer>
-  <SubText {...args}>Learning material</SubText>
+  <SubText {...args}>Learning Material</SubText>
   </SubContainer>
 );
 SubTextList.args = {
@@ -73,7 +73,7 @@ SubTextList.story = {
 }
 
 export const SideBarAll = (args) => (
-  <SideBarAllText {...args}>visibility of systems status</SideBarAllText>
+  <SideBarAllText {...args}>Visibility of Systems Status</SideBarAllText>
 );
 SideBarAll.args = {
   past: false,

@@ -610,20 +610,18 @@ export const LinkBtn = styled.a`
 
 export const SideBarAllText = styled.button`
   background: transparent;
-  position: relative;
   font-family:  'Poppins', sans-serif;
   font-size: 16px;
   line-height: 24px;
   text-align: left;
   color: ${future_text};
-  /* color: ${text_black}; */
   border: none;
   border-bottom: ${solid_border};
-  width: 191px;
+  width: 238.88;
   min-height: 50px;
   height: 40px;
   margin: 0 auto;
-  // border: black 3px solid;
+//border: black 3px solid;
 
   }
 
@@ -631,7 +629,6 @@ export const SideBarAllText = styled.button`
     props.past &&
     css`
       color: ${text_black};
-      /* color: ${future_text} */
       font-weight: 600;
     `}
 
@@ -644,17 +641,18 @@ export const SideBarAllText = styled.button`
 `;
 
 export const SubText = styled(SideBarAllText)`
- 
+width: 100%;
   font: ${pop_semiBold}
   font-size: 14px;
-  padding-left: 13.57px;
+ padding-left: 13.57px;
   border-bottom: ${solid_border};
-  margin-left: 21px;
+  // margin-left: 21px;
   ${(props) =>
     props.present &&
     css`
       background-color: rgba(243, 120, 6, 0.1);
       color: ${text_black};
+      width: 100%;
     `}
 `;
 
@@ -672,16 +670,17 @@ export const Dot = styled.div`
 `;
 
 export const DotContainer = styled.div`
-// border: solid 2px black;
+
   height: 50px;
-  margin-left: 1.2rem;
+  width: 47.88px;
+
 
   ${Flex({ ai: "center", jc: "center" })}
 `;
 
 export const SubContainer = styled.div`
   width: 238.88px;
-// border: black solid 2px;
+
 
   ${Flex({ ai: "center", jc: "center" })}
 `;
