@@ -624,10 +624,11 @@ max-width: 238.88px;
 
 
 // padding-right: 15px;
-min-height: 50px;
+//min-height: 50px;
 
 // margin: 0 auto;
-//padding-left: 0.5rem;
+padding-left: 0.5rem;
+padding-bottom: 0.5rem;
 margin-left: 1rem;
 margin-top: 1rem;
 ${(props) =>
@@ -647,8 +648,9 @@ ${(props) =>
 
 export const NUmHeadContainer = styled.div`
 border-bottom: ${solid_border};
-width: 238.88px;
+//width: 238.88px;
 padding: 0 0 0.6rem;
+//padding-left: 0.5rem;
 
 
 ${(props) =>
