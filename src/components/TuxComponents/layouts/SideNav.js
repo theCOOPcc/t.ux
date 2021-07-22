@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { SessionContext } from '../../../contexts/SessionContext';
 import styled, { css } from 'styled-components';
-import {Button280, SideBarAllText,SubText, DotContainer, Dot, SubContainer} from '../elements';
+import {Button280, SideBarAllText,SubText, DotContainer, Dot, SubContainer, SubDot, HeadingIntro, NUmHeadContainer} from '../elements';
 import { tux_yellow, Flex, present_text, future_text, true_white, text_black, solid_border } from '../utilities';
 
 
@@ -31,7 +31,7 @@ const SideBarNav = () => {
         <SideBarTextBox>
           {sections.map((section, index) =>
             index === 0 ? (
-              <SideBarAllText
+              <HeadingIntro className="HeadingIntro"
                 past={index < currentSectionIndex ? true : false}
                 present={currentSectionIndex === index}
                 disabled={index > currentSectionIndex}
@@ -39,10 +39,10 @@ const SideBarNav = () => {
                 onClick={() => handleJumpToSection(index)}
               >
                 {section.name}
-              </SideBarAllText>
+              </HeadingIntro>
             ) : (
               
-              <SideBarAllText
+              <SideBarAllText className="subHead"
               {...displayCount = 0}
               {...questionCount = 0}
               past={ index < currentSectionIndex ? true : false}
@@ -50,16 +50,19 @@ const SideBarNav = () => {
               disabled={index > currentSectionIndex}
               key={index}
               onClick={() => handleJumpToSection(index)}
-              >
+              > <NUmHeadContainer>
                 {index}. {section.name}
+                </NUmHeadContainer>
                 
                 {section.modules.map((module,idx) => 
                   module.type === 'display' ? 
                 
                  
                  
-             
-                  <SubText
+                  <SubDot className="Heading-Container">
+                    <DotContainer><Dot className="Dot"></Dot>
+                    </DotContainer>
+                  <SubText className="subHeading"
                     
                     {...displayCount++}
                     past={(idx < currentModuleIndex && index === currentSectionIndex)|| index < currentSectionIndex ? true : false}
@@ -68,28 +71,33 @@ const SideBarNav = () => {
                     disabled={idx > currentModuleIndex}
                     key={idx}
                     > 
-                    {/* <DotContainer><Dot/></DotContainer> */}
+                     
+                     
 
                       Learning Material {displayCount} </SubText> 
-                    
                      
+                  </SubDot>
                   :
+                  <SubDot className="Heading-Container">
+                     <DotContainer><Dot className="Dot"></Dot>
+                    </DotContainer>
                     <SubText
                     {...questionCount++}
                     past={(idx < currentModuleIndex && index === currentSectionIndex) || index < currentSectionIndex ? true : false}
                     present={currentSectionIndex === index && currentModuleIndex === idx}
                     disabled={idx > currentModuleIndex}
                     key={idx}
-                    >
+                    > 
+                     
                       Question {questionCount}
                     </SubText>
-                   
-                )}
-              </SideBarAllText>
+                  </SubDot>                  
+                   )}
+                   </SideBarAllText>
              
             )
-          )}
-        </SideBarTextBox>
+            )}
+            </SideBarTextBox>
 
         {started &&
         currentSectionIndex === sections.length - 1 &&

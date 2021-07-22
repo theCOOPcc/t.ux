@@ -608,43 +608,69 @@ export const LinkBtn = styled.a`
     `}
 `;
 
-export const SideBarAllText = styled.button`
-  background: transparent;
-  position: relative;
-  font-family:  'Poppins', sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: left;
-  color: ${future_text};
-  border: none;
-  border-bottom: ${solid_border};
-  width: 238.88;
-  
-  min-height: 50px;
- 
-  // margin: 0 auto;
-  //padding-left: 0.5rem;
-  margin-left: 1rem;
 
-  }
 
-  ${(props) =>
-    props.past &&
-    css`
-      color: ${text_black};
-      font-weight: 600;
-    `}
+export const HeadingIntro = styled.div`
+background: transparent;
+position: relative;
+font-family:  'Poppins', sans-serif;
+font-size: 16px;
+line-height: 24px;
+text-align: left;
+color: ${future_text};
+border: none;
+border-bottom: ${solid_border};
+width: 238.88;
 
-  ${(props) =>
-    props.present &&
-    css`
-      color: ${present_text};
-      font-weight: 700;
-    `}
-`;
+min-height: 50px;
+
+// margin: 0 auto;
+//padding-left: 0.5rem;
+margin-left: 1rem;
+margin-top: 1rem;
+${(props) =>
+  props.past &&
+  css`
+    color: ${text_black};
+    font-weight: 600;
+  `}
+
+${(props) =>
+  props.present &&
+  css`
+    color: ${present_text};
+    font-weight: 700;
+  `}
+`
+
+export const NUmHeadContainer = styled.div`
+border-bottom: ${solid_border};
+//border-top: ${solid_border};
+${(props) =>
+  props.past &&
+  css`
+    color: ${text_black};
+    font-weight: 600;
+  `}
+
+${(props) =>
+  props.present &&
+  css`
+    color: ${present_text};
+    font-weight: 700;
+  `}
+`
+
+export const SideBarAllText = styled(HeadingIntro)`
+border-bottom: 0;
+ `
+
+
+
+
 
 export const SubText = styled.div`
-margin-left: 3rem;
+margin-left: 2rem;
 font-weight: 500;
 fine-height: 24px;
 font-size: 14px;
@@ -653,8 +679,8 @@ color: #999999;
 padding: 0.5rem 3rem 0.5rem 0.5rem;
 // padding-right: 3rem;
 // padding-left: 13.57px;
-border-bottom: ${solid_border};
-
+ border-bottom: ${solid_border};
+//width: 100%;
 ${(props) =>
   props.past &&
   css`
@@ -671,7 +697,13 @@ ${(props) =>
 `;
 
 export const Dot = styled.div`
-   display: none;
+// display: none;
+   height: 8px;
+   width: 8px;
+   border-radius: 50%;
+   background-color: #f37806;
+   
+ 
   ${(props) =>
     props.present &&
     css`
@@ -679,20 +711,33 @@ export const Dot = styled.div`
       width: 8px;
       border-radius: 50%;
       background-color: #f37806;
-      display: block;
+      // display: block;
+     
     `}
 `;
 
 export const DotContainer = styled.div`
-  height: 50px;
-  width: 47.88px;
+  //height: 50px;
+  // width: 47.88px;
   // border: 1px black solid;
-  ${Flex({ ai: "center", jc: "start" })}
+  //background-color; yellow;
+  padding-left: 1rem;
+  ${Flex({ ai: "center", jc: "center" })}
 `;
+
+export const SubDot = styled.div`
+ display: flex;
+flex-direction: row;
+//background-color: blue;
+//width: 238.88px;
+`
+
+
 
 export const SubContainer = styled.div`
    width: 238.88px;
+   //background-color: blue;
 
 
-  ${Flex({ ai: "center", js: "center" })}
+ ${Flex({ ai: "center", js: "center" })}
 `;
