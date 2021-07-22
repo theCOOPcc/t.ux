@@ -51,12 +51,12 @@ export const AllButtons = () => (
 );
 
 export const SubTextList = (args) => (
-  <SubContainer> 
+<SubContainer>
     <DotContainer>
   <Dot present></Dot>
   </DotContainer>
   <SubText {...args}>Learning Material</SubText>
-  </SubContainer>
+</SubContainer>
 );
 SubTextList.args = {
   past: false,

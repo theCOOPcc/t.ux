@@ -610,6 +610,7 @@ export const LinkBtn = styled.a`
 
 export const SideBarAllText = styled.button`
   background: transparent;
+  position: relative;
   font-family:  'Poppins', sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -618,10 +619,12 @@ export const SideBarAllText = styled.button`
   border: none;
   border-bottom: ${solid_border};
   width: 238.88;
+  
   min-height: 50px;
-  height: 40px;
-  margin: 0 auto;
-//border: black 3px solid;
+ 
+  // margin: 0 auto;
+  //padding-left: 0.5rem;
+  margin-left: 1rem;
 
   }
 
@@ -636,28 +639,39 @@ export const SideBarAllText = styled.button`
     props.present &&
     css`
       color: ${present_text};
-      font-weight: 600;
+      font-weight: 700;
     `}
 `;
 
-export const SubText = styled(SideBarAllText)`
-width: 100%;
-  font: ${pop_semiBold}
-  font-size: 14px;
- padding-left: 13.57px;
-  border-bottom: ${solid_border};
-  // margin-left: 21px;
+export const SubText = styled.div`
+margin-left: 3rem;
+font-weight: 500;
+fine-height: 24px;
+font-size: 14px;
+color: #999999;
+//font: ${pop_semiBold};
+padding: 0.5rem 3rem 0.5rem 0.5rem;
+// padding-right: 3rem;
+// padding-left: 13.57px;
+border-bottom: ${solid_border};
+
+${(props) =>
+  props.past &&
+  css`
+    color: ${text_black};
+  `}
+  
   ${(props) =>
     props.present &&
     css`
       background-color: rgba(243, 120, 6, 0.1);
-      color: ${text_black};
-      width: 100%;
+      color: ${present_text};
+      font-weight: 600;
     `}
 `;
 
 export const Dot = styled.div`
-  display: none;
+   display: none;
   ${(props) =>
     props.present &&
     css`
@@ -670,17 +684,15 @@ export const Dot = styled.div`
 `;
 
 export const DotContainer = styled.div`
-
   height: 50px;
   width: 47.88px;
-
-
-  ${Flex({ ai: "center", jc: "center" })}
+  // border: 1px black solid;
+  ${Flex({ ai: "center", jc: "start" })}
 `;
 
 export const SubContainer = styled.div`
-  width: 238.88px;
+   width: 238.88px;
 
 
-  ${Flex({ ai: "center", jc: "center" })}
+  ${Flex({ ai: "center", js: "center" })}
 `;
