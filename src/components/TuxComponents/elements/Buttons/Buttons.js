@@ -620,8 +620,10 @@ text-align: left;
 color: ${future_text};
 border: none;
 border-bottom: ${solid_border};
-width: 238.88;
+max-width: 238.88px;
 
+
+// padding-right: 15px;
 min-height: 50px;
 
 // margin: 0 auto;
@@ -645,7 +647,10 @@ ${(props) =>
 
 export const NUmHeadContainer = styled.div`
 border-bottom: ${solid_border};
-//border-top: ${solid_border};
+width: 238.88px;
+padding: 0 0 0.6rem;
+
+
 ${(props) =>
   props.past &&
   css`
@@ -663,6 +668,7 @@ ${(props) =>
 
 export const SideBarAllText = styled(HeadingIntro)`
 border-bottom: 0;
+
  `
 
 
@@ -676,11 +682,11 @@ fine-height: 24px;
 font-size: 14px;
 color: #999999;
 //font: ${pop_semiBold};
-padding: 0.5rem 3rem 0.5rem 0.5rem;
+padding: 0.5rem 0 0.5rem 0.5rem;
 // padding-right: 3rem;
 // padding-left: 13.57px;
  border-bottom: ${solid_border};
-//width: 100%;
+width: 191px;
 ${(props) =>
   props.past &&
   css`
@@ -730,6 +736,7 @@ export const SubDot = styled.div`
 flex-direction: row;
 //background-color: blue;
 //width: 238.88px;
+
 `
 
 
