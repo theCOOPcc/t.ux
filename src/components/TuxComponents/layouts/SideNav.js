@@ -7,7 +7,6 @@ import {
   SubText,
   DotContainer,
   Dot,
-  SubContainer,
   SubDot,
   HeadingIntro,
   NUmHeadContainer,
@@ -50,7 +49,6 @@ const SideBarNav = () => {
           {sections.map((section, index) =>
             index === 0 ? (
               <HeadingIntro
-                className="HeadingIntro"
                 past={index < currentSectionIndex ? true : false}
                 present={currentSectionIndex === index}
                 disabled={index > currentSectionIndex}
@@ -61,7 +59,6 @@ const SideBarNav = () => {
               </HeadingIntro>
             ) : (
               <SideBarAllText
-                className="subHead"
                 {...(displayCount = 0)}
                 {...(questionCount = 0)}
                 past={index < currentSectionIndex ? true : false}
@@ -76,10 +73,9 @@ const SideBarNav = () => {
                 </NUmHeadContainer>
                 {section.modules.map((module, idx) =>
                   module.type === "display" ? (
-                    <SubDot className="Heading-Container">
+                    <SubDot>
                       <DotContainer>
                         <Dot
-                          className="Dot"
                           present={
                             currentSectionIndex === index &&
                             currentModuleIndex === idx
@@ -87,7 +83,6 @@ const SideBarNav = () => {
                         ></Dot>
                       </DotContainer>
                       <SubText
-                        className="subHeading"
                         {...displayCount++}
                         past={
                           (idx < currentModuleIndex &&
@@ -107,10 +102,9 @@ const SideBarNav = () => {
                       </SubText>
                     </SubDot>
                   ) : (
-                    <SubDot className="Heading-Container">
+                    <SubDot>
                       <DotContainer>
                         <Dot
-                          className="Dot"
                           present={
                             currentSectionIndex === index &&
                             currentModuleIndex === idx
@@ -191,67 +185,6 @@ const SideBarTextBox = styled.section`
   padding: 20px 25px;
   overflow: scroll;
 `;
-
-// const SideBarText = styled.button`
-//   background: transparent;
-//   position: relative;
-//   font-family:  'Poppins', sans-serif;
-//   font-size: 16px;
-//   line-height: 24px;
-//   text-align: left;
-//   color: ${future_text};
-//   /* color: ${text_black}; */
-//   border: none;
-//   // border-bottom: ${solid_border};
-//   width: 191px;
-//   min-height: 50px;
-//   height: auto;
-//   margin: 0 auto;
-//   // border: black 3px solid;
-//   padding: 0.5rem 1rem ;
-//   }
-
-//   ${(props) =>
-//     props.past &&
-//     css`
-//       color: ${text_black};
-//       /* color: ${future_text} */
-//       font-weight: 600;
-//     `}
-
-//   ${(props) =>
-//     props.present &&
-//     css`
-//       color: ${present_text};
-//       font-weight: 600;
-//     `}
-// `;
-
-// const SubText = styled(SideBarText)`
-//   margin-left: 61px;
-//   font-size: 14px;
-//   padding-left: 13.57px;
-//   border-bottom: ${solid_border};
-//   ${(props) =>
-//     props.present &&
-//     css`
-//     background-color: rgba(243, 120, 6, 0.1);
-//     color: ${text_black};
-
-//     `}
-
-// `;
-
-// const Dot = styled.div`
-// height: 8px;
-//  width:8px;
-//  border-radius: 50%;
-//  background-color:  #F37806;
-// ${(props) =>
-//   props.present &&
-//   css`
-
-//   `} `;
 
 const ColorBlock = styled.div`
   height: 5px;

@@ -608,94 +608,83 @@ export const LinkBtn = styled.a`
     `}
 `;
 
-
-
 export const HeadingIntro = styled.div`
-background: transparent;
-position: relative;
-font-family:  'Poppins', sans-serif;
-font-size: 16px;
-line-height: 24px;
-text-align: left;
-color: ${future_text};
-border: none;
-border-bottom: ${solid_border};
-max-width: 230.88px;
-padding-left: 0.5rem;
-padding-bottom: 0.5rem;
-margin-left: 1rem;
-margin-top: 1rem;
-${(props) =>
-  props.past &&
-  css`
-    color: ${text_black};
-    font-weight: 600;
-  `}
+  color: ${future_text};
+  border: none;
+  border-bottom: ${solid_border};
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 230.88px;
+  margin: 1rem 0 0 1rem;
+  padding: 0 0 0.5rem 0.5rem;
 
-${(props) =>
-  props.present &&
-  css`
-    color: ${present_text};
-    font-weight: 700;
-  `}
-`
+  ${(props) =>
+    props.past &&
+    css`
+      color: ${text_black};
+      font-weight: 600;
+    `}
 
-export const NUmHeadContainer = styled.div`
-border-bottom: ${solid_border};
-padding: 0 0 0.6rem;
-padding-left: 0.5rem;
-
-
-
-${(props) =>
-  props.past &&
-  css`
-    color: ${text_black};
-    font-weight: 600;
-  `}
-
-${(props) =>
-  props.present &&
-  css`
-    color: ${present_text};
-    font-weight: 700;
-  `}
-`
-
-export const SideBarAllText = styled(HeadingIntro)`
-border-bottom: 0;
-margin: 1rem 0 0 0.5rem;
-max-width: 238.88px;
-
- `
-
-export const SubText = styled.div`
-margin-left: 2rem;
-font-weight: 500;
-fine-height: 24px;
-font-size: 14px;
-color: #999999;
-padding: 0.5rem 0 0.5rem 0.5rem;
-border-bottom: ${solid_border};
-width: 191px;
-${(props) =>
-  props.past &&
-  css`
-    color: ${text_black};
-  `}
-  
   ${(props) =>
     props.present &&
     css`
-      background-color: rgba(243, 120, 6, 0.1);
       color: ${present_text};
+      font-weight: 700;
+    `}
+`;
+
+export const NUmHeadContainer = styled.div`
+  border-bottom: ${solid_border};
+  padding: 0 0 0.6rem 0.5rem;
+
+  ${(props) =>
+    props.past &&
+    css`
+      color: ${text_black};
+      font-weight: 600;
+    `}
+
+  ${(props) =>
+    props.present &&
+    css`
+      color: ${present_text};
+      font-weight: 700;
+    `}
+`;
+
+export const SideBarAllText = styled(HeadingIntro)`
+  border-bottom: 0;
+  margin: 1rem 0 0 0.5rem;
+  max-width: 238.88px;
+`;
+
+export const SubText = styled.div`
+  color: #999999;
+  border-bottom: ${solid_border};
+  font-weight: 500;
+  fine-height: 24px;
+  font-size: 14px;
+  margin-left: 2rem;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  width: 191px;
+  ${(props) =>
+    props.past &&
+    css`
+      color: ${text_black};
+    `}
+
+  ${(props) =>
+    props.present &&
+    css`
+      color: ${present_text};
+      background-color: rgba(243, 120, 6, 0.1);
       font-weight: 600;
       margin-left: 24px;
     `}
 `;
 
 export const Dot = styled.div`
- 
   ${(props) =>
     props.present &&
     css`
@@ -703,8 +692,6 @@ export const Dot = styled.div`
       width: 8px;
       border-radius: 50%;
       background-color: #f37806;
-     
-     
     `}
 `;
 
@@ -714,12 +701,11 @@ export const DotContainer = styled.div`
 `;
 
 export const SubDot = styled.div`
-display: flex;
-flex-direction: row;
-`
+  display: flex;
+  flex-direction: row;
+`;
 
 export const SubContainer = styled.div`
-   width: 238.88px;
-   //background-color: blue;
- ${Flex({ ai: "center", js: "center" })}
+  width: 238.88px;
+  ${Flex({ ai: "center", js: "center" })}
 `;
