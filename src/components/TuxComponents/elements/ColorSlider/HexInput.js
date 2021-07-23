@@ -17,7 +17,7 @@ export const HexBox = styled.input`
   font: ${pop_bolder};
   line-height: 24px;
   font-size: 18px;
-  padding-left: 10px;
+  padding-left: 20px;
   box-sizing: border-box;
   &:hover {
     opacity: 0.8;
