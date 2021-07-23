@@ -9,6 +9,11 @@ import {
   Arrow,
   LinkBtn,
   TextBtn,
+  SideBarAllText,
+  SubText,
+  Dot,
+  SubContainer,
+  DotContainer,
 } from "./Buttons";
 import { withDesign } from "storybook-addon-designs";
 
@@ -37,9 +42,52 @@ export const AllButtons = () => (
     <TextBtn>Text Button</TextBtn>
     <br />
     <CopyLinkButton />
+    <br/>
+    <SideBarAllText>sidebar</SideBarAllText>
+    <br/>
+    <SubText>Sub Text</SubText>
+    
   </div>
 );
 
+export const SubTextList = (args) => (
+<SubContainer>
+    <DotContainer>
+  <Dot present></Dot>
+  </DotContainer>
+  <SubText {...args}>Learning Material</SubText>
+</SubContainer>
+);
+SubTextList.args = {
+  past: false,
+  present: false,
+}
+SubTextList.story = {
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/VV3mFbPYwfmOpuWfGND4Dv/Tux-Design-Library-FROZEN?node-id=458%3A0",
+    },
+  },
+}
+
+export const SideBarAll = (args) => (
+  <SideBarAllText {...args}>Visibility of Systems Status</SideBarAllText>
+);
+SideBarAll.args = {
+  past: false,
+  present: false,
+}
+SideBarAll.story = {
+  parameters: {
+    design: {
+      type: "figma",
+      url:
+        "https://www.figma.com/file/VV3mFbPYwfmOpuWfGND4Dv/Tux-Design-Library-FROZEN?node-id=458%3A0",
+    },
+  },
+};
 
 export const CopyLink = (args) => (
     <CopyLinkButton {...args} />
