@@ -3,7 +3,6 @@ import React, { useContext } from "react";
 import { SessionContext } from "../../../contexts/SessionContext";
 import styled, { css } from "styled-components";
 import {
-  Button280,
   SideBarAllText,
   SubText,
   DotContainer,
@@ -11,6 +10,7 @@ import {
   SubDot,
   HeadingIntro,
   NUmHeadContainer,
+  PrimaryButton
 } from "../elements";
 import {
   tux_yellow,
