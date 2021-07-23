@@ -1,9 +1,26 @@
-import React, { useContext } from 'react';
-import { SessionContext } from '../../../contexts/SessionContext';
-import styled, { css } from 'styled-components';
-import {Button280, SideBarAllText,SubText, DotContainer, Dot, SubContainer, SubDot, HeadingIntro, NUmHeadContainer} from '../elements';
-import { tux_yellow, Flex, present_text, future_text, true_white, text_black, solid_border } from '../utilities';
-
+import React, { useContext } from "react";
+import { SessionContext } from "../../../contexts/SessionContext";
+import styled, { css } from "styled-components";
+import {
+  Button280,
+  SideBarAllText,
+  SubText,
+  DotContainer,
+  Dot,
+  SubContainer,
+  SubDot,
+  HeadingIntro,
+  NUmHeadContainer,
+} from "../elements";
+import {
+  tux_yellow,
+  Flex,
+  present_text,
+  future_text,
+  true_white,
+  text_black,
+  solid_border,
+} from "../utilities";
 
 const SideBarNav = () => {
   const {
@@ -22,8 +39,9 @@ const SideBarNav = () => {
   } = useContext(SessionContext);
 
   const { sections } = sessionData;
-  let displayCount, questionCount = 0;
-  
+  let displayCount,
+    questionCount = 0;
+
   return (
     <SideBarParent>
       <SideBar>
@@ -31,7 +49,8 @@ const SideBarNav = () => {
         <SideBarTextBox>
           {sections.map((section, index) =>
             index === 0 ? (
-              <HeadingIntro className="HeadingIntro"
+              <HeadingIntro
+                className="HeadingIntro"
                 past={index < currentSectionIndex ? true : false}
                 present={currentSectionIndex === index}
                 disabled={index > currentSectionIndex}
@@ -41,95 +60,111 @@ const SideBarNav = () => {
                 {section.name}
               </HeadingIntro>
             ) : (
-              
-              <SideBarAllText className="subHead"
-              {...displayCount = 0}
-              {...questionCount = 0}
-              past={ index < currentSectionIndex ? true : false}
-              present={currentSectionIndex === index}
-              disabled={index > currentSectionIndex}
-              key={index}
-              onClick={() => handleJumpToSection(index)}
-              > <NUmHeadContainer>
-                {index}. {section.name}
+              <SideBarAllText
+                className="subHead"
+                {...(displayCount = 0)}
+                {...(questionCount = 0)}
+                past={index < currentSectionIndex ? true : false}
+                present={currentSectionIndex === index}
+                disabled={index > currentSectionIndex}
+                key={index}
+                onClick={() => handleJumpToSection(index)}
+              >
+                {" "}
+                <NUmHeadContainer>
+                  {index}. {section.name}
                 </NUmHeadContainer>
-                
-                {section.modules.map((module,idx) => 
-                  module.type === 'display' ? 
-                
-                 
-                 
-                  <SubDot className="Heading-Container">
-                    <DotContainer><Dot className="Dot"></Dot>
-                    </DotContainer>
-                  <SubText className="subHeading"
-                    
-                    {...displayCount++}
-                    past={(idx < currentModuleIndex && index === currentSectionIndex)|| index < currentSectionIndex ? true : false}
-                    present={currentSectionIndex === index && currentModuleIndex === idx}
-                   
-                    disabled={idx > currentModuleIndex}
-                    key={idx}
-                    > 
-                     
-                     
-
-                      Learning Material {displayCount} </SubText> 
-                     
-                  </SubDot>
-                  :
-                  <SubDot className="Heading-Container">
-                     <DotContainer><Dot className="Dot"></Dot>
-                    </DotContainer>
-                    <SubText
-                    {...questionCount++}
-                    past={(idx < currentModuleIndex && index === currentSectionIndex) || index < currentSectionIndex ? true : false}
-                    present={currentSectionIndex === index && currentModuleIndex === idx}
-                    disabled={idx > currentModuleIndex}
-                    key={idx}
-                    > 
-                     
-                      Question {questionCount}
-                    </SubText>
-                  </SubDot>                  
-                   )}
-                   </SideBarAllText>
-             
+                {section.modules.map((module, idx) =>
+                  module.type === "display" ? (
+                    <SubDot className="Heading-Container">
+                      <DotContainer>
+                        <Dot
+                          className="Dot"
+                          present={
+                            currentSectionIndex === index &&
+                            currentModuleIndex === idx
+                          }
+                        ></Dot>
+                      </DotContainer>
+                      <SubText
+                        className="subHeading"
+                        {...displayCount++}
+                        past={
+                          (idx < currentModuleIndex &&
+                            index === currentSectionIndex) ||
+                          index < currentSectionIndex
+                            ? true
+                            : false
+                        }
+                        present={
+                          currentSectionIndex === index &&
+                          currentModuleIndex === idx
+                        }
+                        disabled={idx > currentModuleIndex}
+                        key={idx}
+                      >
+                        Learning Material {displayCount}{" "}
+                      </SubText>
+                    </SubDot>
+                  ) : (
+                    <SubDot className="Heading-Container">
+                      <DotContainer>
+                        <Dot
+                          className="Dot"
+                          present={
+                            currentSectionIndex === index &&
+                            currentModuleIndex === idx
+                          }
+                        ></Dot>
+                      </DotContainer>
+                      <SubText
+                        {...questionCount++}
+                        past={
+                          (idx < currentModuleIndex &&
+                            index === currentSectionIndex) ||
+                          index < currentSectionIndex
+                            ? true
+                            : false
+                        }
+                        present={
+                          currentSectionIndex === index &&
+                          currentModuleIndex === idx
+                        }
+                        disabled={idx > currentModuleIndex}
+                        key={idx}
+                      >
+                        Question {questionCount}
+                      </SubText>
+                    </SubDot>
+                  )
+                )}
+              </SideBarAllText>
             )
-            )}
-            </SideBarTextBox>
+          )}
+        </SideBarTextBox>
 
         {started &&
         currentSectionIndex === sections.length - 1 &&
         currentModuleIndex === currentSection.modules.length - 1 ? (
-          <Button280 onClick={() => setStarted(false)}>
-            Next
-          </Button280>
+          <Button280 onClick={() => setStarted(false)}>Next</Button280>
         ) : started && currentSectionIndex <= sections.length - 1 ? (
-          <Button280 onClick={() => handleCurrentModule()}>
-            Next
-          </Button280>
+          <Button280 onClick={() => handleCurrentModule()}>Next</Button280>
         ) : (
-          ''
+          ""
         )}
 
         {/* if started is now false and !finished then show Next Button280 , which will change finished to true */}
         {started === false && finished === null && (
-          <Button280 onClick={() => setFinished(true)}>
-            Next
-          </Button280>
+          <Button280 onClick={() => setFinished(true)}>Next</Button280>
         )}
         {/* if started is false and finished equals false then show end Button280 */}
-        {started === false && finished === true && (
-          <Button280>End</Button280>
-        )}
+        {started === false && finished === true && <Button280>End</Button280>}
       </SideBar>
     </SideBarParent>
   );
 };
 
 export default SideBarNav;
-
 
 /*---------- 300px Sidebar Parent Grid ----------*/
 const SideBarParent = styled.article`
@@ -138,7 +173,6 @@ const SideBarParent = styled.article`
   grid-template-columns: auto;
   grid-template-rows: 1fr 100px;
   border-radius: 5px 5px 0 0;
-  
 `;
 
 /*---------- The SideBar Itself ----------*/
@@ -146,10 +180,9 @@ const SideBar = styled.article`
   grid-row: 1 / span 1;
   background-color: ${true_white};
   height: calc(100vh - 159px);
-  ${Flex({ai:'center',fd:'column'})};
+  ${Flex({ ai: "center", fd: "column" })};
   border: var(--solid-border);
   border-radius: 5px 5px 0 0;
-  
 `;
 
 const SideBarTextBox = styled.section`
@@ -157,7 +190,6 @@ const SideBarTextBox = styled.section`
   width: 100%;
   padding: 20px 25px;
   overflow: scroll;
-  
 `;
 
 // const SideBarText = styled.button`
@@ -195,8 +227,6 @@ const SideBarTextBox = styled.section`
 //     `}
 // `;
 
-
-
 // const SubText = styled(SideBarText)`
 //   margin-left: 61px;
 //   font-size: 14px;
@@ -208,10 +238,8 @@ const SideBarTextBox = styled.section`
 //     background-color: rgba(243, 120, 6, 0.1);
 //     color: ${text_black};
 
-   
 //     `}
-  
-    
+
 // `;
 
 // const Dot = styled.div`
@@ -222,10 +250,7 @@ const SideBarTextBox = styled.section`
 // ${(props) =>
 //   props.present &&
 //   css`
- 
- 
 
- 
 //   `} `;
 
 const ColorBlock = styled.div`

@@ -621,12 +621,6 @@ color: ${future_text};
 border: none;
 border-bottom: ${solid_border};
 max-width: 238.88px;
-
-
-// padding-right: 15px;
-//min-height: 50px;
-
-// margin: 0 auto;
 padding-left: 0.5rem;
 padding-bottom: 0.5rem;
 margin-left: 1rem;
@@ -648,9 +642,9 @@ ${(props) =>
 
 export const NUmHeadContainer = styled.div`
 border-bottom: ${solid_border};
-//width: 238.88px;
 padding: 0 0 0.6rem;
 //padding-left: 0.5rem;
+
 
 
 ${(props) =>
@@ -673,21 +667,14 @@ border-bottom: 0;
 
  `
 
-
-
-
-
 export const SubText = styled.div`
 margin-left: 2rem;
 font-weight: 500;
 fine-height: 24px;
 font-size: 14px;
 color: #999999;
-//font: ${pop_semiBold};
 padding: 0.5rem 0 0.5rem 0.5rem;
-// padding-right: 3rem;
-// padding-left: 13.57px;
- border-bottom: ${solid_border};
+border-bottom: ${solid_border};
 width: 191px;
 ${(props) =>
   props.past &&
@@ -705,12 +692,6 @@ ${(props) =>
 `;
 
 export const Dot = styled.div`
-// display: none;
-   height: 8px;
-   width: 8px;
-   border-radius: 50%;
-   background-color: #f37806;
-   
  
   ${(props) =>
     props.present &&
@@ -719,29 +700,20 @@ export const Dot = styled.div`
       width: 8px;
       border-radius: 50%;
       background-color: #f37806;
-      // display: block;
+       //display: block;
      
     `}
 `;
 
 export const DotContainer = styled.div`
-  //height: 50px;
-  // width: 47.88px;
-  // border: 1px black solid;
-  //background-color; yellow;
   padding-left: 1rem;
   ${Flex({ ai: "center", jc: "center" })}
 `;
 
 export const SubDot = styled.div`
- display: flex;
+display: flex;
 flex-direction: row;
-//background-color: blue;
-//width: 238.88px;
-
 `
-
-
 
 export const SubContainer = styled.div`
    width: 238.88px;
