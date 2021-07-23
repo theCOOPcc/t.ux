@@ -1,9 +1,26 @@
-import React, { useContext } from 'react';
-import { SessionContext } from '../../../contexts/SessionContext';
-import styled, { css } from 'styled-components';
-import {PrimaryButton} from '../elements';
-import { tux_yellow, Flex, present_text, future_text, true_white, text_black, solid_border } from '../utilities';
 
+import React, { useContext } from "react";
+import { SessionContext } from "../../../contexts/SessionContext";
+import styled, { css } from "styled-components";
+import {
+  Button280,
+  SideBarAllText,
+  SubText,
+  DotContainer,
+  Dot,
+  SubDot,
+  HeadingIntro,
+  NUmHeadContainer,
+} from "../elements";
+import {
+  tux_yellow,
+  Flex,
+  present_text,
+  future_text,
+  true_white,
+  text_black,
+  solid_border,
+} from "../utilities";
 
 const SideBarNav = () => {
   const {
@@ -22,8 +39,9 @@ const SideBarNav = () => {
   } = useContext(SessionContext);
 
   const { sections } = sessionData;
-  let displayCount, questionCount = 0;
-  
+  let displayCount,
+    questionCount = 0;
+
   return (
     <SideBarParent>
       <SideBar>
@@ -31,7 +49,7 @@ const SideBarNav = () => {
         <SideBarTextBox>
           {sections.map((section, index) =>
             index === 0 ? (
-              <SideBarText
+              <HeadingIntro
                 past={index < currentSectionIndex ? true : false}
                 present={currentSectionIndex === index}
                 disabled={index > currentSectionIndex}
@@ -39,43 +57,83 @@ const SideBarNav = () => {
                 onClick={() => handleJumpToSection(index)}
               >
                 {section.name}
-              </SideBarText>
+              </HeadingIntro>
             ) : (
-              <SideBarText
-              {...displayCount = 0}
-              {...questionCount = 0}
-              past={ index < currentSectionIndex ? true : false}
-              present={currentSectionIndex === index}
-              disabled={index > currentSectionIndex}
-              key={index}
-              onClick={() => handleJumpToSection(index)}
+              <SideBarAllText
+                {...(displayCount = 0)}
+                {...(questionCount = 0)}
+                past={index < currentSectionIndex ? true : false}
+                present={currentSectionIndex === index}
+                disabled={index > currentSectionIndex}
+                key={index}
+                onClick={() => handleJumpToSection(index)}
               >
-                {index}. {section.name}
-                
-                {section.modules.map((module,idx) => 
-                  module.type === 'display' ? 
-                 
-                  <SubText
-                    
-                    {...displayCount++}
-                    past={(idx < currentModuleIndex && index === currentSectionIndex)|| index < currentSectionIndex ? true : false}
-                    present={currentSectionIndex === index && currentModuleIndex === idx}
-                    disabled={idx > currentModuleIndex}
-                    key={idx}
-                    >
-                      Learning Material {displayCount} </SubText>
-                  :
-                    <SubText
-                    {...questionCount++}
-                    past={(idx < currentModuleIndex && index === currentSectionIndex) || index < currentSectionIndex ? true : false}
-                    present={currentSectionIndex === index && currentModuleIndex === idx}
-                    disabled={idx > currentModuleIndex}
-                    key={idx}
-                    >
-                      Question {questionCount}
-                    </SubText>
+                {" "}
+                <NUmHeadContainer>
+                  {index}. {section.name}
+                </NUmHeadContainer>
+                {section.modules.map((module, idx) =>
+                  module.type === "display" ? (
+                    <SubDot>
+                      <DotContainer>
+                        <Dot
+                          present={
+                            currentSectionIndex === index &&
+                            currentModuleIndex === idx
+                          }
+                        ></Dot>
+                      </DotContainer>
+                      <SubText
+                        {...displayCount++}
+                        past={
+                          (idx < currentModuleIndex &&
+                            index === currentSectionIndex) ||
+                          index < currentSectionIndex
+                            ? true
+                            : false
+                        }
+                        present={
+                          currentSectionIndex === index &&
+                          currentModuleIndex === idx
+                        }
+                        disabled={idx > currentModuleIndex}
+                        key={idx}
+                      >
+                        Learning Material {displayCount}{" "}
+                      </SubText>
+                    </SubDot>
+                  ) : (
+                    <SubDot>
+                      <DotContainer>
+                        <Dot
+                          present={
+                            currentSectionIndex === index &&
+                            currentModuleIndex === idx
+                          }
+                        ></Dot>
+                      </DotContainer>
+                      <SubText
+                        {...questionCount++}
+                        past={
+                          (idx < currentModuleIndex &&
+                            index === currentSectionIndex) ||
+                          index < currentSectionIndex
+                            ? true
+                            : false
+                        }
+                        present={
+                          currentSectionIndex === index &&
+                          currentModuleIndex === idx
+                        }
+                        disabled={idx > currentModuleIndex}
+                        key={idx}
+                      >
+                        Question {questionCount}
+                      </SubText>
+                    </SubDot>
+                  )
                 )}
-              </SideBarText>
+              </SideBarAllText>
             )
           )}
         </SideBarTextBox>
@@ -91,9 +149,8 @@ const SideBarNav = () => {
             Next
           </PrimaryButton>
         ) : (
-          ''
+          ""
         )}
-
         {/* if started is now false and !finished then show Next PrimaryButton , which will change finished to true */}
         {started === false && finished === null && (
           <PrimaryButton onClick={() => setFinished(true)}>
@@ -111,7 +168,6 @@ const SideBarNav = () => {
 
 export default SideBarNav;
 
-
 /*---------- 300px Sidebar Parent Grid ----------*/
 const SideBarParent = styled.article`
   height: 90vh;
@@ -126,7 +182,7 @@ const SideBar = styled.article`
   grid-row: 1 / span 1;
   background-color: ${true_white};
   height: calc(100vh - 159px);
-  ${Flex({ai:'center',fd:'column'})};
+  ${Flex({ ai: "center", fd: "column" })};
   border: var(--solid-border);
   border-radius: 5px 5px 0 0;
 `;
@@ -136,40 +192,6 @@ const SideBarTextBox = styled.section`
   width: 100%;
   padding: 20px 25px;
   overflow: scroll;
-`;
-
-const SideBarText = styled.button`
-  background: transparent;
-  font: 500 16px 'Poppins', sans-serif;
-  line-height: 24px;
-  text-align: left;
-  color: ${future_text};
-  /* color: ${text_black}; */
-  border: none;
-  border-bottom: ${solid_border};
-  width: 239px;
-  min-height: 50px;
-  height: auto;
-  margin: 0 auto;
-
-  ${(props) =>
-    props.past &&
-    css`
-      color: ${text_black};
-      /* color: ${future_text} */
-      font-weight: 600;
-    `}
-
-  ${(props) =>
-    props.present &&
-    css`
-      color: ${present_text};
-      font-weight: 700;
-    `}
-`;
-
-const SubText = styled(SideBarText)`
-  margin-left: 61px;
 `;
 
 const ColorBlock = styled.div`
