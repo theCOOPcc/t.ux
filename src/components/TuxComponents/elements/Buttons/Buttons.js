@@ -690,6 +690,7 @@ ${(props) =>
       background-color: rgba(243, 120, 6, 0.1);
       color: ${present_text};
       font-weight: 600;
+      margin-left: 24px;
     `}
 `;
 
