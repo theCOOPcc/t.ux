@@ -112,6 +112,7 @@ export const CloudImg = styled.img`
 export const AnswerField = styled.input`
   width: 280px;
   height: 48px;
+  padding-left: 12px;
   border: 1px solid #666666;
   box-sizing: border-box;
   border-radius: 10px;

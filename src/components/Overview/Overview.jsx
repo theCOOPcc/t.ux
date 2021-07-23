@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
 import { Flex, tux_orange, tux_blue } from '../TuxComponents/utilities';
-import { Button280 } from '../TuxComponents/elements';
+import { PrimaryButton } from '../TuxComponents/elements';
 import { SessionContext } from '../../contexts/SessionContext';
 
 const Overview = ({ user }) => {
@@ -45,9 +45,9 @@ const Overview = ({ user }) => {
           </Text>
           <Text overview>Begin when you're ready. Good luck!</Text>
         </FlexBox>
-        <Button280 onClick={() => setStarted(true)}>
+        <PrimaryButton onClick={() => setStarted(true)}>
           Begin
-        </Button280>
+        </PrimaryButton>
       {/* </OuterBox> */}
 
       </Main>

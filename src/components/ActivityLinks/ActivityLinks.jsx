@@ -3,7 +3,6 @@ import { SessionContext } from '../../contexts/SessionContext';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Flex } from '../TuxComponents/utilities';
-import * as U from '../../components/TuxComponents/UniversalComponents';
 
 const LinkList = ({ links }) => {
   <ul>
@@ -20,7 +19,7 @@ const LinkList = ({ links }) => {
 const ActivityLinks = () => {
   const { links } = useContext(SessionContext);
   return (
-    <U.Sub6ColGrid>
+    <>
       <Heading1>More Heuristics Resources</Heading1>
       <FlexBox>
       <Text>
@@ -38,7 +37,7 @@ const ActivityLinks = () => {
         ))}
       </ul>
       </FlexBox>
-    </U.Sub6ColGrid>
+    </>
   );
 };
 

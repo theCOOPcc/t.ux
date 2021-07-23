@@ -1,3 +1,4 @@
+
 import React, { useContext } from "react";
 import { SessionContext } from "../../../contexts/SessionContext";
 import styled, { css } from "styled-components";
@@ -140,19 +141,26 @@ const SideBarNav = () => {
         {started &&
         currentSectionIndex === sections.length - 1 &&
         currentModuleIndex === currentSection.modules.length - 1 ? (
-          <Button280 onClick={() => setStarted(false)}>Next</Button280>
+          <PrimaryButton onClick={() => setStarted(false)}>
+            Next
+          </PrimaryButton>
         ) : started && currentSectionIndex <= sections.length - 1 ? (
-          <Button280 onClick={() => handleCurrentModule()}>Next</Button280>
+          <PrimaryButton onClick={() => handleCurrentModule()}>
+            Next
+          </PrimaryButton>
         ) : (
           ""
         )}
-
-        {/* if started is now false and !finished then show Next Button280 , which will change finished to true */}
+        {/* if started is now false and !finished then show Next PrimaryButton , which will change finished to true */}
         {started === false && finished === null && (
-          <Button280 onClick={() => setFinished(true)}>Next</Button280>
+          <PrimaryButton onClick={() => setFinished(true)}>
+            Next
+          </PrimaryButton>
         )}
-        {/* if started is false and finished equals false then show end Button280 */}
-        {started === false && finished === true && <Button280>End</Button280>}
+        {/* if started is false and finished equals false then show end PrimaryButton */}
+        {started === false && finished === true && (
+          <PrimaryButton>End</PrimaryButton>
+        )}
       </SideBar>
     </SideBarParent>
   );

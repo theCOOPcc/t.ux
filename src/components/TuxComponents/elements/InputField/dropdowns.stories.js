@@ -10,8 +10,8 @@ export default {
 export const DropdownMenu = (args) => (
   <StyledUl>
         <DropDownLi className="DropdownMenu">
+    <Label>Label</Label>
           <Input placeholder="Input Text"/>
-          <Label>Label</Label>
             <DropDownArrow {...args} src={
         args.hover ? "/images/dropdown2.png" : "/images/dropdown.png"
       }/>

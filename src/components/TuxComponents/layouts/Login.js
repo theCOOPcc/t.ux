@@ -3,8 +3,7 @@ import authService from '../../../services/authService';
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom'
 import { Flex, common_shadow, pop_reg, pop_thick } from '../utilities';
-import { SmallInput, Button280 } from '../elements';
-// styled components for this Login comoponent are at the bottom
+import { SmallInput, PrimaryButton } from '../elements';
 
 class Login extends Component {
     state = { 
@@ -46,6 +45,7 @@ class Login extends Component {
                   className='loginLink'
                   // this is the "href" go to google
                   href='http://localhost:3001/api/auth/google'
+                  // href='http://23carnies.com/api/auth/google'
                   //   href="https://thecoop-tux.herokuapp.com/api/auth/google"
                 >
                   <GoogleG
@@ -76,24 +76,11 @@ class Login extends Component {
                     name='pw'
                     onChange={this.handleChange}
                   ></SmallInput>
-                  {/* <OutsideFlex> */}
-                  {/* These are on hold until next sprint */}
-                  {/* TODO: Make ability to stay logged in */}
-                  {/* TODO: Create password reset */}
-                  {/* <U. negMargin>
-                            <U.Checkbox></U.Checkbox>
-                            <U.Normal>Stay signed in</U.Normal>
-                            </U.> 
-                            <LinkTo
-                                to="/passwordresetrequest"
-                            >Forgot Password?</LinkTo>*/}
-                  {/* </OutsideFlex> */}
-                  <Button280
-                    wide350
+                  <PrimaryButton
                     disabled={email.length > 0 && pw.length > 0 ? false : true}
                   >
                     Log In
-                  </Button280>
+                  </PrimaryButton>
                 </form>
               </LoginBox>
             </OutsideFlex>

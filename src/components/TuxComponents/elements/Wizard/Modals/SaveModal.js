@@ -1,8 +1,9 @@
 import styled from 'styled-components'
-import { pop_reg, PopHeader, PopSaveBtn } from '../../../utilities/Type'
+import { pop_reg, pop_thick, pop_bolder } from '../../../utilities/Type'
 
 export const SaveModalWrapper = styled.div`
   position: relative;
+  top: 85px;
   width: 426px;
   height: 453px;
   border: 1px solid #BBBBBB;
@@ -19,7 +20,8 @@ export const SaveHeader = styled.p`
   padding: 0;
   width: 327px;
   height: 54px;
-  font: ${PopHeader};
+  font: ${pop_thick};
+  font-size: 36px;
   line-height: 54px;
   text-align: center;
 `
@@ -42,11 +44,12 @@ export const SaveButton = styled.button`
   position: absolute;
   padding: 0;
   margin: 0;
-  bottom: 110px;
+  top: 242px;
   left: 82px;
   width: 280px;
   height: 50px;
-  font: ${PopSaveBtn};
+  font: ${pop_bolder};
+  font-size: 20px;
   line-height: 28px;
   text-align: center;
   border: none;
@@ -57,11 +60,12 @@ export const SaveButton = styled.button`
 `
 export const DontSaveButton = styled.button`
   position: absolute;
-  bottom: 40px;
+  top: 312px;
   left: 73px;
   width: 280px;
   height: 50px;
-  font: ${PopSaveBtn};
+  font: ${pop_bolder};
+  font-size: 20px;
   line-height: 28px;
   text-align: center;
   border: none;
@@ -70,3 +74,32 @@ export const DontSaveButton = styled.button`
   border-radius: 5px;
   cursor: pointer;
 `
+
+export const X_Button = styled.button`
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  
+`
+
+export const X_Image = styled.img`
+
+`
+
+export const TuxFlower = styled.img`
+	width: 132px;
+	z-index: 1;
+  position: absolute;
+  top: -95px;
+  left: 150px;
+	border-radius: 50%;
+  background: #FFFFFF;
+  box-sizing: border-box;
+`;
+
+

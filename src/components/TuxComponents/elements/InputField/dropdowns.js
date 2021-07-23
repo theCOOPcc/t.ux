@@ -17,6 +17,7 @@ export const StyledUl = styled.ul`
 
 export const StyledLi = styled.li`
   text-align: center;
+  cursor: pointer;
 `;
 
 
@@ -32,22 +33,29 @@ export const DropDownContent = styled.div`
 export const DropDownLi = styled(StyledLi)`
   display: inline-block;
   width: 280px;
+  
   &:hover ${DropDownContent} {
     display: block;
   }
 `;
 
 export const SubA = styled.a`
-  color: black;
+  color: #565656;
   padding: 12px 16px;
+  background-color: #FCFCFC;
   text-decoration: none;
   display: block;
   text-align: left;
+  font: ${pop_reg};
+  font-weight: 300;
+  font-style: normal;
   font-size: 14px;
+  line-height: 21px;
   &:hover {
-    background-color: rgba(120, 214, 218, 0.15);
-    font: ${pop_semiBold};
-    font-size: 14px;
+    background-color: #EBF9F9;
+    /* font: ${pop_semiBold}; */
+    font-style: italic;
+    font-weight: 400;
     line-height: 21px;
     color: ${tux_primart} !important;
     border: 1px solid ${dark_grey};
@@ -60,7 +68,7 @@ export const DropDownArrow = styled.img`
   margin: 20px;
   position: absolute;
   margin-left: -30px;
-  top: 19px;  
+  /* top: 5px;   */
 `;
 
 export const Input = styled.input`
@@ -73,7 +81,9 @@ export const Input = styled.input`
   width: 280px;
   height: 48px;
   border-radius: 10px;
-  padding: 20px 0 0 12px;
+  margin: 0;
+  padding-left: 12px;
+  padding-top: 8px;
   border: 1px solid ${medium_grey};
   &:hover {
       border-radius: 10px 10px 0px 0px;
@@ -87,10 +97,10 @@ export const Label = styled.label`
   color: ${medium_grey};
   position: absolute;
   pointer-events: none;
-  margin-left: 12px;
-  margin-bottom: 13px;
-  left: 12px;
-  top: 15px;
+  /* margin-left: 12px;
+  margin-bottom: 13px; */
+  left: 10px;
+  top: 0px;
   transition: 0.3s ease all;
   `;
 
@@ -101,8 +111,8 @@ class Menu extends Component {
     if (this.props.onClick) this.props.onClick(action);
   };
 
-  render = () => {
-    return (
+  render = () => (
+
       <StyledUl>
         <DropDownLi>
           <Input placeholder="Input Text"/>
@@ -117,7 +127,7 @@ class Menu extends Component {
         </DropDownLi>
       </StyledUl>
     );
-  };
+
 }
 
 export default Menu;
