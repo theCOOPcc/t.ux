@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { SessionContext } from "../../../contexts/SessionContext";
 import styled, { css } from "styled-components";
 import {
-  Button280,
+  PrimaryButton,
   SideBarAllText,
   SubText,
   DotContainer,
