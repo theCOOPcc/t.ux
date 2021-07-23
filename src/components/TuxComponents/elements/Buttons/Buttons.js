@@ -620,9 +620,8 @@ text-align: left;
 color: ${future_text};
 border: none;
 border-bottom: ${solid_border};
-max-width: 238.88px;
+max-width: 230.88px;
 padding-left: 0.5rem;
-
 padding-bottom: 0.5rem;
 margin-left: 1rem;
 margin-top: 1rem;
@@ -666,6 +665,7 @@ ${(props) =>
 export const SideBarAllText = styled(HeadingIntro)`
 border-bottom: 0;
 margin: 1rem 0 0 0.5rem;
+max-width: 238.88px;
 
  `
 
@@ -702,7 +702,7 @@ export const Dot = styled.div`
       width: 8px;
       border-radius: 50%;
       background-color: #f37806;
-       //display: block;
+     
      
     `}
 `;
@@ -720,7 +720,5 @@ flex-direction: row;
 export const SubContainer = styled.div`
    width: 238.88px;
    //background-color: blue;
-
-
  ${Flex({ ai: "center", js: "center" })}
 `;
