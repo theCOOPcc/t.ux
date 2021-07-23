@@ -622,6 +622,7 @@ border: none;
 border-bottom: ${solid_border};
 max-width: 238.88px;
 padding-left: 0.5rem;
+
 padding-bottom: 0.5rem;
 margin-left: 1rem;
 margin-top: 1rem;
@@ -643,7 +644,7 @@ ${(props) =>
 export const NUmHeadContainer = styled.div`
 border-bottom: ${solid_border};
 padding: 0 0 0.6rem;
-//padding-left: 0.5rem;
+padding-left: 0.5rem;
 
 
 
@@ -664,6 +665,7 @@ ${(props) =>
 
 export const SideBarAllText = styled(HeadingIntro)`
 border-bottom: 0;
+margin: 1rem 0 0 0.5rem;
 
  `
 
