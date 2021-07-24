@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { HiddenRadioButtonInput, RadioButtonWrapper, TestCustomRadio } from '../RadioButtons/RadioButtons'
 import { HexBox } from './HexInput';
+import { ColorSlider } from './ContrastRatio';
+import { LumSlider } from './ContrastRatio';
 import { CounterBox, CounterWrapper, ArrowButtonUp, ArrowButtonDown} from '../FontCounter/FontCounter'
 import { ContrastRatioActivity, ContrastRatioBox} from './ContrastRatio';
 import { withDesign } from "storybook-addon-designs";
@@ -124,6 +126,18 @@ export const ContrastRatioPage = (args) => {
         <span style={{ position: "relative", left: "15px", zIndex: "2" }}>#</span>
         <HexBox onChange={handleHexChange} className='hexBox' type='text' maxLength='6' {...args}></HexBox>
       </div>
+    </div>
+
+    <div style={{display: 'inherit', backgroundColor: 'transparent', flexDirection: 'row'}}>
+
+      <ColorSlider type='range' className='slider'></ColorSlider>
+
+    </div>
+
+    <div style={{display: 'inherit', backgroundColor: 'transparent', flexDirection: 'row'}}>
+
+    <LumSlider className='lumosity' type='range' ></LumSlider>
+
     </div>
 
   </ContrastRatioActivity>
