@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import React, { useState } from 'react'
+import styled, { css } from "styled-components";
+import React, { useState } from "react";
 import {
   tux_blue,
   disable_btn,
@@ -16,10 +16,19 @@ import {
   small_nav_default,
   small_nav_hover,
   small_nav_pressed,
-  small_nav_disabled, tux_grey, tux_red, true_white
+  small_nav_disabled,
+  tux_grey,
+  tux_red,
+  true_white,
 } from "../../utilities";
 
 import {
+  pop_semiBold,
+  Flex,
+  solid_border,
+  present_text,
+  future_text,
+  text_black,
   btn_active_shadow,
   input_border,
   pop_thick,
@@ -66,7 +75,7 @@ export const PrimaryButton = styled.button`
       &:hover {
         background-color: ${primary_hover};
       }
-  `}
+    `}
   // Disabled
     ${(props) =>
     props.disabled &&
@@ -235,69 +244,73 @@ export const GoogleBox = styled.button`
 `;
 
 export const CopyLinkDiv = styled.div`
-	width: 408.76px;
-	height: 90px;
-	display: flex;
-	flex-direction: column;
-	${(props) =>
-		props.depressed &&
-		css`
-			width: 390px;
-		`}
+  width: 408.76px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  ${(props) =>
+    props.depressed &&
+    css`
+      width: 390px;
+    `}
 `;
 
 export const CopyLinkImg = styled.img`
-	width: 28px;
-	height: 28.64px;
-	margin: 13px;
+  width: 28px;
+  height: 28.64px;
+  margin: 13px;
 `;
 
 export const CopyLinkP = styled.p`
-	color: ${tux_red};
-	font: 600 18px "Poppins", sans-serif;
-	line-height: 27px;
-	text-align: center;
+  color: ${tux_red};
+  font: 600 18px "Poppins", sans-serif;
+  line-height: 27px;
+  text-align: center;
   margin: 6px;
 `;
 
 export const CopyLinkBtn = styled.button`
-	width: 100%;
-	height: 54px;
-	border: none;
-	border-radius: 5px;
-	background: #ffffff;
-	padding: 12px 0;
-	margin: 17px 8px;
-	${FlexCenter};
-	margin-bottom: 10px;
-	box-shadow: ${common_shadow};
-	color: ${tux_grey};
-	font: 700 18px "Poppins", sans-serif;
-	cursor: pointer;
-	${(props) =>
-		props.depressed &&
-		css`
-			width: 390px;
-		`}
+  width: 100%;
+  height: 54px;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff;
+  padding: 12px 0;
+  margin: 17px 8px;
+  ${FlexCenter};
+  margin-bottom: 10px;
+  box-shadow: ${common_shadow};
+  color: ${tux_grey};
+  font: 700 18px "Poppins", sans-serif;
+  cursor: pointer;
+  ${(props) =>
+    props.depressed &&
+    css`
+      width: 390px;
+    `}
 `;
 
-export const CopyLinkButton = ({...args}) => {
-	const [clicked, setClicked] = useState(false);
+export const CopyLinkButton = ({ ...args }) => {
+  const [clicked, setClicked] = useState(false);
 
-	return (
-		<CopyLinkDiv {...args}>
-			<CopyLinkBtn
+  return (
+    <CopyLinkDiv {...args}>
+      <CopyLinkBtn
         className="copyLinkBtnTest"
-				onClick={() => {
-					setClicked(!clicked);
-				}}>
-				Copy Link 
-        <CopyLinkImg className="copyLinkBtnTestImg" src="/images/CopyLink.png" />
-			</CopyLinkBtn>
-			{clicked ? <CopyLinkP>link copied to clipboard</CopyLinkP> : <p></p>}
-		</CopyLinkDiv>
-	);
-}; 
+        onClick={() => {
+          setClicked(!clicked);
+        }}
+      >
+        Copy Link
+        <CopyLinkImg
+          className="copyLinkBtnTestImg"
+          src="/images/CopyLink.png"
+        />
+      </CopyLinkBtn>
+      {clicked ? <CopyLinkP>link copied to clipboard</CopyLinkP> : <p></p>}
+    </CopyLinkDiv>
+  );
+};
 
 //Button Nav Small
 
@@ -417,8 +430,6 @@ export const Button = styled.button`
     `}
 `;
 
-
-
 // This was the "WideBtn", 280px
 export const Button280 = styled.button`
   border: none;
@@ -504,7 +515,7 @@ export const DisabledBtn = styled(Button280)`
 `;
 
 export const TextBtn = styled.button`
-/* positioning */
+  /* positioning */
 
   position: absolute;
   border: none;
@@ -515,48 +526,46 @@ export const TextBtn = styled.button`
   bottom: 12.61%;
   width: 71px;
   height: 18px;
-  
 
-/* Fonts */
+  /* Fonts */
   font: Poppins;
   font-weight: 500;
   font-style: normal;
   font-size: 14px;
   line-height: 18px;
-  
-/* Color */
+
+  /* Color */
   color: #222222;
   display: flex;
-  align-items:center;
+  align-items: center;
   text-align: center;
-  justify-content:center;
-  
-${(props) => 
-  props.hover && css`
-    text-decoration-line: underline;
-    cursor: pointer;
-  `
-}
- ${(props) =>
-  props.focus && css`
-    outline: none;
-    width: 71px;
-    height: 18px;
-    border: 1px solid rgba(60, 133, 130, 0.5);
-  `
- }
-  ${(props) => 
-    props.depressed && css`
-    text-align: justify;
-    color: #323239;
-    `
-  }
-  ${(props) => 
-    props.disabled && css`
-      color: #CCCCCC;
-    `
-  }
+  justify-content: center;
 
+  ${(props) =>
+    props.hover &&
+    css`
+      text-decoration-line: underline;
+      cursor: pointer;
+    `}
+  ${(props) =>
+    props.focus &&
+    css`
+      outline: none;
+      width: 71px;
+      height: 18px;
+      border: 1px solid rgba(60, 133, 130, 0.5);
+    `}
+  ${(props) =>
+    props.depressed &&
+    css`
+      text-align: justify;
+      color: #323239;
+    `}
+  ${(props) =>
+    props.disabled &&
+    css`
+      color: #cccccc;
+    `}
 `;
 
 export const LinkBtn = styled.a`
@@ -566,7 +575,7 @@ export const LinkBtn = styled.a`
   left: 4px;
   top: 4px;
   font-family: Poppins;
-  font-style:normal;
+  font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
@@ -574,28 +583,129 @@ export const LinkBtn = styled.a`
   align-items: center;
   text-align: center;
   text-decoration-line: underline;
-  color: #518E90;
-    ${(props) => 
-      props.hover &&
-      css`
+  color: #518e90;
+  ${(props) =>
+    props.hover &&
+    css`
       color: #A9CBCD
       cursor: pointer;
-      `
-      } 
-      ${(props) =>
-    props.disabled && css`
-    text-decoration-line: none;
-    color: #888888;
-    ` 
-      }
+      `}
+  ${(props) =>
+    props.disabled &&
+    css`
+      text-decoration-line: none;
+      color: #888888;
+    `}
     ${(props) =>
     props.focus &&
     css`
-      color: #A9CBCD
+      color: #a9cbcd;
     `}
-    ${(props) => 
-      props.depressed && css`
-       color: rgba(5, 0, 255, 0.75);
-      `
-    }
+    ${(props) =>
+    props.depressed &&
+    css`
+      color: rgba(5, 0, 255, 0.75);
+    `}
+`;
+
+export const HeadingIntro = styled.div`
+  color: ${future_text};
+  border: none;
+  border-bottom: ${solid_border};
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 230.88px;
+  margin: 1rem 0 0 1rem;
+  padding: 0 0 0.5rem 0.5rem;
+
+  ${(props) =>
+    props.past &&
+    css`
+      color: ${text_black};
+      font-weight: 600;
+    `}
+
+  ${(props) =>
+    props.present &&
+    css`
+      color: ${present_text};
+      font-weight: 700;
+    `}
+`;
+
+export const NUmHeadContainer = styled.div`
+  border-bottom: ${solid_border};
+  padding: 0 0 0.6rem 0.5rem;
+
+  ${(props) =>
+    props.past &&
+    css`
+      color: ${text_black};
+      font-weight: 600;
+    `}
+
+  ${(props) =>
+    props.present &&
+    css`
+      color: ${present_text};
+      font-weight: 700;
+    `}
+`;
+
+export const SideBarAllText = styled(HeadingIntro)`
+  border-bottom: 0;
+  margin: 1rem 0 0 0.5rem;
+  max-width: 238.88px;
+`;
+
+export const SubText = styled.div`
+  color: #999999;
+  border-bottom: ${solid_border};
+  font-weight: 500;
+  fine-height: 24px;
+  font-size: 14px;
+  margin-left: 2rem;
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  width: 191px;
+  ${(props) =>
+    props.past &&
+    css`
+      color: ${text_black};
+    `}
+
+  ${(props) =>
+    props.present &&
+    css`
+      color: ${present_text};
+      background-color: rgba(243, 120, 6, 0.1);
+      font-weight: 600;
+      margin-left: 24px;
+    `}
+`;
+
+export const Dot = styled.div`
+  ${(props) =>
+    props.present &&
+    css`
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background-color: #f37806;
+    `}
+`;
+
+export const DotContainer = styled.div`
+  padding-left: 1rem;
+  ${Flex({ ai: "center", jc: "center" })}
+`;
+
+export const SubDot = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const SubContainer = styled.div`
+  width: 238.88px;
+  ${Flex({ ai: "center", js: "center" })}
 `;
