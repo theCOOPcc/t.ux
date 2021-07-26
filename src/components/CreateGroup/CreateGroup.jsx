@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { ManagerContext } from '../../contexts/ManagerContext';
 import styled from 'styled-components';
-import * as U from '../../components/TuxComponents/UniversalComponents';
 
 const CreateGroup = ({ createGroup, setCreateGroup }) => {
   const { newGroupName, setNewGroupName, handleCreateGroup } = useContext(

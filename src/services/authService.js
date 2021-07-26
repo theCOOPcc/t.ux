@@ -18,10 +18,11 @@ function signup(user) {
   })
   .then(({ token }) => {
     tokenService.setToken(token);
-    window.location = 
-    // 'http://localhost:3000/activity/heuristics'
-    // 'http://taketux.io/activity/heuristics'
-    'http://tux-staging.herokuapp.com/activity/heuristics'
+    window.location =
+      'http://localhost:3000/activity/heuristics'
+      // 'http://taketux.io/activity/heuristics'
+      // "http://23carnies.com/activity/heuristics";
+      // "http://thecoop-tux.herokuapp.com/activity/heuristics";
   })
 }
 
@@ -70,3 +71,4 @@ export default {
   logoutFromGoogle,
   login,
 };
+

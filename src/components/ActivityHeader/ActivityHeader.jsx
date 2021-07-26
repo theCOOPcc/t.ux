@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
 import { SessionContext } from '../../contexts/SessionContext';
 import ProgressBar from '../../components/TuxComponents/layouts/ProgressBar';
-import * as U from '../../components/TuxComponents/UniversalComponents';
+// import {ProgressBar} from '../TuxComponents/elements/ProgressBar/ProgressBar';
 import styled, {css} from 'styled-components';
 import { Flex } from '../TuxComponents/utilities';
 
 const ActivityHeader = () => {
-  const { completed, currentSection, topic } = useContext(SessionContext);
+  const { completed, currentSection, sessionData } = useContext(SessionContext);
   const { name } = currentSection;
+  const { topic } = sessionData;
   return (
     <InfoBar>
-      {/* //TODO: topic is not coming in here */}
       <Heading1>{topic}</Heading1>
       <Heading2 greyed>&nbsp;-&nbsp;{name}</Heading2>
       <Heading2 progress>Progress&nbsp;&nbsp;</Heading2>

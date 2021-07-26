@@ -1,8 +1,8 @@
 
 import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
-import { Flex, orange_text, tux_blue } from '../TuxComponents/utilities';
-import { Button280 } from '../TuxComponents/elements';
+import { Flex, tux_orange, tux_blue } from '../TuxComponents/utilities';
+import { PrimaryButton } from '../TuxComponents/elements';
 import { SessionContext } from '../../contexts/SessionContext';
 
 const Overview = ({ user }) => {
@@ -45,9 +45,9 @@ const Overview = ({ user }) => {
           </Text>
           <Text overview>Begin when you're ready. Good luck!</Text>
         </FlexBox>
-        <Button280 onClick={() => setStarted(true)}>
+        <PrimaryButton onClick={() => setStarted(true)}>
           Begin
-        </Button280>
+        </PrimaryButton>
       {/* </OuterBox> */}
 
       </Main>
@@ -82,7 +82,7 @@ const ColorBlock = styled.div`
 `;
 
 const Heading1 = styled.h1`
-  color: ${orange_text};
+  color: ${tux_orange};
   font-size: 36px;
   line-height: 54px;
   font-weight: 500;
