@@ -110,7 +110,7 @@ const NavBar = ({ user, handleLogout }) => {
             <NavLink right href="/login">
               Log In
             </NavLink>
-            <NavLink href="/signup">Sign Up</NavLink>
+            {/* <NavLink href="/signup">Sign Up</NavLink> */}
           </>
         ) : (
           user && (

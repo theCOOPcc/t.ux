@@ -178,7 +178,7 @@ export const GoogleG = styled.img`
 `;
 
 //OAuth Button
-export const GoogleBox = styled.button`
+export const GoogleBox = styled.a`
   width: 343px;
   height: 80px;
   border-radius: 5px;
