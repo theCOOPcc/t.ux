@@ -54,7 +54,7 @@ const SideBarNav = () => {
                 present={currentSectionIndex === index}
                 disabled={index > currentSectionIndex}
                 key={index}
-                onClick={() => handleJumpToSection(index)}
+                // onClick={() => handleJumpToSection(index)}
               >
                 {section.name}
               </HeadingIntro>
@@ -66,7 +66,7 @@ const SideBarNav = () => {
                 present={currentSectionIndex === index}
                 disabled={index > currentSectionIndex}
                 key={index}
-                onClick={() => handleJumpToSection(index)}
+                // onClick={() => handleJumpToSection(index)}
               >
                 {" "}
                 <NUmHeadContainer>
