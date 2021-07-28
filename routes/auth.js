@@ -34,9 +34,9 @@ router.get('/logout', function (req, res) {
   console.log('logging out', req.user)
   req.logout();
   res.redirect(
-    'http://localhost:3000'
+    // 'http://localhost:3000'
     // 'http://23carnies.com'
-    // 'http://thecoop-tux.herokuapp.com'
+    'http://thecoop-tux.herokuapp.com'
     );
 });
 /*---------- Protected Routes ----------*/

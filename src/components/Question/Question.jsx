@@ -49,9 +49,8 @@ const ColorBlock = styled.div`
 `;
 
 const FlexBox = styled.div`
-    ${Flex({fd:'column',})};
     background-color: var(--true-white);
-    /* box-shadow: ${common_shadow}; */
+    //  box-shadow: ${common_shadow}; 
     border-radius: 10px;
     margin: 30px 60px;
 `;
