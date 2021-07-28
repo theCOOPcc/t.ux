@@ -44,9 +44,9 @@ class Login extends Component {
                 <GoogleBox
                   className='loginLink'
                   // this is the "href" go to google
-                  href='http://localhost:3001/api/auth/google'
+                  // href='http://localhost:3001/api/auth/google'
                   // href='http://23carnies.com/api/auth/google'
-                  //   href="https://thecoop-tux.herokuapp.com/api/auth/google"
+                    href="https://thecoop-tux.herokuapp.com/api/auth/google"
                 >
                   <GoogleG
                     src='/images/GoogleG.png'
