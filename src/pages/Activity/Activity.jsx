@@ -32,10 +32,14 @@ const Activity = () => {
 export default Activity;
 
 const Main = styled.main`
-  display: grid;
-grid-template-columns: 1fr 300px;
-grid-template-rows: 1fr;
+display: grid;
+grid-template-columns: 6fr 300px;
+grid-template-rows: 60px 1fr;
 grid-column-gap: 20px;
-  max-width: 1440px;
-  margin: 0 auto;
+grid-row-gap: 20px;
+background: #e9e9e9;
+padding: 20px 39px 15px;
+margin: 0 auto;
+/* position: relative; */
+max-width: 1440px;
 `;
