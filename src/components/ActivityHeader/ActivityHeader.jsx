@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import { SessionContext } from '../../contexts/SessionContext';
-import ProgressBar from '../../components/TuxComponents/layouts/ProgressBar';
-// import {ProgressBar} from '../TuxComponents/elements/ProgressBar/ProgressBar';
+// import ProgressBar from '../../components/TuxComponents/layouts/ProgressBar';
+import {ProgressBar} from '../TuxComponents/elements/ProgressBar/ProgressBar';
 import styled, {css} from 'styled-components';
 import { Flex } from '../TuxComponents/utilities';
 
 const ActivityHeader = () => {
-  const { completed, currentSection, sessionData } = useContext(SessionContext);
+  const { completed, currentSection, sessionData, started, finished } = useContext(SessionContext);
   const { name } = currentSection;
   const { topic } = sessionData;
   return (
@@ -14,7 +14,7 @@ const ActivityHeader = () => {
       <Heading1>{topic}</Heading1>
       <Heading2 greyed>&nbsp;-&nbsp;{name}</Heading2>
       <Heading2 progress>Progress&nbsp;&nbsp;</Heading2>
-      <ProgressBar completed={completed} />
+      <ProgressBar completed={completed} started={started} finished={finished}/>
     </InfoBar>
   );
 };

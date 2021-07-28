@@ -82,8 +82,8 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
   };
 
   const convertIndexToPercent = (newIndex) => {
-    const index = newIndex - 1;
-    const completed = index === 0 ? 0 : `${index}0`;
+    const index = newIndex;
+    const completed = index === 0 ? '0' : `${index}0`;
     setCompleted(completed);
   };
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { GoogleBox, GoogleG } from '../Buttons/Buttons'
-import { TuxFlower, LoginBox, P } from './Login'
+import { LoginModal } from './Login'
 
 import { withDesign } from "storybook-addon-designs";
 
@@ -10,16 +10,7 @@ export default {
 };
 
 export const LoginSignup = () => (
-    <div>
-    <LoginBox className='LoginBox'>
-    <TuxFlower src='/images/tuxFlower.png'/>
-    <P>Welcome to t.ux!</P>
-        <GoogleBox>
-            <GoogleG src='/images/google_logo.png'/>
-            Sign in with Google
-        </GoogleBox>
-    </LoginBox>
-    </div>
+    <LoginModal />
 )
 
 LoginSignup.story = {
