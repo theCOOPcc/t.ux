@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import Feedback from '../Feedback/Feedback';
+import {Feedback} from '../Feedback/Feedback';
 import Answer from '../Answer/Answer';
 import styled from 'styled-components';
 import { Flex, tux_blue, common_shadow } from '../TuxComponents/utilities';
@@ -16,8 +16,8 @@ const Question = ({ details }) => {
       {/* <A.ProblemStatement>{problemStatement}</A.ProblemStatement> */}
       <FlexBox dangerouslySetInnerHTML={{ __html: problemStatement }}></FlexBox>
       <MediaBox>
-        <img src={media} alt="" />
-        <BtnBox>
+        {/* <img src={media} alt="" /> */}
+        {/* <BtnBox> */}
           {answers.map((answer, index) => (
             <Answer
               key={index}
@@ -33,7 +33,7 @@ const Question = ({ details }) => {
               }
             />
           ))}
-        </BtnBox>
+        {/* </BtnBox> */}
       </MediaBox>
       {response && <Feedback response={response} />}
     </>
