@@ -23,10 +23,11 @@ export const Lumosity = styled.input`
       89.14%, #F6F5FB 
       96.65%);
     border-radius: 25px;
-    border: 0px solid #000101;
+    border: 2px solid #F6F6F6;
   }
   &::-webkit-slider-thumb,
      -moz-range-thumb {
+       margin-top: -2px;
       height: 20px;
       width: 20px;
       background-color: transparent;
@@ -41,8 +42,8 @@ export const Lumosity = styled.input`
         border-radius: 50px;
         border: 6px double #f6f6f6;
         cursor: pointer;
+        margin-top: -5.5px;
         -webkit-appearance: none;
-        margin-top: -5px;
         box-shadow: 5px 5px 5px rgba(0,0,0,.5);
       &:active {
         height: 30px;
