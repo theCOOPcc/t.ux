@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { HiddenRadioButtonInput, RadioButtonWrapper, TestCustomRadio } from '../RadioButtons/RadioButtons'
 import { HexBox } from './HexInput';
+import { white } from '../../utilities/Colors';
+import { pop_bolder } from '../../utilities/Type';
 import { ColorSlider } from './ContrastRatio';
 import { LumSlider } from './ContrastRatio';
 import { CounterBox, CounterWrapper, ArrowButtonUp, ArrowButtonDown} from '../FontCounter/FontCounter'
@@ -17,10 +19,11 @@ export default {
 export const ContrastRatioPage = (args) => {
 
   // For Hex Input Box
-  const [counterBoxValue, setCounterBoxValue] = useState(0);
-  const [prevInputValue, setPrevInputValue] = useState(0);
-  let currentValue;
-  let charCountLength = 0;
+  const [textBoxValue, setTextBoxValue] = useState('');
+  const [backgroundBoxValue, setBackgroundBoxValue] = useState('');
+  const [prevTextInputValue, setPrevTextInputValue] = useState('');
+  const [prevBackgroundInputValue, setPrevBackgroundInputValue] = useState('');
+
 
   // For Font-Counter
   const [fontCounterValue, setFontCounterValue] = useState(0);
@@ -30,18 +33,28 @@ export const ContrastRatioPage = (args) => {
 
 
   const handleHexChange = (e) => {
-    currentValue = e.target.value;
-    charCountLength = currentValue.length;
+    let currentValue = e.target.value;
+    let boxType = e.target.dataset.type
+    let charCountLength = currentValue.length;
 
-    if (charCountLength === 6 && currentValue.match(/^[a-fA-F0-9]+$/i)) {
-      setPrevInputValue(parseInt(currentValue));
-      setCounterBoxValue(parseInt(currentValue));
+    console.log('Current Value: ',currentValue);
+    console.log('Char Count Length:', charCountLength);
+    console.log('currentVal.match', currentValue.match(/^[a-fA-F0-9]+$/i));
+    if (charCountLength <= 6 && currentValue.match(/^[a-fA-F0-9]+$/i)) {
+      if (boxType === 'text') {
+        setTextBoxValue(currentValue);
+        setPrevTextInputValue(currentValue);
+      } else {
+        setBackgroundBoxValue(currentValue);
+        setPrevBackgroundInputValue(currentValue);
+      }
+    } else {
+      if(boxType === 'text') {
+        setTextBoxValue(prevTextInputValue)
+      } else {
+        setBackgroundBoxValue(prevBackgroundInputValue)
+      }
     }
-    if (charCountLength !== 6) {
-      currentValue = prevInputValue;
-      setCounterBoxValue(prevInputValue)
-    }
-
   }
 
     const handleFontChange = (e) => {
@@ -104,8 +117,7 @@ export const ContrastRatioPage = (args) => {
           Text
         </RadioButtonWrapper>
 
-        <span style={{ position: "relative", left: "15px", zIndex: "2" }}>#</span>
-        <HexBox onChange={handleHexChange} className='hexBox' type='text' maxLength='6' {...args}></HexBox>
+        <span style={{ position: "relative", left: "15px", zIndex: "2", color: 'white', font: pop_bolder }}>#</span><HexBox style={{padding: '13.5px'}} onChange={handleHexChange} className='hexBox' type='text' maxLength='6' value={textBoxValue} data-type='text' {...args}></HexBox>
       </div>
 
 
@@ -123,8 +135,8 @@ export const ContrastRatioPage = (args) => {
         </RadioButtonWrapper>
 
       
-        <span style={{ position: "relative", left: "15px", zIndex: "2" }}>#</span>
-        <HexBox onChange={handleHexChange} className='hexBox' type='text' maxLength='6' {...args}></HexBox>
+        <span style={{ position: "relative", left: "15px", zIndex: "2",color: 'white', font: pop_bolder }}>#</span>
+        <HexBox style={{padding: '13.5px'}} onChange={handleHexChange} data-type='background' className='hexBox' type='text' maxLength='6' value={backgroundBoxValue} {...args}></HexBox>
       </div>
     </div>
 
