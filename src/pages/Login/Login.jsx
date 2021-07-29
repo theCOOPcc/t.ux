@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom'
 import { Flex, common_shadow, pop_reg, pop_thick } from '../../components/TuxComponents/utilities';
 import { SmallInput, PrimaryButton } from '../../components/TuxComponents/elements';
+import { LoginModal } from '../../components/TuxComponents/elements/Login/Login'
 // styled components for this Login comoponent are at the bottom
 
 class Login extends Component {
@@ -37,9 +38,10 @@ class Login extends Component {
         return (
           <Main>
             <OutsideFlex>
-              <TuxFlower src='/images/tuxFlower.png'></TuxFlower>
-              <LoginBox>
-                <GoogleBox
+              {/* <TuxFlower src='/images/tuxFlower.png'></TuxFlower> */}
+              {/* <LoginBox> */}
+                <LoginModal />
+                {/* <GoogleBox
                   // this is the "href" go to google
                   // href='http://localhost:3001/api/auth/google'
                 //   href="https://thecoop-tux.herokuapp.com/api/auth/google"
@@ -47,8 +49,8 @@ class Login extends Component {
                 >
                   <GoogleG src='/images/google_logo.png' />
                   <SignIn>Sign in with Google</SignIn>
-                </GoogleBox>
-                <form autoComplete='off' onSubmit={this.handleSubmit}>
+                </GoogleBox> */}
+                {/* <form autoComplete='off' onSubmit={this.handleSubmit}>
                   <Text>or:</Text>
                   <Label>Username or Email</Label>
                   <SmallInput
@@ -75,13 +77,13 @@ class Login extends Component {
                   >
                     Log In
                   </PrimaryButton>
-                </form>
-              </LoginBox>
+                </form> */}
+              {/* </LoginBox> */}
             </OutsideFlex>
-            <OutsideFlex signUp>
-              <Text>Need an Account?&nbsp;</Text>
-              <LinkTo to='/signup'>Sign Up</LinkTo>
-            </OutsideFlex>
+            {/* // <OutsideFlex signUp>
+            //   <Text>Need an Account?&nbsp;</Text>
+            //   <LinkTo to='/signup'>Sign Up</LinkTo>
+            // </OutsideFlex> */}
           </Main>
         );
     }
@@ -92,6 +94,7 @@ export default Login;
 const Main = styled.main`
 	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
 	background-blend-mode: normal, multiply;
+  height: 100vh;
 	margin: 0;
 	/* max-width: 1440px; */
 `;

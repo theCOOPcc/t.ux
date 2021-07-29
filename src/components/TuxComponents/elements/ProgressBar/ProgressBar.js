@@ -3,21 +3,37 @@ import styled, { css } from 'styled-components';
 import { Flex, tux_blue } from '../../utilities';
 
 
-export const ProgressBar = ({completed}) => (
+export const ProgressBar = ({ completed, started, finished }) => (
   <>
-    <ProgressContainer className = "ProgressBar"> 
-     <ProgressFiller style={{width:`${completed}`}}></ProgressFiller>
-     <ProgressLabel>
-       {
-       completed === 0 ?
-       'Starting' :
-       `${completed}%`
-       
-       }
-      </ProgressLabel>  
-      
+    <ProgressContainer className="ProgressBar">
+      {/* <ProgressFiller style={{ width: `${completed}%` }}></ProgressFiller> */}
+      {started === false && finished === null ? (
+        <>
+        <ProgressFiller style={{ width: "100%" }}></ProgressFiller>
+          <ProgressLabel done>
+            {
+              completed === '90'
+              ? '100% Completed!'
+              : `${completed}%`
+            }
+          </ProgressLabel>
+        </>
+      ) : (
+        <>
+        <ProgressFiller style={{ width: `${completed}%` }}></ProgressFiller>
+          <ProgressLabel>
+            {completed === '0'
+              ? 'Not Started'
+              : completed === '-10'
+                ? 'Not Started'
+                  : `${completed}%`}
+          </ProgressLabel>
+        </>
+      )
+      }
+
     </ProgressContainer>
-    
+
   </>
 )
 
@@ -85,6 +101,6 @@ export const ProgressLabel = styled.p`
   ${props => props.done && css`
   position: absolute;
   z-index: 500;
-  left: 100px
+  margin: 0 0 0 5.2rem;
   `}
 `;

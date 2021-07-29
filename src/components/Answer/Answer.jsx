@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
-import { SessionContext } from '../../contexts/SessionContext';
+import SessionContextProvider, { SessionContext } from '../../contexts/SessionContext';
+import { AnswerCard } from '../TuxComponents/elements/Cards/AnswerCards/AnswerCards';
 
 const Answer = ({  answer, index, disabled, response }) => {
 
@@ -11,11 +12,15 @@ const Answer = ({  answer, index, disabled, response }) => {
 
       right={response && response.selection.isCorrect === true}
       wrong={response && response.selection.isCorrect === false}
-      medium
       onClick={() => handleResponse(answer, index)}
       disabled={disabled}
-    >
-      {answer.label}
+      >
+      <AnswerCard 
+        index={index}
+        label={answer.newLabel}
+        image={answer.answerImage}
+      />
+      {/* {answer.label} */}
     </SubmitQuestion>
   );
 };
@@ -24,24 +29,6 @@ export default Answer;
 
 const SubmitQuestion = styled.button`
 	border: none;
-	width: 224px;
-	padding: 12px 0;
-	margin: 10px 8px;
-	border-radius: 5px;
-	font: var(--answer-btn);
-	line-height: 24px;
-	color: var(--true-white);
-    background-color: var(--enable-btn);
+    background-color: transparent;
     cursor: pointer;
-    ${props => props.right && css`
-        background: #78C077;
-        border: 1px solid #78C077;
-    `}
-    ${props => props.wrong && css`
-        background: #EE6E6B;
-        border: 1px solid #EE6E6B;
-    `}
-    ${props => props.disabled && css`
-        background: #dddddd
-    `}
 `;

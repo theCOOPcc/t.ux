@@ -1,33 +1,30 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { Flex } from '../TuxComponents/utilities';
+import { JustCorrect, JustIncorrect } from '../TuxComponents/elements/Alerts/Justifications';
+// import { FlagFeature } from '../TuxComponents/elements/FlagFeature/FlagFeature';
 
-const FeedbackBox = ({ selection }) => {
-  const { feedback, isCorrect } = selection;
-  return (
-    <FlexBox>
-      <Hint isCorrect={isCorrect}>{isCorrect ? 'Correct!' : 'Hint!'}</Hint>
-      <HintBox>
-        <Tips>Tips:</Tips>
-        <Text>{feedback}</Text>
-      </HintBox>
-    </FlexBox>
-  );
-};
 
-const Feedback = ({ response }) => {
-  const { selection } = response;
-  const { isCorrect } = selection;
+export const Feedback = ({ response }) => {
+  const { selection, isCorrect } = response;
+  // const { isCorrect } = selection;
 
   return (
     <>
-      {(isCorrect && <FeedbackBox selection={selection} />) ||
-        (!isCorrect && <FeedbackBox selection={selection} />)}
+      {/* {(isCorrect && <FeedbackBox selection={selection} />) ||
+        (!isCorrect && <FeedbackBox selection={selection} />)} */}
+               {/* {(isCorrect && <JustCorrect selection={selection} />) ||
+        (!isCorrect && <JustIncorrect selection={selection} />)}  */}
+        {
+          isCorrect ? <JustCorrect selection={selection} isCorrect={isCorrect} />
+          : <JustIncorrect selection={selection} isCorrect={isCorrect} />
+        }
+        {/* <JustCorrect selection={selection} isCorrect={isCorrect}/> */}
     </>
   );
 };
 
-export default Feedback;
+// export default Feedback;
 
 
 const FlexBox = styled.div`
@@ -63,3 +60,32 @@ const Text = styled.p`
   font: var(--pop-reg);
   line-height: 20px;
 `;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// {
+//   isCorrect ? 
+//   <JustCorrect selection={selection}/>
+//   :
+//   <JustIncorrect selection={selection}/>
+// }
+
+      /* {(isCorrect && <JustCorrect selection={selection} />) ||
+        (!isCorrect && <JustIncorrect selection={selection} />)} */

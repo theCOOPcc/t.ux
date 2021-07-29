@@ -14,8 +14,8 @@ const Question = ({ details }) => {
       <ColorBlock></ColorBlock>
       <FlexBox dangerouslySetInnerHTML={{ __html: problemStatement }}></FlexBox>
       <MediaBox>
-        <img src={media} alt="" />
-        <BtnBox>
+        {/* <img src={media} alt="" /> */}
+        {/* <BtnBox> */}
           {answers.map((answer, index) => (
             <Answer
               key={index}
@@ -31,7 +31,7 @@ const Question = ({ details }) => {
               }
             />
           ))}
-        </BtnBox>
+        {/* </BtnBox> */}
       </MediaBox>
       {response && <Feedback response={response} />}
     </>
@@ -47,9 +47,8 @@ const ColorBlock = styled.div`
 `;
 
 const FlexBox = styled.div`
-    ${Flex({fd:'column',})};
     background-color: var(--true-white);
-    /* box-shadow: ${common_shadow}; */
+    //  box-shadow: ${common_shadow}; 
     border-radius: 10px;
     margin: 30px 60px;
 `;

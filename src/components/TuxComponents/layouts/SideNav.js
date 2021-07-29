@@ -54,7 +54,7 @@ const SideBarNav = () => {
                 present={currentSectionIndex === index}
                 disabled={index > currentSectionIndex}
                 key={index}
-                onClick={() => handleJumpToSection(index)}
+                // onClick={() => handleJumpToSection(index)}
               >
                 {section.name}
               </HeadingIntro>
@@ -66,7 +66,7 @@ const SideBarNav = () => {
                 present={currentSectionIndex === index}
                 disabled={index > currentSectionIndex}
                 key={index}
-                onClick={() => handleJumpToSection(index)}
+                // onClick={() => handleJumpToSection(index)}
               >
                 {" "}
                 <NUmHeadContainer>
@@ -183,7 +183,7 @@ const SideBar = styled.article`
   background-color: ${true_white};
   height: calc(100vh - 159px);
   ${Flex({ ai: "center", fd: "column" })};
-  border: var(--solid-border);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px 5px 0 0;
 `;
 
