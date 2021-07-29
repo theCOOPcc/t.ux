@@ -1,6 +1,6 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
-import SessionContextProvider, { SessionContext } from '../../contexts/SessionContext';
+import { SessionContext } from '../../contexts/SessionContext';
 
 const Answer = ({  answer, index, disabled, response }) => {
 
@@ -33,9 +33,6 @@ const SubmitQuestion = styled.button`
 	color: var(--true-white);
     background-color: var(--enable-btn);
     cursor: pointer;
-    /* ${props => props.isCorrect && css`
-        background-color: ${(props) => (props.isCorrect ? 'Green' : 'Red')};
-        `} */
     ${props => props.right && css`
         background: #78C077;
         border: 1px solid #78C077;
@@ -47,10 +44,4 @@ const SubmitQuestion = styled.button`
     ${props => props.disabled && css`
         background: #dddddd
     `}
-		/* &:hover {
-			background: #236C69;
-		}
-		&:active {
-			box-shadow: var(--btn-active-shadow);
-		} */
 `;

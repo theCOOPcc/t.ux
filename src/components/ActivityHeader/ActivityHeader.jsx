@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { SessionContext } from '../../contexts/SessionContext';
 import ProgressBar from '../../components/TuxComponents/layouts/ProgressBar';
-// import {ProgressBar} from '../TuxComponents/elements/ProgressBar/ProgressBar';
 import styled, {css} from 'styled-components';
 import { Flex } from '../TuxComponents/utilities';
 
