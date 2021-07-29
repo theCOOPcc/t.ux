@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react';
-import {Feedback} from '../Feedback/Feedback';
+import React, { useContext } from 'react';
+import Feedback from '../Feedback/Feedback';
 import Answer from '../Answer/Answer';
 import styled from 'styled-components';
 import { Flex, tux_blue, common_shadow } from '../TuxComponents/utilities';
@@ -7,13 +7,11 @@ import { SessionContext } from '../../contexts/SessionContext';
 
 const Question = ({ details }) => {
   const { response } = useContext(SessionContext);
-  // const [bkgrdColor, setbkgrdColor] = useState(['blue', 'green', 'red'])
   const { problemStatement, media, answers } = details.contents;
 
   return (
     <>
       <ColorBlock></ColorBlock>
-      {/* <A.ProblemStatement>{problemStatement}</A.ProblemStatement> */}
       <FlexBox dangerouslySetInnerHTML={{ __html: problemStatement }}></FlexBox>
       <MediaBox>
         {/* <img src={media} alt="" /> */}

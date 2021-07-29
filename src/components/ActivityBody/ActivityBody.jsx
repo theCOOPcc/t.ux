@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { SessionContext } from '../../contexts/SessionContext';
-import ActivityLinks from '../ActivityLinks/ActivityLinks';
 import ActivityMain from '../ActivityMain/ActivityMain';
 import ConfirmationForm from '../ConfirmationForm/ConfirmationForm';
 import styled from 'styled-components';
@@ -12,7 +11,6 @@ const ActivityBody = () => {
     <GridBox>
       {started === true && currentSection && <ActivityMain />}
       {started === false && finished === null && <ConfirmationForm />}
-      {/* {started === false && finished === true && <ActivityLinks />}   */}
     </GridBox>
   );
 };

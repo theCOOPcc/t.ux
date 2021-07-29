@@ -6,19 +6,13 @@ import { PrimaryButton } from '../TuxComponents/elements';
 import { SessionContext } from '../../contexts/SessionContext';
 
 const Overview = ({ user }) => {
-  const { setStarted, name: activityName, time: activityTime, startTimer } = useContext(
+  const { setStarted, name: activityName, time: activityTime } = useContext(
     SessionContext
   );
-
-  const handleStartSession = () => {
-    setStarted(true);
-    startTimer()
-  };
 
   return (
     <>
       <Main>
-      {/* <OuterBox> */}
         <ColorBlock/>
         <FlexBox >
           {user ? (
@@ -48,8 +42,6 @@ const Overview = ({ user }) => {
         <PrimaryButton onClick={() => setStarted(true)}>
           Begin
         </PrimaryButton>
-      {/* </OuterBox> */}
-
       </Main>
     </>
   );

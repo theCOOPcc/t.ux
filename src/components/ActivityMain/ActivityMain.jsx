@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { SessionContext } from '../../contexts/SessionContext';
 import styled from 'styled-components';
 
