@@ -24,7 +24,7 @@ export const Feedback = ({ response }) => {
   );
 };
 
-// export default Feedback;
+export default Feedback;
 
 
 const FlexBox = styled.div`
