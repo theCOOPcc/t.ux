@@ -9,6 +9,7 @@ import { CounterBox, CounterWrapper, ArrowButtonUp, ArrowButtonDown} from '../Fo
 import { ContrastRatioActivity, ContrastRatioBox} from './ContrastRatio';
 import { withDesign } from "storybook-addon-designs";
 
+//const tinycolor = require("tinycolor2")
 
 export default {
   title: "Contrast Ratio",
@@ -50,9 +51,9 @@ export const ContrastRatioPage = (args) => {
       }
     } else {
       if(boxType === 'text') {
-        setTextBoxValue(prevTextInputValue)
+        setTextBoxValue('')
       } else {
-        setBackgroundBoxValue(prevBackgroundInputValue)
+        setBackgroundBoxValue('')
       }
     }
   }
