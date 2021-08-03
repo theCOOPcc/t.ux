@@ -185,6 +185,7 @@ const SideBar = styled.article`
   ${Flex({ ai: "center", fd: "column" })};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px 5px 0 0;
+  overflow-x: hidden;
 `;
 
 const SideBarTextBox = styled.section`

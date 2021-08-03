@@ -1,24 +1,35 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled, { css } from 'styled-components'
 import { Poppins, pop_bolder, success_grey, true_white, intro_text, pop_reg, pop_thick } from '../../utilities';
+// import { SecondaryButton } from '../Buttons/Buttons';
+import {SessionContext} from '../../../../contexts/SessionContext'
 
-export const TopicBox = ({ }) => (
-    <>
+
+
+export const TopicBox = ({ }) => {
+    const { setStarted } = useContext(
+        SessionContext
+      );
+   return (
+    
+    <div style={{display: 'flex', justifyContent: 'center'}}>
     <TopicContainer>
         <TopicImage>
             <TopicCompletion>
             </TopicCompletion>
         </TopicImage>
         <TopicText>
-            <TopicTitle></TopicTitle>
-            <TopicDescription></TopicDescription>
-            <TopicQuestionTotal></TopicQuestionTotal>
+            <TopicTitle>Heuristics</TopicTitle>
+            <TopicDescription>Learn about the 10 Heuistics of Design</TopicDescription>
+            <TopicQuestionTotal>0 out of 3</TopicQuestionTotal>
         </TopicText>
-        <Btn></Btn>
-
+        <Btn onClick={() => setStarted(true)}>Start</Btn>
     </TopicContainer>
-    </>
-)
+    </div>
+)}
+
+export default TopicBox;
+
 
 
 
@@ -50,7 +61,7 @@ border-radius: 100px;
 
 export const TopicContainer = styled.div`
     display: grid;
-    grid-template-columns: 150px 70% auto;
+    grid-template-columns: 150px 65% auto;
     width: 993px;
     height: 130px;
     background-color: ${true_white};
@@ -97,4 +108,6 @@ font: ${pop_bolder};
 border: none;
 font-size: 24px;
 background: none;
+cursor: pointer;
 `;
+
