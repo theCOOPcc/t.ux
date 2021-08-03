@@ -28,7 +28,7 @@ export const QuestionHeader = styled.p`
 
 export const QuestionSubHeader = styled.p`
   position: absolute;
-  top: 108px;
+  top: 85px;
   left: 63px;
   width: 389px;
   height: 27px;
