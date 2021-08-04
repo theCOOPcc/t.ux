@@ -1,5 +1,5 @@
 
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { SessionContext } from "../../../contexts/SessionContext";
 import styled, { css } from "styled-components";
 import {
@@ -23,9 +23,11 @@ import {
 } from "../utilities";
 
 const SideBarNav = () => {
+  const [module, setModule] = useState(0);
   const {
     sessionData,
     started,
+    completed,
     finished,
     setStarted,
     setFinished,
@@ -36,11 +38,33 @@ const SideBarNav = () => {
     handleCurrentModule,
     currentSectionIndex,
     currentModuleIndex,
+    incrementModuleIndex,
   } = useContext(SessionContext);
 
   const { sections } = sessionData;
   let displayCount,
     questionCount = 0;
+
+  // useEffect(() => {
+  //   const parsedModule = JSON.parse(
+  //     localStorage.getItem("module")
+  //   );
+  //   setModule(parsedModule);
+  // }, []);
+
+  // useEffect(() => {
+  //   localStorage.setItem("module", JSON.stringify({currentSectionIndex, started, completed, finished}));
+  // }, [currentSectionIndex, started, completed, finished]);
+
+  useEffect(() => {
+    const parsedModule = parseInt(localStorage.getItem("module") || 0);
+    handleJumpToSection(parsedModule);
+    setModule(parsedModule);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("module", currentSectionIndex);
+  }, [currentSectionIndex]);
 
   return (
     <SideBarParent>
@@ -141,9 +165,7 @@ const SideBarNav = () => {
         {started &&
         currentSectionIndex === sections.length - 1 &&
         currentModuleIndex === currentSection.modules.length - 1 ? (
-          <PrimaryButton onClick={() => setStarted(false)}>
-            Next
-          </PrimaryButton>
+          <PrimaryButton onClick={() => setStarted(false)}>Next</PrimaryButton>
         ) : started && currentSectionIndex <= sections.length - 1 ? (
           <PrimaryButton onClick={() => handleCurrentModule()}>
             Next
@@ -151,15 +173,14 @@ const SideBarNav = () => {
         ) : (
           ""
         )}
-        {/* if started is now false and !finished then show Next PrimaryButton , which will change finished to true */}
+        {/* if started is now false and !finished then show Next PrimaryButton , which will change finished to true
         {started === false && finished === null && (
-          <PrimaryButton onClick={() => setFinished(true)}>
-            Next
-          </PrimaryButton>
-        )}
-        {/* if started is false and finished equals false then show end PrimaryButton */}
-        {started === false && finished === true && (
+          <PrimaryButton onClick={() => setFinished(true)}>Next</PrimaryButton>
+        )} */}
+        {started === false && currentSectionIndex === 10 && finished === null && (
+          <a href="javascript:history.back()">
           <PrimaryButton>End</PrimaryButton>
+          </a>
         )}
       </SideBar>
     </SideBarParent>
@@ -185,6 +206,7 @@ const SideBar = styled.article`
   ${Flex({ ai: "center", fd: "column" })};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px 5px 0 0;
+  overflow-x: hidden;
 `;
 
 const SideBarTextBox = styled.section`
