@@ -6,10 +6,10 @@ import { pop_bolder } from '../../utilities/Type';
 import { ColorSlider } from './ContrastRatio';
 import { LumSlider } from './ContrastRatio';
 import { CounterBox, CounterWrapper, ArrowButtonUp, ArrowButtonDown} from '../FontCounter/FontCounter'
-import { ContrastRatioActivity, ContrastRatioBox} from './ContrastRatio';
+import { ContrastRatioActivity, ContrastRatioBox, ContrastRatioResult} from './ContrastRatio';
 import { withDesign } from "storybook-addon-designs";
 
-//const tinycolor = require("tinycolor2")
+const tinycolor = require("tinycolor2")
 
 export default {
   title: "Contrast Ratio",
@@ -19,12 +19,19 @@ export default {
 
 export const ContrastRatioPage = (args) => {
 
-  // For Hex Input Box
-  const [textBoxValue, setTextBoxValue] = useState('');
-  const [backgroundBoxValue, setBackgroundBoxValue] = useState('');
-  const [prevTextInputValue, setPrevTextInputValue] = useState('');
-  const [prevBackgroundInputValue, setPrevBackgroundInputValue] = useState('');
+  //Contrast Ratio Test Result
+  const [testResult, setTestResult] = useState('FAIL');
 
+  // Color depending on passed (green) or failed (red) contrast ratio test
+  const [Color, setColor] = useState('red');
+
+  // For Hex Input Box (Text)
+  const [textBoxValue, setTextBoxValue] = useState('');
+  const [prevTextInputValue, setPrevTextInputValue] = useState('');
+
+  // For Hex Input Box (Background)
+  const [backgroundBoxValue, setBackgroundBoxValue] = useState('');
+  const [prevBackgroundInputValue, setPrevBackgroundInputValue] = useState('');
 
   // For Font-Counter
   const [fontCounterValue, setFontCounterValue] = useState(0);
@@ -36,29 +43,47 @@ export const ContrastRatioPage = (args) => {
   const handleHexChange = (e) => {
     let currentValue = e.target.value;
     let boxType = e.target.dataset.type
-    let charCountLength = currentValue.length;
+    let charLength = currentValue.length;
 
-    console.log('Current Value: ',currentValue);
-    console.log('Char Count Length:', charCountLength);
-    console.log('currentVal.match', currentValue.match(/^[a-fA-F0-9]+$/i));
-    if (charCountLength <= 6 && currentValue.match(/^[a-fA-F0-9]+$/i)) {
-      if (boxType === 'text') {
+    if (charLength < 7 && currentValue.match(/^[a-fA-F0-9]+$/i)) {
+      if(boxType === 'text')
+      {
         setTextBoxValue(currentValue);
         setPrevTextInputValue(currentValue);
-      } else {
+      }
+      else if(boxType === 'background')
+      {
         setBackgroundBoxValue(currentValue);
         setPrevBackgroundInputValue(currentValue);
       }
-    } else {
-      if(boxType === 'text') {
-        setTextBoxValue('')
-      } else {
-        setBackgroundBoxValue('')
-      }
+        if(charLength === 6  && tinycolor.isReadable("#" + textBoxValue, "#" + backgroundBoxValue,{level:"AA",size:"small"}))
+        { 
+          setTestResult('AA PASS');
+          setColor('green');
+        } 
+        else if (charLength !== 6 || charLength === 6 && !tinycolor.isReadable("#" + textBoxValue, "#" + backgroundBoxValue,{level:"AA",size:"small"}))
+        {
+          setTestResult('FAIL');
+          setColor('red');
+        } 
+
+    }
+    else if(boxType === 'text') 
+    {
+      setTextBoxValue('');
+      setTestResult('FAIL');
+    }
+    else
+    {
+      setBackgroundBoxValue('');
+      setTestResult('FAIL');
     }
   }
 
-    const handleFontChange = (e) => {
+  //const handleBackgroundChange = (e) => {}
+
+       
+  const handleFontChange = (e) => {
     currentFontValue = e.target.value;
     fontCountLength = currentFontValue.length;
 
@@ -98,17 +123,24 @@ export const ContrastRatioPage = (args) => {
       
       <p style={{fontSize:'90px', margin: '0'}}>Aa</p>
 
-      <ContrastRatioBox></ContrastRatioBox>
+    <div>
+      <ContrastRatioBox style={{backgroundColor: Color}}>
+        <p style={{fontSize:'13px', paddingLeft:'20px', margin:'11px 0 0 0'}}>Contrast Ratio</p>
+        <p style={{fontSize:'18px', padding:'10px 0 0 40px', margin:'0'}}>4.25:1</p>
+      </ContrastRatioBox>
+      
+      <ContrastRatioResult style={{color: Color }}>{testResult}</ContrastRatioResult>
+    </div>  
 
     </div>
 
-    <div style={{display: 'inherit', flexDirection: 'row', justifyContent: 'flex-start', maxWidth: '600px'}}>
+  <div style={{display: 'inherit', flexDirection: 'row', justifyContent: 'flex-start', maxWidth: '600px'}}>
 
     <p>The W3C color contrast guidelines are graded via a AA or AAA standard.  AA is best practice and requires a minimum 3:1 ratio for large-sized text and 4.5:1 ratio for regular sized text.  Adjusting font size, color, or luminance of the text or background can help you reach an acceptible color contrast ratio to meet AA standards.</p>
 
-    </div>
+  </div>
 
-    <div style={{display: 'inherit', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end'}}>
+  <div style={{display: 'inherit', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end'}}>
       
       <div>
         
@@ -118,7 +150,8 @@ export const ContrastRatioPage = (args) => {
           Text
         </RadioButtonWrapper>
 
-        <span style={{ position: "relative", left: "15px", zIndex: "2", color: 'white', font: pop_bolder }}>#</span><HexBox style={{padding: '13.5px'}} onChange={handleHexChange} className='hexBox' type='text' maxLength='6' value={textBoxValue} data-type='text' {...args}></HexBox>
+        <span style={{ position: "relative", left: "15px", zIndex: "2", color: 'white', font: pop_bolder }}>#</span>
+        <HexBox style={{padding: '15px'}} onChange={handleHexChange} className='hexBox' type='text' maxLength='6' value={textBoxValue} data-type='text' {...args}></HexBox>
       </div>
 
 
@@ -137,21 +170,21 @@ export const ContrastRatioPage = (args) => {
 
       
         <span style={{ position: "relative", left: "15px", zIndex: "2",color: 'white', font: pop_bolder }}>#</span>
-        <HexBox style={{padding: '13.5px'}} onChange={handleHexChange} data-type='background' className='hexBox' type='text' maxLength='6' value={backgroundBoxValue} {...args}></HexBox>
+        <HexBox style={{padding: '15px'}} onChange={handleHexChange} data-type='background' className='hexBox' type='text' maxLength='6' value={backgroundBoxValue} {...args}></HexBox>
       </div>
-    </div>
+  </div>
 
-    <div style={{display: 'inherit', backgroundColor: 'transparent', flexDirection: 'row'}}>
+  <div style={{display: 'inherit', backgroundColor: 'transparent', flexDirection: 'row'}}>
 
       <ColorSlider type='range' className='slider'></ColorSlider>
 
-    </div>
+  </div>
 
-    <div style={{display: 'inherit', backgroundColor: 'transparent', flexDirection: 'row'}}>
+  <div style={{display: 'inherit', backgroundColor: 'transparent', flexDirection: 'row'}}>
 
     <LumSlider className='lumosity' type='range' ></LumSlider>
 
-    </div>
+  </div>
 
   </ContrastRatioActivity>
 </>
