@@ -6,7 +6,9 @@ export const SessionContext = createContext();
 
 const SessionContextProvider = ({ children, activityId, timerProps }) => {
   const [sessionData, setSessionData] = useState(null);
-  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+  const [currentSectionIndex, setCurrentSectionIndex] = useState(
+    localStorage.getItem("module") || 0
+  );
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
   // !started and finished are for session tracking.
   const [started, setStarted] = useState(null);
@@ -15,8 +17,12 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
   const [completed, setCompleted] = useState('-10');
   // !response variable is used to track Question response.
   const [response, setResponse] = useState(null);
-
+  
   const { user } = useContext(UserContext);
+  
+  
+  
+
 
   // Set Activity from Database
   const getActivityData = async () => {
@@ -84,6 +90,7 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
   const convertIndexToPercent = (newIndex) => {
     const index = newIndex;
     const completed = index === 0 ? '0' : `${index}0`;
+    
     setCompleted(completed);
   };
 
@@ -201,6 +208,7 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
         setResponse,
         handleResponse,
         startTimer,
+        incrementModuleIndex,
       }}
     >
       {children}
