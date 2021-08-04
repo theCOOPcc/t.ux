@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import styled, { css } from 'styled-components'
 import { Poppins, pop_bolder, success_grey, true_white, intro_text, pop_reg, pop_thick } from '../../utilities';
 // import { SecondaryButton } from '../Buttons/Buttons';
@@ -7,9 +7,12 @@ import {SessionContext} from '../../../../contexts/SessionContext'
 
 
 export const TopicBox = ({ }) => {
-    const { setStarted } = useContext(
+    const { setStarted, currentSectionIndex } = useContext(
         SessionContext
       );
+
+    
+
    return (
     
     <div style={{display: 'flex', justifyContent: 'center'}}>
