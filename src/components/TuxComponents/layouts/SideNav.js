@@ -173,13 +173,14 @@ const SideBarNav = () => {
         ) : (
           ""
         )}
-        {/* if started is now false and !finished then show Next PrimaryButton , which will change finished to true */}
+        {/* if started is now false and !finished then show Next PrimaryButton , which will change finished to true
         {started === false && finished === null && (
           <PrimaryButton onClick={() => setFinished(true)}>Next</PrimaryButton>
-        )}
-        {/* if started is false and finished equals false then show end PrimaryButton */}
-        {started === false && finished === true && (
+        )} */}
+        {started === false && currentSectionIndex === 10 && finished === null && (
+          <a href="javascript:history.back()">
           <PrimaryButton>End</PrimaryButton>
+          </a>
         )}
       </SideBar>
     </SideBarParent>

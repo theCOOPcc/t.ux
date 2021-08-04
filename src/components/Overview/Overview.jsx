@@ -7,7 +7,7 @@ import AssistanceBox from '../TuxComponents/elements/AssistanceBox/AssistanceBox
 import { SessionContext } from '../../contexts/SessionContext';
 import { PageBackground } from '../TuxComponents/elements/PageBackgrounds/PageBackgrounds'
 
-const Overview = ({ user }) => {
+ const Overview = ({ user }) => {
   const { setStarted, name: activityName, time: activityTime } = useContext(
     SessionContext
   );
