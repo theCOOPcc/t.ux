@@ -1,4 +1,3 @@
-
 import React, { useContext, useEffect, useState } from "react";
 import { SessionContext } from "../../../contexts/SessionContext";
 import styled, { css } from "styled-components";
@@ -45,19 +44,8 @@ const SideBarNav = () => {
   let displayCount,
     questionCount = 0;
 
-  // useEffect(() => {
-  //   const parsedModule = JSON.parse(
-  //     localStorage.getItem("module")
-  //   );
-  //   setModule(parsedModule);
-  // }, []);
-
-  // useEffect(() => {
-  //   localStorage.setItem("module", JSON.stringify({currentSectionIndex, started, completed, finished}));
-  // }, [currentSectionIndex, started, completed, finished]);
-
   useEffect(() => {
-    const parsedModule = parseInt(localStorage.getItem("module") || 0);
+    let parsedModule = parseInt(localStorage.getItem("module") || 0);
     handleJumpToSection(parsedModule);
     setModule(parsedModule);
   }, []);
@@ -178,8 +166,10 @@ const SideBarNav = () => {
           <PrimaryButton onClick={() => setFinished(true)}>Next</PrimaryButton>
         )} */}
         {started === false && currentSectionIndex === 10 && finished === null && (
-          <a href="javascript:history.back()">
-          <PrimaryButton>End</PrimaryButton>
+          <a href='javascript:history.back()'>
+            <PrimaryButton onClick={() => localStorage.setItem("module", -1)}>
+              End
+            </PrimaryButton>
           </a>
         )}
       </SideBar>
