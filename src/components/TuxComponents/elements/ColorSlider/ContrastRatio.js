@@ -12,7 +12,6 @@ export const ContrastRatioActivity = styled.div`
         border-radius: 12px;
         height: 400px;
         width: 765px;
-        background-color: purple; // the hex color from input goes here
         
 `;
 
@@ -26,9 +25,9 @@ export const ContrastRatioBox = styled.div`
         border: 1px solid #000000;
         border-radius: 3px;
         color: white;
-        background-color: green; // the result of the ratio test will determine the color
 
-`;  
+`;
+
 
 export const ContrastRatioResult = styled.div`
         // Here goes the contrast result
@@ -40,8 +39,8 @@ export const ContrastRatioResult = styled.div`
         border-radius: 3px;
         padding-top: 10px;
         text-align: center;
-        color: green; // the result of the ratio test will determine the color
-        background-color: white; 
+        background-color: white;
+        border: 1px solid #000000; 
 
 `;  
 
