@@ -9,9 +9,9 @@ export const ContrastRatioActivity = styled.div`
         padding: 15px 30px;
         display: flex;
         flex-direction: column;
+        border-radius: 12px;
         height: 400px;
         width: 765px;
-        background-color: purple; // the hex color from input goes here
         
 `;
 
@@ -19,9 +19,28 @@ export const ContrastRatioActivity = styled.div`
 export const ContrastRatioBox = styled.div`
         // Here goes the contrast ratio on its own
        
-        width: 103px;
+        width: 128px;
         height: 67px;
-        background-color: red; // the result of the ratio test will determine the color
+        font: ${pop_bolder};
+        border: 1px solid #000000;
+        border-radius: 3px;
+        color: white;
+
+`;
+
+
+export const ContrastRatioResult = styled.div`
+        // Here goes the contrast result
+       
+        width: 130px;
+        height: 33px;
+        margin-top:5px;
+        font: ${pop_bolder};
+        border-radius: 3px;
+        padding-top: 10px;
+        text-align: center;
+        background-color: white;
+        border: 1px solid #000000; 
 
 `;  
 
