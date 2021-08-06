@@ -17,7 +17,9 @@ export const TopicBox = () => {
      <div style={{ display: "flex", justifyContent: "center" }}>
        <TopicContainer>
          <TopicImage>
-           <TopicCompletion></TopicCompletion>
+           <TopicCompletion>
+             {(localStorage.getItem("module") / 10) * 100}%
+           </TopicCompletion>
          </TopicImage>
          <TopicText>
            <TopicTitle>Heuristics</TopicTitle>
@@ -29,9 +31,7 @@ export const TopicBox = () => {
          {parseInt(localStorage.getItem("module")) === 0 ? (
            <Btn onClick={() => setStarted(true)}>Start</Btn>
          ) : parseInt(localStorage.getItem("module")) === -1 ? (
-           <Btn onClick={reStart}>
-             Restart
-           </Btn>
+           <Btn onClick={reStart}>Restart</Btn>
          ) : (
            <Btn onClick={() => setStarted(true)}>Resume</Btn>
          )}
