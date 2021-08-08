@@ -18,7 +18,12 @@ export const TopicBox = () => {
        <TopicContainer>
          <TopicImage>
            <TopicCompletion>
-             {(localStorage.getItem("module") / 10) * 100}%
+             {parseInt(localStorage.getItem("module")) === 10
+               ? ((localStorage.getItem("module") - 1) / 10) * 100
+               : parseInt(localStorage.getItem("module")) === -1
+               ? 100
+               : (localStorage.getItem("module") / 10) * 100}
+             %
            </TopicCompletion>
          </TopicImage>
          <TopicText>
