@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import styled, { css } from 'styled-components'
 import { Poppins, pop_bolder, success_grey, true_white, intro_text, pop_reg, pop_thick } from '../../utilities';
 // import { SecondaryButton } from '../Buttons/Buttons';
@@ -6,27 +6,44 @@ import {SessionContext} from '../../../../contexts/SessionContext'
 
 
 
-export const TopicBox = ({ }) => {
-    const { setStarted } = useContext(
-        SessionContext
-      );
+export const TopicBox = () => {
+    const { setStarted, handleJumpToSection, totalSections } = useContext(SessionContext);
+
+      const reStart = () => {
+          localStorage.setItem('module', 0)
+          handleJumpToSection(0);
+      }
    return (
-    
-    <div style={{display: 'flex', justifyContent: 'center'}}>
-    <TopicContainer>
-        <TopicImage>
-            <TopicCompletion>
-            </TopicCompletion>
-        </TopicImage>
-        <TopicText>
-            <TopicTitle>Heuristics</TopicTitle>
-            <TopicDescription>Learn about the 10 Heuistics of Design</TopicDescription>
-            <TopicQuestionTotal>0 out of 3</TopicQuestionTotal>
-        </TopicText>
-        <Btn onClick={() => setStarted(true)}>Start</Btn>
-    </TopicContainer>
-    </div>
-)}
+     <div style={{ display: "flex", justifyContent: "center" }}>
+       <TopicContainer>
+         <TopicImage>
+           <TopicCompletion>
+             {parseInt(localStorage.getItem("module")) === 10
+               ? ((localStorage.getItem("module") - 1) / (totalSections - 1)) *
+                 100
+               : parseInt(localStorage.getItem("module")) === -1
+               ? 100
+               : (localStorage.getItem("module") / (totalSections - 1)) * 100}
+             %
+           </TopicCompletion>
+         </TopicImage>
+         <TopicText>
+           <TopicTitle>Heuristics</TopicTitle>
+           <TopicDescription>
+             Learn about the 10 Heuistics of Design
+           </TopicDescription>
+           <TopicQuestionTotal>0 out of 3</TopicQuestionTotal>
+         </TopicText>
+         {parseInt(localStorage.getItem("module")) === 0 ? (
+           <Btn onClick={() => setStarted(true)}>Start</Btn>
+         ) : parseInt(localStorage.getItem("module")) === -1 ? (
+           <Btn onClick={reStart}>Restart</Btn>
+         ) : (
+           <Btn onClick={() => setStarted(true)}>Resume</Btn>
+         )}
+       </TopicContainer>
+     </div>
+   );}
 
 export default TopicBox;
 
