@@ -1,6 +1,7 @@
 import React from "react";
 import { withDesign } from "storybook-addon-designs";
-import {BarContainer} from "./Text_toolbar"
+import {BarContainer, B} from "./Text_toolbar"
+import Bicon from "../../../../images/icons/Bicon.svg"
 
 export default {
     title: "TextToolBar",
@@ -11,7 +12,9 @@ export default {
 
     return(
         <>
-        <BarContainer></BarContainer>
+        <BarContainer>
+            <B src={Bicon}></B>
+        </BarContainer>
         </>
     )
 

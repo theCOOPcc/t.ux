@@ -2,11 +2,13 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 
-export const TextToolBar = ({ }) => {
+export const TextToolBar = () => {
 
     return(
 <>
-<BarContainer></BarContainer>
+<BarContainer>
+    <B></B>
+</BarContainer>
 </>
     )
 }
@@ -18,6 +20,13 @@ height: 50px;
 width: 240px;
 border-radius: 5px;
 background-color: #666666;
-
+display: flex;
+justify-content: center;
+align-items: center;
 
 `;
+
+export const B = styled.img`
+heightL 16px;
+width: 12px;
+`
