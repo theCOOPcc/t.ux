@@ -7,7 +7,7 @@ import {SessionContext} from '../../../../contexts/SessionContext'
 
 
 export const TopicBox = () => {
-    const { setStarted, handleJumpToSection } = useContext(SessionContext);
+    const { setStarted, handleJumpToSection, totalSections } = useContext(SessionContext);
 
       const reStart = () => {
           localStorage.setItem('module', 0)
@@ -19,10 +19,11 @@ export const TopicBox = () => {
          <TopicImage>
            <TopicCompletion>
              {parseInt(localStorage.getItem("module")) === 10
-               ? ((localStorage.getItem("module") - 1) / 10) * 100
+               ? ((localStorage.getItem("module") - 1) / (totalSections - 1)) *
+                 100
                : parseInt(localStorage.getItem("module")) === -1
                ? 100
-               : (localStorage.getItem("module") / 10) * 100}
+               : (localStorage.getItem("module") / (totalSections - 1)) * 100}
              %
            </TopicCompletion>
          </TopicImage>
