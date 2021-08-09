@@ -8,6 +8,7 @@ export const TextToolBar = () => {
 <>
 <BarContainer>
     <B></B>
+    <I></I>
 </BarContainer>
 </>
     )
@@ -29,4 +30,10 @@ align-items: center;
 export const B = styled.img`
 heightL 16px;
 width: 12px;
+`
+
+export const I = styled.img`
+heightL 16px;
+width: 12px;
+
 `
