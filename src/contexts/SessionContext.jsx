@@ -135,7 +135,7 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
   const startSessionTracking = (activityData) => {
     const initialSessionObject = buildInitialSessionObject(activityData);
     setSessionData(initialSessionObject);
-    setTotalSections(initialSessionObject.sections.length);
+    setTotalSections(initialSessionObject.sections.length - 1);
   };
 
   // todo: Write these functions to track session.
