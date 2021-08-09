@@ -17,6 +17,8 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
   const [completed, setCompleted] = useState('-10');
   // !response variable is used to track Question response.
   const [response, setResponse] = useState(null);
+  const [totalSections, setTotalSections] = useState(null);
+
   
   const { user } = useContext(UserContext);
   
@@ -133,6 +135,7 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
   const startSessionTracking = (activityData) => {
     const initialSessionObject = buildInitialSessionObject(activityData);
     setSessionData(initialSessionObject);
+    setTotalSections(initialSessionObject.sections.length);
   };
 
   // todo: Write these functions to track session.
@@ -209,6 +212,7 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
         handleResponse,
         startTimer,
         incrementModuleIndex,
+        totalSections,
       }}
     >
       {children}
