@@ -38,6 +38,7 @@ background-position: 50% 50%;
 background-size: cover;
 overflow: hidden;
 padding-left: 5px;
+padding-top: 3px;
 `;
 
 
