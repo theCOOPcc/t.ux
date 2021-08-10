@@ -8,6 +8,24 @@ import { LumSlider } from './ContrastRatio';
 import { CounterBox, CounterWrapper, ArrowButtonUp, ArrowButtonDown} from '../FontCounter/FontCounter'
 import { ContrastRatioActivity, ContrastRatioBox, ContrastRatioResult} from './ContrastRatio';
 import { withDesign } from "storybook-addon-designs";
+//import { HexColorPicker } from "react-colorful";
+
+      // <HexColorPicker
+      //   style={{ clipPath:'inset(177px 0px 0px 0px round 13px)',width: "700px", height: '201px' }}
+      //   color={color}
+      //   onChange={setColor}
+      //   className="slider"
+      // />
+
+
+// .slider .react-colorful__hue-pointer {
+//   width: 23px;
+//   height: 23px;
+//   border-radius: 10px;
+// }
+
+
+
 
 const tinycolor = require("tinycolor2")
 
