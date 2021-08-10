@@ -176,7 +176,11 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
 
   const handleResponse = (answer, index) => {
     addAttempt({ selectedAnswer: answer.label, isCorrect: answer.isCorrect });
-    setResponse({ selection: answer, selectionIndex: index });
+    setResponse({
+      selection: answer,
+      selectionIndex: index,
+      isCorrect: answer.isCorrect,
+    });
   };
 
   const startTimer = () => {
