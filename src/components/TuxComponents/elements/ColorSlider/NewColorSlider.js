@@ -23,45 +23,48 @@ export const Slider = styled.input`
   &::-webkit-slider-runnable-track {
     height: 20px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    background: linear-gradient(
-      to right,
-      hsl(0, 100%, 50%) 0%,
-      hsl(36, 100%, 50%) 10%,
-      hsl(72, 100%, 50%) 20%,
-      hsl(108, 100%, 50%) 30%,
-      hsl(144, 100%, 50%) 40%,
-      hsl(180, 100%, 50%) 50%,
-      hsl(216, 100%, 50%) 60%,
-      hsl(252, 100%, 50%) 70%,
-      hsl(288, 100%, 50%) 80%,
-      hsl(324, 100%, 50%) 90%,
-      hsl(360, 100%, 50%) 100%
-    );
+      background: 
+      linear-gradient(
+        270deg, #FF0000 
+        4.39%, #FF0080 
+        11.27%, #FF00FF 
+        19.04%, #8000FF 
+        26.31%, #0000FF 
+        33.83%, #0080FF 
+        42.11%, #00FFFF 
+        49.38%, #00FF80 
+        57.02%, #00FF00 
+        65.31%, #80FF00 
+        72.95%, #FFFF00 
+        80.47%, #FF8000 
+        89.14%, #FF0000 
+        96.65%);
     border-radius: 25px;
     border: 2px solid #F6F6F6;
   }
     &::-webkit-slider-thumb,
      -moz-range-thumb {
-      height: 15px;
-      width: 15px;
-      margin-top: 0px;
+       margin-top: -2px;
+      height: 20px;
+      width: 20px;
       background-color: transparent;
       border-radius: 50px;
       border: 3.5px solid #f6f6f6;
       cursor: pointer;
+      z-index: 1;
       -webkit-appearance: none;
       &:hover {
-        height: 25px;
-        width: 25px;
+        height: 30px;
+        width: 30px;
         border-radius: 50px;
-        border: 7px double  #f6f6f6;
+        border: 6px double  #f6f6f6;
         cursor: pointer;
         -webkit-appearance: none;
-        margin-top: -3px;
+        margin-top: -5.5px;
         box-shadow: 5px 5px 5px rgba(0,0,0,.5);
       &:active {
-        height: 25px;
-        width: 25px;
+        height: 30px;
+        width: 30px;
         border: 4px solid  #f6f6f6;
         box-shadow: 6px 6px 6px rgba(0,0,0,.5);
         }

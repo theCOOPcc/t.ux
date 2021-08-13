@@ -6,7 +6,9 @@ export const SessionContext = createContext();
 
 const SessionContextProvider = ({ children, activityId, timerProps }) => {
   const [sessionData, setSessionData] = useState(null);
-  const [currentSectionIndex, setCurrentSectionIndex] = useState(0);
+  const [currentSectionIndex, setCurrentSectionIndex] = useState(
+    localStorage.getItem("module") || 0
+  );
   const [currentModuleIndex, setCurrentModuleIndex] = useState(0);
   // !started and finished are for session tracking.
   const [started, setStarted] = useState(null);
@@ -15,8 +17,14 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
   const [completed, setCompleted] = useState('-10');
   // !response variable is used to track Question response.
   const [response, setResponse] = useState(null);
+  const [totalSections, setTotalSections] = useState(null);
 
+  
   const { user } = useContext(UserContext);
+  
+  
+  
+
 
   // Set Activity from Database
   const getActivityData = async () => {
@@ -84,6 +92,7 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
   const convertIndexToPercent = (newIndex) => {
     const index = newIndex;
     const completed = index === 0 ? '0' : `${index}0`;
+    
     setCompleted(completed);
   };
 
@@ -126,6 +135,7 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
   const startSessionTracking = (activityData) => {
     const initialSessionObject = buildInitialSessionObject(activityData);
     setSessionData(initialSessionObject);
+    setTotalSections(initialSessionObject.sections.length - 1);
   };
 
   // todo: Write these functions to track session.
@@ -166,7 +176,11 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
 
   const handleResponse = (answer, index) => {
     addAttempt({ selectedAnswer: answer.label, isCorrect: answer.isCorrect });
-    setResponse({ selection: answer, selectionIndex: index });
+    setResponse({
+      selection: answer,
+      selectionIndex: index,
+      isCorrect: answer.isCorrect,
+    });
   };
 
   const startTimer = () => {
@@ -201,6 +215,8 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
         setResponse,
         handleResponse,
         startTimer,
+        incrementModuleIndex,
+        totalSections,
       }}
     >
       {children}

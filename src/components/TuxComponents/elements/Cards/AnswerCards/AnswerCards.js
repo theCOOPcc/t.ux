@@ -7,21 +7,53 @@ import C from '../../../../../images/icons/C.svg'
 import D from '../../../../../images/icons/D.svg'
 
 export const iconIMG = [
-    {
-        A: { A },
-    },
-    {
-        B: { B },
-    },
-    {
-        C: { C }
-    },
-    {
-        D: { D }
-    }
+    // {
+    //     A: { A },
+    // },
+    // {
+    //     B: { B },
+    // },
+    // {
+    //     C: { C }
+    // },
+    // {
+    //     D: { D }
+    // }
+    A,B,C,D
 ];
 
-export const AnswerCard = (args) => (
+export const AnswerCard = ({label,image, index}) => ( 
+    <CardGroup>
+        <AnswerCardBox>
+            <Icon src={
+                index === 0 ? A
+                : index === 1 ? B
+                : index === 2 ? C
+                : index === 3 ? D
+                : null
+            } alt={
+                index === 0 ? A
+                : index === 1 ? B
+                : index === 2 ? C
+                : index === 3 ? D
+                : null
+            
+            }/>
+            {/* {iconIMG.map((letter,idx)=> (
+                <>
+                <Icon 
+                key={idx}
+                src={letter} 
+                /> */}
+            <Image src={image} alt="" />
+            <CardText>{label}</CardText>
+            {/* </> */}
+            {/* ))} */}
+        </AnswerCardBox>
+    </CardGroup>
+)
+
+export const AnswerCardExample = (args) => (
     <CardGroup>
         {oneAnswerOption.map((answer, idx) => (
             <AnswerCardBox key={idx} className="answerCard">

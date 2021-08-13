@@ -6,6 +6,7 @@ import {ModalWrapper, ModalHeader, ModalSubHeader, CreateButton, ModalInput, X_B
 import  { StyledUl, DropDownArrow, DropDownContent, DropDownLi, Input, Label, SubA}  from "../../InputField/dropdowns.stories";
 import XImage from '../../../../../images/icons/Grey_X.svg'
 import {DropdownMenu} from '../../InputField/dropdowns.stories'
+
 import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Modal",
@@ -25,7 +26,6 @@ const StyledWrapper = styled.div`
 export const AddPageModal = (args) => (
   <ModalWrapper className='addPageModal'>
     <TuxFlower src='/images/tuxFlower.png'></TuxFlower>
-
     <X_Button>
       <X_Image src={XImage} />
     </X_Button>
