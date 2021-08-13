@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { HiddenRadioButtonInput, RadioButtonWrapper, TestCustomRadio } from '../RadioButtons/RadioButtons'
 import { HexBox } from './HexInput';
-import { white } from '../../utilities/Colors';
+//import { white } from '../../utilities/Colors';
 import { pop_bolder } from '../../utilities/Type';
 import { ColorSlider } from './ContrastRatio';
-import { LumSlider } from './ContrastRatio';
+import { LumSlider, HexColorSlider } from './ContrastRatio';
 import { CounterBox, CounterWrapper, ArrowButtonUp, ArrowButtonDown} from '../FontCounter/FontCounter'
 import { ContrastRatioActivity, ContrastRatioBox, ContrastRatioResult} from './ContrastRatio';
 import { withDesign } from "storybook-addon-designs";
@@ -35,7 +35,17 @@ export default {
 };
 
 
+//Variables for text and background hex values
+    let t;
+    let b;
+
+    
+
 export const ContrastRatioPage = (args) => {
+
+  const [radioText, setRadioText]  = useState(true);
+
+  const [radioBackground, setRadioBackground]  = useState(false);
 
   //Contrast Ratio (Pass or Fail) Result
   const [testResult, setTestResult] = useState('FAIL');
@@ -52,13 +62,16 @@ export const ContrastRatioPage = (args) => {
   //Page Background Color depending on Background Hex Input Box
   const [backgroundColor, setBackgroundColor] = useState('#413F9F');
 
+  //Hex Color Slider
+  const [sliderColor, setSliderColor] = useState('#FE02FC')
+
   // For Hex Input Box (Text)
   const [textBoxValue, setTextBoxValue] = useState('');
-  const [prevTextInputValue, setPrevTextInputValue] = useState('');
+  //const [prevTextInputValue, setPrevTextInputValue] = useState('');
 
   // For Hex Input Box (Background)
   const [backgroundBoxValue, setBackgroundBoxValue] = useState('');
-  const [prevBackgroundInputValue, setPrevBackgroundInputValue] = useState('');
+  //const [prevBackgroundInputValue, setPrevBackgroundInputValue] = useState('');
 
   // For Font-Counter
   const [fontCounterValue, setFontCounterValue] = useState(100);
@@ -67,65 +80,91 @@ export const ContrastRatioPage = (args) => {
   let fontCountLength = 0;
 
 
+//Handles live changes to the text and background hex inputs
   const handleHexChange = (e) => {
     let currentValue = e.target.value;
-    let boxType = e.target.dataset.type
+    let boxType = e.target.dataset.type;
     let charLength = currentValue.length;
 
-    
+    //Making sure input is a Hexadecimal
     if (charLength < 7 && currentValue.match(/^[a-fA-F0-9]+$/i)) {
 
+      //Text Hex Input
       if(boxType === 'text')
       {
-        setTextBoxValue(currentValue);
-        setPrevTextInputValue(currentValue);
-        if(charLength === 6){setTextColor('#' + currentValue);}
+        setTextBoxValue(currentValue)
 
-          //setTextColor(currentValue)
-          console.log("text: " + currentValue, charLength)
+        //setTextColor(sliderColor);
+        setRadioBackground(false);
+        setRadioText(true);
+
+        if(charLength === 6){
+          t = currentValue;
+          setTextColor('#' + currentValue);
+          setSliderColor('#' + currentValue);
+        }
       }
 
-
+      //Background Hex Input
       if(boxType === 'background')
       {
-        setBackgroundBoxValue(currentValue);
-        setPrevBackgroundInputValue(currentValue);
-        if(charLength === 6){setBackgroundColor('#' + currentValue);}
-        
-          //setBackgroundColor(currentValue)
-          console.log("background: " + currentValue, charLength)
+        setBackgroundBoxValue(currentValue)
+        //setBackgroundColor(sliderColor);
+        setRadioBackground(true);
+        setRadioText(false);
+
+        if(charLength === 6){
+          b = currentValue;
+          setBackgroundColor('#' + currentValue);
+          setSliderColor('#' + currentValue);
+        }
       }
 
-        if(charLength === 6) {
-          setContRatio((tinycolor.readability("#" + textBoxValue, "#" + backgroundBoxValue)).toFixed(2))
-        }
 
-        if(charLength === 6 && tinycolor.isReadable("#" + textBoxValue, "#" + backgroundBoxValue,{level:"AA",size:"small"}))
+      //Checks for compliance with AA-Small Standard
+        if(charLength === 6 && tinycolor.isReadable("#" + t, "#" + b,{level:"AA",size:"small"}))
         { 
-            setTestResult('AA PASS');
-            setColor('green');
-          
+          setTestResult('AA PASS');
+          setColor('green');
         } 
-        else if (charLength !== 6 || charLength === 6 && !tinycolor.isReadable("#" + textBoxValue, "#" + backgroundBoxValue,{level:"AA",size:"small"}))
+        else if (charLength !== 6 || (charLength === 6 && !tinycolor.isReadable("#" + t, "#" + b,{level:"AA",size:"small"})))
         {
           setTestResult('FAIL');
           setColor('red');
         } 
 
+        
+        if(charLength === 6) {
+          setContRatio((tinycolor.readability("#" + t , "#" + b)).toFixed(2))
+        }
+
     }
     else if(boxType === 'text') 
     {
-      setTextBoxValue('');
+      setContRatio('N/A');
       setTestResult('FAIL');
     }
     else if(boxType === 'background')
     {
-      setBackgroundBoxValue('');
+      setContRatio('N/A');
       setTestResult('FAIL');
     }
   }
+     
+  const handleTextRadio = (e) => {
 
-       
+    setRadioText(true);
+    setRadioBackground(false);
+      
+}
+
+  const handleBackgroundRadio = (e) => {
+
+    setRadioText(false);
+    setRadioBackground(true);
+            
+}
+
   const handleFontChange = (e) => {
     currentFontValue = e.target.value;
     fontCountLength = currentFontValue.length;
@@ -155,6 +194,12 @@ export const ContrastRatioPage = (args) => {
         setFontCounterValue(currentFontValue);
       }
     }
+  }
+
+  const handleSliderChange = (e) => {
+    let newColor = e.split("").splice(1,6).join("")
+    if(radioText){setTextColor(e); t = newColor; setTextBoxValue(newColor)} else{ setBackgroundColor(e); b = newColor; setBackgroundBoxValue(newColor)}
+    
   }
 
 
@@ -189,12 +234,12 @@ export const ContrastRatioPage = (args) => {
         
         <RadioButtonWrapper {...args} style={{color: textColor}}>
           <HiddenRadioButtonInput type='radio' {...args} />
-          <TestCustomRadio {...args} />
+          <TestCustomRadio {...args} onClick={handleTextRadio} checked={radioText} /> 
           Text
         </RadioButtonWrapper>
 
         <span style={{ position: "relative", left: "15px", zIndex: "2", color: 'white', font: pop_bolder }}>#</span>
-        <HexBox style={{padding: '15px'}} onChange={handleHexChange} className='hexBox' type='text' maxLength='6' value={textBoxValue} data-type='text' {...args}></HexBox>
+        <HexBox style={{padding: '15px'}} value={textBoxValue} onChange={handleHexChange} className='hexBox' type='text' maxLength='6' data-type='text' {...args}></HexBox>
       </div>
 
 
@@ -205,21 +250,22 @@ export const ContrastRatioPage = (args) => {
         </CounterWrapper>
 
       <div>
-        <RadioButtonWrapper {...args} style={{color: textColor}} >
+        <RadioButtonWrapper {...args} style={{color: textColor}}  >
           <HiddenRadioButtonInput type='radio' {...args} />
-          <TestCustomRadio {...args} />
+           <TestCustomRadio {...args} onClick={handleBackgroundRadio} checked={radioBackground}  /> 
           Background
         </RadioButtonWrapper>
 
       
         <span style={{ position: "relative", left: "15px", zIndex: "2",color: 'white', font: pop_bolder }}>#</span>
-        <HexBox style={{padding: '15px'}} onChange={handleHexChange} data-type='background' className='hexBox' type='text' maxLength='6' value={backgroundBoxValue} {...args}></HexBox>
+        <HexBox style={{padding: '15px'}} value={backgroundBoxValue} onChange={handleHexChange} data-type='background' className='hexBox' type='text' maxLength='6'  {...args}></HexBox>
       </div>
   </div>
 
   <div style={{display: 'inherit', backgroundColor: 'transparent', flexDirection: 'row'}}>
 
-      <ColorSlider type='range' className='slider'></ColorSlider>
+      {/* <ColorSlider type='range' className='slider'></ColorSlider> */}
+      <HexColorSlider style ={{height: "20px"}} color={sliderColor} onChange={handleSliderChange}></HexColorSlider>
 
   </div>
 
@@ -234,7 +280,7 @@ export const ContrastRatioPage = (args) => {
   )
 }
 
-ContrastRatioPage.args = {
-  checked: false
-}
+// ContrastRatioPage.args = {
+//   checked: false
+// }
 

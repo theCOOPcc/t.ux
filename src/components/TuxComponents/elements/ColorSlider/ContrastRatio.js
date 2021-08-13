@@ -2,6 +2,36 @@ import styled from "styled-components";
 import { pop_bolder } from '../../utilities/Type'
 import { Slider } from './NewColorSlider';
 import { Lumosity } from './LumositySlider'
+import { HexColorPicker } from "react-colorful";
+
+
+
+export const HexColorSlider = styled(HexColorPicker)`
+
+        padding-top: 29px;
+
+.react-colorful__hue-pointer {
+   width: 18px;
+   height: 18px;
+   border-radius: 10px;
+ }
+
+.react-colorful__hue{
+        border-radius: 13px;
+        width: 713px;
+        height: 20px;
+        border: solid 2px #f6f6f6;
+}
+
+.react-colorful__saturation {
+   display: none;
+ }
+
+
+`
+
+
+
 
 export const ContrastRatioActivity = styled.div`
         // The bottom layer where the rest of the components will go
@@ -42,7 +72,7 @@ export const ContrastRatioResult = styled.div`
         background-color: white;
         border: 1px solid #000000; 
 
-`;  
+`;
 
 
 //Touching up details about the color slider
@@ -65,7 +95,7 @@ export const LumSlider = styled(Lumosity)`
 
 // export const StandardRow = styled.div`
 //         // A foundational row to build the activity on
-        
+
 //         background-color: #
 
 // `;     
