@@ -79,6 +79,10 @@ export const ContrastRatioPage = (args) => {
   let currentFontValue;
   let fontCountLength = 0;
 
+  const [terror, setTError] = useState('')
+  const [berror, setBError] = useState('')
+
+
 
 //Handles live changes to the text and background hex inputs
   const handleHexChange = (e) => {
@@ -93,7 +97,7 @@ export const ContrastRatioPage = (args) => {
       if(boxType === 'text')
       {
         setTextBoxValue(currentValue)
-
+        setTError('');
         //setTextColor(sliderColor);
         setRadioBackground(false);
         setRadioText(true);
@@ -108,7 +112,8 @@ export const ContrastRatioPage = (args) => {
       //Background Hex Input
       if(boxType === 'background')
       {
-        setBackgroundBoxValue(currentValue)
+        setBackgroundBoxValue(currentValue);
+        setBError('');
         //setBackgroundColor(sliderColor);
         setRadioBackground(true);
         setRadioText(false);
@@ -143,11 +148,19 @@ export const ContrastRatioPage = (args) => {
     {
       setContRatio('N/A');
       setTestResult('FAIL');
+      setTError('Invalid Hex Color');
+
+      if(charLength === 0){setTError('');}
+
     }
     else if(boxType === 'background')
     {
       setContRatio('N/A');
       setTestResult('FAIL');
+      setBError('Invalid Hex Color');
+
+      if(charLength === 0){setBError('');}
+
     }
   }
      
@@ -198,8 +211,18 @@ export const ContrastRatioPage = (args) => {
 
   const handleSliderChange = (e) => {
     let newColor = e.split("").splice(1,6).join("")
-    if(radioText){setTextColor(e); t = newColor; setTextBoxValue(newColor)} else{ setBackgroundColor(e); b = newColor; setBackgroundBoxValue(newColor)}
+    if(radioText){setTextColor(e); t = newColor; setTextBoxValue(newColor)} else if(radioBackground){ setBackgroundColor(e); b = newColor; setBackgroundBoxValue(newColor)}
     
+    setContRatio((tinycolor.readability("#" + t , "#" + b)).toFixed(2))
+
+    if(contRatio >= 4.5){
+      setTestResult('AA PASS');
+      setColor('green');
+    }else{
+      setTestResult('FAIL');
+      setColor('red');
+    }
+
   }
 
 
@@ -237,9 +260,11 @@ export const ContrastRatioPage = (args) => {
           <TestCustomRadio {...args} onClick={handleTextRadio} checked={radioText} /> 
           Text
         </RadioButtonWrapper>
+        
 
         <span style={{ position: "relative", left: "15px", zIndex: "2", color: 'white', font: pop_bolder }}>#</span>
-        <HexBox style={{padding: '15px'}} value={textBoxValue} onChange={handleHexChange} className='hexBox' type='text' maxLength='6' data-type='text' {...args}></HexBox>
+        <HexBox style={{padding: '15px'}}  onChange={handleHexChange} className='hexBox' type='text' maxLength='6' data-type='text' {...args}></HexBox>
+      <p style={{margin: '0', borderRadius:'10px', padding: '0 3px 0 3px', position: 'absolute', margin: '5px 0px 0px 13px', backgroundColor: 'black', color: '#FF5733'}}>{terror}</p>
       </div>
 
 
@@ -255,10 +280,12 @@ export const ContrastRatioPage = (args) => {
            <TestCustomRadio {...args} onClick={handleBackgroundRadio} checked={radioBackground}  /> 
           Background
         </RadioButtonWrapper>
+        
 
       
         <span style={{ position: "relative", left: "15px", zIndex: "2",color: 'white', font: pop_bolder }}>#</span>
-        <HexBox style={{padding: '15px'}} value={backgroundBoxValue} onChange={handleHexChange} data-type='background' className='hexBox' type='text' maxLength='6'  {...args}></HexBox>
+        <HexBox style={{padding: '15px'}}  onChange={handleHexChange} data-type='background' className='hexBox' type='text' maxLength='6'  {...args}></HexBox>
+      <p style={{margin: '0', borderRadius:'10px', padding: '0 3px 0 3px', position: 'absolute', margin: '5px 0px 0px 15px', backgroundColor: 'black', color: '#FF5733'}}>{berror}</p>
       </div>
   </div>
 
