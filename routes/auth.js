@@ -37,6 +37,7 @@ router.get('/logout', function (req, res) {
     // 'http://localhost:3000'
     // 'http://23carnies.com'
     'http://thecoop-tux.herokuapp.com'
+
     );
 });
 /*---------- Protected Routes ----------*/

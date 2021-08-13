@@ -26,7 +26,7 @@ export const Hex = (args) => {
   }
   
   return (
-  <HexBox onChange={handleOnChange} className='hexBox' type='number' {...args}></HexBox>
+  <HexBox onChange={handleOnChange} className='hexBox' type='text' {...args}></HexBox>
 )}
 
 

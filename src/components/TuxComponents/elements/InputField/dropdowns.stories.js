@@ -7,15 +7,16 @@ export default {
   decorators: [withDesign],
 };
 
+
 export const DropdownMenu = (args) => (
   <StyledUl>
         <DropDownLi className="DropdownMenu">
     <Label>Label</Label>
           <Input placeholder="Input Text"/>
             <DropDownArrow {...args} src={
-        args.hover ? "/images/dropdown2.png" : "/images/dropdown.png"
-      }/>
-          <DropDownContent>
+              args.hover ? "/images/dropdown2.png" : "/images/dropdown.png"
+            }/>
+          <DropDownContent >
             {" "}
             <SubA>Menu Option 1</SubA>
             <SubA>Menu Option 2</SubA>

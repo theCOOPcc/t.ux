@@ -1,5 +1,6 @@
 import styled, {css} from 'styled-components'
 import { pop_bolder } from '../../utilities/Type'
+import { white } from '../../utilities/Colors'
 
 
 export const HexBox = styled.input`
@@ -13,7 +14,7 @@ export const HexBox = styled.input`
   border-radius: 5px;
   background: #323239;
   opacity: 0.7;
-  color: #FFF;
+  color: ${white};
   font: ${pop_bolder};
   line-height: 24px;
   font-size: 18px;
