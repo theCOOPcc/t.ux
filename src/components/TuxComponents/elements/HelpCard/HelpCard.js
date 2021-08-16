@@ -22,7 +22,7 @@ export const HelpCard = ({ }) => {
                         </HelpDescription>
                     </HelpSuggestion>
                     <ButtonContainer>
-                    <PrimaryButton large='true'></PrimaryButton>
+                        <PrimaryButton large='true'>Start Activity</PrimaryButton>
                     </ButtonContainer>
                 </HelpContent>
             </HelpContainer>
@@ -31,12 +31,15 @@ export const HelpCard = ({ }) => {
 }
 
 
+export default HelpCard;
+
 
 export const HelpContainer = styled.div`
 width: 486px;
 height: 389px;
 border: 1px solid ${success_grey};
 background: rgba(120, 214, 218, 0.1);
+
 `;
 
 export const HelpContent = styled.div`

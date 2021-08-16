@@ -1,6 +1,8 @@
 import React, {useContext} from 'react';
 import styled, { css } from 'styled-components'
 import { Poppins, pop_bolder, success_grey, true_white, intro_text, pop_reg, pop_thick } from '../../utilities';
+import { Link } from 'react-router-dom'
+
 
 
 
@@ -14,7 +16,7 @@ export const AssistanceBox = ({ }) => (
             <AssistanceTitle>Need help choosing the right activity?</AssistanceTitle>
             <AssistanceDescription>Follow our recommended learning cirriculum</AssistanceDescription>
         </AssistanceText>
-        <Btn>Start</Btn>
+        <BtnStyle to= '/HelpPage'>Start</BtnStyle>
     </AssistanceContainer>
     </div>
 )
@@ -67,11 +69,16 @@ font: ${pop_reg};
 
 
 
-export const Btn = styled.button`
+const BtnStyle = styled(Link)`
+display: flex;
+justify-content: center;
 font: ${pop_bolder};
 border: none;
 font-size: 24px;
 background: none;
 cursor: pointer;
+text-decoration: none;
+color: black;
+padding-top: 17%;
 `;
 
