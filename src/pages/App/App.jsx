@@ -11,6 +11,7 @@ import IndexActivities from "../IndexActivities/IndexActivities";
 import "./App.css";
 import Manager from "../Manager/Manager";
 import Activity from "../Activity/Activity";
+import HelpPage from "../HelpPage/HelpPage";
 
 import ManagerContextProvider from "../../contexts/ManagerContext";
 import SessionContextProvider from "../../contexts/SessionContext";
@@ -44,6 +45,12 @@ const App = () => {
 				exact
 				path="/login"
 				render={({ history }) => <Login history={history} />}
+			/>
+
+            <Route
+				exact
+				path="/HelpPage"
+				render={({ history }) => <HelpPage history={history} />}
 			/>
 
 			<Route
