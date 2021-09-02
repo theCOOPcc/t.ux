@@ -30,7 +30,7 @@ export const TopicBox = () => {
          <TopicText>
            <TopicTitle>Heuristics</TopicTitle>
            <TopicDescription>
-             Learn about the 10 Heuistics of Design
+             Learn about the 10 Heuristics of Design
            </TopicDescription>
            <TopicQuestionTotal>0 out of 3</TopicQuestionTotal>
          </TopicText>

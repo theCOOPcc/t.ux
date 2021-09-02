@@ -6,6 +6,8 @@ import BriefcaseArrow from '../../../../images/icons/BriefcaseArrow.svg';
 import BriefcasePencil from '../../../../images/icons/BriefcasePencil.svg';
 import ContinuedEducation from '../../../../images/icons/continuingeducation.png';
 import PolygonHover from '../../../../images/icons/PolygonHover.svg';
+import HelpCard from '../HelpCard/HelpCard';
+import { HelpContainer } from '../HelpCard/HelpCard';
 
 
 
@@ -24,6 +26,8 @@ export const MotivationBox = ({ }) => {
         <PolygonImage src={PolygonHover}/>
     </MotivationContainer>
     </div>
+
+    
 )}
 
 export default MotivationBox;
