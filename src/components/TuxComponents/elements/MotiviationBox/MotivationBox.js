@@ -6,43 +6,52 @@ import BriefcaseArrow from '../../../../images/icons/BriefcaseArrow.svg';
 import BriefcasePencil from '../../../../images/icons/BriefcasePencil.svg';
 import ContinuedEducation from '../../../../images/icons/continuingeducation.png';
 import PolygonHover from '../../../../images/icons/PolygonHover.svg';
-import HelpCard from '../HelpCard/HelpCard';
-import { HelpContainer } from '../HelpCard/HelpCard';
 
 
 
-
-
-export const MotivationBox = ({ }) => {
+export const MotivationBox = ({...props }) => {
 
    return (
-    
-    <div style={{display: 'flex', justifyContent: 'center'}}>
+    <MotivationWrapper>
     <MotivationContainer>
-        <MotivationImage src= {PuzzlePiece} />
+        <MotivationImage {...props}/>
         <MotivationText>
-            <MotivationTitle>Hobby</MotivationTitle>
+            <MotivationTitle>
+                <Title title={``} {...props}/>
+            </MotivationTitle>
         </MotivationText>
         <PolygonImage src={PolygonHover}/>
     </MotivationContainer>
-    </div>
-
-    
+    </MotivationWrapper>
 )}
 
 export default MotivationBox;
 
+export const MotivationWrapper = styled.div`
+display: flex;
+justify-content: center;
+`;
 
-
-
-export const MotivationImage = styled.img`
+export const MotivationImage = styled.div`
 width: 44px;
 height: 44px;
-background-position: 50% 50%;
+background-position: 50% 0%;
 background-size: cover;
-overflow: hidden;
 padding-left: 5px;
 padding-top: 3px;
+
+${props => props.brief && css`
+    background-image: url(${BriefcaseArrow});
+`}
+${props => props.pencil && css`
+    background-image: url(${BriefcasePencil});
+`}
+${props => props.education && css`
+    background-image: url(${ContinuedEducation});
+`}
+${props => props.puzzle && css`
+    background-image: url(${PuzzlePiece});
+`}
 `;
 
 
@@ -65,17 +74,17 @@ export const MotivationContainer = styled.div`
     padding: 10px;
     margin-bottom: 10px;
     &:hover {
-        ${PolygonImage} {
+        ${PolygonImage}{
             display: block;
         }
         background-color: #F2FBFB;
         box-shadow: inset 0px 0px 10px rgba(0,0,0,0.1);
     }
+    
 `;
 
 
 export const MotivationText = styled.div`
-white-space: nowrap;
 padding-top: 7px;
 `;
 
@@ -84,3 +93,5 @@ font: ${pop_reg};
 font-size: 24px;
 `;
 
+
+export const Title = ({title}) => <MotivationTitle>{title}</MotivationTitle>;

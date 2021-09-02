@@ -5,20 +5,46 @@ import { PrimaryButton } from '../Buttons/Buttons';
 import HeuristicsImage from '../../../../images/icons/Heuristics.png';
 
 
+const content = [
+{
+    title: 'Heuristics Part 1: Heuristics 1-4',
+    description: 'Learn about the first 4 Heuristics and how you can use them to create better, more user-friendly designs.',
+    
+},
+{
+    title: 'Heuristics Part 2: Heuristics 5-10',
+    description: 'Learn about the last 6 Heuristics and how you can use them to create better, more user-friendly designs.',
+    
+},
+{
+    title: 'Heuristics Analysis',
+    description: 'Learn how to do a Heuristic Analysis',
+    
+},
+{
+    title: 'Flashcard Activity',
+    description: 'Test your memeory with this flashcard activity, designed to help you learn and better remember terms related to Heuristics.',
+    
+}
+]
 
 
-export const HelpCard = ({ }) => {
 
-    return (
+const HelpCard = ({...props}) => (
         <div>
+            <div>
             <HelpContainer>
                 <HelpContent>
                     <HelpTopText>Based on your selection, we recommend the following activity:</HelpTopText>
-                    <HelpSuggestion>
+                    <HelpSuggestion >
                         <HelpImage src={HeuristicsImage}/>
-                        <HelpDescription>
-                            <HelpPartText></HelpPartText>
-                            <HelpPartDescription></HelpPartDescription>
+                        <HelpDescription >
+                            <HelpPartText >
+                                {content[props.helpindex].title}
+                            </HelpPartText>
+                            <HelpPartDescription>
+                                {content[props.helpindex].description}
+                            </HelpPartDescription>
                         </HelpDescription>
                     </HelpSuggestion>
                     <ButtonContainer>
@@ -26,9 +52,9 @@ export const HelpCard = ({ }) => {
                     </ButtonContainer>
                 </HelpContent>
             </HelpContainer>
+            </div>
         </div>
-    )
-}
+)
 
 
 export default HelpCard;
@@ -93,3 +119,4 @@ export const ButtonContainer = styled.div`
 display: flex;
 justify-content: center;
 `;
+
