@@ -38,6 +38,8 @@ const SideBarNav = () => {
     currentSectionIndex,
     currentModuleIndex,
     incrementModuleIndex,
+    correct,
+    response
   } = useContext(SessionContext);
 
   const { sections } = sessionData;
@@ -85,7 +87,7 @@ const SideBarNav = () => {
                   {index}. {section.name}
                 </NUmHeadContainer>
                 {section.modules.map((module, idx) =>
-                  module.type === "display" ? (
+                  module.type === "display"  ? (
                     <SubDot>
                       <DotContainer>
                         <Dot
@@ -111,7 +113,8 @@ const SideBarNav = () => {
                         disabled={idx > currentModuleIndex}
                         key={idx}
                       >
-                        Learning Material {displayCount}{" "}
+                        {/* Learning Material {displayCount}{" "} */}
+                        Learning Material
                       </SubText>
                     </SubDot>
                   ) : (
@@ -155,8 +158,8 @@ const SideBarNav = () => {
         currentModuleIndex === currentSection.modules.length - 1 ? (
           <PrimaryButton onClick={() => setStarted(false)}>Next</PrimaryButton>
         ) : started && currentSectionIndex <= sections.length - 1 ? (
-          <PrimaryButton onClick={() => handleCurrentModule()}>
-            Next
+          <PrimaryButton onClick={() => handleCurrentModule()} disabled={correct ? false : true}>
+            Continue
           </PrimaryButton>
         ) : (
           ""
@@ -165,7 +168,7 @@ const SideBarNav = () => {
         {started === false && finished === null && (
           <PrimaryButton onClick={() => setFinished(true)}>Next</PrimaryButton>
         )} */}
-        {started === false && currentSectionIndex === 10 && finished === null && (
+        {started === false && currentSectionIndex === 11 && finished === null && (
           <a href='javascript:history.back()'>
             <PrimaryButton onClick={() => localStorage.setItem("module", -1)}>
               End

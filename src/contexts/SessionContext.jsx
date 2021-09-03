@@ -1,6 +1,8 @@
-import React, { useState, useEffect, createContext, useContext } from 'react';
-import activityService from '../services/activityService';
-import { UserContext } from './UserContext';
+import React, { useState, useEffect, createContext, useContext } from "react";
+import activityService from "../services/activityService";
+import { UserContext } from "./UserContext";
+import Check from "../images/icons/answerCheckGreen.svg";
+import Xred from "../images/icons/answerXRed.svg";
 
 export const SessionContext = createContext();
 
@@ -14,17 +16,13 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
   const [started, setStarted] = useState(null);
   const [finished, setFinished] = useState(null);
   // !completed variable is used for the progress bar.
-  const [completed, setCompleted] = useState('-10');
+  const [completed, setCompleted] = useState("-10");
   // !response variable is used to track Question response.
   const [response, setResponse] = useState(null);
   const [totalSections, setTotalSections] = useState(null);
-
-  
+  const [correct, setCorrect] = useState(true);
+  const [icon, setIcon] = useState(false);
   const { user } = useContext(UserContext);
-  
-  
-  
-
 
   // Set Activity from Database
   const getActivityData = async () => {
@@ -71,12 +69,16 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
   };
 
   const updateCurrentModule = async () => {
+    console.log(sessionData, "LINE 75");
     touchSection();
     touchModule();
+    //ADD Varbiable or State and export to answer.jsx
+    // setIcon(true);
     completeModule();
     await incrementModuleIndex();
     setResponse(null);
-    console.log('currentModule', currentModule);
+    setCorrect(null);
+    console.log("currentModule", currentModule);
   };
 
   const handleCurrentModule = () => {
@@ -91,8 +93,8 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
 
   const convertIndexToPercent = (newIndex) => {
     const index = newIndex;
-    const completed = index === 0 ? '0' : `${index}0`;
-    
+    const completed = index === 0 ? "0" : `${index}0`;
+
     setCompleted(completed);
   };
 
@@ -107,7 +109,7 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
       modules.forEach((module, index) => {
         module.touched = false;
         module.completed = false;
-        module.type === 'question' && (module.attempts = []);
+        module.type === "question" && (module.attempts = []);
       });
     });
     initialSections[0].touched = true;
@@ -140,13 +142,22 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
 
   // todo: Write these functions to track session.
   const touchSection = () => {
+    // console.log(correct, "LINE 145");
     const updateSessionData = { ...sessionData };
-    updateSessionData.sections[currentSectionIndex].touched = true;
+    // console.log(correct, "LINE 148");
+    if (correct === true) {
+      updateSessionData.sections[currentSectionIndex].touched = true;
+    } else {
+      updateSessionData.sections[currentSectionIndex].touched = false;
+    }
+    // console.log(correct, "LINE 154");
     setSessionData(updateSessionData);
   };
   // !working
   const completeSection = () => {
     const updateSessionData = { ...sessionData };
+    // console.log(correct, 'LINE 158')
+    // if (correct ? (updateSessionData.sections[currentSectionIndex].completed = true) : (updateSessionData.sections[currentSectionIndex].completed = false))
     updateSessionData.sections[currentSectionIndex].completed = true;
     setSessionData(updateSessionData);
   };
@@ -175,16 +186,43 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
   };
 
   const handleResponse = (answer, index) => {
-    addAttempt({ selectedAnswer: answer.label, isCorrect: answer.isCorrect });
-    setResponse({
-      selection: answer,
-      selectionIndex: index,
-      isCorrect: answer.isCorrect,
-    });
+    if(answer.isCorrect){
+      addAttempt({
+        selectedAnswer: answer.newLabel,
+        isCorrect: answer.isCorrect,
+      });
+      setResponse({
+        selection: answer,
+        selectionIndex: index,
+        isCorrect: answer.isCorrect,
+      });
+    } else {
+      addAttempt({
+        selectedAnswer: answer.newLabel,
+        isCorrect: answer.isCorrect,
+      });
+    }
+  };
+
+  const checkResponse = (answer) => {
+    if (answer.isCorrect) {
+      setIcon(Check)
+    } else {
+      setIcon(Xred);
+    }
+  }
+
+  const handleAnswer = (answer) => {
+    if (answer.isCorrect) {
+      console.log("correct");
+    } else {
+      console.log("incorrect");
+    }
+    setCorrect(answer.isCorrect);
   };
 
   const startTimer = () => {
-    timerProps.start()
+    timerProps.start();
   };
 
   return (
@@ -217,6 +255,11 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
         startTimer,
         incrementModuleIndex,
         totalSections,
+        handleAnswer,
+        correct,
+        setCorrect,
+        icon,
+        checkResponse
       }}
     >
       {children}

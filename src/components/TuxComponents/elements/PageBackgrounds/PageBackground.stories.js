@@ -28,5 +28,4 @@ export const MainColumn = () => (
     >
       <BackButton>&lt; Back</BackButton>
     </MainColumMain>
-  
 );

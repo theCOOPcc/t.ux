@@ -25,9 +25,9 @@ const ActivityMain = () => {
         <p>{currentModule.contents.title}</p>
       ) 
       : (
-        <Activty>
+        <Activity>
           <Question details={currentModule} handleAnswers={handleAnswers} />
-        </Activty>
+        </Activity>
       )}
     </>
   );
@@ -35,8 +35,10 @@ const ActivityMain = () => {
 
 export default ActivityMain;
 
-const Activty = styled.section`
+const Activity = styled.section`
   /* display: grid;
   grid-template-rows: 2fr; */
   ${Flex({fd:'column',ai:'center'})}
 `;
+
+
