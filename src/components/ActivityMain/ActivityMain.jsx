@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
-import { SessionContext } from '../../contexts/SessionContext';
-import styled from 'styled-components';
+import React, { useContext } from "react";
+import { SessionContext } from "../../contexts/SessionContext";
+import styled from "styled-components";
 
-import Question from '../../components/Question/Question';
-import InjectHTML from '../../components/InjectHTML/InjectHTML';
-import { Flex } from '../TuxComponents/utilities';
-import {MainColumn} from '../TuxComponents/elements/PageBackgrounds/PageBackgrounds'
+import Question from "../../components/Question/Question";
+import InjectHTML from "../../components/InjectHTML/InjectHTML";
+import { Flex } from "../TuxComponents/utilities";
+import { MainColumn } from "../TuxComponents/elements/PageBackgrounds/PageBackgrounds";
 
 const ActivityMain = () => {
   const { currentModule, handleAnswers } = useContext(SessionContext);
@@ -13,21 +13,27 @@ const ActivityMain = () => {
   return (
     <>
       {currentModule.type === "display" ? (
-        <div>
-          <p>{currentModule.contents.title}</p>
-          <img src={currentModule.contents.image} alt='' />
-          <p>{currentModule.contents.content}</p>
+        <FlexBox>
+          <ContentTitle>{currentModule.contents.title}</ContentTitle>
+          <CenteredImage>
+            <img src={currentModule.contents.image} alt="" />
+          </CenteredImage>
+
+          <p>
+            <BoldWords>
+              {currentModule.contents.bold}
+            </BoldWords>
+            {currentModule.contents.content}
+          </p>
           <p>{currentModule.contents.objectives}</p>
           {/* <InjectHTML markup={currentModule.contents} /> */}
-        </div>
-      ) : 
-      currentModule.type === "dnd" ? (
+        </FlexBox>
+      ) : currentModule.type === "dnd" ? (
         <p>{currentModule.contents.title}</p>
-      ) 
-      : (
-        <Activty>
+      ) : (
+        <Activity>
           <Question details={currentModule} handleAnswers={handleAnswers} />
-        </Activty>
+        </Activity>
       )}
     </>
   );
@@ -35,8 +41,23 @@ const ActivityMain = () => {
 
 export default ActivityMain;
 
-const Activty = styled.section`
-  /* display: grid;
-  grid-template-rows: 2fr; */
-  ${Flex({fd:'column',ai:'center'})}
+const Activity = styled.section`
+  ${Flex({ fd: "column", ai: "center" })}
+`;
+
+const FlexBox = styled.div`
+  ${Flex({ fd: "column", ai: "start" })};
+  padding: 40px;
+`;
+
+const CenteredImage = styled.div`
+  align-self: center;
+`;
+const BoldWords = styled.span`
+  font-weight: bold;
+`;
+const ContentTitle = styled.p`
+  color: #f37806;
+  font-weight: 500;
+  font-size: 24px;
 `;
