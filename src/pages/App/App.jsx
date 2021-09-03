@@ -31,10 +31,10 @@ const App = () => {
 
 			{/* //TODO: The base route should direct you to the landing page and once the user is logged in redirect to the users homepage. */}
 			{/* <Route
-        exact
-        path="/"
-        render={() => (!user ? <User user={user} /> : <Landing />)}
-      /> */}
+       			 exact
+       			 path="/"
+        		render={() => (!user ? <User user={user} /> : <Landing />)}
+      		/> */}
 
 			<Route
 				path="/signup/:groupId?/:email?"

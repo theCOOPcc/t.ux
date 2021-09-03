@@ -47,3 +47,9 @@ export const BackButton = styled.button`
   width: 50px;
   height: 24.03px;
 `;
+
+export const MainColumn = () => (
+  <MainColumMain className='main'>
+    <BackButton>&lt; Back</BackButton>
+  </MainColumMain>
+);

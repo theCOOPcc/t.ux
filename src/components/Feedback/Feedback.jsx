@@ -6,20 +6,15 @@ import { JustCorrect, JustIncorrect } from '../TuxComponents/elements/Alerts/Jus
 
 
 export const Feedback = ({ response }) => {
-  const { selection, isCorrect } = response;
+  const { selection, isCorrect } = response; 
   // const { isCorrect } = selection;
 
   return (
     <>
-      {/* {(isCorrect && <FeedbackBox selection={selection} />) ||
-        (!isCorrect && <FeedbackBox selection={selection} />)} */}
-               {/* {(isCorrect && <JustCorrect selection={selection} />) ||
-        (!isCorrect && <JustIncorrect selection={selection} />)}  */}
         {
           isCorrect ? <JustCorrect selection={selection} isCorrect={isCorrect} />
           : <JustIncorrect selection={selection} isCorrect={isCorrect} />
         }
-        {/* <JustCorrect selection={selection} isCorrect={isCorrect}/> */}
     </>
   );
 };
