@@ -23,22 +23,20 @@ export const Slider = styled.input`
   &::-webkit-slider-runnable-track {
     height: 20px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-      background: 
-      linear-gradient(
-        270deg, #FF0000 
-        4.39%, #FF0080 
-        11.27%, #FF00FF 
-        19.04%, #8000FF 
-        26.31%, #0000FF 
-        33.83%, #0080FF 
-        42.11%, #00FFFF 
-        49.38%, #00FF80 
-        57.02%, #00FF00 
-        65.31%, #80FF00 
-        72.95%, #FFFF00 
-        80.47%, #FF8000 
-        89.14%, #FF0000 
-        96.65%);
+      background:
+       linear-gradient(to right,
+         #ff3232 0%,
+          #ff9900 10%,
+           #ffff00 17%,
+            #ccff00 20%,
+             #32ff00 30%,
+              #00ff65 40%,
+               #00ffff 50%,
+                #0065ff 60%,
+                 #3300ff 70%,
+                  #cb00ff 81%,
+                   #ff0098 90%,
+                    #ff0004 100%);
     border-radius: 25px;
     border: 2px solid #F6F6F6;
   }
