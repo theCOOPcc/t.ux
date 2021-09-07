@@ -21,7 +21,7 @@ const ActivityMain = () => {
 
           <p>
             <BoldWords>
-              {currentModule.contents.bold}
+              {currentModule.contents.boldText}
             </BoldWords>
             {currentModule.contents.content}
           </p>
