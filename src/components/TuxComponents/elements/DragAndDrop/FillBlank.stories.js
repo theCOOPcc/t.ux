@@ -5,3 +5,9 @@ export default {
   title: "Fill In The Blank Drag&Drop",
   decorators: [withDesign],
 };
+
+export const FillBlankDnD = () => (
+    <>
+    
+    </>
+);
