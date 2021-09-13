@@ -2,11 +2,11 @@ import React, {useState} from 'react'
 import { withDesign } from "storybook-addon-designs";
 
 export default {
-  title: "T Shape Drag&Drop",
+  title: "Drag&Drop",
   decorators: [withDesign],
 };
 
-export const TShapeDnD = () => (
+export const TShapeDragnDrop = () => (
     <>
     
     </>
