@@ -165,7 +165,7 @@ const SideBarNav = () => {
         {started === false && finished === null && (
           <PrimaryButton onClick={() => setFinished(true)}>Next</PrimaryButton>
         )} */}
-        {started === false && currentSectionIndex === 11 && finished === null && (
+        {started === false && currentSectionIndex === 10 && finished === null && (
           <a href='javascript:history.back()'>
             <PrimaryButton onClick={() => localStorage.setItem("module", -1)}>
               End
