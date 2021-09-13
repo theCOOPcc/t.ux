@@ -4,7 +4,6 @@ import { ProgressBar } from "../TuxComponents/elements/ProgressBar/ProgressBar";
 import styled, { css } from "styled-components";
 import { Flex } from "../TuxComponents/utilities";
 
-console.log("hello");
 const ActivityHeader = () => {
   const {
     completed,
