@@ -3,6 +3,22 @@ import styled, {css} from 'styled-components';
 import { pop_reg, pop_semiBold } from '../../utilities';
 import CheckIcon from '../../../../images/DragNDrop/CheckmarkIcon.svg';
 
+const AnswerChoices = [
+{
+    title: 'Undo'
+},
+{
+    title: 'Close'
+},
+{
+    title: 'Exit'
+},
+{
+    title: 'Print'
+}
+
+
+]
 
 
 
@@ -10,6 +26,7 @@ import CheckIcon from '../../../../images/DragNDrop/CheckmarkIcon.svg';
 export const FillInBlank = ({}) => {
 
     return (
+        <>
         <UIExampleCard>
             <CheckMarkContainer>
                 <CheckMarkImage src={CheckIcon}/>
@@ -31,6 +48,13 @@ export const FillInBlank = ({}) => {
             </ContinueButtonStatic>
             </ButtonFieldContainer>
         </UIExampleCard>
+        <DraggableContainer>
+        <WordChoiceContainer draggable>
+            <AnswerChoicesText>
+            </AnswerChoicesText>
+        </WordChoiceContainer>
+        </DraggableContainer>
+        </>
     )
 }
 
@@ -99,8 +123,6 @@ border-radius: 40px;
 height: 4.5em;
 width: 35%;
 border: .13em solid #000000;
-
-
 `;
 
 export const ContinueText = styled.div`
@@ -108,4 +130,43 @@ font: ${pop_reg};
 color: white;
 text-align: center;
 margin-top: 17%;
+font-size: 1.3em;
 `;
+
+export const DraggableContainer = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-top: 7%;
+z-index: 1;
+
+`;
+
+export const AnswerChoicesText = styled.div`
+font: ${pop_reg};
+color: black;
+text-align: center;
+margin-top: 17%;
+font-size: 1.3em;
+`;
+
+export const WordChoiceContainer = styled.div`
+background: #FFFFFF;
+border-radius: 40px;
+height: 4.5em;
+width: 7.7em;
+min-width: 7.7em;
+border: .13em solid #000000;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+margin-left: 25px;
+&:hover {
+    ${AnswerChoicesText} {
+        color: #999999;
+    }
+    border: .13em solid #999999;
+}
+`;
+
+
+
+
