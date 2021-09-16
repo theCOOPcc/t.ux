@@ -1,3 +1,4 @@
+import { set } from 'mongoose';
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import activityService from '../services/activityService';
 import { UserContext } from './UserContext';
@@ -18,14 +19,11 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
   // !response variable is used to track Question response.
   const [response, setResponse] = useState(null);
   const [totalSections, setTotalSections] = useState(null);
-
+  // !for determining if we need to disable something if a user hasn't answered a question yet.
+  const [disable, setDisable] = useState(false);
   
   const { user } = useContext(UserContext);
   
-  
-  
-
-
   // Set Activity from Database
   const getActivityData = async () => {
     return await activityService.getOne(activityId);
@@ -181,6 +179,7 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
       selectionIndex: index,
       isCorrect: answer.isCorrect,
     });
+    setDisable(false);
   };
 
   const startTimer = () => {
@@ -217,6 +216,8 @@ const SessionContextProvider = ({ children, activityId, timerProps }) => {
         startTimer,
         incrementModuleIndex,
         totalSections,
+        disable,
+        setDisable,
       }}
     >
       {children}
