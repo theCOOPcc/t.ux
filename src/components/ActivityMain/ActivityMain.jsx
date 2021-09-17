@@ -23,6 +23,7 @@ const ActivityMain = () => {
             
             {/* BOLD Visibility of System Status */}
             <BoldWords>{currentModule.contents.boldText}</BoldWords>
+
             {currentModule.contents.content}
           </p>
           {/* Bulleted list of tips */}

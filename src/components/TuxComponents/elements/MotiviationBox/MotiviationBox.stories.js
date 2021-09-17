@@ -16,7 +16,7 @@ export default {
 export const Motivation_Box = () => (
     <div>
     <MotivationContainer>
-    <MotivationImage src={PuzzlePiece}/>
+    <MotivationImage puzzle/>
         <MotivationText>
             <MotivationTitle>Hobby</MotivationTitle>
         </MotivationText>
@@ -25,7 +25,7 @@ export const Motivation_Box = () => (
     
 
     <MotivationContainer>
-    <MotivationImage src={BriefcasePencil}/>
+    <MotivationImage pencil/>
         <MotivationText>
             <MotivationTitle>Career change</MotivationTitle>
         </MotivationText>
@@ -35,7 +35,7 @@ export const Motivation_Box = () => (
 
 
     <MotivationContainer>
-    <MotivationImage src={BriefcaseArrow}/>
+    <MotivationImage brief/>
         <MotivationText>
             <MotivationTitle>To boost my career</MotivationTitle>
         </MotivationText>
@@ -44,7 +44,7 @@ export const Motivation_Box = () => (
 
 
     <MotivationContainer>
-    <MotivationImage src={ContinuedEducation}/>
+    <MotivationImage education/>
         <MotivationText>
             <MotivationTitle>Continuing education</MotivationTitle>
         </MotivationText>
