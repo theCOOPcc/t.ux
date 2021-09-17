@@ -1,7 +1,34 @@
 import styled from "styled-components";
-import { pop_bolder } from '../../utilities/Type'
-import { Slider } from './NewColorSlider';
+import { pop_bolder, Poppins } from '../../utilities/Type'
+//import { Slider } from './NewColorSlider';
 import { Lumosity } from './LumositySlider'
+import { HexColorPicker } from "react-colorful";
+
+
+
+export const HexColorSlider = styled(HexColorPicker)`
+
+        padding-top: 29px;
+
+.react-colorful__hue-pointer {
+   width: 18px;
+   height: 18px;
+   border-radius: 10px;
+ }
+
+.react-colorful__hue{
+        border-radius: 13px;
+        width: 713px;
+        height: 20px;
+        border: solid 2px #f6f6f6;
+}
+
+.react-colorful__saturation {
+   display: none;
+ }
+
+
+`
 
 export const ContrastRatioActivity = styled.div`
         // The bottom layer where the rest of the components will go
@@ -12,6 +39,9 @@ export const ContrastRatioActivity = styled.div`
         border-radius: 12px;
         height: 400px;
         width: 765px;
+        font-family: ${Poppins};
+        font-style: normal;
+        font-weight: 600;
         
 `;
 
@@ -28,11 +58,25 @@ export const ContrastRatioBox = styled.div`
 
 `;
 
+export const PxSpan = styled.span`
+position: relative;
+height: 24px;
+left: 30%;
+right: 0%;
+top: calc(50% - 24px/2 + 2px);
+color: #F7F7F7;
+font-family: ${Poppins};
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 24px;
+
+`
 
 export const ContrastRatioResult = styled.div`
         // Here goes the contrast result
        
-        width: 130px;
+        width: 128px;
         height: 33px;
         margin-top:5px;
         font: ${pop_bolder};
@@ -42,16 +86,16 @@ export const ContrastRatioResult = styled.div`
         background-color: white;
         border: 1px solid #000000; 
 
-`;  
+`;
 
 
 //Touching up details about the color slider
-export const ColorSlider = styled(Slider)`
+// export const ColorSlider = styled(Slider)`
 
-        background-color: transparent;
-        padding-top: 20px;
+//         background-color: transparent;
+//         padding-top: 20px;
 
-`
+// `
 
 //Touching up details about the luminosity slider
 export const LumSlider = styled(Lumosity)`
@@ -65,7 +109,7 @@ export const LumSlider = styled(Lumosity)`
 
 // export const StandardRow = styled.div`
 //         // A foundational row to build the activity on
-        
+
 //         background-color: #
 
 // `;     

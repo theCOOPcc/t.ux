@@ -15,24 +15,24 @@ export const TopicBox = () => {
           localStorage.setItem('module', 0)
           handleJumpToSection(0);
       }
+   const progress = parseInt(localStorage.getItem("module"));
    return (
      <div style={{ display: "flex", justifyContent: "center" }}>
        <TopicContainer>
          <TopicImage>
            <TopicCompletion>
-             {parseInt(localStorage.getItem("module")) === 10
-               ? ((localStorage.getItem("module") - 1) / (totalSections - 1)) *
-                 100
-               : parseInt(localStorage.getItem("module")) === -1
+             {progress === 10
+               ? ((progress - 1) / totalSections) * 100
+               : progress === -1
                ? 100
-               : (localStorage.getItem("module") / (totalSections - 1)) * 100}
+               : (progress / totalSections) * 100}
              %
            </TopicCompletion>
          </TopicImage>
          <TopicText>
            <TopicTitle>Heuristics</TopicTitle>
            <TopicDescription>
-             Learn about the 10 Heuistics of Design
+             Learn about the 10 Heuristics of Design
            </TopicDescription>
            <TopicQuestionTotal>0 out of 3</TopicQuestionTotal>
          </TopicText>
