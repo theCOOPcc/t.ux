@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { withDesign } from "storybook-addon-designs";
-import { UIExampleCard, ButtonFieldContainer, CheckMarkContainer, ContentMessageHeader, ContentMessageDescription, CheckMarkImage, EmptyDragNDrop, ContinueButtonStatic, ContinueText } from './FillBlank';
+import { UIExampleCard, DraggableContainer, WordChoiceContainer, ButtonFieldContainer, CheckMarkContainer, ContentMessageHeader, ContentMessageDescription, CheckMarkImage, EmptyDragNDrop, ContinueButtonStatic, ContinueText, AnswerChoicesText } from './FillBlank';
 import CheckIcon from '../../../../images/DragNDrop/CheckmarkIcon.svg';
 
 export default {
@@ -9,7 +9,8 @@ export default {
 };
 
 export const FillBlankDragnDrop = () => (
-  <>
+  <div>
+    <div style={{display: 'flex', justifyContent: 'center'}}>
     <UIExampleCard>
       <CheckMarkContainer>
       <CheckMarkImage src={CheckIcon}/>
@@ -31,7 +32,30 @@ export const FillBlankDragnDrop = () => (
         </ContinueButtonStatic>
       </ButtonFieldContainer>
     </UIExampleCard>
-  </>
+    </div>
+        <DraggableContainer>
+        <WordChoiceContainer draggable>
+          <AnswerChoicesText>
+            Undo
+          </AnswerChoicesText>
+        </WordChoiceContainer>
+        <WordChoiceContainer draggable>
+          <AnswerChoicesText>
+            Close
+          </AnswerChoicesText>
+        </WordChoiceContainer>
+        <WordChoiceContainer draggable>
+          <AnswerChoicesText>
+            Exit
+          </AnswerChoicesText>
+        </WordChoiceContainer>
+        <WordChoiceContainer draggable>
+          <AnswerChoicesText>
+            Print
+          </AnswerChoicesText>
+        </WordChoiceContainer>
+        </DraggableContainer>
+  </div>
 );
 
 
