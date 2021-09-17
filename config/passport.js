@@ -14,8 +14,7 @@ passport.use(
             User.findOne({ googleId: profile.id }, function (err, user) {
                 if (err) return done(err);
                 if (user) {
-                  // console.log('PROFILE FROM GOOGLE', profile)
-                  // console.log('USER IN DATABASE', user)
+                
                   return done(null, 
                               user,
                               // userToken
@@ -27,7 +26,8 @@ passport.use(
                     lastName: profile.name.familyName,
                     email: profile.emails[0].value,
                     googleId: profile.id,
-                    assignments: [],
+                    sessionInfo:{},
+                    // assignments: [], 
                     avatar: profile._json.picture,
                     userPermissions: 0,
                   });

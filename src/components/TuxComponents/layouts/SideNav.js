@@ -167,6 +167,7 @@ const SideBarNav = () => {
         )} */}
         {started === false && currentSectionIndex === 10 && finished === null && (
           <a href='javascript:history.back()'>
+            {/* TODO: Instead of using local.storage, use user's database */}
             <PrimaryButton onClick={() => localStorage.setItem("module", -1)}>
               End
             </PrimaryButton>
