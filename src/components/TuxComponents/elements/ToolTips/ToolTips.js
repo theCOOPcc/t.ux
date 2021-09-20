@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { useState } from 'react';
+import { pop_reg } from "../../utilities";
 
 const Container = styled.div`
   position: relative;
@@ -53,12 +54,14 @@ const Arrow = styled.div`
 `
 
 const Box = styled.div`
+  font: ${pop_reg};
+  font-size: 12px;
   position: absolute;
   background: black;
   color: white;
   padding: 8px;
   border-radius: 3px;
-  min-width: 100px;
+  min-width: 209px;
   text-align: center;
   display: none;
   ${(props) =>
