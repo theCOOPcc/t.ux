@@ -77,7 +77,7 @@ border: 1px solid #000000;
 export const CheckMarkContainerTwo = styled.div`
 display: flex;
 justify-content: center;
-margin: 6.7% 0 8% 0;
+margin: 14px 0 20px 0;
 
 `;
 
@@ -105,9 +105,7 @@ export const CheckMarkImageTwo = styled.img`
 export const ButtonFieldContainerTwo = styled.div`
 display: flex;
 justify-content: space-evenly;
-margin: 21% 0 0 0;
-
-
+margin: 40px 0 11px 0;
 `;
 
 export const EmptyDragNDropTwo = styled.div`
