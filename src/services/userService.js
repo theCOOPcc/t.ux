@@ -33,7 +33,7 @@ function getUser(user) {
 }
 
 function getCurrentUser() {
-  return fetch(`${BASE_URL}`+'getMe', {mode: 'cors'})
+  return fetch(`${BASE_URL}`+'user', {mode: 'cors'})
   .then(res => res.json())
 }
 
@@ -51,10 +51,24 @@ function updateUser(user) {
   .then(res => res.json());
 }
 
+
+// function updateSessionInfo(user) {
+//   return fetch(`${BASE_URL}${user._id}`, {
+//       method: "PUT",
+//       headers: {
+//         'content-type': 'application/json', 
+//         'Authorization': 'Bearer ' + tokenService.getToken()
+//       },
+//       body: JSON.stringify(user)
+//   }, {mode: "cors"})
+//   .then(res => res.json());
+// }
+
 export default {
   getAllUsers,
   deleteUser,
   getUser,
   updateUser,
-  getCurrentUser
+  getCurrentUser,
+  // updateSessionInfo
 }

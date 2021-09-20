@@ -20,12 +20,20 @@ const ActivityMain = () => {
           </CenteredImage>
 
           <p>
-            <BoldWords>
-              {currentModule.contents.boldText}
-            </BoldWords>
+            
+            {/* BOLD Visibility of System Status */}
+            <BoldWords>{currentModule.contents.boldText}</BoldWords>
+
             {currentModule.contents.content}
           </p>
-          <p>{currentModule.contents.objectives}</p>
+          {/* Bulleted list of tips */}
+          <p>
+            <BoldWords>{currentModule.contents.boldTips}</BoldWords>
+          </p>
+          <li>{currentModule.contents.objectives1}</li>
+          <li>{currentModule.contents.objectives2}</li>
+          <li>{currentModule.contents.objectives3}</li>
+
           {/* <InjectHTML markup={currentModule.contents} /> */}
         </FlexBox>
       ) : currentModule.type === "dnd" ? (

@@ -10,6 +10,7 @@ export const TopicBox = () => {
     const { setStarted, handleJumpToSection, totalSections } = useContext(SessionContext);
 
       const reStart = () => {
+        
           localStorage.setItem('module', 0)
           handleJumpToSection(0);
       }
