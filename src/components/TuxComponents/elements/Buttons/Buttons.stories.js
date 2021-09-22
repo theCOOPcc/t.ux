@@ -180,7 +180,9 @@ Secondary.story = {
   },
 };
 
-export const TextButton = (args) => <TextBtn className='text-button' {...args}>Text Button</TextBtn>;
+export const TextButton = (args) => <TextBtn className='text-button' {...args}>Text
+{/* <i class="fal fa-angle-double-right"></i> */}
+</TextBtn>;
 TextButton.args = {
   disabled: false,
   focus: false,

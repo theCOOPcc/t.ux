@@ -41,8 +41,8 @@ export const LoginModal = () => (
       <TuxFlower src='/images/tuxFlower.png' />
       <P>Welcome to t.ux!</P>
       <GoogleBox 
-      // href='http://localhost:3001/api/auth/google'
-                href="http://taketux.com/api/auth/google"
+      href='http://localhost:3001/api/auth/google'
+                // href="http://taketux.com/api/auth/google"
                 >
         <GoogleG src='/images/google_logo.png' />
         Sign in with Google

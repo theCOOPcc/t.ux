@@ -13,13 +13,21 @@ import {
   secondary_default,
   secondary_hover,
   g_focus_box,
+  small_nav_font,
   small_nav_default,
   small_nav_hover,
   small_nav_pressed,
   small_nav_disabled,
   tux_grey,
   tux_red,
+  tux_white,
   true_white,
+  common_font_color,
+  link_default,
+  link_font_color,
+  link_focus,
+  link_hover,
+  link_disabled
 } from "../../utilities";
 
 import {
@@ -36,6 +44,8 @@ import {
   default_depressed,
   default_focus,
   common_shadow,
+  hover_shadow,
+  focus_shadow,
   FlexCenter,
 } from "../../utilities";
 
@@ -46,13 +56,17 @@ export const PrimaryButton = styled.button`
   border: none;
   border-radius: 5px;
   background: ${tux_blue};
-  padding: 12px 0;
+  /* padding: 12px 0; */
   margin: 17px 8px;
   color: ${primary_text};
   font: 700 20px "Poppins", sans-serif;
   cursor: pointer;
   &:hover {
     background: ${primary_hover};
+  }
+  &:focus {
+    background: ${tux_blue};
+    border: 4px solid ${g_focus_box};
   }
   &:active {
     background: ${pressed_btn};
@@ -113,13 +127,16 @@ export const SecondaryButton = styled.button`
   border: none;
   border-radius: 5px;
   background: ${secondary_default};
-  padding: 12px 0;
+  /* padding: 12px 0; */
   margin: 17px 8px;
-  color: white;
+  color: ${common_font_color};
   font: 700 20px "Poppins", sans-serif;
   cursor: pointer;
   &:hover {
     background: ${secondary_hover};
+  }
+  &:focus {
+    border: 4px solid ${g_focus_box};
   }
   &:active {
     background: ${pressed_btn};
@@ -183,7 +200,7 @@ export const GoogleBox = styled.a`
   height: 80px;
   border-radius: 5px;
   border: none;
-  background: #ffffff;
+  background: ${tux_white};
   ${FlexCenter}
   margin-bottom: 10px;
   box-shadow: ${common_shadow};
@@ -192,17 +209,28 @@ export const GoogleBox = styled.a`
   color: rgba(0, 0, 0, 0.54);
   margin-top: 15px;
   &:hover {
-    background: ${google_hover};
+    background: rgba(235, 237, 238, 1);
+    box-shadow: ${common_shadow};
+  }
+  &:focus {
+    background: ${tux_white};
+    box-shadow: ${focus_shadow};
   }
   &:active {
-    background: linear-gradient(
+    background: ${tux_white};
+    box-shadow: ${btn_active_shadow}
+    /* background: linear-gradient(
       360deg,
       #f9f9f9 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
+      rgba(255, 255, 255, 0) 100% */
+  }
+  &:disabled {
+    background: rgba(235, 237, 238, 1);
+    box-shadow: ${common_shadow};
+  };
 
     box-shadow: ${btn_active_shadow};
-  }
+  
   ${(props) =>
     props.hover &&
     css`
@@ -235,10 +263,8 @@ export const GoogleBox = styled.a`
     ${(props) =>
     props.depressed &&
     css`
-      background: linear-gradient(
-        360deg,
-        #f9f9f9 0%,
-        rgba(255, 255, 255, 0) 100%
+      background: linear-gradient(360deg,
+        #f9f9f9 0%,rgba(255, 255, 255, 0) 100%
       );
     `}
 `;
@@ -322,20 +348,31 @@ export const Arrow = styled.img`
 export const BtnNavSml = styled.button`
   ${FlexCenter}
   width: 22px;
-  color: white;
+  color: ${tux_white};
+  opacity: 1;
   height: 40px;
   border: none;
   border-radius: 5px;
   background: ${small_nav_default};
-  font: 700 20px "Poppins", sans-serif;
+  font: 700 18px "Poppins", sans-serif;
   cursor: pointer;
   &:hover {
     background: ${small_nav_hover};
   }
-  &:active {
-    background: ${pressed_btn};
-    color: white;
+  &:focus {
+    color: ${tux_white};
+    cursor: pointer;
+    box-shadow: ${g_focus_box} 0px 0px 0px 4px;
+    opacity: 0;
+    background: ${enable_btn}
   }
+  &:active {
+    background: ${default_focus};
+  }
+  &:disabled {
+    background: ${small_nav_disabled};
+  }
+
   // Focus
   ${(props) =>
     props.focus &&
@@ -520,19 +557,20 @@ export const TextBtn = styled.button`
   position: absolute;
   border: none;
   background: none;
+  inset: 12.48% 12% 12.61%;
   left: 12%;
   right: 12%;
   top: 12.48%;
   bottom: 12.61%;
-  width: 71px;
+  /* width: 71px; */
   height: 18px;
 
   /* Fonts */
   font: Poppins;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 18px;
+  font-weight: 700;
+  font-style: sans-serif;
+  font-size: 20px;
+  line-height: 28px;
 
   /* Color */
   color: #222222;
@@ -540,6 +578,20 @@ export const TextBtn = styled.button`
   align-items: center;
   text-align: center;
   justify-content: center;
+  &:hover {
+    text-decoration-line: underline;
+    cursor: pointer;
+  }
+  &:focus {
+    border: 1px solid rgba(60, 133, 130, 0.5);
+  }
+  &:active {
+    line-height: 32px;
+    color: rgba(34,34,34,1);
+  }
+  &:disabled {
+    color: rgba(136, 136, 136, 0.5);
+  }
 
   ${(props) =>
     props.hover &&
@@ -570,20 +622,35 @@ export const TextBtn = styled.button`
 
 export const LinkBtn = styled.a`
   position: static;
-  width: 225px;
+  width: 255px;
   height: 24px;
   left: 4px;
   top: 4px;
+  padding: 4px;
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 24px;
   display: flex;
   align-items: center;
   text-align: center;
   text-decoration-line: underline;
-  color: #518e90;
+  color: ${link_default};
+  &:focus {
+    color: ${link_focus};
+  }
+  &:hover {
+    color: ${link_hover};
+    cursor: pointer;
+  }
+  &:active {
+    color: ${link_font_color};
+  }
+  &:disabled {
+    color: ${link_disabled};
+  }
+
   ${(props) =>
     props.hover &&
     css`
@@ -663,8 +730,8 @@ export const SubText = styled.div`
   color: #999999;
   border-bottom: ${solid_border};
   font-weight: 500;
-  fine-height: 24px;
   font-size: 14px;
+  line-height: 24px;
   margin-left: 2rem;
   padding: 0.5rem 0 0.5rem 0.5rem;
   width: 191px;
