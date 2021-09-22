@@ -1,3 +1,4 @@
+// import {sessionInfoSchema} from "./sessionInfo"
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt');
@@ -9,9 +10,12 @@ const assignmentSchema = new Schema({
   dateStarted: Date,
   score: Number,
   isComplete: Boolean,
-  // recap: ,
-  // flag: ,
+  
+  lastModuleVisited: Number,
+  lastLoggedin: Date,
 });
+
+module.exports = mongoose.model('Assignment', assignmentSchema);
 
 const userSchema = new Schema(
   {
@@ -19,7 +23,7 @@ const userSchema = new Schema(
     lastName: { type: String, required: true },
     email: { type: String, required: true, lowercase: true, unique: true },
     password: String,
-    assignments: [assignmentSchema],
+    sessionInfo:[assignmentSchema],
     userPermissions: Number,
     googleId: String,
     avatar: String,
