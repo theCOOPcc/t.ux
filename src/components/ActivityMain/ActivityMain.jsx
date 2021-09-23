@@ -20,11 +20,16 @@ const ActivityMain = () => {
           </CenteredImage>
 
           <p>
-            
             {/* BOLD Visibility of System Status */}
             <BoldWords>{currentModule.contents.boldText}</BoldWords>
 
             {currentModule.contents.content}
+
+            {currentModule.contents.content2 && <br></br>}
+            {currentModule.contents.content2 && <br></br>}
+            {currentModule.contents.content2}
+            {currentModule.contents.content3 && <br></br>}
+            {currentModule.contents.content3}
           </p>
           {/* Bulleted list of tips */}
           <p>
