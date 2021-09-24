@@ -36,7 +36,7 @@ function deleteProfile(req, res) {
 function currentUser(req, res){
   
   res.status(200).json(req.user)
-  console.log(req.user.id)
+  console.log(req.user.sessionInfo)
 }
 
 
