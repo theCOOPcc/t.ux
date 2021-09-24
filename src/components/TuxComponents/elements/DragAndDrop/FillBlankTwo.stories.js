@@ -3,6 +3,7 @@ import { withDesign } from "storybook-addon-designs";
 import CheckIcon from '../../../../images/DragNDrop/CheckmarkIcon.svg';
 import { ToolTip } from '../ToolTips/ToolTips';
 import { AnswerChoicesTextTwo, ButtonFieldContainerTwo, CheckMarkContainerTwo, CheckMarkImageTwo, ContentMessageDescriptionTwo, ContinueButtonStaticTwo, ContinueTextTwo, DraggableContainerTwo, EmptyDragNDropTwo, UIExampleCardTwo, WordChoiceContainerTwo, ContentMessageHeaderTwo } from './FillBlankTwo';
+import Draggable from 'react-draggable';
 
 export default {
   title: "Drag&Drop",
@@ -37,26 +38,39 @@ export const FillBlankDragnDropTwo = () => (
     </UIExampleCardTwo>
     </div>
         <DraggableContainerTwo>
-        <WordChoiceContainerTwo draggable='true'>
+
+          <Draggable>
+        <WordChoiceContainerTwo>
           <AnswerChoicesTextTwo>
             Undo
           </AnswerChoicesTextTwo>
         </WordChoiceContainerTwo>
-        <WordChoiceContainerTwo draggable='true'>
+        </Draggable>
+
+        <Draggable>
+        <WordChoiceContainerTwo>
           <AnswerChoicesTextTwo>
             Close
           </AnswerChoicesTextTwo>
         </WordChoiceContainerTwo>
-        <WordChoiceContainerTwo draggable='true'>
+        </Draggable>
+
+        <Draggable>
+        <WordChoiceContainerTwo >
           <AnswerChoicesTextTwo>
             Exit
           </AnswerChoicesTextTwo>
         </WordChoiceContainerTwo>
-        <WordChoiceContainerTwo draggable='true'>
+        </Draggable>
+
+        <Draggable>
+        <WordChoiceContainerTwo>
           <AnswerChoicesTextTwo>
             Print
           </AnswerChoicesTextTwo>
         </WordChoiceContainerTwo>
+        </Draggable>
+
         </DraggableContainerTwo>
   </div>
 );
