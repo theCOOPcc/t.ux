@@ -20,19 +20,55 @@ const ActivityMain = () => {
           </CenteredImage>
 
           <p>
-            
             {/* BOLD Visibility of System Status */}
             <BoldWords>{currentModule.contents.boldText}</BoldWords>
 
             {currentModule.contents.content}
+            {/* this creates the necessary breaklines for text. */}
+            {currentModule.contents.boldText2 && <br></br>}
+            {currentModule.contents.boldText2 && <br></br>}
+            {currentModule.contents.content2 && <br></br>}
+            {currentModule.contents.content2 && <br></br>}
+
+            <BoldWords>{currentModule.contents.boldText2}</BoldWords>
+            {currentModule.contents.content2}
+            {/* this creates the necessary breaklines for text. */}
+            {currentModule.contents.boldText3 && <br></br>}
+            {currentModule.contents.boldText3 && <br></br>}
+
+            <BoldWords>{currentModule.contents.boldText3}</BoldWords>
+            {currentModule.contents.content3}
+
+            {currentModule.contents.boldText4 && <br></br>}
+
+            <BoldWords>{currentModule.contents.boldText4}</BoldWords>
+            {currentModule.contents.content4}
           </p>
           {/* Bulleted list of tips */}
           <p>
             <BoldWords>{currentModule.contents.boldTips}</BoldWords>
           </p>
-          <li>{currentModule.contents.objectives1}</li>
-          <li>{currentModule.contents.objectives2}</li>
-          <li>{currentModule.contents.objectives3}</li>
+          {/* if there are any tips, render bullet points only when needed */}
+          {currentModule.contents.objectives1 && (
+            <li>{currentModule.contents.objectives1}</li>
+          )}
+          {currentModule.contents.objectives2 && (
+            <li>{currentModule.contents.objectives2}</li>
+          )}
+          {currentModule.contents.objectives3 && (
+            <li>{currentModule.contents.objectives3}</li>
+          )}
+
+          {/* if there are tips 4,5,6 then render those bullet points. Otherwise, do not */}
+          {currentModule.contents.objectives4 && (
+            <li>{currentModule.contents.objectives4}</li>
+          )}
+          {currentModule.contents.objectives5 && (
+            <li>{currentModule.contents.objectives5}</li>
+          )}
+          {currentModule.contents.objectives6 && (
+            <li>{currentModule.contents.objectives6}</li>
+          )}
 
           {/* <InjectHTML markup={currentModule.contents} /> */}
         </FlexBox>
