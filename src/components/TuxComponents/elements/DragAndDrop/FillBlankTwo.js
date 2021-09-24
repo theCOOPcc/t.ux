@@ -51,8 +51,8 @@ export const FillInBlankTwo = ({}) => {
             </ContinueButtonStaticTwo>
             </ButtonFieldContainerTwo>
         </UIExampleCardTwo>
-        <DraggableContainerTwo draggable='true'>
-        <WordChoiceContainerTwo draggable='true'>
+        <DraggableContainerTwo>
+        <WordChoiceContainerTwo>
             <AnswerChoicesTextTwo>
             </AnswerChoicesTextTwo>
         </WordChoiceContainerTwo>
