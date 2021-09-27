@@ -5,6 +5,9 @@ import {
   ErrorAlert,
   AlertIcon,
 } from "./Banners.js";
+import {
+  banner_info
+} from "../../utilities";
 import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Banners",
@@ -15,7 +18,7 @@ export const InfoBanner = () => (
   <div style={{width: '656px'}}>
     <DefaultAlert >
       <AlertIcon className='default-banner' style={{ width: "20px" }} src="/images/DefaultIcon.svg" />
-      <p style={{ color: "rgba(51, 51, 51, 0.75)" }}>
+      <p style={{ color: "${banner_info}" }}>
         <strong>Default Message - </strong> subtext here
       </p>
     </DefaultAlert>
@@ -26,7 +29,7 @@ export const ErrorBanner = () => (
   <div style={{width:'656px'}}>
   <ErrorAlert>
     <AlertIcon className='error-banner' src="/images/error.svg" />
-    <p style={{ color: "rgba(51, 51, 51, 0.75)" }}>
+    <p style={{ color: "${banner_info}" }}>
       <strong>Default Message - </strong> subtext here
     </p>
   </ErrorAlert>
@@ -37,7 +40,7 @@ export const WarningBanner = () => (
   <div style={{width: '656px'}}>
   <WarningAlert >
     <AlertIcon className='warning-banner' src="/images/warning icon.svg" />
-    <p style={{ color: "rgba(51, 51, 51, 0.75)" }}>
+    <p style={{ color: "${banner_info}" }}>
       <strong>Default Message - </strong> subtext here
     </p>
   </WarningAlert>

@@ -4,7 +4,9 @@ import { Poppins, pop_bolder, success_grey, true_white, intro_text, pop_reg, pop
 // import { SecondaryButton } from '../Buttons/Buttons';
 import {SessionContext} from '../../../../contexts/SessionContext'
 
-
+import {
+  backButton
+} from "../../utilities";
 
 export const TopicBox = () => {
     const { setStarted, handleJumpToSection, totalSections } = useContext(SessionContext);
@@ -71,7 +73,7 @@ height: 90px;
 text-align: center;
 font-size: 0;
 color: ${true_white};
-background-color: #222222;
+background-color: ${backButton};
 opacity: 0;
 border-radius: 100px;
 `;

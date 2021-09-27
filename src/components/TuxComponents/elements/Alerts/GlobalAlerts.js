@@ -1,6 +1,11 @@
 import React from 'react'
 import styled, { css } from "styled-components";
-
+import {
+  global_background,
+  global_box_shadow,
+  complete,
+  tux_red
+ } from '../../utilities';
 
 export const AlertIcon = styled.img`
 position: absolute;
@@ -21,6 +26,7 @@ export const ExclaimIcon = styled.img`
   left: 50px;
   width: 20px;
 `
+
 export const ImgButton = styled.button`
 display: flex;
 border: none;
@@ -39,22 +45,23 @@ export const GlobalSuccess = styled.div`
   text-align: center;
   justify-content: center;
   align-items: center;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: ${global_background};
+  box-shadow: 0px 4px 4px ${global_box_shadow};
   width: 500px;
   height: 94px;
-  border-left: 4px solid #78C077;
+  border-left: 4px solid ${complete};
   box-sizing: border-box;
 `
+
 export const GlobalFailure = styled.div`
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: ${global_background};
+  box-shadow: 0px 4px 4px ${global_box_shadow};
   width: 500px;
   height: 94px;
-  border-left: 4px solid #E6211E;
+  border-left: 4px solid ${tux_red};
   box-sizing: border-box;
 `

@@ -1,13 +1,17 @@
 import React from 'react'
 import styled, { css } from "styled-components";
-
+import { 
+  complete,
+  alert_default,
+  alert_warning,
+  alert_error
+} from '../../utilities';
 
 export const AlertIcon = styled.img`
 position: absolute;
 left: 20px;
 width: 12px;
 `
-
 
 export const XMarker = styled.img`
 position: absolute;
@@ -31,25 +35,25 @@ right: 5px;
 
 export const DefaultAlert = styled.button`
   display: flex;
-  border: 1px solid #9EE8FF;
+  border: 1px solid ${alert_default};
   justify-content: center;
   align-items: center;
   padding: 7px 8px;
   width: 100%;
   height: 25px;
-  background: rgba(158, 232, 255, 0.2);
+  background: ${alert_default};
   box-sizing: border-box;
   border-radius: 2px;
 `
 export const SuccessAlert = styled.button`
   display: flex;
-  border: 1px solid #78C077;
+  border: 1px solid ${complete};
   justify-content: center;
   align-items: center;
   padding: 7px 8px;
   width: 100%;
   height: 25px;
-  background: rgba(120, 192, 119, 0.2);
+  background: ${complete};
   box-sizing: border-box;
   border-radius: 2px;
   /* background-image: url('/images/success.svg'); */
@@ -63,8 +67,8 @@ export const WarningAlert = styled.button`
   padding: 7px 8px;
   width: 100%;
   height: 25px;
-  background: rgba(255, 228, 92, 0.2);
-  border: 1px solid #FFE45C;
+  background: ${alert_warning};
+  border: 1px solid ${alert_warning};
   box-sizing: border-box;
   border-radius: 2px;
 `
@@ -76,8 +80,8 @@ export const ErrorAlert = styled.button`
   padding: 7px 8px;
   width: 100%;
   height: 25px;
-  background: rgba(234, 74, 70, 0.2);
-  border: 1px solid #E6211E;
+  background: ${alert_error};
+  border: 1px solid ${alert_error};
   box-sizing: border-box;
   border-radius: 2px;
 `

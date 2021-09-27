@@ -8,6 +8,7 @@ import {
   AlertIcon,
   ImgButton,
 } from "./InlineAlerts.js";
+
 import { withDesign } from "storybook-addon-designs";
 export default {
   title: "Inline Alerts",
@@ -18,7 +19,7 @@ export const AlertDefault = () => (
   <>
     <DefaultAlert >
       <AlertIcon className='default-alert' style={{ width: "12px" }} src="/images/DefaultIcon.svg" />
-      <p style={{ color: "rgba(51, 51, 51, 0.75)" }}>
+      <p style={{ color: "${banner_info}" }}>
         <strong>Default Message - </strong> subtext here
       </p>
       <ImgButton type="">
@@ -32,7 +33,7 @@ export const AlertSuccess = () => (
   <>
     <SuccessAlert>
       <AlertIcon className='success-alert' src="/images/success.svg" alt="" />
-      <p style={{ color: "rgba(51, 51, 51, 0.75)" }}>
+      <p style={{ color: "${banner_info}}" }}>
         <strong>Default Message </strong> - subtext here
       </p>
       <ImgButton type="">
@@ -45,7 +46,7 @@ export const AlertSuccess = () => (
 export const AlertWarning = () => (
   <WarningAlert>
     <AlertIcon className='warning-alert' src="/images/warning icon.svg" />
-    <p style={{ color: "rgba(51, 51, 51, 0.75)" }}>
+    <p style={{ color: "${banner_info}" }}>
       <strong>Default Message - </strong> subtext here
     </p>
     <ImgButton type="">
@@ -57,7 +58,7 @@ export const AlertWarning = () => (
 export const AlertError = () => (
   <ErrorAlert>
     <AlertIcon className='error-alert' src="/images/error.svg" />
-    <p style={{ color: "rgba(51, 51, 51, 0.75)" }}>
+    <p style={{ color: "${banner_info}" }}>
       <strong>Default Message - </strong> subtext here
     </p>
     <ImgButton type="">

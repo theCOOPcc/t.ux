@@ -1,5 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
+import { 
+  success,
+  global_box_shadow,
+  toasts_error_bg,
+  tux_red
+} from '../../utilities';
+
+import { 
+  banner_info
+} from '../../utilities'
+
 
 export const SuccessToast = styled.div`
   position: relative;
@@ -10,11 +21,11 @@ export const SuccessToast = styled.div`
   height: 129px;
   line-height: 24px;
   font-size: 16px;
-  background: rgba(120, 192, 119, 0.25);
-  border: 1px solid #78C077;
-  border-left: 5px solid #78C077;
+  background: ${success};
+  border: 1px solid ${success};
+  border-left: 5px solid ${success};
   box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px ${global_box_shadow};
 `
 export const MessageHead = styled.div`
   position: absolute;
@@ -50,11 +61,11 @@ export const ErrorToast = styled.div`
   width:256px;
   height: 129px;
   line-height: 24px;
-  background: rgba(234, 74, 70, 0.25);
-  border: 1px solid #E6211E;
-  border-left: 5px solid #E6211E;
+  background: ${toasts_error_bg};
+  border: 1px solid ${tux_red};
+  border-left: 5px solid ${tux-red};
   box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px ${global_box_shadow};
 `
 
 export const XMarker = styled.img`

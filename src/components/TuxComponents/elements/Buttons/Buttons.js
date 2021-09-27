@@ -25,7 +25,6 @@ import {
   common_font_color,
   link_default,
   link_font_color,
-  link_focus,
   link_hover,
   link_disabled
 } from "../../utilities";
@@ -638,7 +637,7 @@ export const LinkBtn = styled.a`
   text-decoration-line: underline;
   color: ${link_default};
   &:focus {
-    color: ${link_focus};
+    color: ${link-hover};
   }
   &:hover {
     color: ${link_hover};

@@ -1,4 +1,13 @@
 import styled from 'styled-components'
+import {
+  global_background,
+  global_box_shadow,
+  notification_panel_bg,
+  notification_alert_btn,
+  alert_warning_border,
+  intro_text,
+  notification_header_color
+} from '../../utilities';
 
 export const NotificationPanel = styled.div`
 display: flex;
@@ -8,8 +17,8 @@ width: 302px;
 height: 501px;
 left: 57px;
 top: 50px;
-background: #EFEDED;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+background: ${notification_panel_bg};
+box-shadow: 0px 4px 4px ${global_box_shadow};
 border-radius: 5px;
 `
 
@@ -22,7 +31,7 @@ line-height: 30px;
 height: 50px;
 bottom: 7px;
 left: 57px;
-background: #78D6DA;
+background: ${notification_alert_btn};
 border: none;
 border-radius: 5px;
 cursor: pointer;
@@ -36,8 +45,8 @@ export const Notification = styled.div`
   right: 2px;
   left:2px;
   top: 2px;
-  background: #FFFFFF;
-  border-left: 3px solid #FFE45C;
+  background: ${global_background};
+  border-left: 3px solid ${alert_warning_border};
   margin-top: 1px;
 `
 
@@ -92,7 +101,7 @@ height: 20px;
 width: 20px;
 align-items: center;
 justify-content: center;
-background: #366062;
+background: ${intro_text};
 z-index: 1;
 `
 export const RectangleMark = styled.img`
@@ -124,8 +133,8 @@ width: 396px;
 height: 747px;
 left: 57px;
 top: 10px;
-background: #EFEDED;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+background: ${notification_panel_bg};
+box-shadow: 0px 4px 4px ${global_box_shadow};
 border-radius: 5px;
 `
 
@@ -137,8 +146,8 @@ export const ExtendNotification = styled.div`
   right: 2px;
   left:2px;
   top: 37px;
-  background: #FFFFFF;
-  border-left: 3px solid #FFE45C;
+  background: ${global_background};
+  border-left: 3px solid ${alert_warning_border};
   margin-top: 1px;
 `
 
@@ -166,7 +175,7 @@ position: absolute;
   font-size: 16px;
   line-height: 24px;
   text-decoration-line: underline;
-  color: #4285F4;
+  color: ${notification_rheader_color};
   cursor: pointer;
 `
 
@@ -184,5 +193,5 @@ position: absolute;
   left: 22px;
   text-decoration-line: underline;
   cursor: pointer;
-  color: #4285F4;
+  color: ${notification_header_color};
 `

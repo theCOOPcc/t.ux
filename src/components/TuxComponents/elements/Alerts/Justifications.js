@@ -2,6 +2,10 @@ import React from 'react'
 import styled from 'styled-components';
 import Error from '../../../../images/icons/error.svg'
 import Success from '../../../../images/icons/success.svg'
+import { 
+  just_incorrect_border,
+  complete
+} from '../../utilities';
 
 export const JustIncorrect = ({ selection }) => {
   const { feedback } = selection;
@@ -31,14 +35,14 @@ position: relative;
   width: 962px;
   height: 189px;
   border: none;
-  border-top: 7px solid #ED605C;
+  border-top: 7px solid ${just_incorrect_border};
 `;
 export const CorrectJust = styled.div`
   position: relative;
   width: 962px;
   height: 189px;
   border: none;
-  border-top: 7px solid #78C077;
+  border-top: 7px solid ${complete};
 `;
 
 export const AlertIcon = styled.img`

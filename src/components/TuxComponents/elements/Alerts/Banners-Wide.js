@@ -1,6 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import {
+  banner_wide_lite,
+  banner_wide_red,
+  banner_red_border, 
+  future_text,
+  success,
+  complete
+} from "../../utilities";
 
 export const AlertMark = styled.img`
   position: absolute;
@@ -17,8 +25,8 @@ export const WideBannerLite = styled.div`
   flex-direction: column;
   width: 620px;
   height: 88px;
-  background: #F6F6F7;
-  border: 1px solid #999999;
+  background: ${banner_wide_lite};
+  border: 1px solid ${future_text};
   border-radius: 8px;
 `
 
@@ -29,8 +37,8 @@ export const WideBannerGreen = styled.div`
   align-items: flex-start;
   width: 620px;
   height: 88px;
-  background: rgba(120, 192, 119, 0.1);
-  border: 1px solid #78C077;
+  background: ${success};
+  border: 1px solid ${complete};
   border-radius: 8px;
 `
 
@@ -41,8 +49,8 @@ export const WideBannerRed = styled.div`
   align-items: flex-start;
   width: 620px;
   height: 88px;
-  background: rgba(238, 110, 107, 0.1);
-  border: 1px solid #EE6E6B;
+  background: ${banner_wide_red};
+  border: 1px solid ${banner_red_border};
   border-radius: 8px;
 `
 

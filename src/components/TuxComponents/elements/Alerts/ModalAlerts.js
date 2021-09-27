@@ -1,13 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import {   
+  global_background,
+  global_box_shadow, 
+  modal_color,
+  intro_text,
+  global_box_shadow,
+  backButton,
+  true_white
+ } from '../../utilities';
 
 export const ModalAlert = styled.div`
   position: absolute;
   width: 600px;
   height: 242px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: ${global_background};
+  box-shadow: 0px 4px 4px ${global_box_shadow};
   font-size: 18px;
   line-height: 27px;
 `
@@ -21,11 +29,11 @@ box-sizing: border-box;
 border: none;
 align-items: center;
 justify-content: center;
-color: #F1F2EB;
+color: ${modal_color};
 width: 50%;
 height: 60px;
-background: #366062;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+background: ${intro_text};
+box-shadow: 0px 4px 4px ${global_box_shadow};
 font-size: 18px;
 line-height: 27px;
 &:hover {
@@ -41,11 +49,11 @@ position: absolute;
 bottom: 0;
 left: 0;
 border: none;
-color: #222222;
+color: ${backButton};
 width: 50%;
 height: 60px;
-background: #FFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+background: ${global_background};
+box-shadow: 0px 4px 4px ${global_box_shadow};
 font-size: 18px;
 line-height: 27px;
 &:hover {
@@ -59,8 +67,8 @@ export const ModalWarning = styled.div`
   top: 300px;
   width: 614px;
   height: 254px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: ${global_background};
+  box-shadow: 0px 4px 4px ${global_box_shadow};
   font-size: 18px;
   line-height: 27px;
 `
@@ -82,12 +90,12 @@ position: absolute;
 bottom: 22px;
 right: 31px;
 border: none;
-color: #F1F2EB;
+color: ${model_color};
 width: 170px;
 border-radius: 10px;
 height: 50px;
-background: #366062;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+background: ${intro_text};
+box-shadow: 0px 4px 4px ${global_box_shadow};
 font-size: 18px;
 line-height: 27px;
 &:hover {
@@ -104,11 +112,11 @@ bottom: 22px;
 left: 225px;
 border: none;
 border-radius: 10px;
-color: #222222;
+color: ${backButton};
 width: 170px;
 height: 50px;
-background: #FFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+background: ${true_white};
+box-shadow: 0px 4px 4px ${global_box_shadow};
 font-size: 18px;
 line-height: 27px;
 &:hover {
