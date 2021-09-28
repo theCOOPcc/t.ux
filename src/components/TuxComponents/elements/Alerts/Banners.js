@@ -2,10 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 import {
-  alert_default,
-  alert_warning,
+  alert_default_border,
+  alert_default_bg,
+  alert_warning_border,
+  alert_warning_background,
   alert_error_background,
-  tux_red
+  alert_error_border
 } from "../../utilities";
 
 export const AlertIcon = styled.img`
@@ -17,13 +19,13 @@ export const DefaultAlert = styled.button`
   /* position: fixed; */
   display: flex;
   /* overflow: hidden; */
-  border: 1px solid ${alert_default};
+  border: 1px solid ${alert_default_border};
   justify-content: center;
   align-items: center;
   padding: 7px 8px;
   width: 100%;
   height: 50px;
-  background: ${alert_default};
+  background: ${alert_default_bg};
   box-sizing: border-box;
   border-radius: 2px;
 `
@@ -35,8 +37,8 @@ export const WarningAlert = styled.button`
   padding: 7px 8px;
   width: 100%;
   height: 50px;
-  background: ${alert_warning};
-  border: 1px solid ${alert_warning};
+  background: ${alert_warning_background};
+  border: 1px solid ${alert_warning_border};
   box-sizing: border-box;
   border-radius: 2px;
 `
@@ -49,7 +51,7 @@ export const ErrorAlert = styled.button`
   width: 100%;
   height: 50px;
   background: ${alert_error_background};
-  border: 1px solid ${tux_red};
+  border: 1px solid ${alert_error_border};
   box-sizing: border-box;
   border-radius: 2px;
 `

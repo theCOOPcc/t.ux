@@ -2,10 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 import {
-  banner_wide_lite,
-  banner_wide_red,
-  banner_red_border, 
-  future_text,
+  banner_wide_lite_bg,
+  banner_wide_lite_border,
+  banner_wide_grn_border,
+  banner_wide_grn_bg,
+  banner_wide_red_bg,
+  banner_wide_red_border, 
   success,
   complete
 } from "../../utilities";
@@ -25,8 +27,8 @@ export const WideBannerLite = styled.div`
   flex-direction: column;
   width: 620px;
   height: 88px;
-  background: ${banner_wide_lite};
-  border: 1px solid ${future_text};
+  background: ${banner_wide_lite_bg};
+  border: 1px solid ${banner_wide_lite_border};
   border-radius: 8px;
 `
 
@@ -37,8 +39,8 @@ export const WideBannerGreen = styled.div`
   align-items: flex-start;
   width: 620px;
   height: 88px;
-  background: ${success};
-  border: 1px solid ${complete};
+  background: ${banner_wide_grn_bg};
+  border: 1px solid ${banner_wide_grn_border};
   border-radius: 8px;
 `
 
@@ -49,8 +51,8 @@ export const WideBannerRed = styled.div`
   align-items: flex-start;
   width: 620px;
   height: 88px;
-  background: ${banner_wide_red};
-  border: 1px solid ${banner_red_border};
+  background: ${banner_wide_red_bg};
+  border: 1px solid ${banner_wide_red_border};
   border-radius: 8px;
 `
 

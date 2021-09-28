@@ -7,11 +7,6 @@ import {
   tux_red
 } from '../../utilities';
 
-import { 
-  banner_info
-} from '../../utilities'
-
-
 export const SuccessToast = styled.div`
   position: relative;
   display: flex;
@@ -63,7 +58,7 @@ export const ErrorToast = styled.div`
   line-height: 24px;
   background: ${toasts_error_bg};
   border: 1px solid ${tux_red};
-  border-left: 5px solid ${tux-red};
+  border-left: 5px solid ${tux_red};
   box-sizing: border-box;
   box-shadow: 0px 4px 4px ${global_box_shadow};
 `

@@ -1,10 +1,14 @@
 import React from 'react'
 import styled, { css } from "styled-components";
 import { 
-  complete,
-  alert_default,
-  alert_warning,
-  alert_error
+  inline_default_border,
+  inline_default_bg,
+  inline_succ_border,
+  inline_succ_bg,
+  inline_warning_border,
+  inline_warning_bg,
+  inline_error_border,
+  inline_error_bg,
 } from '../../utilities';
 
 export const AlertIcon = styled.img`
@@ -35,30 +39,28 @@ right: 5px;
 
 export const DefaultAlert = styled.button`
   display: flex;
-  border: 1px solid ${alert_default};
+  border: 1px solid ${inline_default_border};
   justify-content: center;
   align-items: center;
   padding: 7px 8px;
   width: 100%;
   height: 25px;
-  background: ${alert_default};
+  background: ${inline_default_bg};
   box-sizing: border-box;
   border-radius: 2px;
 `
 export const SuccessAlert = styled.button`
   display: flex;
-  border: 1px solid ${complete};
+  border: 1px solid ${inline_succ_border};
   justify-content: center;
   align-items: center;
   padding: 7px 8px;
   width: 100%;
   height: 25px;
-  background: ${complete};
+  background: ${inline_succ_bg};
   box-sizing: border-box;
   border-radius: 2px;
   /* background-image: url('/images/success.svg'); */
-  
-  
 `
 export const WarningAlert = styled.button`
   display: flex;
@@ -67,8 +69,8 @@ export const WarningAlert = styled.button`
   padding: 7px 8px;
   width: 100%;
   height: 25px;
-  background: ${alert_warning};
-  border: 1px solid ${alert_warning};
+  background: ${inline_warning_bg};
+  border: 1px solid ${inline_warning_border};
   box-sizing: border-box;
   border-radius: 2px;
 `
@@ -80,8 +82,8 @@ export const ErrorAlert = styled.button`
   padding: 7px 8px;
   width: 100%;
   height: 25px;
-  background: ${alert_error};
-  border: 1px solid ${alert_error};
+  background: ${inline_error_bg};
+  border: 1px solid ${inline_error_border};
   box-sizing: border-box;
   border-radius: 2px;
 `

@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import {
-  global_background,
-  global_box_shadow,
   notification_panel_bg,
+  notification_panel_box_shadow,
   notification_alert_btn,
-  alert_warning_border,
-  intro_text,
+  notification_num_mark_bg,
+  notification_bg,
+  notification_border,
   notification_header_color
 } from '../../utilities';
 
@@ -18,7 +18,7 @@ height: 501px;
 left: 57px;
 top: 50px;
 background: ${notification_panel_bg};
-box-shadow: 0px 4px 4px ${global_box_shadow};
+box-shadow: 0px 4px 4px ${notification_panel_box_shadow};
 border-radius: 5px;
 `
 
@@ -45,8 +45,8 @@ export const Notification = styled.div`
   right: 2px;
   left:2px;
   top: 2px;
-  background: ${global_background};
-  border-left: 3px solid ${alert_warning_border};
+  background: ${notification_bg};
+  border-left: 3px solid ${notification_border};
   margin-top: 1px;
 `
 
@@ -101,7 +101,7 @@ height: 20px;
 width: 20px;
 align-items: center;
 justify-content: center;
-background: ${intro_text};
+background: ${notification_num_mark_bg};
 z-index: 1;
 `
 export const RectangleMark = styled.img`
@@ -175,7 +175,7 @@ position: absolute;
   font-size: 16px;
   line-height: 24px;
   text-decoration-line: underline;
-  color: ${notification_rheader_color};
+  color: ${notification_header_color};
   cursor: pointer;
 `
 

@@ -299,7 +299,7 @@ export const CopyLinkBtn = styled.button`
   height: 54px;
   border: none;
   border-radius: 5px;
-  background: #ffffff;
+  background: ${global_background};
   padding: 12px 0;
   margin: 17px 8px;
   ${FlexCenter};
@@ -405,7 +405,7 @@ export const BtnNavSml = styled.button`
     props.depressed &&
     css`
       background-color: ${small_nav_pressed};
-      color: white;
+      color: ${true_white};
     `}
 `;
 
@@ -418,7 +418,7 @@ export const Button = styled.button`
   background: ${enable_btn};
   padding: 12px 0;
   margin: 17px 8px;
-  color: white;
+  color: ${true_white};
   font: 700 20px "Poppins", sans-serif;
   cursor: pointer;
   &:hover {
@@ -475,7 +475,7 @@ export const Button280 = styled.button`
   margin: 17px 8px;
   font: ${pop_bolder};
   background: ${enable_btn};
-  color: white;
+  color: ${true_white};
   cursor: pointer;
 
   &:hover {
@@ -572,7 +572,7 @@ export const TextBtn = styled.button`
   line-height: 28px;
 
   /* Color */
-  color: #222222;
+  color: ${backButton};
   display: flex;
   align-items: center;
   text-align: center;

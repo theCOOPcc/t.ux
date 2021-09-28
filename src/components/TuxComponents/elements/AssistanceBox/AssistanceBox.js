@@ -3,10 +3,6 @@ import styled, { css } from 'styled-components'
 import { Poppins, pop_bolder, success_grey, true_white, intro_text, pop_reg, pop_thick } from '../../utilities';
 import { Link } from 'react-router-dom'
 
-
-
-
-
 export const AssistanceBox = ({ }) => (
     <div style={{display: 'flex', justifyContent: 'center'}}>
     <AssistanceContainer>
@@ -24,19 +20,16 @@ export const AssistanceBox = ({ }) => (
 export default AssistanceBox;
 
 
-
-
 export const AssistanceImage = styled.div`
 width: 60px;
 height: 60px;
-background: url(https://cdn.discordapp.com/attachments/354397771744149505/872157368664862811/unknown.png) no-repeat center;
+/* background: url(https://cdn.discordapp.com/attachments/354397771744149505/872157368664862811/unknown.png) no-repeat center; */
 background-position: 50% 50%;
 background-size: cover;
 overflow: hidden;
 margin-left: 15%;
 margin-top: 9%;
 `;
-
 
 
 export const AssistanceContainer = styled.div`
@@ -66,7 +59,6 @@ font-size: 24px;
 export const AssistanceDescription = styled.div`
 font: ${pop_reg};
 `;
-
 
 
 const BtnStyle = styled(Link)`

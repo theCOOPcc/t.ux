@@ -3,8 +3,8 @@ import styled, { css } from "styled-components";
 import {
   global_background,
   global_box_shadow,
-  complete,
-  tux_red
+  global_succ_border_left,
+  global_fail_border_left
  } from '../../utilities';
 
 export const AlertIcon = styled.img`
@@ -49,7 +49,7 @@ export const GlobalSuccess = styled.div`
   box-shadow: 0px 4px 4px ${global_box_shadow};
   width: 500px;
   height: 94px;
-  border-left: 4px solid ${complete};
+  border-left: 4px solid ${global_succ_border_left};
   box-sizing: border-box;
 `
 
@@ -62,6 +62,6 @@ export const GlobalFailure = styled.div`
   box-shadow: 0px 4px 4px ${global_box_shadow};
   width: 500px;
   height: 94px;
-  border-left: 4px solid ${tux_red};
+  border-left: 4px solid ${global_fail_border_left};
   box-sizing: border-box;
 `

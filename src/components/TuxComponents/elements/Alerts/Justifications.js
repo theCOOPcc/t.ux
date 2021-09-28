@@ -4,7 +4,7 @@ import Error from '../../../../images/icons/error.svg'
 import Success from '../../../../images/icons/success.svg'
 import { 
   just_incorrect_border,
-  complete
+  just_correct_border
 } from '../../utilities';
 
 export const JustIncorrect = ({ selection }) => {
@@ -42,7 +42,7 @@ export const CorrectJust = styled.div`
   width: 962px;
   height: 189px;
   border: none;
-  border-top: 7px solid ${complete};
+  border-top: 7px solid ${just_correct_border};
 `;
 
 export const AlertIcon = styled.img`

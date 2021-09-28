@@ -12,30 +12,59 @@ export const true_white = "#FFF";
 
 export const common_font_color = 'EBEDEE';
 
+// LISA's COLORS **************************************************
 
-// ALERTS STYLES-------------------------------------
-
-export const alert_default = '#9EE8FF';
-export const alert_warning = '#FFE45C';
+// ALERTS STYLES----------------------------------
+export const inline_default_border = '9EE8FF';
+export const inline_default_bg = 'rgba(158, 232, 255, 0.2)';
+export const inline_succ_border = '78C077';
+export const inline_succ_bg = 'rgba(120, 192, 119, 0.2)';
+export const inline_warning_border = '#FFE45C';
+export const inline_warning_bg = 'rgba(255, 228, 92, 0.2)';
+export const inline_error_border = '#E6211E';
+export const inline_error_bg = 'rgba(234, 74, 70, 0.2';
+export const alert_default_border = '#9EE8FF';
+export const alert_default_bg = rgba(158, 232, 255, 0.2);
+export const alert_success_border = '#78C077';
+export const alert_success_bg = 'rgba(120, 192, 119, 0.2)';
+export const alert_warning_border = '#FFE45C';_
+export const alert_warning_background = 'rgba(255, 228, 92, 0.2)';
 export const alert_error_border = '#E6211E';
-export const banner_wide_lite = '#F6F6F7';
-export const banner_wide_red = 'EE6E6B';
-export const banner_red_border = '#EE6E6B';
+export const alert_error_background = 'rgba(234, 74, 70, 0.2)';
+export const banner_wide_lite_bg = '#F6F6F7';
+export const banner_wide_lite_border = 'future_text';
+export const banner_wide_grn_bg = 'rgba(120, 192, 119, 0.1)';
+export const banner_wide_grn_border = '#78C077';
+export const banner_wide_grn_bg = 'rgba(120, 192, 119, 0.1)';
+export const banner_wide_red_border = '#EE6E6B';
+export const banner_wide_red_bg = 'rgba(238, 110, 107, 0.1)';
 export const banner_info = "#333333";
 export const global_background = '#FFFFFF';
-export const global_box_shadow = '#000000';
+export const global_succ_border_left = '#78C077';
+export const global_fail_border_left = '#E6211E';
+export const global_box_shadow = '#rgba(0, 0, 0, 0.25)';
 export const just_incorrect_border = '#ED605C';
+export const just_correct_border = '#78C077';
 export const modal_color = '#F1F2EB';
 export const notification_panel_bg = '#EFEDED';
+export const notification_panel_box_shadow = 'rgba(0, 0, 0, 0.25)';
 export const notification_alert_btn = '#78D6DA';
+export const notification_bg = 'FFFFFF';
+export const notification_border = 'FFE45C';
 export const notification_header_color = '#4285F4';
+export const notification_num_mark_bg = '#366062';
 export const toasts_error_bg = 'EA4A46';
+
+// ASSISTANCEBOX COLORS
+
+
+// END LISA'S COLORS **********************************************
 
 
 
 // LINK STYLES-------------------------------------
 
-export const link_font_color = '#0500FF';
+export const link_font_color = 'rgba(5, 0, 255, 0.75)';
 export const link_default = '#518e90';
 // export const link_focus = '#A9CBCD'; **DUPLICATE
 export const link_hover = '#A9CBCD';  
