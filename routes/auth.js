@@ -1,14 +1,11 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const passport = require('passport');
-const authCtrl = require('../controllers/auth');
+const passport = require("passport");
 
 /*---------- Public Routes ----------*/
-router.post('/signup', authCtrl.signup);
-router.post('/login', authCtrl.login);
 router.get(
-  '/google',
-  passport.authenticate('google', { scope: ['profile', 'email'] })
+  "/google",
+  passport.authenticate("google", { scope: ["profile", "email"] })
 );
 router.get(
   "/google/oauth2callback",
@@ -30,14 +27,14 @@ router.get(
   // }
 );
 
-router.get('/logout', function (req, res) {
-  console.log('logging out', req.user)
+router.get("/logout", function (req, res) {
+  console.log("logging out", req.user);
   req.logout();
   res.redirect(
     // 'http://localhost:3000'
-    'http://taketux.com'
+    "http://taketux.com"
     // 'http://thecoop-tux.herokuapp.com'
-    );
+  );
 });
 /*---------- Protected Routes ----------*/
 

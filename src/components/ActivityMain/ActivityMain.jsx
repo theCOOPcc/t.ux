@@ -24,6 +24,7 @@ const ActivityMain = () => {
             <BoldWords>{currentModule.contents.boldText}</BoldWords>
 
             {currentModule.contents.content}
+
             {/* this creates the necessary breaklines for text. */}
             {currentModule.contents.boldText2 && <br></br>}
             {currentModule.contents.boldText2 && <br></br>}
@@ -43,6 +44,7 @@ const ActivityMain = () => {
 
             <BoldWords>{currentModule.contents.boldText4}</BoldWords>
             {currentModule.contents.content4}
+
           </p>
           {/* Bulleted list of tips */}
           <p>
