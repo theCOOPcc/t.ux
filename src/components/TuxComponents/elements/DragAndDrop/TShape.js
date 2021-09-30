@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import { Poppins } from '../../utilities/Type'
-import { grey_text, tux_blue } from '../../utilities/Colors'
+import { grey_text, tux_blue, tux_white, dnd_box_bg, link_disabled } from '../../utilities/Colors'
 
 export const DnDActivity = styled.div`
     position:relative;
     width: 38em;
     height: 26em;
-    background-color: #FAFCFE;
+    background-color: ${tux_white};
     font-family: ${Poppins};
     // padding: 21px 60px 40px 60px      <---in case padding needs to be added
 `;
@@ -19,7 +19,7 @@ export const DnDBoxOne = styled.div`
     height: 60.5%;
     border: 2px solid ${tux_blue};
     border-radius: 5px;
-    background-color: rgba(120, 214, 218, 0.1);
+    background-color: ${dnd_box_bg};
 
     &::before{
         position: relative;
@@ -39,7 +39,7 @@ export const DnDBoxTwo = styled.div`
     height: 60.5%;
     border: 2px solid ${tux_blue};
     border-radius: 5px;
-    background-color: rgba(120, 214, 218, 0.1);
+    background-color: ${dnd_box_bg};
 
     &::before{
         position:relative;
@@ -58,7 +58,7 @@ export const DnDItemBox = styled.div`
     left: 27.4603175%;
     width: 45.2380952%;
     height: 13.25%;
-    background-color: rgba(136, 136, 136, 0.1);
+    background-color: ${link_disabled};
     border: 2px solid ${grey_text};
 
     &::before{

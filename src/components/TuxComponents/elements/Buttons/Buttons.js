@@ -1,11 +1,18 @@
 import styled, { css } from "styled-components";
 import React, { useState } from "react";
 import {
+  true_white,
+  global_background,
+  backButton,
+  secondary_default, 
+  success_grey,
   tux_blue,
   disable_btn,
   enable_btn,
   enable_hover,
+  future_text,
   google_hover,
+  in_progress,
   disable_g_btn,
   primary_text,
   primary_hover,
@@ -13,28 +20,27 @@ import {
   secondary_default,
   secondary_hover,
   g_focus_box,
-  small_nav_font,
   small_nav_default,
   small_nav_hover,
   small_nav_pressed,
   small_nav_disabled,
+  secondary_default,
   tux_grey,
   tux_red,
   tux_white,
   true_white,
+  txtbtn_props_depressed,
+  txtbtn_props_disabled,
   common_font_color,
   link_default,
   link_font_color,
   link_hover,
-  link_disabled
-} from "../../utilities";
-
-import {
-  pop_semiBold,
+  link_disabled,
+  lnkbtn_props,
+  lnkbtn_props_disabled,
   Flex,
   solid_border,
   present_text,
-  future_text,
   text_black,
   btn_active_shadow,
   input_border,
@@ -43,7 +49,6 @@ import {
   default_depressed,
   default_focus,
   common_shadow,
-  hover_shadow,
   focus_shadow,
   FlexCenter,
 } from "../../utilities";
@@ -582,14 +587,14 @@ export const TextBtn = styled.button`
     cursor: pointer;
   }
   &:focus {
-    border: 1px solid rgba(60, 133, 130, 0.5);
+    border: 1px solid ${secondary_default};
   }
   &:active {
     line-height: 32px;
-    color: rgba(34,34,34,1);
+    color: ${backButton};
   }
   &:disabled {
-    color: rgba(136, 136, 136, 0.5);
+    color: ${success_grey};
   }
 
   ${(props) =>
@@ -604,18 +609,18 @@ export const TextBtn = styled.button`
       outline: none;
       width: 71px;
       height: 18px;
-      border: 1px solid rgba(60, 133, 130, 0.5);
+      border: 1px solid ${secondary_default};
     `}
   ${(props) =>
     props.depressed &&
     css`
       text-align: justify;
-      color: #323239;
+      color: ${txtbtn_props_depressed};
     `}
   ${(props) =>
     props.disabled &&
     css`
-      color: #cccccc;
+      color: ${txtbtn_props_disabled};
     `}
 `;
 
@@ -653,24 +658,24 @@ export const LinkBtn = styled.a`
   ${(props) =>
     props.hover &&
     css`
-      color: #A9CBCD
+      color: ${lnkbtn_props};
       cursor: pointer;
       `}
   ${(props) =>
     props.disabled &&
     css`
       text-decoration-line: none;
-      color: #888888;
+      color: ${lnkbtn_props_disabled};
     `}
     ${(props) =>
     props.focus &&
     css`
-      color: #a9cbcd;
+      color: ${lnkbtn_props};
     `}
     ${(props) =>
     props.depressed &&
     css`
-      color: rgba(5, 0, 255, 0.75);
+      color: ${link_font_color};
     `}
 `;
 
@@ -726,7 +731,7 @@ export const SideBarAllText = styled(HeadingIntro)`
 `;
 
 export const SubText = styled.div`
-  color: #999999;
+  color: ${future_text};
   border-bottom: ${solid_border};
   font-weight: 500;
   font-size: 14px;
@@ -744,7 +749,7 @@ export const SubText = styled.div`
     props.present &&
     css`
       color: ${present_text};
-      background-color: rgba(243, 120, 6, 0.1);
+      background-color: ${in_progress};
       font-weight: 600;
       margin-left: 24px;
     `}
@@ -757,7 +762,7 @@ export const Dot = styled.div`
       height: 8px;
       width: 8px;
       border-radius: 50%;
-      background-color: #f37806;
+      background-color: ${in_progress};
     `}
 `;
 

@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import React from 'react';
 import {dashed_border} from '../../utilities/Borders';
+import { solid_divider_bg } from '../../utilities';
 
 
 // Dotted Divider
@@ -22,6 +23,6 @@ export const SolidDivider = styled.hr`
   bottom: 0%;
   width: 886px;
   height: 8px;
-  background: #c4c4c4;
+  background: ${solid_divider_bg};
 `;
 

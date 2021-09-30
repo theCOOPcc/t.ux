@@ -1,6 +1,13 @@
 import React from 'react';
 import styled, {css} from 'styled-components';
-import { pop_reg, pop_semiBold } from '../../utilities';
+import { 
+    pop_reg, 
+    pop_semiBold, 
+    true_white, 
+    text_black, notification_panel_box_shadow, future_text, 
+    complete, 
+    toasts_error_bg 
+} from '../../utilities';
 import CheckIcon2 from '../../../../images/DragNDrop/CheckmarkIcon.svg';
 import { ToolTip } from '../ToolTips/ToolTips';
 
@@ -67,10 +74,10 @@ export default FillInBlankTwo;
 export const UIExampleCardTwo = styled.div`
 width: 195px;
 height: 217px;
-background: #FFFFFF;
+background: ${true_white};
 box-sizing: border-box;
 border-radius: 13px;
-border: 1px solid #000000;
+border: 1px solid ${text_black};
 `;
 
 
@@ -109,23 +116,23 @@ margin: 40px 0 11px 0;
 `;
 
 export const EmptyDragNDropTwo = styled.div`
-background: #FFFFFF;
+background: ${true_white};
 border-radius: 40px;
 height: 42px;
 width: 74px;
 min-width: 74px;
-border: 1px solid #000000;
+border: 1px solid ${text_black};
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
 `;
 
 export const ContinueButtonStaticTwo = styled.div`
-background: #4740FF;
+background: ${continue_btn_two_bg};
 border-radius: 40px;
 height: 42px;
 width: 74px;
 min-width: 74px;
-border: 1px solid #000000;
+border: 1px solid ${text_black};
 `;
 
 export const ContinueTextTwo = styled.div`
@@ -154,28 +161,28 @@ font-size: 12px;
 `;
 
 export const WordChoiceContainerTwo = styled.div`
-background: #FFFFFF;
+background: ${true_white};
 border-radius: 40px;
 height: 42px;
 width: 74px;
 min-width: 74px;
-border: 1px solid #000000;
+border: 1px solid ${text_black};
 z-index: 1;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+box-shadow: 0px 4px 4px ${notification_panel_box_shadow};
 margin-left: 25px;
 &:hover {
     ${AnswerChoicesTextTwo} {
-        color: #999999;
+        color: ${future_text};
     }
-    border: 1px solid #999999;
+    border: 1px solid ${future_text};
 }
 ${(props) => 
     props.isCorrect && 
     css`
     ${AnswerChoicesTextTwo} {
-        color: #78C077;
+        color: ${complete};
     }
-    border: 1px solid #78C077;
+    border: 1px solid ${complete};
     pointer-events: none;
 `}
 
@@ -183,9 +190,9 @@ ${(props) =>
     props.isIncorrect && 
     css`
     ${AnswerChoicesTextTwo} {
-        color: #EA4A46;
+        color: ${toasts_error_bg};
     }
-    border: 1px solid #EA4A46;
+    border: 1px solid ${toasts_error_bg};
     pointer-events: none;
 `}
 `;

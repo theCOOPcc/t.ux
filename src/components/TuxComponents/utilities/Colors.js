@@ -55,8 +55,26 @@ export const notification_header_color = '#4285F4';
 export const notification_num_mark_bg = '#366062';
 export const toasts_error_bg = 'EA4A46';
 
-// ASSISTANCEBOX COLORS
+// BUTTON COLORS
+export const txtbtn_props_depressed = '#323239';
+export const txtbtn_props_disabled = '#cccccc';
+export const lnkbtn_props = '#A9CBCD';
+export const lnkbtn_props_disabled = '#888888';
 
+// CARD COLORS 
+export const ans_card_border = 'rgba(187, 187, 187, 1)';
+export const ans_card_bg = '#FAFAFA';
+
+// COLOR-SLIDER COLORS
+export const hex_slider_hue = '#F6F6F6';
+export const px_span_color = '#F7F7F7';
+export const lumosity_box_shadow = 'rgba(0,0,0,.5)';
+export const slider_linear_gradient1 = '#FF3232';
+
+export const solid_divider_bg = '#c4c4c4';
+export const continue_btn_two_bg = '#4740FF';
+
+export const dnd_box_bg = 'rgba(120, 214, 218, 0.1)';
 
 // END LISA'S COLORS **********************************************
 

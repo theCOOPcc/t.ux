@@ -15,7 +15,7 @@ export const Assistance_Box = (args) => (
             <AssistanceTitle>Need help choosing the right activity?</AssistanceTitle>
             <AssistanceDescription>Follow our recommended learning cirriculum</AssistanceDescription>
         </AssistanceText>
-        <Btn>Start</Btn>
+        {/* <Btn>Start</Btn> */}
         
 
 

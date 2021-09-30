@@ -1,5 +1,12 @@
 import styled from "styled-components";
-import { tux_blue, pop_semiBold, pop_reg } from "../../../utilities";
+import { 
+  inline_warning_bg,
+  grey_text,
+  notification_alert_btn,
+  tux_blue, 
+  pop_semiBold, 
+  pop_reg 
+} from "../../../utilities";
 import { scenarioCardContent, bulletedCardContent } from "./contentData";
 
 // Scenario
@@ -39,14 +46,14 @@ export const ScenarioTopBar = styled.div`
 export const ScenarioBox = styled.div`
   width: 891px;
   height: 196px;
-  background: rgba(255, 228, 92, 0.2);
+  background: ${inline_warning_bg};
   margin-top: 0;
   padding: 50px 25px;
 
   img {
     width: 200px;
     height: 215px;
-    box-shadow: -15px 20px #666666;
+    box-shadow: -15px 20px ${grey_text};
     grid-area: 1 / 2 / 2 / 3;
   }
 `;
@@ -102,7 +109,7 @@ export const BulletTextTopBar = styled.div`
 export const BulletTextBox = styled.div`
   width: 891px;
   height: 196px;
-  background: rgba(120, 214, 218, 0.2);
+  background: ${notification_alert_btn};
   margin-top: 0;
   padding: 50px 25px;
 `;

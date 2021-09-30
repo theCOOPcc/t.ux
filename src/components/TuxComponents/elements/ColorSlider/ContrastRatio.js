@@ -3,6 +3,11 @@ import { pop_bolder, Poppins } from '../../utilities/Type'
 //import { Slider } from './NewColorSlider';
 import { Lumosity } from './LumositySlider'
 import { HexColorPicker } from "react-colorful";
+import { 
+        hex_slider_hue,
+        px_span_color,
+        text_black
+} from '../../utilities';
 
 
 
@@ -20,7 +25,7 @@ export const HexColorSlider = styled(HexColorPicker)`
         border-radius: 13px;
         width: 713px;
         height: 20px;
-        border: solid 2px #f6f6f6;
+        border: solid 2px ${hex_slider_hue};
 }
 
 .react-colorful__saturation {
@@ -52,7 +57,7 @@ export const ContrastRatioBox = styled.div`
         width: 128px;
         height: 67px;
         font: ${pop_bolder};
-        border: 1px solid #000000;
+        border: 1px solid ${text_black};
         border-radius: 3px;
         color: white;
 
@@ -64,7 +69,7 @@ height: 24px;
 left: 30%;
 right: 0%;
 top: calc(50% - 24px/2 + 2px);
-color: #F7F7F7;
+color: ${px_span_color};
 font-family: ${Poppins};
 font-style: normal;
 font-weight: 700;
@@ -84,7 +89,7 @@ export const ContrastRatioResult = styled.div`
         padding-top: 10px;
         text-align: center;
         background-color: white;
-        border: 1px solid #000000; 
+        border: 1px solid ${text_black}; 
 
 `;
 

@@ -1,4 +1,10 @@
 import styled, {css} from 'styled-components'
+import {         
+  hex_slider_hue,
+  lumosity_box_shadow,
+  text_black,
+  true_white
+} from '../../utilities';
 
 export const Lumosity = styled.input`
   -webkit-appearance: none;
@@ -6,14 +12,14 @@ export const Lumosity = styled.input`
   height: 30px;
   &::-webkit-slider-runnable-track {
     height: 20px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px ${lumosity_box_shadow};
     background: linear-gradient(
                 0.25turn,
-                #ffffff,
+                #fff,
                 ${(props) => props.color},
-                #000000);
+                #000);
     border-radius: 25px;
-    border: 2px solid #F6F6F6;
+    border: 2px solid ${hex_slider_hue};
   }
   &::-webkit-slider-thumb,
      -moz-range-thumb {
@@ -22,7 +28,7 @@ export const Lumosity = styled.input`
       width: 20px;
       background-color: transparent;
       border-radius: 50px;
-      border: 3.5px solid #f6f6f6;
+      border: 3.5px solid ${hex_slider_hue};
       cursor: pointer;
       z-index: 1;
       -webkit-appearance: none;
@@ -30,16 +36,16 @@ export const Lumosity = styled.input`
         height: 30px;
         width: 30px;
         border-radius: 50px;
-        border: 6px double #f6f6f6;
+        border: 6px double ${hex_slider_hue};
         cursor: pointer;
         margin-top: -5.5px;
         -webkit-appearance: none;
-        box-shadow: 5px 5px 5px rgba(0,0,0,.5);
+        box-shadow: 5px 5px 5px ${lumosity_box_shadow};
       &:active {
         height: 30px;
         width: 30px;
-        border: 4px solid #f6f6f6;
-        box-shadow: 6px 6px 6px rgba(0,0,0,.5);
+        border: 4px solid ${hex_slider_hue};
+        box-shadow: 6px 6px 6px ${lumosity_box_shadow};
 
         }
       }

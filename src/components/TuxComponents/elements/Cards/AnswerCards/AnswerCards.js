@@ -1,5 +1,19 @@
 import styled, { css } from 'styled-components';
-import { Flex, grey_text, pop_black, pop_bolder, pop_semiBold, pop_thick, success, text_black, tux_red } from '../../../utilities';
+import { 
+    ans_card_border,
+    ans_card_bg,
+    Flex, 
+    global_box_shadow,
+    grey_text, 
+    pop_black, 
+    pop_bolder, 
+    pop_semiBold, 
+    pop_thick, 
+    success, 
+    text_black,
+    true_white, 
+    tux_red 
+} from '../../../utilities';
 import { oneAnswerOption, twoAnswerOptions, fourAnswerOptions } from './data';
 import A from '../../../../../images/icons/A.svg'
 import B from '../../../../../images/icons/B.svg'
@@ -95,18 +109,18 @@ export const AnswerCardBox = styled.button`
     border-radius: 10px;
     margin: 5px 7px;
     position: relative;
-    border: 1px solid rgba(187, 187, 187, 1);
-    background: #FAFAFA;
+    border: 1px solid ${ans_card_border};
+    background: ${ans_card_bg};
     cursor: pointer;
     position: relative;
     &:hover {
-        box-shadow: 4px 4px 3px rgba(0,0,0,.25);
+        box-shadow: 4px 4px 3px ${global_box_shadow};
     }
     ${props => props.incorrect && css`
         border: 1px solid ${tux_red};
     `}
     ${props => props.hover && css`
-        box-shadow: 4px 4px 3px rgba(0,0,0,.25);
+        box-shadow: 4px 4px 3px ${global_box_shadow};
     `}
     ${props => props.focus && css`
         border: 5px solid lightblue;
@@ -142,7 +156,7 @@ export const Icon = styled.img`
     height: 44px;
     border-radius: 50%;
     position: absolute;
-    background: #fff;
+    background: ${true_white};
     left: -15px;
     top: -15px;
     z-index: 20;
@@ -150,7 +164,7 @@ export const Icon = styled.img`
 
 export const IconText = styled.p`
     font: ${pop_black};
-    color: #666;
+    color: ${grey_text};
 `;
 
 export const CardText = styled.p`
