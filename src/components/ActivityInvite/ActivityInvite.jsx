@@ -3,7 +3,7 @@ import ReactModal from "react-modal";
 import styled from "styled-components";
 import { grey_text, Flex, common_shadow } from "../TuxComponents/utilities";
 import EmailCheckbox from "../../components/EmailCheckbox/EmailCheckbox";
-import groupAPI from "../../services/groupService";
+// import groupAPI from "../../services/groupService";
 
 import "./ActivityInvite.css";
 
