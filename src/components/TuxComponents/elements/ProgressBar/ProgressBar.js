@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Flex, tux_blue } from '../../utilities';
+import { Flex, tux_blue, medium_grey, progress_label_color } from '../../utilities';
 
 
 export const ProgressBar = ({ completed, started, finished }) => (
@@ -41,7 +41,7 @@ export const ProgressBar = ({ completed, started, finished }) => (
 export const ProgressContainer = styled.div`
   height: 22px;
   width: 268px;
-  background-color: #666666;
+  background-color: ${medium_grey};
   background-image: linear-gradient(
     45deg,
     transparent 10%,
@@ -89,7 +89,7 @@ export const ProgressLabel = styled.p`
   padding: 2px;
   font: 400 12px 'Poppins', sans-serif;
   line-height: 24px;
-  color: #a9aaa5;
+  color: ${progress_label_color};
   
   
   ${props => props.zero && css`

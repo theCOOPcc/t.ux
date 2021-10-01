@@ -64,7 +64,7 @@ export const HelpContainer = styled.div`
 width: 486px;
 height: 389px;
 border: 1px solid ${success_grey};
-background: rgba(120, 214, 218, 0.1);
+background: ${dnd_box_bg};
 `;
 
 export const HelpContent = styled.div`

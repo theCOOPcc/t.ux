@@ -60,6 +60,7 @@ export const txtbtn_props_depressed = '#323239';
 export const txtbtn_props_disabled = '#cccccc';
 export const lnkbtn_props = '#A9CBCD';
 export const lnkbtn_props_disabled = '#888888';
+export const arrow_btn_bg = 'rgba(34, 34, 34, 0.95)';
 
 // CARD COLORS 
 export const ans_card_border = 'rgba(187, 187, 187, 1)';
@@ -75,6 +76,30 @@ export const solid_divider_bg = '#c4c4c4';
 export const continue_btn_two_bg = '#4740FF';
 
 export const dnd_box_bg = 'rgba(120, 214, 218, 0.1)';
+
+export const subA_color = '#565656';
+export const subA_bg = '#FCFCFC';
+export const subA_hover_bg = '#FCFCFC';
+export const input_focus_border = '#6200EE';
+
+export const motivation_container_bg = '#F2FBFB';
+export const motivation_cont_box_shadow = 'rgba(0,0,0,0.1)';
+
+export const progress_label_color = '#A9AAA5';
+
+export const display_hover_bg = '#595959';
+export const display_focus_bg = '#404040';
+
+export const text_btn_bg = '#262626';
+export const text_btn_hover_bg = '#4d4d4d';
+export const text_btn_focus_border = '#009999';
+
+export const toggle_bg = '#989898';
+
+
+
+
+
 
 // END LISA'S COLORS **********************************************
 

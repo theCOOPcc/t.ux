@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { tux_orange, pop_bolder, tux_grey, answer_btn, hoverOption, selectOption } from '../../utilities';
+import { tux_orange, pop_bolder, tux_grey, answer_btn, hoverOption, selectOption, global_box_shadow, true_white, banner_info } from '../../utilities';
 
 export const FeatureBox = styled.div`
    
@@ -22,13 +22,13 @@ export const FlagBox = styled.div`
         border: 1px solid ${tux_orange};
         /* border-bottom: none; */
         border-radius: 5px 5px 0px 0px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 4px 4px ${global_box_shadow};
     }
     ${props => props.hover && css`
         border: 1px solid ${tux_orange};
         /* border-bottom: none; */
         border-radius: 5px 5px 5px 5px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 4px 4px ${global_box_shadow};
     `}
     ${props => props.active && css`
         border: 1px solid ${tux_orange};
@@ -71,9 +71,9 @@ export const FlagText = styled.p`
 export const SelectedMenu = styled.div`
     width: 351px;
     height: 290px;
-    background: #fff;
+    background: ${true_white};
     border: 1px solid ${tux_orange};
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px r${global_box_shadow};
     border-radius: 5px 0 5px 5px;
     display: flex;
     flex-direction: column;
@@ -82,18 +82,18 @@ export const SelectedMenu = styled.div`
     p {
         font: ${pop_bolder};
         font-size: 16px;
-        color: #333333;
+        color: ${banner_info};
         padding-left: 20.5px;
         line-height: 20px;
     }
 `;
 
 export const Option = styled.button`
-    background: #fff;
+    background: ${true_white};
     width: 100%;
     height: 61px;
     font: ${answer_btn};
-    color: #333333;
+    color: ${banner_info};
     border: none;
     text-align: left;
     margin: 0;

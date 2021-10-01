@@ -1,4 +1,12 @@
 import styled, {css} from 'styled-components'
+import { 
+  not_started,
+  text_black,
+  txtbtn_props_disabled,
+  future_text,
+  present_text,
+  banner_wide_red_border
+} from '../../utilities'
 
 export const RadioButtonWrapper = styled.div`
   display: flex;
@@ -9,14 +17,14 @@ export const RadioButtonWrapper = styled.div`
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
-  color: #333333;
+  color: ${not_started};
   /* margin: 0 10px; */
   /* The left and right focus state border */
   padding: 0 4px;
   ${(props) =>
     props.focus &&
     css`
-      border: 3px solid #000000;
+      border: 3px solid ${text_black};
       box-sizing: border-box;
       border-radius: 5px;
     `}
@@ -30,7 +38,7 @@ export const RadioButtonWrapper = styled.div`
   ${(props) =>
     props.disabled &&
     css`
-      color: #cccccc;
+      color: ${txtbtn_props_disabled};
     `}
 `
 
@@ -51,7 +59,7 @@ export const TestCustomRadio = styled.label`
   text-align: center;
   height: 20px;
   width: 20px;
-  border: 1px solid #999999;
+  border: 1px solid ${future_text};
   box-sizing: border-box;
   border-radius: 50%;
   /* From the radio input to the label text  */
@@ -62,13 +70,13 @@ export const TestCustomRadio = styled.label`
   ${(props) =>
     props.error &&
     css`
-      border: 1px solid #ee6e6b;
+      border: 1px solid ${banner_wide_red_border};
     `}
 
     ${(props) =>
     props.disabled &&
     css`
-      border: 1px solid #cccccc;
+      border: 1px solid ${txtbtn_props_disabled};
     `}
 
     ${props => props.checked && css`
@@ -80,7 +88,7 @@ export const TestCustomRadio = styled.label`
    }
    &::after {
         content: "";
-        background: #1B9BA0;
+        background: ${present_text};
         border-radius: 50%;
         border: 5px solid transparent
   `}

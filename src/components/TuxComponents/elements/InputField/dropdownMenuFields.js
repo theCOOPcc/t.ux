@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { pop_reg } from "../../utilities/Type";
-import { tux_red, dark_grey, tux_primart, medium_grey, success_grey} from '../../utilities/Colors'
+import { tux_red, dark_grey, tux_primart, medium_grey, success_grey} from '../../utilities'
 
 export const Wrapper = styled.div`
   position: relative;

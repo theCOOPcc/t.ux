@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { dark_grey, medium_grey, pop_reg, pop_semiBold, tux_primart } from "../../utilities";
+import { dark_grey, medium_grey, pop_reg, pop_semiBold, tux_primart, global_box_shadow, subA_color, subA_hover_bg, subA_bg } from "../../utilities";
 
 export const StyledUl = styled.ul`
   list-style-type: none;
@@ -26,7 +26,7 @@ export const DropDownContent = styled.div`
   position: absolute;
   width: 280px;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px ${global_box_shadow};
   z-index: 1;
 `;
 
@@ -40,9 +40,9 @@ export const DropDownLi = styled(StyledLi)`
 `;
 
 export const SubA = styled.a`
-  color: #565656;
+  color: ${subA_color};
   padding: 12px 16px;
-  background-color: #FCFCFC;
+  background-color: ${subA_bg};
   text-decoration: none;
   display: block;
   text-align: left;
@@ -52,7 +52,7 @@ export const SubA = styled.a`
   font-size: 14px;
   line-height: 21px;
   &:hover {
-    background-color: #EBF9F9;
+    background-color: ${subA_hover_bg};
     /* font: ${pop_semiBold}; */
     font-style: italic;
     font-weight: 400;

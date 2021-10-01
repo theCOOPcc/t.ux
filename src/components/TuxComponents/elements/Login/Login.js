@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import { Flex, common_shadow, true_white } from '../../utilities';
+import { Flex, common_shadow, true_white, global_background } from '../../utilities';
 import { GoogleBox, GoogleG } from "../Buttons/Buttons";
 
 export const TuxFlower = styled.img`
@@ -9,7 +9,7 @@ export const TuxFlower = styled.img`
     position: absolute;
     top: 150px;
 	border-radius: 50%;
-    background: #FFFFFF;
+    background: ${global_background};
     box-sizing: border-box;
 `;
 

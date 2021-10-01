@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
+import { 
+  display_hover_bg, 
+  display_focus_bg, 
+  text_btn_bg,
+  text_btn_hover_bg,
+  text_btn_focus_border
+}
 
 const Container = styled.div`
   display: grid;
@@ -13,19 +20,19 @@ const Container = styled.div`
 
 const Display = styled.input`
   grid-area: 1 / 1 / 3 / 4;;
-  background: #666666;
-  color: white;
-  border-right: 3px solid black;
+  background: ${grey_text};
+  color: ${true_white};
+  border-right: 3px solid ${text_black};
   border-radius: 5px 0px 0px 5px;
   font-size: 20px;
   text-align: center;
 
   &:hover{
-    background: #595959;
+    background: ${display_hover_bg};
   }
 
   &:focus {
-    background: #404040;
+    background: ${display_focus_bg};
   }
 `
 
@@ -36,15 +43,15 @@ const UpCtn = styled.div`
 const UpBtn = styled.button`
   height: 100%;
   width: 100%;
-  background: #262626;
+  background: ${text_btn_bg};
   border-radius: 0px 5px 0px 0px;
   transition-duration: 0.2s;
   &:hover {
-    background: #4d4d4d;
+    background: ${text_btn_hover_bg};
   }
 
   &:focus div {
-    border-bottom: 10px solid #009999;
+    border-bottom: 10px solid ${text_btn_focus_border};
   }
 `
 
@@ -55,16 +62,16 @@ const DownCtn = styled.div`
 const DownBtn = styled.button`
   height: 100%;
   width: 100%;
-  background: #262626;
+  background: ${text_btn_bg};
   border-radius: 0px 0px 5px 0px;
   transition-duration: 0.2s;
 
   &:hover {
-    background: #4d4d4d;
+    background: ${text_btn_hover_bg};
   }
   
   &:focus div {
-    border-top: 10px solid #009999;
+    border-top: 10px solid ${text_btn_focus_border};
   }
 `
 

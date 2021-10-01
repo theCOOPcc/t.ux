@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { useState } from 'react';
-import { pop_reg } from "../../utilities";
+import { pop_reg, text_black } from "../../utilities";
 
 const Container = styled.div`
   position: relative;
@@ -18,7 +18,7 @@ const Arrow = styled.div`
       top: calc(50% - 5px);
       border-top: 6px solid transparent;
       border-bottom: 6px solid transparent;
-      border-right: 10px solid black;
+      border-right: 10px solid ${text_black};
     `
   }
   ${(props) =>
@@ -28,7 +28,7 @@ const Arrow = styled.div`
       top: calc(50% - 5px);
       border-top: 6px solid transparent;
       border-bottom: 6px solid transparent;
-      border-left: 10px solid black;
+      border-left: 10px solid ${text_black};
     `
   }
   ${(props) =>
@@ -38,7 +38,7 @@ const Arrow = styled.div`
       bottom: 100%;
       border-left: 6px solid transparent;
       border-right: 6px solid transparent;
-      border-bottom: 10px solid black;
+      border-bottom: 10px solid ${text_black};
     `
   }
   ${(props) =>
@@ -48,7 +48,7 @@ const Arrow = styled.div`
       top: 100%;
       border-left: 6px solid transparent;
       border-right: 6px solid transparent;
-      border-top: 10px solid black;
+      border-top: 10px solid ${text_black};
     `
   }
 `

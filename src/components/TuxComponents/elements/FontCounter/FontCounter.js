@@ -2,7 +2,11 @@
 import styled from 'styled-components'
 import { pop_thick
  } from '../../utilities/Type'
- import UpArrow from '../../../../images/ActivityWizardImgs/CounterArrowUp.svg'
+ import {
+  arrow_btn_bg,
+  true_white
+} from '../../utilities/'
+import UpArrow from '../../../../images/ActivityWizardImgs/CounterArrowUp.svg'
 import DownArrow from '../../../../images/ActivityWizardImgs/CounterArrowDown.svg'
 import GreenUpArrow from '../../../../images/ActivityWizardImgs/GreenArrowUp.svg'
 import GreenDownArrow from '../../../../images/ActivityWizardImgs/GreenArrowDown.svg'
@@ -20,7 +24,7 @@ import GreenDownArrow from '../../../../images/ActivityWizardImgs/GreenArrowDown
   width: 18px;
   border: none;
   border-radius: 0 5px 0 0 ;
-  background: rgba(34, 34, 34, 0.95);
+  background: ${arrow_btn_bg};
   background-image: url(${UpArrow});
   background-repeat: no-repeat;
   background-size: 85%;
@@ -40,7 +44,7 @@ import GreenDownArrow from '../../../../images/ActivityWizardImgs/GreenArrowDown
   height: 23px;
   width: 18px;
   border-radius: 0 0 5px 0 ;
-  background: rgba(34, 34, 34, 0.95);
+  background: ${arrow_btn_bg};
   background-image: url(${DownArrow});
   background-repeat: no-repeat;
   background-size: 85%;
@@ -62,13 +66,13 @@ export const CounterBox = styled.input`
   }
   width: 42.75px;
   height: 44px;
-  background:  #222;
+  background: ${arrow_btn_bg};
   opacity: 80%;
   border: none;
   font: ${pop_thick};
   font-size: 20px;
   line-height: 24px;
-  color: #FFF;
+  color: ${true_white};
  
   /* border: none; */
   border-radius: 5px 0 0 5px ;

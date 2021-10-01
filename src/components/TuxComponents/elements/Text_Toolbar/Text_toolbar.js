@@ -1,5 +1,11 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import {
+  medium_grey,
+  global_box_shadow,
+  notification_alert_btn,
+  modal_color
+} from '../../utilities';
 
 export const TextToolBar = () => {
   return (
@@ -21,7 +27,7 @@ export const BarContainer = styled.div`
   height: 50px;
   width: 240px;
   border-radius: 5px;
-  background-color: #666666;
+  background-color: ${medium_grey};
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -35,16 +41,16 @@ export const B = styled.img`
     props.hover &&
     css`
       padding: 4px 6px;
-      border: 1px solid #f1f2eb;
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      border: 1px solid ${modal_color};
+      filter: drop-shadow(0px 4px 4px ${global_box_shadow});
     `}
    
   ${(props) =>
     props.active &&
     css`
       padding: 4px 6px;
-      border: 1px solid #78D6DA;
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      border: 1px solid ${notification_alert_btn};
+      filter: drop-shadow(0px 4px 4px ${global_box_shadow});
     `}
 `;
 export const HB = styled.img`
@@ -68,15 +74,15 @@ ${(props) =>
   props.hover &&
   css`
     padding: 4px 3px;
-    border: 1px solid #f1f2eb;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: 1px solid ${modal_color};
+    filter: drop-shadow(0px 4px 4px ${global_box_shadow});
   `}
   ${(props) =>
     props.active &&
     css`
       padding: 4px 3px;
-      border: 1px solid #78D6DA;
-      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      border: 1px solid ${notification_alert_btn};
+      filter: drop-shadow(0px 4px 4px ${global_box_shadow});
     `}
 `;
 

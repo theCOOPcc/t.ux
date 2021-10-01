@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components'
-import { success_grey, true_white, pop_reg } from '../../utilities';
+import { success_grey, true_white, pop_reg global_background, motivation_container_bg, motivation_cont_box_shadow } from '../../utilities';
 import PuzzlePiece from '../../../../images/icons/PuzzlePiece.svg';
 import BriefcaseArrow from '../../../../images/icons/BriefcaseArrow.svg';
 import BriefcasePencil from '../../../../images/icons/BriefcasePencil.svg';
@@ -77,8 +77,8 @@ export const MotivationContainer = styled.div`
         ${PolygonImage}{
             display: block;
         }
-        background-color: #F2FBFB;
-        box-shadow: inset 0px 0px 10px rgba(0,0,0,0.1);
+        background-color: ${motivation_container_bg};
+        box-shadow: inset 0px 0px 10px ${motivation_cont_box_shadow};
     }
     
 `;

@@ -7,7 +7,7 @@ justify-content: space-around;
 align-items: center;
 width: 500px;
 height: 300px;
-border: 2px dashed rgba(136, 136, 136, 0.5);
+border: 2px dashed ${success_grey};
 box-sizing: border-box;
 border-radius: 5px;
 /* background: rgba(51, 51, 51, 0.5); */
@@ -21,7 +21,7 @@ ${props => props.hover && css`
 export const ImageContainer = styled.div`
   display: flex;
   width: auto;
-  background-color: #666666; 
+  background-color: ${grey_text}; 
   z-index: -10;
   /* left: 100px;
   right: 100px;
@@ -49,7 +49,7 @@ left:  140px;
   width: 280px;
   height: 48px;
   padding-left: 12px;
-  border: 1px solid #000000;
+  border: 1px solid ${tux_black};
   box-sizing: border-box;
   border-radius: 10px;
   margin-top:15px;
@@ -60,7 +60,7 @@ left:  140px;
 export const FileMessage = styled.p`
   margin-top: 11px;
   padding: 0;
-  color: #888888;
+  color: ${success_grey};
   position: absolute;
   width: 109px;
   height: 13px;

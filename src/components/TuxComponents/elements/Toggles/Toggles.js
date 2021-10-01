@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { success } from "../../utilities/Colors";
+import { text_black, solid_divider_bg, toggle_bg, global_background, not_started, notification_panel_box_shadow} from "../../utilities/"
 
 export const ToggleWrapper = styled.div`
   ${(props) =>
@@ -13,7 +14,7 @@ export const ToggleWrapper = styled.div`
       width: 84px;
       height: 36px;
       border-radius: 38px;
-      border: 4px solid #000000;
+      border: 4px solid ${text_black};
       box-sizing: border-box;
     `}
 `;
@@ -26,7 +27,7 @@ export const ToggleBackground = styled.div`
   right: 15.49%;
   top: 0%;
   bottom: 0%;
-  background: #c4c4c4;
+  background: ${solid_divider_bg};
   border-radius: 38px;
   ${(props) =>
     props.checked &&
@@ -36,7 +37,7 @@ export const ToggleBackground = styled.div`
   ${(props) =>
     props.hover &&
     css`
-      background: #989898;
+      background: ${toggle_bg};
     `}
   ${(props) =>
     props.focus &&
@@ -44,7 +45,7 @@ export const ToggleBackground = styled.div`
       width: 71px;
       left: 3%;
       top: 5%;
-      background: #989898;
+      background: ${toggle_bg};
     `}
 `;
 
@@ -57,8 +58,8 @@ export const ToggleBall = styled.div`
   top: 16%;
   bottom: 10%;
   border-radius: 50%;
-  background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: ${global_background};
+  box-shadow: 0px 4px 4px ${notification_panel_box_shadow};
   ${(props) =>
     props.checked &&
     css`
@@ -82,7 +83,7 @@ export const ToggleLabel = styled.p`
   line-height: 24px;
   display: flex;
   align-items: center;
-  color: #333333;
+  color: ${not_started};
 `;
 
 export const ToggleCheckBoxInput = styled.input`
