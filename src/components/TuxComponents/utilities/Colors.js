@@ -66,5 +66,13 @@ export const backgroundBlur = "rgba(170, 170, 170, 0.6)";
 export const pageBackground = "#E5E5E5";
 export const backgroundGradient =
   "linear-gradient(210.65deg, #FFEE99 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, #EA4A46 -33.26%, rgba(234, 74, 70, 0) 67.74%);";
+export const backgroundGradientGoogleBox = "linear-gradient(360deg, #F9F9F9 0%, rgba(255, 255, 255, 0) 100%)";
 export const grey = "#DDDDDD";
+export const light_grey = "#e9e9e9";
+export const progress_grey = "#a9aaa5";
+export const cloud_grey = "#b5c8ce";
+export const sub_grey = "#888888";
+export const modal_grey = "#BBBBBB";
+export const toolbar_grey = "#c4c4c4";
 export const backButton = "#222222";
+export const signIn = "rgba(0,0,0,.54)";
