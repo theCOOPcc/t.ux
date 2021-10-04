@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 // import { Link } from 'react-router-dom';
-import { Flex } from './utilities';
+import { Flex, light_grey, true_white } from './utilities';
 
 const Main = () => {
     return ( 
@@ -19,7 +19,7 @@ const MainGrid = styled.main`
   grid-template-rows: 60px 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  background: #e9e9e9;
+  background: ${light_grey};
   padding: 20px 39px 15px;
   margin: 0 auto;
   /* position: relative; */
@@ -31,7 +31,7 @@ const InfoBar = styled.section`
   grid-column: 1 / span 2;
   grid-row: 1 / span 1;
   justify-self: stretch;
-  background-color: var(--true-white);
+  background-color: ${true_white};
   ${Flex({ai:'center'})};
   padding: 0 40px;
   max-width: 1440px;
@@ -41,7 +41,7 @@ const InfoBar = styled.section`
 const Sub6ColGrid = styled.article`
   grid-column: 1 / span 1;
   grid-row: 2 / span 1;
-  background-color: var(--true-white);
+  background-color: ${true_white};
   border: var(--solid-border);
   width: 1042px;
 `;
@@ -64,7 +64,7 @@ const SideBarParent = styled.article`
 /*---------- The SideBar Itself ----------*/
 const SideBar = styled.article`
   grid-row: 1 / span 1;
-  background-color: var(--true-white);
+  background-color: ${true_white};
   height: calc(100vh - 159px);
   ${Flex({ai:'center',fd:'column'})};
   border: var(--solid-border);
