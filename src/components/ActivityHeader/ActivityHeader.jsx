@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { SessionContext } from "../../contexts/SessionContext";
 import { ProgressBar } from "../TuxComponents/elements/ProgressBar/ProgressBar";
 import styled, { css } from "styled-components";
-import { Flex } from "../TuxComponents/utilities";
+import { Flex, true_white, future_text, pop_semiBold } from "../TuxComponents/utilities";
 
 const ActivityHeader = () => {
   const {
@@ -39,7 +39,7 @@ const InfoBar = styled.section`
   grid-column: 1 / span 2;
   grid-row: 1 / span 1;
   justify-self: stretch;
-  background-color: var(--true-white);
+  background-color: ${true_white};
   ${Flex({ ai: "center" })};
   padding: 0 40px;
   max-width: 1440px;
@@ -58,7 +58,7 @@ export const Heading2 = styled.h2`
     props.progress &&
     css`
       margin-left: auto;
-      font: var(--pop-semi-bold);
+      font: ${pop_semiBold};
       font-size: 16px;
       line-height: 24px;
     `}
@@ -66,6 +66,6 @@ export const Heading2 = styled.h2`
   ${(props) =>
     props.greyed &&
     css`
-      color: var(--future);
+      color: ${future_text};
     `}
 `;
