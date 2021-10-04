@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import { PrimaryButton } from '../TuxComponents/elements';
-import { FlexCenter, common_shadow } from '../TuxComponents/utilities';
+import { FlexCenter, common_shadow, link_text, true_white, backgroundGradient } from '../TuxComponents/utilities';
 
 
 const EmailForm = ({ errors, values, handleChange, touched }) => {
@@ -56,7 +56,7 @@ const EmailForm = ({ errors, values, handleChange, touched }) => {
 export default EmailForm;
 
 const Main = styled.main`
-	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
+	background: ${backgroundGradient};
 	background-blend-mode: normal, multiply;
 	margin: 0 auto;
 	max-width: 1440px;
@@ -110,7 +110,7 @@ export const SmallInput = styled.input`
 `;
 
 export const LinkTo = styled(Link)`
-  color: var(--link-text);
+  color: ${link_text};
 
   ${(props) => props.noDecor && css `
     list-style: none;
@@ -144,7 +144,7 @@ export const LoginBox = styled.div`
     ${FlexCenter({dir:'column'})};
     width: 425px;
     height: 510px;
-    background-color: var(--true-white);
+    background-color: ${true_white};
     box-shadow: ${common_shadow};
     border-radius: 10px;
     margin-top: 200px;
