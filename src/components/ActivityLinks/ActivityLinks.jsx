@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { SessionContext } from '../../contexts/SessionContext';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { Flex } from '../TuxComponents/utilities';
+import { Flex, present_text, tux_primart, link_text } from '../TuxComponents/utilities';
 
 const LinkList = ({ links }) => {
   <ul>
@@ -52,13 +52,13 @@ const ListLinks = styled.li`
   font: var(--table);
   line-height: 24px;
   font-weight: 400;
-  color: var(--present);
+  color: ${present_text};
 `;
 
 const Heading1 = styled.h1`
   font: 700 48px 'Poppins', sans-serif;
   line-height: 24px;
-  color: var(--extraLg-text);
+  color: ${tux_primart};
   text-align: center;
   margin-top: 75px;
 `;
@@ -76,7 +76,7 @@ const Heading2 = styled.h2`
 `;
 
 const LinkTo = styled(Link)`
-  color: var(--link-text);
+  color: ${link_text};
   list-style: none;
 `;
 
