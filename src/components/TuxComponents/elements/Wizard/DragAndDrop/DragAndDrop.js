@@ -1,4 +1,5 @@
 import styled, {css} from "styled-components";
+import {secondary_default, true_white, cloud_grey, medium_grey, sub_grey} from '../../../utilities';
 
 export const ComponentWrapper = styled.div`
   margin: 0;
@@ -16,17 +17,14 @@ export const DragBox = styled.div`
   width: 500px;
   height: 300px;
   position: relative;
-  border: 2px dashed rgba(136, 136, 136, 0.5);
+  border: 2px dashed ${sub_grey};
   border-radius: 5px;
-  /* background-image: url(./images/CloudDL.svg); */
-  /* background-repeat: no-repeat;
-  background-position: 57px 40px; */
 `;
 
 export const SearchFilesBtn = styled.button`
   margin: 0;
   padding: 0;
-  color: #3c8582;
+  color: ${secondary_default};
   font-size: 20px;
   line-height: 30px;
   font-weight: 700;
@@ -35,28 +33,27 @@ export const SearchFilesBtn = styled.button`
   position: absolute;
   left: 167.5px;
   bottom:45px;
-  background: #ffffff;
-  border: 1px solid #3c8582;
+  background: ${true_white};
+  border: 1px solid ${secondary_default};
   box-sizing: border-box;
   border-radius: 5px;
   ${props => props.hover && css`
-  background: #3c8582;
+  background: ${secondary_default};
   color: white;
   `}
   ${props => props.pressed && css`
-  background: rgba(60, 133, 130, 0.1);
-    color: #3c8582;
+  background: ${secondary_default};
+    color: ${secondary_default};
   `}
 `;
 
 export const SmallTextField = styled.input`
-/* padding-right: 5px; */
 margin-top: 10px;
 width: 280px;
 height: 48px;
 box-sizing: border-box;
 border-radius: 10px;
-border: 1px solid #666;
+border: 1px solid ${medium_grey};
 padding-left: 12px;
   
 `;
@@ -66,12 +63,12 @@ export const ImportCloud = styled.img`
   left: 225px;
   top: 78.33px;
   width: 50px;
-  color: #b5c8ce;
+  color: ${cloud_grey};
 `;
 
 export const CenterMessage = styled.p`
   margin: 0;
-  color: #666666;
+  color: ${medium_grey};
   position: absolute;
   text-align: center;
   width: 244px;
@@ -84,7 +81,7 @@ export const CenterMessage = styled.p`
 `;
 export const SubMessage = styled.p`
   margin: 0;
-  color: #888888;
+  color: ${sub_grey};
   position: absolute;
   text-align: center;
   width: 188px;
@@ -98,7 +95,7 @@ export const SubMessage = styled.p`
 export const MaxMessage = styled.p`
   margin: 0;
   padding: 0;
-  color: #888888;
+  color: ${sub_grey};
   position: absolute;
   width: 188px;
   height: 15px;
@@ -111,7 +108,7 @@ export const MaxMessage = styled.p`
 export const OrMessage = styled.p`
    margin: 0;
    padding: 0;
-  color: #666666;
+  color: ${medium_grey};
   position: absolute;
   width: 188px;
   height: 15px;
