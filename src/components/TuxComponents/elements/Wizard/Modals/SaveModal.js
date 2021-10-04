@@ -1,12 +1,12 @@
-import styled from 'styled-components'
-import { pop_reg, pop_thick, pop_bolder } from '../../../utilities/Type'
+import styled from 'styled-components';
+import { pop_reg, pop_thick, pop_bolder, modal_grey, tux_blue, primary_text, tux_primart, true_white} from '../../../utilities';
 
 export const SaveModalWrapper = styled.div`
   position: relative;
   top: 85px;
   width: 426px;
   height: 453px;
-  border: 1px solid #BBBBBB;
+  border: 1px solid ${modal_grey};
   box-sizing: border-box;
   box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -53,8 +53,8 @@ export const SaveButton = styled.button`
   line-height: 28px;
   text-align: center;
   border: none;
-  color: #274D4F;
-  background: #78D6DA;
+  color: ${primary_text};
+  background: ${tux_blue};
   border-radius:5px;
   cursor: pointer;
 `
@@ -69,8 +69,8 @@ export const DontSaveButton = styled.button`
   line-height: 28px;
   text-align: center;
   border: none;
-  background: #366062;
-  color: #FFF;
+  background: ${tux_primart};
+  color: ${true_white};
   border-radius: 5px;
   cursor: pointer;
 `
@@ -98,7 +98,7 @@ export const TuxFlower = styled.img`
   top: -95px;
   left: 150px;
 	border-radius: 50%;
-  background: #FFFFFF;
+  background: ${true_white};
   box-sizing: border-box;
 `;
 
