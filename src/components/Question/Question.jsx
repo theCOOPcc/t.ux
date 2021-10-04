@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import Feedback from '../Feedback/Feedback';
 import Answer from '../Answer/Answer';
 import styled from 'styled-components';
-import { Flex, tux_blue, common_shadow } from '../TuxComponents/utilities';
+import { Flex, tux_blue, common_shadow, true_white } from '../TuxComponents/utilities';
 import { SessionContext } from '../../contexts/SessionContext';
 
 const Question = ({ details }) => {
@@ -18,8 +18,6 @@ const Question = ({ details }) => {
 			<ColorBlock></ColorBlock>
 			<FlexBox dangerouslySetInnerHTML={{ __html: problemStatement }}></FlexBox>
 			<MediaBox>
-				{/* <img src={media} alt="" /> */}
-				{/* <BtnBox> */}
 				{answers.map((answer, index) => (
 					<Answer
 						key={index}
@@ -35,7 +33,6 @@ const Question = ({ details }) => {
 						}
 					/>
 				))}
-				{/* </BtnBox> */}
 			</MediaBox>
 			{response && <Feedback response={response} />}
 		</>
@@ -51,7 +48,7 @@ const ColorBlock = styled.div`
 `;
 
 const FlexBox = styled.div`
-	background-color: var(--true-white);
+	background-color: ${true_white};
 	//  box-shadow: ${common_shadow};
 	border-radius: 10px;
 	margin: 30px 60px;
