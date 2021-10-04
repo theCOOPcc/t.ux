@@ -1,4 +1,5 @@
-import styled, {css} from 'styled-components'
+import styled, {css} from 'styled-components';
+import {backButton, text_black} from '../../../utilities';
 
 export const ContentBtn = styled.button`
   position: relative;
@@ -60,7 +61,7 @@ margin: 0;
 display: block;
 width: 100%;
 border-radius: 5px;
-border: 3px solid #222222;
+border: 3px solid ${backButton};
   ${(props) =>
     props.hover &&
     css`
@@ -101,7 +102,7 @@ left:  67px;
   width: 250px;
   height: 48px;
   padding-left: 12px;
-  border: 1px solid #000000;
+  border: 1px solid ${text_black};
   box-sizing: border-box;
   border-radius: 10px;
   margin-top:6px;
