@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import authService from '../../services/authService';
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom'
-import { Flex, common_shadow, pop_reg, pop_thick } from '../../components/TuxComponents/utilities';
+import { Flex, common_shadow, pop_reg, pop_thick, backgroundGradient, signIn, link_text, true_white, backgroundGradientGoogleBox } from '../../components/TuxComponents/utilities';
 import { SmallInput, PrimaryButton } from '../../components/TuxComponents/elements';
 import { LoginModal } from '../../components/TuxComponents/elements/Login/Login'
 // styled components for this Login comoponent are at the bottom
@@ -92,7 +92,7 @@ class Login extends Component {
 export default Login;
 
 const Main = styled.main`
-	background: linear-gradient(210.65deg, rgba(255, 238, 153, 0.32) 17.3%, rgba(122, 218, 222, 0.32) 87.56%), linear-gradient(19.08deg, rgba(234, 74, 70, 0.32) -33.26%, rgba(234, 74, 70, 0) 67.74%);
+	background: ${backgroundGradient}
 	background-blend-mode: normal, multiply;
   height: 100vh;
 	margin: 0;
@@ -120,7 +120,7 @@ const LoginBox = styled.div`
     ${Flex({fd:'column', ai:'center'})};
     width: 425px;
     height: 510px;
-    background-color: var(--true-white);
+    background-color: ${true_white};
     box-shadow: ${common_shadow};
     border-radius: 10px;
     margin-top: 200px;
@@ -138,7 +138,7 @@ const GoogleBox = styled.a`
     width: 343px;
     height: 80px;
     border-radius: 5px;
-    background: linear-gradient(360deg, #F9F9F9 0%, rgba(255, 255, 255, 0) 100%);
+    background: ${backgroundGradientGoogleBox};
     ${Flex({jc:'center',ai:'center'})};
     margin-bottom: 10px;
     box-shadow: ${common_shadow};
@@ -149,7 +149,7 @@ const GoogleBox = styled.a`
 const SignIn = styled.p`
     font: 700 20px 'Roboto', sans-serif;
     /* line-height: 23.44px; */
-    color: rgba(0,0,0,.54);
+    color: ${signIn};
     margin-top: 15px;
 `;
 
@@ -164,5 +164,5 @@ const Label = styled.label`
 `;
 
 const LinkTo = styled(Link)`
-  color: var(--link-text);
+  color: ${link_text};
 `;
