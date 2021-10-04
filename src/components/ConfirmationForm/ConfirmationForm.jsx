@@ -3,9 +3,9 @@ import {SessionContext}  from '../../contexts/SessionContext';
 import styled, { css } from 'styled-components';
 
 import { ColorBlock } from '../TuxComponents/elements/ColorBlock/ColorBlock';
-import { Flex, pop_bolder, tux_orange, tux_white } from '../TuxComponents/utilities';
+import { Flex, pop_bolder, tux_orange, tux_white, not_started, disable_btn } from '../TuxComponents/utilities';
 import Star from '../../images/AccessibilityActivity/CompletionStar.svg';
-import Check from '../../images/AccessibilityActivity/check.svg'
+import Check from '../../images/AccessibilityActivity/check.svg';
 import { pop_semi_bold } from '../TuxComponents/elements';
 
 const ConfirmationForm = () => {
@@ -69,9 +69,9 @@ const TableRow = styled.tr`
 const TableHeader = styled.th`
   font: ${pop_semi_bold};
   font-size: 16px;
-  color: #333;
+  color: ${not_started};
   padding: 32px 10px 10px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid ${disable_btn};
   :first-child {
     width: 50%;
     text-align: left;
@@ -81,9 +81,9 @@ const TableHeader = styled.th`
 const TableData = styled.td`
   font: ${pop_bolder};
   font-size: 16px;
-  color: #333;
+  color: ${not_started};
   padding: 32px 10px 10px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid ${disable_btn};
   :first-child {
     width: 50%;
     text-align: left;
