@@ -1,11 +1,11 @@
 
 import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
-import { tux_blue, pop_semiBold } from '../TuxComponents/utilities';
-import TopicBox from '../TuxComponents/elements/TopicBox/TopicBox'
-import AssistanceBox from '../TuxComponents/elements/AssistanceBox/AssistanceBox'
+import { tux_blue, pop_semiBold, white, common_shadow } from '../TuxComponents/utilities';
+import TopicBox from '../TuxComponents/elements/TopicBox/TopicBox';
+import AssistanceBox from '../TuxComponents/elements/AssistanceBox/AssistanceBox';
 import { SessionContext } from '../../contexts/SessionContext';
-import { PageBackground } from '../TuxComponents/elements/PageBackgrounds/PageBackgrounds'
+import { PageBackground } from '../TuxComponents/elements/PageBackgrounds/PageBackgrounds';
 
  const Overview = ({ user }) => {
   const { setStarted, name: activityName, time: activityTime } = useContext(
@@ -40,9 +40,9 @@ export default Overview;
 const Main = styled.main`
 	margin: 0 auto;
 	max-width: 1440px;
-  background-color: var(--white);
+  background-color: ${white};
   border-radius: 5px;
-  box-shadow: 0px 4px 9px rgb(0 0 0 / 25%);
+  box-shadow: ${common_shadow};
   height: 600px;
   width: 60%;
   padding-left: 40px 40px;
