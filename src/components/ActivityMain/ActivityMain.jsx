@@ -3,9 +3,7 @@ import { SessionContext } from "../../contexts/SessionContext";
 import styled from "styled-components";
 
 import Question from "../../components/Question/Question";
-import InjectHTML from "../../components/InjectHTML/InjectHTML";
-import { Flex } from "../TuxComponents/utilities";
-import { MainColumn } from "../TuxComponents/elements/PageBackgrounds/PageBackgrounds";
+import { Flex, tux_orange } from "../TuxComponents/utilities";
 
 const ActivityMain = () => {
   const { currentModule, handleAnswers } = useContext(SessionContext);
@@ -70,7 +68,6 @@ const ActivityMain = () => {
             <li>{currentModule.contents.objectives6}</li>
           )}
 
-          {/* <InjectHTML markup={currentModule.contents} /> */}
         </FlexBox>
       ) : currentModule.type === "dnd" ? (
         <p>{currentModule.contents.title}</p>
@@ -101,7 +98,7 @@ const BoldWords = styled.span`
   font-weight: bold;
 `;
 const ContentTitle = styled.p`
-  color: #f37806;
+  color: ${tux_orange};
   font-weight: 500;
   font-size: 24px;
 `;
