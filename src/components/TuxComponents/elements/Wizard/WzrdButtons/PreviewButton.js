@@ -1,8 +1,9 @@
 import styled, { css } from "styled-components";
+import {true_white, tux_primart} from '../../../utilities';
 
 export const Wrapper = styled.button`
   display: flex;
-  background: #ffffff;
+  background: ${true_white};
   background-image: url(./images/Preview-Eye.svg);
   background-repeat: no-repeat;
   background-position: 14px;
@@ -11,10 +12,10 @@ export const Wrapper = styled.button`
   height: 38px;
   left: 20px;
   top: 20px;
-  border: 1px solid #366062;
+  border: 1px solid ${tux_primart};
   box-sizing: border-box;
   border-radius: 5px;
-  color: #366062;
+  color: ${tux_primart};
   ${(props) =>
     props.pressed &&
     css`
@@ -24,7 +25,7 @@ export const Wrapper = styled.button`
     props.hover &&
     css`
       display: flex;
-      background: #366062;
+      background: ${tux_primart};
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       color: white;
       background-image: url(./images/Preview-White-Eye.svg);
