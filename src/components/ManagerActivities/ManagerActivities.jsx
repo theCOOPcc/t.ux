@@ -2,7 +2,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { ManagerContext } from '../../contexts/ManagerContext';
 import activityAPI from '../../services/activityService';
-import ActivityInvite from '../ActivityInvite/ActivityInvite';
 import styled, { css } from 'styled-components';
 import { Flex, solid_border, Poppins, tux_blue, pop_reg } from '../TuxComponents/utilities';
 import { Button350, Button280 } from '../TuxComponents/elements';
@@ -29,29 +28,9 @@ const ManagerActivities = () => {
 
   // Modal
   const [isOpen, setIsOpen] = useState(false);
-  // const [show, setShow] = useState(false);
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
 
   return (
     <>
-      {/* <InviteModal
-        show={show}
-        handleClose={handleClose}
-        groups={groups}
-        setGroups={setGroups}
-        selectedGroupIndex={selectedGroupIndex}
-        setSelectedGroupIndex={setSelectedGroupIndex}
-      /> */}
-      <ActivityInvite
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        groups={groups}
-        setGroups={setGroups}
-        selectedGroupIndex={selectedGroupIndex}
-        setSelectedGroupIndex={setSelectedGroupIndex}
-        sendEmailInvite={sendEmailInvite}
-      />
       <OutsideBox>
         <ColorBlock></ColorBlock>
         <Heading2>
@@ -67,7 +46,6 @@ const ManagerActivities = () => {
                   <MgrButton onClick={() => setIsOpen(!isOpen)}>
                     Assign
                   </MgrButton>
-                  {/* <NakedBtn preview>Preview</NakedBtn> */}
               <hr></hr>
             </Box>
           ))}
@@ -84,7 +62,6 @@ const OutsideBox = styled.article`
     /* ${Flex({jc:'center',ai:'center',fd:'column'})}; */
     border: ${solid_border};
     border-radius: 5px;
-    /* margin: 10px 60px 10px 60px; */
     margin: 0 auto;
     width: 100%;
     padding-bottom: 20px;
