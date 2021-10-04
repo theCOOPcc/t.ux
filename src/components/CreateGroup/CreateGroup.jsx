@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { ManagerContext } from '../../contexts/ManagerContext';
 import styled from 'styled-components';
+import {link_text, pop_bolder} from '../TuxComponents/utilities';
 
 const CreateGroup = ({ createGroup, setCreateGroup }) => {
   const { newGroupName, setNewGroupName, handleCreateGroup } = useContext(
@@ -42,8 +43,8 @@ const Heading3 = styled.h3`
   background-color: transparent;
   align-items: center;
   text-align: center;
-  color: var(--link-text);
-    font: var(--pop-bolder);
+  color: ${link_text};
+    font: ${pop_bolder};
     cursor: pointer;
 
   `;
