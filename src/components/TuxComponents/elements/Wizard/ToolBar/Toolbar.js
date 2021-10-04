@@ -1,10 +1,11 @@
-import styled, {css} from 'styled-components'
+import styled, {css} from 'styled-components';
+import {text_black, toolbar_grey, future_text} from '../../../utilities';
 
 export const Wrapper = styled.div`
   position: relative;
   width: 96px;
   height: 33px;
-  border: 1px solid #C7C7;
+  border: 1px solid ${text_black};
   border-radius: 4px;
 `
 
@@ -22,13 +23,11 @@ border: none;
 display: flex;
 background:transparent;
 ${props => props.hover && css`
-background: rgba(196, 196, 196, 0.3);
+background: ${toolbar_grey};
 `}
 ${props => props.pressed && css`
-background: rgba(153, 153, 153, 0.5);
+background: ${future_text};
 `}
-/* justify-content: center;
-align-items: center; */
 `
 export const ImageButtonEdit = styled.button`
 padding: 0;
@@ -48,10 +47,10 @@ justify-content: center;
 align-items: center;
 background:transparent;
 ${props => props.hover && css`
-background: rgba(196, 196, 196, 0.3);
+background: ${toolbar_grey};
 `}
 ${props => props.pressed && css`
-background: rgba(153, 153, 153, 0.5);
+background: ${future_text};
 `}
 `
 export const ImageButtonDownload = styled.button`
@@ -72,10 +71,10 @@ justify-content: center;
 align-items: center;
 background:transparent;
 ${props => props.hover && css`
-background: rgba(196, 196, 196, 0.3);
+background: ${toolbar_grey};
 `}
 ${props => props.pressed && css`
-background: rgba(153, 153, 153, 0.5);
+background: ${future_text};
 `}
 `
 
