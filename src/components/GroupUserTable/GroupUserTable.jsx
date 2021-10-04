@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import {not_started, disable_btn} from '../TuxComponents/utilities';
 
 const GroupUserTable = ({groups, selectedGroupIndex}) => {
   const selectedGroup = groups[selectedGroupIndex]
@@ -37,14 +38,14 @@ const Table = styled.table`
 `;
 
 const TableRow = styled.tr`
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid ${disable_btn};
 `;
 
 const TableHeader = styled.th`
   font: var(--table);
   font-weight: 600;
   line-height: 24px;
-  color: rgba(51, 51, 51, 0.75);
+  color: ${not_started};
   height: 50px;
   text-align: left;
 
@@ -57,7 +58,7 @@ const TableHeader = styled.th`
 
 const TableData = styled.td`
   font: var(--table);
-  color: rgba(51, 51, 51, 0.75);
+  color: ${not_started};
   font-weight: 400;
   height: 50px;
   text-align: left;
