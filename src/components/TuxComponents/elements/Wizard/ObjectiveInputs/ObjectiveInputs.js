@@ -1,6 +1,5 @@
-import styled, {css} from 'styled-components'
-import { pop_reg} from '../../../utilities/Type'
-import { tux_red } from '../../../utilities/Colors'
+import styled, {css} from 'styled-components';
+import { pop_reg, tux_red, future_text, medium_grey, grey} from '../../../utilities';
 
 export const ComponentWrapper = styled.div`
   position: relative;
@@ -10,9 +9,9 @@ export const ComponentWrapper = styled.div`
   justify-content: center;
   width: 935px;
   height: 403px;
-  background: rgba(221, 221, 221, 0.3);
+  background: ${grey};
   border: 1px dotted grey;
-  border-top: 11px solid #999999;
+  border-top: 11px solid ${future_text};
 `
 
 export const ErrorMessage = styled.p`
@@ -49,10 +48,10 @@ export const ObjectInput1 = styled.textarea`
   padding-top: 20px;
   resize: none;
   align-items: center;
-  border: 1px solid #666666;
+  border: 1px solid ${medium_grey};
   box-sizing: border-box;
   border-radius: 10px;
-  background: rgba(221, 221, 221, 0.3);
+  background: ${grey};
 `
 export const ObjectInput2 = styled.textarea`
 
@@ -67,10 +66,10 @@ export const ObjectInput2 = styled.textarea`
   padding-top: 20px;
   resize: none;
   align-items: center;
-  border: 1px solid #666666;
+  border: 1px solid ${medium_grey};
   box-sizing: border-box;
   border-radius: 10px;
-  background: rgba(221, 221, 221, 0.3);
+  background: ${grey};
 `
 export const ObjectInput3 = styled.textarea`
  
@@ -85,10 +84,10 @@ export const ObjectInput3 = styled.textarea`
   padding-top: 20px;
   resize: none;
   align-items: center;
-  border: 1px solid #666666;
+  border: 1px solid ${medium_grey};
   box-sizing: border-box;
   border-radius: 10px;
-  background: rgba(221, 221, 221, 0.3);
+  background: ${grey};
 `
 
 export const BulletPoint1 = styled.img`
@@ -136,17 +135,14 @@ font-size: 10px;
 export const InputWrapper1 = styled.div`
 position: absolute;
 bottom: 210px;
-  /* width: 60px; */
 `
 export const InputWrapper2 = styled.div`
 position: absolute;
 bottom: 120px;
-  /* width: 60px; */
 `
 export const InputWrapper3 = styled.div`
 position: absolute;
 bottom: 30px;
-  /* width: 60px; */
 `
 
 export const TextHead = styled.p`
@@ -158,7 +154,7 @@ export const TextHead = styled.p`
   font-size: 18px;
   font-weight: 800;
   line-height: 23px;
-  color: #666666;
+  color: ${medium_grey};
 `;
 
 export const TextSub = styled.p`
@@ -168,7 +164,6 @@ export const TextSub = styled.p`
   width: 898px;
   height: 63.16px;
   font-size: 18px;
-  /* font-weight: 800; */
   line-height: 23px;
-  color: #666666;
+  color: ${medium_grey};
 `;
