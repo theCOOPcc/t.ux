@@ -1,12 +1,13 @@
 import styled, { css } from "styled-components";
 import { Toolbar } from "../ToolBar/Toolbar.stories";
+import {medium_grey, sub_grey} from '../../../utilities';
 
 export const ContentBtn = styled.button`
   position: relative;
   height: 218px;
   display: flex;
   width: 297px;
-  border: 3px solid #666666;
+  border: 3px solid ${medium_grey};
   box-sizing: border-box;
   border-radius: 10px;
   justify-content: center;
@@ -16,17 +17,17 @@ export const ContentBtn = styled.button`
   ${(props) =>
     props.hover &&
     css`
-      background: rgba(136, 136, 136, 0.5);
+      background: ${sub_grey};
       background-image: url(./images/page_button_toolbar.svg);
       background-repeat: no-repeat, no-repeat;
       background-position: right 7px top 6px;
-      border: 3px solid rgba(136, 136, 136, 0.5);
+      border: 3px solid ${sub_grey};
     `}
   ${(props) =>
     props.pressed &&
     css`
-      background: rgba(136, 136, 136, 0.5);
-      border: 3px solid rgba(136, 136, 136, 0.5);
+      background: ${sub_grey};
+      border: 3px solid ${sub_grey};
     `}
 `;
 
@@ -36,7 +37,6 @@ export const ButtonHead = styled.p`
   top: 20px;
   font-size: 16px;
   line-height: 140%;
-  /* or 22px */
   justify-content: center;
   align-items: center;
   text-align: center;
