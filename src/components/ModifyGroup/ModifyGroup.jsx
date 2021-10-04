@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ManagerContext } from '../../contexts/ManagerContext';
 import styled from 'styled-components';
 import GroupUserTable from '../../components/GroupUserTable/GroupUserTable';
-import { Flex, } from '../TuxComponents/utilities';
+import { Flex, not_started, pop_reg } from '../TuxComponents/utilities';
 import { PrimaryButton, LinkBtn } from '../TuxComponents/elements';
 
 const ModifyGroup = ({ createGroup, setCreateGroup }) => {
@@ -74,7 +74,7 @@ const FlexBox = styled.div`
 `;
 
 const Text = styled.p`
-  font: var(--pop-reg);
+  font: ${pop_reg};
   line-height: 20px;
   font-size: 20px;
 `;
@@ -83,7 +83,7 @@ const AddStudents = styled.label`
   font: var(--table);
   font-weight: 600;
   line-height: 24px;
-  color: rgba(51, 51, 51, 0.75);
+  color: ${not_started};
   margin-top: 50px;
 `;
 
