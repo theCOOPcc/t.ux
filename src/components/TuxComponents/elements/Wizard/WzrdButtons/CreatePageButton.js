@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import {medium_grey, wzrd_grey, backButton} from '../../../utilities';
 
 export const CreatePageBtn = styled.button`
   position: relative;
@@ -6,7 +7,7 @@ export const CreatePageBtn = styled.button`
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 3px dashed #666666;
+  border: 3px dashed ${medium_grey};
   box-sizing: border-box;
   border-radius: 10px;
   width: 297px;
@@ -20,8 +21,8 @@ export const CreatePageBtn = styled.button`
   ${(props) =>
     props.hover &&
     css`
-      background: #e0e0e0;
-      border: 3px solid #666666;
+      background: ${wzrd_grey};
+      border: 3px solid ${medium_grey};
       background-image: url(./images/PlusSignHover.svg);
       background-repeat: no-repeat;
       background-position: right 130px top 110px;
@@ -30,7 +31,7 @@ export const CreatePageBtn = styled.button`
   ${(props) =>
     props.pressed &&
     css`
-      border: 3px solid #222222;
+      border: 3px solid ${backButton};
       background-image: url(./images/PlusSignPressed.svg);
       background-repeat: no-repeat;
       background-position: right 130px top 110px;
