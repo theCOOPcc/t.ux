@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Flex } from '../utilities';
+import { Flex, medium_grey, tux_blue, progress_grey } from '../utilities';
 
 const ProgressBar = ({ completed }) => {
 
@@ -27,7 +27,7 @@ export default ProgressBar;
 const ProgressContainer = styled.div`
   height: 22px;
   width: 268px;
-  background-color: #666666;
+  background-color: ${medium_grey};
   background-image: linear-gradient(
     45deg,
     transparent 10%,
@@ -58,11 +58,11 @@ const ProgressFiller = styled.div`
   z-index: 1;
   height: 100%;
   border-radius: 5px 0 0 5px;
-  background-color: var(--tux-blue);
+  background-color: ${tux_blue};
 `;
 const ProgressLabel = styled.p`
   padding: 2px;
   font: 400 12px 'Poppins', sans-serif;
   line-height: 24px;
-  color: #a9aaa5;
+  color: ${progress_grey};
 `;
