@@ -1,5 +1,6 @@
 import styled, {css} from 'styled-components'
-import { pop_thick, pop_reg,pop_bolder } from '../../../utilities/Type'
+import { pop_thick, pop_reg,pop_bolder } from '../../../utilities/Type';
+import {modal_grey, tux_blue, true_white} from '../../../utilities/';
 
 
 export const ModalWrapper = styled.div`
@@ -12,7 +13,7 @@ export const ModalWrapper = styled.div`
   border-radius: 10px;
   margin: 0;
   padding: 0;
-  border: 1px solid #BBBBBB;
+  border: 1px solid ${modal_grey};
 `
 
 export const ModalHeader = styled.p`
@@ -53,11 +54,10 @@ export const CreateButton = styled.button`
   width: 154px;
   height: 50px;
   position: absolute;
-  background: #78D6DA;
+  background: ${tux_blue};
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  /* color: #274D4F; */
 `
 
 export const X_Button = styled.button`
@@ -82,7 +82,7 @@ export const TuxFlower = styled.img`
   top: -95px;
   left: 188px;
 	border-radius: 50%;
-  background: #FFFFFF;
+  background: ${true_white};
   box-sizing: border-box;
 `;
 
