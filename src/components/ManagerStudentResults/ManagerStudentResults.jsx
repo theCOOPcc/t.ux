@@ -1,7 +1,7 @@
 
 import React, { useContext } from 'react';
 import { ManagerContext } from '../../contexts/ManagerContext';
-import { Flex, solid_border, tux_blue, Poppins, grey_text, pop_reg } from '../TuxComponents/utilities'
+import { Flex, solid_border, tux_blue, Poppins, grey_text, pop_reg } from '../TuxComponents/utilities';
 import styled, { css } from 'styled-components';
 
 const ManagerStudentResults = () => {
@@ -41,7 +41,6 @@ const OutsideBox = styled.article`
     /* ${Flex({jc:'center',ai:'center',fd:'column'})}; */
     border: ${solid_border};
     border-radius: 5px;
-    /* margin: 10px 60px 10px 60px; */
     margin: 0 auto 22px;
     width: 100%;
     padding-bottom: 20px;
@@ -65,7 +64,6 @@ const Text = styled.p`
     text-align: center;
     font: ${pop_reg};
     line-height: 20px;
-    /* margin-left: 45px; */
     color: ${grey_text};
 
     ${props => props.center && css`
