@@ -6,7 +6,7 @@ import ActivityBody from '../../components/ActivityBody/ActivityBody';
 import SideNav from '../../components/TuxComponents/layouts/SideNav';
 import Overview from '../../components/Overview/Overview';
 import styled from 'styled-components';
-import { Flex } from '../../components/TuxComponents/utilities';
+import { Flex, pageBackground } from '../../components/TuxComponents/utilities';
 
 const Activity = () => {
   const { started } = useContext(SessionContext);
@@ -46,6 +46,6 @@ max-width: 1440px;
 `;
 
 const ActivityPageBackground = styled.div`
-background-color: #E5E5E5;
+background-color: ${pageBackground};
 
 `;
